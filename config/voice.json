@@ -1,8 +1,14 @@
 {
-  "narrator": "Puck",
-  "model": "",
-  "parallel": 2,
-  "direction": "You are the narrator of a smart, funny animated YouTube explainer. Speak like a warm friend telling a great story over coffee: relaxed, conversational, curious, with natural rhythm, small pauses and a bit of a grin. Never sound like an announcer or an ad. Read the following exactly as written.",
-  "audition": ["Puck", "Charon", "Fenrir", "Orus", "Achird", "Sadachbia", "Algenib", "Iapetus"],
-  "watermark": ""
+ "narrator": "Puck",
+ "audition": [
+  "Puck",
+  "Fenrir",
+  "Zubenelgenubi",
+  "Sadachbia",
+  "Umbriel",
+  "Achird"
+ ],
+ "watermark": "",
+ "accent": "",
+ "max_motion": 6
 }

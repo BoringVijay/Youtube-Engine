@@ -149,3 +149,24 @@ if __name__ == "__main__":
     elif cmd == "inbox":
         for f in list_inbox():
             print(f["name"], f["id"], f["mimeType"])
+
+
+def ensure_folder(parent, name):
+    hit = [f for f in find(parent, name)]
+    if hit:
+        return hit[0]["id"]
+    return req("POST", f"{API}/files", json.dumps({"name": name, "mimeType": "application/vnd.google-apps.folder", "parents": [parent]}).encode())["id"]
+
+
+def upload(folder_id, name, path, mime):
+    if os.path.getsize(path) > 4 * 1024 * 1024:
+        return put_large(folder_id, name, path, mime)
+    with open(path, "rb") as f:
+        return put_bytes(folder_id, name, f.read(), mime)
+
+
+def download(file_id, path):
+    data = req("GET", f"{API}/files/{file_id}?alt=media", raw=True)
+    with open(path, "wb") as f:
+        f.write(data)
+    return path

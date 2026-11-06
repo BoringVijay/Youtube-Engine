@@ -1,15 +1,15 @@
 {
  "id": "ai-what-if-the-internet-s-undersea-cables-were-all-cut-",
  "created": "2026-11-06T15:50:59+00:00",
- "pct": 66,
+ "pct": 2,
  "q": "What if the internet's undersea cables were all cut?",
- "series": "What If? (stickman)",
+ "series": "Curious Penguin",
  "brew": {
   "type": "brew",
   "id": "ai-what-if-the-internet-s-undersea-cables-were-all-cut-",
   "at": "2026-11-06T15:26:28.303Z",
   "q": "What if the internet's undersea cables were all cut?",
-  "series": "What If? (stickman)",
+  "series": "Curious Penguin",
   "aud": "tech & AI",
   "tone": 62,
   "format": {
@@ -255,48 +255,28 @@
  },
  "brew_at": "2026-11-06T15:26:28.303Z",
  "error": null,
- "stage": "final_render",
- "step": "Rendering 1080p",
+ "stage": "queued",
+ "step": "Remaking in the new Curious Penguin style",
  "steps": [
   {
    "stage": "queued",
-   "at": "2026-11-06T15:50:59+00:00"
-  },
-  {
-   "stage": "voicing",
-   "at": "2026-11-06T16:14:27+00:00"
-  },
-  {
-   "stage": "planning",
-   "at": "2026-11-06T16:37:44+00:00"
-  },
-  {
-   "stage": "test_render",
-   "at": "2026-11-06T16:38:13+00:00"
-  },
-  {
-   "stage": "test_ready",
-   "at": "2026-11-06T16:50:29+00:00"
-  },
-  {
-   "stage": "final_render",
-   "at": "2026-11-06T17:21:37+00:00"
+   "at": "2026-11-06T17:48:18+00:00"
   }
  ],
- "updated": "2026-11-06T17:21:37+00:00",
+ "updated": "2026-11-06T17:48:18+00:00",
  "duration": 343.7,
- "preview": {
-  "id": "1357RsO2TfZB2qpcA_73yUA-ijgGLFJlr",
-  "view": "https://drive.google.com/file/d/1357RsO2TfZB2qpcA_73yUA-ijgGLFJlr/view",
-  "download": "https://drive.google.com/uc?id=1357RsO2TfZB2qpcA_73yUA-ijgGLFJlr&export=download",
-  "size_mb": 7.6,
-  "at": "2026-11-06T16:50:29+00:00"
- },
+ "preview": null,
  "notes_in": [
   {
    "at": "2026-11-06T17:13:20.158Z",
    "stage": "test",
    "notes": ""
   }
- ]
+ ],
+ "v": 2,
+ "final": null,
+ "shorts": null,
+ "thumb": null,
+ "meta": null,
+ "fails": 0
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import {Composition} from 'remotion';
 import {MoonShort, MOON_FRAMES} from './MoonShort';
 import {Episode, EpisodeProps, episodeLength} from './ep/Episode';
+import {Film, FilmProps, filmLength} from './film/Film';
 
 const demo: EpisodeProps = {
   theme: 'whatif', audio: [], captions: true,
@@ -23,6 +24,13 @@ export const RemotionRoot: React.FC = () => (
       calculateMetadata={({props}) => {
         const p = props as unknown as EpisodeProps & {w?: number; h?: number};
         return {durationInFrames: episodeLength(p), width: p.w || 1920, height: p.h || 1080};
+      }} />
+    <Composition id="Film" component={Film as unknown as React.FC<Record<string, unknown>>}
+      defaultProps={{look: {paper: '#F3EBDD', ink: '#151515', accent: '#FF5A1F', font: 'inter', film: 'clean', grain: 0.3, vignette: 0.5, letterbox: false, captionBg: '#151515', captionInk: '#fff'}, shots: [], words: [], audio: []} as unknown as Record<string, unknown>}
+      durationInFrames={300} fps={30} width={1920} height={1080}
+      calculateMetadata={({props}) => {
+        const p = props as unknown as FilmProps & {w?: number; h?: number};
+        return {durationInFrames: filmLength(p), width: p.w || 1920, height: p.h || 1080};
       }} />
   </>
 );

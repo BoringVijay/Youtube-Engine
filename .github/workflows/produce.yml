@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ["scripts/produce.py", "src/**", "config/voice.json", ".github/workflows/produce.yml"]
+    paths: ["scripts/produce.py", "scripts/director.py", "scripts/voice.py", "scripts/art.py", "src/**", "config/*.json", "jobs/*/state.json", ".github/workflows/produce.yml"]
 
 permissions:
   contents: write
@@ -20,7 +20,7 @@ concurrency:
 jobs:
   produce:
     runs-on: ubuntu-latest
-    timeout-minutes: 75
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
       - name: Use the latest job state (a queued run checks out an older commit)
@@ -37,7 +37,7 @@ jobs:
           sys.path.insert(0, "scripts")
           import drive
           inbox = [f for f in drive.list_inbox() if f["name"].endswith(".json")]
-          busy = [p for p in glob.glob("jobs/*/state.json") if json.load(open(p)).get("stage") in ("queued","voicing","planning","test_render","final_render")]
+          busy = [p for p in glob.glob("jobs/*/state.json") if json.load(open(p)).get("v") == 2 and json.load(open(p)).get("stage") in ("queued","directing","voicing","art","test_render","motion","final_render","metadata")]
           work = bool(inbox or busy) or os.environ.get("GITHUB_EVENT_NAME") != "schedule"
           print(f"inbox={len(inbox)} busy={len(busy)} work={work}")
           open(os.environ["GITHUB_OUTPUT"], "a").write(f"work={'yes' if work else 'no'}\n")
@@ -47,9 +47,16 @@ jobs:
         with:
           node-version: 20
           cache: npm
+      - name: Cache the speech-timing model
+        if: steps.check.outputs.work == 'yes'
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: whisper-base-en-v1
       - name: Install
         if: steps.check.outputs.work == 'yes'
         run: |
+          pip install -q faster-whisper cryptography
           npm ci --no-audit --no-fund
           (which ffmpeg && which ffprobe) || { curl -sL https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz | tar xJ -C /tmp && sudo cp /tmp/ffmpeg-*-static/ffmpeg /tmp/ffmpeg-*-static/ffprobe /usr/local/bin/; } || (sudo DEBIAN_FRONTEND=noninteractive timeout 300 apt-get install -y -qq --no-install-recommends ffmpeg)
           ffmpeg -version | head -1
@@ -60,7 +67,8 @@ jobs:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           GDRIVE_REFRESH_TOKEN: ${{ secrets.GDRIVE_REFRESH_TOKEN }}
-          PRODUCE_BUDGET_MIN: "50"
+          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+          PRODUCE_BUDGET_MIN: "55"
         run: |
           mkdir -p logs
           set -o pipefail
@@ -70,6 +78,6 @@ jobs:
         run: |
           git config user.name "engine-bot"
           git config user.email "engine-bot@users.noreply.github.com"
-          git add jobs logs || true
+          git add jobs logs ledger creative || true
           git diff --cached --quiet || git commit -m "Produce run ${{ job.status }}"
           for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done

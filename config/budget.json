@@ -1,0 +1,14 @@
+{
+  "total_usd": 280,
+  "window_ends": "2027-02-04",
+  "per_video_usd": 14,
+  "test_cut_usd": 5,
+  "prices_usd": {
+    "image": 0.067,
+    "video_per_sec": 0.15,
+    "tts_per_min": 0.03,
+    "music_clip": 0.06,
+    "text_call": 0.01
+  },
+  "note": "Prices are conservative estimates for the ledger. Real spend shows in Cloud Console > Billing > Reports."
+}
