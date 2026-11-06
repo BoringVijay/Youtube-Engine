@@ -1,0 +1,291 @@
+{
+ "id": "ai-what-if-the-internet-s-undersea-cables-were-all-cut-",
+ "created": "2026-11-06T15:50:59+00:00",
+ "pct": 55,
+ "q": "What if the internet's undersea cables were all cut?",
+ "series": "What If? (stickman)",
+ "brew": {
+  "type": "brew",
+  "id": "ai-what-if-the-internet-s-undersea-cables-were-all-cut-",
+  "at": "2026-11-06T15:26:28.303Z",
+  "q": "What if the internet's undersea cables were all cut?",
+  "series": "What If? (stickman)",
+  "aud": "tech & AI",
+  "tone": 62,
+  "format": {
+   "long": true,
+   "minutes": 4.5,
+   "shorts": 1,
+   "standaloneShort": true
+  },
+  "angle": "Keep the content informative, entertaining and genuinely engaging. Blend subtle, clever humour and dry comedy into the storytelling while maintaining strong educational value.\n\nThe tone should feel natural, witty and modern, with an occasional dark, apocalyptic and bittersweet edge. Make people laugh, think and sometimes feel a little uneasy about what they've just learned.\n\nAvoid forced jokes or exaggerated comedy. Let the humour emerge naturally from the facts and situations. Balance fascinating insights, unexpected twists, subtle sarcasm and thought-provoking moments with an underlying sense of melancholy or existential absurdity.\n\nThe goal is to leave viewers entertained, informed and thinking about the topic long after the video ends.",
+  "notes": [],
+  "refs": [],
+  "script": {
+   "titles": [
+    "What If Every Undersea Internet Cable Got Cut?",
+    "The Cloud Lives at the Bottom of the Ocean (And It's a Garden Hose)",
+    "What If the Internet Sank?"
+   ],
+   "hooks": [
+    {
+     "line": "Okay so. You think this video reached you through a satellite. Nope. More than 95 percent of data between continents travels along the bottom of the ocean.",
+     "visual": "Stickman points up at a satellite; the camera tilts down past him, through the sea, to a thin cable glowing on the seabed",
+     "pattern": "Misconception flip"
+    },
+    {
+     "line": "The cloud doesn't live in the sky. It lives in a garden hose at the bottom of the sea.",
+     "visual": "A fluffy cloud icon deflates, sinks underwater and turns into a skinny cable",
+     "pattern": "Metaphor reversal"
+    },
+    {
+     "line": "Every year, ships and fishing gear snap the internet a couple hundred times. You just never notice. Here's why, and what happens if it all snaps at once.",
+     "visual": "Counter ticking up above a seabed while anchors drop in one by one",
+     "pattern": "Hidden-stat curiosity gap"
+    },
+    {
+     "line": "In 2022, an entire country lost contact with the world because of one cable.",
+     "visual": "Map of the Pacific; one tiny island's single glowing line goes dark",
+     "pattern": "Real-stakes cold fact"
+    },
+    {
+     "line": "What would actually happen if someone cut every internet cable on Earth on the same day?",
+     "visual": "Stickman villain with giant scissors hovering over a globe wrapped in cables",
+     "pattern": "Direct what-if question"
+    }
+   ],
+   "chosen": 0,
+   "beats": [
+    {
+     "t": "0:00",
+     "vo": "Okay so. You probably think this video reached you through a satellite. Nope. More than 95 percent of the data crossing between continents travels through cables lying on the bottom of the ocean.",
+     "visual": "Stickman points up at a satellite; the camera tilts down through the sea to a thin glowing cable on the seabed",
+     "sfx": [
+      "whoosh down",
+      "underwater muffle"
+     ]
+    },
+    {
+     "t": "0:10",
+     "vo": "The cloud lives in the sea. And out in the deep water, the cable carrying it is about as thick as a garden hose. So what if every single one got cut? And the weirder question: why hasn't it happened already?",
+     "visual": "Cloud icon deflates and sinks; side-by-side comparison of a garden hose and a deep-sea cable; a question mark appears",
+     "sfx": [
+      "deflate squeak",
+      "bubble pop"
+     ]
+    },
+    {
+     "t": "0:22",
+     "vo": "Think of the internet as a planet of cities. Inside your country, data drives around on local roads. But to reach another continent it has to cross the sea, and there are only so many bridges.",
+     "visual": "Cartoon world map with glowing cities, local roads, and a few bridges stretching across the oceans",
+     "sfx": [
+      "city ambience",
+      "car honk"
+     ]
+    },
+    {
+     "t": "0:36",
+     "vo": "Satellites exist. They're the helicopters. Great for remote places, terrible for moving a whole city's traffic. Nobody commutes by helicopter. Well. Some billionaires.",
+     "visual": "Cars queue on a bridge while a lone helicopter carries a single smug stickman in a top hat",
+     "sfx": [
+      "helicopter blades",
+      "smug cough"
+     ]
+    },
+    {
+     "t": "0:46",
+     "vo": "There are roughly five to six hundred of these bridges, about 1.4 million kilometers of cable. Enough to wrap around the Earth about thirty-five times, and almost nobody has ever seen one.",
+     "visual": "Cable spools wrapping around a globe with a counter ticking to 35; a stickman shrugs",
+     "sfx": [
+      "winding rope",
+      "counter ticks"
+     ]
+    },
+    {
+     "t": "0:58",
+     "vo": "Here's how it works. Inside the hose are hair-thin strands of glass. Your message becomes pulses of laser light flashing across an entire ocean. Every so often a repeater, a little box on the seabed, boosts the signal so it doesn't fade.",
+     "visual": "Cutaway cross-section of the cable; a light pulse races along a fiber and gets a 'boost' at a repeater box",
+     "sfx": [
+      "laser zip",
+      "power-up chime"
+     ]
+    },
+    {
+     "t": "1:16",
+     "vo": "On each coast, the cable crawls up a beach into a plain building called a landing station, which looks like the place you'd go to renew a fishing licence.",
+     "visual": "Cable emerges from the surf into a dull grey building with a sad flickering sign",
+     "sfx": [
+      "waves",
+      "fluorescent buzz"
+     ]
+    },
+    {
+     "t": "1:26",
+     "vo": "Which sounds sturdy. Until you learn cables break around 150 to 200 times a year. Not mostly from spies. Mostly from fishing gear and ship anchors dragging across the seabed.",
+     "visual": "Fault counter ticking upward; an anchor drags across the seabed and snags a cable",
+     "sfx": [
+      "anchor clank",
+      "snap"
+     ]
+    },
+    {
+     "t": "1:38",
+     "vo": "Sharks have reportedly bitten them too, and Google reportedly wrapped some cables in extra protective material, which means someone in a meeting had to say 'shark mitigation' with a straight face.",
+     "visual": "Shark chomps on a cable; cut to a boardroom slide titled SHARK MITIGATION with a stickman nodding seriously",
+     "sfx": [
+      "chomp",
+      "meeting room silence"
+     ]
+    },
+    {
+     "t": "1:50",
+     "vo": "So why didn't your Wi-Fi notice? Because the internet reroutes. Routers constantly gossip using a system called BGP, basically 'hey, I can reach Singapore, send stuff through me.' When a cable dies, traffic takes the next-best path. Slower, more crowded, but it arrives.",
+     "visual": "Routers drawn as chatty stickmen passing notes; a broken route turns red and packets detour along a longer glowing path",
+     "sfx": [
+      "whisper chatter",
+      "traffic jam honks"
+     ]
+    },
+    {
+     "t": "2:10",
+     "vo": "Here's the wild part though. Rerouting only works if there's somewhere else to go. And one country found out what happens when there isn't. We'll get there.",
+     "visual": "Packet stickman reaches a dead end; zoom out to a tiny island with a single line, then a 'LATER' stamp",
+     "sfx": [
+      "record scratch",
+      "stamp thud"
+     ]
+    },
+    {
+     "t": "2:20",
+     "vo": "Because the twist is, the cables aren't the scariest part. The fixing is. A repair ship sails out, drags a grappling hook along the seabed, fishes up the cable and splices it on deck. That can take days to weeks. And there are reportedly only a few dozen of these ships for the whole planet.",
+     "visual": "Small repair ship lowers a hook, pulls up a dripping cable, stickman welder splices it; zoom out to a few ships on a huge globe",
+     "sfx": [
+      "winch whir",
+      "sparks"
+     ]
+    },
+    {
+     "t": "2:40",
+     "vo": "Real outages show the pattern. In 2006, an earthquake off Taiwan damaged several cables at once and parts of Asia crawled. In 2008, cuts in the Mediterranean slowed the internet across Egypt, the Middle East and India. In 2024, Red Sea cables were damaged, reportedly by the dragging anchor of a ship that had been attacked and abandoned.",
+     "visual": "Comic-strip panels: shaking seabed near Taiwan; snapped lines in the Mediterranean; an abandoned ship drifting with its anchor scraping",
+     "sfx": [
+      "rumble",
+      "page flip",
+      "metal scrape"
+     ]
+    },
+    {
+     "t": "3:00",
+     "vo": "Nerd bonus: in 1929, an earthquake off Newfoundland triggered an underwater avalanche, and scientists later worked out its speed from the times each telegraph cable snapped. The internet's ancestors died as a stopwatch.",
+     "visual": "Old sepia map; mud avalanche flows downhill snapping cables one by one with timestamps popping up; a stopwatch appears",
+     "sfx": [
+      "old telegraph clicks",
+      "stopwatch tick"
+     ]
+    },
+    {
+     "t": "3:14",
+     "vo": "So, all of them cut at once? Your local internet mostly keeps running. But anything hosted abroad, cloud services, lots of apps, international payments, starts failing. Satellites carry a trickle. And with a few dozen ships facing hundreds of breaks, repairs take months. That's why it hasn't happened: one anchor is an accident. Hundreds is a war.",
+     "visual": "Split screen: stickman happily using a local site vs. spinning loading icons on foreign apps; a tiny satellite beam; a calendar flipping months",
+     "sfx": [
+      "loading hum",
+      "calendar flips"
+     ]
+    },
+    {
+     "t": "3:34",
+     "vo": "Remember the country with nowhere to reroute? In January 2022, an underwater volcano erupted near Tonga and severed its only international cable. A nation of about a hundred thousand people went almost dark to the world, while families abroad waited to hear if relatives were okay. It took around five weeks to restore.",
+     "visual": "Quiet, muted palette: volcano ash cloud over the Pacific; island's single line fades out; stickman abroad staring at a phone with no reply",
+     "sfx": [
+      "low rumble",
+      "silence"
+     ]
+    },
+    {
+     "t": "3:56",
+     "vo": "So here's my take. The real risk isn't sharks, and it's not a movie villain cutting everything. It's that plenty of places hang on one or two cables, and the planet's repair capacity is a handful of ships. Tech giants like Google, Meta, Microsoft and Amazon now fund a growing share of new cables. Fine. But backup routes for small countries and more repair ships should be a priority, because the internet is only as global as its least connected place.",
+     "visual": "Stickman narrator at a whiteboard: one-cable islands highlighted; a tiny fleet of ships; big-tech logos as stickmen laying cable; a final arrow pointing to the lonely island",
+     "sfx": [
+      "marker squeak",
+      "soft thud"
+     ]
+    },
+    {
+     "t": "4:18",
+     "vo": "So next time someone says your photos are in the cloud, correct them gently. They're in a garden hose on the ocean floor, next to a shark, waiting for a ship that's probably busy. Subscribe, and if the cable holds, I'll see you in the next one.",
+     "visual": "Photo icons travel down a skinny cable past a shark that waves; a repair ship far away with a 'BACK IN 5 WEEKS' sign; subscribe button bobbing on the waves",
+     "sfx": [
+      "bubble pop",
+      "gentle wave",
+      "button click"
+     ]
+    }
+   ],
+   "vo": "Okay so. [smile] You probably think this video reached you through a satellite. [beat] Nope. More than 95 percent of the data crossing between continents travels through cables lying on the bottom of the ocean. [dry] The cloud lives in the sea. And out in the deep water, the cable carrying it is about as thick as a garden hose. So what if every single one got cut? And the weirder question: why hasn't it happened already?\n\nThink of the internet as a planet of cities. Inside your country, data drives around on local roads. But to reach another continent it has to cross the sea, and there are only so many bridges. Satellites exist. They're the helicopters. Great for remote places, terrible for moving a whole city's traffic. [dry] Nobody commutes by helicopter. [beat] Well. Some billionaires. There are roughly five to six hundred of these bridges, about 1.4 million kilometers of cable. Enough to wrap around the Earth about thirty-five times, and almost nobody has ever seen one.\n\nHere's how it works. Inside the hose are hair-thin strands of glass. Your message becomes pulses of laser light flashing across an entire ocean. Every so often a repeater, a little box on the seabed, boosts the signal so it doesn't fade. On each coast, the cable crawls up a beach into a plain building called a landing station, [dry] which looks like the place you'd go to renew a fishing licence.\n\nWhich sounds sturdy. [beat] Until you learn cables break around 150 to 200 times a year. Not mostly from spies. Mostly from fishing gear and ship anchors dragging across the seabed. Sharks have reportedly bitten them too, and Google reportedly wrapped some cables in extra protective material, [smile] which means someone in a meeting had to say 'shark mitigation' with a straight face.\n\nSo why didn't your Wi-Fi notice? Because the internet reroutes. Routers constantly gossip using a system called BGP, basically 'hey, I can reach Singapore, send stuff through me.' When a cable dies, traffic takes the next-best path. Slower, more crowded, but it arrives. Here's the wild part though. Rerouting only works if there's somewhere else to go. And one country found out what happens when there isn't. [beat] We'll get there.\n\nBecause the twist is, the cables aren't the scariest part. The fixing is. A repair ship sails out, drags a grappling hook along the seabed, fishes up the cable and splices it on deck. That can take days to weeks. And there are reportedly only a few dozen of these ships for the whole planet.\n\nReal outages show the pattern. In 2006, an earthquake off Taiwan damaged several cables at once and parts of Asia crawled. In 2008, cuts in the Mediterranean slowed the internet across Egypt, the Middle East and India. In 2024, Red Sea cables were damaged, reportedly by the dragging anchor of a ship that had been attacked and abandoned. Nerd bonus: in 1929, an earthquake off Newfoundland triggered an underwater avalanche, and scientists later worked out its speed from the times each telegraph cable snapped. [dry] The internet's ancestors died as a stopwatch.\n\nSo, all of them cut at once? Your local internet mostly keeps running. But anything hosted abroad, cloud services, lots of apps, international payments, starts failing. Satellites carry a trickle. And with a few dozen ships facing hundreds of breaks, repairs take months. That's why it hasn't happened. [beat] One anchor is an accident. Hundreds is a war.\n\n[soft] Remember the country with nowhere to reroute? In January 2022, an underwater volcano erupted near Tonga and severed its only international cable. A nation of about a hundred thousand people went almost dark to the world, while families abroad waited to hear if relatives were okay. It took around five weeks to restore. [beat]\n\nSo here's my take. The real risk isn't sharks, and it's not a movie villain cutting everything. It's that plenty of places hang on one or two cables, and the planet's repair capacity is a handful of ships. Tech giants like Google, Meta, Microsoft and Amazon now fund a growing share of new cables. Fine. But backup routes for small countries and more repair ships should be a priority, because the internet is only as global as its least connected place.\n\n[smile] So next time someone says your photos are in the cloud, correct them gently. They're in a garden hose on the ocean floor, next to a shark, waiting for a ship that's probably busy. [beat] Subscribe, and if the cable holds, I'll see you in the next one.",
+   "verify": [
+    "'More than 95 percent' of intercontinental data via submarine cables (commonly cited figures range from 95 to 99 percent; confirm source)",
+    "Roughly 500 to 600 active cables and about 1.4 million km total length (TeleGeography current figures)",
+    "Deep-sea cable diameter comparable to a garden hose (roughly 17 to 25 mm unarmored)",
+    "150 to 200 cable faults per year, mostly from fishing and anchors (ICPC figures)",
+    "Shark bites on cables documented, and Google's reported 2014 statement about wrapping trans-Pacific cables in Kevlar-like protective material",
+    "Number of cable repair ships worldwide ('a few dozen'; confirm current count)",
+    "2006 Hengchun earthquake off Taiwan damaged multiple cables and disrupted regional connectivity",
+    "2008 Mediterranean cable cuts affecting Egypt, the Middle East and India",
+    "2024 Red Sea cable damage reportedly caused by the dragging anchor of the Rubymar after it was attacked and abandoned",
+    "1929 Grand Banks earthquake: turbidity current speed later estimated from sequential telegraph cable break times",
+    "Tonga: Hunga Tonga-Hunga Ha'apai eruption on 15 January 2022 severed its international cable; restored around late February 2022 (about five weeks); population roughly 100,000",
+    "Claim that big tech companies fund or own a growing share of new cable capacity",
+    "Speculative scenario claims (domestic internet mostly continuing, international services failing, repairs taking months) should stay framed as educated estimates"
+   ],
+   "rubric": {
+    "hook": 4,
+    "clarity": 5,
+    "story": 4,
+    "personality": 4,
+    "accuracy": 4,
+    "visuals": 4,
+    "pacing": 4,
+    "payoff": 4,
+    "packaging": 4,
+    "originality": 4,
+    "total": 41
+   },
+   "at": "2026-11-06T15:26:15.319Z"
+  }
+ },
+ "brew_at": "2026-11-06T15:26:28.303Z",
+ "error": null,
+ "stage": "test_ready",
+ "step": "Test cut ready. Watch it and approve or ask for changes",
+ "steps": [
+  {
+   "stage": "queued",
+   "at": "2026-11-06T15:50:59+00:00"
+  },
+  {
+   "stage": "voicing",
+   "at": "2026-11-06T16:14:27+00:00"
+  },
+  {
+   "stage": "planning",
+   "at": "2026-11-06T16:37:44+00:00"
+  },
+  {
+   "stage": "test_render",
+   "at": "2026-11-06T16:38:13+00:00"
+  },
+  {
+   "stage": "test_ready",
+   "at": "2026-11-06T16:50:29+00:00"
+  }
+ ],
+ "updated": "2026-11-06T16:50:29+00:00",
+ "duration": 343.7,
+ "preview": {
+  "id": "1357RsO2TfZB2qpcA_73yUA-ijgGLFJlr",
+  "view": "https://drive.google.com/file/d/1357RsO2TfZB2qpcA_73yUA-ijgGLFJlr/view",
+  "download": "https://drive.google.com/uc?id=1357RsO2TfZB2qpcA_73yUA-ijgGLFJlr&export=download",
+  "size_mb": 7.6,
+  "at": "2026-11-06T16:50:29+00:00"
+ }
+}

@@ -1,0 +1,446 @@
+{
+ "beats": [
+  {
+   "i": 0,
+   "shots": [
+    {
+     "share": 0.5,
+     "template": "stick",
+     "pose": "shock",
+     "pose2": "shrug",
+     "icon": "money",
+     "say": "The chip shop pays more?!",
+     "doubt": "Should've stayed on fryer duty.",
+     "title": "The Post-Interview Reality",
+     "vo": "Okay so. Imagine nailing a job interview, then finding out it pays less than your part-time gig at the chip shop."
+    },
+    {
+     "share": 0.5,
+     "template": "title",
+     "title": "Mandatory *Salary Ranges*",
+     "sub": "UK moves to force pay transparency in job ads",
+     "vo": "Britain is reportedly moving to end that: salary ranges in job ads, mandatory."
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "shots": [
+    {
+     "share": 0.55,
+     "template": "versus",
+     "title": "Expected vs Reality",
+     "left": {
+      "title": "Workers Win?",
+      "value": "Higher Pay",
+      "icon": "coin"
+     },
+     "right": {
+      "title": "The Data",
+      "value": "Flat Wages",
+      "icon": "chart"
+     },
+     "vo": "Sounds like a pure win for workers. Here's the weird part: some research says rules like this might not raise average pay at all."
+    },
+    {
+     "share": 0.45,
+     "template": "quote",
+     "title": "Sneaky Economics",
+     "sub": "Why open salaries don't automatically mean bigger checks",
+     "vo": "And the reason is sneaky."
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "shots": [
+    {
+     "share": 0.5,
+     "template": "title",
+     "title": "*'Competitive'* Salary",
+     "sub": "Competitive with what, exactly?",
+     "vo": "Ground floor. Plenty of UK job ads just say 'competitive salary.' Competitive with what?"
+    },
+    {
+     "share": 0.5,
+     "template": "stick",
+     "pose": "point",
+     "pose2": "lookUp",
+     "icon": "question",
+     "say": "How much you got?",
+     "doubt": "That's not how prices work.",
+     "title": "The Job Market Stall",
+     "vo": "It's like a market stall with no price tags. You ask how much, and the seller looks you up and down: 'How much you got?'"
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "shots": [
+    {
+     "share": 0.45,
+     "template": "versus",
+     "title": "Information Asymmetry",
+     "left": {
+      "title": "Company",
+      "value": "100s of Salaries",
+      "icon": "server"
+     },
+     "right": {
+      "title": "You",
+      "value": "Just Yours",
+      "icon": "brain"
+     },
+     "vo": "The company has seen hundreds of salaries. You've seen yours. Economists call that information asymmetry."
+    },
+    {
+     "share": 0.55,
+     "template": "timeline",
+     "title": "Pay Transparency Rollout",
+     "items": [
+      "2021|Colorado Law",
+      "2022|NYC & Washington",
+      "2023|EU Directive"
+     ],
+     "vo": "Britain isn't first: Colorado required pay ranges in postings from 2021, then New York City, California and Washington. The EU passed its own pay transparency directive in 2023."
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "shots": [
+    {
+     "share": 0.5,
+     "template": "stat",
+     "value": 250,
+     "prefix": "",
+     "suffix": "+",
+     "label": "Staff Threshold",
+     "sub": "UK gender pay gap reporting since 2017",
+     "icon": "building",
+     "vo": "Nerd bonus: since 2017, UK employers with 250 or more staff have had to publish their gender pay gap every year."
+    },
+    {
+     "share": 0.5,
+     "template": "flow",
+     "title": "The Next Evolution",
+     "icon": "chart",
+     "from": "Annual Gap Reports",
+     "to": "Upfront Price Tags",
+     "items": [
+      "money"
+     ],
+     "vo": "This is the next level: the price tag upfront."
+    }
+   ]
+  },
+  {
+   "i": 5,
+   "shots": [
+    {
+     "share": 0.5,
+     "template": "bars",
+     "title": "Same Job, Unequal Start",
+     "bars": [
+      {
+       "label": "Priya",
+       "value": 26000
+      },
+      {
+       "label": "Coworker",
+       "value": 30000
+      }
+     ],
+     "suffix": "GBP",
+     "sub": "Company A initial offers",
+     "vo": "Meet Priya, a made-up graduate. Before the law, Company A offers her twenty-six grand. No idea if that's good, so she says yes."
+    },
+    {
+     "share": 0.5,
+     "template": "stick",
+     "pose": "stand",
+     "pose2": "point",
+     "icon": "money",
+     "say": "I asked for 30k!",
+     "doubt": "Same desk, different ego.",
+     "title": "The Confidence Premium",
+     "vo": "The guy hired last month asked for more and got thirty. Same job. Different confidence."
+    }
+   ]
+  },
+  {
+   "i": 6,
+   "shots": [
+    {
+     "share": 0.5,
+     "template": "bars",
+     "title": "Mandated Range Posted",
+     "bars": [
+      {
+       "label": "Floor",
+       "value": 28000
+      },
+      {
+       "label": "Target",
+       "value": 30000
+      },
+      {
+       "label": "Ceiling",
+       "value": 32000
+      }
+     ],
+     "suffix": "GBP",
+     "sub": "Clear bounds for applicants",
+     "vo": "Now switch the law on. The ad says twenty-eight to thirty-two thousand. Priya knows the floor, and that asking for thirty is normal, not cheeky."
+    },
+    {
+     "share": 0.5,
+     "template": "quote",
+     "title": "Light On, Gap Shrinks",
+     "sub": "Pay gaps hide in who felt allowed to ask",
+     "vo": "Multiply that by millions of applicants. Pay gaps often hide in the dark, in who felt allowed to ask. Light on, gap shrinks."
+    }
+   ]
+  },
+  {
+   "i": 7,
+   "shots": [
+    {
+     "share": 0.45,
+     "template": "title",
+     "title": "Episode *Over?*",
+     "sub": "Not quite so simple...",
+     "vo": "Easy. Episode over. Thanks for watching."
+    },
+    {
+     "share": 0.55,
+     "template": "bars",
+     "title": "Ridiculous Ad Range",
+     "bars": [
+      {
+       "label": "Min Pay",
+       "value": 50000
+      },
+      {
+       "label": "Max Pay",
+       "value": 500000
+      }
+     ],
+     "suffix": "GBP",
+     "sub": "Technical compliance loophole",
+     "vo": "Except... why do some ads reportedly post ranges so wide they're useless? Like 'fifty thousand to half a million'? Hold that thought."
+    }
+   ]
+  },
+  {
+   "i": 8,
+   "shots": [
+    {
+     "share": 0.6,
+     "template": "stat",
+     "value": 2,
+     "prefix": "-",
+     "suffix": "%",
+     "label": "Average Wage Impact",
+     "sub": "Cullen & Pakzad-Hurson US study",
+     "icon": "chart",
+     "vo": "But here's the catch. Economists Zoe Cullen and Bobak Pakzad-Hurson studied US laws protecting workers' right to share their pay. Their headline finding: average wages fell, roughly two percent."
+    },
+    {
+     "share": 0.4,
+     "template": "stick",
+     "pose": "shock",
+     "pose2": "lookUp",
+     "icon": "question",
+     "say": "Wait, wages went down?!",
+     "doubt": "Economists ruin all good vibes.",
+     "title": "The Unintended Twist",
+     "vo": "Wait, what?"
+    }
+   ]
+  },
+  {
+   "i": 9,
+   "shots": [
+    {
+     "share": 0.5,
+     "template": "flow",
+     "title": "The Transparency Trap",
+     "icon": "coin",
+     "from": "Raise for One Worker",
+     "to": "Demands from Everyone",
+     "items": [
+      "people"
+     ],
+     "vo": "Think like a boss. Give one hire a bigger offer, everyone sees it, everyone wants it. Every raise for one person quietly costs a raise for everyone."
+    },
+    {
+     "share": 0.5,
+     "template": "stick",
+     "pose": "point",
+     "pose2": "stand",
+     "icon": "lock",
+     "say": "Sorry, official company policy!",
+     "doubt": "Conveniently inflexible now.",
+     "title": "The Perfect Shield",
+     "vo": "So bosses get stubborn. 'Sorry, policy.' And because the policy's public, it's believable. Transparency gives companies a perfect excuse."
+    }
+   ]
+  },
+  {
+   "i": 10,
+   "shots": [
+    {
+     "share": 0.55,
+     "template": "line",
+     "title": "Danish Pay Gap Compression",
+     "points": [
+      100,
+      98,
+      96,
+      94,
+      93
+     ],
+     "label": "Gap narrowed by slowing top-earner growth",
+     "vo": "So, the question from the start: does transparency raise average wages? Not reliably. What it does more consistently is squeeze pay together. A Danish study of gender pay reporting found the gap narrowed, reportedly mostly because men's wages grew more slowly."
+    },
+    {
+     "share": 0.45,
+     "template": "stick",
+     "pose": "shrug",
+     "pose2": "stand",
+     "icon": "chart",
+     "say": "Fairness achieved, I guess.",
+     "doubt": "Lads are mildly sad.",
+     "title": "Compression Dynamics",
+     "vo": "Fairness achieved. By making the lads mildly sad."
+    }
+   ]
+  },
+  {
+   "i": 11,
+   "shots": [
+    {
+     "share": 0.5,
+     "template": "list",
+     "title": "Why You Still Win",
+     "items": [
+      "Zero insider info needed",
+      "Screen bad offers instantly",
+      "Skip 3-round interview traps"
+     ],
+     "vo": "So what does this mean for you? Mostly good news. Students have the least insider info, so you gain the most. You can compare offers before sitting through three interview rounds."
+    },
+    {
+     "share": 0.5,
+     "template": "quote",
+     "title": "The Loophole",
+     "sub": "The legal minimum of honesty",
+     "vo": "And loop two: those giant ranges are companies technically complying while telling you nothing. The legal minimum of honesty."
+    }
+   ]
+  },
+  {
+   "i": 12,
+   "shots": [
+    {
+     "share": 0.4,
+     "template": "list",
+     "title": "Crucial Fine Print",
+     "items": [
+      "Maximum range spread allowed",
+      "Must reflect genuine budgets",
+      "Strict non-compliance fines"
+     ],
+     "vo": "Which is why the fine print matters: how wide a range is allowed and whether it must be a genuine number."
+    },
+    {
+     "share": 0.6,
+     "template": "versus",
+     "title": "The Tradeoff",
+     "left": {
+      "title": "Rigged System",
+      "value": "Hidden / Wild Ranges",
+      "icon": "warning"
+     },
+     "right": {
+      "title": "Fair Game",
+      "value": "Smaller Jackpots",
+      "icon": "lock"
+     },
+     "vo": "Here's my take. Pay transparency is worth it. Not because it makes everyone richer, the evidence says it probably doesn't. Because it stops pay depending on who was brave or connected enough to ask. A fair game with smaller jackpots beats a rigged one."
+    }
+   ]
+  },
+  {
+   "i": 13,
+   "shots": [
+    {
+     "share": 1.0,
+     "template": "stick",
+     "pose": "stand",
+     "pose2": "shrug",
+     "icon": "money",
+     "say": "At least I knew beforehand!",
+     "doubt": "Chip fryer still waiting.",
+     "title": "Realistic Progress",
+     "vo": "Back to the chip shop. This rule probably won't make your first salary huge. But you'll know it's small before the interview. Progress!"
+    }
+   ]
+  },
+  {
+   "i": 14,
+   "shots": [
+    {
+     "share": 0.55,
+     "template": "stat",
+     "value": 9,
+     "prefix": ">",
+     "suffix": "M Views",
+     "label": "Viral Negotiation Advice",
+     "sub": "'Why You Should NEVER Negotiate Salary'",
+     "icon": "film",
+     "vo": "And the most-viewed video on this topic right now is called 'Why You Should NEVER Negotiate Salary,' with over nine million views."
+    },
+    {
+     "share": 0.45,
+     "template": "stick",
+     "pose": "point",
+     "pose2": "stand",
+     "icon": "brain",
+     "say": "Never negotiate? Deal!",
+     "doubt": "The boss loves that video.",
+     "title": "Boss Perspective",
+     "vo": "With public ranges, your boss might be thinking the exact same thing."
+    }
+   ]
+  },
+  {
+   "i": 15,
+   "shots": [
+    {
+     "share": 1.0,
+     "template": "end",
+     "title": "Money Moves",
+     "sub": "We read the price tag so you don't get ripped off.",
+     "vo": "Follow Money Moves. We read the price tag so you don't get ripped off."
+    }
+   ]
+  }
+ ],
+ "shorts": [
+  {
+   "title": "Why Salary Transparency Actually Lowers Wages",
+   "beats": [
+    8,
+    9,
+    10
+   ],
+   "thumb": "The Salary *Trap*"
+  }
+ ],
+ "thumb": {
+  "title": "Salary Secrets *Exposed*",
+  "icon": "money"
+ }
+}

@@ -1,0 +1,267 @@
+{
+ "id": "what-happens-when-companies-must-reveal-salary-ranges-",
+ "created": "2026-11-06T15:50:57+00:00",
+ "pct": 55,
+ "q": "What happens when companies must reveal salary ranges?",
+ "series": "Money Moves (charts)",
+ "brew": {
+  "type": "brew",
+  "id": "what-happens-when-companies-must-reveal-salary-ranges-",
+  "at": "2026-11-06T14:27:19.876Z",
+  "q": "What happens when companies must reveal salary ranges?",
+  "series": "Money Moves (charts)",
+  "aud": "students",
+  "tone": 55,
+  "format": {
+   "long": true,
+   "minutes": 4.5,
+   "shorts": 0,
+   "standaloneShort": true
+  },
+  "angle": "",
+  "notes": [],
+  "refs": [
+   "https://www.reuters.com/business/world-at-work/britain-make-salary-disclosure-job-ads-mandatory-2026-11-05/"
+  ],
+  "script": {
+   "titles": [
+    "Your Boss Has to Show You the Price Tag Now",
+    "Britain Is Banning Secret Salaries. Here's the Twist",
+    "Do Public Pay Ranges Make You Richer? (Not Really)"
+   ],
+   "hooks": [
+    {
+     "line": "Imagine nailing a job interview, then finding out it pays less than your part-time gig at the chip shop.",
+     "visual": "Stickman in a suit high-fiving the interviewer, then reading an offer letter as his tie droops",
+     "pattern": "relatable pain + reversal"
+    },
+    {
+     "line": "Hiding the salary in a job ad is about to become a problem for British companies.",
+     "visual": "Job ad reading 'Competitive salary' gets stamped with a big red NOPE",
+     "pattern": "news hook + stakes"
+    },
+    {
+     "line": "Making everyone's pay public should raise wages. Some research says it does the opposite.",
+     "visual": "Bar chart labelled 'wages' grows upward, then deflates like a balloon",
+     "pattern": "counterintuitive claim"
+    },
+    {
+     "line": "'Competitive salary.' Competitive with what? Nobody knows. That's the point.",
+     "visual": "Stickman squinting at a job ad through a magnifying glass, finding nothing",
+     "pattern": "question + roast"
+    },
+    {
+     "line": "One side of every job negotiation has the cheat sheet. It's not you.",
+     "visual": "Boss at a desk with a giant glowing spreadsheet, applicant holding a sticky note",
+     "pattern": "power imbalance reveal"
+    }
+   ],
+   "chosen": 0,
+   "beats": [
+    {
+     "t": "0:00",
+     "vo": "Okay so. Imagine nailing a job interview, then finding out it pays less than your part-time gig at the chip shop. Britain is reportedly moving to end that: salary ranges in job ads, mandatory.",
+     "visual": "Stickman aces interview, opens offer letter, cuts to him in a chip shop apron looking betrayed. Newspaper headline graphic: UK job ads must show pay (marked 'reportedly')",
+     "sfx": [
+      "record scratch",
+      "fryer sizzle"
+     ]
+    },
+    {
+     "t": "0:14",
+     "vo": "Sounds like a pure win for workers. Here's the weird part: some research says rules like this might not raise average pay at all. And the reason is sneaky.",
+     "visual": "Confetti cannon fires, then freezes mid-air. Question mark chart: 'Average wages?' with arrow pointing both ways",
+     "sfx": [
+      "confetti pop",
+      "freeze-frame zip"
+     ]
+    },
+    {
+     "t": "0:22",
+     "vo": "Ground floor. Plenty of UK job ads just say 'competitive salary.' It's like a market stall with no price tags. You ask how much, and the seller looks you up and down: 'How much you got?'",
+     "visual": "Market stall cartoon: shopkeeper squinting at stickman's shoes and watch, calculator hidden behind his back",
+     "sfx": [
+      "market crowd murmur",
+      "calculator beeps"
+     ]
+    },
+    {
+     "t": "0:36",
+     "vo": "The company has seen hundreds of salaries. You've seen yours. Economists call that information asymmetry. Britain isn't first: Colorado required pay ranges in postings from 2021, then New York City, California and Washington. The EU passed its own pay transparency directive in 2023.",
+     "visual": "Split screen: boss with huge glowing spreadsheet vs applicant with one sticky note. Then world map with pins lighting up: Colorado 2021, NYC, California, Washington, EU 2023",
+     "sfx": [
+      "map pin pops"
+     ]
+    },
+    {
+     "t": "0:48",
+     "vo": "Nerd bonus: since 2017, UK employers with 250 or more staff have had to publish their gender pay gap every year. This is the next level: the price tag upfront.",
+     "visual": "Timeline arrow: 2017 'gap reports' to 'job ad ranges'. Price tag swings onto a job ad",
+     "sfx": [
+      "tag swish"
+     ]
+    },
+    {
+     "t": "0:54",
+     "vo": "Meet Priya, a made-up graduate. Before the law, Company A offers her twenty-six grand. No idea if that's good, so she says yes. The guy hired last month asked for more and got thirty. Same job. Different confidence.",
+     "visual": "Comic panels: Priya shaking hands at £26k; next panel, a guy leaning back with feet on desk, '£30k' bubble. Two equal desks, two unequal paychecks",
+     "sfx": [
+      "handshake squeak",
+      "cash register ding"
+     ]
+    },
+    {
+     "t": "1:18",
+     "vo": "Now switch the law on. The ad says twenty-eight to thirty-two thousand. Priya knows the floor, and that asking for thirty is normal, not cheeky. Multiply that by millions of applicants. Pay gaps often hide in the dark, in who felt allowed to ask. Light on, gap shrinks.",
+     "visual": "Light switch flicks; dark office floods with light revealing a pay range bar £28k to £32k with Priya's marker at £30k. Pay gap chart bars squeeze together",
+     "sfx": [
+      "light switch click",
+      "whoosh"
+     ]
+    },
+    {
+     "t": "1:44",
+     "vo": "Easy. Episode over. Thanks for watching. Except... why do some ads reportedly post ranges so wide they're useless? Like 'fifty thousand to half a million'? Hold that thought.",
+     "visual": "Fake end card rolls, then gets yanked off screen. Job ad with a ridiculously stretched range bar running off the edge of the frame",
+     "sfx": [
+      "fake outro jingle",
+      "tape rip"
+     ]
+    },
+    {
+     "t": "2:02",
+     "vo": "But here's the catch. Economists Zoe Cullen and Bobak Pakzad-Hurson studied US laws protecting workers' right to share their pay. Their headline finding: average wages fell, roughly two percent. Wait, what?",
+     "visual": "Researcher stickmen at a whiteboard. Chart: wage line dips about 2% after 'transparency law' marker. Narrator stickman spits out chai",
+     "sfx": [
+      "chai spit",
+      "chart slide down"
+     ]
+    },
+    {
+     "t": "2:22",
+     "vo": "Think like a boss. Give one hire a bigger offer, everyone sees it, everyone wants it. Every raise for one person quietly costs a raise for everyone. So bosses get stubborn. 'Sorry, policy.' And because the policy's public, it's believable. Transparency gives companies a perfect excuse.",
+     "visual": "Boss gives one worker a coin; a domino line of identical workers all turn their heads. Boss locks a vault labelled 'raises', holds up a sign 'POLICY'",
+     "sfx": [
+      "dominoes clacking",
+      "vault clunk"
+     ]
+    },
+    {
+     "t": "2:44",
+     "vo": "So, the question from the start: does transparency raise average wages? Not reliably. What it does more consistently is squeeze pay together. A Danish study of gender pay reporting found the gap narrowed, reportedly mostly because men's wages grew more slowly. Fairness achieved. By making the lads mildly sad.",
+     "visual": "Accordion squeezing a spread of pay bars into a tight cluster. Danish flag chart: two lines converge as the top line flattens. Sad stickman bloke staring at a slightly smaller raise",
+     "sfx": [
+      "accordion squeeze",
+      "sad trombone (short)"
+     ]
+    },
+    {
+     "t": "3:09",
+     "vo": "So what does this mean for you? Mostly good news. Students have the least insider info, so you gain the most. You can compare offers before sitting through three interview rounds. And loop two: those giant ranges are companies technically complying while telling you nothing. The legal minimum of honesty.",
+     "visual": "Student stickman with three job ads side by side, ranges visible, ticking one. Then a company mascot holding a range bar stretched like a rubber band, sweating",
+     "sfx": [
+      "checkmark ding",
+      "rubber band twang"
+     ]
+    },
+    {
+     "t": "3:36",
+     "vo": "Which is why the fine print matters: how wide a range is allowed and whether it must be a genuine number. Here's my take. Pay transparency is worth it. Not because it makes everyone richer, the evidence says it probably doesn't. Because it stops pay depending on who was brave or connected enough to ask. A fair game with smaller jackpots beats a rigged one.",
+     "visual": "Magnifying glass over fine print. Then two slot machines: one rigged with a hidden magnet, one honest with a smaller jackpot. Narrator stickman taps the honest one",
+     "sfx": [
+      "slot machine whirr",
+      "magnet clunk"
+     ]
+    },
+    {
+     "t": "3:58",
+     "vo": "Back to the chip shop. This rule probably won't make your first salary huge. But you'll know it's small before the interview. Progress!",
+     "visual": "Callback: stickman in chip shop apron reading a job ad with a visible range, shrugging and giving a thumbs up",
+     "sfx": [
+      "fryer sizzle",
+      "tiny party horn"
+     ]
+    },
+    {
+     "t": "4:10",
+     "vo": "And the most-viewed video on this topic right now is called 'Why You Should NEVER Negotiate Salary,' with over nine million views. With public ranges, your boss might be thinking the exact same thing.",
+     "visual": "Generic video thumbnail mockup with view counter ticking past 9 million. Boss stickman nodding and pinning the same title to his wall",
+     "sfx": [
+      "view counter ticking"
+     ]
+    },
+    {
+     "t": "4:22",
+     "vo": "Follow Money Moves. We read the price tag so you don't get ripped off.",
+     "visual": "Money Moves logo with a price tag swinging off it, chai cup steam",
+     "sfx": [
+      "tag swish",
+      "logo sting"
+     ]
+    }
+   ],
+   "vo": "Okay so. Imagine nailing a job interview, then finding out it pays less than your part-time gig at the chip shop. [beat] Britain is reportedly moving to end that: salary ranges in job ads, mandatory. Sounds like a pure win for workers. [smile] Here's the weird part: some research says rules like this might not raise average pay at all. And the reason is sneaky.\n\nGround floor. Plenty of UK job ads just say 'competitive salary.' Competitive with what? It's like a market stall with no price tags. You ask how much, and the seller looks you up and down: 'How much you got?' [dry] The company has seen hundreds of salaries. You've seen yours. Economists call that information asymmetry. Britain isn't first: Colorado required pay ranges in postings from 2021, then New York City, California and Washington. The EU passed its own pay transparency directive in 2023. Nerd bonus: since 2017, UK employers with 250 or more staff have had to publish their gender pay gap every year. This is the next level: the price tag upfront.\n\nMeet Priya, a made-up graduate. Before the law, Company A offers her twenty-six grand. No idea if that's good, so she says yes. The guy hired last month asked for more and got thirty. [beat] Same job. Different confidence. Now switch the law on. The ad says twenty-eight to thirty-two thousand. Priya knows the floor, and that asking for thirty is normal, not cheeky. Multiply that by millions of applicants. Pay gaps often hide in the dark, in who felt allowed to ask. Light on, gap shrinks. [smile] Easy. Episode over. Thanks for watching. [beat] Except... why do some ads reportedly post ranges so wide they're useless? Like 'fifty thousand to half a million'? Hold that thought.\n\nBut here's the catch. Economists Zoe Cullen and Bobak Pakzad-Hurson studied US laws protecting workers' right to share their pay. Their headline finding: average wages fell, roughly two percent. [beat] Wait, what? Think like a boss. Give one hire a bigger offer, everyone sees it, everyone wants it. Every raise for one person quietly costs a raise for everyone. So bosses get stubborn. [dry] 'Sorry, policy.' And because the policy's public, it's believable. Transparency gives companies a perfect excuse. So, the question from the start: does transparency raise average wages? Not reliably. What it does more consistently is squeeze pay together. A Danish study of gender pay reporting found the gap narrowed, reportedly mostly because men's wages grew more slowly. [dry] Fairness achieved. By making the lads mildly sad.\n\nSo what does this mean for you? Mostly good news. Students have the least insider info, so you gain the most. You can compare offers before sitting through three interview rounds. And loop two: those giant ranges are companies technically complying while telling you nothing. [smile] The legal minimum of honesty. Which is why the fine print matters: how wide a range is allowed and whether it must be a genuine number. [beat] Here's my take. Pay transparency is worth it. Not because it makes everyone richer, the evidence says it probably doesn't. Because it stops pay depending on who was brave or connected enough to ask. A fair game with smaller jackpots beats a rigged one.\n\nBack to the chip shop. This rule probably won't make your first salary huge. But you'll know it's small before the interview. [smile] Progress! And the most-viewed video on this topic right now is called 'Why You Should NEVER Negotiate Salary,' with over nine million views. [dry] With public ranges, your boss might be thinking the exact same thing. Follow Money Moves. We read the price tag so you don't get ripped off.",
+   "verify": [
+    "Details of the UK plan in the Reuters piece (2026-11-05): that disclosure is mandatory, timeline, which employers it covers, and whether ranges are required",
+    "Colorado pay range posting requirement took effect January 2021",
+    "NYC (Nov 2022), California and Washington (Jan 2023) posting laws and start dates",
+    "EU Pay Transparency Directive adopted 2023",
+    "UK gender pay gap reporting for employers with 250+ staff since 2017",
+    "Cullen & Pakzad-Hurson (Econometrica, 2023) 'Equilibrium Effects of Pay Transparency': confirm ~2% wage decline estimate and that it relates to laws protecting workers' right to discuss pay",
+    "Danish gender pay reporting study (Bennedsen, Simintzi, Tsoutsoura, Wolfenzon): gap narrowed mainly via slower male wage growth",
+    "Examples of very wide posted ranges (e.g. $50k to $500k style) in US postings; keep phrased as 'reportedly' unless a specific sourced example is found",
+    "YouTube top result title 'Why You Should NEVER Negotiate Salary' (Chris Voss & The Black Swan Group) and view count ~9.3 million at time of recording",
+    "Priya is explicitly fictional; salary figures in her example are illustrative, not data"
+   ],
+   "rubric": {
+    "hook": 4,
+    "clarity": 5,
+    "story": 4,
+    "personality": 4,
+    "accuracy": 4,
+    "visuals": 4,
+    "pacing": 4,
+    "payoff": 4,
+    "packaging": 4,
+    "originality": 3,
+    "total": 40
+   },
+   "at": "2026-11-06T14:25:01.766Z"
+  }
+ },
+ "brew_at": "2026-11-06T14:27:19.876Z",
+ "error": null,
+ "stage": "test_ready",
+ "step": "Test cut ready. Watch it and approve or ask for changes",
+ "steps": [
+  {
+   "stage": "queued",
+   "at": "2026-11-06T15:50:57+00:00"
+  },
+  {
+   "stage": "voicing",
+   "at": "2026-11-06T15:51:10+00:00"
+  },
+  {
+   "stage": "planning",
+   "at": "2026-11-06T16:03:19+00:00"
+  },
+  {
+   "stage": "test_render",
+   "at": "2026-11-06T16:03:50+00:00"
+  },
+  {
+   "stage": "test_ready",
+   "at": "2026-11-06T16:14:26+00:00"
+  }
+ ],
+ "updated": "2026-11-06T16:14:26+00:00",
+ "duration": 290.5,
+ "preview": {
+  "id": "1W3cNWepCjuiNlG1f2XQQpxNfiQldmfuM",
+  "view": "https://drive.google.com/file/d/1W3cNWepCjuiNlG1f2XQQpxNfiQldmfuM/view",
+  "download": "https://drive.google.com/uc?id=1W3cNWepCjuiNlG1f2XQQpxNfiQldmfuM&export=download",
+  "size_mb": 6.7,
+  "at": "2026-11-06T16:14:26+00:00"
+ }
+}
