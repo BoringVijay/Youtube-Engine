@@ -23,6 +23,8 @@ jobs:
     timeout-minutes: 75
     steps:
       - uses: actions/checkout@v4
+      - name: Use the latest job state (a queued run checks out an older commit)
+        run: git pull -q --rebase origin main || true
       - name: Quick inbox check (skip the heavy setup when there is nothing to do)
         id: check
         env:
