@@ -105,6 +105,16 @@ def reddit():
         try:
             data = get_json(f"https://www.reddit.com/r/{sub}/top.json?t=day&limit=8&raw_json=1")
         except Exception:
+            try:  # RSS fallback: titles and links only, no vote counts
+                root = ET.fromstring(get(f"https://www.reddit.com/r/{sub}/top/.rss?t=day&limit=8"))
+                atom = "{http://www.w3.org/2005/Atom}"
+                for e in root.findall(atom + "entry"):
+                    link = e.find(atom + "link")
+                    out.append({"src": f"reddit_r/{sub}", "title": e.findtext(atom + "title") or "",
+                                "url": link.get("href") if link is not None else "", "metric": {},
+                                "time": e.findtext(atom + "updated")})
+            except Exception:
+                pass
             continue
         for c in data["data"]["children"]:
             p = c["data"]
@@ -166,18 +176,23 @@ def pick_model():
     return MODEL
 
 
-def gemini(prompt, temperature=0.9):
+def gemini(prompt, temperature=0.9, _think=True):
     pick_model()
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generateContent"
-    body = {"contents": [{"parts": [{"text": prompt}]}],
-            "generationConfig": {"responseMimeType": "application/json", "temperature": temperature}}
+    cfg = {"responseMimeType": "application/json", "temperature": temperature}
+    if _think:  # keep thinking short: card writing doesn't need deep reasoning
+        cfg["thinkingConfig"] = {"thinkingLevel": "low"} if re.match(r"gemini-[3-9]", MODEL) else {"thinkingBudget": 0}
+    body = {"contents": [{"parts": [{"text": prompt}]}], "generationConfig": cfg}
     req = urllib.request.Request(url, data=json.dumps(body).encode(), method="POST",
                                  headers={"Content-Type": "application/json", "x-goog-api-key": os.environ["GEMINI_API_KEY"]})
     try:
-        with urllib.request.urlopen(req, timeout=180) as r:
+        with urllib.request.urlopen(req, timeout=300) as r:
             resp = json.load(r)
     except urllib.error.HTTPError as e:
-        raise RuntimeError(f"Gemini HTTP {e.code}: {e.read()[:300]}")
+        msg = e.read()[:300]
+        if _think and e.code == 400:  # model doesn't accept the thinking setting: retry plain
+            return gemini(prompt, temperature, _think=False)
+        raise RuntimeError(f"Gemini HTTP {e.code}: {msg}")
     text = resp["candidates"][0]["content"]["parts"][0]["text"]
     return json.loads(text)
 
@@ -201,9 +216,9 @@ Never invent numbers. Skip pure celebrity gossip, sports scores, obituaries and 
 Return JSON: {{"cards":[{{"refs":[indices of input items used],"question":"","hook":"","about":"","surprise":"","series":"","audience":"","format":"","scores":{{"curiosity":[n,"why"],"explainability":[n,"why"],"shelf_life":[n,"why"],"money":[n,"why"]}},"risk":""}}]}}"""
 
 
-def write_hot_cards(items):
-    lines = [f"[{i}] ({it['src']}) {it['title']}" for i, it in enumerate(items)]
-    prompt = (CARD_RULES + "\n\nTurn these live signals into 25-40 distinct cards. Merge items about the same story. "
+def write_hot_cards(chunk):
+    lines = [f"[{i}] ({it['src']}) {it['title']}" for i, it in enumerate(chunk)]
+    prompt = (CARD_RULES + "\n\nTurn these live signals into 8-12 distinct cards. Merge items about the same story. "
               "Prefer stories with a mechanism to explain. Signals:\n" + "\n".join(lines))
     return gemini(prompt).get("cards", [])
 
@@ -330,14 +345,25 @@ def main():
                      ("hacker_news", hacker_news), ("polymarket", polymarket), ("crypto_hacks", crypto_hacks)]:
         items += safe(name, fn)
     random.shuffle(items)
-    items = items[:220]
+    items = items[:180]
+
+    from concurrent.futures import ThreadPoolExecutor
+    chunks = [items[i:i + 45] for i in range(0, len(items), 45)]
+    used = [p["question"] for p in pool]
+    jobs = [("hot", ch) for ch in chunks] + [("evergreen", None), ("evergreen", None)]
+
+    def run(job):
+        kind, ch = job
+        cards = safe(f"gemini_{kind}", (lambda: write_hot_cards(ch)) if kind == "hot" else (lambda: write_evergreen_cards(8, used)))
+        return [(c, ch or [], kind) for c in cards]
 
     new = []
-    if items:
-        for c in safe("gemini_hot", lambda: write_hot_cards(items)):
-            new.append(finalize(c, items, "hot"))
-    for c in safe("gemini_evergreen", lambda: write_evergreen_cards(15, [p["question"] for p in pool])):
-        new.append(finalize(c, items, "evergreen"))
+    with ThreadPoolExecutor(max_workers=4) as ex:
+        for res in ex.map(run, jobs):
+            for c, ch, kind in res:
+                new.append(finalize(c, ch, kind))
+    seen_q = set()
+    new = [c for c in new if not (c["key"] in seen_q or seen_q.add(c["key"]))]
 
     new = [c for c in new if c["question"] and c["key"] not in seen]
     tok = yt_token() if os.environ.get("YT_REFRESH_TOKEN") else None
