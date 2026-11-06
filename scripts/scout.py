@@ -448,8 +448,10 @@ def main():
     json.dump({"ran_at": NOW.isoformat(), "new_cards": len(new), "pool": len(pool), "signals": len(items)},
               open(os.path.join(DECK, "last_run.json"), "w"), indent=1)
     log(f"done: {len(new)} new cards, pool {len(pool)}")
+    if not new and not pool:
+        sys.exit("No cards produced and the deck is empty. Check the logs above.")
     if not new:
-        sys.exit("No cards produced. Check the logs above.")
+        log("warning: no new cards this run (see Gemini errors above). Publishing the existing deck.")
 
 
 if __name__ == "__main__":
