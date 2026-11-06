@@ -5,7 +5,7 @@ outbox/  engine -> panel: deck.json, status.json, analytics.json, comments.json
 inbox/   panel -> engine: one JSON file per request (brew, approve, reply...), moved to inbox/done after handling
 Env: YT_CLIENT_ID, YT_CLIENT_SECRET, GDRIVE_REFRESH_TOKEN
 """
-import json, os, sys, urllib.parse, urllib.request, uuid
+import json, os, sys, urllib.error, urllib.parse, urllib.request, uuid
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CFG = json.load(open(os.path.join(ROOT, "config", "drive.json")))
@@ -25,8 +25,11 @@ def token():
 
 def req(method, url, body=None, ctype="application/json", raw=False):
     r = urllib.request.Request(url, data=body, method=method, headers={"Authorization": f"Bearer {token()}", "Content-Type": ctype})
-    with urllib.request.urlopen(r, timeout=120) as resp:
-        data = resp.read()
+    try:
+        with urllib.request.urlopen(r, timeout=120) as resp:
+            data = resp.read()
+    except urllib.error.HTTPError as e:
+        raise RuntimeError(f"Drive {method} {url.split('?')[0]} -> HTTP {e.code}: {e.read()[:400].decode('utf-8', 'replace')}")
     return data if raw else (json.loads(data) if data else {})
 
 

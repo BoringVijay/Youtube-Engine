@@ -36,7 +36,9 @@ jobs:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           GDRIVE_REFRESH_TOKEN: ${{ secrets.GDRIVE_REFRESH_TOKEN }}
-        run: python3 -u scripts/drive.py deck 2>&1 | tee -a logs/scout-last.log
+        run: |
+          set -o pipefail
+          python3 -u scripts/drive.py deck 2>&1 | tee -a logs/scout-last.log
       - name: Save deck and log
         if: always()
         run: |
