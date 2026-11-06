@@ -7,7 +7,7 @@ Rule: every number on a card comes from a source API. Gemini only writes words
 Env: GEMINI_API_KEY, YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN (optional, for competition check)
 Output: deck/cards.json (pool, newest first), deck/seen.json (topic keys already used), deck/last_run.json
 """
-import datetime as dt, hashlib, json, os, random, re, sys, time, urllib.parse, urllib.request
+import datetime as dt, hashlib, urllib.error, json, os, random, re, sys, time, urllib.parse, urllib.request
 import xml.etree.ElementTree as ET
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -15,7 +15,8 @@ DECK = os.path.join(ROOT, "deck")
 UA = "YoutubeEngineScout/1.0 (personal research tool; contact chaitanya.n321@gmail.com)"
 NOW = dt.datetime.now(dt.timezone.utc)
 POOL_MAX = 400
-MODEL = os.environ.get("SCOUT_MODEL", "gemini-2.5-flash")
+MODEL = os.environ.get("SCOUT_MODEL", "")
+PREFER = ["flash", "pro"]  # cheapest capable text model first
 log = lambda *a: print("[scout]", *a, flush=True)
 
 
@@ -145,14 +146,38 @@ def crypto_hacks():
 
 
 # ---------- Gemini ----------
+def pick_model():
+    """Use the newest Flash text model this key can call (models get retired; never hardcode)."""
+    global MODEL
+    if MODEL:
+        return MODEL
+    data = get_json("https://generativelanguage.googleapis.com/v1beta/models?pageSize=200",
+                    {"x-goog-api-key": os.environ["GEMINI_API_KEY"]})
+    names = [m["name"].split("/")[1] for m in data.get("models", [])
+             if "generateContent" in m.get("supportedGenerationMethods", [])]
+    text = [n for n in names if not re.search(r"tts|image|embed|audio|live|vision|aqa|learnlm|gemma|robotics|computer", n)]
+    def rank(n):
+        v = re.search(r"gemini-(\d+(?:\.\d+)?)", n)
+        ver = float(v.group(1)) if v else 0
+        tier = 0 if "flash" in n and "lite" not in n else 1 if "lite" in n else 2
+        return (tier, -ver, "preview" in n or "exp" in n, len(n))
+    MODEL = sorted(text, key=rank)[0]
+    log("gemini model:", MODEL, "| candidates:", ", ".join(sorted(text, key=rank)[:6]))
+    return MODEL
+
+
 def gemini(prompt, temperature=0.9):
+    pick_model()
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generateContent"
     body = {"contents": [{"parts": [{"text": prompt}]}],
             "generationConfig": {"responseMimeType": "application/json", "temperature": temperature}}
     req = urllib.request.Request(url, data=json.dumps(body).encode(), method="POST",
                                  headers={"Content-Type": "application/json", "x-goog-api-key": os.environ["GEMINI_API_KEY"]})
-    with urllib.request.urlopen(req, timeout=180) as r:
-        resp = json.load(r)
+    try:
+        with urllib.request.urlopen(req, timeout=180) as r:
+            resp = json.load(r)
+    except urllib.error.HTTPError as e:
+        raise RuntimeError(f"Gemini HTTP {e.code}: {e.read()[:300]}")
     text = resp["candidates"][0]["content"]["parts"][0]["text"]
     return json.loads(text)
 
