@@ -156,8 +156,27 @@ def crypto_hacks():
 
 
 # ---------- Gemini ----------
+def _call(model, prompt, temperature, think, timeout):
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
+    cfg = {"responseMimeType": "application/json", "temperature": temperature}
+    if think:
+        cfg["thinkingConfig"] = {"thinkingLevel": "low"} if re.match(r"gemini-[3-9]", model) else {"thinkingBudget": 0}
+    body = {"contents": [{"parts": [{"text": prompt}]}], "generationConfig": cfg}
+    req = urllib.request.Request(url, data=json.dumps(body).encode(), method="POST",
+                                 headers={"Content-Type": "application/json", "x-goog-api-key": os.environ["GEMINI_API_KEY"]})
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            resp = json.load(r)
+    except urllib.error.HTTPError as e:
+        msg = e.read()[:300]
+        if think and e.code == 400:
+            return _call(model, prompt, temperature, False, timeout)
+        raise RuntimeError(f"Gemini HTTP {e.code} on {model}: {msg}")
+    return json.loads(resp["candidates"][0]["content"]["parts"][0]["text"])
+
+
 def pick_model():
-    """Use the newest Flash text model this key can call (models get retired; never hardcode)."""
+    """Ping candidate text models with a tiny request; use the first that answers fast."""
     global MODEL
     if MODEL:
         return MODEL
@@ -165,36 +184,30 @@ def pick_model():
                     {"x-goog-api-key": os.environ["GEMINI_API_KEY"]})
     names = [m["name"].split("/")[1] for m in data.get("models", [])
              if "generateContent" in m.get("supportedGenerationMethods", [])]
-    text = [n for n in names if not re.search(r"tts|image|embed|audio|live|vision|aqa|learnlm|gemma|robotics|computer", n)]
+    text = [n for n in names if not re.search(r"tts|image|embed|audio|live|vision|aqa|learnlm|gemma|robotics|computer|thinking", n)]
     def rank(n):
         v = re.search(r"gemini-(\d+(?:\.\d+)?)", n)
         ver = float(v.group(1)) if v else 0
         tier = 0 if "flash" in n and "lite" not in n else 1 if "lite" in n else 2
-        return (tier, -ver, "preview" in n or "exp" in n, len(n))
-    MODEL = sorted(text, key=rank)[0]
-    log("gemini model:", MODEL, "| candidates:", ", ".join(sorted(text, key=rank)[:6]))
-    return MODEL
+        return (tier, "preview" in n or "exp" in n, -ver, len(n))
+    for m in sorted(text, key=rank)[:8]:
+        t0 = time.time()
+        try:
+            _call(m, 'Return JSON {"ok": true}', 0, True, 40)
+            log(f"gemini model: {m} (ping {time.time()-t0:.1f}s)")
+            MODEL = m
+            return MODEL
+        except Exception as e:
+            log(f"gemini ping {m}: failed after {time.time()-t0:.0f}s ({str(e)[:150]})")
+    raise RuntimeError("No Gemini text model answered")
 
 
-def gemini(prompt, temperature=0.9, _think=True):
+def gemini(prompt, temperature=0.9):
     pick_model()
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generateContent"
-    cfg = {"responseMimeType": "application/json", "temperature": temperature}
-    if _think:  # keep thinking short: card writing doesn't need deep reasoning
-        cfg["thinkingConfig"] = {"thinkingLevel": "low"} if re.match(r"gemini-[3-9]", MODEL) else {"thinkingBudget": 0}
-    body = {"contents": [{"parts": [{"text": prompt}]}], "generationConfig": cfg}
-    req = urllib.request.Request(url, data=json.dumps(body).encode(), method="POST",
-                                 headers={"Content-Type": "application/json", "x-goog-api-key": os.environ["GEMINI_API_KEY"]})
-    try:
-        with urllib.request.urlopen(req, timeout=300) as r:
-            resp = json.load(r)
-    except urllib.error.HTTPError as e:
-        msg = e.read()[:300]
-        if _think and e.code == 400:  # model doesn't accept the thinking setting: retry plain
-            return gemini(prompt, temperature, _think=False)
-        raise RuntimeError(f"Gemini HTTP {e.code}: {msg}")
-    text = resp["candidates"][0]["content"]["parts"][0]["text"]
-    return json.loads(text)
+    t0 = time.time()
+    out = _call(MODEL, prompt, temperature, True, 150)
+    log(f"gemini call ok in {time.time()-t0:.0f}s")
+    return out
 
 
 SERIES = ["What If? (stickman)", "What Actually Happened (mini-doc)", "How It Works (cutaway)",

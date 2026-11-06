@@ -1,9 +1,12 @@
 name: Topic scout
-# Refills the idea deck every 4 hours. Run it by hand anytime from the Actions tab.
+# Refills the idea deck every 4 hours. Also runs when the scout code changes.
 on:
   schedule:
     - cron: "17 */4 * * *"
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["scripts/scout.py", ".github/workflows/scout.yml"]
 
 permissions:
   contents: write
@@ -15,7 +18,7 @@ concurrency:
 jobs:
   scout:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - name: Find topics
@@ -24,11 +27,15 @@ jobs:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
-        run: python3 scripts/scout.py
-      - name: Save deck
+        run: |
+          mkdir -p deck logs
+          set -o pipefail
+          python3 -u scripts/scout.py 2>&1 | tee logs/scout-last.log
+      - name: Save deck and log
+        if: always()
         run: |
           git config user.name "scout-bot"
           git config user.email "scout-bot@users.noreply.github.com"
-          git add deck/
-          git diff --cached --quiet || git commit -m "Scout: refill deck"
+          git add deck/ logs/
+          git diff --cached --quiet || git commit -m "Scout run ${{ job.status }}"
           git pull --rebase --autostash -q && git push
