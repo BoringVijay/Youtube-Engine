@@ -205,7 +205,9 @@ def pick_model():
             _CHAIN[:] = ordered[i:i + 4]
             return MODEL
         except Exception as e:
-            log(f"gemini ping {m}: failed after {time.time()-t0:.0f}s ({str(e)[:120]})")
+            log(f"gemini ping {m}: failed after {time.time()-t0:.0f}s ({str(e)[:160]})")
+            if "HTTP 402" in str(e):
+                raise RuntimeError("Gemini prepay wallet is empty: add credits at aistudio.google.com/billing")
     raise RuntimeError("No Gemini text model answered")
 
 
@@ -222,6 +224,8 @@ def gemini(prompt, temperature=0.9):
                 return out
             except Exception as e:
                 last = e
+                if "HTTP 402" in str(e):
+                    raise RuntimeError("Gemini prepay wallet is empty: add credits at aistudio.google.com/billing")
                 busy = re.search(r"HTTP (429|500|503)|timed out", str(e))
                 log(f"gemini {model} attempt {attempt+1}: {str(e)[:110]}")
                 if not busy:
