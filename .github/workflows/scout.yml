@@ -1,5 +1,5 @@
 name: Topic scout
-# Refills the idea deck every 4 hours and publishes it to Drive. Also runs when the scout code changes.
+# Refills the idea deck every 4 hours, then publishes it to Drive. Also runs when the scout code changes.
 on:
   schedule:
     - cron: "17 */4 * * *"
