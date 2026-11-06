@@ -1,5 +1,495 @@
 [
  {
+  "id": "a936ffe585a0",
+  "key": "how-did-a-hacker-fake-a-message-across-blockchains-for-800k-",
+  "created_at": "2026-11-06T14:15:56.526546+00:00",
+  "kind": "hot",
+  "question": "How did a hacker fake a message across blockchains for $800K?",
+  "hook": "A hacker tricked two blockchains using a fake letter.",
+  "about": "zkLink Nova lost $0.8M after a cross-chain message spoofing exploit. It highlights how bridges between distinct blockchains remain vulnerable to forged validation messages.",
+  "surprise": "Was the bridge's signature verification completely bypassed or just poorly validated?",
+  "series": "How It Works (cutaway)",
+  "audience": "tech & AI",
+  "format": "long",
+  "scores": {
+   "curiosity": [
+    4,
+    "Exploits and clever hacks draw interest"
+   ],
+   "explainability": [
+    5,
+    "Easy to visualize bridging and messaging"
+   ],
+   "shelf_life": [
+    4,
+    "Crypto exploits remain relevant educational content"
+   ],
+   "money": [
+    4,
+    "High crypto and tech ad rates"
+   ]
+  },
+  "risk": "",
+  "search_query": "zkLink Nova hack cross chain spoofing",
+  "wiki_title": "",
+  "stats": {
+   "hack_usd": 783100,
+   "yt_results": 0
+  },
+  "origin": {
+   "time": "2026-10-28T00:00:00+00:00",
+   "hours_ago": 230.3
+  },
+  "sources": [
+   {
+    "src": "defillama_hacks",
+    "title": "zkLink Nova hack: $0.8M via Cross-Chain Message Spoofing",
+    "url": "https://defillama.com/hacks"
+   }
+  ],
+  "demand": null,
+  "competition": 0,
+  "quality": 85,
+  "opportunity": 69
+ },
+ {
+  "id": "d3796f95c8e6",
+  "key": "how-did-a-supply-chain-attack-drain-2-7m-from-polymarket-international-",
+  "created_at": "2026-11-06T14:15:56.526546+00:00",
+  "kind": "hot",
+  "question": "How did a supply chain attack drain $2.7M from Polymarket International?",
+  "hook": "A hidden bug in vendor code cost millions instantly.",
+  "about": "Polymarket International was hit by a $2.7M exploit stemming from a supply chain attack. It shows how third-party software dependencies create massive blind spots for major platforms.",
+  "surprise": "Was a third-party software dependency modified to steal funds?",
+  "series": "How It Works (cutaway)",
+  "audience": "finance & crypto",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    4,
+    "Big money lost via unseen code"
+   ],
+   "explainability": [
+    4,
+    "Can diagram software supply chain dependencies"
+   ],
+   "shelf_life": [
+    4,
+    "Software security lessons stay relevant long-term"
+   ],
+   "money": [
+    5,
+    "Attracts high-value fintech and crypto advertisers"
+   ]
+  },
+  "risk": "",
+  "search_query": "Polymarket hack supply chain attack crypto",
+  "wiki_title": "",
+  "stats": {
+   "hack_usd": 2700000,
+   "yt_results": 800,
+   "yt_top_views": 2117,
+   "yt_median_top10_views": 7,
+   "yt_recent_in_top10": 7,
+   "yt_top_title": "How One Script Stole Millions From Polymarket #crypto #security #tech",
+   "yt_top_channel": "ByteMonk",
+   "yt_top_url": "https://youtu.be/eynDCMF5Wmc",
+   "yt_query": "Polymarket hack supply chain attack crypto"
+  },
+  "origin": {
+   "time": "2026-10-29T00:00:00+00:00",
+   "hours_ago": 206.3
+  },
+  "sources": [
+   {
+    "src": "defillama_hacks",
+    "title": "Polymarket International hack: $2.7M via Supply Chain Attack",
+    "url": "https://defillama.com/hacks"
+   }
+  ],
+  "demand": 44,
+  "competition": 30,
+  "quality": 85,
+  "opportunity": 64
+ },
+ {
+  "id": "31278e5be371",
+  "key": "how-does-a-simple-math-flaw-in-smart-contracts-lose-200k-",
+  "created_at": "2026-11-06T14:15:56.526546+00:00",
+  "kind": "hot",
+  "question": "How does a simple math flaw in smart contracts lose $200K?",
+  "hook": "Incorrect share accounting just drained a vault.",
+  "about": "AlpsCon AI Trade Hub lost $0.2M due to a math logic mistake in share calculation. It demonstrates how subtle smart contract errors allow attackers to redeem far more than they deposited.",
+  "surprise": "How did incorrect share accounting allow an over-withdrawal?",
+  "series": "Money Moves (charts)",
+  "audience": "finance & crypto",
+  "format": "short",
+  "scores": {
+   "curiosity": [
+    3,
+    "Niche exploit mechanics but interesting math"
+   ],
+   "explainability": [
+    5,
+    "Pie charts and share math are simple"
+   ],
+   "shelf_life": [
+    3,
+    "Standard smart contract bug topic"
+   ],
+   "money": [
+    4,
+    "Fintech audience appeals to web3 sponsors"
+   ]
+  },
+  "risk": "",
+  "search_query": "AlpsCon AI trade hub smart contract hack",
+  "wiki_title": "",
+  "stats": {
+   "hack_usd": 152809.36,
+   "yt_results": 0
+  },
+  "origin": {
+   "time": "2026-10-19T00:00:00+00:00",
+   "hours_ago": 446.3
+  },
+  "sources": [
+   {
+    "src": "defillama_hacks",
+    "title": "AlpsCon AI Trade Hub hack: $0.2M via Incorrect Share Accounting",
+    "url": "https://defillama.com/hacks"
+   }
+  ],
+  "demand": null,
+  "competition": 0,
+  "quality": 75,
+  "opportunity": 65
+ },
+ {
+  "id": "78e85a3af78d",
+  "key": "how-did-bad-token-swap-logic-cost-tendril-600-000-",
+  "created_at": "2026-11-06T14:15:56.526546+00:00",
+  "kind": "hot",
+  "question": "How did bad token swap logic cost TENDRIL $600,000?",
+  "hook": "A flawed swap formula gave away six hundred grand.",
+  "about": "TENDRIL suffered a $0.6M loss caused by a swap logic flaw in its protocol code. It illustrates why automated market makers require rigorous edge-case testing.",
+  "surprise": "What specific swap calculation flaw enabled the drain?",
+  "series": "Money Moves (charts)",
+  "audience": "finance & crypto",
+  "format": "short",
+  "scores": {
+   "curiosity": [
+    3,
+    "Financial logic flaws intrigue crypto coders"
+   ],
+   "explainability": [
+    4,
+    "Swap mechanics can be easily graphed"
+   ],
+   "shelf_life": [
+    3,
+    "DeFi exploits follow repeated structural patterns"
+   ],
+   "money": [
+    4,
+    "Strong crypto and financial services value"
+   ]
+  },
+  "risk": "",
+  "search_query": "TENDRIL crypto hack swap logic flaw",
+  "wiki_title": "",
+  "stats": {
+   "hack_usd": 550000,
+   "yt_results": 1,
+   "yt_top_views": 395292,
+   "yt_median_top10_views": 395292,
+   "yt_recent_in_top10": 0,
+   "yt_top_title": "Why the AI Safety Teams Are Gone",
+   "yt_top_channel": "The Infographics Show",
+   "yt_top_url": "https://youtu.be/3OCNhNEJcZk",
+   "yt_query": "TENDRIL crypto hack swap logic flaw"
+  },
+  "origin": {
+   "time": "2026-11-05T00:00:00+00:00",
+   "hours_ago": 38.3
+  },
+  "sources": [
+   {
+    "src": "defillama_hacks",
+    "title": "TENDRIL hack: $0.6M via Swap Logic Flaw",
+    "url": "https://defillama.com/hacks"
+   }
+  ],
+  "demand": 75,
+  "competition": 56,
+  "quality": 70,
+  "opportunity": 68
+ },
+ {
+  "id": "3d4ec1f79787",
+  "key": "why-did-el-salvador-send-armed-forces-into-haiti-",
+  "created_at": "2026-11-06T14:15:56.526546+00:00",
+  "kind": "hot",
+  "question": "Why did El Salvador send armed forces into Haiti?",
+  "hook": "A Central American nation just deployed to Haiti.",
+  "about": "El Salvador deployed security forces to assist in restoring order in gang-plagued Haiti. The unusual international mission highlights shifting geopolitical dynamics in Latin America and the Caribbean.",
+  "surprise": "What authority sanctioned El Salvador's military deployment?",
+  "series": "What Actually Happened (mini-doc)",
+  "audience": "general curious",
+  "format": "long",
+  "scores": {
+   "curiosity": [
+    5,
+    "Unexpected international troop deployment creates intrigue"
+   ],
+   "explainability": [
+    4,
+    "Maps and troop movements explain easily"
+   ],
+   "shelf_life": [
+    3,
+    "Tied to ongoing current regional news"
+   ],
+   "money": [
+    2,
+    "Geopolitics and conflict lower ad rates"
+   ]
+  },
+  "risk": "tragedy",
+  "search_query": "El Salvador troops Haiti foreign mission",
+  "wiki_title": "",
+  "stats": {
+   "yt_results": 137430,
+   "yt_top_views": 5552088,
+   "yt_median_top10_views": 44020,
+   "yt_recent_in_top10": 10,
+   "yt_top_title": "El Salvador Has Invaded Haiti. Here\u2019s What You Need to Know.",
+   "yt_top_channel": "WarFronts",
+   "yt_top_url": "https://youtu.be/RAXLnCNA4w8",
+   "yt_query": "El Salvador troops Haiti foreign mission"
+  },
+  "origin": {
+   "time": "2026-11-05T20:15:43+00:00",
+   "hours_ago": 18.0
+  },
+  "sources": [
+   {
+    "src": "reddit_r/OutOfTheLoop",
+    "title": "What\u2019s going on with El Savadore sending in armed forces to Haiti?",
+    "url": "https://www.reddit.com/r/OutOfTheLoop/comments/1xot1e2/whats_going_on_with_el_savadore_sending_in_armed/"
+   }
+  ],
+  "demand": 90,
+  "competition": 76,
+  "quality": 70,
+  "opportunity": 72
+ },
+ {
+  "id": "a1bc457cdffa",
+  "key": "how-do-unpaid-volunteers-build-the-software-powering-the-whole-world-",
+  "created_at": "2026-11-06T14:15:56.526546+00:00",
+  "kind": "hot",
+  "question": "How do unpaid volunteers build the software powering the whole world?",
+  "hook": "The entire internet runs on unpaid human effort.",
+  "about": "Critical infrastructure from Linux kernel updates to Wikipedia relies on global volunteer networks. Understanding these decentralized communities reveals the surprisingly fragile backbone of modern technology.",
+  "surprise": "How do open-source projects coordinate thousands of global contributors?",
+  "series": "What Actually Happened (mini-doc)",
+  "audience": "students",
+  "format": "long",
+  "scores": {
+   "curiosity": [
+    5,
+    "People take internet infrastructure for granted"
+   ],
+   "explainability": [
+    4,
+    "Process charts and network trees work"
+   ],
+   "shelf_life": [
+    5,
+    "Timeless story about digital public goods"
+   ],
+   "money": [
+    4,
+    "Tech sector sponsors love infrastructure stories"
+   ]
+  },
+  "risk": "",
+  "search_query": "how open source volunteers built the internet",
+  "wiki_title": "Linux",
+  "stats": {
+   "hn_points": 173,
+   "hn_comments": 54,
+   "wiki_article": "Linux",
+   "wiki_avg_30d": 3292,
+   "wiki_views_24h": 3326,
+   "wiki_change_pct": 1,
+   "yt_results": 1000000,
+   "yt_top_views": 2518965,
+   "yt_median_top10_views": 255,
+   "yt_recent_in_top10": 2,
+   "yt_top_title": "The Rise Of Open-Source Software",
+   "yt_top_channel": "CNBC",
+   "yt_top_url": "https://youtu.be/SpeDK1TPbew",
+   "yt_query": "how open source volunteers built the internet"
+  },
+  "origin": {
+   "time": "2026-11-06T04:17:49+00:00",
+   "hours_ago": 10.0
+  },
+  "sources": [
+   {
+    "src": "hacker_news",
+    "title": "From Linux to Wikipedia: How Volunteers Build the Internet",
+    "url": "https://thereader.mitpress.mit.edu/from-linux-to-wikipedia-how-volunteers-build-the-internet/"
+   }
+  ],
+  "demand": 80,
+  "competition": 30,
+  "quality": 90,
+  "opportunity": 82
+ },
+ {
+  "id": "a0f721469f1c",
+  "key": "how-did-joran-van-der-sloot-evade-justice-for-decades-",
+  "created_at": "2026-11-06T14:15:56.526546+00:00",
+  "kind": "hot",
+  "question": "How did Joran van der Sloot evade justice for decades?",
+  "hook": "The prime suspect hid behind legal loopholes for years.",
+  "about": "The high-profile disappearance of Natalee Holloway in Aruba led to decades of international legal maneuvering surrounding chief suspect Joran van der Sloot. The saga highlights complex extradition laws and criminal trials across borders.",
+  "surprise": "Joran van der Sloot was linked to Natalee Holloway's disappearance.",
+  "series": "True Weird Stories (comic)",
+  "audience": "general curious",
+  "format": "long",
+  "scores": {
+   "curiosity": [
+    5,
+    "True crime case attracts massive public fascination"
+   ],
+   "explainability": [
+    4,
+    "Comic timeline suits legal crime stories"
+   ],
+   "shelf_life": [
+    4,
+    "Infamous true crime cases retain high views"
+   ],
+   "money": [
+    2,
+    "True crime and violence penalize ads"
+   ]
+  },
+  "risk": "tragedy",
+  "search_query": "Joran van der Sloot Natalee Holloway case",
+  "wiki_title": "Disappearance of Natalee Holloway",
+  "stats": {
+   "wiki_views_24h": 82100,
+   "wiki_change_pct": 731,
+   "wiki_7d": [
+    2938,
+    3208,
+    3373,
+    3595,
+    4521,
+    5441,
+    46120,
+    82100
+   ],
+   "wiki_article": "Disappearance of Natalee Holloway",
+   "wiki_avg_30d": 7341,
+   "yt_results": 128915,
+   "yt_top_views": 1155292,
+   "yt_median_top10_views": 59344,
+   "yt_recent_in_top10": 6,
+   "yt_top_title": "Joran Van der Sloot admits to killing Natalee Holloway",
+   "yt_top_channel": "NBC News",
+   "yt_top_url": "https://youtu.be/uqs-UFmFKKk",
+   "yt_query": "Joran van der Sloot Natalee Holloway case"
+  },
+  "origin": null,
+  "sources": [
+   {
+    "src": "wikipedia",
+    "title": "Joran van der Sloot",
+    "url": "https://en.wikipedia.org/wiki/Joran_van_der_Sloot"
+   },
+   {
+    "src": "wikipedia",
+    "title": "Disappearance of Natalee Holloway",
+    "url": "https://en.wikipedia.org/wiki/Disappearance_of_Natalee_Holloway"
+   }
+  ],
+  "demand": 91,
+  "competition": 66,
+  "quality": 75,
+  "opportunity": 76
+ },
+ {
+  "id": "2f0e9c4042a2",
+  "key": "can-you-still-build-a-custom-mac-on-regular-pc-hardware-",
+  "created_at": "2026-11-06T14:15:56.526546+00:00",
+  "kind": "hot",
+  "question": "Can you still build a custom Mac on regular PC hardware?",
+  "hook": "Installing macOS on custom PC hardware is back.",
+  "about": "The Hackintosh community historically bypassed Apple hardware restrictions to run macOS on custom PCs. Recent developments explore how enthusiasts navigate Apple Silicon shifts to keep custom installations alive.",
+  "surprise": "Can x86 macOS builds still run on modern non-Apple CPUs?",
+  "series": "How It Works (cutaway)",
+  "audience": "tech & AI",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    4,
+    "Tech tinkerers love hardware workarounds and hacks"
+   ],
+   "explainability": [
+    4,
+    "Hardware component diagrams work very well"
+   ],
+   "shelf_life": [
+    3,
+    "Relies on ongoing macOS compatibility cycles"
+   ],
+   "money": [
+    4,
+    "PC hardware and tech builder market"
+   ]
+  },
+  "risk": "",
+  "search_query": "hackintosh modern pc macos hardware guide",
+  "wiki_title": "Hackintosh",
+  "stats": {
+   "hn_points": 353,
+   "hn_comments": 200,
+   "wiki_article": "Hackintosh",
+   "wiki_avg_30d": 118,
+   "wiki_views_24h": 135,
+   "wiki_change_pct": 14,
+   "yt_results": 117989,
+   "yt_top_views": 7047935,
+   "yt_median_top10_views": 481664,
+   "yt_recent_in_top10": 0,
+   "yt_top_title": "Apple won't like this... - Run MacOS on ANY PC",
+   "yt_top_channel": "Linus Tech Tips",
+   "yt_top_url": "https://youtu.be/ATnpEOo3GJA",
+   "yt_query": "hackintosh modern pc macos hardware guide"
+  },
+  "origin": {
+   "time": "2026-11-05T19:08:22+00:00",
+   "hours_ago": 19.1
+  },
+  "sources": [
+   {
+    "src": "hacker_news",
+    "title": "The Hackintosh Reborn",
+    "url": "https://www.naut.ca/blog/2026/11/05/the-hackintosh-reborn-with-ai/"
+   }
+  ],
+  "demand": 82,
+  "competition": 57,
+  "quality": 75,
+  "opportunity": 73
+ },
+ {
   "id": "650a5bf6bf5c",
   "key": "what-happens-to-your-body-if-you-sink-into-quicksand-",
   "created_at": "2026-11-06T13:45:24.130160+00:00",
