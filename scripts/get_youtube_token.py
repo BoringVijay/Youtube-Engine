@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""One-time YouTube login. Run on your Mac:  python3 get_youtube_token.py client_secret.json
+"""One-time logins. Run on your Mac:
+  YouTube (channel account):  python3 get_youtube_token.py client_secret.json
+  Google Drive (personal):    python3 get_youtube_token.py client_secret.json --drive
 
 Opens your browser, you pick the channel's Google account and click Allow
 (you'll see an "unverified app" warning: Advanced > Go to app). It prints a
@@ -14,10 +16,14 @@ SCOPES = [
     "https://www.googleapis.com/auth/youtube.readonly",
     "https://www.googleapis.com/auth/yt-analytics.readonly",
 ]
+DRIVE = "--drive" in sys.argv
+if DRIVE:
+    SCOPES = ["https://www.googleapis.com/auth/drive"]
+args = [a for a in sys.argv[1:] if not a.startswith("--")]
 PORT = 8765
 REDIRECT = f"http://localhost:{PORT}"
 
-cfg = json.load(open(sys.argv[1] if len(sys.argv) > 1 else "client_secret.json"))["installed"]
+cfg = json.load(open(args[0] if args else "client_secret.json"))["installed"]
 state = secrets.token_urlsafe(16)
 auth_url = cfg["auth_uri"] + "?" + urllib.parse.urlencode({
     "client_id": cfg["client_id"], "redirect_uri": REDIRECT, "response_type": "code",
@@ -49,5 +55,6 @@ data = urllib.parse.urlencode({
 tok = json.load(urllib.request.urlopen(cfg["token_uri"], data))
 if "refresh_token" not in tok:
     sys.exit("No refresh token returned. Remove the app's access at myaccount.google.com/permissions and run again.")
-print("\nYT_REFRESH_TOKEN (copy everything on the next line into GitHub Secrets):\n")
+name = "GDRIVE_REFRESH_TOKEN" if DRIVE else "YT_REFRESH_TOKEN"
+print(f"\n{name} (copy everything on the next line into GitHub Secrets):\n")
 print(tok["refresh_token"])
