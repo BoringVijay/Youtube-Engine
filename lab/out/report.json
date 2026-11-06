@@ -1,0 +1,133 @@
+{
+ "at": "2026-11-06T17:21:10Z",
+ "images": [
+  {
+   "beat": "hook",
+   "style": "paper",
+   "file": "lab/out/img-hook-paper.jpg"
+  },
+  {
+   "beat": "hook",
+   "style": "clay",
+   "file": "lab/out/img-hook-clay.jpg"
+  },
+  {
+   "beat": "hook",
+   "style": "riso",
+   "file": "lab/out/img-hook-riso.jpg"
+  },
+  {
+   "beat": "hook",
+   "style": "blueprint",
+   "file": "lab/out/img-hook-blueprint.jpg"
+  },
+  {
+   "beat": "hook",
+   "style": "gouache",
+   "file": "lab/out/img-hook-gouache.jpg"
+  },
+  {
+   "beat": "hook",
+   "style": "collage",
+   "file": "lab/out/img-hook-collage.jpg"
+  },
+  {
+   "beat": "shark",
+   "style": "paper",
+   "file": "lab/out/img-shark-paper.jpg"
+  },
+  {
+   "beat": "shark",
+   "style": "clay",
+   "file": "lab/out/img-shark-clay.jpg"
+  },
+  {
+   "beat": "shark",
+   "style": "riso",
+   "file": "lab/out/img-shark-riso.jpg"
+  },
+  {
+   "beat": "shark",
+   "style": "blueprint",
+   "file": "lab/out/img-shark-blueprint.jpg"
+  },
+  {
+   "beat": "shark",
+   "style": "gouache",
+   "file": "lab/out/img-shark-gouache.jpg"
+  },
+  {
+   "beat": "shark",
+   "style": "collage",
+   "file": "lab/out/img-shark-collage.jpg"
+  }
+ ],
+ "voices": [
+  {
+   "id": "1-current",
+   "label": "Current engine (for comparison)",
+   "model": "gemini-3.8-flash-tts",
+   "voice": "Puck",
+   "sec": 45.4,
+   "file": "lab/out/voice-1-current.mp3"
+  },
+  {
+   "id": "2-puck",
+   "label": "Puck, directed + acting tags",
+   "model": "gemini-3.1-flash-tts-preview",
+   "voice": "Puck",
+   "sec": 44.5,
+   "file": "lab/out/voice-2-puck.mp3"
+  },
+  {
+   "id": "3-fenrir",
+   "label": "Fenrir (excitable), directed",
+   "model": "gemini-3.1-flash-tts-preview",
+   "voice": "Fenrir",
+   "sec": 37.0,
+   "file": "lab/out/voice-3-fenrir.mp3"
+  },
+  {
+   "id": "4-zubenelgenubi",
+   "label": "Zubenelgenubi (casual), directed",
+   "model": "gemini-3.1-flash-tts-preview",
+   "voice": "Zubenelgenubi",
+   "sec": 42.9,
+   "file": "lab/out/voice-4-zubenelgenubi.mp3"
+  },
+  {
+   "id": "5-sadachbia",
+   "label": "Sadachbia (lively), directed",
+   "model": "gemini-3.1-flash-tts-preview",
+   "voice": "Sadachbia",
+   "sec": 35.7,
+   "file": "lab/out/voice-5-sadachbia.mp3"
+  },
+  {
+   "id": "6-puck-indian",
+   "label": "Puck, Indian English accent",
+   "model": "gemini-3.1-flash-tts-preview",
+   "voice": "Puck",
+   "sec": 37.4,
+   "file": "lab/out/voice-6-puck-indian.mp3"
+  },
+  {
+   "id": "7-puck-38",
+   "label": "Puck, directed, newest 3.8 model",
+   "model": "gemini-3.8-flash-tts",
+   "voice": "Puck",
+   "sec": 34.4,
+   "file": "lab/out/voice-7-puck-38.mp3"
+  },
+  {
+   "id": "8-umbriel",
+   "label": "Umbriel (easy-going), directed",
+   "model": "gemini-3.1-flash-tts-preview",
+   "voice": "Umbriel",
+   "sec": 37.3,
+   "file": "lab/out/voice-8-umbriel.mp3"
+  }
+ ],
+ "videos": [],
+ "errors": []
+}
