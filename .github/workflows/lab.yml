@@ -1,5 +1,5 @@
 name: Creative lab
-# rerun: 2
+# rerun: 3
 # Tries visual styles, voices and AI motion. Runs when lab/request.json or the lab script changes.
 on:
   workflow_dispatch:
@@ -24,7 +24,8 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
-          which ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
+          (which ffmpeg && which ffprobe) || { curl -sL https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz | tar xJ -C /tmp && sudo cp /tmp/ffmpeg-*-static/ffmpeg /tmp/ffmpeg-*-static/ffprobe /usr/local/bin/; } || (sudo DEBIAN_FRONTEND=noninteractive timeout 300 apt-get install -y -qq --no-install-recommends ffmpeg)
+          ffmpeg -version | head -1
           mkdir -p logs lab/out
           set -o pipefail
           python3 -u scripts/lab.py 2>&1 | tee logs/lab-last.log
