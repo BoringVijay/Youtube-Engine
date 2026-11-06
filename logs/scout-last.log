@@ -4,24 +4,25 @@
 [scout] hacker_news: 29 items
 [scout] polymarket: 20 items
 [scout] crypto_hacks: 27 items
-[scout] gemini ping gemini-3.8-flash: failed after 12s (Gemini HTTP 503 on gemini-3.8-flash: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in )
-[scout] gemini ping gemini-3.8-flash: failed after 40s (The read operation timed out)
-[scout] gemini ping gemini-3.8-flash: failed after 40s (The read operation timed out)
-[scout] gemini ping gemini-3.8-flash: failed after 40s (The read operation timed out)
-[scout] gemini ping gemini-3.7-flash: failed after 40s (The read operation timed out)
-[scout] gemini model: gemini-3.6-flash (ping 2.0s)
-[scout] gemini call ok in 12s
-[scout] gemini_hot: 8 items
-[scout] gemini call ok in 11s
-[scout] gemini_evergreen: 8 items
-[scout] gemini_evergreen: skipped (RuntimeError: Gemini HTTP 503 on gemini-3.6-flash: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experi)
-[scout] gemini ping gemini-3.7-flash: failed after 40s (The read operation timed out)
-[scout][scout]  gemini ping gemini-3.7-flash: failed after 40s (The read operation timed out)gemini ping gemini-3.7-flash: failed after 40s (The read operation timed out)
-
+[scout] gemini ping gemini-3.8-flash: failed after 30s (The read operation timed out)
+[scout] gemini ping gemini-3.7-flash: failed after 30s (The read operation timed out)
 [scout] gemini model: gemini-3.6-flash (ping 0.8s)
-[scout] gemini model: gemini-3.6-flash (ping 8.7s)
-[scout] gemini_hot: skipped (RuntimeError: Gemini HTTP 429 on gemini-3.6-flash: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your current quot)
-[scout] gemini_hot: skipped (RuntimeError: Gemini HTTP 503 on gemini-3.6-flash: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experi)
-[scout] gemini model: gemini-3.6-flash (ping 20.6s)
-[scout] gemini_hot: skipped (RuntimeError: Gemini HTTP 429 on gemini-3.6-flash: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your current quot)
-[scout] done: 16 new cards, pool 16
+[scout] gemini gemini-3.6-flash attempt 1: Gemini HTTP 503 on gemini-3.6-flash: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is curren
+[scout] gemini gemini-3.6-flash ok in 12s
+[scout] gemini_hot: 8 items
+[scout] gemini gemini-3.6-flash ok in 15s
+[scout] gemini_hot: 8 items
+[scout] gemini gemini-3.6-flash ok in 12s
+[scout] gemini_hot: 8 items
+[scout] gemini gemini-3.6-flash attempt 1: Gemini HTTP 503 on gemini-3.6-flash: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is curren
+[scout] gemini gemini-3.6-flash ok in 16s
+[scout] gemini_hot: 8 items
+[scout] gemini gemini-3.6-flash attempt 1: Gemini HTTP 503 on gemini-3.6-flash: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is curren
+[scout] gemini gemini-3.6-flash attempt 2: Gemini HTTP 503 on gemini-3.6-flash: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is curren
+[scout] gemini gemini-3.6-flash attempt 2: Gemini HTTP 503 on gemini-3.6-flash: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is curren
+[scout] gemini gemini-3.6-flash ok in 13s
+[scout] gemini_evergreen: 8 items
+[scout] gemini gemini-3.6-flash attempt 3: Gemini HTTP 429 on gemini-3.6-flash: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your cu
+[scout] gemini gemini-3.5-flash ok in 12s
+[scout] gemini_evergreen: 8 items
+[scout] done: 48 new cards, pool 64
