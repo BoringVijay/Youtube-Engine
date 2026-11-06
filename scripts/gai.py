@@ -5,7 +5,7 @@ If GCP_SA_KEY (a service-account JSON) is set, calls go through Vertex AI, which
 Otherwise they go through the Gemini API key (AI Studio prepay wallet).
 generate(model, body) takes the same generateContent body either way.
 """
-import base64, json, os, time, urllib.error, urllib.parse, urllib.request
+import base64, json, os, re, time, urllib.error, urllib.parse, urllib.request
 
 _SA = os.environ.get("GCP_SA_KEY", "").strip()
 _LOC = os.environ.get("GCP_LOCATION", "global")
@@ -51,11 +51,24 @@ def _req(url, body, headers, timeout, method="POST"):
         raise RuntimeError(f"HTTP {e.code} {url.split('?')[0].split('/')[-1]}: {e.read()[:500].decode('utf-8', 'replace')}")
 
 
+LAST = {"backend": None}
+SPEND = []  # (kind, model, units, backend) appended by callers for the ledger
+
+
 def generate(model, body, timeout=300):
+    """Vertex first when configured (bills the Cloud credits); falls back to the AI Studio key if Vertex lacks the model."""
     if _SA:
         host = "aiplatform.googleapis.com" if _LOC == "global" else f"{_LOC}-aiplatform.googleapis.com"
         url = f"https://{host}/v1/projects/{project()}/locations/{_LOC}/publishers/google/models/{model}:generateContent"
-        return _req(url, body, {"Content-Type": "application/json", "Authorization": f"Bearer {_vertex_token()}"}, timeout)
+        try:
+            out = _req(url, body, {"Content-Type": "application/json", "Authorization": f"Bearer {_vertex_token()}"}, timeout)
+            LAST["backend"] = "vertex"
+            return out
+        except RuntimeError as e:
+            if not (os.environ.get("GEMINI_API_KEY") and re.search(r"HTTP (400|403|404)", str(e))):
+                raise
+            print(f"[gai] vertex could not serve {model} ({str(e)[:160]}), using AI Studio", flush=True)
+    LAST["backend"] = "studio"
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
     return _req(url, body, {"Content-Type": "application/json", "x-goog-api-key": os.environ["GEMINI_API_KEY"]}, timeout)
 

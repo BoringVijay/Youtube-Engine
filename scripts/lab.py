@@ -7,6 +7,9 @@ Env: GEMINI_API_KEY
 import base64, json, os, re, subprocess, sys, time, urllib.error, urllib.request, wave
 from concurrent.futures import ThreadPoolExecutor
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import gai  # noqa: E402
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "lab", "out")
 REQ = json.load(open(os.path.join(ROOT, "lab", "request.json")))
@@ -38,10 +41,10 @@ def gen_image(model, prompt, path, ref=None, aspect="16:9"):
     parts = [{"text": prompt}]
     if ref:
         parts.insert(0, {"inlineData": {"mimeType": "image/png", "data": base64.b64encode(open(ref, "rb").read()).decode()}})
-    body = {"contents": [{"parts": parts}], "generationConfig": {"responseModalities": ["IMAGE"], "imageConfig": {"aspectRatio": aspect}}}
+    body = {"contents": [{"role": "user", "parts": parts}], "generationConfig": {"responseModalities": ["IMAGE"], "imageConfig": {"aspectRatio": aspect}}}
     for attempt in range(3):
         try:
-            d = call(f"models/{model}:generateContent", body)
+            d = gai.generate(model, body)
             for p in d["candidates"][0]["content"]["parts"]:
                 if "inlineData" in p:
                     raw = base64.b64decode(p["inlineData"]["data"])
@@ -60,11 +63,11 @@ def gen_image(model, prompt, path, ref=None, aspect="16:9"):
 
 # ---------- voice ----------
 def tts(model, voice, prompt, path):
-    body = {"contents": [{"parts": [{"text": prompt}]}],
+    body = {"contents": [{"role": "user", "parts": [{"text": prompt}]}],
             "generationConfig": {"responseModalities": ["AUDIO"], "speechConfig": {"voiceConfig": {"prebuiltVoiceConfig": {"voiceName": voice}}}}}
     for attempt in range(4):
         try:
-            d = call(f"models/{model}:generateContent", body, timeout=240)
+            d = gai.generate(model, body, timeout=240)
             part = d["candidates"][0]["content"]["parts"][0]["inlineData"]
             pcm = base64.b64decode(part["data"])
             log("tts mime", model, part.get("mimeType"))
@@ -139,6 +142,32 @@ def main():
         (n for n in names if re.search(r"banana-2\.1|flash-image|banana", n) and "lite" not in n), None)
     log("image model:", img_model)
 
+    log("backend:", gai.backend())
+    char_png = None
+    ch = REQ.get("character")
+    if ch and img_model:
+        path = os.path.join(OUT, f"img-{ch['id']}.jpg")
+        try:
+            gen_image(img_model, ch["prompt"], path, aspect=ch.get("aspect", "16:9"))
+            char_png = path.replace(".jpg", ".png")
+            report["images"].append({"character": ch["id"], "file": os.path.relpath(path, ROOT)})
+            log("character sheet ok")
+        except Exception as e:
+            report["errors"].append({"character": ch["id"], "error": str(e)[:300]})
+
+    def do_scene(sc):
+        path = os.path.join(OUT, f"img-{sc['id']}.jpg")
+        try:
+            gen_image(img_model, sc["prompt"] + "\n\n" + REQ.get("image_rules", ""), path, ref=char_png if sc.get("ref") else None, aspect=sc.get("aspect", "16:9"))
+            return {"scene": sc["id"], "file": os.path.relpath(path, ROOT)}
+        except Exception as e:
+            return {"scene": sc["id"], "error": str(e)[:300]}
+    if img_model and REQ.get("scenes"):
+        with ThreadPoolExecutor(max_workers=3) as ex:
+            for r in ex.map(do_scene, REQ["scenes"]):
+                (report["images"] if "file" in r else report["errors"]).append(r)
+                log("scene", r.get("scene"), r.get("error", "ok")[:160])
+
     # images
     jobs = []
     for beat in REQ.get("beats", []):
@@ -180,7 +209,7 @@ def main():
     vid_model = next((n for n in names if "omni" in n and "flash" in n), None) or next((n for n in names if "omni" in n), None)
     log("video model:", vid_model)
     for v in REQ.get("videos", []):
-        src = os.path.join(OUT, f"img-{v['beat']}-{v['style']}.png")
+        src = os.path.join(OUT, f"img-{v['src']}.png" if v.get("src") else f"img-{v['beat']}-{v['style']}.png")
         if not (vid_model and os.path.exists(src)):
             report["errors"].append({"video": v["id"], "error": "no model or no source frame"})
             continue

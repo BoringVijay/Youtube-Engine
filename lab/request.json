@@ -1,106 +1,49 @@
 {
- "note": "Lab run 1b: re-run images and voices (videos kept from run 1)",
+ "note": "Lab run 2: canonical penguin + cameo test across media",
  "image_models": [
   "gemini-nano-banana-2.1",
   "gemini-3.1-flash-image",
   "gemini-3.1-flash-image-preview"
  ],
- "image_rules": "No watermark, no border, no real logos, brands or real people. If text appears, spell it exactly and keep it minimal. Keep the lower fifth calm for captions.",
- "beats": [
+ "image_rules": "No watermark, no border, no real logos, brands or real people. Spell any text exactly. The penguin must match the reference sheet exactly: eye-rings, orange beak tip, orange feet, three-feather tuft.",
+ "character": {
+  "id": "penguin-sheet",
+  "aspect": "16:9",
+  "prompt": "Character model sheet for an original mascot, designer-vinyl-toy look with soft studio lighting on a plain warm grey background. THE PENGUIN (original mascot, fixed traits, keep all of them): a small, round, egg-shaped Adelie-type penguin, a bit bottom-heavy. Black head and back, clean white belly. Big round white eye-rings that make it look permanently curious. Small dark beak with an orange tip. Slightly oversized bright orange feet. Flippers a little too short (it cannot fly). SIGNATURE: three thin stubborn feathers sticking up from the top of its head, slightly bent. Personality: nosy, deadpan, quietly unlucky. Never talks. Top row: front view, three-quarter view, side view, back view. Bottom row, four expressions: wide-eyed curious stare, deadpan side-eye, startled with feathers standing up, embarrassed after falling over. Small clean label 'CURIOUS PENGUIN' in the corner."
+ },
+ "scenes": [
   {
-   "id": "hook",
-   "frame": "A split-level scene cut horizontally by the ocean surface. Above water, at night: a small, round, deadpan penguin stands on a tiny ice floe, looking up hopefully at a satellite crossing a starry sky. Below the waterline, a vast dark ocean drops away to the seabed, where a single thin cable glows warm orange and carries pulses of light across the frame. The real action is at the bottom. Wide 16:9 composition with breathing room, strong silhouettes, one clear focal point."
+   "id": "cameo-tiltshift",
+   "ref": true,
+   "prompt": "Tilt-shift miniature photograph: a cable repair ship alone on a vast grey-green sea at dawn, looking like a real model set, with focus bands top and bottom. Hidden among the crates on the deck, very small in frame, the penguin from the reference wears a tiny hard hat and a hi-vis vest and peeks out. A spot-the-penguin moment."
   },
   {
-   "id": "shark",
-   "frame": "A corporate board meeting held entirely on the seabed. Six very serious people in suits sit around a long table; a slide on the back wall reads 'SHARK MITIGATION'. A small penguin wearing a tiny tie takes notes. Through a round window behind them, a curious shark is nibbling a thick cable. Deadpan comedy, everyone completely straight-faced. Wide 16:9."
+   "id": "cameo-16mm",
+   "ref": true,
+   "prompt": "Still from a 1970s 16mm documentary: a cable landing station control room full of blinking equipment, two engineers in short-sleeved shirts arguing over a long printout. In the background on top of a filing cabinet, the penguin from the reference sits holding a tiny coffee mug, clearly eavesdropping. Warm film grain, faded colours, soft halation."
+  },
+  {
+   "id": "cameo-clay-trip",
+   "ref": true,
+   "prompt": "Claymation miniature set: a single garden hose stretching across a moonlit seabed into the darkness, glowing faintly orange. The penguin from the reference is caught mid-trip over the hose, flippers flailing, one foot in the air, frozen at the peak of the fall. Stop-motion texture, fingerprints in the clay."
+  },
+  {
+   "id": "cameo-blueprint",
+   "ref": true,
+   "prompt": "Technical cross-section of a deep-sea fibre optic cable on cyanotype paper, white linework on Prussian blue, with neat labels: 'POLYETHYLENE', 'STEEL WIRES', 'COPPER TUBE', 'OPTICAL FIBRES'. Beside it, the penguin from the reference drawn in the same white linework as a size comparison, labelled 'FOR SCALE (APPROX.)'."
+  },
+  {
+   "id": "cameo-oilpainting",
+   "ref": true,
+   "prompt": "Classical oil painting in the style of an old master allegory: a bearded sea god rising from the waves, puzzled, holding a tangle of thin cables like a fishing net. In the lower corner, the penguin from the reference wears a tiny toga and points at the cables with total confidence. Dramatic chiaroscuro, cracked varnish texture."
   }
  ],
- "styles": [
+ "voices": [],
+ "videos": [
   {
-   "id": "paper",
-   "look": "Handcrafted layered paper-cut diorama photographed as a miniature set. Visible paper fibres and cut edges, 4 to 6 depth layers with soft cast shadows between them, shallow depth of field, warm practical light. Muted deep navy and sand palette with one burnt orange accent."
-  },
-  {
-   "id": "clay",
-   "look": "Stop-motion claymation miniature set. Plasticine characters with subtle fingerprints, handmade props, tabletop scale, warm key light with a cool rim light, slight tilt-shift. Cozy, tactile, funny."
-  },
-  {
-   "id": "riso",
-   "look": "Two-colour risograph print in fluorescent orange and deep blue on off-white paper. Halftone grain, slight ink misregistration, bold flat shapes, confident editorial composition with lots of negative space."
-  },
-  {
-   "id": "blueprint",
-   "look": "Technical cutaway illustration on cyanotype paper: crisp white linework on Prussian blue, cross-sections, measurement lines and small handwritten annotations, with a single warm orange highlight on the key object. Clever, nerdy, precise."
-  },
-  {
-   "id": "gouache",
-   "look": "Hand-painted gouache animation background with cinematic lighting, rich brush texture, atmospheric depth, painterly but clean shapes, moody blues with one warm glowing focal point."
-  },
-  {
-   "id": "collage",
-   "look": "Mixed-media zine collage: cut-out vintage photos, torn paper edges, halftone dots, tape and sticker shapes, scribbled marker doodles. Playful meme energy with a tasteful, uncluttered layout."
+   "id": "cameo-trip",
+   "src": "cameo-clay-trip",
+   "prompt": "Stop-motion claymation, locked-off camera: the penguin finishes tripping over the glowing hose, faceplants into the sand with a small puff, then slowly sits up, dazed, and looks straight at the camera. Stop-motion frame rate, comic timing. No text."
   }
- ],
- "voice_prompt": "# AUDIO PROFILE: Vee\n## The narrator of a curious explainer channel. Late 20s, sharp, funny, a little chaotic. Talks like your smartest friend who just found out something wild and absolutely has to tell you.\n## THE SCENE: Late night on a terrace, two friends, chai in hand. He leans in, half laughing, because the fact he is about to drop is ridiculous.\n### DIRECTOR'S NOTES\nStyle: Loud, warm, animated, grinning. A real conversation, not narration. Punch the surprising words. Let jokes land with a beat of silence. Never sound like an announcer, an ad or an audiobook.\nPace: Fast and bouncy when excited, slows right down for the eerie or serious bits. Natural micro pauses, like thinking out loud.\n{NOTES}\n#### TRANSCRIPT\n{TRANSCRIPT}",
- "transcript_tagged": "[cheerfully] Okay so, you think this video flew to you from a satellite, right? [short pause] Nope. [soft laugh] Not even close. More than ninety five percent of everything crossing between continents, your memes, your bank transfers, literally this video, is crawling along the bottom of the ocean, [whispering] through a cable about as thick as a garden hose. [sighs] The cloud, it turns out, lives in the sea. [thoughtfully] So what happens if somebody cuts every single one? And honestly, the weirder question is, [uhm] why hasn't it happened already?",
- "voices": [
-  {
-   "id": "1-current",
-   "label": "Current engine (for comparison)",
-   "model": "gemini-3.8-flash-tts",
-   "fallback": [
-    "gemini-2.5-flash-preview-tts"
-   ],
-   "voice": "Puck",
-   "prompt": "You are the narrator of a smart, funny animated YouTube explainer. Speak like a warm friend telling a great story over coffee: relaxed, conversational, curious, with natural rhythm, small pauses and a bit of a grin. Never sound like an announcer or an ad. Read the following exactly as written.\n\nOkay so. You probably think this video reached you through a satellite. ... Nope. More than 95 percent of the data crossing between continents travels through cables lying on the bottom of the ocean. The cloud lives in the sea. And out in the deep water, the cable carrying it is about as thick as a garden hose. So what if every single one got cut? And the weirder question: why hasn't it happened already?"
-  },
-  {
-   "id": "2-puck",
-   "label": "Puck, directed + acting tags",
-   "model": "gemini-3.1-flash-tts-preview",
-   "voice": "Puck"
-  },
-  {
-   "id": "3-fenrir",
-   "label": "Fenrir (excitable), directed",
-   "model": "gemini-3.1-flash-tts-preview",
-   "voice": "Fenrir"
-  },
-  {
-   "id": "4-zubenelgenubi",
-   "label": "Zubenelgenubi (casual), directed",
-   "model": "gemini-3.1-flash-tts-preview",
-   "voice": "Zubenelgenubi"
-  },
-  {
-   "id": "5-sadachbia",
-   "label": "Sadachbia (lively), directed",
-   "model": "gemini-3.1-flash-tts-preview",
-   "voice": "Sadachbia"
-  },
-  {
-   "id": "6-puck-indian",
-   "label": "Puck, Indian English accent",
-   "model": "gemini-3.1-flash-tts-preview",
-   "voice": "Puck",
-   "notes": "Accent: a young guy from Bangalore, natural Indian English accent and rhythm, never exaggerated or comic."
-  },
-  {
-   "id": "7-puck-38",
-   "label": "Puck, directed, newest 3.8 model",
-   "model": "gemini-3.8-flash-tts",
-   "voice": "Puck",
-   "fallback": [
-    "gemini-2.5-flash-preview-tts"
-   ]
-  },
-  {
-   "id": "8-umbriel",
-   "label": "Umbriel (easy-going), directed",
-   "model": "gemini-3.1-flash-tts-preview",
-   "voice": "Umbriel"
-  }
- ],
- "videos": []
+ ]
 }
