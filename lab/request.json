@@ -1,5 +1,5 @@
 {
- "note": "Lab run 1: undersea cables hook. Styles x beats, voices, motion.",
+ "note": "Lab run 1b: re-run images and voices (videos kept from run 1)",
  "image_models": [
   "gemini-nano-banana-2.1",
   "gemini-3.1-flash-image",
@@ -90,7 +90,10 @@
    "id": "7-puck-38",
    "label": "Puck, directed, newest 3.8 model",
    "model": "gemini-3.8-flash-tts",
-   "voice": "Puck"
+   "voice": "Puck",
+   "fallback": [
+    "gemini-2.5-flash-preview-tts"
+   ]
   },
   {
    "id": "8-umbriel",
@@ -99,18 +102,5 @@
    "voice": "Umbriel"
   }
  ],
- "videos": [
-  {
-   "id": "hook-paper",
-   "beat": "hook",
-   "style": "paper",
-   "prompt": "One slow continuous camera move: start on the penguin looking up at the satellite, then tilt down through the water surface and glide down to the glowing cable on the seabed while pulses of light race along it. Paper layers drift with gentle parallax, tiny bubbles rise. Handmade stop-motion feel. No text, no people."
-  },
-  {
-   "id": "shark-clay",
-   "beat": "shark",
-   "style": "clay",
-   "prompt": "Stop-motion claymation: the people at the table nod with total seriousness, the penguin scribbles notes, and behind the window the shark takes a slow bite of the cable, then turns and stares at the camera. Locked-off camera, stop-motion frame rate, deadpan timing. No text changes."
-  }
- ]
+ "videos": []
 }

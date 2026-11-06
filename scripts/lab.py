@@ -67,7 +67,8 @@ def tts(model, voice, prompt, path):
             d = call(f"models/{model}:generateContent", body, timeout=240)
             part = d["candidates"][0]["content"]["parts"][0]["inlineData"]
             pcm = base64.b64decode(part["data"])
-            rate = int(re.search(r"rate=(\d+)", part.get("mimeType", "rate=24000")).group(1))
+            log("tts mime", model, part.get("mimeType"))
+            m = re.search(r"rate=(\d+)", part.get("mimeType", "")); rate = int(m.group(1)) if m else 24000
             wav = path[:-4] + ".wav"
             with wave.open(wav, "wb") as w:
                 w.setnchannels(1); w.setsampwidth(2); w.setframerate(rate); w.writeframes(pcm)

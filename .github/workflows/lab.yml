@@ -32,7 +32,6 @@ jobs:
         run: |
           git config user.name "engine-bot"
           git config user.email "engine-bot@users.noreply.github.com"
-          git add logs/lab-last.log lab/out/*.jpg lab/out/*.mp3 lab/out/report.json 2>/dev/null || true
-          git add -f lab/out/*-small.mp4 2>/dev/null || true
+          for f in logs/lab-last.log lab/out/*.jpg lab/out/*.mp3 lab/out/report.json lab/out/*-small.mp4; do [ -e "$f" ] && git add -f "$f"; done
           git diff --cached --quiet || git commit -m "Lab results"
           for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done

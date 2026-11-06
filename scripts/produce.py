@@ -234,7 +234,7 @@ def tts(text, voice, direction=""):
                     data = json.load(resp)
                 part = data["candidates"][0]["content"]["parts"][0]["inlineData"]
                 pcm = base64.b64decode(part["data"])
-                rate = int(re.search(r"rate=(\d+)", part.get("mimeType", "rate=24000")).group(1))
+                m = re.search(r"rate=(\d+)", part.get("mimeType", "")); rate = int(m.group(1)) if m else 24000
                 return pcm, rate, model
             except urllib.error.HTTPError as e:
                 last = f"HTTP {e.code} {model}: {e.read()[:200]}"
