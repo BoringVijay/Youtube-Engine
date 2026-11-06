@@ -179,6 +179,34 @@ input[type=range] { width: 100%; accent-color: var(--accent); }
 .tile .t { color: var(--muted); font-weight: 700; font-size: 13px; }
 .section { display: grid; gap: 14px; margin-bottom: 26px; }
 @media (prefers-reduced-motion: reduce) { .card { transition: none; } }
+
+/* ---------- Production (Studio v2) ---------- */
+.prod { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 16px; display: grid; gap: 12px; }
+.prod + .prod { margin-top: 12px; }
+.prod h4 { margin: 0; font: 800 17px/1.2 var(--display); }
+.prod .top { display: flex; gap: 10px; align-items: flex-start; }
+.prod .top .chip { margin-left: auto; }
+.pbar { height: 10px; border-radius: 6px; background: var(--soft); box-shadow: inset 0 0 0 1px var(--line); overflow: hidden; }
+.pbar i { display: block; height: 100%; background: var(--accent); border-radius: 6px; transition: width .6s ease; }
+.pbar.live i { background-image: linear-gradient(90deg, rgba(255,255,255,.0) 0, rgba(255,255,255,.35) 50%, rgba(255,255,255,0) 100%); background-size: 200px 100%; background-repeat: no-repeat; animation: shimmer 1.4s linear infinite; background-color: var(--accent); }
+@keyframes shimmer { from { background-position: -200px 0; } to { background-position: 400px 0; } }
+@media (prefers-reduced-motion: reduce) { .pbar.live i { animation: none; } }
+.steps { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 4px; }
+.steps div { font: 700 10.5px/1.2 var(--body); color: var(--muted); text-align: center; padding-top: 8px; border-top: 4px solid var(--line); }
+.steps div.done { border-color: var(--ink); color: var(--ink); }
+.steps div.now { border-color: var(--accent); color: var(--accent); }
+@media (max-width: 560px) { .steps div span { display: none; } .steps div { font-size: 0; padding-top: 0; } }
+.prod .meta { display: flex; justify-content: space-between; gap: 10px; font-size: 13px; color: var(--muted); flex-wrap: wrap; }
+.prod .acts { display: flex; gap: 8px; flex-wrap: wrap; }
+.prod video, .prod img.thumb { width: 100%; border-radius: 12px; background: #000; display: block; }
+.prod .err { color: var(--bad); font-size: 13px; font-weight: 600; }
+.reels { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 8px; }
+.reels a { display: block; border: 1px solid var(--line); border-radius: 12px; padding: 10px; font-size: 13px; font-weight: 700; color: var(--ink); text-decoration: none; background: var(--soft); }
+a.btn { color: var(--ink); text-decoration: none; display: inline-flex; align-items: center; }
+.prod textarea { width: 100%; min-height: 70px; border: 1px solid var(--line); border-radius: 12px; padding: 10px; font: 500 14px var(--body); background: var(--soft); color: var(--ink); }
+.voices { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+.voices .v { border: 1px solid var(--line); border-radius: 12px; padding: 10px; display: grid; gap: 6px; background: var(--surface); }
+.voices .v.on { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
 </style>
 </head>
 <body>
@@ -271,8 +299,16 @@ input[type=range] { width: 100%; accent-color: var(--accent); }
       <div class="needs" id="needsList"></div>
     </div>
     <div class="section">
+      <h2>In production <button class="btn" id="btnStatus" style="float:right;font-size:12.5px;padding:6px 10px">Refresh</button></h2>
+      <div id="prodList"></div>
+    </div>
+    <div class="section">
       <h2>Pipeline</h2>
       <div class="board" id="board"></div>
+    </div>
+    <div class="section">
+      <h2>Narrator voice</h2>
+      <div class="panel" id="voicePanel"></div>
     </div>
     <div class="section">
       <h2>Engine</h2>
@@ -307,6 +343,7 @@ const S = {
   db: null, mcp: null, sample: null,
   deck: [], deckMeta: null, wild: [], swiped: new Map(), ideas: new Map(),
   queue: [], mode: "mix", brewFilter: "liked", last: null, openId: null, engineFiles: {},
+  voice: null, media: new Map(), statusAt: 0,
 };
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -370,23 +407,37 @@ async function loadDeck(manual) {
   }
 }
 async function loadExtras() {
-  for (const name of ["status.json", "comments.json", "analytics.json"]) {
+  for (const name of ["status.json", "comments.json", "analytics.json", "auditions.json"]) {
     try { const f = await driveFind(name); S.engineFiles[name] = f ? await driveReadJson(f.id) : null; }
     catch (e) { S.engineFiles[name] = null; }
   }
+  S.statusAt = Date.now();
   mergeEngineStatus(); renderComments(); renderStats(); renderStudio();
 }
+async function refreshStatus(manual) {
+  if (!S.mcp) return;
+  try {
+    for (const name of ["status.json", "auditions.json"]) { const f = await driveFind(name); S.engineFiles[name] = f ? await driveReadJson(f.id) : null; }
+    S.statusAt = Date.now(); mergeEngineStatus(); renderStudio();
+    if (manual) toast("Status refreshed");
+  } catch (e) { if (manual) toast(mcpErrorText(e)); }
+}
+// Engine stage -> the idea's place on the board.
+const ENGINE_TO_IDEA = { queued: "queued", voicing: "queued", planning: "queued", test_render: "queued", test_ready: "test",
+  final_render: "final", metadata: "final", final_ready: "review", approved: "scheduled", uploading: "scheduled", scheduled: "scheduled", live: "live", failed: "queued" };
+const PROD_STEPS = [["voicing", "Voice"], ["planning", "Scenes"], ["test_render", "Test cut"], ["test_ready", "Your check"],
+  ["final_render", "Full + Shorts"], ["final_ready", "Final review"], ["uploading", "Upload"], ["live", "Live"]];
+const ENGINE_ORDER = ["queued", "voicing", "planning", "test_render", "test_ready", "final_render", "metadata", "final_ready", "approved", "uploading", "scheduled", "live"];
 function mergeEngineStatus() {
   const st = S.engineFiles["status.json"];
   if (!st || !st.jobs || !S.db) return;
   for (const j of st.jobs) {
-    const idea = S.ideas.get(j.id);
-    if (idea && j.stage && j.stage !== idea.status && STAGES.findIndex((s) => s[0] === j.stage) > STAGES.findIndex((s) => s[0] === idea.status)) {
-      saveIdea(j.id, { status: j.stage, engine: j });
-    }
+    const idea = S.ideas.get(j.id); if (!idea) continue;
+    const want = ENGINE_TO_IDEA[j.stage] || idea.status;
+    const changed = want !== idea.status || !idea.engine || idea.engine.stage !== j.stage || idea.engine.updated !== j.updated;
+    if (changed) saveIdea(j.id, { status: want, engine: { stage: j.stage, pct: j.pct, step: j.step, updated: j.updated } });
   }
 }
-
 /* ---------- Deck ---------- */
 function hoursSince(c) {
   const t = c.origin && c.origin.time ? Date.parse(c.origin.time) : Date.parse(c.t);
@@ -729,7 +780,7 @@ async function sendToEngine(id, btn) {
   if (!S.mcp) return toast("Drive isn't available in this view.");
   const i = S.ideas.get(id); if (!i.script) return;
   btn.disabled = true; btn.textContent = "Sending…";
-  const job = { type: "brew", id, at: new Date().toISOString(), q: i.q, series: i.series, aud: i.aud, tone: i.tone, format: i.format, angle: i.angle, notes: i.notes, refs: i.refs, script: i.script };
+  const job = { type: "brew", id, at: new Date().toISOString(), voice: S.voice || undefined, q: i.q, series: i.series, aud: i.aud, tone: i.tone, format: i.format, angle: i.angle, notes: i.notes, refs: i.refs, script: i.script };
   try {
     await driveWriteInbox(`brew-${id}-${Date.now()}.json`, job);
     await saveIdea(id, { status: "queued", sentAt: job.at });
@@ -767,24 +818,117 @@ function updateBadges() {
   const b1 = $("#brewCount"), b2 = $("#needsCount");
   b1.textContent = brew; b1.hidden = !brew; b2.textContent = needs; b2.hidden = !needs;
 }
+function ago(iso) { const m = (Date.now() - Date.parse(iso)) / 6e4; return isNaN(m) ? "" : m < 1 ? "just now" : m < 60 ? Math.round(m) + " min ago" : m < 1440 ? Math.round(m / 60) + "h ago" : Math.round(m / 1440) + "d ago"; }
+function stepIndex(stage) {
+  const map = { queued: -1, voicing: 0, planning: 1, test_render: 2, test_ready: 3, final_render: 4, metadata: 4, final_ready: 5, approved: 6, uploading: 6, scheduled: 7, live: 7 };
+  return map[stage] ?? -1;
+}
+const WORKING = new Set(["queued", "voicing", "planning", "test_render", "final_render", "metadata", "uploading"]);
+function prodCardHTML(j) {
+  const si = stepIndex(j.stage), live = WORKING.has(j.stage);
+  const steps = PROD_STEPS.map(([k, l], i) => `<div class="${i < si || j.stage === "live" ? "done" : i === si ? "now" : ""}"><span>${l}</span></div>`).join("");
+  const needsTest = j.stage === "test_ready", needsFinal = j.stage === "final_ready";
+  const vid = (f, label) => f ? `<a class="btn" href="${esc(f.view)}" target="_blank" rel="noopener">${label}</a>` : "";
+  const m = j.meta || {};
+  return `<div class="prod" data-job="${esc(j.id)}">
+    <div class="top"><h4>${esc((m.title) || j.q || j.id)}</h4><span class="chip ${needsTest || needsFinal ? "hot" : ""}">${esc(j.stage === "failed" ? "Stopped" : needsTest || needsFinal ? "Needs you" : live ? "Working" : j.stage)}</span></div>
+    <div class="pbar ${live ? "live" : ""}" role="progressbar" aria-valuenow="${j.pct || 0}" aria-valuemin="0" aria-valuemax="100"><i style="width:${Math.max(3, j.pct || 0)}%"></i></div>
+    <div class="meta"><span>${esc(j.step || "")}</span><span>${j.pct || 0}% · ${esc(ago(j.updated))}</span></div>
+    <div class="steps">${steps}</div>
+    ${j.error ? `<div class="err">${esc(j.error)}</div>` : ""}
+    <div class="player" data-player></div>
+    ${j.thumb ? `<div data-thumb></div>` : ""}
+    <div class="acts">
+      ${j.preview ? `<button class="btn" data-play="preview">▶ Play test cut here</button>` : ""}
+      ${j.final ? `<button class="btn" data-play="final">▶ Play final here</button>` : ""}
+      ${vid(j.preview, "Test cut in Drive")}${vid(j.final, "Full video in Drive")}
+    </div>
+    ${(j.shorts || []).length ? `<div><div class="muted" style="font-size:12.5px;font-weight:700;margin-bottom:6px">Shorts cut from it</div><div class="reels">${j.shorts.map((x, k) => `<a href="${esc(x.view)}" target="_blank" rel="noopener">${esc(x.title || "Short " + (k + 1))}<br><span class="muted">${x.duration ? Math.round(x.duration) + "s" : ""}</span></a>`).join("")}</div></div>` : ""}
+    ${m.description ? `<details><summary style="font-weight:700;cursor:pointer">Title, description and tags</summary><p style="white-space:pre-wrap;font-size:13.5px">${esc(m.description)}</p><p class="muted" style="font-size:12.5px">${esc((m.tags || []).join(", "))}</p></details>` : ""}
+    ${needsTest || needsFinal ? `<textarea data-notes placeholder="${needsTest ? "Notes for the redo, e.g. 'beat 4 needs a chart, slower voice in the Tonga part'" : "Anything to fix before upload?"}"></textarea>
+    <div class="acts"><button class="btn primary" data-approve="${needsTest ? "test" : "final"}">${needsTest ? "Looks good. Render full video + Shorts" : "Approve for private upload"}</button>
+      <button class="btn" data-redo="plan">Redo scenes</button><button class="btn" data-redo="voice">Redo voice</button></div>` : ""}
+    ${j.stage === "failed" ? `<div class="acts"><button class="btn" data-redo="render">Retry</button></div>` : ""}
+  </div>`;
+}
 function renderStudio() {
   const ideas = [...S.ideas.values()];
-  const needs = ideas.filter((i) => ["scripting", "test", "review"].includes(i.status));
-  const why = { scripting: "Script ready. Read it, edit, approve.", test: "Test cut ready. Watch it and approve the full render.", review: "Final video ready. Approve to schedule." };
-  $("#needsList").innerHTML = needs.length ? needs.map((i) => `<div class="n-item"><div style="flex:1"><div style="font:800 15px var(--display)">${esc(i.q)}</div><div class="muted" style="font-size:13px">${why[i.status]}</div></div>${i.engine && i.engine.preview ? `<a class="btn" href="${esc(i.engine.preview)}" target="_blank" rel="noopener">Watch</a>` : ""}<button class="btn dark" data-open="${esc(i.id)}">Open</button></div>`).join("")
+  const st = S.engineFiles["status.json"];
+  const jobs = (st && st.jobs) || [];
+  const needs = ideas.filter((i) => i.status === "scripting");
+  const needJobs = jobs.filter((j) => j.stage === "test_ready" || j.stage === "final_ready");
+  $("#needsList").innerHTML = (needs.length || needJobs.length) ? [
+    ...needJobs.map((j) => `<div class="n-item"><div style="flex:1"><div style="font:800 15px var(--display)">${esc(j.q || j.id)}</div><div class="muted" style="font-size:13px">${j.stage === "test_ready" ? "Test cut ready. Watch it below and approve." : "Final video and Shorts ready. Approve for private upload."}</div></div><button class="btn dark" data-jump="${esc(j.id)}">Review</button></div>`),
+    ...needs.map((i) => `<div class="n-item"><div style="flex:1"><div style="font:800 15px var(--display)">${esc(i.q)}</div><div class="muted" style="font-size:13px">Script ready. Read it, edit, approve.</div></div><button class="btn dark" data-open="${esc(i.id)}">Open</button></div>`)].join("")
     : `<div class="notice">Nothing waiting on you. Swipe in the Arcade or write a script in the Brewery.</div>`;
   document.querySelectorAll("#needsList [data-open]").forEach((b) => (b.onclick = () => openIdea(b.dataset.open)));
+  document.querySelectorAll("#needsList [data-jump]").forEach((b) => (b.onclick = () => { const el = document.querySelector(`.prod[data-job="${CSS.escape(b.dataset.jump)}"]`); if (el) el.scrollIntoView({ behavior: "smooth", block: "start" }); }));
+  const shown = jobs.filter((j) => j.stage !== "live").slice(0, 12);
+  $("#prodList").innerHTML = shown.length ? shown.map(prodCardHTML).join("") + `<p class="muted" style="font-size:12.5px;margin-top:8px">Engine checked in ${esc(ago(st.at))}. The engine checks Drive every 2 hours. This page re-reads its report every minute while open.</p>`
+    : `<div class="notice">${st ? "No videos in production. Approve a script in the Brewery to start one." : "<b>Waiting for the engine's first report.</b> Sent jobs are safe in Drive."}</div>`;
+  for (const card of document.querySelectorAll("#prodList .prod")) wireProd(card, jobs.find((j) => j.id === card.dataset.job));
   $("#board").innerHTML = STAGES.map(([k, label]) => {
     const items = ideas.filter((i) => i.status === k);
-    return `<div class="col"><h3>${label}<span class="muted">${items.length}</span></h3>${items.map((i) => `<button class="mini" data-open="${esc(i.id)}">${esc(i.q)}</button>`).join("") || `<span class="muted" style="font-size:12.5px">Empty</span>`}</div>`;
+    return `<div class="col"><h3>${label}<span class="muted">${items.length}</span></h3>${items.map((i) => `<button class="mini" data-open="${esc(i.id)}">${esc(i.q)}${i.engine && i.engine.pct != null && k !== "live" ? `<span class="pbar" style="display:block;height:5px;margin-top:6px"><i style="width:${i.engine.pct}%"></i></span>` : ""}</button>`).join("") || `<span class="muted" style="font-size:12.5px">Empty</span>`}</div>`;
   }).join("");
   document.querySelectorAll("#board [data-open]").forEach((b) => (b.onclick = () => openIdea(b.dataset.open)));
-  const st = S.engineFiles["status.json"];
+  renderVoice();
   $("#engineInfo").innerHTML = `
     <span>Deck last refilled</span><b>${S.deckMeta && S.deckMeta.modified ? new Date(S.deckMeta.modified).toLocaleString() : "–"}</b>
     <span>Cards in the deck</span><b>${S.deck.length}</b>
-    <span>Jobs sent to the engine</span><b>${ideas.filter((i) => STAGES.findIndex((s) => s[0] === i.status) >= 2).length}</b>
-    <span>Render pipeline</span><b>${st ? "Online" : "Being built. Sent jobs wait safely in Drive."}</b>`;
+    <span>Render engine</span><b>${st ? "Online, last report " + ago(st.at) : "Waiting for first report"}</b>
+    <span>Videos in production</span><b>${jobs.filter((j) => WORKING.has(j.stage)).length}</b>`;
+}
+async function driveBlob(fileId, mime) {
+  if (S.media.has(fileId)) return S.media.get(fileId);
+  const r = await S.mcp.callTool(DRIVE, "download_file_content", { fileId }, { cache: false });
+  const b64 = r.payload && r.payload.content; if (!b64) throw new Error("empty file");
+  const bin = atob(b64); const bytes = new Uint8Array(bin.length); for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+  const url = URL.createObjectURL(new Blob([bytes], { type: mime }));
+  S.media.set(fileId, url); return url;
+}
+function wireProd(card, j) {
+  if (!j) return;
+  const thumbBox = card.querySelector("[data-thumb]");
+  if (thumbBox && j.thumb) driveBlob(j.thumb.id, "image/jpeg").then((u) => (thumbBox.innerHTML = `<img class="thumb" alt="Thumbnail for ${esc(j.q || "")}" src="${u}">`)).catch(() => {});
+  card.querySelectorAll("[data-play]").forEach((b) => (b.onclick = async () => {
+    const f = j[b.dataset.play]; const box = card.querySelector("[data-player]");
+    if (f.size_mb > 40) { window.open(f.view, "_blank", "noopener"); return; }
+    b.disabled = true; b.textContent = "Loading…";
+    try { const u = await driveBlob(f.id, "video/mp4"); box.innerHTML = `<video controls playsinline src="${u}"></video>`; box.querySelector("video").play().catch(() => {}); b.textContent = "▶ Playing below"; }
+    catch (e) { toast("Couldn't stream it here. Opening Drive instead."); window.open(f.view, "_blank", "noopener"); b.disabled = false; b.textContent = "▶ Play here"; }
+  }));
+  const notes = () => (card.querySelector("[data-notes]") || {}).value || "";
+  card.querySelectorAll("[data-approve]").forEach((b) => (b.onclick = async () => {
+    b.disabled = true; b.textContent = "Sending…";
+    try { await driveWriteInbox(`approve-${j.id}-${Date.now()}.json`, { type: "approve", id: j.id, stage: b.dataset.approve, notes: notes(), at: new Date().toISOString() });
+      toast(b.dataset.approve === "test" ? "Approved. Full render starts on the next engine run." : "Approved for private upload."); b.textContent = "Sent ✓"; }
+    catch (e) { toast(mcpErrorText(e)); b.disabled = false; b.textContent = "Try again"; }
+  }));
+  card.querySelectorAll("[data-redo]").forEach((b) => (b.onclick = async () => {
+    if (b.dataset.redo !== "render" && !notes().trim()) { toast("Add a note so the redo knows what to change."); card.querySelector("[data-notes]")?.focus(); return; }
+    b.disabled = true;
+    try { await driveWriteInbox(`redo-${j.id}-${Date.now()}.json`, { type: "redo", id: j.id, stage: b.dataset.redo, notes: notes(), at: new Date().toISOString() }); toast("Redo queued."); b.textContent = "Queued ✓"; }
+    catch (e) { toast(mcpErrorText(e)); b.disabled = false; }
+  }));
+}
+function renderVoice() {
+  const a = S.engineFiles["auditions.json"]; const cur = S.voice || (a && a.current) || "Puck";
+  $("#voicePanel").innerHTML = `<p class="muted" style="margin:0 0 10px;font-size:13.5px">Current narrator: <b style="color:var(--ink)">${esc(cur)}</b>. Audition the voices on one line of your script, then pick one. New videos use it.</p>
+    ${a && a.voices ? `<div class="voices">${a.voices.map((v) => `<div class="v ${v.voice === cur ? "on" : ""}"><b>${esc(v.voice)}</b><button class="btn" data-hear="${esc(v.file)}">▶ Listen</button><button class="btn ${v.voice === cur ? "dark" : ""}" data-pick="${esc(v.voice)}">${v.voice === cur ? "In use" : "Use this"}</button></div>`).join("")}</div><p class="muted" style="font-size:12px">Line: “${esc(a.line)}”</p>` : ""}
+    <div class="acts" style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap"><input id="audLine" placeholder="Line to audition (optional)" style="flex:1;min-width:200px;border:1px solid var(--line);border-radius:12px;padding:9px 12px;background:var(--soft);color:var(--ink);font:500 14px var(--body)"><button class="btn" id="btnAud">Audition voices</button></div>`;
+  document.querySelectorAll("#voicePanel [data-hear]").forEach((b) => (b.onclick = async () => {
+    b.disabled = true; try { const u = await driveBlob(b.dataset.hear, "audio/mpeg"); new Audio(u).play(); } catch (e) { toast(mcpErrorText(e)); } b.disabled = false;
+  }));
+  document.querySelectorAll("#voicePanel [data-pick]").forEach((b) => (b.onclick = async () => {
+    S.voice = b.dataset.pick; if (S.db) { try { await S.db.doc("settings/voice").set({ name: S.voice }); } catch (e) {} } toast(`${S.voice} narrates new videos.`); renderVoice();
+  }));
+  $("#btnAud").onclick = async () => {
+    if (!S.mcp) return toast("Drive isn't available in this view.");
+    const b = $("#btnAud"); b.disabled = true; b.textContent = "Sending…";
+    try { await driveWriteInbox(`audition-${Date.now()}.json`, { type: "audition", line: $("#audLine").value.trim() || undefined, at: new Date().toISOString() }); toast("Voice samples arrive after the next engine run."); b.textContent = "Requested ✓"; }
+    catch (e) { toast(mcpErrorText(e)); b.disabled = false; b.textContent = "Audition voices"; }
+  };
 }
 function openIdea(id) { S.openId = id; S.brewFilter = "all"; document.querySelectorAll("#brewSeg button").forEach((x) => x.setAttribute("aria-pressed", String(x.dataset.f === "all"))); showView("brewery"); setTimeout(() => { const el = document.querySelector(`.item[data-id="${CSS.escape(id)}"]`); if (el) el.scrollIntoView({ behavior: "smooth", block: "start" }); }, 50); }
 
@@ -825,8 +969,11 @@ renderDeck(); renderComments(); renderStats(); updateBadges();
       if (!$("#view-brewery").hidden && !document.activeElement.closest(".editor")) renderBrewery();
     }, () => toast("Couldn't load your ideas."));
   }
+  if (db) { try { db.collection("settings").onSnapshot((snap) => { for (const d of snap.docs) if (d.id === "voice") S.voice = (d.data() || {}).name || null; if (!$("#view-studio").hidden) renderVoice(); }, () => {}); } catch (e) {} }
   loadDeck(false);
+  setInterval(() => { if (!$("#view-studio").hidden && !document.hidden && Date.now() - S.statusAt > 55000) refreshStatus(false); }, 15000);
 })();
+$("#btnStatus").onclick = () => refreshStatus(true);
 </script>
 </body>
 </html>

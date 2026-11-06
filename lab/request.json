@@ -1,0 +1,116 @@
+{
+ "note": "Lab run 1: undersea cables hook. Styles x beats, voices, motion.",
+ "image_models": [
+  "gemini-nano-banana-2.1",
+  "gemini-3.1-flash-image",
+  "gemini-3.1-flash-image-preview"
+ ],
+ "image_rules": "No watermark, no border, no real logos, brands or real people. If text appears, spell it exactly and keep it minimal. Keep the lower fifth calm for captions.",
+ "beats": [
+  {
+   "id": "hook",
+   "frame": "A split-level scene cut horizontally by the ocean surface. Above water, at night: a small, round, deadpan penguin stands on a tiny ice floe, looking up hopefully at a satellite crossing a starry sky. Below the waterline, a vast dark ocean drops away to the seabed, where a single thin cable glows warm orange and carries pulses of light across the frame. The real action is at the bottom. Wide 16:9 composition with breathing room, strong silhouettes, one clear focal point."
+  },
+  {
+   "id": "shark",
+   "frame": "A corporate board meeting held entirely on the seabed. Six very serious people in suits sit around a long table; a slide on the back wall reads 'SHARK MITIGATION'. A small penguin wearing a tiny tie takes notes. Through a round window behind them, a curious shark is nibbling a thick cable. Deadpan comedy, everyone completely straight-faced. Wide 16:9."
+  }
+ ],
+ "styles": [
+  {
+   "id": "paper",
+   "look": "Handcrafted layered paper-cut diorama photographed as a miniature set. Visible paper fibres and cut edges, 4 to 6 depth layers with soft cast shadows between them, shallow depth of field, warm practical light. Muted deep navy and sand palette with one burnt orange accent."
+  },
+  {
+   "id": "clay",
+   "look": "Stop-motion claymation miniature set. Plasticine characters with subtle fingerprints, handmade props, tabletop scale, warm key light with a cool rim light, slight tilt-shift. Cozy, tactile, funny."
+  },
+  {
+   "id": "riso",
+   "look": "Two-colour risograph print in fluorescent orange and deep blue on off-white paper. Halftone grain, slight ink misregistration, bold flat shapes, confident editorial composition with lots of negative space."
+  },
+  {
+   "id": "blueprint",
+   "look": "Technical cutaway illustration on cyanotype paper: crisp white linework on Prussian blue, cross-sections, measurement lines and small handwritten annotations, with a single warm orange highlight on the key object. Clever, nerdy, precise."
+  },
+  {
+   "id": "gouache",
+   "look": "Hand-painted gouache animation background with cinematic lighting, rich brush texture, atmospheric depth, painterly but clean shapes, moody blues with one warm glowing focal point."
+  },
+  {
+   "id": "collage",
+   "look": "Mixed-media zine collage: cut-out vintage photos, torn paper edges, halftone dots, tape and sticker shapes, scribbled marker doodles. Playful meme energy with a tasteful, uncluttered layout."
+  }
+ ],
+ "voice_prompt": "# AUDIO PROFILE: Vee\n## The narrator of a curious explainer channel. Late 20s, sharp, funny, a little chaotic. Talks like your smartest friend who just found out something wild and absolutely has to tell you.\n## THE SCENE: Late night on a terrace, two friends, chai in hand. He leans in, half laughing, because the fact he is about to drop is ridiculous.\n### DIRECTOR'S NOTES\nStyle: Loud, warm, animated, grinning. A real conversation, not narration. Punch the surprising words. Let jokes land with a beat of silence. Never sound like an announcer, an ad or an audiobook.\nPace: Fast and bouncy when excited, slows right down for the eerie or serious bits. Natural micro pauses, like thinking out loud.\n{NOTES}\n#### TRANSCRIPT\n{TRANSCRIPT}",
+ "transcript_tagged": "[cheerfully] Okay so, you think this video flew to you from a satellite, right? [short pause] Nope. [soft laugh] Not even close. More than ninety five percent of everything crossing between continents, your memes, your bank transfers, literally this video, is crawling along the bottom of the ocean, [whispering] through a cable about as thick as a garden hose. [sighs] The cloud, it turns out, lives in the sea. [thoughtfully] So what happens if somebody cuts every single one? And honestly, the weirder question is, [uhm] why hasn't it happened already?",
+ "voices": [
+  {
+   "id": "1-current",
+   "label": "Current engine (for comparison)",
+   "model": "gemini-3.8-flash-tts",
+   "fallback": [
+    "gemini-2.5-flash-preview-tts"
+   ],
+   "voice": "Puck",
+   "prompt": "You are the narrator of a smart, funny animated YouTube explainer. Speak like a warm friend telling a great story over coffee: relaxed, conversational, curious, with natural rhythm, small pauses and a bit of a grin. Never sound like an announcer or an ad. Read the following exactly as written.\n\nOkay so. You probably think this video reached you through a satellite. ... Nope. More than 95 percent of the data crossing between continents travels through cables lying on the bottom of the ocean. The cloud lives in the sea. And out in the deep water, the cable carrying it is about as thick as a garden hose. So what if every single one got cut? And the weirder question: why hasn't it happened already?"
+  },
+  {
+   "id": "2-puck",
+   "label": "Puck, directed + acting tags",
+   "model": "gemini-3.1-flash-tts-preview",
+   "voice": "Puck"
+  },
+  {
+   "id": "3-fenrir",
+   "label": "Fenrir (excitable), directed",
+   "model": "gemini-3.1-flash-tts-preview",
+   "voice": "Fenrir"
+  },
+  {
+   "id": "4-zubenelgenubi",
+   "label": "Zubenelgenubi (casual), directed",
+   "model": "gemini-3.1-flash-tts-preview",
+   "voice": "Zubenelgenubi"
+  },
+  {
+   "id": "5-sadachbia",
+   "label": "Sadachbia (lively), directed",
+   "model": "gemini-3.1-flash-tts-preview",
+   "voice": "Sadachbia"
+  },
+  {
+   "id": "6-puck-indian",
+   "label": "Puck, Indian English accent",
+   "model": "gemini-3.1-flash-tts-preview",
+   "voice": "Puck",
+   "notes": "Accent: a young guy from Bangalore, natural Indian English accent and rhythm, never exaggerated or comic."
+  },
+  {
+   "id": "7-puck-38",
+   "label": "Puck, directed, newest 3.8 model",
+   "model": "gemini-3.8-flash-tts",
+   "voice": "Puck"
+  },
+  {
+   "id": "8-umbriel",
+   "label": "Umbriel (easy-going), directed",
+   "model": "gemini-3.1-flash-tts-preview",
+   "voice": "Umbriel"
+  }
+ ],
+ "videos": [
+  {
+   "id": "hook-paper",
+   "beat": "hook",
+   "style": "paper",
+   "prompt": "One slow continuous camera move: start on the penguin looking up at the satellite, then tilt down through the water surface and glide down to the glowing cable on the seabed while pulses of light race along it. Paper layers drift with gentle parallax, tiny bubbles rise. Handmade stop-motion feel. No text, no people."
+  },
+  {
+   "id": "shark-clay",
+   "beat": "shark",
+   "style": "clay",
+   "prompt": "Stop-motion claymation: the people at the table nod with total seriousness, the penguin scribbles notes, and behind the window the shark takes a slow bite of the cable, then turns and stares at the camera. Locked-off camera, stop-motion frame rate, deadpan timing. No text changes."
+  }
+ ]
+}
