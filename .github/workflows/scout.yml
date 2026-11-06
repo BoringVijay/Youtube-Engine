@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ["scripts/scout.py", ".github/workflows/scout.yml"]
+    paths: ["scripts/scout.py", "scripts/drive.py", ".github/workflows/scout.yml"]
 
 permissions:
   contents: write
@@ -31,6 +31,12 @@ jobs:
           mkdir -p deck logs
           set -o pipefail
           python3 -u scripts/scout.py 2>&1 | tee logs/scout-last.log
+      - name: Publish deck to Drive
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          GDRIVE_REFRESH_TOKEN: ${{ secrets.GDRIVE_REFRESH_TOKEN }}
+        run: python3 -u scripts/drive.py deck 2>&1 | tee -a logs/scout-last.log
       - name: Save deck and log
         if: always()
         run: |
