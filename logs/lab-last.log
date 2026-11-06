@@ -1,0 +1,49 @@
+16:30:42 models: ['gemini-2.5-flash-preview-tts', 'gemini-2.5-pro-preview-tts', 'gemini-2.5-flash-image', 'gemini-3-pro-image-preview', 'gemini-3-pro-image', 'nano-banana-pro-preview', 'gemini-3.1-flash-image-preview', 'gemini-3.1-flash-image', 'gemini-3.1-flash-lite-image', 'gemini-nano-banana-2.1', 'gemini-omni-flash-preview', 'gemini-omni-1.1-flash', 'gemini-omni-1.2-flash', 'lyria-3-clip-preview', 'lyria-3-pro-preview', 'lyria-3.5', 'gemini-3.1-flash-tts-preview', 'gemini-3.8-flash-tts', 'gemini-3.8-flash-lite-tts', 'lyria-realtime-exp']
+16:30:42 image model: gemini-nano-banana-2.1
+16:30:54 image hook paper ok
+16:30:58 image hook clay ok
+16:31:06 image hook riso ok
+16:31:10 image hook blueprint ok
+16:31:12 image hook gouache ok
+16:31:21 image hook collage ok
+16:31:26 image shark paper ok
+16:31:29 image shark clay ok
+16:31:36 image shark riso ok
+16:31:44 image shark blueprint ok
+16:31:49 image shark gouache ok
+16:31:58 image shark collage ok
+16:32:10 tts retry gemini-3.8-flash-tts Puck 1 'NoneType' object has no attribute 'group'
+16:32:25 tts retry gemini-3.8-flash-tts Puck 2 HTTP 429 models/gemini-3.8-flash-tts:generateContent: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information 
+16:32:59 tts retry gemini-3.1-flash-tts-preview Sadachbia 1 'content'
+16:33:07 tts retry gemini-3.8-flash-tts Puck 3 'NoneType' object has no attribute 'group'
+16:33:49 tts retry gemini-3.8-flash-tts Puck 1 HTTP 429 models/gemini-3.8-flash-tts:generateContent: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information 
+16:33:52 tts retry gemini-3.8-flash-tts Puck 4 HTTP 429 models/gemini-3.8-flash-tts:generateContent: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information 
+16:34:04 tts retry gemini-3.8-flash-tts Puck 2 HTTP 429 models/gemini-3.8-flash-tts:generateContent: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information 
+16:34:43 tts retry gemini-3.8-flash-tts Puck 3 'NoneType' object has no attribute 'group'
+16:34:52 voice 1-current tts failed
+16:34:52 voice 2-puck ok
+16:34:52 voice 3-fenrir ok
+16:34:52 voice 4-zubenelgenubi ok
+16:34:52 voice 5-sadachbia ok
+16:34:52 voice 6-puck-indian ok
+16:35:37 tts retry gemini-3.8-flash-tts Puck 4 'NoneType' object has no attribute 'group'
+16:36:37 voice 7-puck-38 tts failed
+16:36:37 voice 8-umbriel ok
+16:36:37 video model: gemini-omni-flash-preview
+16:37:21 omni first response keys: ['id', 'status', 'usage', 'created', 'updated', 'service_tier', 'steps', 'object', 'model'] {'id': 'v1_ChdQd0x1YXFPNEo2Ni15dE1QeEszdzJBTRIXUHdMdWFxTzRKNjYteXRNUHhLM3cyQU0', 'status': 'completed'}
+16:37:24 video ok hook-paper
+16:38:04 omni first response keys: ['id', 'status', 'usage', 'created', 'updated', 'service_tier', 'steps', 'object', 'model'] {'id': 'v1_ChdhZ0x1YW9EUEZOem4wX2dQa1lHbHdRSRIXYWdMdWFvRFBGTnpuMF9nUGtZR2x3UUk', 'status': 'completed'}
+16:38:06 video ok shark-clay
+16:38:06 done: 12 images, 6 voices, 2 videos, 2 errors
