@@ -175,6 +175,11 @@ def _call(model, prompt, temperature, think, timeout):
     return json.loads(resp["candidates"][0]["content"]["parts"][0]["text"])
 
 
+import threading
+_LOCK = threading.Lock()
+_CHAIN = []
+
+
 def pick_model():
     """Ping candidate text models with a tiny request; use the first that answers fast."""
     global MODEL
@@ -190,24 +195,39 @@ def pick_model():
         ver = float(v.group(1)) if v else 0
         tier = 0 if "flash" in n and "lite" not in n else 1 if "lite" in n else 2
         return (tier, "preview" in n or "exp" in n, -ver, len(n))
-    for m in sorted(text, key=rank)[:8]:
+    ordered = sorted(text, key=rank)
+    for i, m in enumerate(ordered[:8]):
         t0 = time.time()
         try:
-            _call(m, 'Return JSON {"ok": true}', 0, True, 40)
+            _call(m, 'Return JSON {"ok": true}', 0, True, 30)
             log(f"gemini model: {m} (ping {time.time()-t0:.1f}s)")
             MODEL = m
+            _CHAIN[:] = ordered[i:i + 4]
             return MODEL
         except Exception as e:
-            log(f"gemini ping {m}: failed after {time.time()-t0:.0f}s ({str(e)[:150]})")
+            log(f"gemini ping {m}: failed after {time.time()-t0:.0f}s ({str(e)[:120]})")
     raise RuntimeError("No Gemini text model answered")
 
 
 def gemini(prompt, temperature=0.9):
-    pick_model()
-    t0 = time.time()
-    out = _call(MODEL, prompt, temperature, True, 150)
-    log(f"gemini call ok in {time.time()-t0:.0f}s")
-    return out
+    with _LOCK:
+        pick_model()
+    last = None
+    for model in (_CHAIN or [MODEL]):
+        for attempt in range(3):
+            t0 = time.time()
+            try:
+                out = _call(model, prompt, temperature, True, 150)
+                log(f"gemini {model} ok in {time.time()-t0:.0f}s")
+                return out
+            except Exception as e:
+                last = e
+                busy = re.search(r"HTTP (429|500|503)|timed out", str(e))
+                log(f"gemini {model} attempt {attempt+1}: {str(e)[:110]}")
+                if not busy:
+                    break
+                time.sleep(15 * (attempt + 1))
+    raise RuntimeError(f"all Gemini models failed: {last}")
 
 
 SERIES = ["What If? (stickman)", "What Actually Happened (mini-doc)", "How It Works (cutaway)",
@@ -225,8 +245,10 @@ For each card write:
 - format: "short" | "long" | "both"
 - scores 1-5 with a 6-word reason each: curiosity, explainability (drawable with simple animation), shelf_life (worth watching in 6 months), money (advertiser value)
 - risk: "" or a short note (tragedy, legal, medical, needs copyrighted footage)
+- search_query: 2-5 keywords a viewer would type into YouTube for this topic
+- wiki_title: the exact title of the most relevant English Wikipedia article, or ""
 Never invent numbers. Skip pure celebrity gossip, sports scores, obituaries and anything needing copyrighted footage.
-Return JSON: {{"cards":[{{"refs":[indices of input items used],"question":"","hook":"","about":"","surprise":"","series":"","audience":"","format":"","scores":{{"curiosity":[n,"why"],"explainability":[n,"why"],"shelf_life":[n,"why"],"money":[n,"why"]}},"risk":""}}]}}"""
+Return JSON: {{"cards":[{{"refs":[indices of input items used],"question":"","hook":"","about":"","surprise":"","series":"","audience":"","format":"","scores":{{"curiosity":[n,"why"],"explainability":[n,"why"],"shelf_life":[n,"why"],"money":[n,"why"]}},"risk":"","search_query":"","wiki_title":""}}]}}"""
 
 
 def write_hot_cards(chunk):
@@ -257,17 +279,32 @@ def yt_token():
 
 
 def yt_competition(token, query):
+    """One search per card (search quota is 100/day). All-time relevance results: proven demand + crowding."""
     h = {"Authorization": f"Bearer {token}"}
-    after = (NOW - dt.timedelta(days=7)).strftime("%Y-%m-%dT%H:%M:%SZ")
-    q = urllib.parse.urlencode({"part": "snippet", "q": query, "type": "video", "maxResults": 10, "order": "viewCount", "publishedAfter": after})
+    q = urllib.parse.urlencode({"part": "snippet", "q": query, "type": "video", "maxResults": 10, "order": "relevance"})
     res = get_json(f"https://www.googleapis.com/youtube/v3/search?{q}", h)
     ids = [i["id"]["videoId"] for i in res.get("items", [])]
     if not ids:
-        return {"yt_videos_7d": 0}
-    vids = get_json("https://www.googleapis.com/youtube/v3/videos?" + urllib.parse.urlencode({"part": "statistics,snippet", "id": ",".join(ids)}), h)
-    best = max(vids["items"], key=lambda v: int(v["statistics"].get("viewCount", 0)))
-    return {"yt_videos_7d": res.get("pageInfo", {}).get("totalResults", len(ids)), "yt_top_views": int(best["statistics"].get("viewCount", 0)),
-            "yt_top_title": best["snippet"]["title"], "yt_top_url": f"https://youtu.be/{best['id']}"}
+        return {"yt_results": 0}
+    vids = get_json("https://www.googleapis.com/youtube/v3/videos?" + urllib.parse.urlencode(
+        {"part": "statistics,snippet", "id": ",".join(ids)}), h)["items"]
+    views = sorted((int(v["statistics"].get("viewCount", 0)) for v in vids), reverse=True)
+    best = max(vids, key=lambda v: int(v["statistics"].get("viewCount", 0)))
+    recent = sum(1 for v in vids if v["snippet"]["publishedAt"] >= (NOW - dt.timedelta(days=30)).strftime("%Y-%m-%d"))
+    return {"yt_results": res.get("pageInfo", {}).get("totalResults", len(ids)), "yt_top_views": views[0],
+            "yt_median_top10_views": views[len(views) // 2], "yt_recent_in_top10": recent,
+            "yt_top_title": best["snippet"]["title"], "yt_top_channel": best["snippet"]["channelTitle"],
+            "yt_top_url": f"https://youtu.be/{best['id']}", "yt_query": query}
+
+
+def wiki_month(title):
+    end = (NOW - dt.timedelta(days=1)).strftime("%Y%m%d")
+    start = (NOW - dt.timedelta(days=31)).strftime("%Y%m%d")
+    t = urllib.parse.quote(title.replace(" ", "_"), safe="")
+    items = get_json(f"https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/{t}/daily/{start}/{end}")["items"]
+    v = [i["views"] for i in items]
+    return {"wiki_article": title, "wiki_avg_30d": round(sum(v) / len(v)), "wiki_views_24h": v[-1],
+            "wiki_change_pct": round((v[-1] - sum(v) / len(v)) / max(1, sum(v) / len(v)) * 100)} if v else None
 
 
 # ---------- Scoring (all from numbers above) ----------
@@ -286,6 +323,8 @@ def demand_index(st):
     if st.get("reddit_upvotes"): parts.append(min(1, math.log10(st["reddit_upvotes"] + 1) / 5))
     if st.get("hn_points"): parts.append(min(1, math.log10(st["hn_points"] + 1) / 3.3))
     if st.get("bet_volume_24h_usd"): parts.append(min(1, math.log10(st["bet_volume_24h_usd"] + 1) / 7.5))
+    if st.get("wiki_avg_30d"): parts.append(min(1, math.log10(st["wiki_avg_30d"] + 1) / 5.5))
+    if st.get("yt_top_views"): parts.append(min(1, math.log10(st["yt_top_views"] + 1) / 7.5))
     if not parts:
         return None
     boost = 0.1 if (st.get("wiki_change_pct") or 0) > 100 else 0
@@ -293,11 +332,12 @@ def demand_index(st):
 
 
 def competition_index(st):
-    if "yt_videos_7d" not in st:
+    """0-100. High = many strong videos already. Uses the median of the top 10 so one mega-hit doesn't dominate."""
+    if "yt_results" not in st:
         return None
     import math
-    n, top = st.get("yt_videos_7d", 0), st.get("yt_top_views", 0)
-    return round(min(1, (math.log10(n + 1) / 3) * 0.4 + (math.log10(top + 1) / 7) * 0.6) * 100)
+    med = st.get("yt_median_top10_views", 0)
+    return round(min(1, (math.log10(med + 1) / 7) * 0.7 + (st.get("yt_recent_in_top10", 0) / 10) * 0.3) * 100)
 
 
 def finalize(card, items, kind):
@@ -335,6 +375,7 @@ def finalize(card, items, kind):
         "question": q, "hook": card.get("hook", ""), "about": card.get("about", ""), "surprise": card.get("surprise", ""),
         "series": card.get("series", ""), "audience": card.get("audience", ""), "format": card.get("format", "both"),
         "scores": sc, "risk": card.get("risk", ""),
+        "search_query": card.get("search_query") or q, "wiki_title": card.get("wiki_title", ""),
         "stats": stats, "origin": origin, "sources": sources,
         "demand": demand_index(stats), "competition": None,
         "quality": round(sum(sub.get(k, 3) for k in ("curiosity", "explainability", "shelf_life", "money")) / 20 * 100),
@@ -371,7 +412,7 @@ def main():
         return [(c, ch or [], kind) for c in cards]
 
     new = []
-    with ThreadPoolExecutor(max_workers=4) as ex:
+    with ThreadPoolExecutor(max_workers=2) as ex:
         for res in ex.map(run, jobs):
             for c, ch, kind in res:
                 new.append(finalize(c, ch, kind))
@@ -379,14 +420,22 @@ def main():
     new = [c for c in new if not (c["key"] in seen_q or seen_q.add(c["key"]))]
 
     new = [c for c in new if c["question"] and c["key"] not in seen]
+    for c in new:  # free, real interest data for every card with a Wikipedia match
+        if c["wiki_title"] and "wiki_avg_30d" not in c["stats"]:
+            w = safe_one(lambda: wiki_month(c["wiki_title"]))
+            if w:
+                for k, v in w.items():
+                    c["stats"].setdefault(k, v)
     tok = yt_token() if os.environ.get("YT_REFRESH_TOKEN") else None
-    if tok:  # search costs quota; check the 25 most promising
-        ranked = sorted(new, key=lambda c: (c["demand"] or 0) + c["quality"], reverse=True)[:25]
+    if tok:  # search quota is 100/day and we run 6x/day: check the 15 most promising
+        ranked = sorted(new, key=lambda c: (demand_index(c["stats"]) or 0) + c["quality"], reverse=True)[:15]
         for c in ranked:
-            st = safe_one(lambda: yt_competition(tok, c["question"]))
+            st = safe_one(lambda: yt_competition(tok, c["search_query"]))
             if st:
                 c["stats"].update(st)
                 c["competition"] = competition_index(c["stats"])
+    for c in new:
+        c["demand"] = demand_index(c["stats"])
 
     for c in new:
         d, comp = c["demand"], c["competition"]
