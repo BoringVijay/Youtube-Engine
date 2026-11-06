@@ -1,7 +1,7 @@
 {
  "id": "ai-what-if-the-internet-s-undersea-cables-were-all-cut-",
  "created": "2026-11-06T15:50:59+00:00",
- "pct": 55,
+ "pct": 66,
  "q": "What if the internet's undersea cables were all cut?",
  "series": "What If? (stickman)",
  "brew": {
@@ -255,8 +255,8 @@
  },
  "brew_at": "2026-11-06T15:26:28.303Z",
  "error": null,
- "stage": "test_ready",
- "step": "Test cut ready. Watch it and approve or ask for changes",
+ "stage": "final_render",
+ "step": "Rendering 1080p",
  "steps": [
   {
    "stage": "queued",
@@ -277,9 +277,13 @@
   {
    "stage": "test_ready",
    "at": "2026-11-06T16:50:29+00:00"
+  },
+  {
+   "stage": "final_render",
+   "at": "2026-11-06T17:21:37+00:00"
   }
  ],
- "updated": "2026-11-06T16:50:29+00:00",
+ "updated": "2026-11-06T17:21:37+00:00",
  "duration": 343.7,
  "preview": {
   "id": "1357RsO2TfZB2qpcA_73yUA-ijgGLFJlr",
@@ -287,5 +291,12 @@
   "download": "https://drive.google.com/uc?id=1357RsO2TfZB2qpcA_73yUA-ijgGLFJlr&export=download",
   "size_mb": 7.6,
   "at": "2026-11-06T16:50:29+00:00"
- }
+ },
+ "notes_in": [
+  {
+   "at": "2026-11-06T17:13:20.158Z",
+   "stage": "test",
+   "notes": ""
+  }
+ ]
 }

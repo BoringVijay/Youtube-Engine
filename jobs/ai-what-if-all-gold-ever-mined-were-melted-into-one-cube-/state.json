@@ -1,0 +1,195 @@
+{
+ "id": "ai-what-if-all-gold-ever-mined-were-melted-into-one-cube-",
+ "created": "2026-11-06T17:21:26+00:00",
+ "pct": 2,
+ "q": "What if all gold ever mined were melted into one cube?",
+ "series": "Money Moves (charts)",
+ "brew": {
+  "type": "brew",
+  "id": "ai-what-if-all-gold-ever-mined-were-melted-into-one-cube-",
+  "at": "2026-11-06T17:18:59.476Z",
+  "q": "What if all gold ever mined were melted into one cube?",
+  "series": "Money Moves (charts)",
+  "aud": "general curious",
+  "tone": 74,
+  "format": {
+   "long": false,
+   "minutes": 5,
+   "shorts": 1,
+   "standaloneShort": true
+  },
+  "angle": "",
+  "notes": [],
+  "refs": [],
+  "script": {
+   "titles": [
+    "All the Gold Ever Mined Fits in a Baseball Infield",
+    "Every Ounce of Gold in History, Melted Into One Cube",
+    "Humanity's Entire Gold Haul Is Smaller Than You Think"
+   ],
+   "hooks": [
+    {
+     "line": "All the gold ever mined fits in an infield.",
+     "visual": "Giant gold cube drops from the sky onto a baseball diamond, landing neatly between the bases with dust puffing out",
+     "pattern": "Shock scale comparison"
+    },
+    {
+     "line": "Every gold bar in history. One cube. Guess how big.",
+     "visual": "Stickman holds a measuring tape, staring up at a cube covered by a tarp with a big question mark",
+     "pattern": "Curiosity gap + challenge"
+    },
+    {
+     "line": "Five thousand years of digging. This is it?",
+     "visual": "Timeline of tiny pickaxe stickmen from pharaohs to modern miners, all tossing nuggets onto one modest pile",
+     "pattern": "Expectation vs reality"
+    },
+    {
+     "line": "The world's gold would barely fill a city block.",
+     "visual": "Top-down map of a city block with a gold square inside it, plenty of space left over",
+     "pattern": "Counterintuitive claim"
+    },
+    {
+     "line": "Melt all the gold on Earth. Here's the shape.",
+     "visual": "Rings, coins and bars pour into a glowing crucible that becomes a cube",
+     "pattern": "Process reveal"
+    }
+   ],
+   "chosen": 0,
+   "beats": [
+    {
+     "t": "0:00",
+     "vo": "Every bar of gold ever mined. One cube. It fits in a baseball infield.",
+     "visual": "Gold cube slams down onto a baseball diamond from above, crowd of stickmen in the stands gasps",
+     "sfx": [
+      "whoosh",
+      "heavy metallic thud",
+      "crowd gasp"
+     ]
+    },
+    {
+     "t": "0:04",
+     "vo": "Okay so. Humans have dug up gold for thousands of years. Pharaohs, empires, your aunt's wedding set.",
+     "visual": "Quick cutaways: pharaoh mask, Roman coin, stickman aunt flashing a gold bangle with sparkle",
+     "sfx": [
+      "pickaxe clink",
+      "coin ding",
+      "sparkle chime"
+     ]
+    },
+    {
+     "t": "0:09",
+     "vo": "Total haul: roughly 216,000 tonnes.",
+     "visual": "Bar chart in Money Moves style, a single gold bar labelled 216,000 t rising to the top of the frame",
+     "sfx": [
+      "chart rise blip"
+     ]
+    },
+    {
+     "t": "0:12",
+     "vo": "Melt it down: a cube about 22 metres per side. The infield is 27.",
+     "visual": "Crucible pours into a cube mould, then side-by-side diagram: cube 22 m vs infield square 27 m with dimension arrows",
+     "sfx": [
+      "molten sizzle",
+      "ruler snap"
+     ]
+    },
+    {
+     "t": "0:18",
+     "vo": "Stand next to it? Roughly a seven-storey building.",
+     "visual": "Stickman beside the cube, camera tilts up; a seven-floor apartment block slides in for comparison",
+     "sfx": [
+      "camera tilt whoosh"
+     ]
+    },
+    {
+     "t": "0:21",
+     "vo": "Here's the wild part. At recent prices, that little cube is worth tens of trillions of dollars, in the same ballpark as the entire US economy's yearly output.",
+     "visual": "Price tag flips over the cube with spinning digits; chart shows gold cube value bar beside a US GDP bar of similar height",
+     "sfx": [
+      "cash register ding",
+      "digit flip ticks"
+     ]
+    },
+    {
+     "t": "0:29",
+     "vo": "Literally a ballpark.",
+     "visual": "Zoom out to the stadium, the cube sitting smugly on the field, scoreboard reads GOLD 1 EXPECTATIONS 0",
+     "sfx": [
+      "organ sting"
+     ]
+    },
+    {
+     "t": "0:31",
+     "vo": "Nerd bonus: one cubic metre of gold weighs about 19 tonnes.",
+     "visual": "Single 1 m gold cube on a scale; the scale needle spins to 19 t and the scale cracks",
+     "sfx": [
+      "scale creak",
+      "crack"
+     ]
+    },
+    {
+     "t": "0:35",
+     "vo": "And who owns it? Central banks hold only about a sixth. Nearly half is jewelry.",
+     "visual": "Cube slices into a pie chart: small vault-labelled slice for central banks, huge slice covered in necklaces and rings",
+     "sfx": [
+      "slice swish",
+      "jewelry jingle"
+     ]
+    },
+    {
+     "t": "0:41",
+     "vo": "Humanity's greatest treasure is mostly necklaces.",
+     "visual": "Stickman narrator sipping chai, deadpan, wearing an oversized gold chain",
+     "sfx": [
+      "sip"
+     ]
+    },
+    {
+     "t": "0:44",
+     "vo": "Everything we ever dug up. Still fits between the bases.",
+     "visual": "Back to the opening shot: cube on the diamond, a tiny stickman runner jogs around it to home",
+     "sfx": [
+      "bat crack",
+      "soft crowd cheer"
+     ]
+    }
+   ],
+   "vo": "Every bar of gold ever mined. One cube. [beat] It fits in a baseball infield. Okay so. Humans have dug up gold for thousands of years. Pharaohs, empires, your aunt's wedding set. [smile] Total haul: roughly 216,000 tonnes. Melt it down: a cube about 22 metres per side. [beat] The infield is 27. Stand next to it? Roughly a seven-storey building. Here's the wild part. [beat] At recent prices, that little cube is worth tens of trillions of dollars, in the same ballpark as the entire US economy's yearly output. [dry] Literally a ballpark. Nerd bonus: one cubic metre of gold weighs about 19 tonnes. And who owns it? Central banks hold only about a sixth. Nearly half is jewelry. [beat] [dry] Humanity's greatest treasure is mostly necklaces. [smile] Everything we ever dug up. Still fits between the bases.",
+   "verify": [
+    "Total above-ground gold mined: World Gold Council estimate of roughly 216,000 tonnes (end of 2024); update to the latest WGC figure",
+    "Cube side length: 216,000 t at density 19.32 g/cm3 gives about 11,200 m3, cube root about 22.4 m",
+    "Baseball infield: bases are 90 feet (27.4 m) apart, so the 22 m footprint fits inside the diamond",
+    "Seven-storey comparison assumes roughly 3 m per floor",
+    "Value: about 6.9 billion troy ounces times the current spot price; confirm it lands in the tens of trillions on publish day",
+    "US GDP comparison: US nominal GDP was roughly 29 trillion dollars in 2024; check that 'same ballpark' still holds at the current gold price (note: a stock compared with a yearly flow, framed as a size comparison only)",
+    "Central bank holdings: roughly 36,000 tonnes per WGC, about one sixth of the total",
+    "Jewelry share: WGC puts jewelry at roughly 45 percent of above-ground stocks; 'nearly half' should still be accurate"
+   ],
+   "rubric": {
+    "hook": 5,
+    "clarity": 5,
+    "story": 4,
+    "personality": 4,
+    "accuracy": 4,
+    "visuals": 5,
+    "pacing": 4,
+    "payoff": 4,
+    "packaging": 4,
+    "originality": 3,
+    "total": 42
+   },
+   "at": "2026-11-06T17:16:42.674Z"
+  }
+ },
+ "brew_at": "2026-11-06T17:18:59.476Z",
+ "error": null,
+ "stage": "queued",
+ "step": "Waiting for a render slot",
+ "steps": [
+  {
+   "stage": "queued",
+   "at": "2026-11-06T17:21:26+00:00"
+  }
+ ],
+ "updated": "2026-11-06T17:21:26+00:00"
+}
