@@ -4,25 +4,101 @@
 [scout] hacker_news: 29 items
 [scout] polymarket: 20 items
 [scout] crypto_hacks: 27 items
-[scout] gemini ping gemini-3.8-flash: failed after 30s (The read operation timed out)
-[scout] gemini ping gemini-3.7-flash: failed after 30s (The read operation timed out)
-[scout] gemini model: gemini-3.6-flash (ping 0.8s)
+[scout] gemini ping gemini-3.8-flash: failed after 17s (Gemini HTTP 503 on gemini-3.8-flash: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experi)
+[scout] gemini ping gemini-3.7-flash: failed after 0s (Gemini HTTP 429 on gemini-3.7-flash: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your current quot)
+[scout] gemini model: gemini-3.6-flash (ping 3.3s)
+[scout] gemini gemini-3.6-flash attempt 1: Gemini HTTP 429 on gemini-3.6-flash: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your cu
 [scout] gemini gemini-3.6-flash attempt 1: Gemini HTTP 503 on gemini-3.6-flash: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is curren
-[scout] gemini gemini-3.6-flash ok in 12s
-[scout] gemini_hot: 8 items
-[scout] gemini gemini-3.6-flash ok in 15s
-[scout] gemini_hot: 8 items
-[scout] gemini gemini-3.6-flash ok in 12s
-[scout] gemini_hot: 8 items
-[scout] gemini gemini-3.6-flash attempt 1: Gemini HTTP 503 on gemini-3.6-flash: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is curren
-[scout] gemini gemini-3.6-flash ok in 16s
-[scout] gemini_hot: 8 items
-[scout] gemini gemini-3.6-flash attempt 1: Gemini HTTP 503 on gemini-3.6-flash: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is curren
-[scout] gemini gemini-3.6-flash attempt 2: Gemini HTTP 503 on gemini-3.6-flash: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is curren
-[scout] gemini gemini-3.6-flash attempt 2: Gemini HTTP 503 on gemini-3.6-flash: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is curren
-[scout] gemini gemini-3.6-flash ok in 13s
+[scout] gemini gemini-3.6-flash attempt 2: Gemini HTTP 429 on gemini-3.6-flash: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your cu
+[scout] gemini gemini-3.6-flash attempt 2: Gemini HTTP 429 on gemini-3.6-flash: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your cu
+[scout] gemini gemini-3.6-flash attempt 3: Gemini HTTP 429 on gemini-3.6-flash: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your cu
+[scout] gemini gemini-3.6-flash attempt 3: Gemini HTTP 429 on gemini-3.6-flash: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your cu
+[scout] gemini gemini-3.5-flash attempt 1: Gemini HTTP 429 on gemini-3.5-flash: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your cu
+[scout] gemini gemini-3.5-flash attempt 1: Gemini HTTP 429 on gemini-3.5-flash: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your cu
+[scout] gemini gemini-3.5-flash attempt 2: Gemini HTTP 429 on gemini-3.5-flash: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your cu
+[scout] gemini gemini-3.5-flash attempt 2: Gemini HTTP 429 on gemini-3.5-flash: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your cu
+[scout] gemini gemini-3.5-flash attempt 3: Gemini HTTP 429 on gemini-3.5-flash: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your cu
+[scout] gemini gemini-3.5-flash attempt 3: Gemini HTTP 429 on gemini-3.5-flash: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your cu
+[scout] gemini gemini-2.5-flash attempt 1: Gemini HTTP 404 on gemini-2.5-flash: b'{\n  "error": {\n    "code": 404,\n    "message": "This model models/ge
+[scout] gemini gemini-flash-latest attempt 1: Gemini HTTP 429 on gemini-flash-latest: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your
+[scout] gemini gemini-2.5-flash attempt 1: Gemini HTTP 404 on gemini-2.5-flash: b'{\n  "error": {\n    "code": 404,\n    "message": "This model models/ge
+[scout] gemini gemini-flash-latest attempt 1: Gemini HTTP 429 on gemini-flash-latest: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your
+[scout] gemini gemini-flash-latest attempt 2: Gemini HTTP 429 on gemini-flash-latest: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your
+[scout] gemini gemini-flash-latest attempt 2: Gemini HTTP 429 on gemini-flash-latest: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your
+[scout] gemini gemini-flash-latest attempt 3: Gemini HTTP 429 on gemini-flash-latest: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your
+[scout] gemini gemini-flash-latest attempt 3: Gemini HTTP 429 on gemini-flash-latest: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your
+[scout] gemini_hot: skipped (RuntimeError: all Gemini models failed: Gemini HTTP 429 on gemini-flash-latest: b'{\n  "error": {\n    "code": 429,\n    "message": "Y)
+[scout] gemini gemini-3.6-flash attempt 1: Gemini HTTP 429 on gemini-3.6-flash: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your cu
+[scout] gemini_hot: skipped (RuntimeError: all Gemini models failed: Gemini HTTP 429 on gemini-flash-latest: b'{\n  "error": {\n    "code": 429,\n    "message": "Y)
+[scout] gemini gemini-3.6-flash attempt 1: Gemini HTTP 429 on gemini-3.6-flash: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your cu
+[scout] gemini gemini-3.6-flash attempt 2: Gemini HTTP 429 on gemini-3.6-flash: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your cu
+[scout] gemini gemini-3.6-flash attempt 2: Gemini HTTP 429 on gemini-3.6-flash: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your cu
+[scout] gemini gemini-3.6-flash attempt 3: Gemini HTTP 429 on gemini-3.6-flash: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your cu
+[scout] gemini gemini-3.6-flash attempt 3: Gemini HTTP 429 on gemini-3.6-flash: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your cu
+[scout] gemini gemini-3.5-flash attempt 1: Gemini HTTP 429 on gemini-3.5-flash: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your cu
+[scout] gemini gemini-3.5-flash attempt 1: Gemini HTTP 429 on gemini-3.5-flash: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your cu
+[scout] gemini gemini-3.5-flash attempt 2: Gemini HTTP 429 on gemini-3.5-flash: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your cu
+[scout] gemini gemini-3.5-flash attempt 2: Gemini HTTP 429 on gemini-3.5-flash: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your cu
+[scout] gemini gemini-3.5-flash attempt 3: Gemini HTTP 429 on gemini-3.5-flash: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your cu
+[scout] gemini gemini-3.5-flash attempt 3: Gemini HTTP 429 on gemini-3.5-flash: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your cu
+[scout] gemini gemini-2.5-flash attempt 1: Gemini HTTP 404 on gemini-2.5-flash: b'{\n  "error": {\n    "code": 404,\n    "message": "This model models/ge
+[scout] gemini gemini-flash-latest attempt 1: Gemini HTTP 429 on gemini-flash-latest: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your
+[scout] gemini gemini-2.5-flash attempt 1: Gemini HTTP 404 on gemini-2.5-flash: b'{\n  "error": {\n    "code": 404,\n    "message": "This model models/ge
+[scout] gemini gemini-flash-latest attempt 1: Gemini HTTP 429 on gemini-flash-latest: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your
+[scout] gemini gemini-flash-latest attempt 2: Gemini HTTP 429 on gemini-flash-latest: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your
+[scout] gemini gemini-flash-latest attempt 2: Gemini HTTP 429 on gemini-flash-latest: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your
+[scout] gemini gemini-flash-latest attempt 3: Gemini HTTP 429 on gemini-flash-latest: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your
+[scout] gemini gemini-flash-latest attempt 3: Gemini HTTP 429 on gemini-flash-latest: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your
+[scout] gemini_hot: skipped (RuntimeError: all Gemini models failed: Gemini HTTP 429 on gemini-flash-latest: b'{\n  "error": {\n    "code": 429,\n    "message": "Y)
+[scout] gemini gemini-3.6-flash attempt 1: Gemini HTTP 429 on gemini-3.6-flash: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your cu
+[scout] gemini_hot: skipped (RuntimeError: all Gemini models failed: Gemini HTTP 429 on gemini-flash-latest: b'{\n  "error": {\n    "code": 429,\n    "message": "Y)
+[scout] gemini gemini-3.6-flash attempt 1: Gemini HTTP 429 on gemini-3.6-flash: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your cu
+[scout] gemini gemini-3.6-flash attempt 2: Gemini HTTP 429 on gemini-3.6-flash: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your cu
+[scout] gemini gemini-3.6-flash ok in 14s
 [scout] gemini_evergreen: 8 items
 [scout] gemini gemini-3.6-flash attempt 3: Gemini HTTP 429 on gemini-3.6-flash: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your cu
-[scout] gemini gemini-3.5-flash ok in 12s
-[scout] gemini_evergreen: 8 items
-[scout] done: 48 new cards, pool 64
+[scout] gemini gemini-3.5-flash attempt 1: Gemini HTTP 429 on gemini-3.5-flash: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your cu
+[scout] gemini gemini-3.5-flash attempt 2: Gemini HTTP 429 on gemini-3.5-flash: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your cu
+[scout] gemini gemini-3.5-flash attempt 3: Gemini HTTP 429 on gemini-3.5-flash: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your cu
+[scout] gemini gemini-2.5-flash attempt 1: Gemini HTTP 404 on gemini-2.5-flash: b'{\n  "error": {\n    "code": 404,\n    "message": "This model models/ge
+[scout] gemini gemini-flash-latest attempt 1: Gemini HTTP 429 on gemini-flash-latest: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your
+[scout] gemini gemini-flash-latest attempt 2: Gemini HTTP 429 on gemini-flash-latest: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your
+[scout] gemini gemini-flash-latest attempt 3: Gemini HTTP 429 on gemini-flash-latest: b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your
+[scout] gemini_evergreen: skipped (RuntimeError: all Gemini models failed: Gemini HTTP 429 on gemini-flash-latest: b'{\n  "error": {\n    "code": 429,\n    "message": "Y)
+[scout] done: 8 new cards, pool 72
+Traceback (most recent call last):
+  File "/home/runner/work/Youtube-Engine/Youtube-Engine/scripts/drive.py", line 110, in <module>
+    publish_deck()
+  File "/home/runner/work/Youtube-Engine/Youtube-Engine/scripts/drive.py", line 103, in publish_deck
+    fid = put_json("outbox", "deck.json", {"updated": cards[0]["created_at"] if cards else None, "count": len(slim), "cards": slim})
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/Youtube-Engine/Youtube-Engine/scripts/drive.py", line 54, in put_json
+    return put_bytes(CFG[folder_key], name, json.dumps(obj, ensure_ascii=False, separators=(",", ":")).encode(), "text/plain")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/Youtube-Engine/Youtube-Engine/scripts/drive.py", line 41, in put_bytes
+    existing = find(folder, name)
+               ^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/Youtube-Engine/Youtube-Engine/scripts/drive.py", line 35, in find
+    res = req("GET", f"{API}/files?" + urllib.parse.urlencode({"q": q, "fields": "files(id,name,modifiedTime)"}))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/Youtube-Engine/Youtube-Engine/scripts/drive.py", line 28, in req
+    with urllib.request.urlopen(r, timeout=120) as resp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 559, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 639, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
