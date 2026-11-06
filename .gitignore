@@ -4,3 +4,7 @@ out/
 .env
 client_secret*.json
 token*.json
+node_modules
+public/job/
+__pycache__/
+public/sfx/

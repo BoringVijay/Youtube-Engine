@@ -1,0 +1,72 @@
+name: Produce videos
+# Reads the Drive inbox, voices, plans and renders videos, and reports progress to Drive outbox/status.json.
+# Runs every 2 hours (to save free minutes on a private repo), on demand, and when engine code changes.
+# run: 1
+on:
+  schedule:
+    - cron: "41 */2 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["scripts/produce.py", "src/**", "config/voice.json", ".github/workflows/produce.yml"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: produce
+  cancel-in-progress: false
+
+jobs:
+  produce:
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@v4
+      - name: Quick inbox check (skip the heavy setup when there is nothing to do)
+        id: check
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          GDRIVE_REFRESH_TOKEN: ${{ secrets.GDRIVE_REFRESH_TOKEN }}
+        run: |
+          python3 - <<'EOF'
+          import glob, json, os, sys
+          sys.path.insert(0, "scripts")
+          import drive
+          inbox = [f for f in drive.list_inbox() if f["name"].endswith(".json")]
+          busy = [p for p in glob.glob("jobs/*/state.json") if json.load(open(p)).get("stage") in ("queued","voicing","planning","test_render","final_render")]
+          work = bool(inbox or busy) or os.environ.get("GITHUB_EVENT_NAME") != "schedule"
+          print(f"inbox={len(inbox)} busy={len(busy)} work={work}")
+          open(os.environ["GITHUB_OUTPUT"], "a").write(f"work={'yes' if work else 'no'}\n")
+          EOF
+      - uses: actions/setup-node@v4
+        if: steps.check.outputs.work == 'yes'
+        with:
+          node-version: 20
+          cache: npm
+      - name: Install
+        if: steps.check.outputs.work == 'yes'
+        run: |
+          npm ci --no-audit --no-fund
+          which ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
+      - name: Produce
+        if: steps.check.outputs.work == 'yes'
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          GDRIVE_REFRESH_TOKEN: ${{ secrets.GDRIVE_REFRESH_TOKEN }}
+          PRODUCE_BUDGET_MIN: "50"
+        run: |
+          mkdir -p logs
+          set -o pipefail
+          python3 -u scripts/produce.py 2>&1 | tee logs/produce-last.log
+      - name: Save job state
+        if: always() && steps.check.outputs.work == 'yes'
+        run: |
+          git config user.name "engine-bot"
+          git config user.email "engine-bot@users.noreply.github.com"
+          git add jobs logs || true
+          git diff --cached --quiet || git commit -m "Produce run ${{ job.status }}"
+          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done

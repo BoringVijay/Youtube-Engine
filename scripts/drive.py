@@ -53,11 +53,46 @@ def put_bytes(folder, name, data, mime):
     return req("POST", f"{UP}/files?uploadType=multipart&fields=id", body, f"multipart/related; boundary={boundary}")["id"]
 
 
+def put_large(folder, name, path, mime):
+    """Resumable upload for videos (multipart is capped at 5 MB). Overwrites a same-named file."""
+    size = os.path.getsize(path)
+    existing = find(folder, name)
+    if existing:
+        url = f"{UP}/files/{existing[0]['id']}?uploadType=resumable&fields=id"
+        meta, method = b"{}", "PATCH"
+    else:
+        url = f"{UP}/files?uploadType=resumable&fields=id"
+        meta, method = json.dumps({"name": name, "parents": [folder]}).encode(), "POST"
+    r = urllib.request.Request(url, data=meta, method=method, headers={"Authorization": f"Bearer {token()}", "Content-Type": "application/json; charset=UTF-8",
+                                                                     "X-Upload-Content-Type": mime, "X-Upload-Content-Length": str(size)})
+    try:
+        session = urllib.request.urlopen(r, timeout=60).headers["Location"]
+    except urllib.error.HTTPError as e:
+        raise RuntimeError(f"Drive resumable start -> HTTP {e.code}: {e.read()[:300]}")
+    chunk = 16 * 1024 * 1024
+    with open(path, "rb") as f:
+        pos = 0
+        while pos < size:
+            data = f.read(chunk)
+            end = pos + len(data) - 1
+            r = urllib.request.Request(session, data=data, method="PUT", headers={"Content-Length": str(len(data)), "Content-Range": f"bytes {pos}-{end}/{size}"})
+            try:
+                with urllib.request.urlopen(r, timeout=300) as resp:
+                    return json.loads(resp.read())["id"]
+            except urllib.error.HTTPError as e:
+                if e.code != 308:
+                    raise RuntimeError(f"Drive resumable chunk -> HTTP {e.code}: {e.read()[:300]}")
+            pos = end + 1
+    raise RuntimeError("Drive upload ended without a file id")
+
+
 def put_json(folder_key, name, obj):
     return put_bytes(CFG[folder_key], name, json.dumps(obj, ensure_ascii=False, separators=(",", ":")).encode(), "text/plain")
 
 
 def put_file(folder_key, name, path, mime):
+    if os.path.getsize(path) > 4 * 1024 * 1024:
+        return put_large(CFG[folder_key], name, path, mime)
     with open(path, "rb") as f:
         return put_bytes(CFG[folder_key], name, f.read(), mime)
 
