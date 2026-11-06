@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Penguin Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Figtree:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Layout: one column app. Mobile = bottom tab bar, desktop = top tabs and a wider work area. */
+  --bg: #F3F3F1; --surface: #FFFFFF; --ink: #111111; --muted: #66665F; --line: #E3E3DE;
+  --accent: #FF4F1A; --accent-ink: #FFFFFF; --soft: #F7F7F5;
+  --good: #158A4E; --warn: #B7791F; --bad: #D93D42; --later: #2F62E8;
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Figtree", -apple-system, "Segoe UI", Roboto, sans-serif;
+  --r: 18px; --shadow: 0 10px 30px rgba(17,17,17,.10), 0 2px 6px rgba(17,17,17,.06);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0E0E10; --surface: #19191C; --ink: #F3F3F0; --muted: #A1A19A; --line: #2B2B30;
+    --accent: #FF6A3D; --soft: #222226; --good: #3CC27C; --warn: #E8B44C; --bad: #FF6B6E; --later: #6E93FF;
+    --shadow: 0 10px 30px rgba(0,0,0,.45); color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0E0E10; --surface: #19191C; --ink: #F3F3F0; --muted: #A1A19A; --line: #2B2B30;
+  --accent: #FF6A3D; --soft: #222226; --good: #3CC27C; --warn: #E8B44C; --bad: #FF6B6E; --later: #6E93FF;
+  --shadow: 0 10px 30px rgba(0,0,0,.45); color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body { background: var(--bg); color: var(--ink); font: 500 15px/1.45 var(--body); -webkit-font-smoothing: antialiased; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.app { min-height: 100%; display: flex; flex-direction: column; max-width: 1100px; margin: 0 auto; padding: 0 16px 96px; }
+header.top { display: flex; align-items: center; gap: 12px; padding: 18px 0 10px; }
+.brand { font: 900 22px/1 var(--display); letter-spacing: -0.5px; }
+.brand span { color: var(--accent); }
+.engine-pill { margin-left: auto; display: flex; align-items: center; gap: 8px; font-size: 12.5px; color: var(--muted); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--muted); flex: none; }
+.dot.ok { background: var(--good); } .dot.warn { background: var(--warn); } .dot.bad { background: var(--bad); }
+nav.tabs { display: flex; gap: 6px; padding: 6px; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; margin: 6px 0 18px; width: max-content; }
+nav.tabs button { border: 0; background: transparent; padding: 9px 16px; border-radius: 999px; font: 700 14px var(--body); color: var(--muted); display: flex; gap: 6px; align-items: center; }
+nav.tabs button[aria-selected="true"] { background: var(--ink); color: var(--bg); }
+.badge { min-width: 18px; height: 18px; border-radius: 9px; background: var(--accent); color: var(--accent-ink); font: 800 11px/18px var(--body); padding: 0 5px; text-align: center; }
+@media (max-width: 720px) {
+  nav.tabs { position: fixed; z-index: 20; left: 12px; right: 12px; bottom: 12px; width: auto; justify-content: space-between; margin: 0; box-shadow: var(--shadow); }
+  nav.tabs button { flex: 1; justify-content: center; padding: 10px 6px; font-size: 12.5px; }
+}
+h1, h2, h3 { font-family: var(--display); letter-spacing: -0.4px; margin: 0; text-wrap: balance; }
+h2 { font-weight: 900; font-size: 26px; }
+h3 { font-weight: 800; font-size: 18px; }
+.muted { color: var(--muted); }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.spacer { flex: 1; }
+.btn { border: 1px solid var(--line); background: var(--surface); border-radius: 12px; padding: 9px 14px; font-weight: 700; }
+.btn:hover { border-color: var(--ink); }
+.btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.btn.dark { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.btn:disabled { opacity: .5; cursor: default; }
+.seg { display: inline-flex; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 3px; gap: 2px; flex-wrap: wrap; }
+.seg button { border: 0; background: none; padding: 7px 12px; border-radius: 9px; font-weight: 700; color: var(--muted); font-size: 13.5px; }
+.seg button[aria-pressed="true"] { background: var(--soft); color: var(--ink); box-shadow: inset 0 0 0 1px var(--line); }
+.chip { display: inline-flex; align-items: center; gap: 5px; border-radius: 999px; padding: 4px 10px; font: 700 12px var(--body); background: var(--soft); color: var(--ink); border: 1px solid var(--line); white-space: nowrap; }
+.chip.hot { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.chip.ever { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.chip.ai { background: var(--later); color: #fff; border-color: var(--later); }
+.chip.risk { color: var(--bad); border-color: var(--bad); background: transparent; }
+.notice { border: 1px dashed var(--line); border-radius: 14px; padding: 14px 16px; color: var(--muted); background: var(--surface); }
+.notice b { color: var(--ink); }
+[hidden] { display: none !important; }
+
+/* ARCADE */
+.arcade { display: grid; grid-template-columns: minmax(0, 520px) minmax(0, 1fr); gap: 28px; align-items: start; }
+@media (max-width: 900px) { .arcade { grid-template-columns: 1fr; } .side { order: 2; } }
+.deck-head { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 12px; }
+.stack { position: relative; height: 600px; }
+@media (max-width: 720px) { .stack { height: calc(100vh - 290px); min-height: 520px; } }
+.card { position: absolute; inset: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 26px; box-shadow: var(--shadow); padding: 20px 20px 16px; display: flex; flex-direction: column; gap: 12px; touch-action: none; user-select: none; overflow: hidden; transition: transform .25s ease, opacity .25s ease; }
+.card.back1 { transform: translateY(12px) scale(.965); opacity: .9; }
+.card.back2 { transform: translateY(24px) scale(.93); opacity: .6; }
+.card.dragging { transition: none; }
+.card .chips { display: flex; gap: 6px; flex-wrap: wrap; }
+.card .q { font: 900 27px/1.08 var(--display); letter-spacing: -0.6px; text-wrap: balance; }
+@media (max-width: 420px) { .card .q { font-size: 23px; } }
+.card .hook { font-weight: 600; color: var(--muted); }
+.stamp { position: absolute; top: 26px; font: 900 26px var(--display); padding: 4px 12px; border: 4px solid; border-radius: 10px; opacity: 0; pointer-events: none; }
+.stamp.like { left: 22px; color: var(--good); transform: rotate(-12deg); }
+.stamp.pass { right: 22px; color: var(--bad); transform: rotate(12deg); }
+.stamp.later { left: 50%; top: 40%; transform: translateX(-50%); color: var(--later); }
+.recency { display: grid; gap: 5px; }
+.recency .bar { height: 8px; border-radius: 4px; background: var(--soft); overflow: hidden; box-shadow: inset 0 0 0 1px var(--line); }
+.recency .fill { height: 100%; background: var(--accent); border-radius: 4px; }
+.recency .lbl { display: flex; justify-content: space-between; font-size: 12.5px; color: var(--muted); font-weight: 600; }
+.dials { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+@media (max-width: 460px) { .dial .n { font-size: 20px; } .dial .t { font-size: 9px; letter-spacing: 0; } .dial { padding: 8px 4px 6px; } }
+.dial { background: var(--soft); border-radius: 14px; padding: 10px 8px 8px; text-align: center; border: 1px solid var(--line); }
+.dial .n { font: 900 24px/1 var(--display); font-variant-numeric: tabular-nums; }
+.dial .t { font: 700 11px var(--body); color: var(--muted); text-transform: uppercase; letter-spacing: .5px; margin-top: 4px; }
+.dial.main { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.dial.main .t { color: inherit; opacity: .75; }
+.evidence { display: grid; gap: 6px; overflow: auto; padding-right: 2px; flex: 1; min-height: 0; }
+.ev { display: grid; grid-template-columns: 22px 1fr auto; gap: 8px; align-items: baseline; font-size: 13.5px; padding: 7px 0; border-bottom: 1px solid var(--line); }
+.ev:last-child { border-bottom: 0; }
+.ev .ic { font: 800 11px var(--display); color: var(--muted); }
+.ev .v { font: 800 14px var(--display); font-variant-numeric: tabular-nums; text-align: right; }
+.ev .v.up { color: var(--good); } .ev .v.down { color: var(--bad); }
+.ev a { color: inherit; }
+.details { font-size: 13.5px; display: grid; gap: 10px; }
+.details p { margin: 0; }
+.details .why { display: grid; grid-template-columns: auto 1fr; gap: 4px 10px; font-size: 13px; }
+.details .why b { font-family: var(--display); }
+.card-foot { display: flex; gap: 8px; align-items: center; }
+.linkish { background: none; border: 0; padding: 0; color: var(--muted); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; font-size: 13px; }
+.actions { display: flex; justify-content: center; gap: 18px; margin-top: 16px; align-items: center; }
+.act { width: 62px; height: 62px; border-radius: 50%; border: 0; background: var(--surface); box-shadow: var(--shadow); font: 900 22px var(--display); display: grid; place-items: center; }
+.act.pass { color: var(--bad); } .act.like { color: var(--good); width: 72px; height: 72px; font-size: 26px; } .act.later { color: var(--later); }
+.act.undo { width: 44px; height: 44px; font-size: 15px; color: var(--muted); }
+.act small { display: block; font: 700 10px var(--body); }
+.empty-card { position: absolute; inset: 0; border: 2px dashed var(--line); border-radius: 26px; display: grid; place-items: center; text-align: center; padding: 26px; }
+.side { display: grid; gap: 16px; }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 16px; }
+.kv { display: grid; grid-template-columns: 1fr auto; gap: 6px 12px; font-size: 14px; }
+.kv b { font-family: var(--display); font-variant-numeric: tabular-nums; }
+.legend { display: grid; gap: 8px; font-size: 13.5px; }
+.legend div { display: grid; grid-template-columns: 110px 1fr; gap: 8px; }
+.legend b { font-family: var(--display); }
+
+/* BREWERY */
+.list { display: grid; gap: 12px; }
+.item { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); }
+.item > summary { list-style: none; padding: 14px 16px; display: grid; grid-template-columns: 1fr auto; gap: 6px 12px; cursor: pointer; }
+.item > summary::-webkit-details-marker { display: none; }
+.item .title { font: 800 17px/1.2 var(--display); }
+.item .meta { display: flex; gap: 6px; flex-wrap: wrap; grid-column: 1 / -1; }
+.item[open] > summary { border-bottom: 1px solid var(--line); }
+.editor { padding: 16px; display: grid; gap: 16px; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 640px) { .grid2 { grid-template-columns: 1fr; } }
+label.f { display: grid; gap: 6px; font-weight: 700; font-size: 13px; color: var(--muted); }
+input[type=text], input[type=url], textarea, select { width: 100%; background: var(--soft); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; font-weight: 600; color: var(--ink); }
+textarea { min-height: 80px; resize: vertical; line-height: 1.45; }
+input[type=range] { width: 100%; accent-color: var(--accent); }
+.fmt { display: grid; gap: 10px; background: var(--soft); border: 1px solid var(--line); border-radius: 14px; padding: 12px; }
+.toggle { display: flex; align-items: center; gap: 10px; font-weight: 700; }
+.toggle input { width: 18px; height: 18px; accent-color: var(--accent); }
+.stepper { display: inline-flex; align-items: center; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: var(--surface); }
+.stepper button { border: 0; background: none; width: 34px; height: 32px; font: 800 18px var(--display); }
+.stepper output { min-width: 28px; text-align: center; font: 800 15px var(--display); }
+.notes { display: grid; gap: 8px; }
+.note { background: var(--soft); border-radius: 12px; padding: 8px 12px; font-size: 14px; }
+.note time { display: block; font-size: 11.5px; color: var(--muted); font-weight: 700; }
+.refs a { color: var(--ink); word-break: break-all; }
+.script { display: grid; gap: 10px; }
+.script table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+.script th, .script td { text-align: left; padding: 7px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.script th { font: 800 12px var(--display); color: var(--muted); text-transform: uppercase; letter-spacing: .4px; }
+.tablewrap { overflow-x: auto; }
+.score { font: 900 30px var(--display); }
+.score.pass { color: var(--good); } .score.fail { color: var(--bad); }
+.status { font: 800 11px var(--body); text-transform: uppercase; letter-spacing: .6px; padding: 3px 8px; border-radius: 6px; background: var(--soft); border: 1px solid var(--line); }
+
+/* STUDIO */
+.needs { display: grid; gap: 10px; }
+.needs .n-item { display: flex; gap: 12px; align-items: center; background: var(--surface); border: 1px solid var(--line); border-left: 5px solid var(--accent); border-radius: 14px; padding: 12px 14px; }
+.board { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(220px, 1fr); gap: 12px; overflow-x: auto; padding-bottom: 8px; }
+.col { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 12px; min-height: 160px; display: grid; align-content: start; gap: 8px; }
+.col h3 { font-size: 14px; display: flex; justify-content: space-between; }
+.mini { background: var(--soft); border: 1px solid var(--line); border-radius: 12px; padding: 9px 10px; font: 700 13.5px/1.3 var(--body); cursor: pointer; text-align: left; }
+.toast { position: fixed; left: 50%; bottom: 96px; transform: translateX(-50%); background: var(--ink); color: var(--bg); padding: 10px 16px; border-radius: 12px; font-weight: 700; z-index: 50; box-shadow: var(--shadow); max-width: calc(100% - 32px); }
+.toast[hidden] { display: none; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
+.tile { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 14px; }
+.tile .n { font: 900 30px var(--display); font-variant-numeric: tabular-nums; }
+.tile .t { color: var(--muted); font-weight: 700; font-size: 13px; }
+.section { display: grid; gap: 14px; margin-bottom: 26px; }
+@media (prefers-reduced-motion: reduce) { .card { transition: none; } }
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div class="brand">Penguin<span>.</span>Studio</div>
+    <div class="engine-pill" id="enginePill" title="Engine connection"><span class="dot" id="engineDot"></span><span id="engineText">Connecting…</span></div>
+  </header>
+
+  <nav class="tabs" role="tablist" aria-label="Sections">
+    <button role="tab" id="tab-arcade" aria-selected="true" data-view="arcade">Arcade</button>
+    <button role="tab" id="tab-brewery" aria-selected="false" data-view="brewery">Brewery <span class="badge" id="brewCount" hidden></span></button>
+    <button role="tab" id="tab-studio" aria-selected="false" data-view="studio">Studio <span class="badge" id="needsCount" hidden></span></button>
+    <button role="tab" id="tab-comments" aria-selected="false" data-view="comments">Comments</button>
+    <button role="tab" id="tab-stats" aria-selected="false" data-view="stats">Stats</button>
+  </nav>
+
+  <!-- ARCADE -->
+  <section class="view" id="view-arcade" role="tabpanel" aria-labelledby="tab-arcade">
+    <div class="arcade">
+      <div>
+        <div class="deck-head">
+          <div class="seg" id="modeSeg" role="group" aria-label="Deck mix">
+            <button data-mode="mix" aria-pressed="true">Mix</button>
+            <button data-mode="hot" aria-pressed="false">Hot now</button>
+            <button data-mode="odds" aria-pressed="false">Best odds</button>
+            <button data-mode="ever" aria-pressed="false">Evergreen</button>
+          </div>
+          <span class="spacer"></span>
+          <span class="muted" id="deckLeft" style="font-weight:700;font-size:13px"></span>
+        </div>
+        <div class="stack" id="stack" aria-live="polite"></div>
+        <div class="actions">
+          <button class="act undo" id="btnUndo" title="Undo last swipe (Z)" aria-label="Undo last swipe">↺</button>
+          <button class="act pass" id="btnPass" title="Pass (←)" aria-label="Pass">✕</button>
+          <button class="act later" id="btnLater" title="Save for later (↑)" aria-label="Save for later">↑</button>
+          <button class="act like" id="btnLike" title="Like (→)" aria-label="Like">♥</button>
+        </div>
+      </div>
+      <aside class="side">
+        <div class="panel">
+          <h3 style="margin-bottom:10px">Today's deck</h3>
+          <div class="kv" id="deckStats"></div>
+          <div class="row" style="margin-top:12px">
+            <button class="btn" id="btnRefresh">Refresh from engine</button>
+            <button class="btn dark" id="btnWild">Deal 15 wildcards</button>
+          </div>
+          <p class="muted" id="wildNote" style="font-size:12.5px;margin:10px 0 0">Wildcards come from Claude. They have no live numbers until the engine checks them.</p>
+        </div>
+        <div class="panel legend">
+          <h3>How to read a card</h3>
+          <div><b>Opportunity</b><span>Overall pick score. Demand, quality and room to win combined.</span></div>
+          <div><b>Demand</b><span>How many people care now, from Wikipedia, Google, Hacker News, Reddit, Polymarket and YouTube.</span></div>
+          <div><b>Competition</b><span>How strong existing videos are. Lower means easier to win.</span></div>
+          <div><b>Quality</b><span>Curiosity, explainability, 6-month shelf life and ad value.</span></div>
+          <div><b>Swipe</b><span>Right to like, left to pass, up to save for later. Keys: ← ↑ → and Z to undo.</span></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- BREWERY -->
+  <section class="view" id="view-brewery" role="tabpanel" aria-labelledby="tab-brewery" hidden>
+    <div class="section">
+      <div class="row"><h2>Brewery</h2><span class="spacer"></span>
+        <div class="seg" id="brewSeg" role="group" aria-label="Brewery filter">
+          <button data-f="liked" aria-pressed="true">Liked</button>
+          <button data-f="later" aria-pressed="false">Saved for later</button>
+          <button data-f="own" aria-pressed="false">My ideas</button>
+          <button data-f="all" aria-pressed="false">All</button>
+        </div>
+      </div>
+      <details class="item" id="addIdea">
+        <summary><span class="title">+ Add my own idea</span><span class="muted" style="font-weight:700">Topic, angle, links</span></summary>
+        <div class="editor">
+          <label class="f" for="newQ">Topic or question<input type="text" id="newQ" placeholder="What actually happened in the $6.3B Binance hack?"></label>
+          <label class="f" for="newAngle">Your angle or notes<textarea id="newAngle" placeholder="The twist: half the stolen money got frozen. Crypto was built so no one could freeze money."></textarea></label>
+          <label class="f" for="newRefs">Reference links, one per line<textarea id="newRefs" placeholder="https://..."></textarea></label>
+          <div class="row"><button class="btn primary" id="btnAddIdea">Add to Brewery</button></div>
+        </div>
+      </details>
+      <div class="list" id="brewList"></div>
+    </div>
+  </section>
+
+  <!-- STUDIO -->
+  <section class="view" id="view-studio" role="tabpanel" aria-labelledby="tab-studio" hidden>
+    <div class="section">
+      <h2>Needs you</h2>
+      <div class="needs" id="needsList"></div>
+    </div>
+    <div class="section">
+      <h2>Pipeline</h2>
+      <div class="board" id="board"></div>
+    </div>
+    <div class="section">
+      <h2>Engine</h2>
+      <div class="panel kv" id="engineInfo"></div>
+    </div>
+  </section>
+
+  <!-- COMMENTS -->
+  <section class="view" id="view-comments" role="tabpanel" aria-labelledby="tab-comments" hidden>
+    <div class="section"><h2>Comments</h2><div id="commentsBody"></div></div>
+  </section>
+
+  <!-- STATS -->
+  <section class="view" id="view-stats" role="tabpanel" aria-labelledby="tab-stats" hidden>
+    <div class="section"><h2>Channel</h2><div id="statsBody"></div></div>
+  </section>
+</div>
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script>
+const OUTBOX = "16a78EaUiDd62gAJjBGN7n8TzALk5SMVS";
+const INBOX = "1lckLcP22cFfiNwiGaXnJNnJpZG2k5Ef4";
+const DRIVE = "Google Drive";
+const SERIES = ["What If? (stickman)", "What Actually Happened (mini-doc)", "How It Works (cutaway)", "Money Moves (charts)", "True Weird Stories (comic)", "Versus (scoreboard)"];
+const AUDIENCES = ["general curious", "students", "tech & AI", "finance & crypto", "movie & pop culture", "India-first"];
+const STAGES = [
+  ["liked", "Liked"], ["scripting", "Script draft"], ["queued", "Sent to engine"], ["test", "Test cut ready"],
+  ["final", "Final render"], ["review", "Final review"], ["scheduled", "Scheduled"], ["live", "Live"]
+];
+
+const S = {
+  db: null, mcp: null, sample: null,
+  deck: [], deckMeta: null, wild: [], swiped: new Map(), ideas: new Map(),
+  queue: [], mode: "mix", brewFilter: "liked", last: null, openId: null, engineFiles: {},
+};
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const fmt = (n) => n == null || isNaN(n) ? "–" : n >= 1e6 ? (n / 1e6).toFixed(n >= 1e7 ? 0 : 1) + "M" : n >= 1e4 ? Math.round(n / 1e3) + "K" : n >= 1e3 ? (n / 1e3).toFixed(1) + "K" : String(Math.round(n));
+const pct = (n) => (n > 0 ? "+" : "") + Math.round(n) + "%";
+function toast(msg) { const t = $("#toast"); t.textContent = msg; t.hidden = false; clearTimeout(toast.t); toast.t = setTimeout(() => (t.hidden = true), 2600); }
+const today = () => new Date().toISOString().slice(0, 10);
+
+/* ---------- Tabs ---------- */
+document.querySelectorAll("nav.tabs button").forEach((b) => b.addEventListener("click", () => showView(b.dataset.view)));
+function showView(v) {
+  document.querySelectorAll("nav.tabs button").forEach((b) => b.setAttribute("aria-selected", String(b.dataset.view === v)));
+  document.querySelectorAll(".view").forEach((s) => (s.hidden = s.id !== "view-" + v));
+  if (v === "brewery") renderBrewery();
+  if (v === "studio") renderStudio();
+}
+
+/* ---------- Engine (Drive) ---------- */
+function setEngine(state, text) { $("#engineDot").className = "dot " + state; $("#engineText").textContent = text; }
+async function driveFind(name) {
+  const r = await S.mcp.callTool(DRIVE, "search_files", { query: `parentId = '${OUTBOX}' and title = '${name}' and trashed = false`, excludeContentSnippets: true }, { cache: false });
+  const files = (r.payload && r.payload.files) || [];
+  return files[0] || null;
+}
+async function driveReadJson(fileId) {
+  const r = await S.mcp.callTool(DRIVE, "download_file_content", { fileId }, { cache: false });
+  const b64 = r.payload && r.payload.content;
+  if (!b64) throw new Error("empty file");
+  const bytes = Uint8Array.from(atob(b64), (c) => c.charCodeAt(0));
+  return JSON.parse(new TextDecoder().decode(bytes));
+}
+async function driveWriteInbox(name, obj) {
+  return S.mcp.callTool(DRIVE, "create_file", {
+    title: name, parentId: INBOX, contentMimeType: "text/plain", disableConversionToGoogleType: true, textContent: JSON.stringify(obj, null, 1),
+  }, { cache: false });
+}
+function mcpErrorText(e) {
+  const c = e && e.code;
+  if (c === "needs_reauth") return "Reconnect Google Drive in claude.ai Settings, Connectors.";
+  if (c === "server_not_connected") return "Add Google Drive in claude.ai Settings, Connectors.";
+  if (c === "not_in_manifest" || c === "approval_required") return "Allow this page to use Google Drive, then refresh.";
+  if (c === "server_unavailable") return "Drive is slow to answer. Try Refresh in a moment.";
+  return "Couldn't reach Drive" + (e && e.message ? ": " + e.message.slice(0, 80) : ".");
+}
+async function loadDeck(manual) {
+  if (!S.mcp) { setEngine("bad", "Drive not available here"); renderDeck(); return; }
+  setEngine("", "Loading deck…");
+  try {
+    const f = await driveFind("deck.json");
+    if (!f) { setEngine("warn", "No deck yet"); renderDeck(); return; }
+    const data = await driveReadJson(f.id);
+    S.deck = data.cards || [];
+    S.deckMeta = { updated: data.updated, sample: !!data.sample, modified: f.modifiedTime };
+    const age = (Date.now() - Date.parse(f.modifiedTime)) / 3.6e6;
+    setEngine(age < 6 ? "ok" : "warn", `Deck ${age < 1 ? "updated just now" : "updated " + Math.round(age) + "h ago"}`);
+    if (manual) toast(`Deck refreshed: ${S.deck.length} cards`);
+    buildQueue(); renderDeck(); renderDeckStats();
+    loadExtras();
+  } catch (e) {
+    setEngine("bad", "Drive error"); toast(mcpErrorText(e)); renderDeck();
+  }
+}
+async function loadExtras() {
+  for (const name of ["status.json", "comments.json", "analytics.json"]) {
+    try { const f = await driveFind(name); S.engineFiles[name] = f ? await driveReadJson(f.id) : null; }
+    catch (e) { S.engineFiles[name] = null; }
+  }
+  mergeEngineStatus(); renderComments(); renderStats(); renderStudio();
+}
+function mergeEngineStatus() {
+  const st = S.engineFiles["status.json"];
+  if (!st || !st.jobs || !S.db) return;
+  for (const j of st.jobs) {
+    const idea = S.ideas.get(j.id);
+    if (idea && j.stage && j.stage !== idea.status && STAGES.findIndex((s) => s[0] === j.stage) > STAGES.findIndex((s) => s[0] === idea.status)) {
+      saveIdea(j.id, { status: j.stage, engine: j });
+    }
+  }
+}
+
+/* ---------- Deck ---------- */
+function hoursSince(c) {
+  const t = c.origin && c.origin.time ? Date.parse(c.origin.time) : Date.parse(c.t);
+  return isNaN(t) ? null : Math.max(0, (Date.now() - t) / 3.6e6);
+}
+function buildQueue() {
+  const seen = (c) => S.swiped.has(c.key);
+  let pool = [...S.deck, ...S.wild].filter((c) => !seen(c));
+  const m = S.mode;
+  if (m === "hot") pool = pool.filter((c) => c.kind === "hot").sort((a, b) => (hoursSince(a) ?? 99) - (hoursSince(b) ?? 99));
+  else if (m === "ever") pool = pool.filter((c) => c.kind !== "hot").sort((a, b) => (b.opp ?? 0) - (a.opp ?? 0));
+  else if (m === "odds") pool.sort((a, b) => (b.opp ?? 0) - (a.opp ?? 0));
+  else {
+    // Mix: good cards first, but shuffled with a random kick so it never feels the same twice
+    pool = pool.map((c) => [c, (c.opp ?? 60) + Math.random() * 35 + (c.kind === "hot" ? 6 : 0)]).sort((a, b) => b[1] - a[1]).map((x) => x[0]);
+  }
+  S.queue = pool;
+}
+function dial(n, t, main) { return `<div class="dial${main ? " main" : ""}"><div class="n">${n ?? "–"}</div><div class="t">${t}</div></div>`; }
+function evidenceRows(c) {
+  const s = c.st || {}; const rows = [];
+  const add = (ic, label, v, cls, href) => rows.push(`<div class="ev"><span class="ic">${ic}</span><span>${href ? `<a href="${esc(href)}" target="_blank" rel="noopener">${esc(label)}</a>` : esc(label)}</span><span class="v ${cls || ""}">${v}</span></div>`);
+  if (s.wiki_views_24h != null) add("W", `Wikipedia views yesterday${s.wiki_article ? " · " + s.wiki_article : ""}`, fmt(s.wiki_views_24h));
+  if (s.wiki_change_pct != null) add("W", "Change vs recent average", pct(s.wiki_change_pct), s.wiki_change_pct >= 0 ? "up" : "down");
+  if (s.wiki_avg_30d != null) add("W", "Wikipedia daily average, 30 days", fmt(s.wiki_avg_30d));
+  if (s.google_searches) add("G", `Google searches today (${s.google_geo || "?"})`, esc(s.google_searches));
+  if (s.hn_points != null) add("HN", "Hacker News points · comments", `${fmt(s.hn_points)} · ${fmt(s.hn_comments)}`);
+  if (s.reddit_upvotes != null) add("R", "Reddit upvotes · comments", `${fmt(s.reddit_upvotes)} · ${fmt(s.reddit_comments)}`);
+  if (s.bet_volume_24h_usd != null) add("$", "Bet on Polymarket, 24h", "$" + fmt(s.bet_volume_24h_usd));
+  if (s.hack_usd != null) add("$", "Amount stolen", "$" + fmt(s.hack_usd));
+  if (s.yt_top_views != null) add("YT", `Top video: ${s.yt_top_title || "?"}${s.yt_top_channel ? " · " + s.yt_top_channel : ""}`, fmt(s.yt_top_views), "", s.yt_top_url);
+  if (s.yt_median_top10_views != null) add("YT", "Typical top-10 video", fmt(s.yt_median_top10_views));
+  if (s.yt_recent_in_top10 != null) add("YT", "Top-10 videos from the last 30 days", `${s.yt_recent_in_top10}/10`);
+  if (!rows.length) rows.push(`<div class="ev"><span class="ic">·</span><span class="muted">${c.kind === "claude" ? "Claude idea. No live numbers yet." : "No live numbers for this one yet."}</span><span></span></div>`);
+  return rows.join("");
+}
+function kindChip(c) {
+  if (c.kind === "hot") { const h = hoursSince(c); return `<span class="chip hot">HOT${h != null ? " · " + (h < 1 ? "<1h" : Math.round(h) + "h") : ""}</span>`; }
+  if (c.kind === "claude") return `<span class="chip ai">CLAUDE IDEA</span>`;
+  return `<span class="chip ever">EVERGREEN</span>`;
+}
+function recencyBlock(c) {
+  const h = hoursSince(c);
+  if (c.kind !== "hot" || h == null) return `<div class="recency"><div class="lbl"><span>Evergreen</span><span>Shelf life ${c.sc && c.sc.shelf_life ? c.sc.shelf_life[0] + "/5" : "–"}</span></div><div class="bar"><div class="fill" style="width:${c.sc && c.sc.shelf_life ? c.sc.shelf_life[0] * 20 : 50}%;background:var(--ink)"></div></div></div>`;
+  const fresh = Math.max(4, 100 - (h / 72) * 100);
+  const verb = c.origin && c.origin.time ? "Started" : "Spotted by the engine";
+  return `<div class="recency"><div class="lbl"><span>${h < 1 ? verb + " under an hour ago" : verb + " " + Math.round(h) + "h ago"}</span><span>${fresh > 66 ? "Fresh" : fresh > 33 ? "Peaking" : "Cooling"}</span></div><div class="bar"><div class="fill" style="width:${fresh}%"></div></div></div>`;
+}
+function cardHTML(c, layer) {
+  const why = Object.entries(c.sc || {}).map(([k, v]) => `<b>${esc(k.replace("_", " "))} ${Array.isArray(v) ? v[0] : v}/5</b><span>${esc(Array.isArray(v) ? v[1] : "")}</span>`).join("");
+  const src = (c.src || []).map((s) => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title || s.src)}</a>`).join(" · ");
+  return `<article class="card ${layer}" data-key="${esc(c.key)}">
+    <span class="stamp like">LIKE</span><span class="stamp pass">PASS</span><span class="stamp later">LATER</span>
+    <div class="chips">${kindChip(c)}<span class="chip">${esc(c.series || "Series?")}</span><span class="chip">${esc(c.aud || "")}</span>${c.risk ? `<span class="chip risk">${esc(c.risk)}</span>` : ""}</div>
+    <div class="q">${esc(c.q)}</div>
+    ${c.hook ? `<div class="hook">“${esc(c.hook)}”</div>` : ""}
+    ${recencyBlock(c)}
+    <div class="dials">${dial(c.opp, "Opportunity", true)}${dial(c.demand, "Demand")}${dial(c.comp, "Competition")}${dial(c.quality, "Quality")}</div>
+    <div class="evidence" data-pane="numbers">${evidenceRows(c)}</div>
+    <div class="evidence details" data-pane="about" hidden>
+      <p>${esc(c.about)}</p>
+      ${c.surprise ? `<p><b>The surprise:</b> ${esc(c.surprise)}</p>` : ""}
+      <div class="why">${why}</div>
+      ${src ? `<p class="refs muted">Sources: ${src}</p>` : ""}
+      <p class="muted">Suggested format: ${esc(c.fmt || "both")}</p>
+    </div>
+    <div class="card-foot"><button class="linkish" data-flip>What's it about?</button><span class="spacer"></span><span class="muted" style="font-size:12px;font-weight:700">${c.kind === "claude" ? "No live data" : "Live data"}</span></div>
+  </article>`;
+}
+function renderDeck() {
+  const stack = $("#stack");
+  const top = S.queue.slice(0, 3);
+  $("#deckLeft").textContent = S.queue.length ? `${S.queue.length} cards left` : "";
+  if (!top.length) {
+    const engineOk = S.deck.length > 0;
+    stack.innerHTML = `<div class="empty-card"><div class="row" style="flex-direction:column;gap:12px">
+      <h3>${engineOk ? "You've seen every card in this deck" : "No cards yet"}</h3>
+      <p class="muted" style="margin:0">The engine refills the deck every 4 hours. Want more right now?</p>
+      <div class="row" style="justify-content:center"><button class="btn" data-act="refresh">Refresh from engine</button><button class="btn dark" data-act="wild">Deal 15 wildcards</button></div>
+      ${S.mode !== "mix" ? `<button class="linkish" data-act="mix">Switch to Mix</button>` : ""}
+    </div></div>`;
+    stack.querySelector('[data-act="refresh"]').onclick = () => loadDeck(true);
+    stack.querySelector('[data-act="wild"]').onclick = dealWildcards;
+    const mx = stack.querySelector('[data-act="mix"]'); if (mx) mx.onclick = () => setMode("mix");
+    return;
+  }
+  stack.innerHTML = top.map((c, i) => cardHTML(c, i === 0 ? "front" : "back" + i)).reverse().join("");
+  const front = stack.querySelector(".card.front");
+  front.querySelector("[data-flip]").onclick = (e) => {
+    e.stopPropagation();
+    const a = front.querySelector('[data-pane="about"]'), n = front.querySelector('[data-pane="numbers"]');
+    const showAbout = a.hidden; a.hidden = !showAbout; n.hidden = showAbout; e.target.textContent = showAbout ? "Show the numbers" : "What's it about?";
+  };
+  attachDrag(front);
+}
+function renderDeckStats() {
+  const hot = S.deck.filter((c) => c.kind === "hot").length;
+  const seenToday = [...S.swiped.values()].filter((v) => v.day === today()).length;
+  const best = S.queue.slice().sort((a, b) => (b.opp ?? 0) - (a.opp ?? 0))[0];
+  $("#deckStats").innerHTML = `
+    <span>Cards from the engine</span><b>${S.deck.length}</b>
+    <span>Hot right now · evergreen</span><b>${hot} · ${S.deck.length - hot}</b>
+    <span>Claude wildcards dealt</span><b>${S.wild.length}</b>
+    <span>Swiped today</span><b>${seenToday}</b>
+    <span>Best opportunity left</span><b>${best ? best.opp ?? "–" : "–"}</b>
+    ${S.deckMeta && S.deckMeta.sample ? `<span style="grid-column:1/-1" class="muted">This is a starter deck. The engine's full deck replaces it on its next run.</span>` : ""}`;
+}
+function setMode(m) {
+  S.mode = m; document.querySelectorAll("#modeSeg button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.mode === m)));
+  buildQueue(); renderDeck();
+}
+document.querySelectorAll("#modeSeg button").forEach((b) => (b.onclick = () => setMode(b.dataset.mode)));
+
+/* ---------- Swiping ---------- */
+function attachDrag(el) {
+  let sx = 0, sy = 0, dx = 0, dy = 0, down = false;
+  const stamps = { like: el.querySelector(".stamp.like"), pass: el.querySelector(".stamp.pass"), later: el.querySelector(".stamp.later") };
+  el.addEventListener("pointerdown", (e) => {
+    if (e.target.closest("a,button")) return;
+    down = true; sx = e.clientX; sy = e.clientY; el.setPointerCapture(e.pointerId); el.classList.add("dragging");
+  });
+  el.addEventListener("pointermove", (e) => {
+    if (!down) return; dx = e.clientX - sx; dy = e.clientY - sy;
+    el.style.transform = `translate(${dx}px, ${dy}px) rotate(${dx / 18}deg)`;
+    stamps.like.style.opacity = Math.max(0, Math.min(1, dx / 110));
+    stamps.pass.style.opacity = Math.max(0, Math.min(1, -dx / 110));
+    stamps.later.style.opacity = Math.abs(dx) < 80 ? Math.max(0, Math.min(1, -dy / 110)) : 0;
+  });
+  const end = () => {
+    if (!down) return; down = false; el.classList.remove("dragging");
+    if (dx > 110) return fling(el, "like"); if (dx < -110) return fling(el, "pass"); if (dy < -110 && Math.abs(dx) < 80) return fling(el, "later");
+    el.style.transform = ""; Object.values(stamps).forEach((s) => (s.style.opacity = 0)); dx = dy = 0;
+  };
+  el.addEventListener("pointerup", end); el.addEventListener("pointercancel", end);
+}
+function fling(el, dir) {
+  const x = dir === "like" ? 700 : dir === "pass" ? -700 : 0, y = dir === "later" ? -900 : 60;
+  el.style.transform = `translate(${x}px, ${y}px) rotate(${x / 25}deg)`; el.style.opacity = "0";
+  setTimeout(() => decide(dir), 180);
+}
+function swipe(dir) { const el = $("#stack .card.front"); if (el) fling(el, dir); }
+$("#btnLike").onclick = () => swipe("like"); $("#btnPass").onclick = () => swipe("pass"); $("#btnLater").onclick = () => swipe("later");
+$("#btnUndo").onclick = undo;
+document.addEventListener("keydown", (e) => {
+  if ($("#view-arcade").hidden || e.target.closest("input,textarea,select")) return;
+  if (e.key === "ArrowRight") swipe("like"); else if (e.key === "ArrowLeft") swipe("pass"); else if (e.key === "ArrowUp") { e.preventDefault(); swipe("later"); } else if (e.key === "z" || e.key === "Z") undo();
+});
+async function decide(dir) {
+  const c = S.queue.shift(); if (!c) return;
+  S.swiped.set(c.key, { dir, day: today() }); S.last = { card: c, dir };
+  renderDeck(); renderDeckStats();
+  if (dir !== "pass") { await saveIdea(c.key, ideaFromCard(c, dir === "like" ? "liked" : "later")); toast(dir === "like" ? "Liked. It's in the Brewery." : "Saved for later."); }
+  await recordSwipe(c.key, dir);
+  if (S.queue.length < 4 && S.wild.length < 200 && !decide.auto && S.sample) { decide.auto = true; dealWildcards(true).finally(() => (decide.auto = false)); }
+}
+async function undo() {
+  const l = S.last; if (!l) return toast("Nothing to undo.");
+  S.last = null; S.swiped.delete(l.card.key); S.queue.unshift(l.card); renderDeck(); renderDeckStats();
+  await recordSwipe(l.card.key, null);
+  if (l.dir !== "pass" && S.db) { try { await S.db.doc("ideas/" + l.card.key).delete(); } catch (e) {} }
+  toast("Brought it back.");
+}
+async function recordSwipe(key, dir) {
+  if (!S.db) return;
+  const ref = S.db.doc("swipes/" + today());
+  try {
+    const snap = await ref.get();
+    if (!snap.exists) await ref.set({ k: {} });
+    await ref.update({ k: { [key]: dir } });
+  } catch (e) { toast("Couldn't save that swipe. It'll show again next time."); }
+}
+
+/* ---------- Ideas (Brewery) ---------- */
+function ideaFromCard(c, status) {
+  return {
+    id: c.key, key: c.key, source: c.kind === "claude" ? "claude" : "deck", status, createdAt: new Date().toISOString(),
+    q: c.q, hook: c.hook || "", about: c.about || "", surprise: c.surprise || "", angle: "", series: c.series || SERIES[0], aud: c.aud || AUDIENCES[0],
+    card: { opp: c.opp, demand: c.demand, comp: c.comp, quality: c.quality, st: c.st || {}, src: c.src || [], kind: c.kind },
+    format: { long: c.fmt !== "short", minutes: 5, shorts: c.fmt === "long" ? 2 : 1, standaloneShort: c.fmt === "short" }, tone: 55,
+    notes: [], refs: (c.src || []).map((s) => s.url).filter(Boolean), script: null,
+  };
+}
+async function saveIdea(id, patch) {
+  const cur = S.ideas.get(id) || {};
+  const next = { ...cur, ...patch, updatedAt: new Date().toISOString() };
+  S.ideas.set(id, next);
+  if (!S.db) return;
+  try { await S.db.doc("ideas/" + id).set(next); } catch (e) { toast(e && e.code === "quota_exceeded" ? "Storage is full. Remove some old ideas." : "Couldn't save. Check your connection."); }
+}
+async function deleteIdea(id) { S.ideas.delete(id); if (S.db) { try { await S.db.doc("ideas/" + id).delete(); } catch (e) {} } renderBrewery(); updateBadges(); }
+document.querySelectorAll("#brewSeg button").forEach((b) => (b.onclick = () => {
+  S.brewFilter = b.dataset.f; document.querySelectorAll("#brewSeg button").forEach((x) => x.setAttribute("aria-pressed", String(x === b))); renderBrewery();
+}));
+$("#btnAddIdea").onclick = async () => {
+  const q = $("#newQ").value.trim(); if (!q) return toast("Add a topic first.");
+  const id = "own-" + Date.now().toString(36);
+  await saveIdea(id, {
+    id, key: id, source: "own", status: "liked", createdAt: new Date().toISOString(), q, hook: "", about: "", surprise: "",
+    angle: $("#newAngle").value.trim(), series: SERIES[0], aud: AUDIENCES[0], card: { st: {}, src: [] },
+    format: { long: true, minutes: 5, shorts: 2, standaloneShort: false }, tone: 55, notes: [],
+    refs: $("#newRefs").value.split(/\n+/).map((s) => s.trim()).filter(Boolean), script: null,
+  });
+  $("#newQ").value = $("#newAngle").value = $("#newRefs").value = ""; $("#addIdea").open = false;
+  S.brewFilter = "own"; document.querySelectorAll("#brewSeg button").forEach((x) => x.setAttribute("aria-pressed", String(x.dataset.f === "own")));
+  S.openId = id; renderBrewery(); updateBadges(); toast("Added to the Brewery.");
+};
+function stageLabel(s) { return (STAGES.find((x) => x[0] === s) || [s, s === "later" ? "Saved for later" : s])[1]; }
+function renderBrewery() {
+  const all = [...S.ideas.values()].sort((a, b) => (b.updatedAt || "").localeCompare(a.updatedAt || ""));
+  const f = S.brewFilter;
+  const list = all.filter((i) => f === "all" || (f === "own" ? i.source === "own" : f === "later" ? i.status === "later" : i.status !== "later" && i.source !== "own" ? i.status === "liked" || i.status === "scripting" : false));
+  const el = $("#brewList");
+  if (!list.length) {
+    el.innerHTML = `<div class="notice">${f === "later" ? "Nothing saved for later yet. Swipe <b>up</b> on a card in the Arcade." : f === "own" ? "Your own ideas land here. Use <b>Add my own idea</b> above." : "Nothing here yet. Swipe <b>right</b> on cards you like in the Arcade."}</div>`;
+    return;
+  }
+  el.innerHTML = list.map((i) => ideaHTML(i)).join("");
+  list.forEach((i) => wireIdea(i.id));
+}
+function ideaHTML(i) {
+  const fm = i.format || {};
+  const notes = (i.notes || []).map((n) => `<div class="note"><time>${new Date(n.t).toLocaleString()}</time>${esc(n.text)}</div>`).join("") || `<div class="muted" style="font-size:13px">No notes yet. Notes go straight to the scriptwriter.</div>`;
+  const refs = (i.refs || []).map((r) => `<div><a href="${esc(r)}" target="_blank" rel="noopener">${esc(r)}</a></div>`).join("") || `<div class="muted" style="font-size:13px">No references yet.</div>`;
+  return `<details class="item" data-id="${esc(i.id)}" ${S.openId === i.id ? "open" : ""}>
+    <summary>
+      <span class="title">${esc(i.q)}</span>
+      <span class="status">${esc(stageLabel(i.status))}</span>
+      <span class="meta"><span class="chip">${esc(i.series)}</span><span class="chip">${esc(i.aud)}</span>${i.card && i.card.opp != null ? `<span class="chip">Opportunity ${i.card.opp}</span>` : ""}<span class="chip">${fm.long ? `${fm.minutes} min + ${fm.shorts} Shorts` : "Short only"}</span>${i.script ? `<span class="chip">Script ${i.script.rubric ? i.script.rubric.total + "/50" : "drafted"}</span>` : ""}</span>
+    </summary>
+    <div class="editor">
+      <div class="grid2">
+        <label class="f" for="q-${i.id}">Topic<input type="text" id="q-${i.id}" data-k="q" value="${esc(i.q)}"></label>
+        <label class="f" for="hook-${i.id}">Hook idea<input type="text" id="hook-${i.id}" data-k="hook" value="${esc(i.hook)}"></label>
+      </div>
+      <label class="f" for="angle-${i.id}">Your angle and take<textarea id="angle-${i.id}" data-k="angle" placeholder="What's the twist? What's our opinion?">${esc(i.angle)}</textarea></label>
+      <div class="grid2">
+        <label class="f" for="series-${i.id}">Series<select id="series-${i.id}" data-k="series">${SERIES.map((s) => `<option ${s === i.series ? "selected" : ""}>${esc(s)}</option>`).join("")}</select></label>
+        <label class="f" for="aud-${i.id}">Audience<select id="aud-${i.id}" data-k="aud">${AUDIENCES.map((s) => `<option ${s === i.aud ? "selected" : ""}>${esc(s)}</option>`).join("")}</select></label>
+      </div>
+      <div class="fmt">
+        <label class="toggle" for="long-${i.id}"><input type="checkbox" id="long-${i.id}" data-fmt="long" ${fm.long ? "checked" : ""}> Long video</label>
+        <label class="f" for="min-${i.id}" ${fm.long ? "" : "hidden"}>Length: <b data-minlbl>${fm.minutes} min</b><input type="range" id="min-${i.id}" min="4" max="7" step="0.5" value="${fm.minutes}" data-fmt="minutes"></label>
+        <div class="row" ${fm.long ? "" : "hidden"} data-shortsrow><span style="font-weight:700">Shorts cut from it</span><span class="stepper"><button type="button" data-step="-1" aria-label="Fewer Shorts">−</button><output data-shorts>${fm.shorts}</output><button type="button" data-step="1" aria-label="More Shorts">+</button></span></div>
+        <label class="toggle" for="ss-${i.id}"><input type="checkbox" id="ss-${i.id}" data-fmt="standaloneShort" ${fm.standaloneShort ? "checked" : ""}> Also a standalone Short</label>
+        <label class="f" for="tone-${i.id}">Tone: nerdy to funny<input type="range" id="tone-${i.id}" min="0" max="100" value="${i.tone ?? 55}" data-k="tone"></label>
+      </div>
+      <div class="grid2">
+        <div class="notes"><b style="font-family:var(--display)">Notes</b>${notes}
+          <div class="row"><input type="text" id="note-${i.id}" placeholder="Add a note for the scriptwriter" aria-label="New note"><button class="btn" data-addnote>Add</button></div></div>
+        <div class="notes refs"><b style="font-family:var(--display)">References</b>${refs}
+          <div class="row"><input type="url" id="ref-${i.id}" placeholder="https://" aria-label="New reference link"><button class="btn" data-addref>Add</button></div></div>
+      </div>
+      <div class="script" data-scriptbox>${scriptHTML(i)}</div>
+      <div class="row">
+        <button class="btn primary" data-write>${i.script ? "Rewrite script" : "Write script with Claude"}</button>
+        <button class="btn dark" data-send ${i.script ? "" : "disabled"} title="${i.script ? "" : "Write a script first"}">Approve and send to engine</button>
+        <span class="spacer"></span>
+        ${i.status === "later" ? `<button class="btn" data-move="liked">Move to Liked</button>` : `<button class="btn" data-move="later">Save for later</button>`}
+        <button class="btn" data-remove>Remove</button>
+      </div>
+    </div>
+  </details>`;
+}
+function scriptHTML(i) {
+  const s = i.script; if (!s) return "";
+  const r = s.rubric || {};
+  const beats = (s.beats || []).map((b) => `<tr><td>${esc(b.t)}</td><td>${esc(b.vo)}</td><td>${esc(b.visual)}</td><td>${esc((b.sfx || []).join(", "))}</td></tr>`).join("");
+  return `<div class="row"><b style="font-family:var(--display);font-size:18px">Script</b><span class="score ${r.total >= 40 ? "pass" : "fail"}">${r.total ?? "–"}/50</span><span class="muted" style="font-size:13px">${r.total >= 40 ? "Passes the bar" : "Below the 40/50 bar. Rewrite or edit."}</span></div>
+    ${s.titles ? `<div class="muted" style="font-size:13.5px"><b>Titles:</b> ${s.titles.map(esc).join(" · ")}</div>` : ""}
+    ${s.hooks ? `<div style="font-size:13.5px"><b>Hooks:</b><ol style="margin:6px 0 0;padding-left:20px">${s.hooks.map((h, k) => `<li ${k === s.chosen ? 'style="font-weight:800"' : ""}>${esc(h.line)} <span class="muted">(${esc(h.pattern)})</span></li>`).join("")}</ol></div>` : ""}
+    <div class="tablewrap"><table><thead><tr><th>Time</th><th>Voiceover</th><th>Visual</th><th>Sound</th></tr></thead><tbody>${beats}</tbody></table></div>
+    <label class="f" for="vo-${i.id}">Voiceover text (edit freely)<textarea id="vo-${i.id}" data-vo style="min-height:160px">${esc(s.vo || "")}</textarea></label>
+    ${(s.verify || []).length ? `<div class="notice"><b>Check before approving:</b> ${s.verify.map(esc).join(" · ")}</div>` : ""}`;
+}
+function wireIdea(id) {
+  const root = document.querySelector(`.item[data-id="${CSS.escape(id)}"]`); if (!root) return;
+  const i = () => S.ideas.get(id);
+  root.addEventListener("toggle", () => { if (root.open) S.openId = id; });
+  let tmr;
+  root.querySelectorAll("[data-k]").forEach((inp) => inp.addEventListener(inp.tagName === "SELECT" || inp.type === "range" ? "change" : "input", () => {
+    clearTimeout(tmr); const k = inp.dataset.k; const v = inp.type === "range" ? Number(inp.value) : inp.value;
+    tmr = setTimeout(() => saveIdea(id, { [k]: v }), 600);
+  }));
+  const fmtSave = (patch) => saveIdea(id, { format: { ...i().format, ...patch } });
+  root.querySelector('[data-fmt="long"]').onchange = (e) => { fmtSave({ long: e.target.checked }); root.querySelector('[data-fmt="minutes"]').closest("label").hidden = !e.target.checked; root.querySelector("[data-shortsrow]").hidden = !e.target.checked; };
+  root.querySelector('[data-fmt="standaloneShort"]').onchange = (e) => fmtSave({ standaloneShort: e.target.checked });
+  const mins = root.querySelector('[data-fmt="minutes"]');
+  mins.oninput = () => (root.querySelector("[data-minlbl]").textContent = mins.value + " min"); mins.onchange = () => fmtSave({ minutes: Number(mins.value) });
+  root.querySelectorAll("[data-step]").forEach((b) => (b.onclick = () => { const n = Math.max(0, Math.min(4, (i().format.shorts || 0) + Number(b.dataset.step))); root.querySelector("[data-shorts]").textContent = n; fmtSave({ shorts: n }); }));
+  root.querySelector("[data-addnote]").onclick = async () => { const inp = root.querySelector(`#note-${CSS.escape(id)}`); const t = inp.value.trim(); if (!t) return; await saveIdea(id, { notes: [...(i().notes || []), { t: new Date().toISOString(), text: t }] }); renderBrewery(); };
+  root.querySelector("[data-addref]").onclick = async () => { const inp = root.querySelector(`#ref-${CSS.escape(id)}`); const t = inp.value.trim(); if (!t) return; await saveIdea(id, { refs: [...(i().refs || []), t] }); renderBrewery(); };
+  root.querySelectorAll("[data-move]").forEach((b) => (b.onclick = async () => { await saveIdea(id, { status: b.dataset.move }); renderBrewery(); updateBadges(); }));
+  root.querySelector("[data-remove]").onclick = () => deleteIdea(id);
+  const vo = root.querySelector("[data-vo]");
+  if (vo) vo.addEventListener("input", () => { clearTimeout(tmr); tmr = setTimeout(() => saveIdea(id, { script: { ...i().script, vo: vo.value, edited: true } }), 700); });
+  root.querySelector("[data-write]").onclick = (e) => writeScript(id, e.target, root);
+  root.querySelector("[data-send]").onclick = (e) => sendToEngine(id, e.target);
+}
+
+/* ---------- Claude: scripts and wildcards ---------- */
+const VOICE = `Narrator: a smart friend in his late 20s explaining things over chai. Curious first, funny second, opinionated third. Warm, conversational, a bit street ("Okay so.", "Here's the wild part."). Plain words a 14-year-old gets, plus one precise "nerd bonus" detail per segment. Humor comes from the subject; roast ideas, systems and billionaire decisions, never private people, victims or groups. Neutral and fair by default, then ONE clear, confident take where the evidence is lopsided. Never give trading, medical or legal advice. Banned: "in today's video", "let's dive in", "buckle up", "game-changer", "mind-blowing", "you won't believe", "smash that like", "delve", em dashes.`;
+const STRUCT = {
+  short: "SHORT 35-55s, 95-150 words. 0-3s hook (promise in 8 words + matching visual), 3-10s setup as one image, 10-35s escalation in 2-3 steps with a visual change every 1-2s, 35-45s twist/payoff + the take in one line, last 3s a loop line or dry joke.",
+  long: (m) => `LONG ${m} minutes, about ${Math.round(m * 165)} words. 0-8% cold open (hook, stakes, promise, open loop 1); 8-20% ground floor with one analogy; 20-45% mechanism told as a story, a rehook, open loop 2; 45-70% the complication/twist, close loop 1; 70-88% what it means for the viewer + THE TAKE, close loop 2; 88-100% payoff, callback joke, one-line in-character CTA. A joke roughly every 40s, never on the darkest beat. Transitions pull forward ("But here's the catch.", "Which sounds fine. Until...").`,
+};
+async function writeScript(id, btn, root) {
+  if (!S.sample) return toast("Claude isn't available in this view.");
+  const i = S.ideas.get(id); const fm = i.format || {};
+  const box = root.querySelector("[data-scriptbox]");
+  const ctl = new AbortController();
+  btn.disabled = true; btn.textContent = "Writing…";
+  box.innerHTML = `<div class="notice">Claude is writing the script. This takes 30 to 90 seconds. <button class="linkish" data-stop>Stop</button></div>`;
+  box.querySelector("[data-stop]").onclick = () => ctl.abort();
+  const facts = Object.entries(i.card && i.card.st || {}).map(([k, v]) => `${k}: ${v}`).join("; ");
+  const prompt = `You write scripts for a faceless animated explainer YouTube channel (stickman, mini-docs, cutaways, charts, comics).
+VOICE: ${VOICE}
+FORMAT: ${fm.long ? STRUCT.long(fm.minutes || 5) : STRUCT.short}
+TONE DIAL: ${i.tone ?? 55}/100 where 0 = nerdy and precise, 100 = maximum humor.
+SERIES: ${i.series}. AUDIENCE: ${i.aud}.
+TOPIC: ${i.q}
+HOOK IDEA: ${i.hook || "(none)"}
+ABOUT: ${i.about || "(none)"}
+SURPRISE: ${i.surprise || "(none)"}
+CREATOR'S ANGLE: ${i.angle || "(none)"}
+CREATOR'S NOTES: ${(i.notes || []).map((n) => n.text).join(" | ") || "(none)"}
+REFERENCES: ${(i.refs || []).join(" ") || "(none)"}
+LIVE NUMBERS FROM SOURCES: ${facts || "(none)"}
+Rules: only state facts you are confident are true; anything uncertain goes in "verify" and is phrased carefully in the script ("reportedly"). Never invent quotes or numbers. Every beat has a drawable visual. Score yourself honestly with the rubric (hook, clarity, story, personality, accuracy, visuals, pacing, payoff, packaging, originality, each 1-5).
+Reply with only JSON: {"titles":["",""," "],"hooks":[{"line":"","visual":"","pattern":""}],"chosen":0,"beats":[{"t":"0:00","vo":"","visual":"","sfx":[""]}],"vo":"full voiceover text with delivery tags like [beat] [dry] [smile]","verify":["claims to double-check"],"rubric":{"hook":0,"clarity":0,"story":0,"personality":0,"accuracy":0,"visuals":0,"pacing":0,"payoff":0,"packaging":0,"originality":0,"total":0}}. Give 5 hooks.`;
+  try {
+    const out = await S.sample.json(prompt, { signal: ctl.signal, modelTier: "complex", cache: false });
+    if (out && out.rubric && !out.rubric.total) out.rubric.total = ["hook", "clarity", "story", "personality", "accuracy", "visuals", "pacing", "payoff", "packaging", "originality"].reduce((a, k) => a + (Number(out.rubric[k]) || 0), 0);
+    await saveIdea(id, { script: { ...out, at: new Date().toISOString() }, status: i.status === "liked" || i.status === "later" ? "scripting" : i.status });
+    S.openId = id; renderBrewery(); updateBadges(); toast("Script ready.");
+  } catch (e) {
+    box.innerHTML = e.code === "cancelled" ? "" : `<div class="notice">${e.code === "rate_limited" ? "Claude usage limit reached. Try again a bit later." : e.code === "not_granted" ? "Allow this page to use Claude to write scripts." : e.code === "invalid_json" ? "The script came back malformed. Try again." : "Couldn't write the script. Try again."}</div>`;
+  } finally { btn.disabled = false; btn.textContent = S.ideas.get(id).script ? "Rewrite script" : "Write script with Claude"; }
+}
+async function sendToEngine(id, btn) {
+  if (!S.mcp) return toast("Drive isn't available in this view.");
+  const i = S.ideas.get(id); if (!i.script) return;
+  btn.disabled = true; btn.textContent = "Sending…";
+  const job = { type: "brew", id, at: new Date().toISOString(), q: i.q, series: i.series, aud: i.aud, tone: i.tone, format: i.format, angle: i.angle, notes: i.notes, refs: i.refs, script: i.script };
+  try {
+    await driveWriteInbox(`brew-${id}-${Date.now()}.json`, job);
+    await saveIdea(id, { status: "queued", sentAt: job.at });
+    toast("Sent. The engine makes a test cut next."); renderBrewery(); renderStudio(); updateBadges();
+  } catch (e) { toast(mcpErrorText(e)); btn.disabled = false; btn.textContent = "Approve and send to engine"; }
+}
+async function dealWildcards(silent) {
+  if (!S.sample) { if (!silent) toast("Claude isn't available in this view."); return; }
+  const btn = $("#btnWild"); btn.disabled = true; btn.textContent = "Dealing…";
+  const used = [...S.deck, ...S.wild].map((c) => c.q).slice(-120).join(" | ");
+  const prompt = `Invent 15 surprising, specific YouTube explainer topics for an animated channel. Mix: bizarre what-ifs, how everyday things secretly work, weird true history, science and apocalypse thought experiments, money mysteries, AI and tech, movie-logic breakdowns (no clips needed). Different audiences: students, tech folks, finance people, general curious, India-first. Avoid anything like: ${used}
+Reply with only a JSON array of objects: {"q":"question, max 12 words","hook":"first line, max 10 words","about":"2 plain sentences","surprise":"the wait-what fact","series":"one of: ${SERIES.join(" | ")}","aud":"one of: ${AUDIENCES.join(" | ")}","fmt":"short|long|both","sc":{"curiosity":[n,"6-word reason"],"explainability":[n,"..."],"shelf_life":[n,"..."],"money":[n,"..."]}}`;
+  try {
+    const arr = await S.sample.json(prompt, { modelTier: "default", cache: false });
+    const now = new Date().toISOString();
+    const cards = (Array.isArray(arr) ? arr : []).filter((x) => x && x.q).map((x) => {
+      const q = Object.values(x.sc || {}).map((v) => (Array.isArray(v) ? v[0] : 3));
+      const quality = q.length ? Math.round((q.reduce((a, b) => a + b, 0) / (q.length * 5)) * 100) : null;
+      return { ...x, key: "ai-" + x.q.toLowerCase().replace(/[^a-z0-9]+/g, "-").slice(0, 70), kind: "claude", t: now, st: {}, src: [], quality, opp: quality != null ? Math.round(quality * 0.85) : null, demand: null, comp: null };
+    }).filter((c) => !S.swiped.has(c.key));
+    S.wild.push(...cards); buildQueue(); renderDeck(); renderDeckStats();
+    if (!silent) toast(`${cards.length} wildcards dealt.`);
+  } catch (e) {
+    if (!silent) toast(e.code === "rate_limited" ? "Claude usage limit reached. Try later." : e.code === "not_granted" ? "Allow this page to use Claude for wildcards." : "Couldn't deal wildcards. Try again.");
+  } finally { btn.disabled = false; btn.textContent = "Deal 15 wildcards"; }
+}
+$("#btnWild").onclick = () => dealWildcards(false);
+$("#btnRefresh").onclick = () => loadDeck(true);
+
+/* ---------- Studio ---------- */
+function updateBadges() {
+  const ideas = [...S.ideas.values()];
+  const brew = ideas.filter((i) => i.status === "liked" || i.status === "scripting").length;
+  const needs = ideas.filter((i) => ["scripting", "test", "review"].includes(i.status)).length;
+  const b1 = $("#brewCount"), b2 = $("#needsCount");
+  b1.textContent = brew; b1.hidden = !brew; b2.textContent = needs; b2.hidden = !needs;
+}
+function renderStudio() {
+  const ideas = [...S.ideas.values()];
+  const needs = ideas.filter((i) => ["scripting", "test", "review"].includes(i.status));
+  const why = { scripting: "Script ready. Read it, edit, approve.", test: "Test cut ready. Watch it and approve the full render.", review: "Final video ready. Approve to schedule." };
+  $("#needsList").innerHTML = needs.length ? needs.map((i) => `<div class="n-item"><div style="flex:1"><div style="font:800 15px var(--display)">${esc(i.q)}</div><div class="muted" style="font-size:13px">${why[i.status]}</div></div>${i.engine && i.engine.preview ? `<a class="btn" href="${esc(i.engine.preview)}" target="_blank" rel="noopener">Watch</a>` : ""}<button class="btn dark" data-open="${esc(i.id)}">Open</button></div>`).join("")
+    : `<div class="notice">Nothing waiting on you. Swipe in the Arcade or write a script in the Brewery.</div>`;
+  document.querySelectorAll("#needsList [data-open]").forEach((b) => (b.onclick = () => openIdea(b.dataset.open)));
+  $("#board").innerHTML = STAGES.map(([k, label]) => {
+    const items = ideas.filter((i) => i.status === k);
+    return `<div class="col"><h3>${label}<span class="muted">${items.length}</span></h3>${items.map((i) => `<button class="mini" data-open="${esc(i.id)}">${esc(i.q)}</button>`).join("") || `<span class="muted" style="font-size:12.5px">Empty</span>`}</div>`;
+  }).join("");
+  document.querySelectorAll("#board [data-open]").forEach((b) => (b.onclick = () => openIdea(b.dataset.open)));
+  const st = S.engineFiles["status.json"];
+  $("#engineInfo").innerHTML = `
+    <span>Deck last refilled</span><b>${S.deckMeta && S.deckMeta.modified ? new Date(S.deckMeta.modified).toLocaleString() : "–"}</b>
+    <span>Cards in the deck</span><b>${S.deck.length}</b>
+    <span>Jobs sent to the engine</span><b>${ideas.filter((i) => STAGES.findIndex((s) => s[0] === i.status) >= 2).length}</b>
+    <span>Render pipeline</span><b>${st ? "Online" : "Being built. Sent jobs wait safely in Drive."}</b>`;
+}
+function openIdea(id) { S.openId = id; S.brewFilter = "all"; document.querySelectorAll("#brewSeg button").forEach((x) => x.setAttribute("aria-pressed", String(x.dataset.f === "all"))); showView("brewery"); setTimeout(() => { const el = document.querySelector(`.item[data-id="${CSS.escape(id)}"]`); if (el) el.scrollIntoView({ behavior: "smooth", block: "start" }); }, 50); }
+
+/* ---------- Comments and stats (engine files) ---------- */
+function renderComments() {
+  const c = S.engineFiles["comments.json"];
+  if (!c || !c.items) { $("#commentsBody").innerHTML = `<div class="notice"><b>Comment sync is next on the build list.</b> New comments will land here with a reply drafted in the channel's voice. Swipe to approve and the engine posts it. Viewer questions become idea cards.</div>`; return; }
+  $("#commentsBody").innerHTML = `<div class="list">${c.items.map((x) => `<div class="panel"><div class="muted" style="font-size:12.5px;font-weight:700">${esc(x.author)} on ${esc(x.video)}</div><p style="margin:6px 0 10px">${esc(x.text)}</p>${x.draft ? `<div class="note"><time>Drafted reply</time>${esc(x.draft)}</div>` : ""}</div>`).join("")}</div>`;
+}
+function renderStats() {
+  const a = S.engineFiles["analytics.json"];
+  if (!a) {
+    $("#statsBody").innerHTML = `<div class="stats">
+      <div class="tile"><div class="n">7</div><div class="t">Subscribers</div></div>
+      <div class="tile"><div class="n">39</div><div class="t">Videos</div></div>
+      <div class="tile"><div class="n">30,113</div><div class="t">All-time views</div></div></div>
+      <p class="notice" style="margin-top:12px"><b>Snapshot from the key check on 6 Nov 2026, not live.</b> Live analytics, per-video retention and the second viewers drop off arrive with the analytics sync.</p>`;
+    return;
+  }
+  $("#statsBody").innerHTML = `<div class="stats">${Object.entries(a.totals || {}).map(([k, v]) => `<div class="tile"><div class="n">${fmt(v)}</div><div class="t">${esc(k)}</div></div>`).join("")}</div>`;
+}
+
+/* ---------- Boot ---------- */
+renderDeck(); renderComments(); renderStats(); updateBadges();
+(async () => {
+  const [db, mcp, sample] = await Promise.all([claude.use("db").catch(() => null), claude.use("mcp").catch(() => null), claude.use("sample").catch(() => null)]);
+  S.db = db; S.mcp = mcp; S.sample = sample;
+  if (!sample) { $("#btnWild").hidden = true; $("#wildNote").hidden = true; }
+  if (db) {
+    let first = true; const tmr = setTimeout(() => { if (first) toast("Saved swipes are slow to load. Showing the deck anyway."); }, 10000);
+    db.collection("swipes").onSnapshot((snap) => {
+      for (const d of snap.docs) { const k = (d.data() || {}).k || {}; for (const [key, dir] of Object.entries(k)) { if (dir) S.swiped.set(key, { dir, day: d.id }); else S.swiped.delete(key); } }
+      if (first) { first = false; clearTimeout(tmr); buildQueue(); renderDeck(); renderDeckStats(); }
+    }, () => {});
+    db.collection("ideas").onSnapshot((snap) => {
+      S.ideas = new Map(snap.docs.map((d) => [d.id, d.data()]));
+      updateBadges(); if (!$("#view-studio").hidden) renderStudio();
+      if (!$("#view-brewery").hidden && !document.activeElement.closest(".editor")) renderBrewery();
+    }, () => toast("Couldn't load your ideas."));
+  }
+  loadDeck(false);
+})();
+</script>
+</body>
+</html>
