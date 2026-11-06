@@ -1,0 +1,31 @@
+name: Check keys
+# Run from the Actions tab > Check keys > Run workflow. Confirms Gemini and YouTube access work.
+on: workflow_dispatch
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Gemini key
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          code=$(curl -s -o models.json -w '%{http_code}' -H "x-goog-api-key: $GEMINI_API_KEY" \
+            https://generativelanguage.googleapis.com/v1beta/models)
+          echo "HTTP $code"
+          if [ "$code" != "200" ]; then head -c 400 models.json; exit 1; fi
+          echo "TTS models available:"; grep -o '"name": "models/[^"]*tts[^"]*"' models.json || echo "(none listed)"
+
+      - name: YouTube login
+        env:
+          CID: ${{ secrets.YT_CLIENT_ID }}
+          CSECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          RTOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: |
+          at=$(curl -s https://oauth2.googleapis.com/token \
+            -d client_id="$CID" -d client_secret="$CSECRET" -d refresh_token="$RTOKEN" -d grant_type=refresh_token \
+            | python3 -c 'import sys,json; print(json.load(sys.stdin).get("access_token",""))')
+          if [ -z "$at" ]; then echo "Could not get an access token. Re-check the 3 YT_ secrets."; exit 1; fi
+          curl -s -H "Authorization: Bearer $at" \
+            "https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&mine=true" \
+            | python3 -c 'import sys,json; c=json.load(sys.stdin)["items"][0]; s=c["statistics"]; print("Channel:", c["snippet"]["title"], "| subs:", s.get("subscriberCount"), "| videos:", s["videoCount"], "| views:", s["viewCount"])'
