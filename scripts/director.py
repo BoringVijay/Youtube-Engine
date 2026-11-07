@@ -49,7 +49,7 @@ Script beats (VO is final, do not rewrite it):
 {json.dumps(beats, ensure_ascii=False)}
 
 Your job:
-1. Choose ONE visual universe that fits this topic's emotional truth (any from the bible palette or a fresh invention). Explain why in one line.
+1. Follow the anthology rule: invent this episode's studio (name, point of view), choose ONE visual universe that fits the topic's emotional truth (from the bible palette or a fresh invention) and explain why in one line. Decide the pacing, the signature shot, and an optional medium-break gag (max one, never on a serious beat).
 2. Write the look bible: one dense paragraph that will be appended to every image prompt (medium, materials, palette, lighting, lens, texture, camera language). Make it specific enough that 40 frames look like one film.
 3. Describe how the penguin is rendered in this universe (keep all its fixed traits).
 4. Write about {n_shots} shots ({n_shots - 4} to {n_shots + 6}) covering every beat in order. Each shot:
@@ -65,12 +65,12 @@ Your job:
    - "nerd_bonus": true when the VO says nerd bonus or gives the deep technical detail; that shot is drawn as a blueprint plate whatever the universe.
    - "sfx": a short sound cue that fits the medium and moment, or null. Meme-style cues only where they truly land.
 5. Visual style for captions and overlays: palette (paper, ink, accent, accent2 as hex), font from {FONTS}, film texture from {FILMS}, grain 0-1, vignette 0-1, letterbox true/false.
-6. Music: a prompt for a 30-second instrumental loop in this universe's mood (instruments, tempo, feel), no vocals.
+6. Music: a prompt for a 30-second instrumental loop with this studio's own instrumentation (see the bible's score notes), tempo and feel, no vocals.
 7. Thumbnail: one striking frame (prompt) plus 2 to 4 huge words.
 8. Shorts: pick {int(st['brew'].get('format', {}).get('shorts', 1) or 1)} runs of consecutive beats (25 to 55 seconds of VO) that work alone, hook first. Give each a title.
 
 Return JSON:
-{{"universe": {{"name": "", "why": "", "look_bible": "", "penguin_render": "", "palette": {{"paper": "#", "ink": "#", "accent": "#", "accent2": "#"}},
+{{"universe": {{"name": "", "studio": "", "why": "", "pacing": "", "signature_shot": "", "medium_break": "", "look_bible": "", "penguin_render": "", "palette": {{"paper": "#", "ink": "#", "accent": "#", "accent2": "#"}},
   "font": "", "film": "", "grain": 0.3, "vignette": 0.5, "letterbox": false, "music": ""}},
  "shots": [{{"id": "s01", "beat": 0, "cue": "", "kind": "still", "prompt": "", "motion": "", "camera": "", "focus": [0.5, 0.5], "transition": "cut", "penguin": null, "overlay": null, "nerd_bonus": false, "sfx": null}}],
  "thumbnail": {{"prompt": "", "text": ""}},

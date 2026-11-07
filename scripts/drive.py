@@ -12,23 +12,30 @@ CFG = json.load(open(os.path.join(ROOT, "config", "drive.json")))
 API = "https://www.googleapis.com/drive/v3"
 UP = "https://www.googleapis.com/upload/drive/v3"
 _tok = None
+_tok_at = 0.0
 
 
-def token():
-    global _tok
-    if not _tok:
+def token(force=False):
+    """Access tokens last an hour; refresh every 40 minutes (long renders outlive them)."""
+    global _tok, _tok_at
+    import time as _t
+    if force or not _tok or _t.time() - _tok_at > 2400:
         data = urllib.parse.urlencode({"client_id": os.environ["YT_CLIENT_ID"], "client_secret": os.environ["YT_CLIENT_SECRET"],
                                        "refresh_token": os.environ["GDRIVE_REFRESH_TOKEN"], "grant_type": "refresh_token"}).encode()
         _tok = json.load(urllib.request.urlopen("https://oauth2.googleapis.com/token", data))["access_token"]
+        _tok_at = _t.time()
     return _tok
 
 
-def req(method, url, body=None, ctype="application/json", raw=False):
+def req(method, url, body=None, ctype="application/json", raw=False, _retry=True):
     r = urllib.request.Request(url, data=body, method=method, headers={"Authorization": f"Bearer {token()}", "Content-Type": ctype})
     try:
-        with urllib.request.urlopen(r, timeout=120) as resp:
+        with urllib.request.urlopen(r, timeout=180) as resp:
             data = resp.read()
     except urllib.error.HTTPError as e:
+        if e.code == 401 and _retry:
+            token(force=True)
+            return req(method, url, body, ctype, raw, _retry=False)
         raise RuntimeError(f"Drive {method} {url.split('?')[0]} -> HTTP {e.code}: {e.read()[:400].decode('utf-8', 'replace')}")
     return data if raw else (json.loads(data) if data else {})
 

@@ -392,7 +392,7 @@ def stage_direction(st):
     d = director.direct(st, words / 2.6, max_motion=3 if is_short(st) else int(VOICE_CFG.get("max_motion", 6)), notes=st.get("redo_notes", ""), short=is_short(st))
     budget.log(st["id"], "text_call", 3, gai.LAST["backend"])
     json.dump(d, open(p, "w"), indent=1, ensure_ascii=False)
-    st["universe"] = d["universe"]["name"]
+    st["universe"] = d["universe"]["name"] + (f" · {d['universe']['studio']}" if d["universe"].get("studio") else "")
     st["cameos"] = [{"shot": s["id"], **s["penguin"]} for s in d["shots"] if s.get("penguin")]
     log(f"universe: {d['universe']['name']} ({d['universe'].get('why', '')[:120]}), {len(d['shots'])} shots, "
         f"{sum(1 for s in d['shots'] if s['kind'] == 'motion')} motion, {len(st['cameos'])} cameos")
