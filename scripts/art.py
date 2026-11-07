@@ -28,8 +28,13 @@ def b64(path):
     return base64.b64encode(open(path, "rb").read()).decode()
 
 
+def mime_of(path):
+    head = open(path, "rb").read(4)
+    return "image/jpeg" if head[:2] == b"\xff\xd8" else "image/png"
+
+
 def image(prompt, out_png, refs=(), aspect="16:9", job=None, size="2K"):
-    parts = [{"inlineData": {"mimeType": "image/png", "data": b64(r)}} for r in refs if r and os.path.exists(r)]
+    parts = [{"inlineData": {"mimeType": mime_of(r), "data": b64(r)}} for r in refs if r and os.path.exists(r)]
     parts.append({"text": prompt})
     cfg = {"responseModalities": ["IMAGE"], "imageConfig": {"aspectRatio": aspect, "imageSize": size}}
     body = {"contents": [{"role": "user", "parts": parts}], "generationConfig": cfg}
@@ -117,7 +122,14 @@ class Art:
     def keep(self, name, mime):
         if mime == "image/png" and getattr(image, "last_model", None) and not self.man.get("image_model"):
             self.man["image_model"] = image.last_model
-        fid = drive.upload(self._folder(), name, self.path(name), mime)
+        src = self.path(name)
+        if mime == "image/png" and name.startswith("s") and os.path.getsize(src) > 3_000_000:
+            # frames travel as high-quality JPEG (about 10x smaller); the name stays so the rest of the code doesn't care
+            tmp = src + ".jpg"
+            subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", src, "-q:v", "2", tmp], check=True)
+            os.replace(tmp, src)
+            mime = "image/jpeg"
+        fid = drive.upload(self._folder(), name, src, mime)
         self.man["files"][name] = fid
         self.save()
         return fid
@@ -172,7 +184,7 @@ class Art:
                 progress(done[0], len(shots))
             return name
         gai.pin("image", self.man.get("image_model"))
-        with ThreadPoolExecutor(max_workers=2) as ex:
+        with ThreadPoolExecutor(max_workers=3) as ex:
             list(ex.map(one, shots))
 
     def motion(self, progress=None):
