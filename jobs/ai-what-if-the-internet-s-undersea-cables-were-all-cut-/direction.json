@@ -1,0 +1,1048 @@
+{
+ "universe": {
+  "name": "Deep-sea layered paper diorama",
+  "why": "Provides a tactile, fragile sense of the internet's physical infrastructure, emphasizing the vast, melancholic scale of the deep ocean against a tiny, glowing thread.",
+  "look_bible": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white paper edges, and a sharp, glowing neon orange for data. Moody, directional underwater lighting, sharp shadows from the layered paper, glowing rim lights. Macro lens with shallow depth of field, highlighting the texture of the paper grain. Slow, deliberate camera language gliding over stacked, meticulously cut paper layers.",
+  "penguin_render": "A flat, multi-layered paper cut-out penguin. Black and white textured paper body, bright orange paper beak tip and oversized feet. Three thin, distinct paper strips stuck to the top of its head, slightly bent. Big white paper rings for eyes. Deadpan expression, quietly unlucky.",
+  "palette": {
+   "paper": "#0B132B",
+   "ink": "#FFFFFF",
+   "accent": "#FF6B35",
+   "accent2": "#1C2541"
+  },
+  "font": "mono",
+  "film": "print",
+  "grain": 0.8,
+  "vignette": 0.6,
+  "letterbox": true,
+  "music": "Moody, undulating ambient electronic track. Deep, resonant synth pads that sound like submarine sonar, mixed with delicate, rhythmic clicks and rustling paper textures. Tempo is a slow, steady 90 BPM. Feels vast, slightly melancholy, and mysterious, like staring into the deep ocean."
+ },
+ "shots": [
+  {
+   "id": "s01",
+   "beat": 0,
+   "cue": "Okay so. You",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white paper edges, and a sharp, glowing neon orange for data. Moody, directional underwater lighting, sharp shadows, glowing rim lights. Macro lens. A night sky made of dark paper, looking up at a shiny foil paper satellite reflecting light.",
+   "motion": "",
+   "camera": "static",
+   "focus": [
+    0.5,
+    0.2
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s02",
+   "beat": 0,
+   "cue": "Nope. More than",
+   "kind": "motion",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white paper edges, glowing neon orange. Moody, directional underwater lighting, sharp shadows, glowing rim lights. Macro lens. The camera looks straight down, plunging through stacked layers of blue vellum representing deep ocean water. At the very bottom, a thin, glowing neon orange paper strip rests on the crumpled paper seabed.",
+   "motion": "Camera rapidly tilts down, passing through multiple translucent blue vellum layers, settling on the glowing orange cable at the seabed.",
+   "camera": "tilt_down",
+   "focus": [
+    0.5,
+    0.8
+   ],
+   "transition": "whip",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": "deep underwater bass drop"
+  },
+  {
+   "id": "s03",
+   "beat": 1,
+   "cue": "The cloud lives",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. A fluffy white paper cloud slowly sinking into the dark blue vellum water layers.",
+   "motion": "",
+   "camera": "drift",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s04",
+   "beat": 1,
+   "cue": "So what if",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. A giant, realistic pair of metal scissors looms ominously over the glowing orange paper cable on the seabed.",
+   "motion": "",
+   "camera": "push_in",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": "heavy metal scissor SNIP"
+  },
+  {
+   "id": "s05",
+   "beat": 2,
+   "cue": "Think of the",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. A flattened paper globe. Glowing paper cities dot the landmasses, connected by intricate white paper local roads.",
+   "motion": "",
+   "camera": "pan_right",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s06",
+   "beat": 2,
+   "cue": "But to reach",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. A vast expanse of dark blue paper ocean, with only a few thin, glowing orange paper bridges spanning the enormous gap between continents.",
+   "motion": "",
+   "camera": "pull_out",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s07",
+   "beat": 3,
+   "cue": "Satellites exist. They're",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. A small, intricate paper helicopter hovering high above the dark blue paper ocean.",
+   "motion": "",
+   "camera": "static",
+   "focus": [
+    0.5,
+    0.3
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s08",
+   "beat": 3,
+   "cue": "Nobody commutes by",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. A crowded paper bridge packed with tiny, gridlocked paper cars. Above, a lone paper stickman in a top hat rides comfortably inside the paper helicopter.",
+   "motion": "",
+   "camera": "pan_left",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s09",
+   "beat": 4,
+   "cue": "There are roughly",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. A wide shot of a large paper globe. Hundreds of glowing orange paper threads rapidly wrap around it.",
+   "motion": "",
+   "camera": "push_in",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s10",
+   "beat": 4,
+   "cue": "Enough to wrap",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. The large paper globe is now completely cocooned in an impossibly dense web of glowing orange paper threads.",
+   "motion": "",
+   "camera": "static",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": {
+    "type": "counter",
+    "value": 35,
+    "prefix": "",
+    "suffix": "x",
+    "text": "around Earth",
+    "at": 1,
+    "pos": "top"
+   },
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s11",
+   "beat": 5,
+   "cue": "Here's how it",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. Extreme macro cross-section of the cable: concentric rings of colored paper armor, surrounding tiny, delicate vellum strands in the center.",
+   "motion": "",
+   "camera": "push_in",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s12",
+   "beat": 5,
+   "cue": "Your message becomes",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. Intense pulses of neon orange light shoot violently through the delicate vellum strands inside the paper cable.",
+   "motion": "",
+   "camera": "drift",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s13",
+   "beat": 5,
+   "cue": "Every so often",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. A plain, grey paper box (a repeater) resting on the crumpled seabed. A dim orange cable enters it on the left, and emerges blindingly bright on the right.",
+   "motion": "",
+   "camera": "static",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "dip",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s14",
+   "beat": 6,
+   "cue": "On each coast,",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. The thick, glowing orange cable emerges from the blue vellum water layers onto a pale tan paper beach.",
+   "motion": "",
+   "camera": "pan_right",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s15",
+   "beat": 6,
+   "cue": "into a plain",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. A boring, square grey paper building on a tan paper beach. The building has a tiny, flickering paper sign that reads 'LANDING STATION'. A subtle hidden paper penguin holding a tiny paper fishing rod stands quietly in a queue of stickmen outside.",
+   "motion": "",
+   "camera": "static",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": {
+    "type": "hidden",
+    "bit": "Standing in a queue of stickmen, holding a tiny paper fishing rod, blending into the grey background."
+   },
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s16",
+   "beat": 7,
+   "cue": "Which sounds sturdy.",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. The boring grey paper building stands firm and resolute against crashing waves made of curled white and blue paper.",
+   "motion": "",
+   "camera": "pull_out",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s17",
+   "beat": 7,
+   "cue": "Until you learn",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. A massive, heavy metal ship anchor crashes violently down into the delicate paper seabed, kicking up a cloud of torn paper debris.",
+   "motion": "",
+   "camera": "snap_zoom",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": {
+    "type": "counter",
+    "value": 200,
+    "prefix": "",
+    "suffix": "/yr",
+    "text": "cable breaks",
+    "at": 1,
+    "pos": "right"
+   },
+   "nerd_bonus": false,
+   "sfx": "massive heavy thud"
+  },
+  {
+   "id": "s18",
+   "beat": 7,
+   "cue": "Mostly from fishing",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. The massive anchor drags violently across the paper seabed, brutally snagging and stretching the glowing orange paper cable.",
+   "motion": "",
+   "camera": "handheld",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s19",
+   "beat": 8,
+   "cue": "Sharks have reportedly",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. A menacing paper cut-out great white shark aggressively biting into the glowing orange paper cable.",
+   "motion": "",
+   "camera": "static",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s20",
+   "beat": 8,
+   "cue": "and Google reportedly",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. The glowing orange cable on the seabed is now heavily wrapped in layers of yellow paper caution tape.",
+   "motion": "",
+   "camera": "push_in",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s21",
+   "beat": 8,
+   "cue": "which means someone",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. A mundane corporate boardroom entirely constructed of paper. A stick figure made of black paper presents a slide on a paper screen that reads 'SHARK MITIGATION'.",
+   "motion": "",
+   "camera": "static",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s22",
+   "beat": 9,
+   "cue": "So why didn't",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. Tiny paper stickmen acting as internet routers, holding tiny, glowing orange paper envelopes, standing on a web of orange threads.",
+   "motion": "",
+   "camera": "static",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s23",
+   "beat": 9,
+   "cue": "using a system",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. The paper stickmen rapidly pass the glowing orange envelopes to each other across a complex network of branching paper threads.",
+   "motion": "",
+   "camera": "pan_right",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s24",
+   "beat": 9,
+   "cue": "When a cable dies,",
+   "kind": "motion",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. A giant pair of scissors snips one glowing orange thread. A bright pulse of light travelling down it immediately halts, turns around, and rapidly diverts down a much longer, winding paper thread.",
+   "motion": "The scissors cut the main thread, and the glowing data pulse smoothly reroutes along a completely different, complex maze of paper paths.",
+   "camera": "static",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s25",
+   "beat": 10,
+   "cue": "Here's the wild",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. The glowing data pulse travels along a lonely orange thread, suddenly reaching a sheer, terrifying drop-off in the paper layers.",
+   "motion": "",
+   "camera": "push_in",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s26",
+   "beat": 10,
+   "cue": "And one country",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. A tiny, isolated paper island in a vast expanse of dark blue ocean, connected by only a single, fragile orange thread.",
+   "motion": "",
+   "camera": "pull_out",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s27",
+   "beat": 11,
+   "cue": "Because the twist",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. A dark, moody shot of the severed orange cable lying lifeless on the deeply textured paper seabed.",
+   "motion": "",
+   "camera": "drift",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s28",
+   "beat": 11,
+   "cue": "The fixing is.",
+   "kind": "motion",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. A tiny paper repair ship floating on the surface drops a heavy grappling hook down through the vellum layers. The hook accidentally snags a surprised paper penguin by its oversized orange foot, lifting it upward.",
+   "motion": "The grappling hook descends rapidly through the water layers, snags the penguin on the seabed, and begins to hoist it up towards the ship.",
+   "camera": "tilt_up",
+   "focus": [
+    0.5,
+    0.8
+   ],
+   "transition": "cut",
+   "penguin": {
+    "type": "slapstick",
+    "bit": "Accidentally snagged by the foot by the descending grappling hook, looking extremely deadpan as it is hoisted upward."
+   },
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": "mechanical winch clicking"
+  },
+  {
+   "id": "s29",
+   "beat": 11,
+   "cue": "and splices it",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. On the flat paper deck of the repair ship, tiny paper workers with welding masks are repairing the thick orange cable, showering bright paper sparks.",
+   "motion": "",
+   "camera": "push_in",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s30",
+   "beat": 11,
+   "cue": "And there are",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. A massive pull out to the entire paper globe, revealing only a handful of incredibly tiny repair ships scattered across vast, empty oceans.",
+   "motion": "",
+   "camera": "pull_out",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": {
+    "type": "label",
+    "text": "A FEW DOZEN SHIPS",
+    "pos": "top"
+   },
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s31",
+   "beat": 12,
+   "cue": "Real outages show",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. A comic-strip layout made of carved paper panels. The first panel shows a fragmented paper seabed cracking apart violently near a landmass.",
+   "motion": "",
+   "camera": "pan_right",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s32",
+   "beat": 12,
+   "cue": "In 2008, cuts",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. The second carved paper panel shows a cluster of severed neon orange threads drifting aimlessly in a blue vellum sea.",
+   "motion": "",
+   "camera": "static",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s33",
+   "beat": 12,
+   "cue": "In 2024, Red Sea",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. The third carved paper panel shows an abandoned, rusted paper cargo ship drifting ominously, its heavy metal anchor scraping deeply along the paper seabed below.",
+   "motion": "",
+   "camera": "push_in",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s34",
+   "beat": 13,
+   "cue": "Nerd bonus: in",
+   "kind": "still",
+   "prompt": "Cyanotype blueprint plate. Technical drawing of a jagged coastline. Crisp white linework on a deep blue background. Minimalist, precise, and highly detailed technical aesthetic.",
+   "motion": "",
+   "camera": "static",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "flash",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": true,
+   "sfx": null
+  },
+  {
+   "id": "s35",
+   "beat": 13,
+   "cue": "triggered an underwater",
+   "kind": "still",
+   "prompt": "Cyanotype blueprint plate. Technical diagram of an underwater mud avalanche. Precise vector arrows indicate flow direction, intersecting and snapping horizontal lines representing cables, with neat technical timestamp annotations.",
+   "motion": "",
+   "camera": "drift",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": true,
+   "sfx": "ticking stopwatch"
+  },
+  {
+   "id": "s36",
+   "beat": 13,
+   "cue": "The internet's ancestors",
+   "kind": "still",
+   "prompt": "Cyanotype blueprint plate. Detailed schematic drawing of an antique pocket watch resting beside the cross-section of a severed telegraph cable. Precise white linework on deep blue.",
+   "motion": "",
+   "camera": "push_in",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": true,
+   "sfx": null
+  },
+  {
+   "id": "s37",
+   "beat": 14,
+   "cue": "So, all of",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. Giant metal scissors simultaneously snipping multiple glowing orange cables stretched across the vast paper ocean.",
+   "motion": "",
+   "camera": "snap_zoom",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s38",
+   "beat": 14,
+   "cue": "Your local internet",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. Split screen: On the left, a paper house with a happily glowing router. On the right, a paper phone displaying an endless spinning loading wheel, isolated in darkness.",
+   "motion": "",
+   "camera": "static",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s39",
+   "beat": 14,
+   "cue": "And with a",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. A massive, tangled pile of severed glowing orange cables on the seabed. Above, a single, incredibly tiny paper repair ship looks utterly overwhelmed.",
+   "motion": "",
+   "camera": "pull_out",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s40",
+   "beat": 14,
+   "cue": "Hundreds is a",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. A shadowy, ominous fleet of paper warships silhouetted sharply against a dark, blood-red paper sky.",
+   "motion": "",
+   "camera": "drift",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s41",
+   "beat": 15,
+   "cue": "Remember the country",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. The lonely paper island, resting peacefully on the blue vellum ocean, connected by its single glowing thread.",
+   "motion": "",
+   "camera": "static",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "fade",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s42",
+   "beat": 15,
+   "cue": "In January 2022,",
+   "kind": "motion",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. A massive explosion of jagged grey and black paper ash erupts violently from the sea near the island. The hidden paper penguin, wearing a tiny Hawaiian shirt, stands on the beach looking alarmed.",
+   "motion": "The paper ash cloud violently erupts upward and outward from the water, sending shockwaves across the vellum layers.",
+   "camera": "static",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": {
+    "type": "outfit",
+    "bit": "Wearing a tiny Hawaiian shirt and holding a tropical drink, standing on the beach looking alarmed at the erupting ash cloud."
+   },
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": "muffled underwater explosion"
+  },
+  {
+   "id": "s43",
+   "beat": 15,
+   "cue": "severed its only",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. The violent shockwave of paper rips the single glowing orange thread completely in half.",
+   "motion": "",
+   "camera": "snap_zoom",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s44",
+   "beat": 15,
+   "cue": "while families abroad",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. The isolated paper island goes completely dark. Far away on the edge of the frame, a tiny paper figure in a brightly lit city stares sadly at a dark paper phone.",
+   "motion": "",
+   "camera": "pull_out",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "fade",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s45",
+   "beat": 15,
+   "cue": "It took around",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. A layered paper calendar with blank white pages rapidly peeling away and vanishing into the dark blue ocean.",
+   "motion": "",
+   "camera": "static",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": {
+    "type": "counter",
+    "value": 5,
+    "prefix": "",
+    "suffix": " weeks",
+    "text": "to restore",
+    "at": 0.5,
+    "pos": "center"
+   },
+   "nerd_bonus": false,
+   "sfx": "fast paper rustling"
+  },
+  {
+   "id": "s46",
+   "beat": 16,
+   "cue": "So here's my",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. The camera glides smoothly over a stark, empty, deeply textured paper seabed, devoid of any glowing cables.",
+   "motion": "",
+   "camera": "drift",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s47",
+   "beat": 16,
+   "cue": "It's that plenty",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. A wide shot highlighting several tiny, vulnerable paper islands, each hanging on to connectivity by a single, fragile orange thread.",
+   "motion": "",
+   "camera": "pan_right",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s48",
+   "beat": 16,
+   "cue": "Tech giants like",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. Massive, imposing corporate shapes made of stark white paper (a huge 'G' and an infinity symbol) dropping thick bundles of glowing orange cables into the sea.",
+   "motion": "",
+   "camera": "tilt_down",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s49",
+   "beat": 16,
+   "cue": "But backup routes",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. The tiny paper repair ship looks incredibly small and insignificant floating precariously near a vast, terrifying chasm in the paper seabed.",
+   "motion": "",
+   "camera": "pull_out",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s50",
+   "beat": 16,
+   "cue": "because the internet",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. An extreme close-up of the lonely, disconnected paper island, totally engulfed in the dark shadows of the navy blue paper ocean.",
+   "motion": "",
+   "camera": "push_in",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s51",
+   "beat": 17,
+   "cue": "So next time",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. A large, stark white paper speech bubble containing a fluffy white paper cloud.",
+   "motion": "",
+   "camera": "static",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s52",
+   "beat": 17,
+   "cue": "They're in a",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. Inside the speech bubble, the cloud is abruptly replaced by a glowing orange hose resting on a dark seabed, with a paper shark swimming lazily by.",
+   "motion": "",
+   "camera": "push_in",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s53",
+   "beat": 17,
+   "cue": "waiting for a",
+   "kind": "still",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. A tiny paper repair ship floating on dark vellum waves. A microscopic paper sign on the ship reads 'EXPECT DELAYS'.",
+   "motion": "",
+   "camera": "static",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s54",
+   "beat": 17,
+   "cue": "Subscribe, and if",
+   "kind": "motion",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. A bright red paper 'SUBSCRIBE' button bobbing gently in the paper waves. The paper penguin jumps off it, flapping wildly.",
+   "motion": "The penguin leaps off the bobbing subscribe button, flaps its impossibly short flippers furiously in a doomed attempt to fly, and instantly plunges down into the vellum waves.",
+   "camera": "static",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": {
+    "type": "fly_attempt",
+    "bit": "Jumps off the subscribe button, flaps its short flippers furiously, fails instantly, and plunges straight down into the water."
+   },
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": "splash"
+  }
+ ],
+ "thumbnail": {
+  "prompt": "Layered paper diorama. A terrifyingly massive metal ship anchor crashing down towards a tiny, glowing neon orange cable on the dark paper seabed.",
+  "text": "THE INTERNET'S FRAGILE"
+ },
+ "shorts": [
+  {
+   "title": "The Internet is a Garden Hose",
+   "beats": [
+    0,
+    1,
+    2
+   ]
+  }
+ ]
+}

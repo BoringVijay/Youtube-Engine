@@ -1,7 +1,7 @@
 {
  "id": "ai-what-if-the-internet-s-undersea-cables-were-all-cut-",
  "created": "2026-11-06T15:50:59+00:00",
- "pct": 2,
+ "pct": 12,
  "q": "What if the internet's undersea cables were all cut?",
  "series": "Curious Penguin",
  "brew": {
@@ -254,16 +254,24 @@
   }
  },
  "brew_at": "2026-11-06T15:26:28.303Z",
- "error": null,
- "stage": "queued",
- "step": "Remaking in the new Curious Penguin style",
+ "error": "open() got an unexpected keyword argument 'metadata_errors'",
+ "stage": "voicing",
+ "step": "Hit an error. Retrying next run",
  "steps": [
   {
    "stage": "queued",
    "at": "2026-11-06T17:48:18+00:00"
+  },
+  {
+   "stage": "directing",
+   "at": "2026-11-07T02:19:34+00:00"
+  },
+  {
+   "stage": "voicing",
+   "at": "2026-11-07T02:23:05+00:00"
   }
  ],
- "updated": "2026-11-06T17:48:18+00:00",
+ "updated": "2026-11-07T02:25:39+00:00",
  "duration": 343.7,
  "preview": null,
  "notes_in": [
@@ -278,5 +286,29 @@
  "shorts": null,
  "thumb": null,
  "meta": null,
- "fails": 0
+ "fails": 1,
+ "cost": 0.03,
+ "universe": "Deep-sea layered paper diorama",
+ "cameos": [
+  {
+   "shot": "s15",
+   "type": "hidden",
+   "bit": "Standing in a queue of stickmen, holding a tiny paper fishing rod, blending into the grey background."
+  },
+  {
+   "shot": "s28",
+   "type": "slapstick",
+   "bit": "Accidentally snagged by the foot by the descending grappling hook, looking extremely deadpan as it is hoisted upward."
+  },
+  {
+   "shot": "s42",
+   "type": "outfit",
+   "bit": "Wearing a tiny Hawaiian shirt and holding a tropical drink, standing on the beach looking alarmed at the erupting ash cloud."
+  },
+  {
+   "shot": "s54",
+   "type": "fly_attempt",
+   "bit": "Jumps off the subscribe button, flaps its short flippers furiously, fails instantly, and plunges straight down into the water."
+  }
+ ]
 }

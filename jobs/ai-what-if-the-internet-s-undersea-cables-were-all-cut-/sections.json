@@ -1,0 +1,44 @@
+[
+ {
+  "beats": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "mood": "Engaging and conversational, medium pace, shifting from debunking surprise to fascinating tech explanation.",
+  "transcript": "Okay so. You probably think this video reached you through a satellite. [deadpan] Nope. More than ninety-five percent of the data crossing between continents travels through cables lying on the bottom of the ocean. The cloud lives in the sea. And out in the deep water, the cable carrying it is [slowly] about as thick as a garden hose. So what if every single one got cut? And the weirder question: why hasn't it happened already? [thoughtfully] Think of the internet as a planet of cities. Inside your country, data drives around on local roads. But to reach another continent, it has to cross the sea, and there are only so many bridges. Satellites exist. They're the helicopters. Great for remote places, terrible for moving a whole city's traffic. Nobody commutes by helicopter. [soft laugh] Well... some billionaires. There are roughly five to six hundred of these bridges, about one point four million kilometers of cable. [excitedly] Enough to wrap around the Earth about thirty-five times, and almost nobody has ever seen one. Here's how it works. Inside the hose are hair-thin strands of glass. Your message becomes pulses of laser light flashing across an entire ocean. Every so often a repeater, a little box on the seabed, boosts the signal so it doesn't fade. On each coast, the cable crawls up a beach into a plain building called a landing station, [deadpan] which looks like the place you'd go to renew a fishing licence."
+ },
+ {
+  "beats": [
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "mood": "Amused yet informative, building subtle tension around hidden logistical vulnerabilities.",
+  "transcript": "Which sounds sturdy. [short pause] Until you learn cables break around one hundred fifty to two hundred times a year. Not mostly from spies. Mostly from fishing gear and ship anchors dragging across the seabed. Sharks have reportedly bitten them too, and Google reportedly wrapped some cables in extra protective material, [laughing] which means someone in a meeting had to say 'shark mitigation' with a straight face. So why didn't your Wi-Fi notice? Because the internet reroutes. Routers constantly gossip using a system called BGP, basically, [cheerfully] 'hey, I can reach Singapore, send stuff through me.' When a cable dies, traffic takes the next-best path. Slower, more crowded, but it arrives. Here's the wild part though. Rerouting only works if there's somewhere else to go. And one country found out what happens when there isn't. [whispering] We'll get there. [seriously] Because the twist is, the cables aren't the scariest part. The fixing is. A repair ship sails out, drags a grappling hook along the seabed, fishes up the cable and splices it on deck. That can take days to weeks. And there are reportedly only a few dozen of these ships for the whole planet."
+ },
+ {
+  "beats": [
+   12,
+   13,
+   14
+  ],
+  "mood": "Urgent and analytical, punchy pacing with high stakes.",
+  "transcript": "Real outages show the pattern. In two thousand six, an earthquake off Taiwan damaged several cables at once and parts of Asia crawled. In two thousand eight, cuts in the Mediterranean slowed the internet across Egypt, the Middle East, and India. In twenty twenty-four, Red Sea cables were damaged, [thoughtfully] reportedly by the dragging anchor of a ship that had been attacked and abandoned. Nerd bonus: in nineteen twenty-nine, an earthquake off Newfoundland triggered an underwater avalanche, and scientists later worked out its speed from the times each telegraph cable snapped. [soft laugh] The internet's ancestors died as a stopwatch. So, all of them cut at once? Your local internet mostly keeps running. But anything hosted abroad, cloud services, lots of apps, international payments, starts failing. Satellites carry a trickle. And with a few dozen ships facing hundreds of breaks, [slowly] repairs take months. [seriously] That's why it hasn't happened: one anchor is an accident. Hundreds is a war."
+ },
+ {
+  "beats": [
+   15,
+   16,
+   17
+  ],
+  "mood": "Somber and reflective at first, closing with warm, wry reassurance.",
+  "transcript": "Remember the country with nowhere to reroute? In January twenty twenty-two, an underwater volcano erupted near Tonga and severed its only international cable. [softly] A nation of about a hundred thousand people went almost dark to the world, while families abroad waited to hear if relatives were okay. It took around five weeks to restore. So here's my take. The real risk isn't sharks, and it's not a movie villain cutting everything. [seriously] It's that plenty of places hang on one or two cables, and the planet's repair capacity is a handful of ships. Tech giants like Google, Meta, Microsoft, and Amazon now fund a growing share of new cables. Fine. But backup routes for small countries and more repair ships should be a priority, because the internet is only as global as its least connected place. [warmly] So next time someone says your photos are in the cloud, correct them gently. [soft laugh] They're in a garden hose on the ocean floor, next to a shark, waiting for a ship that's probably busy. [cheerfully] Subscribe, and if the cable holds, I'll see you in the next one."
+ }
+]

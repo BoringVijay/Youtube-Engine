@@ -1,7 +1,7 @@
 {
  "id": "ai-what-if-all-gold-ever-mined-were-melted-into-one-cube-",
  "created": "2026-11-06T17:21:26+00:00",
- "pct": 2,
+ "pct": 12,
  "q": "What if all gold ever mined were melted into one cube?",
  "series": "Money Moves (charts)",
  "brew": {
@@ -182,21 +182,38 @@
   }
  },
  "brew_at": "2026-11-06T17:18:59.476Z",
- "error": null,
- "stage": "queued",
- "step": "Queued for the new Curious Penguin engine",
+ "error": "open() got an unexpected keyword argument 'metadata_errors'",
+ "stage": "voicing",
+ "step": "Hit an error. Retrying next run",
  "steps": [
   {
    "stage": "queued",
    "at": "2026-11-07T02:13:03+00:00"
+  },
+  {
+   "stage": "directing",
+   "at": "2026-11-07T02:25:40+00:00"
+  },
+  {
+   "stage": "voicing",
+   "at": "2026-11-07T02:26:48+00:00"
   }
  ],
- "updated": "2026-11-07T02:13:03+00:00",
+ "updated": "2026-11-07T02:27:39+00:00",
  "v": 2,
- "fails": 0,
+ "fails": 1,
  "preview": null,
  "final": null,
  "shorts": null,
  "thumb": null,
- "meta": null
+ "meta": null,
+ "cost": 0.03,
+ "universe": "Tilt-shift miniature photography",
+ "cameos": [
+  {
+   "shot": "s16",
+   "type": "fly_attempt",
+   "bit": "Jumping off the one-inch bottom ledge of the gold cube, short flippers extended, completely failing to fly, about to crash into the miniature dirt."
+  }
+ ]
 }

@@ -1,0 +1,352 @@
+{
+ "universe": {
+  "name": "Tilt-shift miniature photography",
+  "why": "The absurdity of a 216,000-tonne solid gold cube sitting in a baseball stadium is best captured by making the world feel like a tangible, photorealistic toy diorama.",
+  "look_bible": "Tilt-shift miniature macro photography, vertical 9:16 aspect ratio. Shallow depth of field with heavy top and bottom blur. Photorealistic macro lenses capturing tiny details, dust motes, and tangible textures. Vibrant stadium lighting mimicking bright floodlights. Materials are real and miniature: glossy painted plastic figures, real coarse dirt, synthetic green flocking for grass, and solid gleaming metallic gold. Colors pop: bright turf green, shimmering gold, stark white, and deep shadow. Subject is always in the middle third.",
+  "penguin_render": "A tiny hand-painted plastic miniature figure of an egg-shaped Adelie penguin, glossy black and white, distinctive white eye-rings, small dark beak with an orange tip, large bright orange feet, with three stubborn thin plastic feathers sticking up from its head.",
+  "palette": {
+   "paper": "#111111",
+   "ink": "#FFFFFF",
+   "accent": "#FFC000",
+   "accent2": "#2ECC71"
+  },
+  "font": "anton",
+  "film": "clean",
+  "grain": 0.15,
+  "vignette": 0.4,
+  "letterbox": false,
+  "music": "Quirky, upbeat instrumental loop played on a marimba, pizzicato strings, and a ticking clock element, feeling like a busy toy workshop."
+ },
+ "shots": [
+  {
+   "id": "s01",
+   "beat": 0,
+   "cue": "Every bar of",
+   "kind": "motion",
+   "prompt": "Vertical tilt-shift macro shot. A massive, perfectly smooth gleaming gold cube drops heavily onto the dirt of a miniature baseball infield. Tiny plastic figures in the stadium stands. Dust kicks up in the middle third of the frame.",
+   "motion": "Fast drop of the cube from the top frame, slamming into the dirt, kicking up miniature dust clouds.",
+   "camera": "static",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": "Heavy metallic bass boom and dirt crunch."
+  },
+  {
+   "id": "s02",
+   "beat": 1,
+   "cue": "Okay so. Humans",
+   "kind": "still",
+   "prompt": "Vertical tilt-shift macro shot. A miniature golden Egyptian Pharaoh mask half-buried in coarse real sand. Tiny plastic workers with shovels stand around it in the middle third.",
+   "motion": "",
+   "camera": "push_in",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": "Tiny shovel scraping sand."
+  },
+  {
+   "id": "s03",
+   "beat": 1,
+   "cue": "Pharaohs, empires, your",
+   "kind": "still",
+   "prompt": "Vertical tilt-shift macro shot. A single human-sized diamond wedding ring resting on a miniature velvet cushion. It looks gargantuan. Tiny plastic figures stand next to it pointing.",
+   "motion": "",
+   "camera": "pan_right",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": "Camera shutter clicks."
+  },
+  {
+   "id": "s04",
+   "beat": 2,
+   "cue": "Total haul: roughly",
+   "kind": "still",
+   "prompt": "Vertical tilt-shift macro shot. A miniature cargo ship completely weighed down by a towering, neat stack of tiny gold bars. The ship sits deep in blue resin water.",
+   "motion": "",
+   "camera": "tilt_up",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": {
+    "type": "counter",
+    "value": 216000,
+    "prefix": "",
+    "suffix": " TONNES",
+    "text": "ALL GOLD EVER MINED",
+    "at": 0.5,
+    "pos": "top"
+   },
+   "nerd_bonus": false,
+   "sfx": "Deep ship horn."
+  },
+  {
+   "id": "s05",
+   "beat": 3,
+   "cue": "Melt it down:",
+   "kind": "still",
+   "prompt": "Vertical tilt-shift macro shot. A giant miniature industrial crucible pouring glowing, molten gold liquid down into a perfect square mould. Sparks fly in the middle third.",
+   "motion": "",
+   "camera": "push_in",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "whip",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": "Sizzling liquid metal sound."
+  },
+  {
+   "id": "s06",
+   "beat": 3,
+   "cue": "a cube about",
+   "kind": "still",
+   "prompt": "Vertical tilt-shift macro shot, top-down view. The giant gold cube resting perfectly between the white chalk lines of a miniature baseball diamond. The green synthetic grass surrounds the dirt.",
+   "motion": "",
+   "camera": "static",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": {
+    "type": "label",
+    "text": "22m CUBE vs 27m INFIELD",
+    "pos": "top"
+   },
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s07",
+   "beat": 4,
+   "cue": "Stand next to",
+   "kind": "motion",
+   "prompt": "Vertical tilt-shift macro shot. Ground-level view looking up at the towering gold cube. A miniature 7-storey apartment building sits directly next to it for scale. Tiny plastic people look out of the windows.",
+   "motion": "Camera slowly tilts up from the tiny people on the dirt to the top edge of the apartment building and the matching height of the gold cube.",
+   "camera": "tilt_up",
+   "focus": [
+    0.5,
+    0.6
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": "City ambient hum."
+  },
+  {
+   "id": "s08",
+   "beat": 5,
+   "cue": "Here's the wild",
+   "kind": "still",
+   "prompt": "Vertical tilt-shift macro shot. A massive, blank white paper price tag attached by a string to the top corner of the giant gold cube. The tag flutters slightly.",
+   "motion": "",
+   "camera": "snap_zoom",
+   "focus": [
+    0.5,
+    0.4
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": "Paper rustle and cash register ding."
+  },
+  {
+   "id": "s09",
+   "beat": 5,
+   "cue": "in the same",
+   "kind": "still",
+   "prompt": "Vertical tilt-shift macro shot. The gold cube stands on the left. On the right, an impossibly high stack of miniature hundred-dollar bills, reaching the exact same height as the cube.",
+   "motion": "",
+   "camera": "pull_out",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": {
+    "type": "bars",
+    "text": "VALUE COMPARISON",
+    "bars": [
+     {
+      "label": "GOLD CUBE",
+      "value": 100
+     },
+     {
+      "label": "US ECONOMY",
+      "value": 98
+     }
+    ],
+    "suffix": ""
+   },
+   "nerd_bonus": false,
+   "sfx": null
+  },
+  {
+   "id": "s10",
+   "beat": 6,
+   "cue": "Literally a ballpark.",
+   "kind": "still",
+   "prompt": "Vertical tilt-shift macro shot. A miniature stadium scoreboard displaying blank numbers. The glowing gold cube sits in the background.",
+   "motion": "",
+   "camera": "static",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": "Stadium crowd cheer."
+  },
+  {
+   "id": "s11",
+   "beat": 7,
+   "cue": "Nerd bonus: one",
+   "kind": "still",
+   "prompt": "Blueprint technical cutaway, vertical 9:16 aspect ratio. Crisp white linework on cyanotype blue paper. An exact 1x1x1m cube sitting on an industrial scale. The mechanical springs of the scale are shattered and cracked under the intense weight.",
+   "motion": "",
+   "camera": "push_in",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "flash",
+   "penguin": null,
+   "overlay": {
+    "type": "counter",
+    "value": 19,
+    "prefix": "",
+    "suffix": " TONNES",
+    "text": "PER CUBIC METRE",
+    "at": 0.5,
+    "pos": "top"
+   },
+   "nerd_bonus": true,
+   "sfx": "Heavy metal cracking and breaking spring sound."
+  },
+  {
+   "id": "s12",
+   "beat": 8,
+   "cue": "And who owns",
+   "kind": "still",
+   "prompt": "Vertical tilt-shift macro shot. A massive, thick steel bank vault door left wide open. Inside, a very small, lonely pile of miniature gold bars sitting in the center of a huge empty room.",
+   "motion": "",
+   "camera": "pan_left",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": "Vault door echoing creak."
+  },
+  {
+   "id": "s13",
+   "beat": 8,
+   "cue": "Nearly half is",
+   "kind": "still",
+   "prompt": "Vertical tilt-shift macro shot. A gigantic mountain of tangled, oversized gold necklaces, rings, and bracelets spilling out of a miniature house and filling the tiny suburban street.",
+   "motion": "",
+   "camera": "pull_out",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": "Jingling chains."
+  },
+  {
+   "id": "s14",
+   "beat": 9,
+   "cue": "Humanity's greatest treasure",
+   "kind": "still",
+   "prompt": "Vertical tilt-shift macro shot. A tiny painted plastic figure of an elderly aunt sitting at a miniature cafe table, wearing an absurdly massive, thick gold chain around her neck, sipping from a tiny teacup. Deadpan comedy.",
+   "motion": "",
+   "camera": "static",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "cut",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": "Tiny clinking teacup."
+  },
+  {
+   "id": "s15",
+   "beat": 10,
+   "cue": "Everything we ever",
+   "kind": "motion",
+   "prompt": "Vertical tilt-shift macro shot. Wide angle of the entire miniature baseball stadium. The giant gold cube sits peacefully on the diamond, gleaming under the tiny LED stadium floodlights.",
+   "motion": "Very slow, majestic push-in towards the glowing gold cube on the field.",
+   "camera": "push_in",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "transition": "fade",
+   "penguin": null,
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": "Soft ambient crickets."
+  },
+  {
+   "id": "s16",
+   "beat": 10,
+   "cue": "Still fits between",
+   "kind": "still",
+   "prompt": "Vertical tilt-shift macro shot. Extreme close-up of the sharp bottom edge of the giant gold cube resting on the coarse dirt path of the miniature baseball field. A tiny penguin figure is jumping off the edge, about to face-plant into the dirt.",
+   "motion": "",
+   "camera": "static",
+   "focus": [
+    0.5,
+    0.8
+   ],
+   "transition": "cut",
+   "penguin": {
+    "type": "fly_attempt",
+    "bit": "Jumping off the one-inch bottom ledge of the gold cube, short flippers extended, completely failing to fly, about to crash into the miniature dirt."
+   },
+   "overlay": null,
+   "nerd_bonus": false,
+   "sfx": "Sad slide whistle."
+  }
+ ],
+ "thumbnail": {
+  "prompt": "Vertical tilt-shift macro photography. A gigantic glowing gold cube sitting perfectly on a miniature baseball field diamond, casting a huge shadow over the tiny plastic bleachers.",
+  "text": "ALL EARTH'S GOLD!"
+ },
+ "shorts": []
+}
