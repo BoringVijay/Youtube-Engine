@@ -1,0 +1,367 @@
+{
+ "format": "short",
+ "universe": {
+  "name": "Film Noir High-Contrast 2D/3D",
+  "studio": "Night Shift Noir Unit",
+  "why": "A gritty, shadowy heist movie aesthetic perfectly matches the theme of hoarding and stealing the ultimate treasure.",
+  "pacing": "Methodical, creeping tension that escalates into a frantic heist escape.",
+  "signature_shot": "A colossal, gleaming gold cube dwarfing a grim, high-contrast black-and-white 1950s tenement building in the fog.",
+  "medium_break": "During the vault scene, the penguin pauses its theft to wipe a smudge off the actual camera lens, leaving a greasy flipper print on the 'glass'.",
+  "look_bible": "1950s Film Noir animation, high-contrast black and white with dramatic chiaroscuro lighting, deep shadows, and cinematic smog. The ONLY color in the entire universe is the gleaming, metallic, hyper-reflective yellow-gold of the treasure. Textures are gritty, with celluloid film grain, harsh spotlights, and sleek art-deco architecture. 3D rendered in a stylized high-contrast noir aesthetic. Motion is smooth and cinematic like a classic tracking shot, with heavy atmospheric parallax.",
+  "penguin_render": "Stylized 3D noir penguin, stark black and white shading, but with its signature orange feet, beak tip, and three bent head feathers catching the harsh rim light.",
+  "palette": {
+   "paper": "#0a0a0a",
+   "ink": "#ffffff",
+   "accent": "#ffd700",
+   "accent2": "#b8860b"
+  },
+  "font": "archivo",
+  "film": "noir",
+  "grain": 0.8,
+  "vignette": 0.9,
+  "music": "Upright bass walking line, brushed snare drums, and a muted, sneaky trumpet.",
+  "letterbox": false
+ },
+ "penguin": {
+  "role": "villain",
+  "arc": "Wants to quietly steal the world's gold, gets greedy, and ends up plunging into the abyss on a runaway handcar."
+ },
+ "keyframes": {
+  "k01": {
+   "id": "k01",
+   "seq": 0,
+   "prompt": "Industrial noir foundry. A mountain of scattered gold bars moves up a massive conveyor belt under harsh spotlights. Deep shadows, cinematic smog, high-contrast black and white world where only the gold has color. 1950s Film Noir animation.",
+   "penguin": "Standing in the foreground shadow, wearing a tiny trenchcoat and fedora, quietly slipping a gold bar into its pocket.",
+   "prev": null
+  },
+  "k02": {
+   "id": "k02",
+   "seq": 0,
+   "prompt": "Inside a roaring crucible. The gold bars liquefy into a swirling, blindingly bright vortex of molten gold, illuminating the dark industrial walls with harsh yellow rim light. 1950s Film Noir animation.",
+   "penguin": null,
+   "prev": "k01"
+  },
+  "k03": {
+   "id": "k03",
+   "seq": 0,
+   "prompt": "A colossal, gleaming gold cube sits cooling in a pitch-black city square. Steam rises off its razor-sharp edges into the cinematic smog. High-contrast noir architecture surrounds it in silhouette. 1950s Film Noir animation.",
+   "penguin": null,
+   "prev": "k02"
+  },
+  "k04": {
+   "id": "k04",
+   "seq": 0,
+   "prompt": "Extreme close-up on the sheer, glowing surface of the newly formed gold cube. The hyper-reflective yellow-gold light fills the entire frame, blinding out the dark city. 1950s Film Noir animation.",
+   "penguin": null,
+   "prev": "k03"
+  },
+  "k05": {
+   "id": "k05",
+   "seq": 1,
+   "prompt": "Street level wide shot. The giant gold cube sits imposing in a dark, foggy city intersection. The only color is the gleaming gold against the black and white city. 1950s Film Noir animation.",
+   "penguin": null,
+   "prev": null
+  },
+  "k06": {
+   "id": "k06",
+   "seq": 1,
+   "prompt": "Bird's-eye view looking straight down through the cinematic smog. Glowing white chalk lines of a baseball diamond surround the gold cube perfectly. 1950s Film Noir animation.",
+   "penguin": null,
+   "prev": "k05"
+  },
+  "k07": {
+   "id": "k07",
+   "seq": 1,
+   "prompt": "Street level view, looking sharply UP from the pavement. The sheer vertical cliff of the gold cube dwarfs a grim, 7-story brick tenement building beside it. Deep shadows. 1950s Film Noir animation.",
+   "penguin": "Standing on the fire escape of the 7-story building, looking up at the cube while holding a tiny chisel.",
+   "prev": "k06"
+  },
+  "k08": {
+   "id": "k08",
+   "seq": 1,
+   "prompt": "Extreme close-up on the cube's polished gold wall. Ghostly reflections of ancient Egyptian pharaohs and 19th-century miners move across the hyper-reflective yellow-gold surface. 1950s Film Noir animation.",
+   "penguin": null,
+   "prev": "k07"
+  },
+  "k09": {
+   "id": "k09",
+   "seq": 1,
+   "prompt": "Inside the reflection itself. Swirling, abstract liquid gold entirely filling the frame. 1950s Film Noir animation.",
+   "penguin": null,
+   "prev": "k08"
+  },
+  "k10": {
+   "id": "k10",
+   "seq": 2,
+   "prompt": "Blueprint / technical cutaway style: dark blue background with glowing cyan architectural wireframes, clean drafting marks, and rigid technical geometry. A glowing cyan wireframe 1-meter cube sits on a technical grid.",
+   "penguin": null,
+   "prev": null
+  },
+  "k11": {
+   "id": "k11",
+   "seq": 2,
+   "prompt": "Blueprint / technical cutaway style: dark blue background. A solid, heavy gold block has dropped into the glowing cyan wireframe bounds, shaking the grid lines with impact dust.",
+   "penguin": null,
+   "prev": "k10"
+  },
+  "k12": {
+   "id": "k12",
+   "seq": 2,
+   "prompt": "Blueprint / technical cutaway style. Close to the grid floor. 12 blueprint-style 1950s sedans are hydraulically compressed into a cube and slammed down onto a technical scale next to the gold block.",
+   "penguin": null,
+   "prev": "k11"
+  },
+  "k13": {
+   "id": "k13",
+   "seq": 3,
+   "prompt": "Cavernous, shadowy bank vault. Giant stacks of gold bars tower like skyscrapers. A silhouetted banker in a sharp suit sits atop the highest pile. Deep shadows, harsh spotlights, gold is the only color. 1950s Film Noir animation.",
+   "penguin": null,
+   "prev": null
+  },
+  "k14": {
+   "id": "k14",
+   "seq": 3,
+   "prompt": "A chaotic, glittering mountain of gold necklaces, tiaras, and rings spilling out of giant safety deposit boxes into the shadows. Hyper-reflective gold against black and white. 1950s Film Noir animation.",
+   "penguin": null,
+   "prev": "k13"
+  },
+  "k15": {
+   "id": "k15",
+   "seq": 3,
+   "prompt": "Extreme close-up of a massive, glowing gold pendant draped over a black velvet bust. Deep background focus reveals the dark shadows of the vault. 1950s Film Noir animation.",
+   "penguin": "In the deep background blur, frantically shoveling loose jewelry into a canvas sack marked with a dollar sign.",
+   "prev": "k14"
+  },
+  "k16": {
+   "id": "k16",
+   "seq": 3,
+   "prompt": "A gargantuan mechanical price ticker looming over the vault, its metal digits spinning wildly in a blur. Long, menacing shadows stretch across the room. 1950s Film Noir animation.",
+   "penguin": null,
+   "prev": "k15"
+  },
+  "k17": {
+   "id": "k17",
+   "seq": 3,
+   "prompt": "The pitch-black inside of a spinning '0' on the mechanical ticker. Total darkness. 1950s Film Noir animation.",
+   "penguin": null,
+   "prev": "k16"
+  },
+  "k18": {
+   "id": "k18",
+   "seq": 4,
+   "prompt": "Wide shot of the baseball diamond. A small, jagged tunnel entrance has been chipped away at the bottom corner of the giant gold cube. Black and white city, gold cube. 1950s Film Noir animation.",
+   "penguin": null,
+   "prev": null
+  },
+  "k19": {
+   "id": "k19",
+   "seq": 4,
+   "prompt": "Deep inside the dark, jagged tunnel. A runaway wooden handcar overflows with glowing gold bars, plunging off the end of a broken mine track into the abyss. 1950s Film Noir animation.",
+   "penguin": "Wearing a tiny burglar mask, frantically pumping the handcar handles, then flailing its stubby wings desperately trying to fly as the cart drops.",
+   "prev": "k18"
+  }
+ },
+ "shots": [
+  {
+   "id": "s01",
+   "seq": 0,
+   "from": "k01",
+   "to": "k02",
+   "cue": "Every bar of gold",
+   "motion": "Camera flies forward along the conveyor belt and plunges directly into the roaring crucible.",
+   "overlay": null,
+   "transition": "cut",
+   "sfx": "Heavy industrial machinery grinding, transitioning to a fiery roar.",
+   "serious": false
+  },
+  {
+   "id": "s02",
+   "seq": 0,
+   "from": "k02",
+   "to": "k03",
+   "cue": "All of it. Fits",
+   "motion": "Camera cranes straight up through the smoke as the molten metal instantly cools into the colossal cube in the city square.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "A massive, deep metallic thud and hissing steam.",
+   "serious": false
+  },
+  {
+   "id": "s03",
+   "seq": 0,
+   "from": "k03",
+   "to": "k04",
+   "cue": "Around two hundred and",
+   "motion": "Camera pushes aggressively into the sheer, glowing surface of the cube until gold fills the frame.",
+   "overlay": {
+    "type": "counter",
+    "value": 216000,
+    "suffix": " TONNES",
+    "text": "",
+    "pos": "top"
+   },
+   "transition": "chain",
+   "sfx": null,
+   "serious": false
+  },
+  {
+   "id": "s04",
+   "seq": 1,
+   "from": "k05",
+   "to": "k06",
+   "cue": "Melt it down and",
+   "motion": "Camera rockets vertically upward to a bird's-eye view, revealing the glowing baseball diamond.",
+   "overlay": null,
+   "transition": "flash",
+   "sfx": "A fast whoosh of displaced air.",
+   "serious": false
+  },
+  {
+   "id": "s05",
+   "seq": 1,
+   "from": "k06",
+   "to": "k07",
+   "cue": "That's smaller than a",
+   "motion": "Camera dives straight down to street level, tilting sharply up to frame the cube against the tenement building.",
+   "overlay": {
+    "type": "label",
+    "text": "BASEBALL INFIELD",
+    "pos": "top"
+   },
+   "transition": "chain",
+   "sfx": null,
+   "serious": false
+  },
+  {
+   "id": "s06",
+   "seq": 1,
+   "from": "k07",
+   "to": "k08",
+   "cue": "Stand next to it",
+   "motion": "Camera pushes in close and orbits the gold wall, revealing the ghostly historical reflections moving across the surface.",
+   "overlay": {
+    "type": "label",
+    "text": "7 STOREYS",
+    "pos": "top"
+   },
+   "transition": "chain",
+   "sfx": "Eerie, echoing whispers of history.",
+   "serious": false
+  },
+  {
+   "id": "s07",
+   "seq": 1,
+   "from": "k08",
+   "to": "k09",
+   "cue": "Thousands of years of",
+   "motion": "Camera violently pushes directly into the gold reflection, turning the screen into abstract liquid gold.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": null,
+   "serious": false
+  },
+  {
+   "id": "s08",
+   "seq": 2,
+   "from": "k10",
+   "to": "k11",
+   "cue": "Gold is so dense",
+   "motion": "Camera orbits 45 degrees as the solid gold block slams down into the wireframe, sending a visual shockwave through the grid.",
+   "overlay": {
+    "type": "label",
+    "text": "1 CUBIC METRE",
+    "pos": "top"
+   },
+   "transition": "whip",
+   "sfx": "A heavy, synthesized bass boom.",
+   "serious": false
+  },
+  {
+   "id": "s09",
+   "seq": 2,
+   "from": "k11",
+   "to": "k12",
+   "cue": "That's a dozen cars,",
+   "motion": "Camera pushes in close to the grid floor as the 12 sedans are crushed and slam onto the scale.",
+   "overlay": {
+    "type": "counter",
+    "value": 19,
+    "suffix": " TONNES",
+    "text": "",
+    "pos": "top"
+   },
+   "transition": "chain",
+   "sfx": "Hydraulic squeal and a heavy metallic crunch.",
+   "serious": false
+  },
+  {
+   "id": "s10",
+   "seq": 3,
+   "from": "k13",
+   "to": "k14",
+   "cue": "And who owns it?",
+   "motion": "Camera whip-pans right from the neat towering gold bars to the chaotic mountain of spilled jewelry.",
+   "overlay": {
+    "type": "label",
+    "text": "CENTRAL BANKS: 1/6",
+    "pos": "top"
+   },
+   "transition": "cut",
+   "sfx": "A fast whoosh and the clinking of coins.",
+   "serious": false
+  },
+  {
+   "id": "s11",
+   "seq": 3,
+   "from": "k14",
+   "to": "k15",
+   "cue": "Nearly half is jewellery.",
+   "motion": "Camera pushes in slowly through the glittering mountain, finding the velvet bust and the thief in the background.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": null,
+   "serious": false
+  },
+  {
+   "id": "s12",
+   "seq": 3,
+   "from": "k15",
+   "to": "k16",
+   "cue": "Humanity's greatest treasure is",
+   "motion": "Camera tilts sharply up from the necklace to the gargantuan, spinning mechanical price ticker.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "Rapid mechanical clicking of vintage ticker digits.",
+   "serious": false
+  },
+  {
+   "id": "s13",
+   "seq": 3,
+   "from": "k16",
+   "to": "k17",
+   "cue": "At today's prices, that",
+   "motion": "Camera pushes straight into the spinning '0' of the ticker, plunging into total darkness.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "A rising, dramatic orchestral swell.",
+   "serious": false
+  },
+  {
+   "id": "s14",
+   "seq": 4,
+   "from": "k18",
+   "to": "k19",
+   "cue": "And it would still",
+   "motion": "Camera flies at warp speed into the tiny tunnel, tracking the runaway handcar as it plunges off the broken track.",
+   "overlay": null,
+   "transition": "match",
+   "sfx": "Squeaking wooden wheels, a comical slide-whistle drop, and a tiny thud.",
+   "serious": false
+  }
+ ],
+ "cover": {
+  "prompt": "A colossal, gleaming gold cube dwarfing a grim 1950s noir tenement building. High-contrast black and white city with deep shadows, cinematic smog, and the cube as the only colored object, radiating hyper-reflective yellow-gold light. A tiny penguin in a trenchcoat stands on a fire escape looking at it.",
+  "text": "ALL THE GOLD"
+ },
+ "n_beats": 10
+}

@@ -70,22 +70,113 @@
   }
  },
  "brew_at": "2026-11-07T07:55:02+00:00",
- "stage": "queued",
- "pct": 2,
- "step": "Queued: rerun with voice-first timing, 10-16 travelling shots, voice style B",
+ "stage": "final_ready",
+ "pct": 90,
+ "step": "Short ready (Film Noir High-Contrast 2D/3D, penguin as villain). Watch it and approve or send notes",
  "steps": [
   {
    "stage": "queued",
    "at": "2026-11-07T07:55:02+00:00"
+  },
+  {
+   "stage": "voicing",
+   "at": "2026-11-07T07:55:57+00:00"
+  },
+  {
+   "stage": "directing",
+   "at": "2026-11-07T07:56:42+00:00"
+  },
+  {
+   "stage": "art",
+   "at": "2026-11-07T07:59:22+00:00"
+  },
+  {
+   "stage": "motion",
+   "at": "2026-11-07T08:08:31+00:00"
+  },
+  {
+   "stage": "final_render",
+   "at": "2026-11-07T08:18:22+00:00"
+  },
+  {
+   "stage": "metadata",
+   "at": "2026-11-07T08:34:18+00:00"
+  },
+  {
+   "stage": "final_ready",
+   "at": "2026-11-07T08:34:27+00:00"
   }
  ],
  "created": "2026-11-07T07:55:02+00:00",
- "updated": "2026-11-07T07:55:02+00:00",
+ "updated": "2026-11-07T08:34:27+00:00",
  "error": null,
  "fails": 0,
- "preview": null,
- "final": null,
+ "preview": {
+  "id": "1_UOKzMi617FvlNML0mIGotMnSK-1gXJ4",
+  "view": "https://drive.google.com/file/d/1_UOKzMi617FvlNML0mIGotMnSK-1gXJ4/view",
+  "download": "https://drive.google.com/uc?id=1_UOKzMi617FvlNML0mIGotMnSK-1gXJ4&export=download",
+  "size_mb": 129.9,
+  "duration": 59.3,
+  "stills": [],
+  "poster": "1ZNVuU9bx3nZPIiB-eKUI62ssk3IrFkUN"
+ },
+ "final": {
+  "id": "1_UOKzMi617FvlNML0mIGotMnSK-1gXJ4",
+  "view": "https://drive.google.com/file/d/1_UOKzMi617FvlNML0mIGotMnSK-1gXJ4/view",
+  "download": "https://drive.google.com/uc?id=1_UOKzMi617FvlNML0mIGotMnSK-1gXJ4&export=download",
+  "size_mb": 129.9,
+  "duration": 59.3,
+  "stills": [],
+  "poster": "1ZNVuU9bx3nZPIiB-eKUI62ssk3IrFkUN"
+ },
  "shorts": null,
  "thumb": null,
- "meta": null
+ "meta": {
+  "title": "All the World’s Gold Fits in One Cube",
+  "alt_titles": [
+   "How Big Is ALL the Gold Ever Mined?",
+   "Every Scrap of Gold on Earth, Melted Down"
+  ],
+  "description": "Every ounce of gold ever mined fits into a cube smaller than a baseball infield.\nJust keep an eye out for shady birds making a break with a handcar.\n\n#Shorts #GoldFacts #CuriousPenguin #ScienceFacts #FilmNoir",
+  "tags": [
+   "curious penguin",
+   "all the gold in the world",
+   "gold cube",
+   "gold density",
+   "how much gold exists",
+   "science facts",
+   "film noir animation",
+   "night shift noir",
+   "weird facts",
+   "educational",
+   "history of gold",
+   "money facts"
+  ],
+  "pinned_comment": "Did our friend really think a handcar could carry 19 tonnes of solid gold? What heist should he botch next?",
+  "instagram_caption": "Thousands of years of human treasure fits neatly between the bases of a baseball field. Shame about that runaway handcar.\n\n#CuriousPenguin #GoldFacts #Animation #FilmNoir #DidYouKnow"
+ },
+ "cost": 10.12,
+ "voice_style": "B",
+ "voice_fit": 1.018,
+ "duration": 58.5,
+ "universe": "Film Noir High-Contrast 2D/3D · Night Shift Noir Unit",
+ "penguin_role": "villain",
+ "cameos": [
+  {
+   "shot": "k01",
+   "bit": "Standing in the foreground shadow, wearing a tiny trenchcoat and fedora, quietly slipping a gold bar into its pocket."
+  },
+  {
+   "shot": "k07",
+   "bit": "Standing on the fire escape of the 7-story building, looking up at the cube while holding a tiny chisel."
+  },
+  {
+   "shot": "k15",
+   "bit": "In the deep background blur, frantically shoveling loose jewelry into a canvas sack marked with a dollar sign."
+  },
+  {
+   "shot": "k19",
+   "bit": "Wearing a tiny burglar mask, frantically pumping the handcar handles, then flailing its stubby wings desperately trying to fly as the cart drops."
+  }
+ ]
 }

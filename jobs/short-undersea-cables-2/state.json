@@ -66,22 +66,27 @@
   }
  },
  "brew_at": "2026-11-07T07:55:02+00:00",
- "stage": "queued",
+ "stage": "cancelled",
  "pct": 2,
- "step": "Queued: rerun with voice-first timing, 10-16 travelling shots, voice style C",
+ "step": "Stopped by you. Tap Resume to pick up where it stopped",
  "steps": [
   {
    "stage": "queued",
    "at": "2026-11-07T07:55:02+00:00"
+  },
+  {
+   "stage": "cancelled",
+   "at": "2026-11-07T08:34:30+00:00"
   }
  ],
  "created": "2026-11-07T07:55:02+00:00",
- "updated": "2026-11-07T07:55:02+00:00",
+ "updated": "2026-11-07T08:34:30+00:00",
  "error": null,
  "fails": 0,
  "preview": null,
  "final": null,
  "shorts": null,
  "thumb": null,
- "meta": null
+ "meta": null,
+ "cost": 0
 }
