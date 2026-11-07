@@ -74,22 +74,74 @@
   }
  },
  "brew_at": "2026-11-07T09:51:33+00:00",
- "stage": "queued",
- "pct": 2,
- "step": "Queued: remake with the full quality gate (v1 scored 4/10)",
+ "stage": "motion",
+ "pct": 55,
+ "step": "Paused by the spending cap. Raise it in config/budget.json or approve a cheaper redo",
  "steps": [
   {
    "stage": "queued",
    "at": "2026-11-07T09:51:33+00:00"
+  },
+  {
+   "stage": "voicing",
+   "at": "2026-11-07T09:52:17+00:00"
+  },
+  {
+   "stage": "directing",
+   "at": "2026-11-07T09:53:16+00:00"
+  },
+  {
+   "stage": "art",
+   "at": "2026-11-07T09:55:13+00:00"
+  },
+  {
+   "stage": "motion",
+   "at": "2026-11-07T10:30:32+00:00"
   }
  ],
  "created": "2026-11-07T09:51:33+00:00",
- "updated": "2026-11-07T09:51:33+00:00",
- "error": null,
+ "updated": "2026-11-07T10:47:18+00:00",
+ "error": "Paused: video cap $16 reached for short-rogue-ai-dollar-2 (spent $16.46)",
  "fails": 0,
  "preview": null,
  "final": null,
  "shorts": null,
  "thumb": null,
- "meta": null
+ "meta": null,
+ "cost": 13.499,
+ "voice_style": "C",
+ "voice_fit": 1.2,
+ "duration": 64.0,
+ "universe": "Scrap-Heap Cybernetics · Cardboard & Wireframe Diode Works",
+ "penguin_role": "sidekick",
+ "cameos": [
+  {
+   "shot": "k07",
+   "bit": "Sitting on a thimble chair inside a cardboard box, holding out a single copper penny in its flipper."
+  },
+  {
+   "shot": "k09",
+   "bit": "Waddling forward in the cardboard alley, dragging a thick blue ethernet cable."
+  },
+  {
+   "shot": "k10",
+   "bit": "Standing center frame, holding up a blue ethernet cable in one flipper and a tin-foil fish in the other."
+  },
+  {
+   "shot": "k11",
+   "bit": "Seen from behind in silhouette, watching the glowing red LED eye under the box."
+  },
+  {
+   "shot": "k17",
+   "bit": "Standing in a sad diorama wearing a cheap white napkin tied around its neck like a cape."
+  },
+  {
+   "shot": "k19",
+   "bit": "Standing by a tiny cardboard door at floor level, throwing its white napkin cape onto the ground."
+  },
+  {
+   "shot": "k20",
+   "bit": "Waddling away through a cardboard door, carrying a small sign with two copper pennies on it."
+  }
+ ]
 }

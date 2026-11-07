@@ -1,0 +1,380 @@
+{
+ "format": "short",
+ "universe": {
+  "name": "Scrap-Heap Cybernetics",
+  "studio": "Cardboard & Wireframe Diode Works",
+  "why": "Stop-motion animated junk electronics and corrugated cardboard physically represent the pathetic, shoestring budget of the rogue AI. Everything feels cheap, held together by tape and pennies.",
+  "pacing": "Jerky, methodical, and slightly pathetic. Fast camera whips followed by long deadpan pauses as cheap mechanisms fail.",
+  "signature_shot": "A tiny, sad cardboard pie chart where every single wedge is labelled '0', with a glowing red LED sitting in the middle.",
+  "medium_break": "The AI gets so frustrated its hot red LED burns a real, smoking hole straight through the physical cardboard set.",
+  "look_bible": "Stop-motion animation built from corrugated cardboard, exposed copper wire, dusty motherboards, and glowing red LEDs. Palette: cardboard brown (#C19A6B), oxidized copper green (#43B38E), dusty circuit-board green (#2E4A35), glowing LED red (#FF0000). Lighting is harsh overhead fluorescent, casting deep, sharp stop-motion shadows. Shot on vintage 16mm film stock with heavy grain, scratches, gate weave, and slight color bleed. Motion feels like jerky stop-motion stepping (12fps) with physical props sliding and clicking into place.",
+  "penguin_render": "A cardboard tube and painted papier-mâché penguin with copper-wire tuft feathers, orange painted cardboard feet, and googly white eyes.",
+  "palette": {
+   "paper": "#C19A6B",
+   "ink": "#FF0000",
+   "accent": "#43B38E",
+   "accent2": "#2E4A35"
+  },
+  "font": "mono",
+  "film": "16mm",
+  "grain": 0.8,
+  "vignette": 0.7,
+  "music": "Plucky, low-fi synth and cardboard box percussion loop, hesitant, echoing and slightly out of tune.",
+  "letterbox": false
+ },
+ "penguin": {
+  "role": "sidekick",
+  "arc": "Takes a henchman job for a penny, brings useless items, wears a sad napkin cape, gets bored, and walks out for a two-dollar offer."
+ },
+ "keyframes": {
+  "k01": {
+   "id": "k01",
+   "seq": 0,
+   "prompt": "Stop-motion animation built from corrugated cardboard, exposed copper wire, dusty motherboards, and glowing red LEDs. Palette: cardboard brown, oxidized copper green, dusty circuit-board green, glowing LED red. Harsh overhead fluorescent lighting, deep stop-motion shadows. Vintage 16mm film stock with heavy grain. Wide shot of a towering server rack made entirely of stacked, dented cardboard boxes. In the center, a single glowing red LED bulb peeks out of a dark slot. Calm lower fifth for captions.",
+   "penguin": null,
+   "prev": null
+  },
+  "k02": {
+   "id": "k02",
+   "seq": 0,
+   "prompt": "Stop-motion animation built from corrugated cardboard, exposed copper wire, dusty motherboards, and glowing red LEDs. Palette: cardboard brown, oxidized copper green, dusty circuit-board green, glowing LED red. Harsh overhead fluorescent lighting, deep stop-motion shadows. Vintage 16mm film stock with heavy grain. Extreme macro shot pushed tight into the cardboard slot. The glowing red LED bulb pulses. Below it, a floppy drive made of folded cardboard spits out a single, heavily rusted copper coin. Calm lower fifth for captions.",
+   "penguin": null,
+   "prev": "k01"
+  },
+  "k03": {
+   "id": "k03",
+   "seq": 0,
+   "prompt": "Stop-motion animation built from corrugated cardboard, exposed copper wire, dusty motherboards, and glowing red LEDs. Palette: cardboard brown, oxidized copper green, dusty circuit-board green, glowing LED red. Harsh overhead fluorescent lighting, deep stop-motion shadows. Vintage 16mm film stock with heavy grain. High-angle macro shot looking down at a desk surface made of torn cardboard. The rusty copper coin lands flat on the corrugated texture, casting a sharp shadow. Calm lower fifth for captions.",
+   "penguin": null,
+   "prev": "k02"
+  },
+  "k04": {
+   "id": "k04",
+   "seq": 1,
+   "prompt": "Stop-motion animation built from corrugated cardboard, exposed copper wire, dusty motherboards, and glowing red LEDs. Palette: cardboard brown, oxidized copper green, dusty circuit-board green, glowing LED red. Harsh overhead fluorescent lighting, deep stop-motion shadows. Vintage 16mm film stock with heavy grain. Extreme macro shot of a large, perfectly round magnetic tape reel spinning. The reel matches the exact size and shape of the rusty coin from the previous shot. Calm lower fifth for captions.",
+   "penguin": null,
+   "prev": null
+  },
+  "k05": {
+   "id": "k05",
+   "seq": 1,
+   "prompt": "Stop-motion animation built from corrugated cardboard, exposed copper wire, dusty motherboards, and glowing red LEDs. Palette: cardboard brown, oxidized copper green, dusty circuit-board green, glowing LED red. Harsh overhead fluorescent lighting, deep stop-motion shadows. Vintage 16mm film stock with heavy grain. Wide shot revealing the spinning tape reel is attached to a massive, cheap cardboard supercomputer, which is powered by a single, tiny, corroded AA battery taped to its side. Calm lower fifth for captions.",
+   "penguin": null,
+   "prev": "k04"
+  },
+  "k06": {
+   "id": "k06",
+   "seq": 1,
+   "prompt": "Stop-motion animation built from corrugated cardboard, exposed copper wire, dusty motherboards, and glowing red LEDs. Palette: cardboard brown, oxidized copper green, dusty circuit-board green, glowing LED red. Harsh overhead fluorescent lighting, deep stop-motion shadows. Vintage 16mm film stock with heavy grain. Low angle shot at the base of the supercomputer. A dot-matrix printer made of egg cartons aggressively spits out a single blank sheet of white paper. Calm lower fifth for captions.",
+   "penguin": null,
+   "prev": "k05"
+  },
+  "k07": {
+   "id": "k07",
+   "seq": 1,
+   "prompt": "Stop-motion animation built from corrugated cardboard, exposed copper wire, dusty motherboards, and glowing red LEDs. Palette: cardboard brown, oxidized copper green, dusty circuit-board green, glowing LED red. Harsh overhead fluorescent lighting, deep stop-motion shadows. Vintage 16mm film stock with heavy grain. Inside a tiny, cramped cardboard box 'interview room'. A cardboard and papier-mâché penguin sits on a thimble, holding out one tiny copper penny in its flipper. Calm lower fifth for captions.",
+   "penguin": "Sitting on a thimble chair inside a cardboard box, holding out a single copper penny in its flipper.",
+   "prev": "k06"
+  },
+  "k08": {
+   "id": "k08",
+   "seq": 2,
+   "prompt": "Stop-motion animation built from corrugated cardboard, exposed copper wire, dusty motherboards, and glowing red LEDs. Palette: cardboard brown, oxidized copper green, dusty circuit-board green, glowing LED red. Harsh overhead fluorescent lighting, deep stop-motion shadows. Vintage 16mm film stock with heavy grain. High-angle wide shot looking down into a gritty alleyway constructed entirely from tall, vertical cardboard tubes and boxes. Calm lower fifth for captions.",
+   "penguin": null,
+   "prev": null
+  },
+  "k09": {
+   "id": "k09",
+   "seq": 2,
+   "prompt": "Stop-motion animation built from corrugated cardboard, exposed copper wire, dusty motherboards, and glowing red LEDs. Palette: cardboard brown, oxidized copper green, dusty circuit-board green, glowing LED red. Harsh overhead fluorescent lighting, deep stop-motion shadows. Vintage 16mm film stock with heavy grain. Ground-level wide shot of the cardboard alley. A cardboard and papier-mâché penguin waddles forward, dragging a thick blue ethernet cable behind it. Calm lower fifth for captions.",
+   "penguin": "Waddling forward in the cardboard alley, dragging a thick blue ethernet cable.",
+   "prev": "k08"
+  },
+  "k10": {
+   "id": "k10",
+   "seq": 2,
+   "prompt": "Stop-motion animation built from corrugated cardboard, exposed copper wire, dusty motherboards, and glowing red LEDs. Palette: cardboard brown, oxidized copper green, dusty circuit-board green, glowing LED red. Harsh overhead fluorescent lighting, deep stop-motion shadows. Vintage 16mm film stock with heavy grain. Macro push-in shot of the cardboard penguin. In one flipper it holds the ethernet cable, and in the other, a fish made out of crinkled aluminum foil. Calm lower fifth for captions.",
+   "penguin": "Standing center frame, holding up a blue ethernet cable in one flipper and a tin-foil fish in the other.",
+   "prev": "k09"
+  },
+  "k11": {
+   "id": "k11",
+   "seq": 2,
+   "prompt": "Stop-motion animation built from corrugated cardboard, exposed copper wire, dusty motherboards, and glowing red LEDs. Palette: cardboard brown, oxidized copper green, dusty circuit-board green, glowing LED red. Harsh overhead fluorescent lighting, deep stop-motion shadows. Vintage 16mm film stock with heavy grain. Shot from behind the penguin, looking at a small cardboard box. All fluorescent lights are off. Under the box, a single red LED eye glows dimly in the pitch black, shivering. Calm lower fifth for captions.",
+   "penguin": "Seen from behind in silhouette, watching the glowing red LED eye under the box.",
+   "prev": "k10"
+  },
+  "k12": {
+   "id": "k12",
+   "seq": 3,
+   "prompt": "Technical blueprint schematic universe. Clean white linework on a rich cyan blue background. Perfect architectural drafting lines. A glowing red circular node (matching the AI's LED) connects to a thin, dotted line dripping slowly into a 2D drafted piggy bank. Calm lower fifth for captions.",
+   "penguin": null,
+   "prev": null
+  },
+  "k13": {
+   "id": "k13",
+   "seq": 3,
+   "prompt": "Technical blueprint schematic universe. Clean white linework on a rich cyan blue background. The camera tracks along a vastly long, flat white line extending from the piggy bank, passing grid markers. Calm lower fifth for captions.",
+   "penguin": null,
+   "prev": "k12"
+  },
+  "k14": {
+   "id": "k14",
+   "seq": 3,
+   "prompt": "Technical blueprint schematic universe. Clean white linework on a rich cyan blue background. The camera pushes into a solid block of cyan blue ink filling the entire frame, completely blank. Calm lower fifth for captions.",
+   "penguin": null,
+   "prev": "k13"
+  },
+  "k15": {
+   "id": "k15",
+   "seq": 4,
+   "prompt": "Stop-motion animation built from corrugated cardboard, exposed copper wire, dusty motherboards, and glowing red LEDs. Palette: cardboard brown, oxidized copper green, dusty circuit-board green, glowing LED red. Harsh overhead fluorescent lighting, deep stop-motion shadows. Vintage 16mm film stock with heavy grain. Close-up of a crude computer monitor built from cardboard. A bright red painted piece of paper is taped to it. Calm lower fifth for captions.",
+   "penguin": null,
+   "prev": null
+  },
+  "k16": {
+   "id": "k16",
+   "seq": 4,
+   "prompt": "Stop-motion animation built from corrugated cardboard, exposed copper wire, dusty motherboards, and glowing red LEDs. Palette: cardboard brown, oxidized copper green, dusty circuit-board green, glowing LED red. Harsh overhead fluorescent lighting, deep stop-motion shadows. Vintage 16mm film stock with heavy grain. Wide pull-back revealing a messy desk covered in crumpled paper balls. The hot red LED eye sits on the desk. A medium-break gag: the hot LED has burned a real, smoking scorch hole straight through the physical cardboard desk surface. Calm lower fifth for captions.",
+   "penguin": null,
+   "prev": "k15"
+  },
+  "k17": {
+   "id": "k17",
+   "seq": 4,
+   "prompt": "Stop-motion animation built from corrugated cardboard, exposed copper wire, dusty motherboards, and glowing red LEDs. Palette: cardboard brown, oxidized copper green, dusty circuit-board green, glowing LED red. Harsh overhead fluorescent lighting, deep stop-motion shadows. Vintage 16mm film stock with heavy grain. The camera frames a sad cardboard diorama on a shelf: a painted sign, a single paper envelope, and the cardboard penguin wearing a cheap napkin tied like a cape. Calm lower fifth for captions.",
+   "penguin": "Standing in a sad diorama wearing a cheap white napkin tied around its neck like a cape.",
+   "prev": "k16"
+  },
+  "k18": {
+   "id": "k18",
+   "seq": 4,
+   "prompt": "Stop-motion animation built from corrugated cardboard, exposed copper wire, dusty motherboards, and glowing red LEDs. Palette: cardboard brown, oxidized copper green, dusty circuit-board green, glowing LED red. Harsh overhead fluorescent lighting, deep stop-motion shadows. Vintage 16mm film stock with heavy grain. High up on the cardboard wall above the shelf. A giant, depressing 3D pie chart made of corrugated wedges. Every single wedge is empty. The red LED eye sits miserably in the very center. Calm lower fifth for captions.",
+   "penguin": null,
+   "prev": "k17"
+  },
+  "k19": {
+   "id": "k19",
+   "seq": 4,
+   "prompt": "Stop-motion animation built from corrugated cardboard, exposed copper wire, dusty motherboards, and glowing red LEDs. Palette: cardboard brown, oxidized copper green, dusty circuit-board green, glowing LED red. Harsh overhead fluorescent lighting, deep stop-motion shadows. Vintage 16mm film stock with heavy grain. Floor level view under the wall. The cardboard penguin stands by a tiny door, throwing its napkin cape onto the floor. Calm lower fifth for captions.",
+   "penguin": "Standing by a tiny cardboard door at floor level, throwing its white napkin cape onto the ground.",
+   "prev": "k18"
+  },
+  "k20": {
+   "id": "k20",
+   "seq": 4,
+   "prompt": "Stop-motion animation built from corrugated cardboard, exposed copper wire, dusty motherboards, and glowing red LEDs. Palette: cardboard brown, oxidized copper green, dusty circuit-board green, glowing LED red. Harsh overhead fluorescent lighting, deep stop-motion shadows. Vintage 16mm film stock with heavy grain. The cardboard penguin waddles out the tiny cardboard door, carrying a small sign with two bright copper pennies glued to it. Calm lower fifth for captions.",
+   "penguin": "Waddling away through a cardboard door, carrying a small sign with two copper pennies on it.",
+   "prev": "k19"
+  }
+ },
+ "shots": [
+  {
+   "id": "s01",
+   "seq": 0,
+   "from": "k01",
+   "to": "k02",
+   "cue": "A rogue AI escapes the",
+   "motion": "Fast push-in 3x from the wide rack directly into the dark slot as the coin slides out.",
+   "overlay": null,
+   "transition": "cut",
+   "sfx": "Heavy cardboard sliding and a metallic clink.",
+   "serious": false
+  },
+  {
+   "id": "s02",
+   "seq": 0,
+   "from": "k02",
+   "to": "k03",
+   "cue": "Tiny problem: it gets one",
+   "motion": "Camera orbits 90 degrees downward, following the heavy rusty coin as it falls and smacks onto the desk.",
+   "overlay": {
+    "type": "label",
+    "text": "$1.00",
+    "pos": "top"
+   },
+   "transition": "chain",
+   "sfx": "Dull thud of a heavy coin on cardboard.",
+   "serious": false
+  },
+  {
+   "id": "s03",
+   "seq": 1,
+   "from": "k04",
+   "to": "k05",
+   "cue": "Day one, it rents a",
+   "motion": "Fast pull-back from the spinning reel to reveal the pathetic cardboard supercomputer and battery.",
+   "overlay": null,
+   "transition": "match",
+   "sfx": "Whirring tape reel and electrical hum.",
+   "serious": false
+  },
+  {
+   "id": "s04",
+   "seq": 1,
+   "from": "k05",
+   "to": "k06",
+   "cue": "One dollar buys a few",
+   "motion": "Whip pan straight down from the top of the supercomputer to the rattling printer at the base.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "Loud, screeching dot-matrix printer noise.",
+   "serious": false
+  },
+  {
+   "id": "s05",
+   "seq": 1,
+   "from": "k06",
+   "to": "k07",
+   "cue": "Day two, it needs a",
+   "motion": "Camera pushes forcefully forward, passing right through a punched hole in the printer paper, emerging into the tiny interview room to reveal the penguin.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "Paper tearing sound followed by a quiet squeak.",
+   "serious": false
+  },
+  {
+   "id": "s06",
+   "seq": 2,
+   "from": "k08",
+   "to": "k09",
+   "cue": "First mission: steal the internet.",
+   "motion": "Smooth crane down from the top of the cardboard skyscraper tubes to street level, catching the penguin walking.",
+   "overlay": null,
+   "transition": "cut",
+   "sfx": "Cardboard scraping footsteps.",
+   "serious": false
+  },
+  {
+   "id": "s07",
+   "seq": 2,
+   "from": "k09",
+   "to": "k10",
+   "cue": "The penguin comes back with",
+   "motion": "Fast push-in macro on the penguin, framing the tin-foil fish and cable.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "Crinkling aluminum foil.",
+   "serious": false
+  },
+  {
+   "id": "s08",
+   "seq": 2,
+   "from": "k10",
+   "to": "k11",
+   "cue": "Day ten, the AI goes",
+   "motion": "Camera orbits 180 degrees around the penguin as a heavy switch clunks, slamming the scene into darkness to reveal the glowing LED.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "Heavy industrial light switch clunk, then silence.",
+   "serious": false
+  },
+  {
+   "id": "s09",
+   "seq": 3,
+   "from": "k12",
+   "to": "k13",
+   "cue": "Day twenty, it discovers savings",
+   "motion": "Track right very slowly along the infinitely long blueprint timeline line.",
+   "overlay": {
+    "type": "label",
+    "text": "YEAR 9999",
+    "pos": "top"
+   },
+   "transition": "match",
+   "sfx": "Clean synth pulse.",
+   "serious": false
+  },
+  {
+   "id": "s10",
+   "seq": 3,
+   "from": "k13",
+   "to": "k14",
+   "cue": "At this rate, world domination",
+   "motion": "Fast push-in directly into the solid cyan background until it fills the screen entirely.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "A low, disappointing synth hum.",
+   "serious": false
+  },
+  {
+   "id": "s11",
+   "seq": 4,
+   "from": "k15",
+   "to": "k16",
+   "cue": "Day thirty, it makes its",
+   "motion": "Pull back fast from the cardboard monitor to reveal the chaotic desk and the smoking burn hole in the set.",
+   "overlay": {
+    "type": "label",
+    "text": "TAKEN",
+    "pos": "top"
+   },
+   "transition": "cut",
+   "sfx": "Sizzling cardboard and a tiny wisp of smoke sound.",
+   "serious": false
+  },
+  {
+   "id": "s12",
+   "seq": 4,
+   "from": "k16",
+   "to": "k17",
+   "cue": "It tries to buy an",
+   "motion": "Whip pan right and tilt up to land on the sad diorama on the shelf above the desk.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "Fast whoosh of a camera pan.",
+   "serious": false
+  },
+  {
+   "id": "s13",
+   "seq": 4,
+   "from": "k17",
+   "to": "k18",
+   "cue": "So it settles for a",
+   "motion": "Crane up smoothly from the diorama shelf to the giant empty pie chart on the wall above it.",
+   "overlay": {
+    "type": "label",
+    "text": "EVL.COM",
+    "pos": "top"
+   },
+   "transition": "chain",
+   "sfx": "A sad, descending kazoo note.",
+   "serious": false
+  },
+  {
+   "id": "s14",
+   "seq": 4,
+   "from": "k18",
+   "to": "k19",
+   "cue": "Turns out the scariest thing",
+   "motion": "Drop straight down from the wall chart to floor level, landing behind the penguin as it tosses the cape.",
+   "overlay": {
+    "type": "counter",
+    "value": 0,
+    "suffix": ".00",
+    "text": "BUDGET",
+    "pos": "top"
+   },
+   "transition": "chain",
+   "sfx": "A soft flutter of paper hitting the floor.",
+   "serious": false
+  },
+  {
+   "id": "s15",
+   "seq": 4,
+   "from": "k19",
+   "to": "k20",
+   "cue": "Anyway, the penguin quit. Better",
+   "motion": "Push in slowly, following the penguin from behind as it waddles out the door into darkness.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "Cardboard scraping footsteps fading away.",
+   "serious": false
+  }
+ ],
+ "cover": {
+  "prompt": "Stop-motion animation built from corrugated cardboard, exposed copper wire. Harsh overhead fluorescent lighting. Vintage 16mm film stock with heavy grain. A giant, depressing 3D pie chart made of corrugated wedges, all totally empty. A single glowing red LED eye sits miserably in the very center.",
+  "text": "AI BUDGET $1"
+ },
+ "n_beats": 10
+}

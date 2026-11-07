@@ -1,28 +1,262 @@
-09:12:58 inbox: 0 messages
-09:13:01 inbox: 0 messages
-09:13:03 [short-rogue-ai-dollar] art 22% Painting 20 keyframes in Risograph Zine Print
-09:13:11 [short-rogue-ai-dollar] motion 60% Animating 15 shots
-09:13:17 [short-rogue-ai-dollar] final_render 80% Rendering the Short
-09:20:06 rendered short.mp4 in 405s, 161.9 MB
+09:52:15 inbox: 0 messages
+09:52:17 inbox: 0 messages
+09:52:19 [short-rogue-ai-dollar-2] voicing 6% Directing the narrator's performance
+[gai] text model: gemini-3.8-flash via vertex
+[gai] tts model: gemini-3.1-flash-tts-preview via vertex
+[voice] take 1/1 recorded: 76.3s
+09:53:08 voice 76.8s over the 59s cap; tightened x1.20
+[voice] alignment matched 94% of words
+09:53:17 [short-rogue-ai-dollar-2] directing 12% Casting the penguin and planning the shots
 [gai] pro: gemini-3.8-pro not available here
 [gai] pro: gemini-3.7-pro not available here
 [gai] pro: gemini-3.5-pro not available here
 [gai] pro: gemini-3.1-pro not available here
 [gai] pro model: gemini-3.1-pro-preview via vertex
-09:21:31 final review 4.0: The video completely ignores almost all of the requested camera movements and transitions, relying on simple cuts and messy morphs instead. Additionally, severe scale issues and obvious AI text artifa
-09:21:33 [short-rogue-ai-dollar] motion 78% Review scored 4.0/10. Re-shooting 4 weak shot(s)
+09:55:13 [shorts] universe Scrap-Heap Cybernetics / Cardboard & Wireframe Diode Works; penguin sidekick; 20 keyframes, 15 shots in 5 sequences
+09:55:14 [short-rogue-ai-dollar-2] art 22% Painting 20 keyframes in Scrap-Heap Cybernetics
+[gai] image model: gemini-nano-banana-2.1 via vertex
+09:56:06 [shorts] keyframe k08 review 8.0: Some copper wires crossing the alleyway merge and melt into each other mid-air; The corrugated cardboard texture on the bottom left box smears and loses its rigid physical structure
+09:56:10 [shorts] keyframe k01 review 7.0: Wires tangle and merge into each other illogically in several places (AI spaghetti effect); Circuit board components appear slightly melted and lack sharp geometric definition upon close inspection; S
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+09:56:11 [shorts] keyframe k04 review 6.0: Copper wires exhibit 'AI spaghetti' (floating, clipping through the green rim, illogical wrapping); Central hub and green outer ring have melty, merged textures that break the physical stop-motion ill
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 30s
+09:57:01 [shorts] keyframe k01 review 7.0: Wires melt directly into the flat surfaces of the cardboard and circuit boards without logical connection points or holes.; Circuit board components appear slightly melted and nonsensical upon close i
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+09:57:28 [shorts] keyframe k09 review 6.0: The penguin is not actively dragging the blue ethernet cable; the cable is just lying on the ground next to it.; The penguin's texture is too smooth and resembles a 3D render rather than the requested
+09:57:36 [shorts] keyframe k04 review 5.0: Copper wires clip through the central circuit board instead of physically attaching or soldering.; The black grooved section resembles a vinyl record rather than smooth wound magnetic tape.; Inconsist
+09:57:53 [shorts] keyframe k01 review 7.0: Some green wires melt directly into the cardboard edges rather than passing through distinct physical holes; Circuit board components, particularly on the left and right panels, appear slightly mushy 
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+09:58:09 [shorts] keyframe k09 review 7.0: The blue ethernet cable is tangled around the penguin's feet and in front of it, rather than being dragged clearly behind it as requested.; The penguin's texture appears a bit too smooth and plastic-l
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 30s
+09:58:17 [shorts] keyframe k04 review 5.0: Heavy, smooth radial motion blur completely contradicts the requested jerky 12fps stop-motion aesthetic.; The motion blur is inconsistently applied; the center copper wires are perfectly sharp while t
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 45s
+[gai] pro: gemini-3.1-pro-preview busy (HTTP 429 gemini-3.1-pro-preview:generateContent: {
+  "error"), waiting 15s
+09:59:12 [shorts] keyframe k05 review 6.0: The prompt specifies a 'single' battery, but two batteries are taped to the side.; Continuity error: The central tape reel is missing the green wire wrapping around its outer edge that was established
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+09:59:28 [shorts] keyframe k09 review 7.0: The blue ethernet cable appears to be floating next to the penguin's body rather than being actively held or dragged by a flipper.; The penguin's beak is entirely dark, missing the requested orange ti
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 30s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 30s
 [qc] reviewer error (passing): 'list' object has no attribute 'get'
-09:23:32 [shorts] shot s03 review 10.0: 
-09:23:43 [shorts] shot s08 review 3.0: 00:00-00:01: The camera fails to push into the keyhole as requested; instead, the vault door opens.; 00:01-00:02: Jarring transition using a bright flash, completely breaking spatial continuity and th
-09:23:45 [shorts] shot s05 review 4.0: 00:00-00:01: The paper tearing transition is morphing and unnatural, pieces dissolve instead of flying past.; 00:01-00:03: The background is a photorealistic brick wall, completely ignoring the reques
-09:25:40 [shorts] shot s08 review 3.0: 00:00 - 00:03: The camera fails to execute the intended aggressive push-in into the keyhole, remaining mostly static.; 00:01: The penguin abruptly morphs, losing its cape and suddenly holding a staff 
-09:25:59 [shorts] shot s05 review 3.0: 00:00-00:01: The camera move through the hole is not a clean fly-through; the hole morphs into the background brick wall.; 00:01: The penguin pops into existence rather than being revealed by the came
-09:26:06 [shorts] shot s14 review 3.0: 00:00 - 00:01: The penguin suddenly acquires a red cape out of nowhere.; 00:03 - 00:04: The word 'BUDGET' disappears from the paper as the camera pushes in.; 00:05: Abrupt cut where a giant penny appe
-09:27:54 [shorts] shot s08 review 2.0: 00:00 - 00:03: The camera remains static, completely ignoring the requested aggressive push-in to the keyhole.; 00:00 - 00:03: The visual style is a standard 3D render with a 2D character overlay, fai
-09:28:12 [shorts] shot s05 review 3.0: 00:00-00:01: The transition through the hole is messy, with the poster tearing and morphing unnaturally instead of a clean camera push.; 00:01-00:02: The visual style completely shifts from the reques
-09:28:20 [shorts] shot s14 review 2.0: 00:01 - 00:02: Severe morphing of the entire scene during the zoom; the table, document, and penny warp out of shape.; 00:01 - 00:02: The penguin character morphs, changing expression and suddenly wea
-09:28:20 no budget left for re-shoots
-09:28:41 [short-rogue-ai-dollar] metadata 88% Writing the title and description
-[gai] text model: gemini-3.8-flash via vertex
-09:28:49 [short-rogue-ai-dollar] final_ready 90% Short ready (Risograph Zine Print, penguin as sidekick). Watch it and approve or send notes
-09:28:53 [youtube] 0 job(s) changed
+10:00:10 [shorts] keyframe k02 review 10.0: 
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 45s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 45s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 30s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 45s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 60s
+10:01:36 [shorts] keyframe k05 review 9.0: None. The image perfectly captures the requested aesthetic, composition, and specific narrative elements (the battery), while maintaining excellent continuity with the previous close-up frame.
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 60s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 75s
+[qc] reviewer error (passing): 'list' object has no attribute 'get'
+10:02:18 [shorts] keyframe k06 review 10.0: 
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 75s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 90s
+10:03:18 [shorts] keyframe k07 review 8.0: The penguin has four copper wires for its head tuft instead of the canonical three.
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 90s
+10:04:27 [shorts] keyframe k12 review 6.0: The piggy bank and water drops are loosely hand-sketched rather than precisely drafted with geometric architectural lines, violating the 'perfect architectural drafting lines' requirement.; Physical c
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 105s
+10:05:26 [shorts] keyframe k12 review 7.0: Copper wires clip directly through solid cardboard edges without visible entry holes, breaking physical logic.; Drafting lines on the piggy bank (snout, tail, internal circles) are slightly wobbly and
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 30s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 45s
+10:06:16 [shorts] keyframe k03 review 9.0: The image is excellent and meets all criteria perfectly. The textures, lighting, and vintage film effect are highly premium. The continuity works well, showing the coin deposited from the previous fra
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 120s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 60s
+10:07:15 [shorts] keyframe k15 review 7.0: Copper wires and LEDs appear melted or fused into the cardboard rather than physically attached or poked through.; Masking tape lacks physical thickness and blends unnaturally into the red paper.; For
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 30s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 45s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 60s
+10:08:48 [shorts] keyframe k12 review 7.0: Wires melt and fuse together unnaturally, especially the green and copper wires on the right.; Solder joints on the green circuit boards appear as mushy, undefined blobs instead of distinct metallic c
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 30s
+10:09:25 [shorts] keyframe k10 review 7.0: The ethernet cable and tin-foil fish appear glued to the penguin's sides rather than being held by visible flippers.; The RJ45 connector is disproportionately massive compared to the penguin and sligh
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 30s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 75s
+10:10:11 [shorts] keyframe k13 review 4.0: Continuity failure: The piggy bank drawing has completely vanished in the current frame, replaced by a horizontal white line.; Lack of camera movement: The prompt specifies the camera 'tracks along a 
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 45s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 30s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 90s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 45s
+[qc] reviewer error (passing): 'list' object has no attribute 'get'
+10:11:52 [shorts] keyframe k10 review 10.0: 
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 30s
+10:12:40 [shorts] keyframe k13 review 4.0: Continuity error: The cardboard and circuit board frame remains perfectly static while the blueprint background shifts, contradicting the 'camera tracks' instruction. If the camera tracked, the physic
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 45s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 30s
+10:13:20 [shorts] keyframe k15 review 8.0: Minor AI artifacting/mushiness on the microchips of the side-mounted circuit board; The structural base (stand) of the cardboard monitor is somewhat vague, blending into the shadows and tangled wires
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 60s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 45s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 60s
+10:14:14 [shorts] keyframe k16 review 5.0: Severe continuity errors: the cardboard monitor has morphed significantly between frames (tape positions, red paint texture, wire routing, and side motherboard details are all different).; The smoke e
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 75s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 30s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 75s
+10:15:42 [shorts] keyframe k16 review 5.0: Continuity error: The cardboard monitor's details (tape placement, red paint texture, wire routing) have morphed significantly from the previous frame.; Material inconsistency: The desk surface looks 
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 30s
+[qc] reviewer error (passing): 'list' object has no attribute 'get'
+10:16:25 [shorts] keyframe k11 review 10.0: 
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 90s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 45s
+[qc] reviewer error (passing): 'list' object has no attribute 'get'
+10:17:57 [shorts] keyframe k16 review 10.0: 
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 30s
+10:18:40 [shorts] keyframe k13 review 3.0: Complete loss of the physical stop-motion universe; the cardboard, circuit boards, and copper wires have vanished.; The image looks like a flat 2D digital graphic rather than a physical blueprint on p
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 45s
+10:19:21 [shorts] keyframe k14 review 4.0: Missing the requested 'Clean white linework'; The image is just a flat, empty blue texture, completely losing the 'Technical blueprint schematic universe' context established in the previous frame and
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 30s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 45s
+10:20:22 [shorts] keyframe k17 review 5.0: The penguin is made of a smooth, painted material (like an egg or styrofoam), violating the universe rule that everything is built from corrugated cardboard.; The penguin's beak is solid orange instea
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 60s
+[qc] reviewer error (passing): 'list' object has no attribute 'get'
+10:21:24 [shorts] keyframe k17 review 10.0: 
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 75s
+10:22:19 [shorts] keyframe k18 review 6.0: Perspective mismatch: The prompt specifies the pie chart is 'High up on the cardboard wall', but the image is a top-down flat lay looking down at a surface, not looking at a vertical wall.; Minor AI a
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 90s
+10:23:33 [shorts] keyframe k18 review 7.0: Copper wires extending from the center LED melt into the cardboard surfaces instead of resting on top.; The black connector slot on the bottom-left motherboard is warped and lacks rigid geometry.
+10:24:16 [shorts] keyframe k18 review 9.0: None. The image perfectly captures the requested scene, materials, and aesthetic while maintaining excellent continuity with the previous frame. The composition provides a clear lower fifth for captio
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 105s
+10:26:19 [shorts] keyframe k19 review 6.0: Penguin's eyes are misaligned, looking in different directions.; The napkin cape appears merged with the penguin's flipper rather than being actively thrown.; The penguin's orange feet look flat and l
+10:26:57 [shorts] keyframe k19 review 4.0: Severe continuity error: the background wall, motherboard placement, and overall set layout completely change from the previous frame.; The large cardboard wheel from the previous frame is missing wit
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+10:27:14 [shorts] keyframe k14 review 3.0: Continuity failure: The physical stop-motion elements (cardboard, wires, circuit boards) from the previous frame are completely gone, and the image looks like a flat digital file rather than a physica
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 30s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 30s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 45s
+10:28:33 [shorts] keyframe k19 review 3.0: Severe continuity error: The central cardboard structure has completely changed from a segmented circle in the previous frame to a rectangular block in this one.; The motherboards and wiring on the le
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 60s
+[qc] reviewer error (passing): 'list' object has no attribute 'get'
+10:29:16 [shorts] keyframe k20 review 10.0: 
+10:30:29 [shorts] keyframe k14 review 6.0: The requested 'clean white linework' is completely missing, making the frame too empty and losing the 'blueprint' context established in the previous frame.
+10:30:33 [short-rogue-ai-dollar-2] motion 60% Animating 15 shots
+10:32:26 [shorts] shot s03 review 3.0: 00:00-00:02: Severe morphing during the camera pull-back; the central reel changes shape and texture instead of maintaining its structure as it scales down in frame.; 00:00-00:02: Surrounding cardboar
+10:33:17 [shorts] shot s02 review 3.0: 00:00-00:01: The camera movement is a blurry, morphing transition rather than a physical orbit.; 00:00-00:01: The coin does not physically fall; it disappears from the ledge and pops into existence on
+10:33:18 [shorts] shot s01 review 3.0: 00:00-00:01: The camera jumps forward abruptly instead of executing a smooth push-in.; 00:00-00:01: The coin pops into existence on the flap rather than sliding out of the slot.; 00:03: The coin and t
+10:34:13 [shorts] shot s03 review 3.0: 00:00-00:02: The camera pull-back is extremely blurry and relies on morphing rather than a clean spatial movement.; 00:01-00:02: The cardboard structure and surrounding wires materialize and morph int
+10:35:08 [shorts] shot s01 review 3.0: 00:01 - 00:02: A hand appears abruptly on the right, holding a cardboard piece that morphs and changes shape.; 00:02 - 00:03: The hand disappears abruptly.; 00:03: A coin suddenly pops into existence 
+10:35:17 [shorts] shot s02 review 4.0: 00:00-00:02: The rusty coin morphs significantly during its fall, changing its shape and rust pattern completely by the time it lands.; 00:00-00:03: The cardboard structure, wires, and circuit boards 
+10:36:13 [shorts] shot s03 review 4.0: 00:00-00:01: Severe morphing of the environment during the camera pull-back; cardboard boxes materialize rather than being revealed.; 00:00-00:02: Copper wires and circuit board details warp and chang
+10:37:07 [shorts] shot s01 review 3.0: 00:00-00:03: Severe morphing and shifting of cardboard textures, wires, and the motherboard on the top right throughout the camera move.; 00:01-00:03: The coin appears abruptly on the flap, then melts
+10:37:09 [shorts] shot s02 review 3.0: 00:00-00:02: Severe morphing of the coin as it falls; it loses its solid shape and texture.; 00:00-00:01: The cardboard structure in the background melts and distorts heavily as the camera moves.; 00:
+10:38:20 [shorts] shot s04 review 3.0: 00:01 - 00:02: The intended whip pan is executed as a morph. The main cardboard unit suddenly floats in mid-air to make room for the printer, completely breaking spatial logic and object permanence.; 
+10:39:06 [shorts] shot s05 review 3.0: 00:00-00:02: The camera push does not pass through a hole; instead, the foreground paper and egg cartons melt and morph heavily into the next scene.; 00:02-00:05: The wires on the penguin's head and i
+10:39:11 [shorts] shot s06 review 3.0: 00:00 - 00:03: The camera remains completely static, failing to execute the requested 'Smooth crane down'.; 00:00 - 00:01: The penguin pops into the scene out of nowhere instead of walking in.; 00:01 
+10:40:07 [shorts] shot s04 review 3.0: 00:01: The camera performs a jarring horizontal wipe/glitch instead of the requested vertical whip pan.; 00:02: A large egg-carton structure suddenly pops into existence at the bottom left of the mach
+10:41:20 [shorts] shot s06 review 3.0: 00:00-00:03: The camera remains completely static, failing to execute the requested crane down motion.; 00:01: The penguin suddenly pops into existence in the middle of the alley instead of walking in
+10:41:22 [shorts] shot s05 review 3.0: 00:01-00:02: Severe morphing and smearing of the machine's structure (egg cartons, cardboard) as the camera pushes through the torn paper, breaking the physical illusion.; 00:04-00:05: The penguin's f
+10:42:07 [shorts] shot s04 review 2.0: 00:01-00:03: The intended whip pan down fails completely; instead, the machine stretches and morphs vertically, generating new components out of thin air.; 00:02-00:03: A printer section made of egg c
+10:43:28 [shorts] shot s06 review 3.0: 00:00 - 00:03: The camera remains completely static, failing to execute the intended smooth crane down movement.; 00:01: The penguin abruptly pops into existence in the middle of the street instead of
+10:44:24 [shorts] shot s07 review 4.0: 00:01-00:02: The fast push-in uses heavy digital motion blur, breaking the requested 12fps stop-motion aesthetic.; 00:02: The tin-foil fish and blue ethernet cable suddenly pop into existence; they we
+10:45:07 [shorts] shot s05 review 3.0: 00:00-00:01: The paper suddenly turns into a crumpled ball and covers the lens instead of the camera passing through a punched hole.; 00:01-00:02: Abrupt cut to the interior instead of a seamless, con
+10:45:32 [shorts] shot s08 review 3.0: 00:01-00:02: The requested 180-degree camera orbit is completely missing, replaced by a jarring hard cut to the reverse angle.; 00:01-00:02: Severe object permanence failure; the foil fish, ethernet c
+10:46:37 [shorts] shot s07 review 3.0: 00:00 - 00:02: Severe morphing of the background environment (circuit boards, cardboard pillars) during the camera push-in.; 00:01 - 00:02: The blue ethernet cable, tin-foil fish, and copper wires on 
+10:47:18 [shorts] shot s09 review 3.0: 00:00 - 00:03: The camera remains completely static, failing to execute the requested slow track to the right.; 00:01 - 00:02: The piggy bank blueprint abruptly disappears and is instantly replaced by
+10:47:22 [youtube] 0 job(s) changed
