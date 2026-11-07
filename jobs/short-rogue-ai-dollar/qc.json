@@ -1,0 +1,41 @@
+{
+ "scores": {
+  "visuals": 5,
+  "transitions": 2,
+  "story": 7,
+  "logic": 3,
+  "sync": 8,
+  "accuracy": 4,
+  "premium": 3
+ },
+ "overall": 4.0,
+ "weak_shots": [
+  {
+   "id": "s03",
+   "issue": "The requested seamless transformation from the bill to the server rack is missing; it just cuts.",
+   "fix": "Animate a seamless match-cut or fluid transformation from the dollar bill to the server rack slot."
+  },
+  {
+   "id": "s05",
+   "issue": "The transition is a messy morph from the hand to the penguin instead of a clean fly-through.",
+   "fix": "Create a hole in the poster and fly the camera through it to reveal the penguin on the other side."
+  },
+  {
+   "id": "s08",
+   "issue": "The camera does not push into the keyhole as requested; the vault door simply explodes open.",
+   "fix": "Animate a heavy push-in through the keyhole, using the darkness to transition to the penguin inside."
+  },
+  {
+   "id": "s14",
+   "issue": "The scale is completely broken; the penny is gigantic compared to the boardroom table and chairs.",
+   "fix": "Correct the scale so the penny and penguin are appropriately sized relative to the environment."
+  },
+  {
+   "id": "s15",
+   "issue": "The penguin floats away instead of dropping like a stone as requested in the motion prompt.",
+   "fix": "Animate the penguin dropping quickly out of frame to emphasize its inability to fly."
+  }
+ ],
+ "verdict": "The video completely ignores almost all of the requested camera movements and transitions, relying on simple cuts and messy morphs instead. Additionally, severe scale issues and obvious AI text artifacts prevent this from meeting premium standards.",
+ "score": 4.0
+}

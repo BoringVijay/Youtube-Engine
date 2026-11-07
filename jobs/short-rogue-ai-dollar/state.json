@@ -92,27 +92,27 @@
   },
   {
    "stage": "art",
-   "at": "2026-11-07T08:44:36+00:00"
-  },
-  {
-   "stage": "motion",
-   "at": "2026-11-07T08:52:33+00:00"
+   "at": "2026-11-07T09:13:01+00:00"
   },
   {
    "stage": "final_render",
-   "at": "2026-11-07T09:05:12+00:00"
+   "at": "2026-11-07T09:13:15+00:00"
+  },
+  {
+   "stage": "motion",
+   "at": "2026-11-07T09:21:31+00:00"
   },
   {
    "stage": "metadata",
-   "at": "2026-11-07T09:11:40+00:00"
+   "at": "2026-11-07T09:28:39+00:00"
   },
   {
    "stage": "final_ready",
-   "at": "2026-11-07T09:11:51+00:00"
+   "at": "2026-11-07T09:28:48+00:00"
   }
  ],
  "created": "2026-11-07T08:39:37+00:00",
- "updated": "2026-11-07T09:11:51+00:00",
+ "updated": "2026-11-07T09:28:48+00:00",
  "error": null,
  "fails": 0,
  "preview": {
@@ -136,30 +136,30 @@
  "shorts": null,
  "thumb": null,
  "meta": {
-  "title": "Can a Rogue AI Take Over the World on $1 a Day?",
+  "title": "What if a rogue AI only had one dollar a day?",
   "alt_titles": [
-   "A Rogue AI with a $1 Daily Budget",
-   "World Domination on $1 a Day (feat. a Penguin)"
+   "A rogue AI escapes, but its daily budget is $1",
+   "Can an evil AI conquer the world on $1 a day?"
   ],
-  "description": "World domination is expensive when you only have a dollar a day.\nTurns out the hardest part of being an evil AI is paying the penguin.\n\n#Shorts #CuriousPenguin #AIHumor #Animation",
+  "description": "World domination is expensive, especially when you can only afford a penguin henchman.\nHere is what happens when a rogue AI faces the ultimate enemy: a tiny budget.\n\n#Shorts #AI #CuriousPenguin #Animation #SciFi",
   "tags": [
-   "curious penguin",
    "rogue ai",
-   "ai humor",
+   "curious penguin",
+   "ai budget",
    "toner low studios",
-   "risograph animation",
-   "budget cuts",
    "evil ai",
+   "ai humor",
+   "risograph animation",
    "world domination",
-   "penguin sidekick",
    "sci fi comedy",
-   "indie animation",
-   "animated short"
+   "henchman penguin",
+   "funny animation",
+   "tech humor"
   ],
-  "pinned_comment": "Would you stay loyal for pennies, or are you immediately jumping ship for two dollars a day like the penguin?",
-  "instagram_caption": "Turns out world domination isn't stopped by heroes—just an impossible daily budget.\n\n#curiouspenguin #risograph #indieanimation #aihumor #animatedshort"
+  "pinned_comment": "Would you work as an evil AI's henchman for two dollars a day and a fresh fish? Asking for a friend.",
+  "instagram_caption": "Turns out the most terrifying part of world domination isn't the intelligence. It's the budget meeting.\n\n#CuriousPenguin #TonerLowStudios #RogueAI #Risograph #Animation"
  },
- "cost": 10.434,
+ "cost": 15.444,
  "voice_style": "C",
  "voice_fit": 1.2,
  "duration": 61.2,
@@ -206,5 +206,25 @@
    "shot": "k20",
    "bit": "holds sign, attempts to fly and plummets"
   }
- ]
+ ],
+ "qc": {
+  "overall": 4.0,
+  "scores": {
+   "visuals": 5,
+   "transitions": 2,
+   "story": 7,
+   "logic": 3,
+   "sync": 8,
+   "accuracy": 4,
+   "premium": 3
+  },
+  "verdict": "The video completely ignores almost all of the requested camera movements and transitions, relying on simple cuts and messy morphs instead. Additionally, severe scale issues and obvious AI text artifacts prevent this from meeting premium standards.",
+  "weak": [
+   "s03: The requested seamless transformation from the bill to the server rack is missing; it just cuts.",
+   "s05: The transition is a messy morph from the hand to the penguin instead of a clean fly-through.",
+   "s08: The camera does not push into the keyhole as requested; the vault door simply explodes open.",
+   "s14: The scale is completely broken; the penny is gigantic compared to the boardroom table and chairs.",
+   "s15: The penguin floats away instead of dropping like a stone as requested in the motion prompt."
+  ]
+ }
 }

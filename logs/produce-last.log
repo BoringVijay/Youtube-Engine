@@ -1,59 +1,28 @@
-08:40:13 inbox: 0 messages
-08:40:15 inbox: 0 messages
-08:40:17 [short-rogue-ai-dollar] voicing 6% Directing the narrator's performance
-[gai] text model: gemini-3.8-flash via vertex
-[gai] tts model: gemini-3.1-flash-tts-preview via vertex
-[voice] take 1/1 recorded: 73.0s
-08:41:00 voice 73.5s over the 59s cap; tightened x1.20
-[voice] alignment matched 91% of words
-08:41:07 [short-rogue-ai-dollar] directing 12% Casting the penguin and planning the shots
+09:12:58 inbox: 0 messages
+09:13:01 inbox: 0 messages
+09:13:03 [short-rogue-ai-dollar] art 22% Painting 20 keyframes in Risograph Zine Print
+09:13:11 [short-rogue-ai-dollar] motion 60% Animating 15 shots
+09:13:17 [short-rogue-ai-dollar] final_render 80% Rendering the Short
+09:20:06 rendered short.mp4 in 405s, 161.9 MB
 [gai] pro: gemini-3.8-pro not available here
 [gai] pro: gemini-3.7-pro not available here
 [gai] pro: gemini-3.5-pro not available here
 [gai] pro: gemini-3.1-pro not available here
 [gai] pro model: gemini-3.1-pro-preview via vertex
-08:44:36 [shorts] universe Risograph Zine Print / Toner Low Studios; penguin sidekick; 20 keyframes, 15 shots in 5 sequences
-08:44:40 [short-rogue-ai-dollar] art 22% Painting 20 keyframes in Risograph Zine Print
-[gai] image model: gemini-nano-banana-2.1 via vertex
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 15s
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 15s
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 30s
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 30s
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 45s
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 45s
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 15s
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 60s
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 15s
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 75s
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 30s
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 15s
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 15s
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 30s
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 45s
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 15s
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 30s
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 45s
-08:52:35 [short-rogue-ai-dollar] motion 60% Animating 15 shots
-09:05:14 [short-rogue-ai-dollar] final_render 80% Rendering the Short
-09:11:22 rendered short.mp4 in 365s, 161.9 MB
-09:11:42 [short-rogue-ai-dollar] metadata 88% Writing the title and description
-09:11:53 [short-rogue-ai-dollar] final_ready 90% Short ready (Risograph Zine Print, penguin as sidekick). Watch it and approve or send notes
-09:11:56 [youtube] 0 job(s) changed
+09:21:31 final review 4.0: The video completely ignores almost all of the requested camera movements and transitions, relying on simple cuts and messy morphs instead. Additionally, severe scale issues and obvious AI text artifa
+09:21:33 [short-rogue-ai-dollar] motion 78% Review scored 4.0/10. Re-shooting 4 weak shot(s)
+[qc] reviewer error (passing): 'list' object has no attribute 'get'
+09:23:32 [shorts] shot s03 review 10.0: 
+09:23:43 [shorts] shot s08 review 3.0: 00:00-00:01: The camera fails to push into the keyhole as requested; instead, the vault door opens.; 00:01-00:02: Jarring transition using a bright flash, completely breaking spatial continuity and th
+09:23:45 [shorts] shot s05 review 4.0: 00:00-00:01: The paper tearing transition is morphing and unnatural, pieces dissolve instead of flying past.; 00:01-00:03: The background is a photorealistic brick wall, completely ignoring the reques
+09:25:40 [shorts] shot s08 review 3.0: 00:00 - 00:03: The camera fails to execute the intended aggressive push-in into the keyhole, remaining mostly static.; 00:01: The penguin abruptly morphs, losing its cape and suddenly holding a staff 
+09:25:59 [shorts] shot s05 review 3.0: 00:00-00:01: The camera move through the hole is not a clean fly-through; the hole morphs into the background brick wall.; 00:01: The penguin pops into existence rather than being revealed by the came
+09:26:06 [shorts] shot s14 review 3.0: 00:00 - 00:01: The penguin suddenly acquires a red cape out of nowhere.; 00:03 - 00:04: The word 'BUDGET' disappears from the paper as the camera pushes in.; 00:05: Abrupt cut where a giant penny appe
+09:27:54 [shorts] shot s08 review 2.0: 00:00 - 00:03: The camera remains static, completely ignoring the requested aggressive push-in to the keyhole.; 00:00 - 00:03: The visual style is a standard 3D render with a 2D character overlay, fai
+09:28:12 [shorts] shot s05 review 3.0: 00:00-00:01: The transition through the hole is messy, with the poster tearing and morphing unnaturally instead of a clean camera push.; 00:01-00:02: The visual style completely shifts from the reques
+09:28:20 [shorts] shot s14 review 2.0: 00:01 - 00:02: Severe morphing of the entire scene during the zoom; the table, document, and penny warp out of shape.; 00:01 - 00:02: The penguin character morphs, changing expression and suddenly wea
+09:28:20 no budget left for re-shoots
+09:28:41 [short-rogue-ai-dollar] metadata 88% Writing the title and description
+[gai] text model: gemini-3.8-flash via vertex
+09:28:49 [short-rogue-ai-dollar] final_ready 90% Short ready (Risograph Zine Print, penguin as sidekick). Watch it and approve or send notes
+09:28:53 [youtube] 0 job(s) changed
