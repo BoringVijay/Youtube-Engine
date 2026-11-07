@@ -139,8 +139,9 @@ def publish(st, save, status_cb):
     done_kinds = {v["kind"] for v in videos}
     items = []
     if st.get("final") and "main" not in done_kinds:
-        is_short = not (st.get("brew", {}).get("format") or {}).get("long", True)
-        items.append(("main", st["final"]["id"], meta.get("title") or st.get("q"), describe(meta) + ("\n#Shorts" if is_short else "")))
+        is_short = st.get("v") == 3 or not (st.get("brew", {}).get("format") or {}).get("long", True)
+        desc = describe(meta)
+        items.append(("main", st["final"]["id"], meta.get("title") or st.get("q"), desc + ("\n#Shorts" if is_short and "#shorts" not in desc.lower() else "")))
     for k, sh in enumerate(st.get("shorts") or []):
         if f"short{k + 1}" in done_kinds:
             continue
@@ -196,7 +197,7 @@ def all_states():
 
 def main():
     import produce as P
-    todo = [s for s in all_states() if s.get("stage") in ("approved", "uploading") and s.get("v") == 2]
+    todo = [s for s in all_states() if s.get("stage") in ("approved", "uploading") and s.get("v") in (2, 3)]
     if not todo:
         return
     if not os.environ.get("YT_REFRESH_TOKEN"):
@@ -206,7 +207,7 @@ def main():
         try:
             P.set_stage(st, "uploading", "Uploading to YouTube as private")
             publish(st, P.save_state, P.publish_status)
-            P.set_stage(st, "scheduled", "On YouTube as private. Publish it at the proposed slot in YouTube Studio", 97)
+            P.set_stage(st, "scheduled", "On YouTube as private. Publish it at the suggested time in YouTube Studio", 97)
         except Exception as e:
             st["error"] = str(e)[:400]
             st["step"] = "YouTube upload hit an error. Retrying next run"

@@ -37,7 +37,8 @@ jobs:
           sys.path.insert(0, "scripts")
           import drive
           inbox = [f for f in drive.list_inbox() if f["name"].endswith(".json")]
-          busy = [p for p in glob.glob("jobs/*/state.json") if json.load(open(p)).get("v") == 2 and json.load(open(p)).get("stage") in ("queued","directing","voicing","art","test_render","motion","final_render","metadata","approved","uploading")]
+          states = [json.load(open(p)) for p in glob.glob("jobs/*/state.json")]
+          busy = [s for s in states if s.get("v") in (2, 3) and (s.get("stage") in ("queued","directing","voicing","art","test_render","motion","final_render","metadata","approved","uploading") or (s.get("instagram") or {}).get("status") in ("queued","posting","error"))]
           work = bool(inbox or busy) or os.environ.get("GITHUB_EVENT_NAME") != "schedule"
           print(f"inbox={len(inbox)} busy={len(busy)} work={work}")
           open(os.environ["GITHUB_OUTPUT"], "a").write(f"work={'yes' if work else 'no'}\n")
@@ -68,6 +69,8 @@ jobs:
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           GDRIVE_REFRESH_TOKEN: ${{ secrets.GDRIVE_REFRESH_TOKEN }}
           GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
           PRODUCE_BUDGET_MIN: "55"
         run: |
           mkdir -p logs
@@ -85,6 +88,18 @@ jobs:
         run: |
           set -o pipefail
           python3 -u scripts/publish.py 2>&1 | tee -a logs/produce-last.log
+      - name: Post to Instagram (only Shorts you tapped Post on)
+        if: steps.check.outputs.work == 'yes'
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          GDRIVE_REFRESH_TOKEN: ${{ secrets.GDRIVE_REFRESH_TOKEN }}
+          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+        run: |
+          set -o pipefail
+          python3 -u scripts/instagram.py 2>&1 | tee -a logs/produce-last.log
       - name: Save job state
         if: always() && steps.check.outputs.work == 'yes'
         run: |

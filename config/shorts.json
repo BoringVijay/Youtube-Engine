@@ -1,14 +1,17 @@
 {
-  "format": "short",
-  "target_seconds": [
-    50,
-    60
-  ],
-  "shot_seconds": 5.5,
-  "fps": 24,
-  "veo_tier": "veo",
-  "resolution": "1080p",
-  "motion_workers": 3,
-  "storyboard_gate": false,
-  "note": "Lab 3 (2026-11-07): Veo 3.1 Fast holds one continuous move between keyframes; Lite dissolves halfway. Use Fast."
+ "format": "short",
+ "target_seconds": [
+  50,
+  60
+ ],
+ "shot_seconds": 4.2,
+ "fps": 24,
+ "veo_tier": "veo",
+ "resolution": "1080p",
+ "motion_workers": 3,
+ "storyboard_gate": false,
+ "note": "Lab 3 (2026-11-07): Veo 3.1 Fast holds one continuous move between keyframes; Lite dissolves halfway. Use Fast.",
+ "max_seconds": 59,
+ "crf": 20,
+ "note2": "2026-11-07 proofs: 9-10 shots of 6-8 s left 10-15 s holds on one framing; cables ran 74.8 s. Now: voice first, 10-16 shots of ~4 s, every keyframe a new camera position, voice time-fitted to 59 s."
 }

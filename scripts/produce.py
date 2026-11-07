@@ -13,6 +13,7 @@ import datetime as dt, glob, json, math, os, random, re, shutil, struct, subproc
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import art as artmod  # noqa: E402
 import budget  # noqa: E402
+import instagram  # noqa: E402
 import director  # noqa: E402
 import drive  # noqa: E402
 import gai  # noqa: E402
@@ -29,7 +30,7 @@ BUDGET_SEC = float(os.environ.get("PRODUCE_BUDGET_MIN", "50")) * 60
 T0 = time.time()
 CHROME = shutil.which("google-chrome") or shutil.which("chromium") or ""
 WORKING = ["queued", "directing", "voicing", "art", "test_render", "motion", "final_render", "metadata"]
-PCT = {"queued": 2, "directing": 6, "voicing": 12, "art": 22, "test_render": 46, "test_ready": 55, "motion": 60, "final_render": 72,
+PCT = {"queued": 2, "voicing": 6, "directing": 12, "art": 22, "test_render": 46, "test_ready": 55, "motion": 60, "final_render": 72,
        "metadata": 88, "final_ready": 90, "approved": 92, "uploading": 95, "scheduled": 97, "live": 100}
 
 
@@ -77,7 +78,8 @@ def publish_status():
         j = {k: st.get(k) for k in ("id", "q", "series", "stage", "pct", "step", "steps", "preview", "final", "shorts", "thumb", "meta",
                                      "error", "updated", "created", "duration", "notes_in", "universe", "cameos", "cost", "youtube", "instagram", "format", "penguin_role", "v")}
         jobs.append(j)
-    body = {"at": now(), "engine": "github-actions", "version": 2, "backend": gai.backend(), "budget": budget.summary(), "jobs": jobs}
+    body = {"at": now(), "engine": "github-actions", "version": 3, "backend": gai.backend(), "budget": budget.summary(), "jobs": jobs,
+            "instagram": instagram.account()}
     try:
         drive.put_json("outbox", "status.json", body)
     except Exception as e:
@@ -182,8 +184,13 @@ def handle_inbox():
             auditions.append(m)
         elif t == "cancel" and st:
             st.setdefault("notes_in", []).append({"at": m.get("at") or now(), "stage": "cancel", "notes": m.get("notes", "")})
-            set_stage(st, "cancelled", "Stopped by you. Send it again from the Brewery to restart", st.get("pct", 0))
-        elif t == "resume" and st and st.get("stage") == "cancelled":
+            set_stage(st, "cancelled", "Stopped by you. Tap Resume to pick up where it stopped", st.get("pct", 0))
+        elif t == "instagram" and st:
+            ig = st.get("instagram") or {}
+            if ig.get("status") not in ("posted", "posting"):
+                st["instagram"] = {"status": "queued", "at": m.get("at") or now()}
+                save_state(st)
+        elif t == "resume" and st and st.get("stage") in ("cancelled", "failed"):
             st["fails"] = 0
             set_stage(st, "queued", "Resumed. Picks up where it stopped (finished frames and clips are kept)")
     for m in msgs:
@@ -457,6 +464,17 @@ def stage_voice(st):
     budget.check(st["id"], "tts_per_min", est_min)
     mp3, total, offsets, models = voice.record(st, vdir, sections, v)
     budget.log(st["id"], "tts_per_min", total / 60, gai.LAST["backend"])
+    cap = shorts.CFG.get("max_seconds", 59) if st.get("v") == 3 else None
+    if cap and total > cap:
+        # Shorts must land under a minute: tighten the read (pitch-preserving), at most 20% faster
+        tempo = min(1.2, total / (cap - 0.5))
+        full = os.path.join(vdir, "full.wav")
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", full, "-af", f"atempo={tempo:.3f}", full + ".fit.wav"], check=True)
+        os.replace(full + ".fit.wav", full)
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", full, "-af", "loudnorm=I=-15:TP=-1.5:LRA=9", "-ar", "44100", "-b:a", "128k", mp3], check=True)
+        log(f"voice {total:.1f}s over the {cap}s cap; tightened x{tempo:.2f}")
+        total = total / tempo
+        st["voice_fit"] = round(tempo, 3)
     st["step"] = "Timing every word"
     save_state(st); publish_status()
     words, matched = voice.align(os.path.join(vdir, "full.wav"), sections)
@@ -601,13 +619,15 @@ def advance_short(st):
             raise Cancelled()
     if st["stage"] not in ("queued", "directing", "voicing", "art", "motion", "final_render", "metadata"):
         return False
+    words, total = stage_voice(st)  # voice first, so the director plans to the real length
+    check()
     p = jfile(jid, "direction.json")
     if os.path.exists(p) and json.load(open(p)).get("format") == "short":
         d = json.load(open(p))
     else:
         set_stage(st, "directing", "Casting the penguin and planning the shots")
         budget.check(jid, "text_call", 3)
-        d = shorts.direct(st, notes=st.get("redo_notes", ""))
+        d = shorts.direct(st, notes=st.get("redo_notes", ""), secs=total)
         budget.log(jid, "text_call", 3, gai.LAST["backend"])
         json.dump(d, open(p, "w"), indent=1, ensure_ascii=False)
     u = d["universe"]
@@ -615,11 +635,9 @@ def advance_short(st):
     st["penguin_role"] = d["penguin"]["role"]
     st["cameos"] = [{"shot": k, "bit": v["penguin"]} for k, v in d["keyframes"].items() if v.get("penguin")]
     check()
-    words, total = stage_voice(st)
-    check()
     a = artmod.Art(st, d, os.path.join(OUT, jid, "art"), aspect="9:16")
     set_stage(st, "art", f"Painting {len(d['keyframes'])} keyframes in {u['name']}")
-    shorts.keyframes(a, d, progress(st, "art", 22, 40, "Keyframe"))
+    shorts.keyframes(a, d, progress(st, "art", 22, 40, "Keyframe"), cancelled=lambda: cancel_requested(jid))
     check()
     spans = shorts.spans_for(d, words, total)
     set_stage(st, "motion", f"Animating {len(d['shots'])} shots")
@@ -650,10 +668,16 @@ def advance_short(st):
         media[sh["id"]] = m
     if missing:
         log("shots without motion (shown as stills):", missing)
-    mp4 = render(shorts.build_film(st, d, words, total, media), os.path.join(OUT, jid, "short.mp4"), crf=18)
+    mp4 = render(shorts.build_film(st, d, words, total, media), os.path.join(OUT, jid, "short.mp4"), crf=shorts.CFG.get("crf", 20))
     st["final"] = {**link(drive.upload(job_folder(jid), "short.mp4", mp4, "video/mp4")), "size_mb": round(os.path.getsize(mp4) / 1e6, 1),
                    "duration": round(total + 0.8, 1), "stills": missing}
     st["preview"] = st["final"]
+    try:  # small poster frame for the panel
+        poster = os.path.join(OUT, jid, "poster.jpg")
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", "2.5", "-i", mp4, "-frames:v", "1", "-vf", "scale=540:-2", "-q:v", "4", poster], check=True)
+        st["final"]["poster"] = link(drive.upload(job_folder(jid), "poster.jpg", poster, "image/jpeg"))["id"]
+    except Exception as e:
+        log("poster failed:", str(e)[:120])
     review_sheet(st, mp4, a)
     set_stage(st, "metadata", "Writing the title and description")
     st["meta"] = write_metadata_short(st, d)
@@ -751,7 +775,7 @@ def main():
                 save_state(st); publish_status()
                 break
             st["fails"] = st.get("fails", 0) + 1
-            st["step"] = "Hit an error. Retrying next run" if st["fails"] < 3 else "Stopped after 3 errors. Send a redo to retry"
+            st["step"] = "Hit an error. Retrying next run" if st["fails"] < 3 else "Stopped after 3 errors. Tap Resume to retry"
             if st["fails"] >= 3:
                 st["stage"] = "failed"
             save_state(st); publish_status()

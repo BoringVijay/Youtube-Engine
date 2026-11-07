@@ -61,7 +61,8 @@ Write a look bible for the chosen universe before any frame: medium, materials, 
 - Camera language per moment: slow push-in for revelation, crane down for scale, locked-off for deadpan comedy, snap zoom or whip-pan for punchlines, handheld drift for tension.
 - Rhythm: in the first 15 seconds change the picture every 2 to 3 seconds. Elsewhere 4 to 7 seconds, longer for emotional beats.
 - Use match cuts and visual callbacks (a shape, prop or colour that returns later).
-- Motion budget goes to the hook, the twist, the biggest joke and the emotional peak. Everything else is a designed still with a camera move.
+- Shorts only, 50 to 59 seconds, and every second is real animation. No designed stills, no slideshow holds.
+- Every shot travels: the next keyframe is a new camera position (push in 3x, pull back to reveal, orbit, crane a whole level, fly through something). Something happens in every shot. About 4 seconds a shot, 10 to 16 shots a Short.
 - Never hold or repeat a frame. Each new VO cue gets a new image: a new angle, shot size, set or detail. Consecutive shots must differ in at least two of camera angle, shot size and location.
 - The hero object (the cube, the cable, the vault) appears in at most a third of the shots. Spend the rest on consequences, people, details and the penguin.
 - Stills must still feel alive: choose camera moves with intent, and write prompts with layered foreground, midground and background so the move has parallax.

@@ -36,12 +36,12 @@ def recent_universes(exclude):
     return out[-6:]
 
 
-def direct(st, notes=""):
+def direct(st, notes="", secs=None):
     script = st["brew"]["script"]
     beats = [re.sub(r"\[[a-z ]+\]", "", b.get("vo", "")).strip() for b in script.get("beats", [])]
     words = sum(len(b.split()) for b in beats)
-    secs = words / 2.75
-    n_shots = max(7, min(12, round(secs / CFG["shot_seconds"])))
+    secs = secs or words / 2.75  # real voice length when the voice is recorded first
+    n_shots = max(10, min(16, round(secs / CFG["shot_seconds"])))
     prompt = f"""You are the director of Curious Penguin, an anthology YouTube Shorts channel: every episode is a new studio and a new visual universe,
 and every shot is real animation (no stills, no slideshow). Read the bible, then direct this Short.
 
@@ -58,7 +58,7 @@ Universes used recently (do NOT reuse): {recent_universes(st['id']) or 'none yet
 VO beats (final, do not rewrite), about {secs:.0f} seconds:
 {json.dumps([{"i": i, "vo": b} for i, b in enumerate(beats)], ensure_ascii=False)}
 
-FORMAT: vertical 9:16 Short, {n_shots} animated shots of about {CFG['shot_seconds']} seconds (each 4 to 8 s), grouped into 3 to 5 SEQUENCES.
+FORMAT: vertical 9:16 Short, exactly {n_shots} animated shots of about {CFG['shot_seconds']} seconds each, grouped into 3 to 5 SEQUENCES.
 Inside a sequence the shots are CHAINED: the end frame of one shot is the start frame of the next, so the sequence plays as one continuous camera move
 (like a crane down through layered paper water to a glowing cable). Between sequences we cut, ideally on a match (shape, colour, motion direction).
 
@@ -75,8 +75,12 @@ Plan it like a film:
    and characters moved on, so they can be animated into each other: keep outfits, props and lighting identical inside a sequence (change a costume only
    at a cut). Describe glows as LED or neon light, never as fire, unless it really is fire. No text or numbers in keyframes (a deliberate 1-3 word sign gag is ok, spelled exactly).
    Never name real companies, brands or logos. No stick figures.
+   MOTION RULE (the most important rule): every pair of consecutive keyframes must be a clearly DIFFERENT camera position, so the animation between them travels.
+   Each step does at least one big move: push in 3x or more, pull back to reveal, orbit 60 to 180 degrees, crane up or down a whole level, fly through a gap or
+   object, or follow the subject somewhere new. Never two keyframes with the same framing. Something also happens in every shot (a reveal, a transformation,
+   a character action, a scale change), never just a slow drift.
 5. Shots: each shot animates keyframe "from" to keyframe "to" (consecutive in its sequence). Give "motion": one sentence of continuous camera move + action,
-   physically plausible for the medium, and "cue": the exact first 3 to 5 words of the VO where this shot starts (copied from the beats, in order, every beat covered).
+   physically plausible for the medium. Banned: "locks off", "static", "holds", "slow push-in" on its own, "subtle". A viewer should feel the camera fly, and "cue": the exact first 3 to 5 words of the VO where this shot starts (copied from the beats, in order, every beat covered).
    Optional "overlay" when a number or key word must stick, drawn in the universe style: {{"type": "counter", "value": number, "suffix": "", "text": "", "pos": "top"}},
    {{"type": "label", "text": "max 6 words", "pos": "top"}}, or {{"type": "quote", "text": "max 6 words"}}. Numbers only from the VO, exactly as said, one value per fact.
    "transition" into the shot: "chain" inside a sequence; "cut", "match", "whip", "dip" or "flash" at the start of a sequence. "sfx": a short medium-fitting cue or null.
@@ -168,7 +172,7 @@ def keyframe_prompt(kf, d):
     return p + "\nVertical 9:16 frame for a phone. " + artmod.RULES
 
 
-def keyframes(a, d, progress=None):
+def keyframes(a, d, progress=None, cancelled=None):
     """Generate keyframes in sequence order. A chained keyframe uses its predecessor as the continuity reference."""
     pen = a.have("penguin.png")
     if not pen:
@@ -187,6 +191,8 @@ def keyframes(a, d, progress=None):
 
     def run_seq(ids):
         for k in ids:
+            if cancelled and cancelled():
+                return
             name = f"{k}.png"
             if a.have(name):
                 done[0] += 1
