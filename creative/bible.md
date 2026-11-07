@@ -18,7 +18,7 @@ The motion bar is the lab's paper-cut ocean shot: the camera cranes down through
 Think of the channel as an anthology series, the way Love, Death & Robots works: one brand, a new studio every episode. Each video should feel like a different team made it, while the penguin, the narrator's honesty and the craft bar stay constant.
 
 Before any frame the director thinks through a studio brief and folds it into the universe "why" and the look bible:
-- **Studio name**: an invented one-line studio for this episode ("Mudlark Clay Works", "Night Shift Noir Unit"). It forces a point of view.
+- **Studio name**: a freshly invented studio for this episode, never one used before and never an example from this file. It forces a point of view.
 - **Universe and why**: the medium and the emotional reason it fits the topic.
 - **Pacing**: how this episode breathes (frantic, patient, slow-burn then sudden).
 - **Signature shot**: the one image people will screenshot.
