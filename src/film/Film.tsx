@@ -134,7 +134,7 @@ const ShotView: React.FC<{shot: Shot; look: Look}> = ({shot, look}) => {
     ? <OffthreadVideo src={staticFile(shot.src)} muted={!shot.volume} volume={shot.volume || 0} playbackRate={shot.rate || 1} startFrom={Math.round((shot.clipStart || 0) * fps)} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
     : <Img src={staticFile(shot.src)} style={{width: '100%', height: '100%', objectFit: 'cover'}} />;
   return <AbsoluteFill style={{opacity: fadeIn, background: '#000'}}>
-    <AbsoluteFill style={{transform: `${shot.kind === 'video' ? `scale(${1.01 + 0.02 * p})` : cameraTransform(shot.camera || 'drift', p, f, shot.focus)} translateX(${whip * 30}%)`, filter: whip > 0.05 ? `blur(${whip * 24}px)` : undefined}}>
+    <AbsoluteFill style={{transform: `${shot.kind === 'video' ? 'scale(1)' : cameraTransform(shot.camera || 'drift', p, f, shot.focus)} translateX(${whip * 30}%)`, filter: whip > 0.05 ? `blur(${whip * 24}px)` : undefined}}>
       {media}
     </AbsoluteFill>
     {tin === 'flash' && <AbsoluteFill style={{background: '#fff', opacity: interpolate(f, [0, 5], [0.9, 0], clamp)}} />}

@@ -1,0 +1,11 @@
+{
+  "format": "short",
+  "target_seconds": [50, 60],
+  "shot_seconds": 5.5,
+  "fps": 24,
+  "veo_tier": "veo",
+  "resolution": "1080p",
+  "motion_workers": 3,
+  "storyboard_gate": false,
+  "note": "veo_tier: veo (3.1 Fast) or veo_lite (3.1 Lite, about half the price). Set after the lab A/B."
+}

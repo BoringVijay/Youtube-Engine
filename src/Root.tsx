@@ -30,7 +30,7 @@ export const RemotionRoot: React.FC = () => (
       durationInFrames={300} fps={30} width={1920} height={1080}
       calculateMetadata={({props}) => {
         const p = props as unknown as FilmProps & {w?: number; h?: number};
-        return {durationInFrames: filmLength(p), width: p.w || 1920, height: p.h || 1080};
+        return {durationInFrames: filmLength(p), width: p.w || 1920, height: p.h || 1080, fps: (p as unknown as {fps?: number}).fps || 30};
       }} />
   </>
 );

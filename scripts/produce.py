@@ -17,6 +17,7 @@ import director  # noqa: E402
 import drive  # noqa: E402
 import gai  # noqa: E402
 import voice  # noqa: E402
+import shorts  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 JOBS = os.path.join(ROOT, "jobs")
@@ -74,7 +75,7 @@ def publish_status():
     jobs = []
     for st in sorted(all_states(), key=lambda s: s.get("updated", ""), reverse=True)[:40]:
         j = {k: st.get(k) for k in ("id", "q", "series", "stage", "pct", "step", "steps", "preview", "final", "shorts", "thumb", "meta",
-                                     "error", "updated", "created", "duration", "notes_in", "universe", "cameos", "cost", "youtube")}
+                                     "error", "updated", "created", "duration", "notes_in", "universe", "cameos", "cost", "youtube", "instagram", "format", "penguin_role", "v")}
         jobs.append(j)
     body = {"at": now(), "engine": "github-actions", "version": 2, "backend": gai.backend(), "budget": budget.summary(), "jobs": jobs}
     try:
@@ -145,15 +146,15 @@ def handle_inbox():
             brews[m["id"]] = m
     for jid, m in brews.items():
         st = load_state(jid)
-        if st and st.get("brew_at") == m.get("at") and st.get("v") == 2:
+        if st and st.get("brew_at") == m.get("at") and st.get("v") in (2, 3):
             continue
         if st and st["stage"] in ("approved", "uploading", "scheduled", "live"):
             continue
         old = (st or {}).get("brew", {}).get("script")
         st = st or {"id": jid, "created": now(), "pct": 0}
-        if old != m.get("script") or st.get("v") != 2:
+        if old != m.get("script") or st.get("v") != 3:
             reset(jid, "all")
-        st.update({"v": 2, "q": m.get("q"), "series": m.get("series"), "brew": {k: v for k, v in m.items() if not k.startswith("_")},
+        st.update({"v": 3, "format": "short", "q": m.get("q"), "series": m.get("series"), "brew": {k: v for k, v in m.items() if not k.startswith("_")},
                    "brew_at": m.get("at"), "error": None, "fails": 0, "preview": None, "final": None, "shorts": None, "thumb": None, "meta": None})
         set_stage(st, "queued", "Waiting for a render slot")
     auditions = []
@@ -179,6 +180,12 @@ def handle_inbox():
             set_stage(st, "queued", f"Redo requested ({what})")
         elif t == "audition":
             auditions.append(m)
+        elif t == "cancel" and st:
+            st.setdefault("notes_in", []).append({"at": m.get("at") or now(), "stage": "cancel", "notes": m.get("notes", "")})
+            set_stage(st, "cancelled", "Stopped by you. Send it again from the Brewery to restart", st.get("pct", 0))
+        elif t == "resume" and st and st.get("stage") == "cancelled":
+            st["fails"] = 0
+            set_stage(st, "queued", "Resumed. Picks up where it stopped (finished frames and clips are kept)")
     for m in msgs:
         try:
             drive.mark_done(m["_file"])
@@ -189,6 +196,31 @@ def handle_inbox():
             run_audition(auditions[-1])
         except Exception as e:
             log("audition failed:", str(e)[:200])
+
+
+_cancel_seen = {"t": 0.0, "ids": set()}
+
+
+def cancel_requested(jid):
+    """True if a cancel message for this job is waiting in the inbox. Checked between steps, at most every 30 s."""
+    if time.time() - _cancel_seen["t"] > 30:
+        _cancel_seen["t"] = time.time()
+        try:
+            for f in drive.list_inbox():
+                if f["name"].startswith("cancel-"):
+                    try:
+                        m = json.loads(drive.read_text(f["id"], f.get("mimeType", "")))
+                        if m.get("id"):
+                            _cancel_seen["ids"].add(m["id"])
+                    except Exception:
+                        pass
+        except Exception as e:
+            log("cancel check failed:", str(e)[:120])
+    return jid in _cancel_seen["ids"]
+
+
+class Cancelled(Exception):
+    pass
 
 
 def run_audition(m):
@@ -410,7 +442,7 @@ def stage_voice(st):
     if os.path.exists(sp):
         sections = json.load(open(sp))
     else:
-        sections = voice.performance(st)
+        sections = voice.performance(st, short=st.get("v") == 3)
         budget.log(st["id"], "text_call", 1, gai.LAST["backend"])
         json.dump(sections, open(sp, "w"), indent=1, ensure_ascii=False)
     v = st["brew"].get("voice") or VOICE_CFG["narrator"]
@@ -555,6 +587,94 @@ def advance(st):
     return False
 
 
+def advance_short(st):
+    """v3: fully animated vertical Short. queued -> directing -> voicing -> art -> motion -> final_render -> metadata -> final_ready."""
+    jid = st["id"]
+
+    def check():
+        if cancel_requested(jid):
+            raise Cancelled()
+    if st["stage"] not in ("queued", "directing", "voicing", "art", "motion", "final_render", "metadata"):
+        return False
+    p = jfile(jid, "direction.json")
+    if os.path.exists(p) and json.load(open(p)).get("format") == "short":
+        d = json.load(open(p))
+    else:
+        set_stage(st, "directing", "Casting the penguin and planning the shots")
+        budget.check(jid, "text_call", 3)
+        d = shorts.direct(st, notes=st.get("redo_notes", ""))
+        budget.log(jid, "text_call", 3, gai.LAST["backend"])
+        json.dump(d, open(p, "w"), indent=1, ensure_ascii=False)
+    u = d["universe"]
+    st["universe"] = u["name"] + (f" · {u['studio']}" if u.get("studio") else "")
+    st["penguin_role"] = d["penguin"]["role"]
+    st["cameos"] = [{"shot": k, "bit": v["penguin"]} for k, v in d["keyframes"].items() if v.get("penguin")]
+    check()
+    words, total = stage_voice(st)
+    check()
+    a = artmod.Art(st, d, os.path.join(OUT, jid, "art"), aspect="9:16")
+    set_stage(st, "art", f"Painting {len(d['keyframes'])} keyframes in {u['name']}")
+    shorts.keyframes(a, d, progress(st, "art", 22, 40, "Keyframe"))
+    check()
+    spans = shorts.spans_for(d, words, total)
+    set_stage(st, "motion", f"Animating {len(d['shots'])} shots")
+    shorts.motion(a, d, spans, progress(st, "motion", 40, 78, "Animating shot"), cancelled=lambda: cancel_requested(jid))
+    check()
+    stage_music(st, d)
+    set_stage(st, "final_render", "Rendering the Short", 80)
+    pdir = os.path.join(PUB, jid)
+    os.makedirs(pdir, exist_ok=True)
+    shutil.copy(os.path.join(jdir(jid), "voice", "voice.mp3"), os.path.join(pdir, "voice.mp3"))
+    media, missing = {}, []
+    for sh in d["shots"]:
+        m = {}
+        v = a.have(f"{sh['id']}.mp4")
+        if v:
+            dst = os.path.join(pdir, f"{sh['id']}.mp4")
+            shutil.copy(v, dst)
+            m["vid"] = f"job/{jid}/{sh['id']}.mp4"
+            m["vid_secs"] = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", dst], capture_output=True, text=True).stdout or 8)
+        else:
+            missing.append(sh["id"])
+        img = a.have(f"{sh['from']}.png")
+        if img:
+            jpg = os.path.join(pdir, f"{sh['from']}.jpg")
+            if not os.path.exists(jpg):
+                subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", img, "-q:v", "2", jpg], check=True)
+            m["img"] = f"job/{jid}/{sh['from']}.jpg"
+        media[sh["id"]] = m
+    if missing:
+        log("shots without motion (shown as stills):", missing)
+    mp4 = render(shorts.build_film(st, d, words, total, media), os.path.join(OUT, jid, "short.mp4"), crf=18)
+    st["final"] = {**link(drive.upload(job_folder(jid), "short.mp4", mp4, "video/mp4")), "size_mb": round(os.path.getsize(mp4) / 1e6, 1),
+                   "duration": round(total + 0.8, 1), "stills": missing}
+    st["preview"] = st["final"]
+    review_sheet(st, mp4, a)
+    set_stage(st, "metadata", "Writing the title and description")
+    st["meta"] = write_metadata_short(st, d)
+    set_stage(st, "final_ready", f"Short ready ({u['name']}, penguin as {d['penguin']['role']}). Watch it and approve or send notes")
+    return True
+
+
+def write_metadata_short(st, d):
+    script = st["brew"]["script"]
+    prompt = f"""Write YouTube Shorts metadata for a Curious Penguin Short. Voice: curious, cool, a bit cheeky, never clickbait lies.
+Topic: {st.get('q')}
+Studio and universe: {d['universe'].get('studio')} / {d['universe']['name']}
+Penguin's role in this one: {d['penguin']['role']}: {d['penguin'].get('arc', '')}
+VO: {' '.join(voice.strip_tags(b.get('vo', '')) for b in script.get('beats', []))}
+Facts to keep honest: {script.get('verify', [])[:8]}
+Return JSON: {{"title": "max 60 chars, curiosity first, no hashtags", "alt_titles": [2 more], "description": "2 short lines, then 3 to 5 hashtags including #Shorts",
+"tags": [10-15 tags], "pinned_comment": "a playful question about the penguin", "instagram_caption": "1 to 2 lines + 5 hashtags, no #Shorts"}}"""
+    try:
+        out = gai.ask_json(prompt, temperature=0.6)
+        budget.log(st["id"], "text_call", 1, gai.LAST["backend"])
+        return out
+    except Exception as e:
+        log("metadata failed:", str(e)[:200])
+        return {"title": (script.get("titles") or [st.get("q")])[0][:60], "description": st.get("q", "") + "\n#Shorts", "tags": []}
+
+
 def write_metadata(st, d, words, total):
     script = st["brew"]["script"]
     bt = beat_times(st, words, total)
@@ -599,14 +719,20 @@ def main():
     handle_inbox()
     backfill_reviews()
     order = {s: i for i, s in enumerate(["motion", "final_render", "metadata", "queued", "directing", "voicing", "art", "test_render"])}
-    work = sorted([s for s in all_states() if s.get("stage") in order and s.get("v") == 2], key=lambda s: (order[s["stage"]], s.get("updated", "")))
+    work = sorted([s for s in all_states() if s.get("stage") in order and s.get("v") in (2, 3)], key=lambda s: (order[s["stage"]], s.get("updated", "")))
     publish_status()
     for st in work:
         if time.time() - T0 > BUDGET_SEC:
             log("time budget used; the rest waits for the next run")
             break
+        if cancel_requested(st["id"]):
+            set_stage(st, "cancelled", "Stopped by you. Tap Resume to pick up where it stopped", st.get("pct", 0))
+            continue
         try:
-            advance(st)
+            advance_short(st) if st.get("v") == 3 else advance(st)
+        except Cancelled:
+            st = load_state(st["id"])
+            set_stage(st, "cancelled", "Stopped by you. Tap Resume to pick up where it stopped (finished frames and clips are kept)", st.get("pct", 0))
         except budget.OverBudget as e:
             st["error"] = f"Paused: {e}"
             st["step"] = "Paused by the spending cap. Raise it in config/budget.json or approve a cheaper redo"

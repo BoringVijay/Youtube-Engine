@@ -9,12 +9,9 @@ CFG = json.load(open(os.path.join(ROOT, "config", "voice.json")))
 TAGS = ["cheerfully", "warmly", "thoughtfully", "excitedly", "seriously", "whispering", "softly", "sarcastically", "deadpan",
         "laughing", "soft laugh", "sighs", "uhm", "short pause", "long pause", "gasps", "slowly", "fast"]
 
-PROFILE = """# AUDIO PROFILE: Vee
-## The narrator of Curious Penguin. Late 20s, sharp, funny, a little chaotic. Talks like your smartest friend who just found out something wild and absolutely has to tell you.
-## THE SCENE: Late night on a terrace, two friends, chai in hand. He leans in, half laughing, because the fact he is about to drop is ridiculous.
+PROFILE = """# AUDIO PROFILE: Curious Penguin narrator
 ### DIRECTOR'S NOTES
-Style: Loud, warm, animated, grinning. A real conversation, not narration. Punch the surprising words. Let jokes land with a beat of silence. Never sound like an announcer, an ad or an audiobook.
-Pace: Fast and bouncy when excited, slows right down for the eerie or serious bits. Natural micro pauses, like thinking out loud.
+Style: {STYLE}
 {ACCENT}
 This part: {MOOD}
 #### TRANSCRIPT
@@ -29,13 +26,13 @@ def strip_tags(t):
     return re.sub(r"\s+", " ", re.sub(r"\[[a-z ]+\]", " ", t)).strip()
 
 
-def performance(st):
-    """Split into 2-5 sections by mood and add acting tags without changing the words."""
+def performance(st, short=False):
+    """Split into sections by mood (one take for a Short) and add acting tags without changing the words."""
     beats = [re.sub(r"\[[a-z ]+\]", "", b.get("vo", "")).strip() for b in st["brew"]["script"].get("beats", [])]
     prompt = f"""You are a voice director preparing a script for an expressive TTS actor that understands inline audio tags.
-Group these consecutive beats into 2 to 5 sections where the mood changes (each section at most 550 words).
+{"Keep all beats in ONE section: it is a 55-second Short recorded in a single take." if short else "Group these consecutive beats into 2 to 5 sections where the mood changes (each section at most 550 words)."}
 For each section write the performance transcript: the SAME words as the beats, in order, adding only:
-- inline audio tags from this list where they genuinely help: {TAGS} (written like [sighs]); about one tag every 20 to 30 words, never stacked, never on every sentence;
+- inline audio tags from this list where they genuinely help: {TAGS} (written like [sighs]); {"at most 3 or 4 tags in total, mostly [short pause] before reveals; the delivery is cool and nonchalant, not theatrical" if short else "about one tag every 20 to 30 words, never stacked, never on every sentence"};
 - punctuation that guides delivery (commas between tagged clauses, question marks, ellipses for a real pause);
 - at most one tiny filler ("okay", "like", "honestly") per 60 words if it makes it sound spoken.
 Do NOT add, remove or reword anything else. Spell numbers the way they are spoken.
@@ -77,7 +74,8 @@ Return JSON: {{"sections": [{{"beats": [0, 1], "mood": "", "transcript": ""}}]}}
 
 def tts_take(text, mood, voice):
     accent = CFG.get("accent", "")
-    prompt = PROFILE.replace("{ACCENT}", f"Accent: {accent}" if accent else "").replace("{MOOD}", mood or "follow the transcript").replace("{TRANSCRIPT}", text)
+    prompt = (PROFILE.replace("{STYLE}", CFG.get("style", "Warm, conversational, engaging.")).replace("{ACCENT}", f"Accent: {accent}" if accent else "")
+              .replace("{MOOD}", mood or "follow the transcript").replace("{TRANSCRIPT}", text))
     body = {"contents": [{"role": "user", "parts": [{"text": prompt}]}],
             "generationConfig": {"responseModalities": ["AUDIO"], "speechConfig": {"voiceConfig": {"prebuiltVoiceConfig": {"voiceName": voice}}}}}
     out, model = gai.generate_any("tts", body, timeout=300)
