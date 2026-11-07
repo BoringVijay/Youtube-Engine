@@ -1,21 +1,15 @@
 [scout] wikipedia: 60 items
 [scout] google_trends: 20 items
-[scout] reddit: 7 items
+[scout] reddit: 12 items
 [scout] hacker_news: 29 items
 [scout] polymarket: 20 items
-[scout] crypto_hacks: 28 items
-[scout] gemini ping gemini-3.8-flash: failed after 0s (Gemini HTTP 402 on gemini-3.8-flash: b'{\n  "error": {\n    "code": 402,\n    "message": "Your prepayment credits are depleted. Please go to AI Studio at https:)
-[scout] gemini_hot: skipped (RuntimeError: Gemini prepay wallet is empty: add credits at aistudio.google.com/billing)
-[scout] gemini ping gemini-3.8-flash: failed after 0s (Gemini HTTP 402 on gemini-3.8-flash: b'{\n  "error": {\n    "code": 402,\n    "message": "Your prepayment credits are depleted. Please go to AI Studio at https:)
-[scout] gemini_hot: skipped (RuntimeError: Gemini prepay wallet is empty: add credits at aistudio.google.com/billing)
-[scout] gemini ping gemini-3.8-flash: failed after 0s (Gemini HTTP 402 on gemini-3.8-flash: b'{\n  "error": {\n    "code": 402,\n    "message": "Your prepayment credits are depleted. Please go to AI Studio at https:)
-[scout] gemini_hot: skipped (RuntimeError: Gemini prepay wallet is empty: add credits at aistudio.google.com/billing)
-[scout] gemini ping gemini-3.8-flash: failed after 1s (Gemini HTTP 402 on gemini-3.8-flash: b'{\n  "error": {\n    "code": 402,\n    "message": "Your prepayment credits are depleted. Please go to AI Studio at https:)
-[scout] gemini_evergreen: skipped (RuntimeError: Gemini prepay wallet is empty: add credits at aistudio.google.com/billing)
-[scout] gemini ping gemini-3.8-flash: failed after 0s (Gemini HTTP 402 on gemini-3.8-flash: b'{\n  "error": {\n    "code": 402,\n    "message": "Your prepayment credits are depleted. Please go to AI Studio at https:)
-[scout] gemini_hot: skipped (RuntimeError: Gemini prepay wallet is empty: add credits at aistudio.google.com/billing)
-[scout] gemini ping gemini-3.8-flash: failed after 0s (Gemini HTTP 402 on gemini-3.8-flash: b'{\n  "error": {\n    "code": 402,\n    "message": "Your prepayment credits are depleted. Please go to AI Studio at https:)
-[scout] gemini_evergreen: skipped (RuntimeError: Gemini prepay wallet is empty: add credits at aistudio.google.com/billing)
-[scout] done: 0 new cards, pool 175
-[scout] warning: no new cards this run (see Gemini errors above). Publishing the existing deck.
-[drive] deck.json published: 175 cards (file 1ZOpajA-ixuLKIKGA16ZyhVz49lTkP22G)
+[scout] crypto_hacks: 27 items
+[gai] text model: gemini-3.8-flash via vertex
+[scout] gemini_hot: 8 items
+[scout] gemini_hot: 8 items
+[scout] gemini_hot: 8 items
+[scout] gemini_evergreen: 8 items
+[scout] gemini_hot: 9 items
+[scout] gemini_evergreen: 8 items
+[scout] done: 49 new cards, pool 224
+[drive] deck.json published: 224 cards (file 1ZOpajA-ixuLKIKGA16ZyhVz49lTkP22G)
