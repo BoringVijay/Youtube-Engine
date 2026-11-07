@@ -37,7 +37,7 @@ jobs:
           sys.path.insert(0, "scripts")
           import drive
           inbox = [f for f in drive.list_inbox() if f["name"].endswith(".json")]
-          busy = [p for p in glob.glob("jobs/*/state.json") if json.load(open(p)).get("v") == 2 and json.load(open(p)).get("stage") in ("queued","directing","voicing","art","test_render","motion","final_render","metadata")]
+          busy = [p for p in glob.glob("jobs/*/state.json") if json.load(open(p)).get("v") == 2 and json.load(open(p)).get("stage") in ("queued","directing","voicing","art","test_render","motion","final_render","metadata","approved","uploading")]
           work = bool(inbox or busy) or os.environ.get("GITHUB_EVENT_NAME") != "schedule"
           print(f"inbox={len(inbox)} busy={len(busy)} work={work}")
           open(os.environ["GITHUB_OUTPUT"], "a").write(f"work={'yes' if work else 'no'}\n")
@@ -73,6 +73,18 @@ jobs:
           mkdir -p logs
           set -o pipefail
           python3 -u scripts/produce.py 2>&1 | tee logs/produce-last.log
+      - name: Publish approved videos (private uploads only)
+        if: steps.check.outputs.work == 'yes'
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          GDRIVE_REFRESH_TOKEN: ${{ secrets.GDRIVE_REFRESH_TOKEN }}
+          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          set -o pipefail
+          python3 -u scripts/publish.py 2>&1 | tee -a logs/produce-last.log
       - name: Save job state
         if: always() && steps.check.outputs.work == 'yes'
         run: |

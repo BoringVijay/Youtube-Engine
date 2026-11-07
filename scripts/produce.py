@@ -74,7 +74,7 @@ def publish_status():
     jobs = []
     for st in sorted(all_states(), key=lambda s: s.get("updated", ""), reverse=True)[:40]:
         j = {k: st.get(k) for k in ("id", "q", "series", "stage", "pct", "step", "steps", "preview", "final", "shorts", "thumb", "meta",
-                                     "error", "updated", "created", "duration", "notes_in", "universe", "cameos", "cost")}
+                                     "error", "updated", "created", "duration", "notes_in", "universe", "cameos", "cost", "youtube")}
         jobs.append(j)
     body = {"at": now(), "engine": "github-actions", "version": 2, "backend": gai.backend(), "budget": budget.summary(), "jobs": jobs}
     try:
