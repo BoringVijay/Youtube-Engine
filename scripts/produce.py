@@ -90,11 +90,13 @@ def publish_status():
     jobs = []
     for st in sorted(all_states(), key=lambda s: s.get("updated", ""), reverse=True)[:40]:
         j = {k: st.get(k) for k in ("id", "q", "series", "stage", "pct", "step", "steps", "preview", "final", "shorts", "thumb", "meta",
-                                     "error", "updated", "created", "duration", "notes_in", "universe", "cameos", "cost", "youtube", "instagram", "format", "penguin_role", "v")}
+                                     "error", "updated", "created", "duration", "notes_in", "universe", "cameos", "cost", "youtube", "instagram", "format", "penguin_role", "v",
+                                     "slot", "posted_claimed", "voice_style")}
         jobs.append(j)
     body = {"at": now(), "engine": "github-actions", "version": 3, "backend": gai.backend(), "budget": budget.summary(), "jobs": jobs,
             "instagram": instagram.account(), "youtube": {k: v for k, v in youtube.channel().items() if k != "uploads"},
-            "run": {**RUN, "next": next_check()}, "publish": {"api_upload": PUBLISH_CFG.get("api_audited", False)}}
+            "run": {**RUN, "next": next_check()}, "publish": {"api_upload": PUBLISH_CFG.get("api_audited", False), "footer": PUBLISH_CFG.get("description_footer", ""),
+                        "slots_ist": PUBLISH_CFG.get("experiment_slots_ist", []), "daily_cap": PUBLISH_CFG.get("daily_cap", 2)}}
     try:
         drive.put_json("outbox", "status.json", body)
     except Exception as e:

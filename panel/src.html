@@ -224,6 +224,30 @@ main { padding: 0 18px calc(var(--tabh) + var(--safe-b) + 24px); max-width: 760p
 .guide li { counter-increment: s; position: relative; padding: 14px 16px 14px 52px; background: var(--surface); border-radius: 16px; font-size: 15px; line-height: 1.45; }
 .guide li::before { content: counter(s); position: absolute; left: 14px; top: 13px; width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); font-weight: 800; font-size: 13px; }
 .guide code { background: var(--fill2); padding: 2px 6px; border-radius: 6px; font-size: 13.5px; }
+.ytlink { display: inline-flex; align-items: center; gap: 6px; height: 34px; padding: 0 12px 0 10px; border-radius: 999px; background: var(--fill); color: var(--ink); font-size: 13.5px; font-weight: 700; white-space: nowrap; }
+.ytlink svg { font-size: 18px; color: #ff0033; }
+.ytlink .sm { display: none; }
+.head > div:first-child { flex: 1; min-width: 0; }
+@media (max-width: 560px) { .head .ytlink .lg { display: none; } .head .ytlink .sm { display: inline; } }
+.enginebar { display: flex; align-items: center; gap: 10px; padding: 11px 14px; margin-bottom: 14px; border-radius: 16px; background: var(--surface); box-shadow: var(--shadow); font-size: 14px; color: var(--ink2); }
+.enginebar b { color: var(--ink); font-weight: 650; }
+.dot { width: 9px; height: 9px; border-radius: 50%; background: var(--ink3); flex: none; }
+.dot.on { background: var(--good); box-shadow: 0 0 0 4px rgba(31,157,85,.16); animation: pulse 1.6s ease-in-out infinite; }
+@keyframes pulse { 50% { box-shadow: 0 0 0 7px rgba(31,157,85,.06); } }
+.pending { display: flex; gap: 10px; align-items: flex-start; padding: 11px 13px; border-radius: 14px; background: var(--accent-soft); color: var(--ink); font-size: 14px; }
+.pending svg { color: var(--accent); font-size: 18px; flex: none; margin-top: 1px; }
+.ytstats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.ytstats div { background: var(--fill2); border-radius: 14px; padding: 10px 12px; }
+.ytstats b { display: block; font-size: 20px; font-weight: 800; letter-spacing: -.02em; }
+.ytstats span { font-size: 12px; font-weight: 650; color: var(--ink2); }
+.kit { display: grid; gap: 10px; }
+.kitrow { background: var(--surface); border-radius: 16px; padding: 12px 14px; display: grid; gap: 6px; }
+.kitrow .h { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 650; color: var(--ink2); }
+.kitrow .h .btn { margin-left: auto; }
+.kitrow .v { font-size: 15px; white-space: pre-wrap; word-break: break-word; max-height: 160px; overflow: auto; }
+.chan { display: flex; align-items: center; gap: 14px; }
+.chan .av { width: 52px; height: 52px; border-radius: 50%; background: #ff0033; color: #fff; display: grid; place-items: center; font-size: 26px; flex: none; }
+.chan .nm { font-weight: 800; font-size: 19px; letter-spacing: -.012em; }
 .toast { position: fixed; left: 50%; bottom: calc(var(--tabh) + var(--safe-b) + 18px); z-index: 60; transform: translate(-50%, 20px); opacity: 0; padding: 12px 18px; border-radius: 999px; background: var(--ink); color: var(--bg); font-size: 14.5px; font-weight: 600; box-shadow: var(--shadow); transition: transform .35s cubic-bezier(.2,.9,.3,1.2), opacity .25s ease; pointer-events: none; max-width: calc(100vw - 32px); text-align: center; }
 .toast.on { transform: translate(-50%, 0); opacity: 1; }
 @media (min-width: 960px) { .toast { bottom: 28px; } }
@@ -243,7 +267,7 @@ main { padding: 0 18px calc(var(--tabh) + var(--safe-b) + 24px); max-width: 760p
     <button data-view="ideas" aria-selected="false"><span data-i="ideas"></span>Ideas<span class="badge" data-badge="ideas" hidden></span></button>
     <button data-view="studio" aria-selected="false"><span data-i="studio"></span>Studio<span class="badge" data-badge="studio" hidden></span></button>
     <button data-view="stats" aria-selected="false"><span data-i="stats"></span>Channel</button>
-    <div class="foot" id="engineFoot">Connecting…</div>
+    <div class="foot"><a class="ytlink" data-ytlink hidden target="_blank" rel="noopener" style="margin-bottom:10px"></a><div id="engineFoot">Connecting…</div></div>
   </aside>
 
   <main>
@@ -282,7 +306,8 @@ main { padding: 0 18px calc(var(--tabh) + var(--safe-b) + 24px); max-width: 760p
     <!-- Studio -->
     <section class="view" id="view-studio" hidden>
       <div class="head"><div><h1>Studio</h1><div class="sub" id="studioSub">Your Shorts, from first frame to posted.</div></div>
-        <div class="tools"><button class="btn sm icon" id="btnStatus" aria-label="Refresh status"><span data-i="refresh"></span></button></div></div>
+        <div class="tools"><a class="ytlink" data-ytlink hidden target="_blank" rel="noopener"></a><button class="btn sm icon" id="btnStatus" aria-label="Refresh status"><span data-i="refresh"></span></button></div></div>
+      <div class="enginebar" id="engineBar"><span class="dot"></span><span>Waiting for the engine's first report.</span></div>
       <div class="seg" id="studioSeg" role="group" aria-label="Filter" style="margin-bottom:14px">
         <button data-f="now" aria-pressed="true">In progress</button><button data-f="ready" aria-pressed="false">Ready</button><button data-f="out" aria-pressed="false">Posted</button>
       </div>
@@ -291,7 +316,7 @@ main { padding: 0 18px calc(var(--tabh) + var(--safe-b) + 24px); max-width: 760p
 
     <!-- Channel -->
     <section class="view" id="view-stats" hidden>
-      <div class="head"><div><h1>Channel</h1><div class="sub">Budget, voice and where Shorts get posted.</div></div></div>
+      <div class="head"><div><h1>Channel</h1><div class="sub">Budget, voice and where Shorts get posted.</div></div><div class="tools"><a class="ytlink" data-ytlink hidden target="_blank" rel="noopener"></a></div></div>
       <div id="statsBody"></div>
     </section>
   </main>
@@ -321,6 +346,32 @@ const ROLES = [["auto", "Director decides"], ["protagonist", "Protagonist"], ["s
 const VSTYLES = [["A", "Calm and deadpan"], ["B", "Punchy"], ["C", "Cool, punch on reveals"]];
 const STEPS = [["voicing", "Voice"], ["directing", "Direct"], ["art", "Frames"], ["motion", "Animate"], ["final_render", "Render"], ["final_ready", "Review"], ["scheduled", "Posted"]];
 const WORKING = new Set(["queued", "directing", "voicing", "art", "test_render", "motion", "final_render", "metadata", "uploading"]);
+const PENDING = new Map();  // job id -> {act, at}: actions sent to the engine but not yet picked up
+try { for (const [k, v] of Object.entries(JSON.parse(localStorage.getItem("ps-pending") || "{}"))) if (Date.now() - v.at < 6 * 3.6e6) PENDING.set(k, v); } catch (e) {}
+function savePending() { try { localStorage.setItem("ps-pending", JSON.stringify(Object.fromEntries(PENDING))); } catch (e) {} }
+const hhmm = (iso) => new Date(iso).toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" });
+const when = (iso) => new Date(iso).toLocaleString(undefined, { weekday: "short", day: "numeric", month: "short", hour: "numeric", minute: "2-digit" });
+function engineState() {
+  const st = S.files["status.json"]; if (!st) return { on: false, text: "Waiting for the engine's first report." };
+  const r = st.run || {};
+  if (r.active) { const j = jobs().find((x) => x.id === r.job); return { on: true, text: `<b>Engine running</b> · ${j ? "on " + esc((j.meta && j.meta.title) || j.q) : "checking messages"} · started ${ago(r.started)}`, short: "after the Short it's working on" }; }
+  if (r.next) return { on: false, text: `<b>Engine idle</b> · next check ${hhmm(r.next)} · last report ${ago(st.at)}`, short: "by " + hhmm(r.next) };
+  return { on: false, text: `<b>Engine</b> last reported ${ago(st.at)}`, short: "on its next run" };
+}
+function ytChannel() { return (S.files["status.json"] || {}).youtube || {}; }
+function paintChannelLinks() {
+  const c = ytChannel();
+  $$("[data-ytlink]").forEach((a) => { if (c.connected) { a.href = c.url; a.innerHTML = `${ic("yt")}<span class="lg">${esc(c.handle || c.title)}</span><span class="sm">Channel</span>`; a.title = "Open " + (c.handle || c.title) + " on YouTube"; a.hidden = false; } else a.hidden = true; });
+}
+async function copyText(t, b) {
+  let ok = false;
+  try { await navigator.clipboard.writeText(t); ok = true; } catch (e) {
+    const ta = document.createElement("textarea"); ta.value = t; ta.style.position = "fixed"; ta.style.opacity = "0"; document.body.appendChild(ta); ta.select();
+    try { ok = document.execCommand("copy"); } catch (e2) {} ta.remove();
+  }
+  if (b) { const w = b.innerHTML; b.innerHTML = ok ? `${ic("check")}Copied` : "Select and copy"; setTimeout(() => (b.innerHTML = w), 1600); }
+  if (!ok) toast("Copy blocked here. Long-press the text to copy.");
+}
 const RM = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 const S = { db: null, mcp: null, sample: null, deck: [], deckMeta: null, wild: [], swiped: new Map(), ideas: new Map(), queue: [], mode: "mix",
@@ -410,7 +461,7 @@ async function loadEngine() {
   for (const n of ["status.json", "auditions.json"]) { try { const f = await driveFind(n); S.files[n] = f ? await driveReadJson(f.id) : null; } catch (e) {} }
   S.statusAt = Date.now(); syncIdeasFromEngine(); renderStudio(); renderStats(); badges(); footFromStatus();
 }
-function footFromStatus() { const st = S.files["status.json"]; setFoot(st ? `Engine checked in ${ago(st.at)}` : "Waiting for the engine's first report."); }
+function footFromStatus() { const es = engineState(); $("#engineFoot").innerHTML = es.text; paintChannelLinks(); }
 async function refreshStatus(manual) {
   if (!S.mcp || S.busy) return; S.busy = true;
   try { const f = await driveFind("status.json"); S.files["status.json"] = f ? await driveReadJson(f.id) : null; S.statusAt = Date.now(); syncIdeasFromEngine(); renderStudio(); badges(); footFromStatus(); if (manual) toast("Up to date"); }
@@ -468,6 +519,10 @@ function renderDeck() {
   const st = $("#stack");
   if (S.deckMeta) { const h = (Date.now() - Date.parse(S.deckMeta.modified)) / 3.6e6; $("#deckSub").textContent = `${S.queue.length} to swipe · refreshed ${h < 1 ? "just now" : Math.round(h) + "h ago"}`; }
   const top = S.queue.slice(0, 3);
+  if (!top.length && S.loading) {
+    st.innerHTML = `<div class="card"><div class="skel" style="height:26px;width:40%"></div><div class="skel" style="height:96px;margin-top:30px"></div><div class="skel" style="height:22px;width:70%;margin-top:14px"></div><div class="spacer"></div><div class="skel" style="height:64px"></div></div>`;
+    return;
+  }
   if (!top.length) {
     st.innerHTML = `<div class="empty"><div class="art">${ic("discover")}</div><h3>${S.deck.length ? "You've seen them all" : "Loading ideas"}</h3><p>The engine refills the deck every 4 hours.</p>
       <div class="row"><button class="btn" data-act="refresh">${ic("refresh")}Refresh</button><button class="btn primary" data-act="wild">${ic("dice")}Deal 15 wildcards</button></div></div>`;
@@ -690,7 +745,7 @@ async function makeShort(id, btn) {
   btn.disabled = true; btn.innerHTML = `${ic("send")}Sending…`;
   try {
     await inbox("brew", { id, q: i.q, series: "Curious Penguin", aud: i.aud, format: { long: false, minutes: 1, shorts: 0 }, angle: i.angle, notes: i.notes, refs: i.refs,
-      penguin_role: i.role && i.role !== "auto" ? i.role : "", voice_style: i.vstyle || "", voice: S.voice || undefined,
+      penguin_role: i.role && i.role !== "auto" ? i.role : "", voice_style: i.vstyle || S.vstyle || "", voice: S.voice || undefined,
       script: { titles: i.script.titles, beats: i.script.beats, vo: i.script.vo, verify: i.script.verify } });
     await saveIdea(id, { status: "sent", sentAt: new Date().toISOString() });
     closeSheet(); renderIdeas(); badges(); toast("Sent. The engine starts on its next run."); showView("studio");
@@ -731,11 +786,14 @@ document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeSheet
 /* ---------- Studio ---------- */
 $$("#studioSeg button").forEach((b) => (b.onclick = () => { S.studioF = b.dataset.f; $$("#studioSeg button").forEach((x) => x.setAttribute("aria-pressed", String(x === b))); renderStudio(); }));
 $("#btnStatus").onclick = () => refreshStatus(true);
-function bucket(j) { return WORKING.has(j.stage) || j.stage === "cancelled" || j.stage === "failed" || j.stage === "test_ready" ? "now" : j.stage === "final_ready" ? "ready" : "out"; }
-function stepIdx(stage) { const m = { queued: -1, voicing: 0, directing: 1, art: 2, test_render: 2, motion: 3, final_render: 4, metadata: 4, final_ready: 5, approved: 6, uploading: 6, scheduled: 6, live: 6 }; return m[stage] ?? -1; }
+function bucket(j) { return WORKING.has(j.stage) || j.stage === "cancelled" || j.stage === "failed" || j.stage === "test_ready" ? "now" : j.stage === "final_ready" || j.stage === "posting" ? "ready" : "out"; }
+function stepIdx(stage) { const m = { queued: -1, voicing: 0, directing: 1, art: 2, test_render: 2, motion: 3, final_render: 4, metadata: 4, final_ready: 5, posting: 6, approved: 6, uploading: 6, scheduled: 7, live: 7 }; return m[stage] ?? -1; }
+function ytVideo(j) { return ((j.youtube || {}).videos || [])[0] || null; }
 function stageWord(j) {
   return { queued: "Queued", directing: "Directing", voicing: "Recording voice", art: "Painting frames", motion: "Animating", final_render: "Rendering", metadata: "Finishing", final_ready: "Ready for you",
-    approved: "Uploading soon", uploading: "Uploading", scheduled: "On YouTube", live: "Live", cancelled: "Stopped", failed: "Stopped on an error", test_ready: "Test cut" }[j.stage] || j.stage;
+    posting: j.posted_claimed ? "Looking for it on YouTube" : "Ready to post", approved: "Approved", uploading: "Uploading",
+    scheduled: ytVideo(j) && ytVideo(j).publish_at ? "Scheduled" : "On YouTube, " + ((ytVideo(j) || {}).privacy || "private"), live: "Live",
+    cancelled: "Stopped", failed: "Stopped on an error", test_ready: "Test cut" }[j.stage] || j.stage;
 }
 function prodHTML(j) {
   const working = WORKING.has(j.stage), si = stepIdx(j.stage), m = j.meta || {}, yt = (j.youtube || {}).videos || [], ig = j.instagram || {};
@@ -749,7 +807,11 @@ function prodHTML(j) {
       <div class="steps-l" aria-hidden="true">${STEPS.map((s) => `<span>${s[1]}</span>`).join("")}</div>` : ""}
       ${working ? `<div class="track live" role="progressbar" aria-valuenow="${j.pct || 0}" aria-valuemin="0" aria-valuemax="100"><i style="width:${Math.max(3, j.pct || 0)}%"></i></div><div class="stepline"><span>${esc(j.step || "")}</span><span>${j.pct || 0}% · ${ago(j.updated)}</span></div>` : ""}
       ${j.error && j.stage !== "cancelled" ? `<div class="err">${esc(j.error)}</div>` : ""}
-      ${yt.length || ig.status ? `<div class="pubs">${yt.map((v) => `<div class="pub">${ic("yt")}<div><div>${v.kind === "main" ? "YouTube" : esc(v.kind)}${v.privacy ? " · " + esc(v.privacy) : ""}</div><div class="s">${v.slot ? "Suggested: " + new Date(v.slot).toLocaleString(undefined, { weekday: "short", day: "numeric", month: "short", hour: "numeric", minute: "2-digit" }) : ""}</div></div><a class="btn sm" href="${esc(v.studio)}" target="_blank" rel="noopener">Open ${ic("out")}</a></div>`).join("")}
+      ${pendingHTML(j)}
+      ${!working && j.step && ["posting", "scheduled", "live", "approved", "cancelled", "failed"].includes(j.stage) ? `<div class="stepline"><span>${esc(j.step)}</span><span>${ago(j.updated)}</span></div>` : ""}
+      ${j.stage === "posting" && j.slot ? `<div class="stepline"><span>Suggested time: <b style="color:var(--ink)">${when(j.slot)}</b></span></div>` : ""}
+      ${yt.length && yt[0].views != null ? `<div class="ytstats"><div><b>${fmt(yt[0].views)}</b><span>views</span></div><div><b>${fmt(yt[0].likes)}</b><span>likes</span></div><div><b>${fmt(yt[0].comments)}</b><span>comments</span></div></div>` : ""}
+      ${yt.length || ig.status ? `<div class="pubs">${yt.map((v) => `<div class="pub">${ic("yt")}<div><div>YouTube · ${esc(v.privacy || "")}</div><div class="s">${v.publish_at ? "Goes public " + when(v.publish_at) : v.published ? "Posted " + when(v.published) : ""}${v.checked ? " · checked " + ago(v.checked) : ""}</div></div><a class="btn sm" href="${esc(v.url || v.studio)}" target="_blank" rel="noopener">Open ${ic("out")}</a></div>`).join("")}
         ${ig.status ? `<div class="pub">${ic("ig")}<div><div>Instagram · ${esc(ig.status)}</div>${ig.error ? `<div class="s">${esc(ig.error)}</div>` : ""}</div>${ig.permalink ? `<a class="btn sm" href="${esc(ig.permalink)}" target="_blank" rel="noopener">Open ${ic("out")}</a>` : ""}</div>` : ""}</div>` : ""}
       <div class="btnrow">${actions(j)}</div>
     </div>
@@ -759,15 +821,20 @@ function actions(j) {
   const a = [];
   if (WORKING.has(j.stage) && j.stage !== "uploading") a.push(`<button class="btn danger grow" data-act="cancel">${ic("stop")}Stop</button>`);
   if (j.stage === "cancelled" || j.stage === "failed") a.push(`<button class="btn primary grow" data-act="resume">${ic("resume")}Resume</button>`);
-  if (j.stage === "final_ready") { a.push(`<button class="btn primary grow" data-act="approve">${ic("yt")}Approve, upload private</button>`); a.push(`<button class="btn grow" data-act="notes">${ic("pencil")}Notes and redo</button>`); }
-  if (["final_ready", "approved", "scheduled", "live"].includes(j.stage) && !(j.instagram && ["posted", "queued", "posting"].includes(j.instagram.status))) a.push(`<button class="btn grow" data-act="ig">${ic("ig")}Post to Instagram</button>`);
+  if (j.stage === "final_ready") { a.push(`<button class="btn primary grow" data-act="post">${ic("yt")}Post to YouTube</button>`); a.push(`<button class="btn grow" data-act="notes">${ic("pencil")}Notes and redo</button>`); }
+  if (j.stage === "posting") { a.push(`<button class="btn primary grow" data-act="kit">${ic("yt")}Posting kit</button>`); if (!j.posted_claimed) a.push(`<button class="btn grow" data-act="posted">${ic("check")}I've posted it</button>`); }
+  if ((j.stage === "scheduled" || j.stage === "live") && ytVideo(j)) a.push(`<a class="btn grow" href="${esc(ytVideo(j).studio)}" target="_blank" rel="noopener">${ic("yt")}YouTube Studio</a>`);
+  if (["final_ready", "posting", "approved", "scheduled", "live"].includes(j.stage) && !(j.instagram && ["posted", "queued", "posting"].includes(j.instagram.status))) a.push(`<button class="btn grow" data-act="ig">${ic("ig")}Post to Instagram</button>`);
   if (j.final) a.push(`<a class="btn icon" href="${esc(j.final.view)}" target="_blank" rel="noopener" aria-label="Open in Google Drive" title="Open in Google Drive">${ic("drive")}</a>`);
   return a.join("");
 }
 function renderStudio() {
   const st = S.files["status.json"]; const list = jobs().filter((j) => bucket(j) === S.studioF);
-  const working = jobs().filter((j) => WORKING.has(j.stage)).length;
-  $("#studioSub").textContent = st ? `${working ? working + " in production · " : ""}engine checked in ${ago(st.at)}` : "Waiting for the engine's first report.";
+  const working = jobs().filter((j) => WORKING.has(j.stage)).length, waiting = jobs().filter((j) => bucket(j) === "ready").length;
+  for (const j of jobs()) { const p = PENDING.get(j.id); if (p && Date.parse(j.updated) > p.at) { PENDING.delete(j.id); savePending(); } }
+  $("#studioSub").textContent = st ? [working ? working + " in production" : "", waiting ? waiting + " waiting on you" : "", !working && !waiting ? "All caught up" : ""].filter(Boolean).join(" · ") : "Your Shorts, from first frame to posted.";
+  const es = engineState(); $("#engineBar").innerHTML = `<span class="dot ${es.on ? "on" : ""}"></span><span>${es.text}</span>`;
+  paintChannelLinks();
   const el = $("#prodList");
   if (!list.length) { el.innerHTML = `<div class="empty"><div class="art">${ic("studio")}</div><h3>${S.studioF === "now" ? "Nothing in production" : S.studioF === "ready" ? "Nothing waiting on you" : "Nothing posted yet"}</h3><p>${S.studioF === "now" ? "Keep an idea in Discover, write its script in Ideas, then tap Make the Short." : S.studioF === "ready" ? "Finished Shorts land here for your review." : "Approved Shorts show their YouTube and Instagram links here."}</p></div>`; return; }
   el.innerHTML = list.map(prodHTML).join(""); paintIcons(el);
@@ -787,16 +854,19 @@ function wireProd(card, j) {
   $$("[data-act]", card).forEach((b) => (b.onclick = async () => {
     const act = b.dataset.act;
     if (act === "notes") return openNotes(j);
+    if (act === "kit") return openKit(j);
+    if (act === "post") { openKit(j); if (!PENDING.has(j.id)) { try { await inbox("approve", { id: j.id, stage: "final" }); PENDING.set(j.id, { act: "post", at: Date.now() }); savePending(); renderStudio(); } catch (e) { toast(mcpErr(e)); } } return; }
     if (act === "ig" && !((S.files["status.json"] || {}).instagram || {}).connected) { toast("Connect Instagram first. Steps are in Channel."); return showView("stats"); }
     if (act === "cancel" && !armed(b, "Tap again to stop")) return;
     if (act === "ig" && !armed(b, "Tap again to post publicly")) return;
     b.disabled = true;
     try {
       if (act === "cancel") { await inbox("cancel", { id: j.id }); toast("Stopping. Finished frames and clips are kept."); }
-      if (act === "resume") { await inbox("resume", { id: j.id }); toast("Resuming on the engine's next run."); }
-      if (act === "approve") { await inbox("approve", { id: j.id, stage: "final" }); toast("Approved. It uploads to YouTube as private."); }
+      if (act === "resume") { await inbox("resume", { id: j.id }); toast("Resuming " + engineState().short + "."); }
+      if (act === "posted") { await inbox("posted", { id: j.id }); toast("Nice. The engine finds it on your channel and starts tracking."); }
       if (act === "ig") { await inbox("instagram", { id: j.id }); toast("Queued for Instagram."); }
-      b.innerHTML = `${ic("check")}Sent`;
+      PENDING.set(j.id, { act, at: Date.now() }); savePending();
+      b.innerHTML = `${ic("check")}Sent`; setTimeout(renderStudio, 900);
     } catch (e) { toast(mcpErr(e)); b.disabled = false; }
   }));
 }
@@ -805,6 +875,46 @@ function armed(b, label) {
   const was = b.innerHTML; b.dataset.armed = "1"; b.innerHTML = `${b.querySelector("svg") ? b.querySelector("svg").outerHTML : ""}${label}`;
   setTimeout(() => { if (b.isConnected && !b.disabled) { delete b.dataset.armed; b.innerHTML = was; } }, 3000);
   return false;
+}
+function pendingHTML(j) {
+  const p = PENDING.get(j.id); if (!p || Date.parse(j.updated) > p.at) return "";
+  const what = { post: "Marked for posting", posted: "Told the engine it's posted", cancel: "Stop sent", resume: "Resume sent", ig: "Instagram post queued", approve: "Approval sent" }[p.act] || "Sent";
+  return `<div class="pending">${ic("clock")}<div><b>${what}</b> ${ago(new Date(p.at).toISOString())}. The engine picks it up ${engineState().short}.</div></div>`;
+}
+function kitText(j) {
+  const m = j.meta || {}, pub = (S.files["status.json"] || {}).publish || {};
+  let desc = (m.description || j.q || "").trim();
+  if (pub.footer) desc += "\n\n" + pub.footer;
+  if (!/#shorts/i.test(desc)) desc += "\n#Shorts";
+  return { title: (m.title || j.q || "").slice(0, 100), desc, tags: (m.tags || []).join(", "), pin: m.pinned_comment || "" };
+}
+function openKit(j) {
+  const k = kitText(j), f = j.final || {}, pub = (S.files["status.json"] || {}).publish || {}, c = ytChannel();
+  const slot = j.slot ? when(j.slot) : (pub.slots_ist || []).slice(0, 2).map((t) => t + " IST").join(" or ");
+  const row = (label, key, val) => val ? `<div class="kitrow"><div class="h">${label}<button class="btn sm" data-copy="${key}">${ic("list")}Copy</button></div><div class="v">${esc(val)}</div></div>` : "";
+  openSheet("Post to YouTube", `
+    <div class="notice">Post it from the YouTube app. It takes about a minute. Google keeps videos uploaded by unaudited apps locked private, so this way it can actually go public. The engine finds it on ${c.connected ? "<b>" + esc(c.handle || c.title) + "</b>" : "your channel"} and tracks views from there.</div>
+    <div class="btnrow">
+      <a class="btn primary grow" href="${esc(f.download || f.view || "#")}" target="_blank" rel="noopener">${ic("drive")}Download video</a>
+      <a class="btn grow" href="https://www.youtube.com/upload" target="_blank" rel="noopener">${ic("yt")}Open YouTube</a>
+    </div>
+    <div class="kit">
+      ${row("Title", "title", k.title)}
+      ${row("Description", "desc", k.desc)}
+      ${row("Tags (YouTube Studio, Show more)", "tags", k.tags)}
+      ${row("Pin this comment after it's live", "pin", k.pin)}
+    </div>
+    <ol class="guide">
+      <li>Download the video, then in the YouTube app tap <b>+</b>, <b>Upload a video</b> and pick it. Vertical and under 3 minutes, so it goes up as a Short.</li>
+      <li>Paste the <b>title</b>, then the <b>description</b>.</li>
+      <li><b>Altered or synthetic content</b>: No for clearly animated looks like clay or paper. Yes if any shot could pass for real footage.</li>
+      <li>Post now or <b>schedule</b> it${slot ? " for " + esc(slot) : ""}. Keep the title as is, that's how the engine finds it.</li>
+    </ol>
+    ${j.stage !== "live" && j.stage !== "scheduled" && !j.posted_claimed ? `<button class="btn ink" data-posted>${ic("check")}I've posted it</button>` : ""}`, (root) => {
+    $$("[data-copy]", root).forEach((b) => (b.onclick = () => copyText({ title: k.title, desc: k.desc, tags: k.tags, pin: k.pin }[b.dataset.copy], b)));
+    const pb = $("[data-posted]", root);
+    if (pb) pb.onclick = async () => { pb.disabled = true; try { await inbox("posted", { id: j.id }); PENDING.set(j.id, { act: "posted", at: Date.now() }); savePending(); toast("Nice. It shows up here with live numbers once the engine finds it."); closeSheet(); renderStudio(); } catch (e) { toast(mcpErr(e)); pb.disabled = false; } };
+  });
 }
 function openNotes(j) {
   openSheet("Notes and redo", `
@@ -836,6 +946,7 @@ function renderStats() {
       <div class="tile"><div class="n">${all.filter((j) => j.stage === "scheduled" || j.stage === "live").length}</div><div class="l">Shorts on YouTube</div></div>
       <div class="tile"><div class="n">${all.filter((j) => WORKING.has(j.stage)).length}</div><div class="l">In production</div></div>
     </div>
+    <div class="section"><h2>YouTube</h2>${ytSection(st, all)}</div>
     <div class="section"><h2>Narration</h2>
       <div class="pick" id="vsPick">${VSTYLES.map(([k, l]) => `<button data-v="${k}" aria-pressed="${(S.vstyle || "C") === k}">${l}</button>`).join("")}</div>
       <p class="muted" style="font-size:14px;margin:10px 2px 0">Default delivery for new Shorts. Each idea can override it.</p></div>
@@ -851,20 +962,30 @@ function renderStats() {
         <li>In GitHub, repo <b>Settings, Secrets and variables, Actions</b>: add <code>IG_ACCESS_TOKEN</code> (the Page token) and <code>IG_USER_ID</code> (the id). Tell me when it's in and I'll run a test post.</li>
       </ol>`}
     </div>
-    <div class="section"><h2>YouTube</h2><div class="notice">Approved Shorts upload as <b>private</b> with title, description, tags and the AI disclosure, then show a suggested publish time. You publish from YouTube Studio until Google approves the API audit.</div></div>`;
+`;
   $$("#vsPick button").forEach((btn) => (btn.onclick = async () => { S.vstyle = btn.dataset.v; $$("#vsPick button").forEach((x) => x.setAttribute("aria-pressed", String(x === btn))); if (S.db) { try { await S.db.doc("settings/voice").set({ name: S.voice || null, style: S.vstyle }); } catch (e) {} } toast("Saved"); }));
 }
 
+function ytSection(st, all) {
+  const c = st.youtube || {}, live = all.filter((j) => ytVideo(j));
+  const views = live.reduce((n, j) => n + (ytVideo(j).views || 0), 0);
+  if (!c.connected) return `<div class="notice"><b>Not connected.</b> ${esc(c.error || "The engine reports the channel on its next run.")}</div>`;
+  return `<div class="group" style="padding:16px 18px;display:grid;gap:14px">
+      <div class="chan"><div class="av">${ic("yt")}</div><div><div class="nm">${esc(c.title)}</div><div class="muted" style="font-size:14px">${esc(c.handle || "")}</div></div></div>
+      <div class="ytstats"><div><b>${c.subs == null ? "hidden" : fmt(c.subs)}</b><span>subscribers</span></div><div><b>${fmt(c.videos)}</b><span>videos</span></div><div><b>${fmt(views)}</b><span>Curious Penguin views</span></div></div>
+      <div class="btnrow"><a class="btn grow" href="${esc(c.url)}" target="_blank" rel="noopener">${ic("yt")}Open channel</a><a class="btn grow" href="${esc(c.studio)}" target="_blank" rel="noopener">${ic("out")}YouTube Studio</a></div>
+    </div>
+    <div class="notice" style="margin-top:12px">The engine is signed in to this channel. Shorts get posted from the YouTube app with the <b>posting kit</b>, because Google locks API uploads from unaudited apps as private for good. Once a Short is up, the engine finds it by title and refreshes views, likes and comments every hour.</div>`;
+}
 function badges() {
   const n1 = [...S.ideas.values()].filter((i) => ideaStatus(i) === "active").length;
-  const n2 = jobs().filter((j) => j.stage === "final_ready").length;
+  const n2 = jobs().filter((j) => j.stage === "final_ready" || (j.stage === "posting" && !j.posted_claimed)).length;
   $$('[data-badge="ideas"]').forEach((b) => { b.textContent = n1; b.hidden = !n1; });
   $$('[data-badge="studio"]').forEach((b) => { b.textContent = n2; b.hidden = !n2; });
 }
 
 /* ---------- boot ---------- */
-paintIcons(); renderDeck();
-$("#stack").innerHTML = `<div class="card" style="box-shadow:var(--card-shadow)"><div class="skel" style="height:26px;width:40%"></div><div class="skel" style="height:96px;margin-top:30px"></div><div class="skel" style="height:22px;width:70%;margin-top:14px"></div></div>`;
+S.loading = true; paintIcons(); renderDeck();
 (async () => {
   const [db, mcp, sample] = await Promise.all([claude.use("db").catch(() => null), claude.use("mcp").catch(() => null), claude.use("sample").catch(() => null)]);
   S.db = db; S.mcp = mcp; S.sample = sample;
@@ -880,6 +1001,7 @@ $("#stack").innerHTML = `<div class="card" style="box-shadow:var(--card-shadow)"
   }
   setFoot(mcp ? "Engine: connecting" : "Drive isn't available in this view.");
   await loadDeck(false);
+  S.loading = false; renderDeck();
   setInterval(() => { if (!document.hidden && Date.now() - S.statusAt > 55000 && (!$("#view-studio").hidden || jobs().some((j) => WORKING.has(j.stage)))) refreshStatus(false); }, 15000);
 })();
 </script>
