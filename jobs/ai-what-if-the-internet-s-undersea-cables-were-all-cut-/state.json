@@ -1,7 +1,7 @@
 {
  "id": "ai-what-if-the-internet-s-undersea-cables-were-all-cut-",
  "created": "2026-11-06T15:50:59+00:00",
- "pct": 55,
+ "pct": 46,
  "q": "What if the internet's undersea cables were all cut?",
  "series": "Curious Penguin",
  "brew": {
@@ -254,9 +254,9 @@
   }
  },
  "brew_at": "2026-11-06T15:26:28.303Z",
- "error": null,
- "stage": "queued",
- "step": "Repainting every frame (fixing repeated anchor shots)",
+ "error": "Drive GET https://www.googleapis.com/drive/v3/files -> HTTP 401: {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"errors\": [\n      {\n        \"message\": \"Invalid Credentials\",\n        \"d",
+ "stage": "test_render",
+ "step": "Hit an error. Retrying next run",
  "steps": [
   {
    "stage": "queued",
@@ -271,19 +271,19 @@
    "at": "2026-11-07T02:28:34+00:00"
   },
   {
+   "stage": "test_ready",
+   "at": "2026-11-07T03:06:52+00:00"
+  },
+  {
    "stage": "art",
-   "at": "2026-11-07T02:31:15+00:00"
+   "at": "2026-11-07T03:26:24+00:00"
   },
   {
    "stage": "test_render",
-   "at": "2026-11-07T02:53:48+00:00"
-  },
-  {
-   "stage": "test_ready",
-   "at": "2026-11-07T03:06:52+00:00"
+   "at": "2026-11-07T04:19:02+00:00"
   }
  ],
- "updated": "2026-11-07T03:25:40+00:00",
+ "updated": "2026-11-07T04:32:36+00:00",
  "duration": 316.2,
  "preview": {
   "id": "1JmL34z_fwFvR_cbD6RebJzzaFE4BbqXy",
@@ -304,8 +304,8 @@
  "shorts": null,
  "thumb": null,
  "meta": null,
- "fails": 0,
- "cost": 4.162,
+ "fails": 1,
+ "cost": 7.78,
  "universe": "Deep-sea layered paper diorama",
  "cameos": [
   {
