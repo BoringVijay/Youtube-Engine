@@ -119,11 +119,16 @@ _MISSING = re.compile(r"HTTP 404|not found|is not supported|does not exist|not a
 _BUSY = re.compile(r"HTTP (429|500|502|503|504)|timed out|RESOURCE_EXHAUSTED|UNAVAILABLE", re.I)
 
 
+STICKY = {"image", "tts"}  # once a model works, a video keeps it (consistent look and voice); busy means wait, not switch
+
+
 def generate_any(kind, body, timeout=300, tries=4):
     """Call the first model of this kind that exists on the current backend. Remembers the winner."""
     order = CANDIDATES[kind]
     if kind in _chosen:
-        order = [_chosen[kind]] + [m for m in order if m != _chosen[kind]]
+        order = [_chosen[kind]] if kind in STICKY else [_chosen[kind]] + [m for m in order if m != _chosen[kind]]
+        if kind in STICKY:
+            tries = 9
     last = None
     for model in order:
         for attempt in range(tries):
@@ -142,10 +147,18 @@ def generate_any(kind, body, timeout=300, tries=4):
                     print(f"[gai] {kind}: {model} not available here", flush=True)
                     break
                 if _BUSY.search(msg):
-                    time.sleep(min(90, 12 * (attempt + 1)))
+                    wait = min(150, 15 * (attempt + 1))
+                    print(f"[gai] {kind}: {model} busy ({msg[:60]}), waiting {wait}s", flush=True)
+                    time.sleep(wait)
                     continue
                 raise
     raise RuntimeError(f"no {kind} model worked: {last}")
+
+
+def pin(kind, model):
+    """Force a model choice, e.g. the image model a video started with."""
+    if model:
+        _chosen[kind] = model
 
 
 def ask_json(prompt, kind="text", temperature=0.8, timeout=240):

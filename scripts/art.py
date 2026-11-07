@@ -48,6 +48,7 @@ def image(prompt, out_png, refs=(), aspect="16:9", job=None, size="2K"):
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", tmp, out_png], check=True)
     os.remove(tmp)
     budget.log(job, "image", 1, gai.LAST["backend"])
+    image.last_model = model
     return out_png
 
 
@@ -112,6 +113,8 @@ class Art:
         return None
 
     def keep(self, name, mime):
+        if mime == "image/png" and getattr(image, "last_model", None) and not self.man.get("image_model"):
+            self.man["image_model"] = image.last_model
         fid = drive.upload(self._folder(), name, self.path(name), mime)
         self.man["files"][name] = fid
         self.save()
@@ -166,7 +169,8 @@ class Art:
             if progress:
                 progress(done[0], len(shots))
             return name
-        with ThreadPoolExecutor(max_workers=4) as ex:
+        gai.pin("image", self.man.get("image_model"))
+        with ThreadPoolExecutor(max_workers=2) as ex:
             list(ex.map(one, shots))
 
     def motion(self, progress=None):
