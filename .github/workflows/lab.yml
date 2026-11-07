@@ -1,5 +1,5 @@
 name: Creative lab
-# rerun: 3
+# rerun: 4
 # Tries visual styles, voices and AI motion. Runs when lab/request.json or the lab script changes.
 on:
   workflow_dispatch:

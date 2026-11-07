@@ -158,7 +158,8 @@ def main():
     def do_scene(sc):
         path = os.path.join(OUT, f"img-{sc['id']}.jpg")
         try:
-            gen_image(img_model, sc["prompt"] + "\n\n" + REQ.get("image_rules", ""), path, ref=char_png if sc.get("ref") else None, aspect=sc.get("aspect", "16:9"))
+            ref = os.path.join(ROOT, sc["ref_path"]) if sc.get("ref_path") else (char_png if sc.get("ref") else None)
+            gen_image(img_model, sc["prompt"] + "\n\n" + REQ.get("image_rules", ""), path, ref=ref, aspect=sc.get("aspect", "16:9"))
             return {"scene": sc["id"], "file": os.path.relpath(path, ROOT)}
         except Exception as e:
             return {"scene": sc["id"], "error": str(e)[:300]}
@@ -220,6 +221,35 @@ def main():
         except Exception as e:
             report["errors"].append({"video": v["id"], "error": str(e)[:600]})
             log("video failed", v["id"], str(e)[:400])
+    # chained-keyframe motion tests on Vertex Veo (first + last frame), comparing tiers
+    for t in REQ.get("motion_tests", []):
+        first = os.path.join(OUT, f"img-{t['first']}.png")
+        last = os.path.join(OUT, f"img-{t['last']}.png") if t.get("last") else None
+        if not os.path.exists(first):
+            report["errors"].append({"motion": t["id"], "error": "missing first frame"}); continue
+        b64f = base64.b64encode(open(first, "rb").read()).decode()
+        b64l = base64.b64encode(open(last, "rb").read()).decode() if last and os.path.exists(last) else None
+        err = None
+        for model in gai.CANDIDATES[t.get("tier", "veo")]:
+            try:
+                t0 = time.time()
+                data = gai.veo(model, t["prompt"], b64f, t.get("aspect", "9:16"), t.get("seconds", 8), t.get("resolution", "720p"), t.get("audio", False), last_b64=b64l)
+                path = os.path.join(OUT, f"vid-{t['id']}.mp4")
+                open(path, "wb").write(data)
+                small = path.replace(".mp4", "-small.mp4")
+                subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", path, "-vf", "scale=-2:960", "-crf", "26", "-preset", "veryfast", "-an", small], check=True)
+                subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", path, "-vf", "fps=1,scale=-2:360,tile=8x1", "-frames:v", "1", path.replace(".mp4", "-frames.jpg")], check=True)
+                report["videos"].append({"id": t["id"], "model": model, "secs": round(time.time() - t0), "file": os.path.relpath(small, ROOT)})
+                log("motion ok", t["id"], model, f"{time.time() - t0:.0f}s")
+                err = None
+                break
+            except Exception as e:
+                err = str(e)[:400]
+                log("motion", t["id"], model, "failed:", err[:200])
+                if not re.search(r"404|not found|NOT_FOUND|not supported", err):
+                    break
+        if err:
+            report["errors"].append({"motion": t["id"], "error": err})
     json.dump(report, open(os.path.join(OUT, "report.json"), "w"), indent=1)
     log("done:", len(report["images"]), "images,", len(report["voices"]), "voices,", len(report["videos"]), "videos,", len(report["errors"]), "errors")
 

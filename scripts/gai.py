@@ -16,6 +16,10 @@ def backend():
     return "vertex" if _SA else "studio"
 
 
+def _mime64(b64s):
+    return "image/jpeg" if b64s.startswith("/9j/") else "image/png"
+
+
 def _b64u(b):
     return base64.urlsafe_b64encode(b).rstrip(b"=").decode()
 
@@ -76,13 +80,15 @@ def generate(model, body, timeout=300):
     return _req(url, body, {"Content-Type": "application/json", "x-goog-api-key": os.environ["GEMINI_API_KEY"]}, timeout)
 
 
-def veo(model, prompt, image_b64=None, aspect="16:9", seconds=8, resolution="720p", audio=False, timeout=900):
-    """Vertex Veo image-to-video. Returns mp4 bytes."""
+def veo(model, prompt, image_b64=None, aspect="16:9", seconds=8, resolution="720p", audio=False, timeout=900, last_b64=None):
+    """Vertex Veo image-to-video (optionally first AND last frame, for seamless chained shots). Returns mp4 bytes."""
     host = "us-central1-aiplatform.googleapis.com"
     base = f"https://{host}/v1/projects/{project()}/locations/us-central1/publishers/google/models/{model}"
     inst = {"prompt": prompt}
     if image_b64:
-        inst["image"] = {"bytesBase64Encoded": image_b64, "mimeType": "image/png"}
+        inst["image"] = {"bytesBase64Encoded": image_b64, "mimeType": _mime64(image_b64)}
+    if last_b64:
+        inst["lastFrame"] = {"bytesBase64Encoded": last_b64, "mimeType": _mime64(last_b64)}
     body = {"instances": [inst], "parameters": {"aspectRatio": aspect, "durationSeconds": seconds, "resolution": resolution,
                                                  "generateAudio": audio, "sampleCount": 1}}
     h = {"Content-Type": "application/json", "Authorization": f"Bearer {_vertex_token()}"}
@@ -112,7 +118,8 @@ CANDIDATES = {
               "gemini-2.5-flash-image", "gemini-2.5-flash-image-preview"],
     "tts": ["gemini-3.1-flash-tts-preview", "gemini-3.1-flash-tts", "gemini-2.5-pro-tts", "gemini-2.5-flash-tts", "gemini-2.5-pro-preview-tts",
             "gemini-2.5-flash-preview-tts"],
-    "veo": ["veo-3.1-fast-generate-001", "veo-3.1-generate-001", "veo-3.1-fast-generate-preview", "veo-3.1-generate-preview", "veo-3.0-fast-generate-001", "veo-3.0-generate-001"],
+    "veo": ["veo-3.1-fast-generate-001", "veo-3.1-fast-generate-preview", "veo-3.1-generate-001", "veo-3.1-generate-preview", "veo-3.0-fast-generate-001", "veo-3.0-generate-001"],
+    "veo_lite": ["veo-3.1-lite-generate-001", "veo-3.1-lite-generate-preview", "veo-3.1-lite-preview", "veo-3.1-lite"],
 }
 _chosen = {}
 _MISSING = re.compile(r"HTTP 404|not found|is not supported|does not exist|not available|NOT_FOUND|Publisher Model", re.I)

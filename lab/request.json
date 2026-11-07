@@ -1,49 +1,103 @@
 {
- "note": "Lab run 2: canonical penguin + cameo test across media",
+ "note": "Lab 3: voice delivery A/B (calm deadpan vs punchy vs mix) and chained-keyframe motion, Veo 3.1 Fast vs Lite, vertical.",
  "image_models": [
   "gemini-nano-banana-2.1",
-  "gemini-3.1-flash-image",
-  "gemini-3.1-flash-image-preview"
+  "gemini-3.1-flash-image"
  ],
- "image_rules": "No watermark, no border, no real logos, brands or real people. Spell any text exactly. The penguin must match the reference sheet exactly: eye-rings, orange beak tip, orange feet, three-feather tuft.",
- "character": {
-  "id": "penguin-sheet",
-  "aspect": "16:9",
-  "prompt": "Character model sheet for an original mascot, designer-vinyl-toy look with soft studio lighting on a plain warm grey background. THE PENGUIN (original mascot, fixed traits, keep all of them): a small, round, egg-shaped Adelie-type penguin, a bit bottom-heavy. Black head and back, clean white belly. Big round white eye-rings that make it look permanently curious. Small dark beak with an orange tip. Slightly oversized bright orange feet. Flippers a little too short (it cannot fly). SIGNATURE: three thin stubborn feathers sticking up from the top of its head, slightly bent. Personality: nosy, deadpan, quietly unlucky. Never talks. Top row: front view, three-quarter view, side view, back view. Bottom row, four expressions: wide-eyed curious stare, deadpan side-eye, startled with feathers standing up, embarrassed after falling over. Small clean label 'CURIOUS PENGUIN' in the corner."
- },
+ "image_rules": "No watermark, no border, no logos, no text, no stick figures. Vertical 9:16 composition for a phone screen.",
  "scenes": [
   {
-   "id": "cameo-tiltshift",
-   "ref": true,
-   "prompt": "Tilt-shift miniature photograph: a cable repair ship alone on a vast grey-green sea at dawn, looking like a real model set, with focus bands top and bottom. Hidden among the crates on the deck, very small in frame, the penguin from the reference wears a tiny hard hat and a hi-vis vest and peeks out. A spot-the-penguin moment."
+   "id": "cab-k1",
+   "aspect": "9:16",
+   "ref_path": "creative/penguin-sheet.png",
+   "prompt": "Layered paper diorama photographed as a miniature set: thick textured watercolour paper, translucent vellum water layers, warm LED backlight, deep navy and white paper with glowing neon-orange accents, soft cast shadows between layers, shallow depth of field, macro lens.\nTop third: THE PENGUIN from the reference sheet, rendered as a paper-craft character: small round egg-shaped penguin, black head and back, white belly, big white eye-rings, small dark beak with an orange tip, oversized orange feet, three thin feathers sticking up from its head. It wears a tiny yellow hard hat, standing on a small floating paper ice floe at night, peering down into the water. Below the waterline, translucent vellum layers of ocean fall away into darkness; far below, a thin cable glows orange on the seabed. Foreground: a paper wave edge. Lots of depth."
   },
   {
-   "id": "cameo-16mm",
-   "ref": true,
-   "prompt": "Still from a 1970s 16mm documentary: a cable landing station control room full of blinking equipment, two engineers in short-sleeved shirts arguing over a long printout. In the background on top of a filing cabinet, the penguin from the reference sits holding a tiny coffee mug, clearly eavesdropping. Warm film grain, faded colours, soft halation."
-  },
-  {
-   "id": "cameo-clay-trip",
-   "ref": true,
-   "prompt": "Claymation miniature set: a single garden hose stretching across a moonlit seabed into the darkness, glowing faintly orange. The penguin from the reference is caught mid-trip over the hose, flippers flailing, one foot in the air, frozen at the peak of the fall. Stop-motion texture, fingerprints in the clay."
-  },
-  {
-   "id": "cameo-blueprint",
-   "ref": true,
-   "prompt": "Technical cross-section of a deep-sea fibre optic cable on cyanotype paper, white linework on Prussian blue, with neat labels: 'POLYETHYLENE', 'STEEL WIRES', 'COPPER TUBE', 'OPTICAL FIBRES'. Beside it, the penguin from the reference drawn in the same white linework as a size comparison, labelled 'FOR SCALE (APPROX.)'."
-  },
-  {
-   "id": "cameo-oilpainting",
-   "ref": true,
-   "prompt": "Classical oil painting in the style of an old master allegory: a bearded sea god rising from the waves, puzzled, holding a tangle of thin cables like a fishing net. In the lower corner, the penguin from the reference wears a tiny toga and points at the cables with total confidence. Dramatic chiaroscuro, cracked varnish texture."
+   "id": "cab-k2",
+   "aspect": "9:16",
+   "ref_path": "creative/penguin-sheet.png",
+   "prompt": "Layered paper diorama photographed as a miniature set: thick textured watercolour paper, translucent vellum water layers, warm LED backlight, deep navy and white paper with glowing neon-orange accents, soft cast shadows between layers, shallow depth of field, macro lens.\nDeep on the paper seabed: a garden-hose-thin cable glows orange with pulses of light running along it. THE PENGUIN from the reference sheet, rendered as a paper-craft character: small round egg-shaped penguin, black head and back, white belly, big white eye-rings, small dark beak with an orange tip, oversized orange feet, three thin feathers sticking up from its head. It wears a tiny brass diving helmet over its head feathers and has just landed beside the cable, puffs of paper sand around its feet. Paper kelp in the foreground, layered dark water above."
   }
  ],
- "voices": [],
- "videos": [
+ "voices": [
   {
-   "id": "cameo-trip",
-   "src": "cameo-clay-trip",
-   "prompt": "Stop-motion claymation, locked-off camera: the penguin finishes tripping over the glowing hose, faceplants into the sand with a small puff, then slowly sits up, dazed, and looks straight at the camera. Stop-motion frame rate, comic timing. No text."
+   "id": "A-charon",
+   "label": "A. Calm deadpan explainer (Charon)",
+   "model": "gemini-3.1-flash-tts-preview",
+   "voice": "Charon",
+   "prompt": "# AUDIO PROFILE: Curious Penguin narrator\n### DIRECTOR'S NOTES\nStyle: Calm, matter-of-fact, slightly deadpan narrator of a viral 3D-animated explainer Short. Quick but unhurried, even energy, never hyped. Let the facts be the surprise. Tiny pauses before reveals, a dry hint of a smirk. Cool, nonchalant, curious.\nPace: around 165 to 175 words a minute, Shorts pacing.\n#### TRANSCRIPT\nYour messages don't fly through space. [short pause] They crawl along the bottom of the ocean. About ninety-five percent of the data between continents runs through cables no thicker than a garden hose. And they break. A lot. Around a hundred and fifty times a year. Fishing gear, ship anchors. [short pause] Occasionally, a shark. So what if every cable snapped at once?"
+  },
+  {
+   "id": "A-iapetus",
+   "label": "A. Calm deadpan explainer (Iapetus)",
+   "model": "gemini-3.1-flash-tts-preview",
+   "voice": "Iapetus",
+   "prompt": "# AUDIO PROFILE: Curious Penguin narrator\n### DIRECTOR'S NOTES\nStyle: Calm, matter-of-fact, slightly deadpan narrator of a viral 3D-animated explainer Short. Quick but unhurried, even energy, never hyped. Let the facts be the surprise. Tiny pauses before reveals, a dry hint of a smirk. Cool, nonchalant, curious.\nPace: around 165 to 175 words a minute, Shorts pacing.\n#### TRANSCRIPT\nYour messages don't fly through space. [short pause] They crawl along the bottom of the ocean. About ninety-five percent of the data between continents runs through cables no thicker than a garden hose. And they break. A lot. Around a hundred and fifty times a year. Fishing gear, ship anchors. [short pause] Occasionally, a shark. So what if every cable snapped at once?"
+  },
+  {
+   "id": "A-puck",
+   "label": "A. Calm deadpan explainer (Puck)",
+   "model": "gemini-3.1-flash-tts-preview",
+   "voice": "Puck",
+   "prompt": "# AUDIO PROFILE: Curious Penguin narrator\n### DIRECTOR'S NOTES\nStyle: Calm, matter-of-fact, slightly deadpan narrator of a viral 3D-animated explainer Short. Quick but unhurried, even energy, never hyped. Let the facts be the surprise. Tiny pauses before reveals, a dry hint of a smirk. Cool, nonchalant, curious.\nPace: around 165 to 175 words a minute, Shorts pacing.\n#### TRANSCRIPT\nYour messages don't fly through space. [short pause] They crawl along the bottom of the ocean. About ninety-five percent of the data between continents runs through cables no thicker than a garden hose. And they break. A lot. Around a hundred and fifty times a year. Fishing gear, ship anchors. [short pause] Occasionally, a shark. So what if every cable snapped at once?"
+  },
+  {
+   "id": "B-puck",
+   "label": "B. Punchy Shorts host (Puck)",
+   "model": "gemini-3.1-flash-tts-preview",
+   "voice": "Puck",
+   "prompt": "# AUDIO PROFILE: Curious Penguin narrator\n### DIRECTOR'S NOTES\nStyle: Bright, punchy, fast YouTube Shorts host. Every sentence lands with crisp emphasis and rising energy into each reveal, but it stays conversational, never shouting. Quick breaths, almost no dead air.\nPace: around 165 to 175 words a minute, Shorts pacing.\n#### TRANSCRIPT\nYour messages don't fly through space. They crawl along the bottom of the ocean! About ninety-five percent of the data between continents runs through cables no thicker than a garden hose. And they break. A LOT. Around a hundred and fifty times a year! Fishing gear, ship anchors, and sometimes... a shark. So what if every single cable snapped at once?"
+  },
+  {
+   "id": "B-fenrir",
+   "label": "B. Punchy Shorts host (Fenrir)",
+   "model": "gemini-3.1-flash-tts-preview",
+   "voice": "Fenrir",
+   "prompt": "# AUDIO PROFILE: Curious Penguin narrator\n### DIRECTOR'S NOTES\nStyle: Bright, punchy, fast YouTube Shorts host. Every sentence lands with crisp emphasis and rising energy into each reveal, but it stays conversational, never shouting. Quick breaths, almost no dead air.\nPace: around 165 to 175 words a minute, Shorts pacing.\n#### TRANSCRIPT\nYour messages don't fly through space. They crawl along the bottom of the ocean! About ninety-five percent of the data between continents runs through cables no thicker than a garden hose. And they break. A LOT. Around a hundred and fifty times a year! Fishing gear, ship anchors, and sometimes... a shark. So what if every single cable snapped at once?"
+  },
+  {
+   "id": "C-puck",
+   "label": "C. Mix: cool with a punch (Puck)",
+   "model": "gemini-3.1-flash-tts-preview",
+   "voice": "Puck",
+   "prompt": "# AUDIO PROFILE: Curious Penguin narrator\n### DIRECTOR'S NOTES\nStyle: Mostly cool, nonchalant and confident, like telling a friend a wild fact without trying too hard, then a quick, sharp punch of energy on the big reveal lines before settling back. Engaging and fun, never over the top.\nPace: around 165 to 175 words a minute, Shorts pacing.\n#### TRANSCRIPT\nYour messages don't fly through space. [short pause] They crawl along the bottom of the ocean. About ninety-five percent of the data between continents runs through cables no thicker than a garden hose. And they break. [short pause] A lot! Around a hundred and fifty times a year. Fishing gear, ship anchors. Occasionally, [soft laugh] a shark. So what if every cable snapped at once?"
+  },
+  {
+   "id": "C-orus",
+   "label": "C. Mix: cool with a punch (Orus)",
+   "model": "gemini-3.1-flash-tts-preview",
+   "voice": "Orus",
+   "prompt": "# AUDIO PROFILE: Curious Penguin narrator\n### DIRECTOR'S NOTES\nStyle: Mostly cool, nonchalant and confident, like telling a friend a wild fact without trying too hard, then a quick, sharp punch of energy on the big reveal lines before settling back. Engaging and fun, never over the top.\nPace: around 165 to 175 words a minute, Shorts pacing.\n#### TRANSCRIPT\nYour messages don't fly through space. [short pause] They crawl along the bottom of the ocean. About ninety-five percent of the data between continents runs through cables no thicker than a garden hose. And they break. [short pause] A lot! Around a hundred and fifty times a year. Fishing gear, ship anchors. Occasionally, [soft laugh] a shark. So what if every cable snapped at once?"
+  },
+  {
+   "id": "C-algenib",
+   "label": "C. Mix: cool with a punch (Algenib)",
+   "model": "gemini-3.1-flash-tts-preview",
+   "voice": "Algenib",
+   "prompt": "# AUDIO PROFILE: Curious Penguin narrator\n### DIRECTOR'S NOTES\nStyle: Mostly cool, nonchalant and confident, like telling a friend a wild fact without trying too hard, then a quick, sharp punch of energy on the big reveal lines before settling back. Engaging and fun, never over the top.\nPace: around 165 to 175 words a minute, Shorts pacing.\n#### TRANSCRIPT\nYour messages don't fly through space. [short pause] They crawl along the bottom of the ocean. About ninety-five percent of the data between continents runs through cables no thicker than a garden hose. And they break. [short pause] A lot! Around a hundred and fifty times a year. Fishing gear, ship anchors. Occasionally, [soft laugh] a shark. So what if every cable snapped at once?"
+  }
+ ],
+ "videos": [],
+ "motion_tests": [
+  {
+   "id": "chain-fast",
+   "tier": "veo",
+   "first": "cab-k1",
+   "last": "cab-k2",
+   "aspect": "9:16",
+   "seconds": 8,
+   "resolution": "720p",
+   "prompt": "One continuous, smooth camera move with no cuts: the penguin hops off the paper ice floe, the camera follows it down through the layered paper water past drifting paper fish and bubbles, sinking to the seabed where it lands beside the glowing cable as pulses of light race along it. Paper layers slide with real parallax. Handmade stop-motion paper-craft feel. No text."
+  },
+  {
+   "id": "chain-lite",
+   "tier": "veo_lite",
+   "first": "cab-k1",
+   "last": "cab-k2",
+   "aspect": "9:16",
+   "seconds": 8,
+   "resolution": "720p",
+   "prompt": "One continuous, smooth camera move with no cuts: the penguin hops off the paper ice floe, the camera follows it down through the layered paper water past drifting paper fish and bubbles, sinking to the seabed where it lands beside the glowing cable as pulses of light race along it. Paper layers slide with real parallax. Handmade stop-motion paper-craft feel. No text."
   }
  ]
 }
