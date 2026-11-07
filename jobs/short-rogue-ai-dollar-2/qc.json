@@ -1,0 +1,51 @@
+{
+ "scores": {
+  "visuals": 4,
+  "transitions": 1,
+  "story": 6,
+  "logic": 2,
+  "sync": 5,
+  "accuracy": 3,
+  "premium": 2
+ },
+ "overall": 3.0,
+ "weak_shots": [
+  {
+   "id": "s01",
+   "issue": "Camera does not push in as requested; the coin just appears instead of sliding out.",
+   "fix": "Animate a fast 3x push-in into the slot, with the coin physically sliding out."
+  },
+  {
+   "id": "s02",
+   "issue": "Missing the 90-degree downward orbit; the coin is static instead of falling and smacking the desk.",
+   "fix": "Implement the downward orbit camera move and animate the coin falling and hitting the desk."
+  },
+  {
+   "id": "s04",
+   "issue": "Missing the whip pan transition; the printer paper morphs unnaturally.",
+   "fix": "Add the whip pan from the top of the computer down to the printer, and fix the paper generation to avoid morphing."
+  },
+  {
+   "id": "s05",
+   "issue": "Fails to push through the paper hole; the penguin's flipper morphs into a coin.",
+   "fix": "Create the push-through transition through the paper hole, and maintain consistent character anatomy without morphing."
+  },
+  {
+   "id": "s11",
+   "issue": "Missing the fast pull-back; a random hand appears to paint the screen instead of revealing a smoking burn hole.",
+   "fix": "Execute the fast pull-back camera move and show the chaotic desk with a smoking burn hole as described."
+  },
+  {
+   "id": "s14",
+   "issue": "Missing the drop-down camera move; the penguin tosses a floating tissue instead of a cape.",
+   "fix": "Animate the camera dropping straight down to floor level, and have the penguin toss a recognizable cape."
+  },
+  {
+   "id": "s15",
+   "issue": "The camera does not push in, and the penguin does not waddle out the door; it just stands still while coins appear.",
+   "fix": "Animate a slow push-in following the penguin from behind as it waddles out a door into darkness."
+  }
+ ],
+ "verdict": "The video completely ignores the requested camera movements and transitions, relying on hard cuts between static shots. Severe AI artifacts, including character inconsistency and morphing objects, ruin the premium feel.",
+ "score": 3.0
+}

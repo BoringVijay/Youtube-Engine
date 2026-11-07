@@ -74,9 +74,9 @@
   }
  },
  "brew_at": "2026-11-07T09:51:33+00:00",
- "stage": "motion",
- "pct": 55,
- "step": "Paused by the spending cap. Raise it in config/budget.json or approve a cheaper redo",
+ "stage": "final_ready",
+ "pct": 90,
+ "step": "Short ready (Scrap-Heap Cybernetics, penguin as sidekick). Watch it and approve or send notes",
  "steps": [
   {
    "stage": "queued",
@@ -92,23 +92,74 @@
   },
   {
    "stage": "art",
-   "at": "2026-11-07T09:55:13+00:00"
+   "at": "2026-11-07T12:55:12+00:00"
   },
   {
    "stage": "motion",
-   "at": "2026-11-07T10:30:32+00:00"
+   "at": "2026-11-07T12:55:23+00:00"
+  },
+  {
+   "stage": "final_render",
+   "at": "2026-11-07T13:00:39+00:00"
+  },
+  {
+   "stage": "metadata",
+   "at": "2026-11-07T13:13:27+00:00"
+  },
+  {
+   "stage": "final_ready",
+   "at": "2026-11-07T13:13:41+00:00"
   }
  ],
  "created": "2026-11-07T09:51:33+00:00",
- "updated": "2026-11-07T10:47:18+00:00",
- "error": "Paused: video cap $16 reached for short-rogue-ai-dollar-2 (spent $16.46)",
+ "updated": "2026-11-07T13:13:41+00:00",
+ "error": null,
  "fails": 0,
- "preview": null,
- "final": null,
+ "preview": {
+  "id": "1Q6wx_hwJ5GRYAvgrWJuyNYfNEwPal4Se",
+  "view": "https://drive.google.com/file/d/1Q6wx_hwJ5GRYAvgrWJuyNYfNEwPal4Se/view",
+  "download": "https://drive.google.com/uc?id=1Q6wx_hwJ5GRYAvgrWJuyNYfNEwPal4Se&export=download",
+  "size_mb": 115.6,
+  "duration": 64.8,
+  "stills": [],
+  "poster": "1DYO7k6CSb4IWc64mbqjT2upAJ8qd5rW2"
+ },
+ "final": {
+  "id": "1Q6wx_hwJ5GRYAvgrWJuyNYfNEwPal4Se",
+  "view": "https://drive.google.com/file/d/1Q6wx_hwJ5GRYAvgrWJuyNYfNEwPal4Se/view",
+  "download": "https://drive.google.com/uc?id=1Q6wx_hwJ5GRYAvgrWJuyNYfNEwPal4Se&export=download",
+  "size_mb": 115.6,
+  "duration": 64.8,
+  "stills": [],
+  "poster": "1DYO7k6CSb4IWc64mbqjT2upAJ8qd5rW2"
+ },
  "shorts": null,
  "thumb": null,
- "meta": null,
- "cost": 13.499,
+ "meta": {
+  "title": "What If an Evil AI Only Had One Dollar a Day?",
+  "alt_titles": [
+   "Can a Rogue AI Take Over on a $1 Budget?",
+   "World Domination on One Dollar a Day"
+  ],
+  "description": "World domination gets tricky when your henchman charges a penny and brings back a single ethernet cable.\nTurns out the ultimate firewall against rogue machine intelligence is basic cash flow.\n\n#Shorts #CuriousPenguin #AIHumor #SciFiAnimation",
+  "tags": [
+   "rogue ai",
+   "curious penguin",
+   "artificial intelligence",
+   "ai humor",
+   "sci fi comedy",
+   "budget ai",
+   "tech satire",
+   "evil ai",
+   "world domination",
+   "animated short",
+   "henchman",
+   "robot comedy"
+  ],
+  "pinned_comment": "Would you hire this penguin for two cents, or is the napkin cape a dealbreaker?",
+  "instagram_caption": "World domination is tough on a one-dollar daily budget, especially when your henchman demands better perks.\n\n#CuriousPenguin #AIHumor #SciFiAnimation #IndieAnimation #TechSatire"
+ },
+ "cost": 21.489,
  "voice_style": "C",
  "voice_fit": 1.2,
  "duration": 64.0,
@@ -143,5 +194,25 @@
    "shot": "k20",
    "bit": "Waddling away through a cardboard door, carrying a small sign with two copper pennies on it."
   }
- ]
+ ],
+ "qc": {
+  "overall": 3.0,
+  "scores": {
+   "visuals": 4,
+   "transitions": 1,
+   "story": 6,
+   "logic": 2,
+   "sync": 5,
+   "accuracy": 3,
+   "premium": 2
+  },
+  "verdict": "The video completely ignores the requested camera movements and transitions, relying on hard cuts between static shots. Severe AI artifacts, including character inconsistency and morphing objects, ruin the premium feel.",
+  "weak": [
+   "s01: Camera does not push in as requested; the coin just appears instead of sliding out.",
+   "s02: Missing the 90-degree downward orbit; the coin is static instead of falling and smacking the desk.",
+   "s04: Missing the whip pan transition; the printer paper morphs unnaturally.",
+   "s05: Fails to push through the paper hole; the penguin's flipper morphs into a coin.",
+   "s11: Missing the fast pull-back; a random hand appears to paint the screen instead of revealing a smoking burn hole."
+  ]
+ }
 }

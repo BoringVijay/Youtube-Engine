@@ -74,9 +74,9 @@
   }
  },
  "brew_at": "2026-11-07T08:39:37+00:00",
- "stage": "final_ready",
- "pct": 90,
- "step": "Short ready (Risograph Zine Print, penguin as sidekick). Watch it and approve or send notes",
+ "stage": "posting",
+ "pct": 92,
+ "step": "Ready to post. Open the posting kit, upload from the YouTube app, then tap I've posted it",
  "steps": [
   {
    "stage": "queued",
@@ -109,10 +109,14 @@
   {
    "stage": "final_ready",
    "at": "2026-11-07T09:28:48+00:00"
+  },
+  {
+   "stage": "posting",
+   "at": "2026-11-07T12:55:06+00:00"
   }
  ],
  "created": "2026-11-07T08:39:37+00:00",
- "updated": "2026-11-07T09:28:48+00:00",
+ "updated": "2026-11-07T12:55:06+00:00",
  "error": null,
  "fails": 0,
  "preview": {
@@ -226,5 +230,13 @@
    "s14: The scale is completely broken; the penny is gigantic compared to the boardroom table and chairs.",
    "s15: The penguin floats away instead of dropping like a stone as requested in the motion prompt."
   ]
- }
+ },
+ "notes_in": [
+  {
+   "at": "2026-11-07T12:50:35.753Z",
+   "stage": "final",
+   "notes": ""
+  }
+ ],
+ "slot": "2026-11-09T21:00:00+05:30"
 }
