@@ -1,7 +1,7 @@
 {
  "id": "ai-what-if-the-internet-s-undersea-cables-were-all-cut-",
  "created": "2026-11-06T15:50:59+00:00",
- "pct": 12,
+ "pct": 55,
  "q": "What if the internet's undersea cables were all cut?",
  "series": "Curious Penguin",
  "brew": {
@@ -255,8 +255,8 @@
  },
  "brew_at": "2026-11-06T15:26:28.303Z",
  "error": "open() got an unexpected keyword argument 'metadata_errors'",
- "stage": "voicing",
- "step": "Hit an error. Retrying next run",
+ "stage": "test_ready",
+ "step": "Test cut ready (Deep-sea layered paper diorama). 5 shots get real animation after you approve",
  "steps": [
   {
    "stage": "queued",
@@ -268,12 +268,30 @@
   },
   {
    "stage": "voicing",
-   "at": "2026-11-07T02:23:05+00:00"
+   "at": "2026-11-07T02:28:34+00:00"
+  },
+  {
+   "stage": "art",
+   "at": "2026-11-07T02:31:15+00:00"
+  },
+  {
+   "stage": "test_render",
+   "at": "2026-11-07T02:53:48+00:00"
+  },
+  {
+   "stage": "test_ready",
+   "at": "2026-11-07T03:06:52+00:00"
   }
  ],
- "updated": "2026-11-07T02:25:39+00:00",
- "duration": 343.7,
- "preview": null,
+ "updated": "2026-11-07T03:06:52+00:00",
+ "duration": 316.2,
+ "preview": {
+  "id": "1JmL34z_fwFvR_cbD6RebJzzaFE4BbqXy",
+  "view": "https://drive.google.com/file/d/1JmL34z_fwFvR_cbD6RebJzzaFE4BbqXy/view",
+  "download": "https://drive.google.com/uc?id=1JmL34z_fwFvR_cbD6RebJzzaFE4BbqXy&export=download",
+  "size_mb": 25.8,
+  "at": "2026-11-07T03:06:52+00:00"
+ },
  "notes_in": [
   {
    "at": "2026-11-06T17:13:20.158Z",
@@ -287,7 +305,7 @@
  "thumb": null,
  "meta": null,
  "fails": 1,
- "cost": 0.03,
+ "cost": 4.162,
  "universe": "Deep-sea layered paper diorama",
  "cameos": [
   {

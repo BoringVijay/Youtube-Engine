@@ -1,7 +1,7 @@
 {
  "id": "ai-what-if-all-gold-ever-mined-were-melted-into-one-cube-",
  "created": "2026-11-06T17:21:26+00:00",
- "pct": 12,
+ "pct": 55,
  "q": "What if all gold ever mined were melted into one cube?",
  "series": "Money Moves (charts)",
  "brew": {
@@ -183,8 +183,8 @@
  },
  "brew_at": "2026-11-06T17:18:59.476Z",
  "error": "open() got an unexpected keyword argument 'metadata_errors'",
- "stage": "voicing",
- "step": "Hit an error. Retrying next run",
+ "stage": "test_ready",
+ "step": "Test cut ready (Tilt-shift miniature photography). 3 shots get real animation after you approve",
  "steps": [
   {
    "stage": "queued",
@@ -196,18 +196,36 @@
   },
   {
    "stage": "voicing",
-   "at": "2026-11-07T02:26:48+00:00"
+   "at": "2026-11-07T03:06:55+00:00"
+  },
+  {
+   "stage": "art",
+   "at": "2026-11-07T03:07:42+00:00"
+  },
+  {
+   "stage": "test_render",
+   "at": "2026-11-07T03:16:59+00:00"
+  },
+  {
+   "stage": "test_ready",
+   "at": "2026-11-07T03:20:06+00:00"
   }
  ],
- "updated": "2026-11-07T02:27:39+00:00",
+ "updated": "2026-11-07T03:20:06+00:00",
  "v": 2,
  "fails": 1,
- "preview": null,
+ "preview": {
+  "id": "1FFEw70ZMHFGfxoXACmm2hPhC9U25uOdn",
+  "view": "https://drive.google.com/file/d/1FFEw70ZMHFGfxoXACmm2hPhC9U25uOdn/view",
+  "download": "https://drive.google.com/uc?id=1FFEw70ZMHFGfxoXACmm2hPhC9U25uOdn&export=download",
+  "size_mb": 6.2,
+  "at": "2026-11-07T03:20:06+00:00"
+ },
  "final": null,
  "shorts": null,
  "thumb": null,
  "meta": null,
- "cost": 0.03,
+ "cost": 1.379,
  "universe": "Tilt-shift miniature photography",
  "cameos": [
   {
@@ -215,5 +233,6 @@
    "type": "fly_attempt",
    "bit": "Jumping off the one-inch bottom ledge of the gold cube, short flippers extended, completely failing to fly, about to crash into the miniature dirt."
   }
- ]
+ ],
+ "duration": 75.6
 }

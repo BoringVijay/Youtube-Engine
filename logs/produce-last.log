@@ -1,24 +1,88 @@
-02:19:33 inbox: 0 messages
-02:19:35 [ai-what-if-the-internet-s-undersea-cable] directing 6% Choosing the visual universe and writing the shot list
-[gai] pro: gemini-3.8-pro not available here
-[gai] pro: gemini-3.7-pro not available here
-[gai] pro: gemini-3.5-pro not available here
-[gai] pro: gemini-3.1-pro not available here
-[gai] pro model: gemini-3.1-pro-preview via vertex
-02:23:05 universe: Deep-sea layered paper diorama (Provides a tactile, fragile sense of the internet's physical infrastructure, emphasizing the vast, melancholic scale of ), 54 shots, 5 motion, 4 cameos
-02:23:06 [ai-what-if-the-internet-s-undersea-cable] voicing 12% Directing the narrator's performance
-[gai] text model: gemini-3.8-flash via vertex
+02:28:32 inbox: 0 messages
+02:28:37 [ai-what-if-the-internet-s-undersea-cable] voicing 12% Directing the narrator's performance
 [gai] tts model: gemini-3.1-flash-tts-preview via vertex
-[voice] take 1/4 recorded: 96.0s
-[voice] take 2/4 recorded: 73.3s
-[voice] take 3/4 recorded: 60.1s
-[voice] take 4/4 recorded: 72.2s
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-02:25:39 job ai-what-if-the-internet-s-undersea-cables-were-all-cut- failed: open() got an unexpected keyword argument 'metadata_errors'
-02:25:42 [ai-what-if-all-gold-ever-mined-were-melt] directing 6% Choosing the visual universe and writing the shot list
-02:26:48 universe: Tilt-shift miniature photography (The absurdity of a 216,000-tonne solid gold cube sitting in a baseball stadium is best captured by making the world feel), 16 shots, 3 motion, 1 cameos
-02:26:49 [ai-what-if-all-gold-ever-mined-were-melt] voicing 12% Directing the narrator's performance
-[voice] take 1/3 recorded: 31.3s
-[voice] take 2/3 recorded: 20.1s
-[voice] take 3/3 recorded: 17.7s
-02:27:39 job ai-what-if-all-gold-ever-mined-were-melted-into-one-cube- failed: open() got an unexpected keyword argument 'metadata_errors'
+[voice] take 1/4 recorded: 89.0s
+[voice] take 2/4 recorded: 85.1s
+[voice] take 3/4 recorded: 63.9s
+[voice] take 4/4 recorded: 76.3s
+[voice] alignment matched 95% of words
+02:31:16 [ai-what-if-the-internet-s-undersea-cable] art 22% Painting 54 frames in Deep-sea layered paper diorama
+02:31:16 [art] designing the canonical penguin sheet
+[gai] image model: gemini-nano-banana-2.1 via vertex
+[gai] image model: gemini-3.1-flash-image via vertex
+[gai] image model: gemini-nano-banana-2.1 via vertex
+[gai] image model: gemini-3.1-flash-image via vertex
+[gai] image model: gemini-nano-banana-2.1 via vertex
+[gai] image: gemini-3.1-flash-image-preview not available here
+[gai] image model: gemini-3.1-flash-image via vertex
+[gai] image model: gemini-nano-banana-2.1 via vertex
+[gai] image model: gemini-3-pro-image via vertex
+[gai] image model: gemini-nano-banana-2.1 via vertex
+[gai] image model: gemini-3-pro-image via vertex
+[gai] image: gemini-3.1-flash-image-preview not available here
+[gai] image model: gemini-nano-banana-2.1 via vertex
+[gai] image model: gemini-3-pro-image via vertex
+[gai] image model: gemini-3.1-flash-image via vertex
+[gai] image model: gemini-nano-banana-2.1 via vertex
+[gai] image model: gemini-3-pro-image via vertex
+[gai] image model: gemini-nano-banana-2.1 via vertex
+[gai] image model: gemini-3.1-flash-image via vertex
+[gai] image model: gemini-nano-banana-2.1 via vertex
+[gai] image model: gemini-3-pro-image via vertex
+[gai] image model: gemini-3.1-flash-image via vertex
+[gai] image model: gemini-nano-banana-2.1 via vertex
+[gai] image model: gemini-3-pro-image via vertex
+[gai] image model: gemini-3.1-flash-image via vertex
+[gai] image model: gemini-nano-banana-2.1 via vertex
+[gai] image model: gemini-3.1-flash-image via vertex
+[gai] image model: gemini-3-pro-image via vertex
+[gai] image model: gemini-nano-banana-2.1 via vertex
+[gai] image model: gemini-3-pro-image via vertex
+[gai] image model: gemini-nano-banana-2.1 via vertex
+[gai] image model: gemini-3-pro-image via vertex
+[gai] image model: gemini-nano-banana-2.1 via vertex
+[gai] image model: gemini-3-pro-image via vertex
+[gai] image: gemini-3.1-flash-image-preview not available here
+[gai] image model: gemini-nano-banana-2.1 via vertex
+[gai] image model: gemini-3-pro-image via vertex
+[gai] image model: gemini-nano-banana-2.1 via vertex
+[gai] image model: gemini-3-pro-image via vertex
+[gai] image: gemini-3-pro-image-preview not available here
+[gai] image model: gemini-2.5-flash-image via vertex
+[gai] image model: gemini-nano-banana-2.1 via vertex
+[gai] image model: gemini-3.1-flash-image via vertex
+[gai] image model: gemini-3-pro-image via vertex
+[gai] image model: gemini-3.1-flash-image via vertex
+[gai] image model: gemini-nano-banana-2.1 via vertex
+[gai] image model: gemini-3-pro-image via vertex
+[gai] image model: gemini-3.1-flash-image via vertex
+[gai] image model: gemini-nano-banana-2.1 via vertex
+[gai] image model: gemini-3-pro-image via vertex
+[gai] image model: gemini-3.1-flash-image via vertex
+[gai] image model: gemini-nano-banana-2.1 via vertex
+[gai] image model: gemini-3.1-flash-image via vertex
+02:53:49 [ai-what-if-the-internet-s-undersea-cable] test_render 46% Cutting the test version
+03:06:49 rendered test.mp4 in 766s, 25.8 MB
+03:06:55 [ai-what-if-the-internet-s-undersea-cable] test_ready 55% Test cut ready (Deep-sea layered paper diorama). 5 shots get real animation after you approve
+03:06:58 [ai-what-if-all-gold-ever-mined-were-melt] voicing 12% Directing the narrator's performance
+[voice] take 1/3 recorded: 34.0s
+[voice] take 2/3 recorded: 21.6s
+[voice] take 3/3 recorded: 18.7s
+[voice] alignment matched 89% of words
+03:07:44 [ai-what-if-all-gold-ever-mined-were-melt] art 22% Painting 16 frames in Tilt-shift miniature photography
+[gai] image model: gemini-nano-banana-2.1 via vertex
+[gai] image model: gemini-3.1-flash-image via vertex
+[gai] image model: gemini-nano-banana-2.1 via vertex
+[gai] image model: gemini-3.1-flash-image via vertex
+[gai] image: gemini-3.1-flash-image-preview not available here
+[gai] image model: gemini-3-pro-image via vertex
+[gai] image model: gemini-nano-banana-2.1 via vertex
+[gai] image model: gemini-3.1-flash-image via vertex
+[gai] image model: gemini-3-pro-image via vertex
+[gai] image model: gemini-nano-banana-2.1 via vertex
+[gai] image model: gemini-3.1-flash-image via vertex
+[gai] image model: gemini-nano-banana-2.1 via vertex
+[gai] image model: gemini-3.1-flash-image via vertex
+03:17:02 [ai-what-if-all-gold-ever-mined-were-melt] test_render 46% Cutting the test version
+03:20:03 rendered test.mp4 in 178s, 6.2 MB
+03:20:08 [ai-what-if-all-gold-ever-mined-were-melt] test_ready 55% Test cut ready (Tilt-shift miniature photography). 3 shots get real animation after you approve
