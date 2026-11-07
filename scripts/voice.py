@@ -119,9 +119,13 @@ def record(st, vdir, sections, voice):
 
 def align(audio_path, sections):
     """Word timings for the script's own words using faster-whisper, mapped by sequence alignment."""
+    import numpy as np
     from faster_whisper import WhisperModel
+    # decode ourselves (16 kHz mono float32) so PyAV version quirks can't break timing
+    raw = subprocess.run(["ffmpeg", "-v", "error", "-i", audio_path, "-f", "s16le", "-ac", "1", "-ar", "16000", "-"], capture_output=True, check=True).stdout
+    audio = np.frombuffer(raw, dtype=np.int16).astype(np.float32) / 32768.0
     model = WhisperModel(os.environ.get("WHISPER_MODEL", "base.en"), device="cpu", compute_type="int8")
-    segs, _ = model.transcribe(audio_path, word_timestamps=True, vad_filter=False, beam_size=1)
+    segs, _ = model.transcribe(audio, word_timestamps=True, vad_filter=False, beam_size=1)
     heard = [(w.word.strip(), w.start, w.end) for seg in segs for w in (seg.words or [])]
     script_words = [w for s in sections for w in strip_tags(s["transcript"]).split()]
     a = [norm(w) for w in script_words]

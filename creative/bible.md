@@ -5,7 +5,7 @@
 The director stage reads this file before planning any video. Change it here and every new video follows.
 
 ## Retired
-- Stickman explainers and template infotainment (title card, stat card, bar chart, repeat). Never again.
+- Stickman explainers and template infotainment (title card, stat card, bar chart, repeat). Never again. No stick figures anywhere, even as background extras: people are rendered in the video's universe (paper people, clay people, painted people).
 - Same look twice in a row. Two consecutive videos never share a visual universe.
 
 ## The benchmark
