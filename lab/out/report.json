@@ -1,93 +1,81 @@
 {
- "at": "2026-11-07T05:29:05Z",
+ "at": "2026-11-07T13:53:19Z",
  "images": [
   {
-   "scene": "cab-k1",
-   "file": "lab/out/img-cab-k1.jpg"
+   "scene": "l4-k1",
+   "file": "lab/out/img-l4-k1.jpg"
   },
   {
-   "scene": "cab-k2",
-   "file": "lab/out/img-cab-k2.jpg"
+   "scene": "l4-k2",
+   "file": "lab/out/img-l4-k2.jpg"
+  },
+  {
+   "scene": "l4-k3",
+   "file": "lab/out/img-l4-k3.jpg"
   }
  ],
- "voices": [
-  {
-   "id": "A-charon",
-   "label": "A. Calm deadpan explainer (Charon)",
-   "model": "gemini-3.1-flash-tts-preview",
-   "voice": "Charon",
-   "sec": 27.9,
-   "file": "lab/out/voice-A-charon.mp3"
-  },
-  {
-   "id": "A-iapetus",
-   "label": "A. Calm deadpan explainer (Iapetus)",
-   "model": "gemini-3.1-flash-tts-preview",
-   "voice": "Iapetus",
-   "sec": 27.2,
-   "file": "lab/out/voice-A-iapetus.mp3"
-  },
-  {
-   "id": "A-puck",
-   "label": "A. Calm deadpan explainer (Puck)",
-   "model": "gemini-3.1-flash-tts-preview",
-   "voice": "Puck",
-   "sec": 25.1,
-   "file": "lab/out/voice-A-puck.mp3"
-  },
-  {
-   "id": "B-puck",
-   "label": "B. Punchy Shorts host (Puck)",
-   "model": "gemini-3.1-flash-tts-preview",
-   "voice": "Puck",
-   "sec": 24.6,
-   "file": "lab/out/voice-B-puck.mp3"
-  },
-  {
-   "id": "B-fenrir",
-   "label": "B. Punchy Shorts host (Fenrir)",
-   "model": "gemini-3.1-flash-tts-preview",
-   "voice": "Fenrir",
-   "sec": 23.7,
-   "file": "lab/out/voice-B-fenrir.mp3"
-  },
-  {
-   "id": "C-puck",
-   "label": "C. Mix: cool with a punch (Puck)",
-   "model": "gemini-3.1-flash-tts-preview",
-   "voice": "Puck",
-   "sec": 26.0,
-   "file": "lab/out/voice-C-puck.mp3"
-  },
-  {
-   "id": "C-orus",
-   "label": "C. Mix: cool with a punch (Orus)",
-   "model": "gemini-3.1-flash-tts-preview",
-   "voice": "Orus",
-   "sec": 25.0,
-   "file": "lab/out/voice-C-orus.mp3"
-  },
-  {
-   "id": "C-algenib",
-   "label": "C. Mix: cool with a punch (Algenib)",
-   "model": "gemini-3.1-flash-tts-preview",
-   "voice": "Algenib",
-   "sec": 28.3,
-   "file": "lab/out/voice-C-algenib.mp3"
-  }
- ],
+ "voices": [],
  "videos": [
   {
-   "id": "chain-fast",
+   "id": "A-first-only-push",
    "model": "veo-3.1-fast-generate-001",
-   "secs": 66,
-   "file": "lab/out/vid-chain-fast-small.mp4"
+   "secs": 105,
+   "file": "lab/out/vid-A-first-only-push-small.mp4",
+   "review": {
+    "score": 3.0,
+    "issues": [
+     "00:00 - 00:03: The penguin remains completely static and fails to pull the lever down.",
+     "00:00 - 00:03: The red LED eyes do not glow brighter as requested.",
+     "00:00 - 00:03: The penguin only has one stick-like appendage on the lever, not both flippers."
+    ],
+    "fix": "Ensure the penguin actively pulls the lever downwards using both flippers, and make the red LED eyes visibly increase in brightness as the lever moves."
+   }
   },
   {
-   "id": "chain-lite",
-   "model": "veo-3.1-lite-generate-001",
-   "secs": 56,
-   "file": "lab/out/vid-chain-lite-small.mp4"
+   "id": "B-first-last-small",
+   "model": "veo-3.1-fast-generate-001",
+   "secs": 107,
+   "file": "lab/out/vid-B-first-last-small-small.mp4",
+   "review": {
+    "score": 5.0,
+    "issues": [
+     "00:00 - 00:03: The penguin's right flipper melts into the lever handle instead of gripping it.",
+     "00:00 - 00:03: The lever bends and morphs unnaturally as it is pulled down.",
+     "00:00 - 00:03: The penguin's left flipper changes shape and size."
+    ],
+    "fix": "Ensure solid object permanence: the lever must remain rigid and not bend, and the penguin's flipper must clearly grip the handle without melting into it."
+   }
+  },
+  {
+   "id": "C-first-last-big",
+   "model": "veo-3.1-fast-generate-001",
+   "secs": 118,
+   "file": "lab/out/vid-C-first-last-big-small.mp4",
+   "review": {
+    "score": 3.0,
+    "issues": [
+     "00:01-00:03: The penguin's flipper melts and merges into the lever.",
+     "00:01-00:03: The lever loses its solid shape and morphs.",
+     "00:02-00:03: Severe morphing and shifting of the cardboard structures, wires, and circuit boards as the camera cranes up.",
+     "00:02-00:03: The red LED lights lose their defined shape and become blurry blobs."
+    ],
+    "fix": "Maintain strict object permanence and structural consistency of the penguin, lever, and cardboard set during the camera move; prevent any melting, morphing, or shifting of elements."
+   }
+  },
+  {
+   "id": "D-first-only-orbit",
+   "model": "veo-3.1-fast-generate-001",
+   "secs": 107,
+   "file": "lab/out/vid-D-first-only-orbit-small.mp4",
+   "review": {
+    "score": 4.0,
+    "issues": [
+     "00:00-00:05: The camera remains completely static, failing to execute the requested 60-degree orbit.",
+     "00:00-00:05: The red LED eyes maintain a constant brightness rather than flaring as requested.",
+     "00:00-00:05: The cardboard structure around the lever slot warps and changes shape slightly as the lever is pulled down."
+    ],
+    "fix": "Force a continuous 60-degree camera orbit, ensure the red LED flares significantly when the lever is pulled, and maintain strict rigidity of all cardboard elements to prevent warping."
+   }
   }
  ],
  "errors": []

@@ -1,25 +1,21 @@
-05:29:05 models: ['gemini-2.5-flash-preview-tts', 'gemini-2.5-pro-preview-tts', 'gemini-2.5-flash-image', 'gemini-3-pro-image-preview', 'gemini-3-pro-image', 'nano-banana-pro-preview', 'gemini-3.1-flash-image-preview', 'gemini-3.1-flash-image', 'gemini-3.1-flash-lite-image', 'gemini-nano-banana-2.1', 'gemini-omni-flash-preview', 'gemini-omni-1.1-flash', 'gemini-omni-1.2-flash', 'lyria-3-clip-preview', 'lyria-3-pro-preview', 'lyria-3.5', 'gemini-3.1-flash-tts-preview', 'gemini-3.8-flash-tts', 'gemini-3.8-flash-lite-tts', 'lyria-realtime-exp']
-05:29:05 image model: gemini-nano-banana-2.1
-05:29:05 backend: vertex
-05:29:23 scene cab-k1 ok
-05:29:23 scene cab-k2 ok
-05:29:34 tts mime gemini-3.1-flash-tts-preview audio/l16; rate=24000; channels=1
-05:29:34 tts mime gemini-3.1-flash-tts-preview audio/l16; rate=24000; channels=1
-05:29:35 voice A-charon ok
-05:29:35 voice A-iapetus ok
-05:29:45 tts mime gemini-3.1-flash-tts-preview audio/l16; rate=24000; channels=1
-05:29:45 tts mime gemini-3.1-flash-tts-preview audio/l16; rate=24000; channels=1
-05:29:46 voice A-puck ok
-05:29:46 voice B-puck ok
-05:29:55 tts mime gemini-3.1-flash-tts-preview audio/l16; rate=24000; channels=1
-05:29:55 voice B-fenrir ok
-05:29:58 tts mime gemini-3.1-flash-tts-preview audio/l16; rate=24000; channels=1
-05:29:58 voice C-puck ok
-05:30:05 tts mime gemini-3.1-flash-tts-preview audio/l16; rate=24000; channels=1
-05:30:05 voice C-orus ok
-05:30:10 tts mime gemini-3.1-flash-tts-preview audio/l16; rate=24000; channels=1
-05:30:10 voice C-algenib ok
-05:30:10 video model: gemini-omni-flash-preview
-05:31:16 motion ok chain-fast veo-3.1-fast-generate-001 66s
-05:32:12 motion ok chain-lite veo-3.1-lite-generate-001 56s
-05:32:12 done: 2 images, 8 voices, 2 videos, 0 errors
+13:53:19 models: ['gemini-2.5-flash-preview-tts', 'gemini-2.5-pro-preview-tts', 'gemini-2.5-flash-image', 'gemini-3-pro-image-preview', 'gemini-3-pro-image', 'nano-banana-pro-preview', 'gemini-3.1-flash-image-preview', 'gemini-3.1-flash-image', 'gemini-3.1-flash-lite-image', 'gemini-nano-banana-2.1', 'gemini-omni-flash-preview', 'gemini-omni-1.1-flash', 'gemini-omni-1.2-flash', 'lyria-3-clip-preview', 'lyria-3-pro-preview', 'lyria-3.5', 'gemini-3.1-flash-tts-preview', 'gemini-3.8-flash-tts', 'gemini-3.8-flash-lite-tts', 'lyria-realtime-exp']
+13:53:19 image model: gemini-nano-banana-2.1
+13:53:19 backend: vertex
+13:53:34 scene l4-k1 ok
+13:54:00 scene l4-k2 ok
+13:54:00 scene l4-k3 ok
+13:54:00 video model: gemini-omni-flash-preview
+[gai] pro: gemini-3.8-pro not available here
+[gai] pro: gemini-3.7-pro not available here
+[gai] pro: gemini-3.5-pro not available here
+[gai] pro: gemini-3.1-pro not available here
+[gai] pro model: gemini-3.1-pro-preview via vertex
+13:56:00 review A-first-only-push 3.0
+13:56:00 motion ok A-first-only-push veo-3.1-fast-generate-001 120s
+13:57:59 review B-first-last-small 5.0
+13:57:59 motion ok B-first-last-small veo-3.1-fast-generate-001 120s
+14:00:15 review C-first-last-big 3.0
+14:00:15 motion ok C-first-last-big veo-3.1-fast-generate-001 136s
+14:02:22 review D-first-only-orbit 4.0
+14:02:22 motion ok D-first-only-orbit veo-3.1-fast-generate-001 127s
+14:02:22 done: 3 images, 0 voices, 4 videos, 0 errors
