@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Penguin Studio</title>
+<style>
+/* Penguin Studio. System type, one accent (penguin orange), one radius system:
+   surfaces 22px, controls full pill, fields 14px. Springs for anything you can touch. */
+:root {
+  --bg: #f2f2f4; --surface: #ffffff; --raised: #ffffff; --fill: rgba(118,118,128,.12); --fill2: rgba(118,118,128,.08);
+  --ink: #1d1d1f; --ink2: #6e6e73; --ink3: #a1a1a6; --sep: rgba(60,60,67,.14);
+  --accent: #f2570f; --accent-ink: #ffffff; --accent-soft: rgba(242,87,15,.12);
+  --good: #1f9d55; --bad: #d92d20;
+  --chrome: rgba(250,250,252,.72); --shadow: 0 1px 2px rgba(29,29,31,.06), 0 12px 32px rgba(29,29,31,.08);
+  --card-shadow: 0 2px 6px rgba(29,29,31,.06), 0 24px 60px rgba(29,29,31,.14);
+  --r: 22px; --r-field: 14px;
+  --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", system-ui, "Segoe UI", Roboto, sans-serif;
+  --tabh: 64px; --safe-b: env(safe-area-inset-bottom, 0px);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0c0c0e; --surface: #1c1c1e; --raised: #242426; --fill: rgba(118,118,128,.24); --fill2: rgba(118,118,128,.16);
+    --ink: #f5f5f7; --ink2: #a1a1a6; --ink3: #6e6e73; --sep: rgba(84,84,88,.6);
+    --accent: #ff6a24; --accent-soft: rgba(255,106,36,.16); --chrome: rgba(22,22,24,.72);
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 12px 32px rgba(0,0,0,.35); --card-shadow: 0 2px 6px rgba(0,0,0,.4), 0 24px 60px rgba(0,0,0,.5);
+  }
+}
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+[hidden] { display: none !important; }
+html, body { margin: 0; background: var(--bg); color: var(--ink); font: 400 16px/1.45 var(--font); -webkit-font-smoothing: antialiased; }
+body { min-height: 100dvh; }
+button { font: inherit; color: inherit; border: 0; background: none; cursor: pointer; }
+input, textarea, select { font: inherit; color: var(--ink); }
+a { color: var(--accent); text-decoration: none; }
+svg { width: 1em; height: 1em; fill: currentColor; display: block; }
+.muted { color: var(--ink2); }
+:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 2px; border-radius: 10px; }
+
+/* ---------- shell ---------- */
+.app { display: grid; grid-template-columns: 1fr; min-height: 100dvh; }
+.side { display: none; }
+main { padding: 0 18px calc(var(--tabh) + var(--safe-b) + 24px); max-width: 760px; width: 100%; margin: 0 auto; }
+.head { display: flex; align-items: flex-end; gap: 12px; padding: 20px 2px 14px; }
+.head h1 { margin: 0; font-size: 34px; line-height: 1.05; font-weight: 800; letter-spacing: -0.025em; }
+.head .sub { font-size: 14px; color: var(--ink2); margin-top: 4px; }
+.head .tools { margin-left: auto; display: flex; gap: 8px; }
+.tabbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; display: flex; justify-content: space-around; padding: 6px 8px calc(6px + var(--safe-b));
+  background: var(--chrome); backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%); border-top: 1px solid var(--sep); }
+.tabbar button { flex: 1; display: grid; justify-items: center; gap: 2px; padding: 6px 0 4px; font-size: 10.5px; font-weight: 600; color: var(--ink3); letter-spacing: .01em; position: relative; }
+.tabbar button svg { font-size: 25px; }
+.tabbar button[aria-selected="true"] { color: var(--accent); }
+.badge { position: absolute; top: 2px; left: calc(50% + 6px); min-width: 18px; height: 18px; padding: 0 5px; border-radius: 9px; background: var(--accent); color: #fff; font-size: 11px; font-weight: 700; display: grid; place-items: center; }
+@media (min-width: 960px) {
+  .app { grid-template-columns: 248px 1fr; }
+  .tabbar { display: none; }
+  .side { display: flex; flex-direction: column; gap: 4px; position: sticky; top: 0; height: 100dvh; padding: 28px 14px; border-right: 1px solid var(--sep); background: var(--chrome); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); }
+  .side .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 19px; letter-spacing: -.01em; padding: 0 10px 18px; }
+  .side .brand svg { color: var(--accent); font-size: 26px; }
+  .side button { display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-radius: 12px; font-weight: 600; font-size: 15px; color: var(--ink2); text-align: left; position: relative; }
+  .side button svg { font-size: 20px; }
+  .side button[aria-selected="true"] { background: var(--fill); color: var(--ink); }
+  .side button[aria-selected="true"] svg { color: var(--accent); }
+  .side .badge { position: static; margin-left: auto; }
+  .side .foot { margin-top: auto; font-size: 12.5px; color: var(--ink2); padding: 0 10px; line-height: 1.5; }
+  main { padding: 0 40px 60px; max-width: 880px; }
+  .head h1 { font-size: 40px; }
+}
+
+/* ---------- controls ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 20px; border-radius: 999px; font-weight: 650; font-size: 15px; background: var(--fill); color: var(--ink); white-space: nowrap; transition: transform .12s ease, background .2s ease, opacity .2s ease; }
+.btn:active { transform: scale(.97); }
+.btn svg { font-size: 18px; }
+.btn.primary { background: var(--accent); color: var(--accent-ink); }
+.btn.ink { background: var(--ink); color: var(--bg); }
+.btn.sm { height: 34px; padding: 0 14px; font-size: 14px; }
+.btn.icon { width: 44px; padding: 0; }
+.btn.sm.icon { width: 34px; }
+.btn.danger { color: var(--bad); }
+.btn:disabled { opacity: .45; pointer-events: none; }
+.seg { display: inline-flex; padding: 3px; background: var(--fill); border-radius: 999px; gap: 2px; }
+.seg button { height: 32px; padding: 0 14px; border-radius: 999px; font-size: 14px; font-weight: 600; color: var(--ink2); transition: background .2s ease, color .2s ease; }
+.seg button[aria-pressed="true"] { background: var(--surface); color: var(--ink); box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+.chip { display: inline-flex; align-items: center; gap: 5px; height: 26px; padding: 0 10px; border-radius: 999px; background: var(--fill2); color: var(--ink2); font-size: 12.5px; font-weight: 650; white-space: nowrap; }
+.chip svg { font-size: 13px; }
+.chip.hot { background: var(--accent-soft); color: var(--accent); }
+.field { display: grid; gap: 6px; font-size: 13px; font-weight: 600; color: var(--ink2); }
+.field input, .field textarea, .field select { width: 100%; border: 1px solid transparent; background: var(--fill2); border-radius: var(--r-field); padding: 12px 14px; font-size: 16px; font-weight: 450; color: var(--ink); outline: none; transition: border-color .2s ease, background .2s ease; }
+.field textarea { min-height: 96px; resize: vertical; line-height: 1.5; }
+.field input:focus, .field textarea:focus, .field select:focus { border-color: var(--accent); background: var(--surface); }
+.group { background: var(--surface); border-radius: var(--r); box-shadow: var(--shadow); }
+.section { margin-top: 26px; }
+.section > h2 { font-size: 20px; font-weight: 750; letter-spacing: -.012em; margin: 0 2px 12px; }
+.empty { text-align: center; padding: 48px 24px; color: var(--ink2); }
+.empty h3 { color: var(--ink); margin: 14px 0 6px; font-size: 20px; font-weight: 750; letter-spacing: -.01em; }
+.empty .art { width: 56px; height: 56px; margin: 0 auto; border-radius: 18px; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); font-size: 28px; }
+.empty .row { display: flex; gap: 10px; justify-content: center; margin-top: 18px; flex-wrap: wrap; }
+.skel { background: linear-gradient(90deg, var(--fill2) 0, var(--fill) 50%, var(--fill2) 100%); background-size: 200% 100%; animation: skel 1.3s linear infinite; border-radius: 12px; }
+@keyframes skel { from { background-position: 200% 0; } to { background-position: -200% 0; } }
+
+/* ---------- Discover (card stack) ---------- */
+.deck-top { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; }
+.deck-top .left { margin-left: auto; font-size: 13px; color: var(--ink2); font-weight: 600; }
+.stage { position: relative; height: clamp(380px, calc(100dvh - 318px - var(--safe-b)), 600px); touch-action: none; user-select: none; -webkit-user-select: none; }
+.discover-wrap { max-width: 480px; margin: 0 auto; }
+.card { position: absolute; inset: 0; background: var(--raised); border-radius: 28px; box-shadow: var(--card-shadow); padding: 22px 22px 20px; display: flex; flex-direction: column; overflow: hidden; will-change: transform; transform-origin: 50% 85%; }
+.card .tint { position: absolute; inset: 0 0 auto 0; height: 46%; background: radial-gradient(120% 90% at 0% 0%, var(--accent-soft), transparent 70%); pointer-events: none; }
+.card.ever .tint { background: radial-gradient(120% 90% at 0% 0%, var(--fill), transparent 70%); }
+.card .top { position: relative; display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+.card .opp { margin-left: auto; text-align: right; line-height: 1; }
+.card .opp b { display: block; font-size: 30px; font-weight: 800; letter-spacing: -.03em; }
+.card .opp span { font-size: 11px; font-weight: 700; color: var(--ink2); letter-spacing: .02em; }
+.card .q { position: relative; font-size: clamp(25px, 6.4vw, 32px); line-height: 1.12; font-weight: 800; letter-spacing: -.022em; margin: 26px 0 12px; }
+.card .hook { position: relative; font-size: 17px; color: var(--ink2); line-height: 1.4; }
+.card .spacer { flex: 1; }
+.card .mini { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 18px; }
+.card .mini div { background: var(--fill2); border-radius: 16px; padding: 10px 12px; }
+.card .mini b { display: block; font-size: 19px; font-weight: 750; letter-spacing: -.02em; }
+.card .mini span { font-size: 11.5px; font-weight: 650; color: var(--ink2); }
+.card .ev { margin-top: 12px; display: grid; gap: 6px; font-size: 13.5px; color: var(--ink2); }
+.card .ev div { display: flex; gap: 10px; }
+.card .ev b { margin-left: auto; color: var(--ink); font-weight: 700; white-space: nowrap; }
+.card .ev a { color: var(--ink2); text-decoration: underline; text-decoration-color: var(--sep); }
+.card .back { position: absolute; inset: 0; padding: 22px; background: var(--raised); overflow: auto; opacity: 0; pointer-events: none; transition: opacity .25s ease; }
+.card.flipped .back { opacity: 1; pointer-events: auto; }
+.card .back h3 { margin: 6px 0 10px; font-size: 22px; line-height: 1.2; letter-spacing: -.015em; }
+.card .back p { margin: 0 0 12px; color: var(--ink2); font-size: 15.5px; }
+.card .back p b { color: var(--ink); }
+.card .flip { position: relative; align-self: flex-start; margin-top: 14px; font-size: 14px; font-weight: 650; color: var(--accent); display: inline-flex; align-items: center; gap: 4px; }
+.stamp { position: absolute; top: 34px; padding: 6px 14px; border: 3px solid currentColor; border-radius: 12px; font-weight: 850; font-size: 26px; letter-spacing: .06em; opacity: 0; pointer-events: none; z-index: 3; }
+.stamp.like { left: 22px; color: var(--accent); transform: rotate(-12deg); }
+.stamp.pass { right: 22px; color: var(--ink2); transform: rotate(12deg); }
+.stamp.later { left: 50%; top: auto; bottom: 120px; color: var(--ink); transform: translateX(-50%); }
+.actions { display: flex; justify-content: center; align-items: center; gap: 18px; margin-top: 18px; }
+.round { width: 62px; height: 62px; border-radius: 50%; display: grid; place-items: center; background: var(--surface); box-shadow: var(--shadow); font-size: 27px; transition: transform .15s ease; }
+.round:active { transform: scale(.9); }
+.round.sm { width: 48px; height: 48px; font-size: 20px; color: var(--ink2); }
+.round.like { color: var(--accent); }
+.round.pass { color: var(--ink2); }
+.round.later { color: var(--ink); }
+.hint { display: none; text-align: center; font-size: 12.5px; color: var(--ink3); margin-top: 12px; }
+@media (hover: hover) and (pointer: fine) { .hint { display: block; } }
+
+/* ---------- Ideas ---------- */
+.list { display: grid; gap: 10px; }
+.row-item { display: flex; align-items: center; gap: 14px; padding: 16px 18px; background: var(--surface); border-radius: var(--r); box-shadow: var(--shadow); text-align: left; width: 100%; transition: transform .12s ease; }
+.row-item:active { transform: scale(.985); }
+.row-item .t { font-weight: 700; font-size: 16.5px; line-height: 1.3; letter-spacing: -.008em; }
+.row-item .m { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+.row-item .go { margin-left: auto; color: var(--ink3); font-size: 16px; flex: none; }
+.add { display: flex; gap: 10px; margin-bottom: 14px; }
+.add input { flex: 1; border: 0; background: var(--surface); box-shadow: var(--shadow); border-radius: 999px; padding: 0 18px; height: 48px; font-size: 16px; outline: none; }
+
+/* sheet */
+.scrim { position: fixed; inset: 0; z-index: 40; background: rgba(0,0,0,.32); opacity: 0; transition: opacity .3s ease; }
+.scrim.on { opacity: 1; }
+.sheet { position: fixed; z-index: 41; left: 0; right: 0; bottom: 0; max-height: 92dvh; background: var(--bg); border-radius: 26px 26px 0 0; box-shadow: 0 -10px 40px rgba(0,0,0,.18); display: flex; flex-direction: column; transform: translateY(100%); will-change: transform; }
+.sheet .grab { padding: 8px 0 2px; display: grid; place-items: center; touch-action: none; cursor: grab; }
+.sheet .grab i { width: 38px; height: 5px; border-radius: 3px; background: var(--ink3); opacity: .5; }
+.sheet .bar { display: flex; align-items: center; gap: 10px; padding: 6px 18px 12px; touch-action: none; }
+.sheet .bar h2 { margin: 0; font-size: 19px; font-weight: 750; letter-spacing: -.01em; flex: 1; line-height: 1.25; }
+.sheet .body { overflow: auto; padding: 0 18px calc(24px + var(--safe-b)); display: grid; gap: 16px; overscroll-behavior: contain; }
+@media (min-width: 960px) {
+  .sheet { left: 50%; right: auto; bottom: auto; top: 50%; width: 680px; max-height: 86dvh; border-radius: 26px; transform: translate(-50%, -46%) scale(.96); opacity: 0; }
+  .sheet .grab { display: none; }
+  .sheet .bar { padding-top: 18px; }
+}
+.pick { display: flex; gap: 8px; flex-wrap: wrap; }
+.pick button { height: 36px; padding: 0 14px; border-radius: 999px; background: var(--fill2); font-size: 14px; font-weight: 600; color: var(--ink2); }
+.pick button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+.beats { display: grid; gap: 8px; }
+.beat { display: grid; grid-template-columns: 28px 1fr; gap: 10px; background: var(--surface); border-radius: 16px; padding: 12px 14px; font-size: 15px; }
+.beat .n { font-weight: 750; color: var(--ink3); font-size: 13px; padding-top: 2px; }
+.beat .v { color: var(--ink2); font-size: 13.5px; margin-top: 4px; }
+.note { background: var(--surface); border-radius: 14px; padding: 10px 14px; font-size: 14.5px; }
+.note time { display: block; color: var(--ink3); font-size: 12px; font-weight: 600; }
+.notice { background: var(--surface); border-radius: 16px; padding: 14px 16px; font-size: 14.5px; color: var(--ink2); }
+.notice b { color: var(--ink); }
+.btnrow { display: flex; gap: 10px; flex-wrap: wrap; }
+.btnrow .grow { flex: 1; }
+
+/* ---------- Studio ---------- */
+.prod { background: var(--surface); border-radius: var(--r); box-shadow: var(--shadow); overflow: hidden; }
+.prod + .prod { margin-top: 14px; }
+.prod .media { position: relative; background: #000; height: min(62dvh, 600px); display: grid; place-items: center; overflow: hidden; }
+.prod .media.empty-m { height: 132px; background: radial-gradient(120% 140% at 0% 0%, var(--accent-soft), transparent 70%), var(--fill2); }
+.prod .media.empty-m .ph { color: var(--ink2); }
+.prod .media img, .prod .media video { width: 100%; height: 100%; object-fit: contain; display: block; background: #000; }
+.prod .media .ph { color: rgba(255,255,255,.55); display: grid; justify-items: center; gap: 10px; font-size: 14px; font-weight: 600; text-align: center; padding: 20px; }
+.prod .media .ph svg { font-size: 34px; }
+.prod .media .playbtn { position: absolute; inset: 0; display: grid; place-items: center; color: #fff; font-size: 56px; background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,.35)); }
+.prod .media .playbtn span { width: 76px; height: 76px; border-radius: 50%; display: grid; place-items: center; background: rgba(255,255,255,.22); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+.prod .media .playbtn svg { font-size: 30px; margin-left: 4px; }
+.prod .info { padding: 16px 18px 18px; display: grid; gap: 12px; }
+.prod .t { font-size: 18px; font-weight: 750; letter-spacing: -.012em; line-height: 1.25; }
+.prod .meta { display: flex; gap: 6px; flex-wrap: wrap; }
+.track { height: 6px; border-radius: 3px; background: var(--fill); overflow: hidden; }
+.track i { display: block; height: 100%; border-radius: 3px; background: var(--accent); transition: width .6s cubic-bezier(.2,.8,.2,1); }
+.track.live i { background-image: linear-gradient(90deg, transparent, rgba(255,255,255,.45), transparent); background-size: 140px 100%; background-repeat: no-repeat; animation: shim 1.3s linear infinite; background-color: var(--accent); }
+@keyframes shim { from { background-position: -140px 0; } to { background-position: 420px 0; } }
+.stepline { display: flex; justify-content: space-between; font-size: 13px; color: var(--ink2); gap: 10px; }
+.steps { display: flex; gap: 4px; }
+.steps i { flex: 1; height: 4px; border-radius: 2px; background: var(--fill); }
+.steps i.done { background: var(--ink); }
+.steps i.now { background: var(--accent); }
+.steps-l { display: flex; justify-content: space-between; font-size: 10.5px; font-weight: 650; color: var(--ink3); letter-spacing: .01em; }
+.err { color: var(--bad); font-size: 13.5px; font-weight: 600; }
+.pubs { display: grid; gap: 8px; }
+.pub { display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-radius: 14px; background: var(--fill2); font-size: 14px; }
+.pub svg { font-size: 20px; }
+.pub .s { color: var(--ink2); font-size: 12.5px; }
+.pub .btn { margin-left: auto; }
+
+/* ---------- Stats ---------- */
+.tiles { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.tile { background: var(--surface); border-radius: var(--r); box-shadow: var(--shadow); padding: 16px 18px; }
+.tile .n { font-size: 30px; font-weight: 800; letter-spacing: -.03em; line-height: 1.05; }
+.tile .l { font-size: 13px; color: var(--ink2); font-weight: 600; margin-top: 4px; }
+.tile.wide { grid-column: 1 / -1; }
+.meter { height: 10px; border-radius: 5px; background: var(--fill); overflow: hidden; margin-top: 12px; }
+.meter i { display: block; height: 100%; background: var(--accent); border-radius: 5px; }
+.guide { counter-reset: s; display: grid; gap: 10px; padding: 0; margin: 0; list-style: none; }
+.guide li { counter-increment: s; position: relative; padding: 14px 16px 14px 52px; background: var(--surface); border-radius: 16px; font-size: 15px; line-height: 1.45; }
+.guide li::before { content: counter(s); position: absolute; left: 14px; top: 13px; width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); font-weight: 800; font-size: 13px; }
+.guide code { background: var(--fill2); padding: 2px 6px; border-radius: 6px; font-size: 13.5px; }
+.toast { position: fixed; left: 50%; bottom: calc(var(--tabh) + var(--safe-b) + 18px); z-index: 60; transform: translate(-50%, 20px); opacity: 0; padding: 12px 18px; border-radius: 999px; background: var(--ink); color: var(--bg); font-size: 14.5px; font-weight: 600; box-shadow: var(--shadow); transition: transform .35s cubic-bezier(.2,.9,.3,1.2), opacity .25s ease; pointer-events: none; max-width: calc(100vw - 32px); text-align: center; }
+.toast.on { transform: translate(-50%, 0); opacity: 1; }
+@media (min-width: 960px) { .toast { bottom: 28px; } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .tabbar, .side { background: var(--surface); backdrop-filter: none; -webkit-backdrop-filter: none; }
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="side" aria-label="Sections">
+    <div class="brand"><span data-i="penguin"></span>Penguin Studio</div>
+    <button data-view="discover" aria-selected="true"><span data-i="discover"></span>Discover</button>
+    <button data-view="ideas" aria-selected="false"><span data-i="ideas"></span>Ideas<span class="badge" data-badge="ideas" hidden></span></button>
+    <button data-view="studio" aria-selected="false"><span data-i="studio"></span>Studio<span class="badge" data-badge="studio" hidden></span></button>
+    <button data-view="stats" aria-selected="false"><span data-i="stats"></span>Channel</button>
+    <div class="foot" id="engineFoot">Connecting…</div>
+  </aside>
+
+  <main>
+    <!-- Discover -->
+    <section class="view" id="view-discover">
+      <div class="head"><div><h1>Discover</h1><div class="sub" id="deckSub">Swipe right to keep an idea</div></div>
+        <div class="tools"><button class="btn sm icon" id="btnRefresh" aria-label="Refresh deck"><span data-i="refresh"></span></button></div></div>
+      <div class="discover-wrap">
+      <div class="deck-top">
+        <div class="seg" id="modeSeg" role="group" aria-label="Deck order">
+          <button data-mode="mix" aria-pressed="true">For you</button><button data-mode="hot" aria-pressed="false">Hot</button><button data-mode="ever" aria-pressed="false">Evergreen</button><button data-mode="odds" aria-pressed="false">Best odds</button>
+        </div>
+      </div>
+      <div class="stage" id="stack" aria-live="polite"></div>
+      <div class="actions">
+        <button class="round sm" id="btnUndo" aria-label="Undo last swipe"><span data-i="undo"></span></button>
+        <button class="round pass" id="btnPass" aria-label="Pass"><span data-i="x"></span></button>
+        <button class="round later" id="btnLater" aria-label="Save for later"><span data-i="later"></span></button>
+        <button class="round like" id="btnLike" aria-label="Keep idea"><span data-i="heart"></span></button>
+        <button class="round sm" id="btnWild" aria-label="Deal 15 Claude wildcards"><span data-i="dice"></span></button>
+      </div>
+      <div class="hint">Drag the card, or use the arrow keys. Up saves for later.</div>
+      </div>
+    </section>
+
+    <!-- Ideas -->
+    <section class="view" id="view-ideas" hidden>
+      <div class="head"><div><h1>Ideas</h1><div class="sub">Write the script, then make the Short.</div></div></div>
+      <form class="add" id="addForm"><input id="newQ" placeholder="Your own idea, as a question" aria-label="Your own idea"><button class="btn primary icon" aria-label="Add idea"><span data-i="plus"></span></button></form>
+      <div class="seg" id="ideaSeg" role="group" aria-label="Filter ideas" style="margin-bottom:14px">
+        <button data-f="active" aria-pressed="true">Kept</button><button data-f="later" aria-pressed="false">Later</button><button data-f="sent" aria-pressed="false">Sent</button>
+      </div>
+      <div class="list" id="ideaList"></div>
+    </section>
+
+    <!-- Studio -->
+    <section class="view" id="view-studio" hidden>
+      <div class="head"><div><h1>Studio</h1><div class="sub" id="studioSub">Your Shorts, from first frame to posted.</div></div>
+        <div class="tools"><button class="btn sm icon" id="btnStatus" aria-label="Refresh status"><span data-i="refresh"></span></button></div></div>
+      <div class="seg" id="studioSeg" role="group" aria-label="Filter" style="margin-bottom:14px">
+        <button data-f="now" aria-pressed="true">In progress</button><button data-f="ready" aria-pressed="false">Ready</button><button data-f="out" aria-pressed="false">Posted</button>
+      </div>
+      <div id="prodList"></div>
+    </section>
+
+    <!-- Channel -->
+    <section class="view" id="view-stats" hidden>
+      <div class="head"><div><h1>Channel</h1><div class="sub">Budget, voice and where Shorts get posted.</div></div></div>
+      <div id="statsBody"></div>
+    </section>
+  </main>
+</div>
+
+<nav class="tabbar" aria-label="Sections">
+  <button data-view="discover" aria-selected="true"><span data-i="discover"></span>Discover</button>
+  <button data-view="ideas" aria-selected="false"><span data-i="ideas"></span>Ideas<span class="badge" data-badge="ideas" hidden></span></button>
+  <button data-view="studio" aria-selected="false"><span data-i="studio"></span>Studio<span class="badge" data-badge="studio" hidden></span></button>
+  <button data-view="stats" aria-selected="false"><span data-i="stats"></span>Channel</button>
+</nav>
+
+<div class="scrim" id="scrim" hidden></div>
+<section class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle" hidden>
+  <div class="grab" id="sheetGrab"><i></i></div>
+  <div class="bar" id="sheetBar"><h2 id="sheetTitle"></h2><button class="btn sm icon" id="sheetClose" aria-label="Close"><span data-i="close"></span></button></div>
+  <div class="body" id="sheetBody"></div>
+</section>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+const ICONS = /*__ICONS__*/{};
+const OUTBOX = "16a78EaUiDd62gAJjBGN7n8TzALk5SMVS";
+const INBOX = "1lckLcP22cFfiNwiGaXnJNnJpZG2k5Ef4";
+const DRIVE = "Google Drive";
+const ROLES = [["auto", "Director decides"], ["protagonist", "Protagonist"], ["sidekick", "Sidekick"], ["villain", "Villain"], ["npc", "NPC"], ["cameo", "Cameo"]];
+const VSTYLES = [["A", "Calm and deadpan"], ["B", "Punchy"], ["C", "Cool, punch on reveals"]];
+const STEPS = [["voicing", "Voice"], ["directing", "Direct"], ["art", "Frames"], ["motion", "Animate"], ["final_render", "Render"], ["final_ready", "Review"], ["scheduled", "Posted"]];
+const WORKING = new Set(["queued", "directing", "voicing", "art", "test_render", "motion", "final_render", "metadata", "uploading"]);
+const RM = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+const S = { db: null, mcp: null, sample: null, deck: [], deckMeta: null, wild: [], swiped: new Map(), ideas: new Map(), queue: [], mode: "mix",
+  ideaF: "active", studioF: "now", last: null, files: {}, media: new Map(), statusAt: 0, voice: null, busy: false };
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const ic = (n) => ICONS[n] || "";
+const fmt = (n) => n == null || isNaN(n) ? "–" : n >= 1e6 ? (n / 1e6).toFixed(n >= 1e7 ? 0 : 1) + "M" : n >= 1e4 ? Math.round(n / 1e3) + "K" : n >= 1e3 ? (n / 1e3).toFixed(1) + "K" : String(Math.round(n));
+const today = () => new Date().toISOString().slice(0, 10);
+const ago = (iso) => { const m = (Date.now() - Date.parse(iso)) / 6e4; return isNaN(m) ? "" : m < 1 ? "just now" : m < 60 ? Math.round(m) + " min ago" : m < 1440 ? Math.round(m / 60) + "h ago" : Math.round(m / 1440) + "d ago"; };
+function paintIcons(root = document) { $$("[data-i]", root).forEach((el) => { if (!el.firstChild) el.innerHTML = ic(el.dataset.i); }); }
+function toast(msg) { const t = $("#toast"); t.textContent = msg; t.classList.add("on"); clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.remove("on"), 2600); }
+function haptic(ms = 10) { try { navigator.vibrate && navigator.vibrate(ms); } catch (e) {} }
+
+/* ---------- springs (Apple's damping + response) ---------- */
+function spring(o) {
+  const k = Math.pow((2 * Math.PI) / o.response, 2), c = (4 * Math.PI * o.damping) / o.response;
+  let x = o.from - o.to, v = o.velocity || 0, last = performance.now(), raf;
+  const step = (t) => {
+    const dt = Math.min(0.034, (t - last) / 1000); last = t;
+    for (let i = 0; i < 4; i++) { const h = dt / 4; v += (-k * x - c * v) * h; x += v * h; }
+    o.onUpdate(o.to + x);
+    if (Math.abs(x) < (o.eps || 0.4) && Math.abs(v) < 3) { o.onUpdate(o.to); o.onDone && o.onDone(); return; }
+    raf = requestAnimationFrame(step);
+  };
+  raf = requestAnimationFrame(step);
+  return () => cancelAnimationFrame(raf);
+}
+
+/* ---------- navigation ---------- */
+$$("[data-view]").forEach((b) => b.addEventListener("click", () => showView(b.dataset.view)));
+function showView(v) {
+  $$("[data-view]").forEach((b) => b.setAttribute("aria-selected", String(b.dataset.view === v)));
+  $$(".view").forEach((s) => (s.hidden = s.id !== "view-" + v));
+  window.scrollTo({ top: 0 });
+  if (v === "ideas") renderIdeas();
+  if (v === "studio") { renderStudio(); if (Date.now() - S.statusAt > 20000) refreshStatus(false); }
+  if (v === "stats") renderStats();
+}
+
+/* ---------- Drive bridge ---------- */
+async function driveFind(name) {
+  const r = await S.mcp.callTool(DRIVE, "search_files", { query: `parentId = '${OUTBOX}' and title = '${name}' and trashed = false`, excludeContentSnippets: true }, { cache: false });
+  return ((r.payload && r.payload.files) || [])[0] || null;
+}
+async function driveReadJson(fileId) {
+  const r = await S.mcp.callTool(DRIVE, "download_file_content", { fileId }, { cache: false });
+  const b64 = r.payload && r.payload.content; if (!b64) throw new Error("empty file");
+  return JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(b64), (c) => c.charCodeAt(0))));
+}
+async function inbox(type, payload) {
+  const obj = { type, at: new Date().toISOString(), ...payload };
+  await S.mcp.callTool(DRIVE, "create_file", { title: `${type}-${payload.id || "x"}-${Date.now()}.json`, parentId: INBOX, contentMimeType: "text/plain",
+    disableConversionToGoogleType: true, textContent: JSON.stringify(obj, null, 1) }, { cache: false });
+  return obj;
+}
+async function driveBlob(fileId, mime) {
+  if (S.media.has(fileId)) return S.media.get(fileId);
+  const r = await S.mcp.callTool(DRIVE, "download_file_content", { fileId }, { cache: false });
+  const b64 = r.payload && r.payload.content; if (!b64) throw new Error("empty file");
+  const bin = atob(b64); const bytes = new Uint8Array(bin.length); for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+  const url = URL.createObjectURL(new Blob([bytes], { type: mime })); S.media.set(fileId, url); return url;
+}
+function mcpErr(e) {
+  const c = e && e.code;
+  if (c === "needs_reauth") return "Reconnect Google Drive in claude.ai Settings, Connectors.";
+  if (c === "server_not_connected") return "Add Google Drive in claude.ai Settings, Connectors.";
+  if (c === "not_in_manifest" || c === "approval_required") return "Allow this page to use Google Drive, then refresh.";
+  if (c === "server_unavailable") return "Drive is slow right now. Try again in a moment.";
+  return "Couldn't reach Drive" + (e && e.message ? ": " + e.message.slice(0, 80) : ".");
+}
+function setFoot(t) { $("#engineFoot").textContent = t; }
+
+async function loadDeck(manual) {
+  if (!S.mcp) { setFoot("Drive isn't available in this view."); renderDeck(); return; }
+  try {
+    const f = await driveFind("deck.json");
+    if (!f) { renderDeck(); return; }
+    const data = await driveReadJson(f.id);
+    S.deck = data.cards || []; S.deckMeta = { modified: f.modifiedTime };
+    if (manual) toast(`${S.deck.length} ideas in the deck`);
+    buildQueue(); renderDeck(); loadEngine();
+  } catch (e) { toast(mcpErr(e)); renderDeck(); }
+}
+async function loadEngine() {
+  for (const n of ["status.json", "auditions.json"]) { try { const f = await driveFind(n); S.files[n] = f ? await driveReadJson(f.id) : null; } catch (e) {} }
+  S.statusAt = Date.now(); syncIdeasFromEngine(); renderStudio(); renderStats(); badges(); footFromStatus();
+}
+function footFromStatus() { const st = S.files["status.json"]; setFoot(st ? `Engine checked in ${ago(st.at)}` : "Waiting for the engine's first report."); }
+async function refreshStatus(manual) {
+  if (!S.mcp || S.busy) return; S.busy = true;
+  try { const f = await driveFind("status.json"); S.files["status.json"] = f ? await driveReadJson(f.id) : null; S.statusAt = Date.now(); syncIdeasFromEngine(); renderStudio(); badges(); footFromStatus(); if (manual) toast("Up to date"); }
+  catch (e) { if (manual) toast(mcpErr(e)); } finally { S.busy = false; }
+}
+const jobs = () => ((S.files["status.json"] || {}).jobs || []).filter((j) => j.stage !== "archived");
+function syncIdeasFromEngine() {
+  for (const j of jobs()) { const i = S.ideas.get(j.id); if (i && i.status !== "sent") saveIdea(j.id, { status: "sent" }); }
+}
+
+/* ---------- Discover ---------- */
+function hoursSince(c) { const t = c.origin && c.origin.time ? Date.parse(c.origin.time) : Date.parse(c.t); return isNaN(t) ? null : Math.max(0, (Date.now() - t) / 3.6e6); }
+function buildQueue() {
+  let pool = [...S.deck, ...S.wild].filter((c) => !S.swiped.has(c.key));
+  if (S.mode === "hot") pool = pool.filter((c) => c.kind === "hot").sort((a, b) => (hoursSince(a) ?? 99) - (hoursSince(b) ?? 99));
+  else if (S.mode === "ever") pool = pool.filter((c) => c.kind !== "hot").sort((a, b) => (b.opp ?? 0) - (a.opp ?? 0));
+  else if (S.mode === "odds") pool.sort((a, b) => (b.opp ?? 0) - (a.opp ?? 0));
+  else pool = pool.map((c) => [c, (c.opp ?? 60) + Math.random() * 35 + (c.kind === "hot" ? 6 : 0)]).sort((a, b) => b[1] - a[1]).map((x) => x[0]);
+  S.queue = pool;
+}
+function evidence(c) {
+  const s = c.st || {}, rows = [];
+  const add = (l, v, href) => rows.push(`<div><span>${href ? `<a href="${esc(href)}" target="_blank" rel="noopener">${esc(l)}</a>` : esc(l)}</span><b>${v}</b></div>`);
+  if (s.wiki_views_24h != null) add("Wikipedia views yesterday", fmt(s.wiki_views_24h));
+  if (s.google_searches) add(`Google searches today (${s.google_geo || "?"})`, esc(s.google_searches));
+  if (s.reddit_upvotes != null) add("Reddit upvotes", fmt(s.reddit_upvotes));
+  if (s.hn_points != null) add("Hacker News points", fmt(s.hn_points));
+  if (s.yt_top_views != null) add("Top YouTube video on it", fmt(s.yt_top_views), s.yt_top_url);
+  return rows.slice(0, 3).join("");
+}
+function cardHTML(c) {
+  const h = hoursSince(c);
+  const kind = c.kind === "hot" ? `<span class="chip hot">${ic("fire")}Hot${h != null ? " · " + (h < 1 ? "<1h" : Math.round(h) + "h") : ""}</span>` : c.kind === "claude" ? `<span class="chip">${ic("sparkle")}Claude idea</span>` : `<span class="chip">${ic("leaf")}Evergreen</span>`;
+  const src = (c.src || []).slice(0, 3).map((s) => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title || s.src)}</a>`).join("<br>");
+  return `<article class="card ${c.kind === "hot" ? "" : "ever"}" data-key="${esc(c.key)}">
+    <div class="tint"></div>
+    <span class="stamp like">KEEP</span><span class="stamp pass">PASS</span><span class="stamp later">LATER</span>
+    <div class="top">${kind}${c.aud ? `<span class="chip">${esc(c.aud)}</span>` : ""}<div class="opp"><b>${c.opp ?? "–"}</b><span>OPPORTUNITY</span></div></div>
+    <div class="q">${esc(c.q)}</div>
+    ${c.hook ? `<div class="hook">${esc(c.hook)}</div>` : ""}
+    <div class="spacer"></div>
+    <div class="mini"><div><b>${c.demand ?? "–"}</b><span>Demand</span></div><div><b>${c.comp ?? "–"}</b><span>Competition</span></div><div><b>${c.quality ?? "–"}</b><span>Quality</span></div></div>
+    <div class="ev">${evidence(c)}</div>
+    <button class="flip" data-flip>What's the story? ${ic("chev")}</button>
+    <div class="back" data-back>
+      <button class="flip" data-flip style="margin:0">${ic("arrowleft")} Back</button>
+      <h3>${esc(c.q)}</h3>
+      ${c.about ? `<p>${esc(c.about)}</p>` : ""}
+      ${c.surprise ? `<p><b>The twist:</b> ${esc(c.surprise)}</p>` : ""}
+      ${src ? `<p style="font-size:13.5px">${src}</p>` : ""}
+    </div>
+  </article>`;
+}
+function renderDeck() {
+  const st = $("#stack");
+  if (S.deckMeta) { const h = (Date.now() - Date.parse(S.deckMeta.modified)) / 3.6e6; $("#deckSub").textContent = `${S.queue.length} to swipe · refreshed ${h < 1 ? "just now" : Math.round(h) + "h ago"}`; }
+  const top = S.queue.slice(0, 3);
+  if (!top.length) {
+    st.innerHTML = `<div class="empty"><div class="art">${ic("discover")}</div><h3>${S.deck.length ? "You've seen them all" : "Loading ideas"}</h3><p>The engine refills the deck every 4 hours.</p>
+      <div class="row"><button class="btn" data-act="refresh">${ic("refresh")}Refresh</button><button class="btn primary" data-act="wild">${ic("dice")}Deal 15 wildcards</button></div></div>`;
+    st.querySelector('[data-act="refresh"]').onclick = () => loadDeck(true);
+    st.querySelector('[data-act="wild"]').onclick = () => dealWildcards(false);
+    return;
+  }
+  st.innerHTML = top.map(cardHTML).reverse().join("");
+  const cards = $$(".card", st).reverse(); // [front, back1, back2]
+  cards.forEach((el, i) => { el.style.zIndex = 10 - i; el.style.transform = `translateY(${i * 12}px) scale(${1 - i * 0.045})`; if (i) el.style.pointerEvents = "none"; });
+  setupCard(cards[0], cards[1], cards[2]);
+}
+function setupCard(el, next, third) {
+  const stamps = { like: $(".stamp.like", el), pass: $(".stamp.pass", el), later: $(".stamp.later", el) };
+  $$("[data-flip]", el).forEach((b) => (b.onclick = (e) => { e.stopPropagation(); el.classList.toggle("flipped"); }));
+  let x = 0, y = 0, down = false, sx = 0, sy = 0, hist = [], fromTop = true, cancel = [], moved = false;
+  const W = () => el.offsetWidth;
+  const paint = () => {
+    const rot = RM ? 0 : (x / W()) * 16 * (fromTop ? 1 : -1);
+    el.style.transform = `translate(${x}px, ${y}px) rotate(${rot}deg)`;
+    const p = Math.min(1, Math.hypot(x, y) / (W() * 0.4));
+    if (next) next.style.transform = `translateY(${12 - 12 * p}px) scale(${0.955 + 0.045 * p})`;
+    if (third) third.style.transform = `translateY(${24 - 12 * p}px) scale(${0.91 + 0.045 * p})`;
+    stamps.like.style.opacity = Math.max(0, Math.min(1, x / 90));
+    stamps.pass.style.opacity = Math.max(0, Math.min(1, -x / 90));
+    stamps.later.style.opacity = Math.abs(x) < 70 ? Math.max(0, Math.min(1, -y / 90)) : 0;
+  };
+  const stopAll = () => { cancel.forEach((f) => f()); cancel = []; };
+  el.addEventListener("pointerdown", (e) => {
+    if (e.target.closest("a,button") || el.classList.contains("flipped")) return;
+    stopAll(); down = true; S.dragging = true; moved = false; el.setPointerCapture(e.pointerId);
+    sx = e.clientX - x; sy = e.clientY - y; hist = [{ x: e.clientX, y: e.clientY, t: e.timeStamp }];
+    fromTop = e.clientY - el.getBoundingClientRect().top < el.offsetHeight * 0.55;
+  });
+  el.addEventListener("pointermove", (e) => {
+    if (!down) return;
+    x = e.clientX - sx; y = e.clientY - sy;
+    if (!moved && Math.hypot(x, y) > 6) moved = true;
+    hist.push({ x: e.clientX, y: e.clientY, t: e.timeStamp }); if (hist.length > 6) hist.shift();
+    paint();
+  });
+  const release = () => {
+    if (!down) return; down = false; S.dragging = false;
+    const a = hist[0], b = hist[hist.length - 1], dt = Math.max(16, b.t - a.t);
+    const vx = ((b.x - a.x) / dt) * 1000, vy = ((b.y - a.y) / dt) * 1000;
+    const proj = (v) => (v / 1000) * 0.99 / (1 - 0.99);           // Apple's momentum projection, snappy
+    const px = x + proj(vx), py = y + proj(vy), th = W() * 0.42;
+    let dir = null;
+    if (px > th) dir = "like"; else if (px < -th) dir = "pass"; else if (py < -th * 1.1 && Math.abs(px) < th * 0.8) dir = "later";
+    if (dir) return fling(dir, vx, vy);
+    // spring home, a little bounce because the card was thrown
+    cancel.push(spring({ from: x, to: 0, velocity: vx, damping: 0.72, response: 0.42, onUpdate: (v) => { x = v; paint(); } }));
+    cancel.push(spring({ from: y, to: 0, velocity: vy, damping: 0.72, response: 0.42, onUpdate: (v) => { y = v; paint(); } }));
+  };
+  el.addEventListener("pointerup", release); el.addEventListener("pointercancel", release);
+  el.addEventListener("click", (e) => { if (!moved && !e.target.closest("a,button")) el.classList.toggle("flipped"); });
+  const fling = (dir, vx = 0, vy = 0) => {
+    stopAll(); haptic(dir === "like" ? 14 : 8);
+    const w = window.innerWidth;
+    const tx = dir === "like" ? w + 120 : dir === "pass" ? -(w + 120) : x * 0.3;
+    const ty = dir === "later" ? -window.innerHeight : y + vy * 0.15;
+    let doneN = 0; const done = () => { if (++doneN === 2) decide(dir); };
+    if (RM) { el.style.transition = "opacity .15s"; el.style.opacity = "0"; return setTimeout(() => decide(dir), 160); }
+    cancel.push(spring({ from: x, to: tx, velocity: dir === "later" ? 0 : Math.max(Math.abs(vx), 900) * Math.sign(tx || 1), damping: 1, response: 0.38, eps: 6, onUpdate: (v) => { x = v; paint(); }, onDone: done }));
+    cancel.push(spring({ from: y, to: ty, velocity: dir === "later" ? Math.min(vy, -900) : vy, damping: 1, response: 0.38, eps: 6, onUpdate: (v) => { y = v; paint(); }, onDone: done }));
+  };
+  el._fling = fling;
+}
+function swipe(dir) { const el = $("#stack .card"); const front = $$("#stack .card").pop(); if (front && front._fling) front._fling(dir); }
+$("#btnLike").onclick = () => swipe("like"); $("#btnPass").onclick = () => swipe("pass"); $("#btnLater").onclick = () => swipe("later");
+$("#btnUndo").onclick = undo; $("#btnWild").onclick = () => dealWildcards(false); $("#btnRefresh").onclick = () => loadDeck(true);
+$$("#modeSeg button").forEach((b) => (b.onclick = () => { S.mode = b.dataset.mode; $$("#modeSeg button").forEach((x) => x.setAttribute("aria-pressed", String(x === b))); buildQueue(); renderDeck(); }));
+document.addEventListener("keydown", (e) => {
+  if ($("#view-discover").hidden || e.target.closest("input,textarea,select") || !$("#sheet").hidden) return;
+  if (e.key === "ArrowRight") swipe("like"); else if (e.key === "ArrowLeft") swipe("pass"); else if (e.key === "ArrowUp") { e.preventDefault(); swipe("later"); } else if (e.key.toLowerCase() === "z") undo();
+});
+async function decide(dir) {
+  const c = S.queue.shift(); if (!c) return;
+  S.swiped.set(c.key, { dir, day: today() }); S.last = { card: c, dir };
+  renderDeck();
+  if (dir !== "pass") { await saveIdea(c.key, ideaFromCard(c, dir === "like" ? "active" : "later")); badges(); toast(dir === "like" ? "Kept. It's in Ideas." : "Saved for later."); }
+  recordSwipe(c.key, dir);
+  if (S.queue.length < 4 && S.sample && !decide.auto) { decide.auto = true; dealWildcards(true).finally(() => (decide.auto = false)); }
+}
+async function undo() {
+  const l = S.last; if (!l) return toast("Nothing to undo.");
+  S.last = null; S.swiped.delete(l.card.key); S.queue.unshift(l.card); renderDeck(); recordSwipe(l.card.key, null);
+  if (l.dir !== "pass" && S.db) { try { await S.db.doc("ideas/" + l.card.key).delete(); } catch (e) {} }
+  toast("Brought it back.");
+}
+async function recordSwipe(key, dir) {
+  if (!S.db) return; const ref = S.db.doc("swipes/" + today());
+  try { const snap = await ref.get(); if (!snap.exists) await ref.set({ k: {} }); await ref.update({ k: { [key]: dir } }); } catch (e) {}
+}
+async function dealWildcards(silent) {
+  if (!S.sample) { if (!silent) toast("Claude isn't available in this view."); return; }
+  const btn = $("#btnWild"); btn.disabled = true;
+  const used = [...S.deck, ...S.wild].map((c) => c.q).slice(-120).join(" | ");
+  const prompt = `Invent 15 surprising, specific ideas for 50-60 second animated YouTube Shorts in the style of viral "what if" and "how does this actually work" Shorts. Mix: absurd what-ifs, hidden mechanics of everyday things, weird true history, scale and science thought experiments, money mysteries, tech, movie logic and hidden details. Each must have a visual premise you can picture in one second. Avoid anything like: ${used}
+Reply with only a JSON array of objects: {"q":"question, max 12 words","hook":"first spoken line, max 12 words","about":"2 plain sentences","surprise":"the wait-what fact","aud":"general curious | students | tech & AI | finance & crypto | movie & pop culture | India-first","sc":{"curiosity":[n,"reason"],"visual":[n,"reason"],"shelf_life":[n,"reason"]}}`;
+  try {
+    const arr = await S.sample.json(prompt, { modelTier: "default", cache: false });
+    const now = new Date().toISOString();
+    const cards = (Array.isArray(arr) ? arr : []).filter((x) => x && x.q).map((x) => {
+      const q = Object.values(x.sc || {}).map((v) => (Array.isArray(v) ? v[0] : 3)); const quality = q.length ? Math.round((q.reduce((a, b) => a + b, 0) / (q.length * 5)) * 100) : null;
+      return { ...x, key: "ai-" + x.q.toLowerCase().replace(/[^a-z0-9]+/g, "-").slice(0, 70), kind: "claude", t: now, st: {}, src: [], quality, opp: quality != null ? Math.round(quality * 0.85) : null };
+    }).filter((c) => !S.swiped.has(c.key));
+    S.wild.push(...cards); const have = new Set(S.queue.map((c) => c.key));
+    S.queue.push(...cards.filter((c) => !have.has(c.key)));  // append, so the cards already on screen don't reshuffle
+    if (!S.dragging) renderDeck(); if (!silent) toast(cards.length ? `${cards.length} wildcards dealt` : "No new wildcards this time.");
+  } catch (e) { if (!silent) toast(e.code === "rate_limited" ? "Claude limit reached. Try later." : "Couldn't deal wildcards."); }
+  finally { btn.disabled = false; }
+}
+
+/* ---------- Ideas ---------- */
+function ideaFromCard(c, status) {
+  return { id: c.key, key: c.key, source: c.kind === "claude" ? "claude" : "deck", status, createdAt: new Date().toISOString(), q: c.q, hook: c.hook || "",
+    about: c.about || "", surprise: c.surprise || "", angle: "", aud: c.aud || "general curious", role: "auto", vstyle: "", notes: [], refs: (c.src || []).map((s) => s.url).filter(Boolean),
+    card: { opp: c.opp, demand: c.demand, comp: c.comp, quality: c.quality, st: c.st || {}, src: c.src || [], kind: c.kind }, script: null };
+}
+async function saveIdea(id, patch) {
+  const next = { ...(S.ideas.get(id) || {}), ...patch, updatedAt: new Date().toISOString() }; S.ideas.set(id, next);
+  if (S.db) { try { await S.db.doc("ideas/" + id).set(next); } catch (e) { toast("Couldn't save. Check your connection."); } }
+}
+$("#addForm").onsubmit = async (e) => {
+  e.preventDefault(); const q = $("#newQ").value.trim(); if (!q) return;
+  const id = "own-" + Date.now().toString(36);
+  await saveIdea(id, { id, key: id, source: "own", status: "active", createdAt: new Date().toISOString(), q, hook: "", about: "", surprise: "", angle: "", aud: "general curious", role: "auto", vstyle: "", notes: [], refs: [], card: { st: {}, src: [] }, script: null });
+  $("#newQ").value = ""; renderIdeas(); badges(); openIdea(id);
+};
+$$("#ideaSeg button").forEach((b) => (b.onclick = () => { S.ideaF = b.dataset.f; $$("#ideaSeg button").forEach((x) => x.setAttribute("aria-pressed", String(x === b))); renderIdeas(); }));
+function ideaStatus(i) { return i.status === "liked" || i.status === "scripting" ? "active" : ["queued", "test", "final", "review", "scheduled", "live"].includes(i.status) ? "sent" : i.status; }
+function renderIdeas() {
+  const list = [...S.ideas.values()].filter((i) => ideaStatus(i) === S.ideaF).sort((a, b) => (b.updatedAt || "").localeCompare(a.updatedAt || ""));
+  const el = $("#ideaList");
+  if (!list.length) {
+    el.innerHTML = `<div class="empty"><div class="art">${ic("ideas")}</div><h3>${S.ideaF === "later" ? "Nothing saved for later" : S.ideaF === "sent" ? "Nothing in production yet" : "No ideas yet"}</h3><p>${S.ideaF === "active" ? "Swipe right in Discover, or type your own above." : S.ideaF === "later" ? "Swipe up on a card to save it here." : "Ideas you send to the engine show up here."}</p></div>`;
+    return;
+  }
+  el.innerHTML = list.map((i) => `<button class="row-item" data-id="${esc(i.id)}"><div><div class="t">${esc(i.q)}</div><div class="m">
+    ${i.script ? `<span class="chip hot">${ic("check")}Script ready</span>` : `<span class="chip">${ic("pencil")}Needs a script</span>`}
+    ${i.role && i.role !== "auto" ? `<span class="chip">${ic("penguin")}${esc(i.role)}</span>` : ""}${i.card && i.card.opp != null ? `<span class="chip">Opp ${i.card.opp}</span>` : ""}</div></div><span class="go">${ic("chev")}</span></button>`).join("");
+  $$(".row-item", el).forEach((b) => (b.onclick = () => openIdea(b.dataset.id)));
+}
+function openIdea(id) {
+  const i = S.ideas.get(id); if (!i) return;
+  const s = i.script;
+  openSheet(i.q, `
+    <label class="field">Topic<input data-k="q" value="${esc(i.q)}"></label>
+    <label class="field">Your angle<textarea data-k="angle" placeholder="The twist, the joke, the take. Optional.">${esc(i.angle)}</textarea></label>
+    <div class="field">The penguin's role<div class="pick" data-pick="role">${ROLES.map(([k, l]) => `<button type="button" data-v="${k}" aria-pressed="${(i.role || "auto") === k}">${l}</button>`).join("")}</div></div>
+    <div class="field">Narration<div class="pick" data-pick="vstyle">${[["", "Default"], ...VSTYLES].map(([k, l]) => `<button type="button" data-v="${k}" aria-pressed="${(i.vstyle || "") === k}">${l}</button>`).join("")}</div></div>
+    <div data-script>${scriptBlock(i)}</div>
+    <div class="btnrow">
+      <button class="btn grow" data-write>${ic("sparkle")}${s ? "Rewrite script" : "Write the script"}</button>
+      <button class="btn primary grow" data-make ${s ? "" : "disabled"}>${ic("send")}Make the Short</button>
+    </div>
+    <div class="btnrow">
+      ${ideaStatus(i) === "later" ? `<button class="btn sm" data-move="active">Move to kept</button>` : `<button class="btn sm" data-move="later">${ic("later")}Later</button>`}
+      <button class="btn sm danger" data-remove>${ic("trash")}Remove</button>
+    </div>`, (root) => {
+    let tmr;
+    $$("[data-k]", root).forEach((inp) => inp.addEventListener("input", () => { clearTimeout(tmr); tmr = setTimeout(() => saveIdea(id, { [inp.dataset.k]: inp.value }), 500); }));
+    $$("[data-pick]", root).forEach((g) => $$("button", g).forEach((b) => (b.onclick = () => { $$("button", g).forEach((x) => x.setAttribute("aria-pressed", String(x === b))); saveIdea(id, { [g.dataset.pick]: b.dataset.v }); })));
+    $("[data-write]", root).onclick = (e) => writeScript(id, e.currentTarget, root);
+    $("[data-make]", root).onclick = (e) => makeShort(id, e.currentTarget);
+    $$("[data-move]", root).forEach((b) => (b.onclick = async () => { await saveIdea(id, { status: b.dataset.move }); closeSheet(); renderIdeas(); badges(); }));
+    $("[data-remove]", root).onclick = async () => { S.ideas.delete(id); if (S.db) { try { await S.db.doc("ideas/" + id).delete(); } catch (e) {} } closeSheet(); renderIdeas(); badges(); toast("Removed"); };
+    wireScript(id, root);
+  });
+}
+function scriptBlock(i) {
+  const s = i.script; if (!s) return `<div class="notice">Claude writes a 50 to 60 second Short: a hook in the first line, a story that escalates, a twist and a loop line. You can edit every line before it goes.</div>`;
+  return `<div class="field">Script, line by line<div class="beats">${(s.beats || []).map((b, k) => `<div class="beat"><span class="n">${k + 1}</span><div><div contenteditable="true" data-beat="${k}" role="textbox" aria-label="Line ${k + 1}">${esc(b.vo)}</div>${b.visual ? `<div class="v">${esc(b.visual)}</div>` : ""}</div></div>`).join("")}</div></div>
+    ${(s.verify || []).length ? `<div class="notice"><b>Facts to double check:</b> ${s.verify.map(esc).join(". ")}</div>` : ""}`;
+}
+function wireScript(id, root) {
+  let tmr;
+  $$("[data-beat]", root).forEach((el) => el.addEventListener("input", () => {
+    clearTimeout(tmr); tmr = setTimeout(() => {
+      const i = S.ideas.get(id); const beats = (i.script.beats || []).map((b, k) => (k === Number(el.dataset.beat) ? { ...b, vo: el.textContent.trim() } : b));
+      saveIdea(id, { script: { ...i.script, beats, vo: beats.map((b) => b.vo).join(" "), edited: true } });
+    }, 500);
+  }));
+}
+const SHORT_RULES = `FORMAT: a 50 to 60 second vertical YouTube Short, 135 to 160 spoken words, 8 to 11 lines.
+Shape (viral 3D-animation explainer Shorts): line 1 is the hook, a strange premise or claim in under 12 words that makes you need the answer. Then escalate in 2 or 3 steps, each line a new picture.
+A twist or reveal around 40 seconds. The last line loops back to the first or lands a dry joke.
+Delivery: cool and nonchalant, matter-of-fact, curious. Short sentences. Second person ("you"). No hype words, no "in this video", no "let's dive in", no "you won't believe", no em dashes.
+Accuracy: only facts you are sure of; uncertain ones go in "verify" and are phrased carefully. Never invent quotes or numbers.
+The channel's mascot is a small curious penguin who appears in every Short in a role (protagonist, sidekick, villain, NPC or cameo). It never talks. Suggest its role.`;
+async function writeScript(id, btn, root) {
+  if (!S.sample) return toast("Claude isn't available in this view.");
+  const i = S.ideas.get(id); const box = $("[data-script]", root);
+  btn.disabled = true; btn.innerHTML = `${ic("sparkle")}Writing…`;
+  box.innerHTML = `<div class="beats">${[0, 1, 2, 3, 4].map(() => `<div class="skel" style="height:54px"></div>`).join("")}</div>`;
+  const facts = Object.entries(i.card && i.card.st || {}).map(([k, v]) => `${k}: ${v}`).join("; ");
+  const prompt = `You write scripts for Curious Penguin, an animated YouTube Shorts channel where every episode is a different visual universe (claymation, paper diorama, miniature worlds, noir, surreal).
+${SHORT_RULES}
+TOPIC: ${i.q}
+HOOK IDEA: ${i.hook || "(none)"}
+ABOUT: ${i.about || "(none)"}  SURPRISE: ${i.surprise || "(none)"}
+CREATOR'S ANGLE: ${i.angle || "(none)"}  PENGUIN ROLE WANTED: ${i.role && i.role !== "auto" ? i.role : "you suggest"}
+NOTES: ${(i.notes || []).map((n) => n.text).join(" | ") || "(none)"}  LIVE NUMBERS: ${facts || "(none)"}
+Reply with only JSON: {"titles":["","",""],"beats":[{"vo":"one spoken line","visual":"what we see, vivid and specific, with the penguin where it fits"}],"penguin_role":"","verify":["claims to double check"],"rubric":{"hook":0,"story":0,"clarity":0,"visuals":0,"payoff":0,"total":0}}`;
+  try {
+    const out = await S.sample.json(prompt, { modelTier: "complex", cache: false });
+    out.vo = (out.beats || []).map((b) => b.vo).join(" ");
+    const patch = { script: { ...out, at: new Date().toISOString() } };
+    if ((!i.role || i.role === "auto") && out.penguin_role) patch.role = String(out.penguin_role).toLowerCase().split(/[^a-z]/)[0] || "auto";
+    await saveIdea(id, patch);
+    box.innerHTML = scriptBlock(S.ideas.get(id)); wireScript(id, root);
+    $("[data-make]", root).disabled = false; toast("Script ready. Edit any line.");
+  } catch (e) { box.innerHTML = `<div class="notice">${e.code === "rate_limited" ? "Claude limit reached. Try again later." : "Couldn't write the script. Try again."}</div>`; }
+  finally { btn.disabled = false; btn.innerHTML = `${ic("sparkle")}Rewrite script`; }
+}
+async function makeShort(id, btn) {
+  if (!S.mcp) return toast("Drive isn't available in this view.");
+  const i = S.ideas.get(id); if (!i.script) return;
+  btn.disabled = true; btn.innerHTML = `${ic("send")}Sending…`;
+  try {
+    await inbox("brew", { id, q: i.q, series: "Curious Penguin", aud: i.aud, format: { long: false, minutes: 1, shorts: 0 }, angle: i.angle, notes: i.notes, refs: i.refs,
+      penguin_role: i.role && i.role !== "auto" ? i.role : "", voice_style: i.vstyle || "", voice: S.voice || undefined,
+      script: { titles: i.script.titles, beats: i.script.beats, vo: i.script.vo, verify: i.script.verify } });
+    await saveIdea(id, { status: "sent", sentAt: new Date().toISOString() });
+    closeSheet(); renderIdeas(); badges(); toast("Sent. The engine starts on its next run."); showView("studio");
+  } catch (e) { toast(mcpErr(e)); btn.disabled = false; btn.innerHTML = `${ic("send")}Make the Short`; }
+}
+
+/* ---------- sheet (spring, drag to dismiss) ---------- */
+let sheetCancel = [];
+function openSheet(title, html, wire) {
+  const sh = $("#sheet"), sc = $("#scrim"); const wide = innerWidth >= 960;
+  $("#sheetTitle").textContent = title; $("#sheetBody").innerHTML = html; paintIcons($("#sheetBody"));
+  sh.hidden = false; sc.hidden = false; requestAnimationFrame(() => sc.classList.add("on"));
+  sheetCancel.forEach((f) => f());
+  if (wide || RM) { sh.style.transition = "transform .32s cubic-bezier(.2,.9,.25,1), opacity .2s"; requestAnimationFrame(() => { sh.style.opacity = 1; sh.style.transform = wide ? "translate(-50%, -50%) scale(1)" : "translateY(0)"; }); }
+  else { sh.style.transition = "none"; const h = sh.offsetHeight; sheetCancel = [spring({ from: h, to: 0, damping: 1, response: 0.38, onUpdate: (v) => (sh.style.transform = `translateY(${v}px)`) })]; }
+  wire && wire($("#sheetBody")); setTimeout(() => $("#sheetClose").focus({ preventScroll: true }), 50);
+}
+function closeSheet(velocity = 0) {
+  const sh = $("#sheet"), sc = $("#scrim"); if (sh.hidden) return; const wide = innerWidth >= 960;
+  sc.classList.remove("on");
+  const end = () => { sh.hidden = true; sc.hidden = true; sh.style.transform = ""; sh.style.opacity = ""; };
+  if (wide || RM) { sh.style.opacity = 0; sh.style.transform = wide ? "translate(-50%, -46%) scale(.96)" : "translateY(100%)"; return setTimeout(end, 260); }
+  const cur = new DOMMatrix(getComputedStyle(sh).transform).m42;
+  sheetCancel.forEach((f) => f()); sheetCancel = [spring({ from: cur, to: sh.offsetHeight, velocity, damping: 1, response: 0.32, eps: 4, onUpdate: (v) => (sh.style.transform = `translateY(${v}px)`), onDone: end })];
+}
+$("#sheetClose").onclick = () => closeSheet(); $("#scrim").onclick = () => closeSheet();
+document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeSheet(); });
+(function dragSheet() {
+  const sh = $("#sheet"); let y0 = 0, y = 0, down = false, hist = [];
+  const start = (e) => { if (innerWidth >= 960 || e.target.closest("button")) return; down = true; sheetCancel.forEach((f) => f()); y0 = e.clientY - y; hist = [{ y: e.clientY, t: e.timeStamp }]; e.currentTarget.setPointerCapture(e.pointerId); };
+  const move = (e) => { if (!down) return; const d = e.clientY - y0; y = d < 0 ? -Math.pow(-d, 0.7) : d; sh.style.transform = `translateY(${y}px)`; hist.push({ y: e.clientY, t: e.timeStamp }); if (hist.length > 6) hist.shift(); };
+  const end = () => { if (!down) return; down = false; const a = hist[0], b = hist[hist.length - 1]; const v = ((b.y - a.y) / Math.max(16, b.t - a.t)) * 1000;
+    if (y + (v / 1000) * 0.99 / 0.01 > sh.offsetHeight * 0.35) { y = 0; return closeSheet(v); }
+    sheetCancel = [spring({ from: y, to: 0, velocity: v, damping: 0.85, response: 0.32, onUpdate: (val) => { y = val; sh.style.transform = `translateY(${val}px)`; } })]; };
+  ["#sheetGrab", "#sheetBar"].forEach((s) => { const el = $(s); el.addEventListener("pointerdown", start); el.addEventListener("pointermove", move); el.addEventListener("pointerup", end); el.addEventListener("pointercancel", end); });
+})();
+
+/* ---------- Studio ---------- */
+$$("#studioSeg button").forEach((b) => (b.onclick = () => { S.studioF = b.dataset.f; $$("#studioSeg button").forEach((x) => x.setAttribute("aria-pressed", String(x === b))); renderStudio(); }));
+$("#btnStatus").onclick = () => refreshStatus(true);
+function bucket(j) { return WORKING.has(j.stage) || j.stage === "cancelled" || j.stage === "failed" || j.stage === "test_ready" ? "now" : j.stage === "final_ready" ? "ready" : "out"; }
+function stepIdx(stage) { const m = { queued: -1, voicing: 0, directing: 1, art: 2, test_render: 2, motion: 3, final_render: 4, metadata: 4, final_ready: 5, approved: 6, uploading: 6, scheduled: 6, live: 6 }; return m[stage] ?? -1; }
+function stageWord(j) {
+  return { queued: "Queued", directing: "Directing", voicing: "Recording voice", art: "Painting frames", motion: "Animating", final_render: "Rendering", metadata: "Finishing", final_ready: "Ready for you",
+    approved: "Uploading soon", uploading: "Uploading", scheduled: "On YouTube", live: "Live", cancelled: "Stopped", failed: "Stopped on an error", test_ready: "Test cut" }[j.stage] || j.stage;
+}
+function prodHTML(j) {
+  const working = WORKING.has(j.stage), si = stepIdx(j.stage), m = j.meta || {}, yt = (j.youtube || {}).videos || [], ig = j.instagram || {};
+  const media = j.final || j.preview;
+  return `<article class="prod" data-job="${esc(j.id)}">
+    <div class="media ${media ? "" : "empty-m"}" data-media>${media ? `<button class="playbtn" data-play aria-label="Play"><span>${ic("play")}</span></button>` : `<div class="ph">${ic(working ? "studio" : "pause")}<span>${working ? esc(j.step || "Working") : stageWord(j)}</span></div>`}</div>
+    <div class="info">
+      <div class="t">${esc(m.title || j.q || j.id)}</div>
+      <div class="meta"><span class="chip ${working ? "hot" : ""}">${stageWord(j)}</span>${j.universe ? `<span class="chip">${esc(j.universe)}</span>` : ""}${j.penguin_role ? `<span class="chip">${ic("penguin")}${esc(j.penguin_role)}</span>` : ""}${j.cost ? `<span class="chip">$${Number(j.cost).toFixed(2)}</span>` : ""}</div>
+      ${working || si >= 0 ? `<div class="steps" aria-hidden="true">${STEPS.map((s, k) => `<i class="${k < si || j.stage === "live" ? "done" : k === si ? "now" : ""}"></i>`).join("")}</div>
+      <div class="steps-l" aria-hidden="true">${STEPS.map((s) => `<span>${s[1]}</span>`).join("")}</div>` : ""}
+      ${working ? `<div class="track live" role="progressbar" aria-valuenow="${j.pct || 0}" aria-valuemin="0" aria-valuemax="100"><i style="width:${Math.max(3, j.pct || 0)}%"></i></div><div class="stepline"><span>${esc(j.step || "")}</span><span>${j.pct || 0}% · ${ago(j.updated)}</span></div>` : ""}
+      ${j.error && j.stage !== "cancelled" ? `<div class="err">${esc(j.error)}</div>` : ""}
+      ${yt.length || ig.status ? `<div class="pubs">${yt.map((v) => `<div class="pub">${ic("yt")}<div><div>${v.kind === "main" ? "YouTube" : esc(v.kind)}${v.privacy ? " · " + esc(v.privacy) : ""}</div><div class="s">${v.slot ? "Suggested: " + new Date(v.slot).toLocaleString(undefined, { weekday: "short", day: "numeric", month: "short", hour: "numeric", minute: "2-digit" }) : ""}</div></div><a class="btn sm" href="${esc(v.studio)}" target="_blank" rel="noopener">Open ${ic("out")}</a></div>`).join("")}
+        ${ig.status ? `<div class="pub">${ic("ig")}<div><div>Instagram · ${esc(ig.status)}</div>${ig.error ? `<div class="s">${esc(ig.error)}</div>` : ""}</div>${ig.permalink ? `<a class="btn sm" href="${esc(ig.permalink)}" target="_blank" rel="noopener">Open ${ic("out")}</a>` : ""}</div>` : ""}</div>` : ""}
+      <div class="btnrow">${actions(j)}</div>
+    </div>
+  </article>`;
+}
+function actions(j) {
+  const a = [];
+  if (WORKING.has(j.stage) && j.stage !== "uploading") a.push(`<button class="btn danger grow" data-act="cancel">${ic("stop")}Stop</button>`);
+  if (j.stage === "cancelled" || j.stage === "failed") a.push(`<button class="btn primary grow" data-act="resume">${ic("resume")}Resume</button>`);
+  if (j.stage === "final_ready") { a.push(`<button class="btn primary grow" data-act="approve">${ic("yt")}Approve, upload private</button>`); a.push(`<button class="btn grow" data-act="notes">${ic("pencil")}Notes and redo</button>`); }
+  if (["final_ready", "approved", "scheduled", "live"].includes(j.stage) && !(j.instagram && ["posted", "queued", "posting"].includes(j.instagram.status))) a.push(`<button class="btn grow" data-act="ig">${ic("ig")}Post to Instagram</button>`);
+  if (j.final) a.push(`<a class="btn icon" href="${esc(j.final.view)}" target="_blank" rel="noopener" aria-label="Open in Google Drive" title="Open in Google Drive">${ic("drive")}</a>`);
+  return a.join("");
+}
+function renderStudio() {
+  const st = S.files["status.json"]; const list = jobs().filter((j) => bucket(j) === S.studioF);
+  const working = jobs().filter((j) => WORKING.has(j.stage)).length;
+  $("#studioSub").textContent = st ? `${working ? working + " in production · " : ""}engine checked in ${ago(st.at)}` : "Waiting for the engine's first report.";
+  const el = $("#prodList");
+  if (!list.length) { el.innerHTML = `<div class="empty"><div class="art">${ic("studio")}</div><h3>${S.studioF === "now" ? "Nothing in production" : S.studioF === "ready" ? "Nothing waiting on you" : "Nothing posted yet"}</h3><p>${S.studioF === "now" ? "Keep an idea in Discover, write its script in Ideas, then tap Make the Short." : S.studioF === "ready" ? "Finished Shorts land here for your review." : "Approved Shorts show their YouTube and Instagram links here."}</p></div>`; return; }
+  el.innerHTML = list.map(prodHTML).join(""); paintIcons(el);
+  $$(".prod", el).forEach((card) => wireProd(card, list.find((j) => j.id === card.dataset.job)));
+}
+function wireProd(card, j) {
+  const play = $("[data-play]", card);
+  const f0 = j.final || j.preview;
+  if (play && f0 && f0.poster) driveBlob(f0.poster, "image/jpeg").then((u) => { if (play.isConnected) { play.style.background = `center / contain no-repeat url(${u}), #000`; } }).catch(() => {});
+  if (play) play.onclick = async () => {
+    const f = j.final || j.preview; const box = $("[data-media]", card);
+    if (f.size_mb > 45) return window.open(f.view, "_blank", "noopener");
+    play.innerHTML = `<span><div class="skel" style="width:28px;height:28px;border-radius:50%"></div></span>`;
+    try { const u = await driveBlob(f.id, "video/mp4"); box.innerHTML = `<video controls playsinline autoplay src="${u}"></video>`; }
+    catch (e) { toast("Couldn't stream it here. Opening Drive."); window.open(f.view, "_blank", "noopener"); }
+  };
+  $$("[data-act]", card).forEach((b) => (b.onclick = async () => {
+    const act = b.dataset.act;
+    if (act === "notes") return openNotes(j);
+    if (act === "ig" && !((S.files["status.json"] || {}).instagram || {}).connected) { toast("Connect Instagram first. Steps are in Channel."); return showView("stats"); }
+    if (act === "cancel" && !armed(b, "Tap again to stop")) return;
+    if (act === "ig" && !armed(b, "Tap again to post publicly")) return;
+    b.disabled = true;
+    try {
+      if (act === "cancel") { await inbox("cancel", { id: j.id }); toast("Stopping. Finished frames and clips are kept."); }
+      if (act === "resume") { await inbox("resume", { id: j.id }); toast("Resuming on the engine's next run."); }
+      if (act === "approve") { await inbox("approve", { id: j.id, stage: "final" }); toast("Approved. It uploads to YouTube as private."); }
+      if (act === "ig") { await inbox("instagram", { id: j.id }); toast("Queued for Instagram."); }
+      b.innerHTML = `${ic("check")}Sent`;
+    } catch (e) { toast(mcpErr(e)); b.disabled = false; }
+  }));
+}
+function armed(b, label) {
+  if (b.dataset.armed) return true;
+  const was = b.innerHTML; b.dataset.armed = "1"; b.innerHTML = `${b.querySelector("svg") ? b.querySelector("svg").outerHTML : ""}${label}`;
+  setTimeout(() => { if (b.isConnected && !b.disabled) { delete b.dataset.armed; b.innerHTML = was; } }, 3000);
+  return false;
+}
+function openNotes(j) {
+  openSheet("Notes and redo", `
+    <label class="field">What should change?<textarea data-notes placeholder="Try a noir look. More penguin. Slower narration. The cut at 0:20 is too fast."></textarea></label>
+    <div class="btnrow">
+      <button class="btn grow" data-redo="scenes">${ic("refresh")}New look and shots</button>
+      <button class="btn grow" data-redo="voice">${ic("mic")}New voice take</button>
+    </div>
+    <div class="notice"><b>New look and shots</b> keeps the voice and redraws everything else. <b>New voice take</b> keeps every frame and clip, so it costs cents.</div>`, (root) => {
+    $$("[data-redo]", root).forEach((b) => (b.onclick = async () => {
+      const notes = $("[data-notes]", root).value.trim(); if (!notes) return toast("Add a note so the redo knows what to change.");
+      b.disabled = true;
+      try { await inbox("redo", { id: j.id, stage: b.dataset.redo, notes }); toast("Redo queued."); closeSheet(); } catch (e) { toast(mcpErr(e)); b.disabled = false; }
+    }));
+  });
+}
+
+/* ---------- Channel ---------- */
+function renderStats() {
+  const st = S.files["status.json"] || {}; const b = st.budget || {}; const all = jobs();
+  const shorts = all.filter((j) => j.v === 3 && j.cost); const avg = shorts.length ? shorts.reduce((a, j) => a + Number(j.cost || 0), 0) / shorts.length : null;
+  const used = Number(b.total || 0), cap = Number(b.cap || 280), left = Math.max(0, cap - used);
+  const ends = b.window_ends ? new Date(b.window_ends).toLocaleDateString(undefined, { day: "numeric", month: "long" }) : "";
+  const igOn = !!(st.instagram && st.instagram.connected);
+  $("#statsBody").innerHTML = `
+    <div class="tiles">
+      <div class="tile wide"><div class="n">$${left.toFixed(0)} left</div><div class="l">of $${cap} in Google credits${ends ? ", until " + ends : ""}</div><div class="meter"><i style="width:${Math.min(100, (used / cap) * 100).toFixed(1)}%"></i></div>
+        <div class="l" style="margin-top:10px">${avg ? `A Short costs about $${avg.toFixed(2)}, so that's roughly ${Math.floor(left / avg)} more.` : "Cost per Short shows after the first one."}</div></div>
+      <div class="tile"><div class="n">${all.filter((j) => j.stage === "scheduled" || j.stage === "live").length}</div><div class="l">Shorts on YouTube</div></div>
+      <div class="tile"><div class="n">${all.filter((j) => WORKING.has(j.stage)).length}</div><div class="l">In production</div></div>
+    </div>
+    <div class="section"><h2>Narration</h2>
+      <div class="pick" id="vsPick">${VSTYLES.map(([k, l]) => `<button data-v="${k}" aria-pressed="${(S.vstyle || "C") === k}">${l}</button>`).join("")}</div>
+      <p class="muted" style="font-size:14px;margin:10px 2px 0">Default delivery for new Shorts. Each idea can override it.</p></div>
+    <div class="section"><h2>Instagram</h2>
+      ${igOn ? `<div class="notice"><b>Connected${st.instagram.username ? " as @" + esc(st.instagram.username) : ""}.</b> Post any finished Short from the Studio. Nothing goes to Instagram unless you tap Post.</div>` : `<div class="notice"><b>Not connected yet.</b> About 10 minutes, once. Reels post to the account you link, and only when you tap Post on a Short.${st.instagram && st.instagram.error ? `<br><span class="err">${esc(st.instagram.error)}</span>` : ""}</div>
+      <ol class="guide" style="margin-top:12px">
+        <li>In the Instagram app: <b>Settings, Account type and tools, Switch to professional account</b>. Pick <b>Creator</b>.</li>
+        <li>On Facebook, create a Page for Curious Penguin. In the Page: <b>Settings, Linked accounts, Instagram, Connect</b>, and sign in to the Instagram account.</li>
+        <li>Go to <b>developers.facebook.com</b>, My Apps, <b>Create app</b>. Use case <b>Other</b>, type <b>Business</b>. In the app, add the <b>Instagram</b> product and pick <b>API setup with Facebook login</b>.</li>
+        <li>Open <b>Tools, Graph API Explorer</b>. Pick your app, then add these permissions: <code>instagram_basic</code>, <code>instagram_content_publish</code>, <code>pages_show_list</code>, <code>pages_read_engagement</code>, <code>business_management</code>. Tap <b>Generate Access Token</b> and allow your Page and Instagram account.</li>
+        <li>Open <b>Tools, Access Token Debugger</b>, paste that token, tap <b>Extend Access Token</b> and copy the long one.</li>
+        <li>Back in Graph API Explorer, paste the long token and run <code>me/accounts?fields=name,access_token,instagram_business_account</code>. From your Page's row, copy <b>access_token</b> (this one never expires) and the <b>instagram_business_account id</b>.</li>
+        <li>In GitHub, repo <b>Settings, Secrets and variables, Actions</b>: add <code>IG_ACCESS_TOKEN</code> (the Page token) and <code>IG_USER_ID</code> (the id). Tell me when it's in and I'll run a test post.</li>
+      </ol>`}
+    </div>
+    <div class="section"><h2>YouTube</h2><div class="notice">Approved Shorts upload as <b>private</b> with title, description, tags and the AI disclosure, then show a suggested publish time. You publish from YouTube Studio until Google approves the API audit.</div></div>`;
+  $$("#vsPick button").forEach((btn) => (btn.onclick = async () => { S.vstyle = btn.dataset.v; $$("#vsPick button").forEach((x) => x.setAttribute("aria-pressed", String(x === btn))); if (S.db) { try { await S.db.doc("settings/voice").set({ name: S.voice || null, style: S.vstyle }); } catch (e) {} } toast("Saved"); }));
+}
+
+function badges() {
+  const n1 = [...S.ideas.values()].filter((i) => ideaStatus(i) === "active").length;
+  const n2 = jobs().filter((j) => j.stage === "final_ready").length;
+  $$('[data-badge="ideas"]').forEach((b) => { b.textContent = n1; b.hidden = !n1; });
+  $$('[data-badge="studio"]').forEach((b) => { b.textContent = n2; b.hidden = !n2; });
+}
+
+/* ---------- boot ---------- */
+paintIcons(); renderDeck();
+$("#stack").innerHTML = `<div class="card" style="box-shadow:var(--card-shadow)"><div class="skel" style="height:26px;width:40%"></div><div class="skel" style="height:96px;margin-top:30px"></div><div class="skel" style="height:22px;width:70%;margin-top:14px"></div></div>`;
+(async () => {
+  const [db, mcp, sample] = await Promise.all([claude.use("db").catch(() => null), claude.use("mcp").catch(() => null), claude.use("sample").catch(() => null)]);
+  S.db = db; S.mcp = mcp; S.sample = sample;
+  if (!sample) $("#btnWild").hidden = true;
+  if (db) {
+    let first = true; const tmr = setTimeout(() => { if (first) { first = false; buildQueue(); renderDeck(); } }, 8000);
+    db.collection("swipes").onSnapshot((snap) => {
+      for (const d of snap.docs) for (const [k, dir] of Object.entries((d.data() || {}).k || {})) { if (dir) S.swiped.set(k, { dir, day: d.id }); else S.swiped.delete(k); }
+      if (first) { first = false; clearTimeout(tmr); buildQueue(); renderDeck(); }
+    }, () => {});
+    db.collection("ideas").onSnapshot((snap) => { S.ideas = new Map(snap.docs.map((d) => [d.id, d.data()])); badges(); if (!$("#view-ideas").hidden) renderIdeas(); }, () => {});
+    db.collection("settings").onSnapshot((snap) => { for (const d of snap.docs) if (d.id === "voice") { const v = d.data() || {}; S.voice = v.name || null; S.vstyle = v.style || null; } }, () => {});
+  }
+  setFoot(mcp ? "Engine: connecting" : "Drive isn't available in this view.");
+  await loadDeck(false);
+  setInterval(() => { if (!document.hidden && Date.now() - S.statusAt > 55000 && (!$("#view-studio").hidden || jobs().some((j) => WORKING.has(j.stage)))) refreshStatus(false); }, 15000);
+})();
+</script>
+</body>
+</html>
