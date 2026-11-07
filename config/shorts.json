@@ -19,9 +19,10 @@
   "keyframe_min": 7.5,
   "clip_min": 7.5,
   "final_min": 8,
-  "retries": 2,
-  "final_rounds": 1,
+  "retries": 0,
+  "final_rounds": 0,
   "max_reshoots": 4,
-  "note": "Gemini Pro reviews every keyframe, every shot and the final cut against the 7 standards in the bible; below the bar it regenerates with the reviewer's fix."
+  "note": "Gemini Pro reviews every keyframe, every shot and the final cut against the 7 standards in the bible; below the bar it regenerates with the reviewer's fix.",
+  "note2": "2026-11-07: retries paused. Shots scored 2-4 every time: retrying can't fix it, the cause is big camera moves between very different first/last keyframes (Veo morphs). Fix the method before re-enabling."
  }
 }
