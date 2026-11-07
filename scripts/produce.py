@@ -84,6 +84,8 @@ def publish_status():
 
 
 def set_stage(st, stage, step=None, pct=None):
+    if stage != st.get("stage") or stage in ("test_ready", "final_ready"):
+        st["error"] = None
     st["stage"] = stage
     st["pct"] = pct if pct is not None else PCT.get(stage, st.get("pct", 0))
     if step:
@@ -353,6 +355,24 @@ def dims(st):
     return (1080, 1920) if is_short(st) else (1920, 1080)
 
 
+def review_sheet(st, mp4, a):
+    """Small contact sheets committed to the repo so every cut can be reviewed without downloading it."""
+    rdir = jfile(st["id"], "review")
+    os.makedirs(rdir, exist_ok=True)
+    try:
+        dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", mp4], capture_output=True, text=True).stdout or 60)
+        n = 24
+        tw = 320 if not is_short(st) else 180
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", mp4, "-vf", f"fps={n / dur},scale={tw}:-2,tile=6x4", "-frames:v", "1", "-q:v", "4",
+                        os.path.join(rdir, "test-sheet.jpg")], check=True)
+        for name in ("key.png", "penguin.png"):
+            src = a.have(name)
+            if src:
+                subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", src, "-vf", "scale=640:-2", "-q:v", "4", os.path.join(rdir, name.replace(".png", ".jpg"))], check=True)
+    except Exception as e:
+        log("review sheet failed:", str(e)[:160])
+
+
 def link(fid):
     return {"id": fid, "view": f"https://drive.google.com/file/d/{fid}/view", "download": f"https://drive.google.com/uc?id={fid}&export=download"}
 
@@ -472,6 +492,7 @@ def advance(st):
         W, H = dims(st)
         mp4 = render(build_film(st, d, words, total, media, w=W, h=H, test=True), os.path.join(OUT, jid, "test.mp4"), scale=0.5, crf=26)
         fid = drive.upload(job_folder(jid), "test-cut.mp4", mp4, "video/mp4")
+        review_sheet(st, mp4, a)
         st["preview"] = {**link(fid), "size_mb": round(os.path.getsize(mp4) / 1e6, 1), "at": now()}
         st.pop("redo_notes", None)
         motion = sum(1 for s in d["shots"] if s["kind"] == "motion")
