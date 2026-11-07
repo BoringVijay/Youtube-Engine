@@ -1,153 +1,184 @@
-16:39:44 inbox: 0 messages
-16:39:47 inbox: 0 messages
-16:39:49 [why-did-the-internet-fight-a-decade-over] voicing 6% Directing the narrator's performance
+19:36:20 inbox: 0 messages
+19:36:22 inbox: 0 messages
+19:36:25 [how-did-a-tiny-republic-survive-inside-i] voicing 6% Directing the narrator's performance
 [gai] text model: gemini-3.8-flash via vertex
 [gai] tts model: gemini-3.1-flash-tts-preview via vertex
-[voice] take 1/1 recorded: 64.3s
-16:40:29 voice 64.7s over the 59s cap; tightened x1.11
-[voice] alignment matched 80% of words
-16:40:37 [why-did-the-internet-fight-a-decade-over] directing 12% Casting the penguin and planning the shots
+[voice] take 1/1 recorded: 74.9s
+19:37:14 voice 75.4s over the 59s cap; tightened x1.20
+[voice] alignment matched 94% of words
+19:37:22 [how-did-a-tiny-republic-survive-inside-i] directing 12% Casting the penguin and planning the shots
 [gai] pro: gemini-3.8-pro not available here
 [gai] pro: gemini-3.7-pro not available here
 [gai] pro: gemini-3.5-pro not available here
 [gai] pro: gemini-3.1-pro not available here
 [gai] pro model: gemini-3.1-pro-preview via vertex
-16:43:16 [shorts] universe Bureaucracy Sandbox / Timber & Twine Animation Co.; penguin villain; 17 keyframes, 14 shots in 4 sequences
-16:43:18 [why-did-the-internet-fight-a-decade-over] art 22% Painting 17 keyframes in Bureaucracy Sandbox
+19:39:19 [shorts] universe Chiseled History Studios / Chiseled History Studios; penguin cameo; 20 keyframes, 15 shots in 5 sequences
+19:39:21 [how-did-a-tiny-republic-survive-inside-i] art 22% Painting 20 keyframes in Chiseled History Studios
 [gai] image model: gemini-nano-banana-2.1 via vertex
-16:44:11 [shorts] keyframe k10 review 6.0: Penguin is missing a distinct beak; there is only a tiny, misplaced orange dot near the eye.; The brass hinge detail on the penguin's flipper is messy and poorly defined, looking melted.; The penguin'
-16:44:19 [shorts] keyframe k01 review 6.0: The penguin is missing the required dark beak with an orange tip.; The penguin has a single wire-like spike on its head instead of three distinct wooden feathers.; The back of the penguin's head/body 
-[qc] reviewer error (passing): 'list' object has no attribute 'get'
-16:44:22 [shorts] keyframe k05 review 10.0: 
-16:44:53 [shorts] keyframe k10 review 4.0: Penguin's facial anatomy is severely warped; the beak and eyes are jumbled in a physically impossible perspective.; Mechanical logic failure: The brass hinges on the left edge of the house are screwed
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 15s
-16:45:12 [shorts] keyframe k06 review 5.0: The penguin's flippers have morphed, becoming longer and gaining a brass hinge that was not present in the previous frame.; The penguin's beak has changed from dark to solid orange.; The penguin's bod
-[qc] reviewer error (passing): 'list' object has no attribute 'get'
-16:45:16 [shorts] keyframe k01 review 10.0: 
-[qc] reviewer error (passing): 'list' object has no attribute 'get'
-16:45:54 [shorts] keyframe k06 review 10.0: 
-16:45:57 [shorts] keyframe k02 review 3.0: The penguin's head is severely mutated; it has a beak pointing left but eyes on the right side of its head facing the blocks.; The penguin is not actively pushing the blocks as requested, but rather s
+19:40:13 [shorts] keyframe k05 review 8.0: Some of the falling dust particles and debris appear as perfect spheres rather than jagged, irregular stone fragments.; Bright white dust particles falling into the lower fifth slightly clutter the ar
+19:40:13 [shorts] keyframe k01 review 6.0: Architectural inconsistencies in the fortress: stairs on the right lead directly into a solid wall, and courtyard arches appear melted and structurally illogical.; Inconsistent and merged crenellation
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 15s
-16:46:02 [shorts] keyframe k11 review 5.0: The penguin is not actively turning or interacting with the brass switch as requested.; The penguin's beak is missing the canon orange tip.; Continuity error: The sad face sign has changed proportions
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 15s
-16:46:32 [shorts] keyframe k07 review 5.0: Penguin is off-model: missing the big white eye-rings and the face appears distorted or melted.; Continuity error: The red 'X' on the far left has moved significantly compared to the previous frame.; 
+19:40:33 [shorts] keyframe k09 review 6.0: Garbled pseudo-text and meaningless symbols scattered among the blueprint lines (e.g., center-left).; Geometric linework of the golden eagle is messy, asymmetrical, and contains floating or awkwardly 
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 15s
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 30s
-16:46:55 [shorts] keyframe k02 review 3.0: The brass hinges are surface-mounted on the inside pages of the open book, which is physically impossible as it would prevent the book from closing.; The penguin is completely off-model; it is just a 
-[gai] pro: gemini-3.1-pro-preview busy (HTTP 429 gemini-3.1-pro-preview:generateContent: {
-  "error"), waiting 15s
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 15s
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 45s
-16:47:38 [shorts] keyframe k11 review 4.0: Penguin's left eye is floating off the side of its head.; Penguin's flipper is melting into the brass switch handle, breaking the rigid wood physics.; Major continuity error: A thick wooden base sudde
+19:41:13 [shorts] keyframe k06 review 6.0: Continuity error: The base of the column changes design and width significantly between the previous frame and this one.; Physics/Logic: The collapsed pieces, particularly the ornate capital resting a
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 15s
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 30s
-16:47:57 [shorts] keyframe k03 review 4.0: Continuity error: The red 'X' blocks have teleported from the book to the table in the background.; Continuity error: The brass hinges on the wooden book have changed design, going from two screws to 
+19:41:30 [shorts] keyframe k09 review 8.0: The golden dotted flight path has confusing arrowheads pointing in contradictory directions.; The compass rose icons on the left are slightly asymmetrical and warped.; Some white dimension lines have 
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 15s
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 60s
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 45s
+19:42:27 [shorts] keyframe k10 review 5.0: The golden eagle icon has morphed between frames, losing its clean, precise geometric design.; The newly added gold radiating lines are chaotic, form arbitrary geometric shapes, and look like a messy 
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 60s
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 75s
-[qc] reviewer error (passing): 'list' object has no attribute 'get'
-16:49:12 [shorts] keyframe k03 review 10.0: 
+19:43:29 [shorts] keyframe k10 review 9.0: The gold lines tracing the mountain ridges are slightly less crisp and precise than the underlying white blueprint lines.
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 15s
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 30s
-16:50:00 [shorts] keyframe k12 review 3.0: Severe continuity errors: the sad sign and brass switch from the previous frame have vanished.; The pink house has changed design, suddenly acquiring brass hinges on its side.; The wooden slice base h
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 15s
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 45s
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 90s
-16:51:00 [shorts] keyframe k12 review 5.0: The penguin is missing its oversized orange feet.; The penguin's beak is missing the distinct orange tip seen in the previous frame.; Major continuity jump: The penguin was on the wooden slice in the 
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 45s
+19:44:38 [shorts] keyframe k06 review 6.0: Continuity error: The architectural details of the column, specifically the acanthus leaves on the capital and the depth of the fluting on the shaft, change between the previous frame and this one.; M
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 60s
+19:45:19 [shorts] keyframe k07 review 5.0: The bishop is crashing downwards into the side of the rock formation, contradicting the prompt's instruction to 'slide aggressively onto the top'.; The angle of the bishop suggests a falling impact ra
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 15s
-[qc] reviewer error (passing): 'list' object has no attribute 'get'
-16:51:32 [shorts] keyframe k04 review 10.0: 
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 105s
-16:52:01 [shorts] keyframe k13 review 5.0: The red 'X' blocks are melted and fused together at their bottom legs.; The penguin's left foot is merging into the adjacent red 'X' block.; The chain links holding the left pan are inconsistently sha
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 15s
-16:53:13 [shorts] keyframe k13 review 4.0: Severe physical artifact: The front-left brass chain passes directly through the penguin's left flipper and body.; Chain links connecting to the left scale pan are melting into the wood and each other
+  "error"), waiting 30s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 45s
+19:46:42 [shorts] keyframe k11 review 5.0: The glowing wall is placed on the vertical cutaway faces of the base, not around the mountain on the terrain surface.; The wall does not block the gold territory lines on the mountain as requested.; T
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 60s
+19:47:18 [shorts] keyframe k11 review 7.0: The glowing white wall has a soft, airbrushed appearance that clashes with the crisp, precise linework of the blueprint style.; The crenellations look hastily drawn over a blurry base, making the wall
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 120s
-16:53:59 [shorts] keyframe k14 review 5.0: Physics violation: the left pan is tilted downwards, yet the 'X' blocks are floating upwards as if launched; they would only launch if the pan moved rapidly upwards; Artefact: the front gold chain pas
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 75s
+19:48:21 [shorts] keyframe k12 review 6.0: Penguin material looks like a vinyl toy or soft clay rather than carved basalt and marble.; The red shirt has soft, fabric-like folds instead of looking like carved red stone.; Canon violation: Beak i
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 15s
-16:55:20 [shorts] keyframe k14 review 5.0: Physics violation: The scale beam is angled downwards towards the penguin, indicating that side dropped. Dropping would not launch the blocks upwards. The beam needs to be angled sharply upwards to ju
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 90s
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 135s
-16:56:02 [shorts] keyframe k15 review 5.0: Continuity error: The red 'X' blocks have changed shape and thickness compared to the previous frame.; Physics/Logic: The wooden domes are balancing awkwardly on the edges of the blue blocks rather th
+19:49:35 [shorts] keyframe k12 review 6.0: Penguin's eyes are asymmetrical with mismatched pupils, giving a derpy expression.; The beak is entirely orange, missing the canon 'dark beak with orange tip'.; The penguin's black head and red shirt 
+19:50:22 [shorts] keyframe k13 review 4.0: Major continuity error: The penguin is wearing a red terracotta shirt in the previous frame but is naked in this frame.; Continuity error: The carved pattern on the stone door has changed significantl
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 15s
-[qc] reviewer error (passing): 'list' object has no attribute 'get'
-16:57:33 [shorts] keyframe k15 review 10.0: 
-16:57:59 [shorts] keyframe k07 attempt 1: no image model worked: HTTP 429 gemini-nano-banana-2.1:generateContent: {
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 105s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 30s
+19:51:35 [shorts] keyframe k01 attempt 1: no image model worked: HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error": {
     "code": 429,
     "message": "Resource has been exhausted (e.g. check 
+19:51:47 [shorts] keyframe k13 review 6.0: The stone door was a single solid panel in the previous frame but magically splits into two panels here, breaking physical logic.; The penguin does not look like it is made of basalt or stone as reque
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 15s
-16:58:16 [shorts] keyframe k16 review 4.0: Penguin design changed significantly from the previous frame (eyes, beak, feet, overall shape).; The wooden scale's design completely changed (base, central pillar, arm, and chains are all different).
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 30s
+19:52:20 [shorts] keyframe k01 review 8.0: Slight melting and merging of stair treads into the rock face on the lower right staircase; Minor wobbliness and unevenness in the geometric precision of the tower crenellations
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 120s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 45s
-16:59:04 [shorts] keyframe k16 review 4.0: Severe scale inconsistency: The penguin has shrunk significantly relative to the wooden domes and balance scale compared to the previous frame.; Character continuity: The penguin is missing the brass 
+[qc] reviewer error (passing): 'list' object has no attribute 'get'
+19:53:14 [shorts] keyframe k02 review 10.0: 
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 60s
-17:00:05 [shorts] keyframe k17 review 4.0: The penguin is completely off-model; it looks like a black beetle or bomb rather than a face-down penguin.; The flippers are positioned incorrectly and look like small nubs.; The feathers on the head 
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 15s
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 75s
-17:01:13 [shorts] keyframe k17 review 6.0: Continuity error: Brass hinges have appeared on the penguin's flippers that were not present in the previous frame.; Continuity error: The shape of the orange feet has changed from having distinct toe
-17:02:44 [shorts] keyframe k07 review 6.0: The camera angle did not tilt up 30 degrees as requested; it remains at the same angle as the previous frame.; Continuity error: The red cross on the left changed from having sharp edges in the previo
-17:03:55 [shorts] keyframe k08 review 4.0: Camera did not push in 30% as requested; framing is nearly identical to the previous frame.; The gavel is static in the same position, not actively bursting out of the pile.; The penguin is fully visi
+19:54:23 [shorts] keyframe k03 review 4.0: Severe continuity error: the square slate and terracotta base from the previous frame has completely disappeared.; Continuity error: the castle on top of the mountain has changed design, losing towers
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 135s
+19:55:18 [shorts] keyframe k03 review 9.0: There are small, random dark cubes scattered across the terracotta map that look like unintentional debris or AI artifacts rather than deliberate diorama elements.
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 30s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 90s
+19:56:38 [shorts] keyframe k07 attempt 1: no image model worked: HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error": {
+    "code": 429,
+    "message": "Resource has been exhausted (e.g. check 
 [qc] reviewer error (passing): 'list' object has no attribute 'get'
-17:04:50 [shorts] keyframe k08 review 10.0: 
-17:05:39 [shorts] keyframe k09 review 5.0: The penguin is missing its distinct beak and the three wooden feathers on top of its head, breaking continuity with the previous frame and the character model.; The penguin's eyes are misaligned, givi
+19:56:57 [shorts] keyframe k04 review 10.0: 
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 105s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 30s
+19:57:27 [shorts] keyframe k07 review 6.0: The dark slate Bishop piece appears pasted onto the scene, lacking realistic contact shadows or physical grounding on the uneven granite peak.; The debris surrounding the base of the bishop consists o
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 45s
+[qc] reviewer error (passing): 'list' object has no attribute 'get'
+19:58:29 [shorts] keyframe k08 review 10.0: 
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 60s
+19:59:41 [shorts] keyframe k14 review 6.0: Continuity error: The door is suddenly closed, whereas it was open in the previous frame, and the specific crack patterns and carvings on the door panels have changed.; AI artefacts: The rifles held b
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 75s
+20:00:24 [shorts] keyframe k14 review 5.0: The soldier statues exhibit severe AI melting artifacts; their faces and hands are undefined and mushy.; The rifles are merging directly into the soldiers' hats and shoulders rather than being distinc
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 90s
+20:01:18 [shorts] keyframe k15 review 3.0: Severe continuity error: the soldiers have instantly turned 180 degrees to face away from the camera compared to the previous frame in a continuous shot.; Prop continuity error: the rifles have switch
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 30s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 105s
 [gai] pro: gemini-3.1-pro-preview busy (HTTP 429 gemini-3.1-pro-preview:generateContent: {
   "error"), waiting 15s
-17:06:36 [shorts] keyframe k09 review 4.0: The penguin is severely off-model and morphed: its orange feet appear attached to the top of its head, the facial features are distorted, and it lacks the three feathers seen in the previous frame.; T
-17:06:43 [why-did-the-internet-fight-a-decade-over] motion 60% Animating 14 shots
-17:08:46 [shorts] shot s01 review 2.0: 00:01-00:02: The penguin and block teleport from the table outside the book to the pages inside, and the hand disappears abruptly.; 00:02-00:03: Three additional 'X' blocks pop into existence attached
-17:08:54 [shorts] shot s03 review 2.0: 00:02 - 00:04: The hinged wooden board completely morphs into a flat surface.; 00:02 - 00:03: A wooden puzzle piece pops into existence and then disappears.; 00:04: The red dice and the rope tying the
-17:09:07 [shorts] shot s02 review 3.0: 00:04-00:06: The background toy city morphs drastically from a few simple blocks to a complex, sprawling village.; 00:05: The penguin and the heavy pink block float in mid-air, defying gravity and rig
-17:10:44 [shorts] shot s04 review 3.0: 00:01-00:02: The red wooden crosses melt and merge into a single blob instead of remaining rigid separate objects.; 00:01-00:03: The penguin's flippers and body morph and intersect unnaturally with th
-17:10:55 [shorts] shot s05 review 3.0: 00:00-00:05: The camera remains completely static, failing to execute the requested 30-degree tilt up.; 00:01-00:05: The falling white envelopes morph, stretch, and intersect with each other and the g
-17:11:07 [shorts] shot s06 review 3.0: Envelopes morph, bend, and blend into each other instead of behaving like rigid wooden objects (00:00-00:05).; Penguin toy's eyes drastically change shape, size, and direction (00:02-00:05).; Red cros
-17:12:34 [shorts] shot s07 review 3.0: 00:00-00:01: The penguin squashes and morphs like rubber when hit by the gavel, violating the rigid wooden toy aesthetic.; 00:01: Orange feet magically pop out of the penguin's body during the squash.
-17:12:38 [shorts] shot s08 review 3.0: 00:01-00:02: The penguin abruptly snaps from an upright position to lying on its back, with its orange feet popping into existence without a transition.; 00:02-00:03: The red 'X' marks on the table mo
-17:12:56 [shorts] shot s09 review 3.0: 00:00 - 00:01: The wooden slice base suddenly pops into existence beneath the characters.; 00:02: The sad face sign completely disappears when the hand enters the frame.; 00:03: The sad face sign pops
-17:14:28 [shorts] shot s11 review 3.0: 00:01: Red 'X' blocks morph and distort as they launch, losing their rigid wooden appearance.; 00:02-00:03: Red blocks disappear completely, then suddenly pop back into the frame falling from above, w
-17:14:38 [shorts] shot s10 review 3.0: 00:01-00:02: A human hand abruptly appears to place the gate, contradicting the intended motion of it dropping.; 00:01-00:02: The penguin instantly teleports from the foreground to behind the gate.; 0
-17:14:48 [shorts] shot s12 review 3.0: 00:00 - 00:01: The penguin on the scale completely vanishes during the camera pan.; 00:00 - 00:02: The red cross blocks morph and teleport from falling near the scale to being neatly lined up on the t
-17:16:30 [shorts] shot s14 review 3.0: 00:00 - 00:01: The penguin completely morphs from a round, 3D character into a flat, oval wooden toy with different feet and wings.; 00:00 - 00:01: The motion of falling is missing; the penguin snaps 
-17:16:43 [shorts] shot s13 review 3.0: 00:02-00:05: Severe object popping; building blocks appear out of nowhere as the camera pulls back instead of being revealed.; 00:03-00:05: The wooden bells and red 'X' pieces morph, melt, and duplica
-17:17:19 [why-did-the-internet-fight-a-decade-over] final_render 80% Rendering the Short
-17:24:21 rendered short.mp4 in 418s, 52.2 MB
-17:25:04 final review 2.0: This video is overwhelmed by obvious AI artifacts, including morphing objects, clipping, and inconsistent character designs. It fails to execute the directed actions in the shot list and falls far bel
-17:25:06 [why-did-the-internet-fight-a-decade-over] motion 78% Review scored 2.0/10. Re-shooting 2 weak shot(s)
-17:27:06 [shorts] shot s01 review 3.0: 00:00-00:02: The penguin toy and red block teleport from outside the book to inside as it opens, breaking object permanence.; 00:01-00:03: The penguin toy morphs significantly in shape and design.; 00
-17:27:22 [shorts] shot s02 review 3.0: 00:02-00:03: The pink package and string suddenly pop into existence out of thin air, violating object permanence.; 00:02-00:03: The string instantly appears wrapped around the penguin without any ani
-17:27:25 [why-did-the-internet-fight-a-decade-over] final_render 80% Re-cutting with the fixed shots
-17:34:15 rendered short.mp4 in 408s, 51.3 MB
-17:35:13 [why-did-the-internet-fight-a-decade-over] metadata 88% Writing the title and description
-17:35:22 [why-did-the-internet-fight-a-decade-over] final_ready 90% Short ready (Bureaucracy Sandbox, penguin as villain). Watch it and approve or send notes
-17:35:22 time budget used; the rest waits for the next run
-17:35:29 [youtube] 0 job(s) changed
+20:03:24 [shorts] keyframe k15 review 4.0: Lack of animation progression: the soldiers are frozen in the exact same pose as the previous frame and have not taken a step.; Action mismatch: the prompt asks for the soldiers to 'march away into th
+20:04:50 [shorts] keyframe k16 review 6.0: Garbled, nonsensical AI text/symbols carved into the archways; Melted and fused fingers on both statues, especially the right statue holding the scroll; Terracotta roof tiles above the arches awkwardl
+20:05:27 [shorts] keyframe k16 review 5.0: Mangled, melted fingers on both statues, particularly the clasped hands of the right statue and the hand holding the scroll on the left.; Inconsistent architectural details: the left arch features a b
+20:06:40 [shorts] keyframe k17 review 6.0: Continuity error: The philosopher statue morphs between frames, changing its pose so the scroll moves from chest height to waist height.; Inconsistent props: The scattered stone debris on the ledge ch
+20:07:21 [shorts] keyframe k17 review 4.0: Spatial logic is broken: the statues appear to be sliding as 2D overlays rather than moving within the 3D space.; The leftmost statue is clipping through the solid stone wall on the left and appears t
+20:08:12 [shorts] keyframe k18 review 6.0: The hand holding the chisel has severe AI artifacts: it appears to be made of stone or mud rather than flesh, and the fingers are poorly defined and merged.
+[qc] reviewer error (passing): 'list' object has no attribute 'get'
+20:09:00 [shorts] keyframe k18 review 10.0: 
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[qc] reviewer error (passing): 'list' object has no attribute 'get'
+20:10:13 [shorts] keyframe k19 review 10.0: 
+20:11:09 [shorts] keyframe k20 review 9.0: The background ruins and arches are slightly too illuminated, reducing the requested contrast between the brilliantly shining fortress and the surrounding ruins in deep shadow.
+20:11:11 job how-did-a-tiny-republic-survive-inside-italy-for-centuries- failed: Drive resumable chunk -> HTTP 502: b'<!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">\n  <title>Error 502 (Server Error)!!1</title>\n  <style>\n    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;paddin'
+20:11:15 [youtube] 0 job(s) changed

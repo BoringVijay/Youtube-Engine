@@ -1,0 +1,370 @@
+{
+ "format": "short",
+ "universe": {
+  "name": "Chiseled History Studios",
+  "studio": "Chiseled History Studios",
+  "why": "San Marino was founded by a stonemason and survived by being an immovable rock while empires crashed around it. A universe of carved marble, limestone, and granite perfectly captures centuries of stoic endurance.",
+  "pacing": "Steady, monumental, and stoic, with the heavy, deliberate rhythm of sliding stone blocks.",
+  "signature_shot": "A tiny, pristine marble mountain fortress bathed in warm light, surrounded by the shattered, dusty ruins of Roman columns and imperial statues.",
+  "medium_break": "A giant steel sculptor's chisel suddenly strikes an 'empire' statue from off-screen, shattering it into white stone dust.",
+  "look_bible": "Classical marble and stone relief diorama. Materials: polished white Carrara marble, rough-hewn granite, dark slate, and terracotta. Palette: ivory white, slate gray, warm terracotta, and subtle gold veins. Lighting: warm, directional museum spotlighting casting deep, dramatic shadows, with dust motes drifting in volumetric light. Lens: macro photography with shallow depth of field. Texture: visible chisel marks, stone dust, and smooth polished surfaces. Motion feels heavy, architectural, and stoic.",
+  "penguin_render": "Carved from smooth black basalt and white marble, with slightly polished amber-orange stone for feet and beak. Three thin wire-like metal feathers sticking out of its stone head.",
+  "palette": {
+   "paper": "#F5F5DC",
+   "ink": "#2F4F4F",
+   "accent": "#DAA520",
+   "accent2": "#8B4513"
+  },
+  "font": "serif",
+  "film": "clean",
+  "grain": 0.1,
+  "vignette": 0.6,
+  "music": "Slow, resonant cello and sparse harp plucks, echoing like a grand marble museum hall.",
+  "letterbox": false
+ },
+ "penguin": {
+  "role": "cameo",
+  "arc": "Wants to fly but is made of solid, heavy basalt stone; tries to flap its stone flippers while standing guard, fails entirely, and just accepts gravity."
+ },
+ "keyframes": {
+  "k01": {
+   "id": "k01",
+   "seq": 0,
+   "prompt": "Macro photography of a tiny, pristine white marble fortress sitting atop a rough granite mountain peak. Classical marble and stone relief diorama. Materials: polished white Carrara marble, rough-hewn granite, dark slate, and terracotta. Palette: ivory white, slate gray, warm terracotta, and subtle gold veins. Lighting: warm, directional museum spotlighting casting deep, dramatic shadows, with dust motes drifting in volumetric light. Lens: macro photography with shallow depth of field. Texture: visible chisel marks, stone dust, and smooth polished surfaces. Motion feels heavy, architectural, and stoic.",
+   "penguin": null,
+   "prev": null
+  },
+  "k02": {
+   "id": "k02",
+   "seq": 0,
+   "prompt": "Wider view showing the pristine white marble fortress and the steep granite cliffs of the mountain below it. Classical marble and stone relief diorama. Materials: polished white Carrara marble, rough-hewn granite, dark slate, and terracotta. Palette: ivory white, slate gray, warm terracotta, and subtle gold veins. Lighting: warm, directional museum spotlighting casting deep, dramatic shadows, with dust motes drifting in volumetric light. Lens: macro photography with shallow depth of field. Texture: visible chisel marks, stone dust, and smooth polished surfaces. Motion feels heavy, architectural, and stoic.",
+   "penguin": null,
+   "prev": "k01"
+  },
+  "k03": {
+   "id": "k03",
+   "seq": 0,
+   "prompt": "Wide shot of the granite mountain peak, now revealing that it is surrounded by a flat floor of terracotta tiles shaped like the map of Italy. Classical marble and stone relief diorama. Materials: polished white Carrara marble, rough-hewn granite, dark slate, and terracotta. Palette: ivory white, slate gray, warm terracotta, and subtle gold veins. Lighting: warm, directional museum spotlighting casting deep, dramatic shadows, with dust motes drifting in volumetric light. Lens: macro photography with shallow depth of field. Texture: visible chisel marks, stone dust, and smooth polished surfaces. Motion feels heavy, architectural, and stoic.",
+   "penguin": null,
+   "prev": "k02"
+  },
+  "k04": {
+   "id": "k04",
+   "seq": 0,
+   "prompt": "Close up at the base of the granite mountain. A rough-hewn stone statue of a stonemason holds a metal chisel against the rock, striking it to send a puff of white stone dust into the air. Classical marble and stone relief diorama. Materials: polished white Carrara marble, rough-hewn granite, dark slate, and terracotta. Palette: ivory white, slate gray, warm terracotta, and subtle gold veins. Lighting: warm, directional museum spotlighting casting deep, dramatic shadows, with dust motes drifting in volumetric light. Lens: macro photography with shallow depth of field. Texture: visible chisel marks, stone dust, and smooth polished surfaces. Motion feels heavy, architectural, and stoic.",
+   "penguin": null,
+   "prev": "k03"
+  },
+  "k05": {
+   "id": "k05",
+   "seq": 1,
+   "prompt": "A massive, ornate Roman marble column dominates the foreground, with a deep crack forming down its center and white dust spilling out. Classical marble and stone relief diorama. Materials: polished white Carrara marble, rough-hewn granite, dark slate, and terracotta. Palette: ivory white, slate gray, warm terracotta, and subtle gold veins. Lighting: warm, directional museum spotlighting casting deep, dramatic shadows, with dust motes drifting in volumetric light. Lens: macro photography with shallow depth of field. Texture: visible chisel marks, stone dust, and smooth polished surfaces. Motion feels heavy, architectural, and stoic.",
+   "penguin": null,
+   "prev": null
+  },
+  "k06": {
+   "id": "k06",
+   "seq": 1,
+   "prompt": "The massive Roman column crumbles into a pile of dusty rubble, revealing the small, unbroken granite mountain standing firm in the background. Classical marble and stone relief diorama. Materials: polished white Carrara marble, rough-hewn granite, dark slate, and terracotta. Palette: ivory white, slate gray, warm terracotta, and subtle gold veins. Lighting: warm, directional museum spotlighting casting deep, dramatic shadows, with dust motes drifting in volumetric light. Lens: macro photography with shallow depth of field. Texture: visible chisel marks, stone dust, and smooth polished surfaces. Motion feels heavy, architectural, and stoic.",
+   "penguin": null,
+   "prev": "k05"
+  },
+  "k07": {
+   "id": "k07",
+   "seq": 1,
+   "prompt": "A dark slate Bishop chess piece slides aggressively onto the top of the granite mountain, towering over the marble fortress. Classical marble and stone relief diorama. Materials: polished white Carrara marble, rough-hewn granite, dark slate, and terracotta. Palette: ivory white, slate gray, warm terracotta, and subtle gold veins. Lighting: warm, directional museum spotlighting casting deep, dramatic shadows, with dust motes drifting in volumetric light. Lens: macro photography with shallow depth of field. Texture: visible chisel marks, stone dust, and smooth polished surfaces. Motion feels heavy, architectural, and stoic.",
+   "penguin": null,
+   "prev": "k06"
+  },
+  "k08": {
+   "id": "k08",
+   "seq": 1,
+   "prompt": "The entire granite mountain base tilts slightly, causing the dark slate Bishop piece to slide off the edge and fall into the shadowy abyss. Classical marble and stone relief diorama. Materials: polished white Carrara marble, rough-hewn granite, dark slate, and terracotta. Palette: ivory white, slate gray, warm terracotta, and subtle gold veins. Lighting: warm, directional museum spotlighting casting deep, dramatic shadows, with dust motes drifting in volumetric light. Lens: macro photography with shallow depth of field. Texture: visible chisel marks, stone dust, and smooth polished surfaces. Motion feels heavy, architectural, and stoic.",
+   "penguin": null,
+   "prev": "k07"
+  },
+  "k09": {
+   "id": "k09",
+   "seq": 2,
+   "prompt": "A technical blueprint of the mountain drawn in white chalk on blue paper. A golden imperial eagle icon approaches the mountain's borders. Blueprint / technical cutaway universe. Palette: cyan blue, bright white, gold accent. Lighting: flat, clinical drafting table light. Lens: orthographic projection. Texture: matte drafting paper with crisp chalk linework.",
+   "penguin": null,
+   "prev": null
+  },
+  "k10": {
+   "id": "k10",
+   "seq": 2,
+   "prompt": "The technical blueprint of the mountain. The golden imperial eagle icon expands its borders, pushing gold territory lines toward the mountain. Blueprint / technical cutaway universe. Palette: cyan blue, bright white, gold accent. Lighting: flat, clinical drafting table light. Lens: orthographic projection. Texture: matte drafting paper with crisp chalk linework.",
+   "penguin": null,
+   "prev": "k09"
+  },
+  "k11": {
+   "id": "k11",
+   "seq": 2,
+   "prompt": "The technical blueprint of the mountain. A thick, glowing white chalk defensive wall is instantly drawn around the mountain, completely blocking the gold territory lines. Blueprint / technical cutaway universe. Palette: cyan blue, bright white, gold accent. Lighting: flat, clinical drafting table light. Lens: orthographic projection. Texture: matte drafting paper with crisp chalk linework.",
+   "penguin": null,
+   "prev": "k10"
+  },
+  "k12": {
+   "id": "k12",
+   "seq": 3,
+   "prompt": "Close up of a heavy stone door carved into the granite mountain side. Sitting next to the door is a penguin carved from smooth black basalt and white marble, with amber-orange stone feet and beak, wearing a tiny red stone shirt. Classical marble and stone relief diorama. Materials: polished white Carrara marble, rough-hewn granite, dark slate, and terracotta. Palette: ivory white, slate gray, warm terracotta, and subtle gold veins. Lighting: warm, directional museum spotlighting casting deep, dramatic shadows. Lens: macro photography with shallow depth of field. Texture: visible chisel marks, stone dust.",
+   "penguin": "Sitting next to the stone door, carved from basalt, wearing a tiny red stone shirt, struggling to lift its heavy stone flippers to fly.",
+   "prev": null
+  },
+  "k13": {
+   "id": "k13",
+   "seq": 3,
+   "prompt": "The heavy stone door cracks open slightly, revealing the face of a bearded marble statue of Garibaldi hiding inside. The basalt penguin next to the door drops its stone flippers in defeat, unable to fly. Classical marble and stone relief diorama. Materials: polished white Carrara marble, rough-hewn granite, dark slate, and terracotta. Palette: ivory white, slate gray, warm terracotta, and subtle gold veins. Lighting: warm, directional museum spotlighting casting deep, dramatic shadows. Lens: macro photography with shallow depth of field. Texture: visible chisel marks, stone dust.",
+   "penguin": "Next to the door, dropping its heavy stone flippers in defeat after failing to fly.",
+   "prev": "k12"
+  },
+  "k14": {
+   "id": "k14",
+   "seq": 3,
+   "prompt": "Camera view shifted to the right of the door, showing rigid white marble Austrian soldier statues marching in a line past the mountain, completely oblivious to the hidden door. Classical marble and stone relief diorama. Materials: polished white Carrara marble, rough-hewn granite, dark slate, and terracotta. Palette: ivory white, slate gray, warm terracotta, and subtle gold veins. Lighting: warm, directional museum spotlighting casting deep, dramatic shadows. Lens: macro photography with shallow depth of field. Texture: visible chisel marks, stone dust.",
+   "penguin": null,
+   "prev": "k13"
+  },
+  "k15": {
+   "id": "k15",
+   "seq": 3,
+   "prompt": "The rigid white marble Austrian soldier statues march away into the deep background shadows, leaving the carved granite mountain wall safe in the light. Classical marble and stone relief diorama. Materials: polished white Carrara marble, rough-hewn granite, dark slate, and terracotta. Palette: ivory white, slate gray, warm terracotta, and subtle gold veins. Lighting: warm, directional museum spotlighting casting deep, dramatic shadows. Lens: macro photography with shallow depth of field. Texture: visible chisel marks, stone dust.",
+   "penguin": null,
+   "prev": "k14"
+  },
+  "k16": {
+   "id": "k16",
+   "seq": 4,
+   "prompt": "Two small, dignified marble statues stand side-by-side in carved alcoves on the mountain fortress. Classical marble and stone relief diorama. Materials: polished white Carrara marble, rough-hewn granite, dark slate, and terracotta. Palette: ivory white, slate gray, warm terracotta, and subtle gold veins. Lighting: warm, directional museum spotlighting casting deep, dramatic shadows. Lens: macro photography with shallow depth of field. Texture: visible chisel marks, stone dust.",
+   "penguin": null,
+   "prev": null
+  },
+  "k17": {
+   "id": "k17",
+   "seq": 4,
+   "prompt": "The two small marble statues slide out of their alcoves to the left, and two identical new marble statues slide in from the right to replace them. Classical marble and stone relief diorama. Materials: polished white Carrara marble, rough-hewn granite, dark slate, and terracotta. Palette: ivory white, slate gray, warm terracotta, and subtle gold veins. Lighting: warm, directional museum spotlighting casting deep, dramatic shadows. Lens: macro photography with shallow depth of field. Texture: visible chisel marks, stone dust.",
+   "penguin": null,
+   "prev": "k16"
+  },
+  "k18": {
+   "id": "k18",
+   "seq": 4,
+   "prompt": "Close up on a smooth stone tablet below the alcoves, where a tiny metal chisel carves a fresh tally mark into the rock. Classical marble and stone relief diorama. Materials: polished white Carrara marble, rough-hewn granite, dark slate, and terracotta. Palette: ivory white, slate gray, warm terracotta, and subtle gold veins. Lighting: warm, directional museum spotlighting casting deep, dramatic shadows. Lens: macro photography with shallow depth of field. Texture: visible chisel marks, stone dust.",
+   "penguin": null,
+   "prev": "k17"
+  },
+  "k19": {
+   "id": "k19",
+   "seq": 4,
+   "prompt": "Wide shot of the tiny pristine white marble fortress sitting proudly atop its granite peak, surrounded by the ruins of the shattered columns from earlier. Classical marble and stone relief diorama. Materials: polished white Carrara marble, rough-hewn granite, dark slate, and terracotta. Palette: ivory white, slate gray, warm terracotta, and subtle gold veins. Lighting: warm, directional museum spotlighting casting deep, dramatic shadows. Lens: macro photography with shallow depth of field. Texture: visible chisel marks, stone dust.",
+   "penguin": null,
+   "prev": "k18"
+  },
+  "k20": {
+   "id": "k20",
+   "seq": 4,
+   "prompt": "Wide shot of the tiny pristine white marble fortress atop its granite peak. The museum lighting shifts to a beautiful, warm golden hour glow, making the fortress shine brilliantly while the ruins around it stay in deep shadow. Classical marble and stone relief diorama. Materials: polished white Carrara marble, rough-hewn granite, dark slate, and terracotta. Palette: ivory white, slate gray, warm terracotta, and subtle gold veins. Lighting: warm, directional museum spotlighting casting deep, dramatic shadows. Lens: macro photography with shallow depth of field. Texture: visible chisel marks, stone dust.",
+   "penguin": null,
+   "prev": "k19"
+  }
+ },
+ "shots": [
+  {
+   "id": "s01",
+   "seq": 0,
+   "from": "k01",
+   "to": "k02",
+   "cue": "One tiny hilltop country",
+   "motion": "Camera pulls back slowly, expanding the view from the marble fortress to reveal the steep granite cliffs.",
+   "overlay": null,
+   "transition": "cut",
+   "sfx": "low stone rumble",
+   "serious": false
+  },
+  {
+   "id": "s02",
+   "seq": 0,
+   "from": "k02",
+   "to": "k03",
+   "cue": "It's called San Marino,",
+   "motion": "Camera continues pulling back smoothly, revealing the terracotta map of Italy wrapping completely around the mountain base.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": null,
+   "serious": false
+  },
+  {
+   "id": "s03",
+   "seq": 0,
+   "from": "k03",
+   "to": "k04",
+   "cue": "Legend says a stonemason",
+   "motion": "Camera tilts down rapidly to the base of the mountain as the stone mason statue strikes the chisel, puffing white dust.",
+   "overlay": {
+    "type": "label",
+    "text": "AD 301",
+    "pos": "top"
+   },
+   "transition": "chain",
+   "sfx": "sharp metallic chisel clink",
+   "serious": false
+  },
+  {
+   "id": "s04",
+   "seq": 1,
+   "from": "k05",
+   "to": "k06",
+   "cue": "Rome fell. Popes and",
+   "motion": "Camera pushes in slightly as the massive Roman column shatters into white dust and crumbles away to reveal the mountain.",
+   "overlay": null,
+   "transition": "match",
+   "sfx": "heavy stone crumbling",
+   "serious": false
+  },
+  {
+   "id": "s05",
+   "seq": 1,
+   "from": "k06",
+   "to": "k07",
+   "cue": "A few did. Cesare",
+   "motion": "Camera drifts left as the dark slate Bishop piece violently slides onto the mountain peak.",
+   "overlay": {
+    "type": "label",
+    "text": "1739",
+    "pos": "top"
+   },
+   "transition": "chain",
+   "sfx": "stone scraping heavily",
+   "serious": false
+  },
+  {
+   "id": "s06",
+   "seq": 1,
+   "from": "k07",
+   "to": "k08",
+   "cue": "Both times, it got",
+   "motion": "Camera tilts down following the action as the mountain tilts and the slate piece slides off into the shadows.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "stone sliding and echoing thud",
+   "serious": false
+  },
+  {
+   "id": "s07",
+   "seq": 2,
+   "from": "k09",
+   "to": "k10",
+   "cue": "Then Napoleon arrives, conquering",
+   "motion": "Camera pushes in slowly on the blueprint as the golden eagle icon expands its glowing gold borders toward the mountain.",
+   "overlay": null,
+   "transition": "cut",
+   "sfx": "paper rustle and pencil scratching",
+   "serious": false
+  },
+  {
+   "id": "s08",
+   "seq": 2,
+   "from": "k10",
+   "to": "k11",
+   "cue": "It says no thanks.",
+   "motion": "Camera drifts up slightly as a thick white chalk wall snaps into place around the mountain, halting the gold lines.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "thick chalk snap",
+   "serious": false
+  },
+  {
+   "id": "s09",
+   "seq": 3,
+   "from": "k12",
+   "to": "k13",
+   "cue": "During Italian unification, it",
+   "motion": "Camera pushes in slightly on the door as it cracks open to reveal the statue inside, while the stone penguin struggles and drops its flippers.",
+   "overlay": null,
+   "transition": "cut",
+   "sfx": "heavy stone grinding open",
+   "serious": false
+  },
+  {
+   "id": "s10",
+   "seq": 3,
+   "from": "k13",
+   "to": "k14",
+   "cue": "while Austrian troops hunted",
+   "motion": "Camera pans smoothly right, leaving the door to follow the rigid marble soldier statues marching past.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "rhythmic stone footsteps",
+   "serious": false
+  },
+  {
+   "id": "s11",
+   "seq": 3,
+   "from": "k14",
+   "to": "k15",
+   "cue": "So the new Italy",
+   "motion": "Camera holds the pan as focus shifts, watching the marble soldiers recede and disappear into the shadows.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "fading stone footsteps",
+   "serious": false
+  },
+  {
+   "id": "s12",
+   "seq": 4,
+   "from": "k16",
+   "to": "k17",
+   "cue": "Today it still picks",
+   "motion": "Camera pushes in slowly as the marble statues seamlessly slide out and are replaced by new ones.",
+   "overlay": {
+    "type": "label",
+    "text": "Every 6 months",
+    "pos": "top"
+   },
+   "transition": "match",
+   "sfx": "smooth stone sliding click",
+   "serious": false
+  },
+  {
+   "id": "s13",
+   "seq": 4,
+   "from": "k17",
+   "to": "k18",
+   "cue": "like a club that",
+   "motion": "Camera pans down quickly to the stone tablet as the chisel strikes the new tally mark.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "chisel tap",
+   "serious": false
+  },
+  {
+   "id": "s14",
+   "seq": 4,
+   "from": "k18",
+   "to": "k19",
+   "cue": "One tiny hilltop country",
+   "motion": "Camera pulls back rapidly from the tablet to a grand wide shot of the entire mountain amidst the ruins.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": null,
+   "serious": false
+  },
+  {
+   "id": "s15",
+   "seq": 4,
+   "from": "k19",
+   "to": "k20",
+   "cue": "mostly by politely asking",
+   "motion": "Camera drifts up slightly as the lighting transitions to a rich, warm golden glow on the fortress.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "soft low orchestral swell",
+   "serious": false
+  }
+ ],
+ "cover": {
+  "prompt": "A tiny, pristine white marble fortress standing on a rough granite peak, surrounded by shattered Roman columns and warm museum spotlighting. Classical marble and stone relief diorama. Materials: polished white Carrara marble, rough-hewn granite, dark slate, and terracotta. Palette: ivory white, slate gray, warm terracotta, and subtle gold veins. Lighting: warm, directional museum spotlighting casting deep, dramatic shadows, with dust motes drifting in volumetric light. Lens: macro photography with shallow depth of field. Texture: visible chisel marks, stone dust, and smooth polished surfaces. Motion feels heavy, architectural, and stoic.",
+  "text": "SURVIVED EVERY EMPIRE"
+ },
+ "n_beats": 11
+}
