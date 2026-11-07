@@ -1,0 +1,380 @@
+{
+ "format": "short",
+ "universe": {
+  "name": "Acrylic Alleyways",
+  "studio": "Neon Circuit Miniature Works",
+  "why": "A neon-drenched, frosted acrylic and circuit board miniature city perfectly captures the 'red-light district' vibe of the internet, making it look like a physical, glowing cyber-neighborhood without being explicit.",
+  "pacing": "Pulsing, rhythmic, escalating like a flashing neon sign.",
+  "signature_shot": "The penguin in a tweed jacket proudly guarding a locked, glowing red, but entirely empty acrylic box.",
+  "medium_break": "None",
+  "look_bible": "Miniature neon cyberpunk city made of frosted acrylic, glowing fiber optic cables, and brass circuit traces. Dark ambient lighting pierced by intense neon pink, cyan, and deep red LED glows. Macro lens with shallow depth of field, rich bokeh. Smooth glossy plastic, frosted glass, and metallic mesh textures.",
+  "penguin_render": "Rendered natively as a glossy, bottom-heavy vinyl art toy with big round white eye-rings, bright orange feet, and glowing fiber-optic tufts on its head instead of feathers.",
+  "palette": {
+   "paper": "#111116",
+   "ink": "#FFFFFF",
+   "accent": "#FF0055",
+   "accent2": "#00FFFF"
+  },
+  "font": "mono",
+  "film": "clean",
+  "grain": 0.1,
+  "vignette": 0.6,
+  "music": "Clean synth pulses with rhythmic, echoing electronic beats and a subtle cyberpunk bassline.",
+  "letterbox": false
+ },
+ "penguin": {
+  "role": "cameo",
+  "arc": "The penguin wants to protect its respectable university but ends up proudly guarding an empty box."
+ },
+ "keyframes": {
+  "k01": {
+   "id": "k01",
+   "seq": 0,
+   "prompt": "Macro view of a sleek, frosted acrylic switchboard. Three glowing red acrylic blocks drop into empty slots. No penguin. Miniature neon cyberpunk city made of frosted acrylic, glowing fiber optic cables, and brass circuit traces. Dark ambient lighting pierced by intense neon pink, cyan, and deep red LED glows. Macro lens with shallow depth of field, rich bokeh. Smooth glossy plastic, frosted glass, and metallic mesh textures.",
+   "penguin": null,
+   "prev": null
+  },
+  "k02": {
+   "id": "k02",
+   "seq": 0,
+   "prompt": "Slightly wider view of the sleek, frosted acrylic switchboard. The red blocks are firmly locked into the board, triggering a bright pulse of red light travelling down a brass circuit trace. No penguin. Miniature neon cyberpunk city made of frosted acrylic, glowing fiber optic cables, and brass circuit traces. Dark ambient lighting pierced by intense neon pink, cyan, and deep red LED glows. Macro lens with shallow depth of field, rich bokeh. Smooth glossy plastic, frosted glass, and metallic mesh textures.",
+   "penguin": null,
+   "prev": "k01"
+  },
+  "k03": {
+   "id": "k03",
+   "seq": 0,
+   "prompt": "Following the brass circuit trace, the bright pulse of red light approaches a heavy, frosted glass gate with brass hinges. No penguin. Miniature neon cyberpunk city made of frosted acrylic, glowing fiber optic cables, and brass circuit traces. Dark ambient lighting pierced by intense neon pink, cyan, and deep red LED glows. Macro lens with shallow depth of field, rich bokeh. Smooth glossy plastic, frosted glass, and metallic mesh textures.",
+   "penguin": null,
+   "prev": "k02"
+  },
+  "k04": {
+   "id": "k04",
+   "seq": 0,
+   "prompt": "Close up on the frosted glass gate as the red light hits it, illuminating the glass from behind to reveal blurred, alluring neon pink signs glowing on the other side. No penguin. Miniature neon cyberpunk city made of frosted acrylic, glowing fiber optic cables, and brass circuit traces. Dark ambient lighting pierced by intense neon pink, cyan, and deep red LED glows. Macro lens with shallow depth of field, rich bokeh. Smooth glossy plastic, frosted glass, and metallic mesh textures.",
+   "penguin": null,
+   "prev": "k03"
+  },
+  "k05": {
+   "id": "k05",
+   "seq": 1,
+   "prompt": "A heavy, opaque brass shutter forcefully slams down over the frosted glass gate. A small neon cyan sign flickers 'TRY AGAIN'. No penguin. Miniature neon cyberpunk city made of frosted acrylic, glowing fiber optic cables, and brass circuit traces. Dark ambient lighting pierced by intense neon pink, cyan, and deep red LED glows. Macro lens with shallow depth of field, rich bokeh. Smooth glossy plastic, frosted glass, and metallic mesh textures.",
+   "penguin": null,
+   "prev": null
+  },
+  "k06": {
+   "id": "k06",
+   "seq": 1,
+   "prompt": "Looking down slightly at the tightly locked brass shutter. Suddenly, angry orange frosted glass envelopes begin to rain down from above. No penguin. Miniature neon cyberpunk city made of frosted acrylic, glowing fiber optic cables, and brass circuit traces. Dark ambient lighting pierced by intense neon pink, cyan, and deep red LED glows. Macro lens with shallow depth of field, rich bokeh. Smooth glossy plastic, frosted glass, and metallic mesh textures.",
+   "penguin": null,
+   "prev": "k05"
+  },
+  "k07": {
+   "id": "k07",
+   "seq": 1,
+   "prompt": "Wider view as the barrage of angry orange frosted glass envelopes grows rapidly into a massive, chaotic, overflowing heap in front of the shutter. No penguin. Miniature neon cyberpunk city made of frosted acrylic, glowing fiber optic cables, and brass circuit traces. Dark ambient lighting pierced by intense neon pink, cyan, and deep red LED glows. Macro lens with shallow depth of field, rich bokeh. Smooth glossy plastic, frosted glass, and metallic mesh textures.",
+   "penguin": null,
+   "prev": "k06"
+  },
+  "k08": {
+   "id": "k08",
+   "seq": 1,
+   "prompt": "Slightly angled view of the massive heap of orange envelopes. A heavy, deep blue glass envelope with a shiny brass eagle seal lands on top, crushing the pile downwards. No penguin. Miniature neon cyberpunk city made of frosted acrylic, glowing fiber optic cables, and brass circuit traces. Dark ambient lighting pierced by intense neon pink, cyan, and deep red LED glows. Macro lens with shallow depth of field, rich bokeh. Smooth glossy plastic, frosted glass, and metallic mesh textures.",
+   "penguin": null,
+   "prev": "k07"
+  },
+  "k09": {
+   "id": "k09",
+   "seq": 2,
+   "prompt": "The crushed pile of glass envelopes sits motionless inside a dark, frosted acrylic bin marked '2007'. A bright green 'REVIEW' laser grid activates above it. No penguin. Miniature neon cyberpunk city made of frosted acrylic, glowing fiber optic cables, and brass circuit traces. Dark ambient lighting pierced by intense neon pink, cyan, and deep red LED glows. Macro lens with shallow depth of field, rich bokeh. Smooth glossy plastic, frosted glass, and metallic mesh textures.",
+   "penguin": null,
+   "prev": null
+  },
+  "k10": {
+   "id": "k10",
+   "seq": 2,
+   "prompt": "Close view as the bright green laser grid scans over the dark acrylic bin, smoothly dissolving the glass envelopes. No penguin. Miniature neon cyberpunk city made of frosted acrylic, glowing fiber optic cables, and brass circuit traces. Dark ambient lighting pierced by intense neon pink, cyan, and deep red LED glows. Macro lens with shallow depth of field, rich bokeh. Smooth glossy plastic, frosted glass, and metallic mesh textures.",
+   "penguin": null,
+   "prev": "k09"
+  },
+  "k11": {
+   "id": "k11",
+   "seq": 2,
+   "prompt": "Slightly shifted view as the green laser sweep finishes, revealing a shining, pristine red glass pedestal of approval where the envelopes used to be. No penguin. Miniature neon cyberpunk city made of frosted acrylic, glowing fiber optic cables, and brass circuit traces. Dark ambient lighting pierced by intense neon pink, cyan, and deep red LED glows. Macro lens with shallow depth of field, rich bokeh. Smooth glossy plastic, frosted glass, and metallic mesh textures.",
+   "penguin": null,
+   "prev": "k10"
+  },
+  "k12": {
+   "id": "k12",
+   "seq": 2,
+   "prompt": "Looking up from the pristine red glass pedestal to the background, where the glowing red neon gate is swinging wide open. No penguin. Miniature neon cyberpunk city made of frosted acrylic, glowing fiber optic cables, and brass circuit traces. Dark ambient lighting pierced by intense neon pink, cyan, and deep red LED glows. Macro lens with shallow depth of field, rich bokeh. Smooth glossy plastic, frosted glass, and metallic mesh textures.",
+   "penguin": null,
+   "prev": "k11"
+  },
+  "k13": {
+   "id": "k13",
+   "seq": 3,
+   "prompt": "The red neon gate is wide open, with alluring pink and red lights pulsing invitingly from the alleyway inside. No penguin. Miniature neon cyberpunk city made of frosted acrylic, glowing fiber optic cables, and brass circuit traces. Dark ambient lighting pierced by intense neon pink, cyan, and deep red LED glows. Macro lens with shallow depth of field, rich bokeh. Smooth glossy plastic, frosted glass, and metallic mesh textures.",
+   "penguin": null,
+   "prev": null
+  },
+  "k14": {
+   "id": "k14",
+   "seq": 3,
+   "prompt": "Moving forward as a thick, opaque grey glass wall rapidly rises up from the floor, encircling the red alleyway. No penguin. Miniature neon cyberpunk city made of frosted acrylic, glowing fiber optic cables, and brass circuit traces. Dark ambient lighting pierced by intense neon pink, cyan, and deep red LED glows. Macro lens with shallow depth of field, rich bokeh. Smooth glossy plastic, frosted glass, and metallic mesh textures.",
+   "penguin": null,
+   "prev": "k13"
+  },
+  "k15": {
+   "id": "k15",
+   "seq": 3,
+   "prompt": "Looking down slightly as the thick grey glass wall locks into place, completely enclosing the red alleyway and trapping the light inside a dark box. No penguin. Miniature neon cyberpunk city made of frosted acrylic, glowing fiber optic cables, and brass circuit traces. Dark ambient lighting pierced by intense neon pink, cyan, and deep red LED glows. Macro lens with shallow depth of field, rich bokeh. Smooth glossy plastic, frosted glass, and metallic mesh textures.",
+   "penguin": null,
+   "prev": "k14"
+  },
+  "k16": {
+   "id": "k16",
+   "seq": 4,
+   "prompt": "Outside the newly built dark grey glass box, a pristine cyan acrylic university building stands. The penguin stands next to a small, empty red acrylic box. Miniature neon cyberpunk city made of frosted acrylic, glowing fiber optic cables, and brass circuit traces. Dark ambient lighting pierced by intense neon pink, cyan, and deep red LED glows. Macro lens with shallow depth of field, rich bokeh. Smooth glossy plastic, frosted glass, and metallic mesh textures.",
+   "penguin": "wearing a tiny tweed professor jacket, looking nervously at the grey wall.",
+   "prev": null
+  },
+  "k17": {
+   "id": "k17",
+   "seq": 4,
+   "prompt": "Slightly panned view as the penguin hastily slaps a heavy brass padlock onto the empty red acrylic box next to the cyan university building. Miniature neon cyberpunk city made of frosted acrylic, glowing fiber optic cables, and brass circuit traces. Dark ambient lighting pierced by intense neon pink, cyan, and deep red LED glows. Macro lens with shallow depth of field, rich bokeh. Smooth glossy plastic, frosted glass, and metallic mesh textures.",
+   "penguin": "wearing a tiny tweed professor jacket, slapping a brass padlock onto the red box.",
+   "prev": "k16"
+  },
+  "k18": {
+   "id": "k18",
+   "seq": 4,
+   "prompt": "Wider, slightly higher view showing the penguin standing guard proudly next to the locked empty red box, while a glowing pulse of cyan data cleanly bypasses it. Miniature neon cyberpunk city made of frosted acrylic, glowing fiber optic cables, and brass circuit traces. Dark ambient lighting pierced by intense neon pink, cyan, and deep red LED glows. Macro lens with shallow depth of field, rich bokeh. Smooth glossy plastic, frosted glass, and metallic mesh textures.",
+   "penguin": "wearing a tiny tweed professor jacket, standing guard proudly.",
+   "prev": "k17"
+  },
+  "k19": {
+   "id": "k19",
+   "seq": 4,
+   "prompt": "Wide shot pulling back to reveal the acrylic city. Numerous locked, empty red boxes dot the landscape among the bright cyan buildings. Miniature neon cyberpunk city made of frosted acrylic, glowing fiber optic cables, and brass circuit traces. Dark ambient lighting pierced by intense neon pink, cyan, and deep red LED glows. Macro lens with shallow depth of field, rich bokeh. Smooth glossy plastic, frosted glass, and metallic mesh textures.",
+   "penguin": "visible as a small figure standing next to one of the boxes in the distance.",
+   "prev": "k18"
+  },
+  "k20": {
+   "id": "k20",
+   "seq": 4,
+   "prompt": "Final sweeping wide view of the vast acrylic city. The glowing red district is visible as a tiny, isolated dark grey box in the center, completely bypassed by bustling cyan data streams. Miniature neon cyberpunk city made of frosted acrylic, glowing fiber optic cables, and brass circuit traces. Dark ambient lighting pierced by intense neon pink, cyan, and deep red LED glows. Macro lens with shallow depth of field, rich bokeh. Smooth glossy plastic, frosted glass, and metallic mesh textures.",
+   "penguin": "a tiny speck in the sprawling city.",
+   "prev": "k19"
+  }
+ },
+ "shots": [
+  {
+   "id": "s01",
+   "seq": 0,
+   "from": "k01",
+   "to": "k02",
+   "cue": "Three letters started a",
+   "motion": "Camera pulls back slightly as the red blocks drop and lock into the switchboard.",
+   "overlay": null,
+   "transition": "cut",
+   "sfx": "heavy clack",
+   "serious": false
+  },
+  {
+   "id": "s02",
+   "seq": 0,
+   "from": "k02",
+   "to": "k03",
+   "cue": "In 2000, ICM Registry",
+   "motion": "Camera tracks smoothly along the brass circuit trace following the bright pulse of red light.",
+   "overlay": {
+    "type": "counter",
+    "value": 2000,
+    "suffix": "",
+    "text": "",
+    "pos": "top"
+   },
+   "transition": "chain",
+   "sfx": "electric hum",
+   "serious": false
+  },
+  {
+   "id": "s03",
+   "seq": 0,
+   "from": "k03",
+   "to": "k04",
+   "cue": "The pitch: give adult",
+   "motion": "Camera pushes in closer as the red light hits the frosted glass gate, illuminating it from behind.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "neon buzz",
+   "serious": false
+  },
+  {
+   "id": "s04",
+   "seq": 1,
+   "from": "k05",
+   "to": "k06",
+   "cue": "ICANN says no. ICM",
+   "motion": "Camera tilts down slightly as a heavy, opaque brass shutter violently slams down over the gate.",
+   "overlay": null,
+   "transition": "match",
+   "sfx": "heavy metal slam",
+   "serious": false
+  },
+  {
+   "id": "s05",
+   "seq": 1,
+   "from": "k06",
+   "to": "k07",
+   "cue": "Then the inbox fills",
+   "motion": "Camera pulls back slightly as a barrage of angry orange frosted glass envelopes begins to rain down rapidly.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "glass clinking",
+   "serious": false
+  },
+  {
+   "id": "s06",
+   "seq": 1,
+   "from": "k07",
+   "to": "k08",
+   "cue": "Countries object. The U.S.",
+   "motion": "Camera slowly orbits slightly as a heavy, deep blue glass envelope lands and crushes the overflowing pile.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "heavy thud",
+   "serious": false
+  },
+  {
+   "id": "s07",
+   "seq": 2,
+   "from": "k09",
+   "to": "k10",
+   "cue": "ICANN votes no in",
+   "motion": "Camera pushes in slowly as a bright green laser grid activates and scans over the dark acrylic bin.",
+   "overlay": {
+    "type": "counter",
+    "value": 2007,
+    "suffix": "",
+    "text": "",
+    "pos": "top"
+   },
+   "transition": "match",
+   "sfx": "laser sweep",
+   "serious": false
+  },
+  {
+   "id": "s08",
+   "seq": 2,
+   "from": "k10",
+   "to": "k11",
+   "cue": "demands an independent review.",
+   "motion": "Camera tracks right slightly as the laser dissolves the envelopes, revealing a shining red glass pedestal.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "chime",
+   "serious": false
+  },
+  {
+   "id": "s09",
+   "seq": 2,
+   "from": "k11",
+   "to": "k12",
+   "cue": "In 2010, the panel",
+   "motion": "Camera tilts up from the red pedestal to show the glowing red neon gate swinging wide open.",
+   "overlay": {
+    "type": "counter",
+    "value": 2010,
+    "suffix": "",
+    "text": "",
+    "pos": "top"
+   },
+   "transition": "chain",
+   "sfx": "heavy gate creak",
+   "serious": false
+  },
+  {
+   "id": "s10",
+   "seq": 3,
+   "from": "k13",
+   "to": "k14",
+   "cue": "Plot twist. Plenty of",
+   "motion": "Camera pushes forward steadily as a thick, opaque grey glass wall rapidly rises up from the floor.",
+   "overlay": null,
+   "transition": "match",
+   "sfx": "stone sliding",
+   "serious": false
+  },
+  {
+   "id": "s11",
+   "seq": 3,
+   "from": "k14",
+   "to": "k15",
+   "cue": "A labeled neighborhood is",
+   "motion": "Camera tilts down slightly as the grey glass wall completely encloses the red alleyway, trapping the light.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "heavy lock click",
+   "serious": false
+  },
+  {
+   "id": "s12",
+   "seq": 4,
+   "from": "k16",
+   "to": "k17",
+   "cue": "Then the brands panicked.",
+   "motion": "Camera pans slightly as the penguin hastily slaps a heavy brass padlock onto the empty red acrylic box.",
+   "overlay": null,
+   "transition": "match",
+   "sfx": "padlock snap",
+   "serious": false
+  },
+  {
+   "id": "s13",
+   "seq": 4,
+   "from": "k17",
+   "to": "k18",
+   "cue": "So somewhere, a very",
+   "motion": "Camera pulls back and up as the penguin stands guard and a glowing pulse of cyan data cleanly bypasses the box.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "data whoosh",
+   "serious": false
+  },
+  {
+   "id": "s14",
+   "seq": 4,
+   "from": "k18",
+   "to": "k19",
+   "cue": "Three letters. A decade",
+   "motion": "Camera continues pulling back, revealing numerous locked, empty red boxes scattered among the bright cyan buildings.",
+   "overlay": {
+    "type": "label",
+    "text": "XXX",
+    "pos": "top"
+   },
+   "transition": "chain",
+   "sfx": "ambient synth",
+   "serious": false
+  },
+  {
+   "id": "s15",
+   "seq": 4,
+   "from": "k19",
+   "to": "k20",
+   "cue": "And the most loyal",
+   "motion": "Camera slowly drifts up for a final sweeping wide view of the vast acrylic city, showing the isolated grey box.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "fade out",
+   "serious": false
+  }
+ ],
+ "cover": {
+  "prompt": "A tiny penguin wearing a tweed professor jacket proudly stands guard next to a glowing red, empty frosted acrylic box sealed with a heavy brass padlock. Miniature neon cyberpunk city made of frosted acrylic, glowing fiber optic cables, and brass circuit traces. Dark ambient lighting pierced by intense neon pink, cyan, and deep red LED glows. Macro lens with shallow depth of field, rich bokeh. Smooth glossy plastic, frosted glass, and metallic mesh textures.",
+  "text": "PAID FOR NOTHING"
+ },
+ "n_beats": 11
+}
