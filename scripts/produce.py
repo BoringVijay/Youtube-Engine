@@ -580,7 +580,7 @@ Return JSON: {{"title": "max 70 chars, curiosity first", "alt_titles": [2 more],
 def backfill_reviews():
     """Contact sheets for finished cuts that don't have one yet."""
     for st in all_states():
-        if st.get("v") == 2 and st.get("preview") and not os.path.exists(jfile(st["id"], "review", "test-sheet.jpg")):
+        if st.get("v") == 2 and st.get("preview") and not os.path.exists(os.path.join(jdir(st["id"]), "review", "test-sheet.jpg")):
             try:
                 mp4 = os.path.join(OUT, st["id"], "test.mp4")
                 os.makedirs(os.path.dirname(mp4), exist_ok=True)
