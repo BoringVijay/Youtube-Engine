@@ -345,6 +345,14 @@ def render(props, out_path, scale=1.0, crf=None, still=False, frame=20):
     return out_path
 
 
+def is_short(st):
+    return not (st.get("brew", {}).get("format") or {}).get("long", True)
+
+
+def dims(st):
+    return (1080, 1920) if is_short(st) else (1920, 1080)
+
+
 def link(fid):
     return {"id": fid, "view": f"https://drive.google.com/file/d/{fid}/view", "download": f"https://drive.google.com/uc?id={fid}&export=download"}
 
@@ -361,7 +369,7 @@ def stage_direction(st):
     set_stage(st, "directing", "Choosing the visual universe and writing the shot list")
     words = sum(len(voice.strip_tags(b.get("vo", "")).split()) for b in st["brew"]["script"].get("beats", []))
     budget.check(st["id"], "text_call", 3)
-    d = director.direct(st, words / 2.6, max_motion=int(VOICE_CFG.get("max_motion", 6)), notes=st.get("redo_notes", ""))
+    d = director.direct(st, words / 2.6, max_motion=3 if is_short(st) else int(VOICE_CFG.get("max_motion", 6)), notes=st.get("redo_notes", ""), short=is_short(st))
     budget.log(st["id"], "text_call", 3, gai.LAST["backend"])
     json.dump(d, open(p, "w"), indent=1, ensure_ascii=False)
     st["universe"] = d["universe"]["name"]
@@ -456,12 +464,13 @@ def advance(st):
         d = stage_direction(st)
         words, total = stage_voice(st)
         set_stage(st, "art", f"Painting {len(d['shots'])} frames in {d['universe']['name']}")
-        a = artmod.Art(st, d, os.path.join(OUT, jid, "art"))
-        a.frames(progress(st, "art", 22, 44, "Painting frame"))
+        a = artmod.Art(st, d, os.path.join(OUT, jid, "art"), aspect="9:16" if is_short(st) else "16:9")
+        a.frames(progress(st, "art", 22, 44, "Painting frame"), aspect=a.aspect)
         stage_music(st, d)
         set_stage(st, "test_render", "Cutting the test version")
         media = publish_media(st, a, d)
-        mp4 = render(build_film(st, d, words, total, media, test=True), os.path.join(OUT, jid, "test.mp4"), scale=0.5, crf=26)
+        W, H = dims(st)
+        mp4 = render(build_film(st, d, words, total, media, w=W, h=H, test=True), os.path.join(OUT, jid, "test.mp4"), scale=0.5, crf=26)
         fid = drive.upload(job_folder(jid), "test-cut.mp4", mp4, "video/mp4")
         st["preview"] = {**link(fid), "size_mb": round(os.path.getsize(mp4) / 1e6, 1), "at": now()}
         st.pop("redo_notes", None)
@@ -472,8 +481,9 @@ def advance(st):
         d = json.load(open(jfile(jid, "direction.json")))
         w = json.load(open(jfile(jid, "words.json")))
         words, total = w["words"], w["total"]
-        a = artmod.Art(st, d, os.path.join(OUT, jid, "art"))
-        a.frames()  # re-download
+        a = artmod.Art(st, d, os.path.join(OUT, jid, "art"), aspect="9:16" if is_short(st) else "16:9")
+        a.frames(aspect=a.aspect)  # re-download
+        W, H = dims(st)
         if st["stage"] == "motion":
             set_stage(st, "motion", "Animating the key shots")
             a.motion(progress(st, "motion", 60, 71, "Animating shot"))
@@ -481,7 +491,7 @@ def advance(st):
         stage_music(st, d)
         set_stage(st, "final_render", "Rendering the full video in 1080p", 72)
         media = publish_media(st, a, d)
-        mp4 = render(build_film(st, d, words, total, media), os.path.join(OUT, jid, "final.mp4"), crf=19)
+        mp4 = render(build_film(st, d, words, total, media, w=W, h=H), os.path.join(OUT, jid, "final.mp4"), crf=19)
         st["final"] = {**link(drive.upload(job_folder(jid), "final.mp4", mp4, "video/mp4")), "size_mb": round(os.path.getsize(mp4) / 1e6, 1)}
         save_state(st)
         # thumbnail: key art + huge words
@@ -490,7 +500,7 @@ def advance(st):
             pdir = os.path.join(PUB, jid)
             subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", key, "-q:v", "2", os.path.join(pdir, "key.jpg")], check=True)
             u = d["universe"]
-            tp = {"w": 1280, "h": 720, "captions": False, "words": [], "audio": [], "music": None,
+            tp = {"w": 720 if is_short(st) else 1280, "h": 1280 if is_short(st) else 720, "captions": False, "words": [], "audio": [], "music": None,
                   "look": {**build_film(st, d, words, total, media)["look"], "letterbox": False, "grain": 0.15},
                   "shots": [{"id": "t", "start": 0, "dur": 60, "kind": "image", "src": f"job/{jid}/key.jpg", "camera": "static",
                              "overlay": {"type": "quote", "text": (d.get("thumbnail") or {}).get("text", "")[:40], "at": 0}}]}
@@ -499,7 +509,7 @@ def advance(st):
         # Shorts: vertical frames for the shots inside each Short, voice trimmed to the window
         st["shorts"] = []
         bt = beat_times(st, words, total)
-        for k, sh in enumerate(d.get("shorts", [])):
+        for k, sh in enumerate([] if is_short(st) else d.get("shorts", [])):
             ids = sorted(int(x) for x in sh["beats"] if str(x).isdigit() and int(x) < len(bt) - 1)
             if not ids:
                 continue

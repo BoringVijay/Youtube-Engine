@@ -78,8 +78,8 @@ def frame_prompt(shot, d):
 
 
 class Art:
-    def __init__(self, st, d, workdir):
-        self.st, self.d, self.job = st, d, st["id"]
+    def __init__(self, st, d, workdir, aspect="16:9"):
+        self.st, self.d, self.job, self.aspect = st, d, st["id"], aspect
         self.dir = workdir
         os.makedirs(self.dir, exist_ok=True)
         self.man_path = os.path.join(ROOT, "jobs", self.job, "art.json")
@@ -123,7 +123,7 @@ class Art:
         key = self.have("key.png")
         if not key:
             image(f"{self.d['thumbnail']['prompt']}\n\nVISUAL UNIVERSE: {u['look_bible']}\n\nIf the penguin appears: use the reference, rendered as {u.get('penguin_render', '')}. {PENGUIN}\n\n{RULES}",
-                  self.path("key.png"), refs=[ensure_canon()], job=self.job)
+                  self.path("key.png"), refs=[ensure_canon()], job=self.job, aspect=self.aspect)
             self.keep("key.png", "image/png")
             key = self.path("key.png")
         pen = self.have("penguin.png")
@@ -145,7 +145,7 @@ class Art:
             if self.have(name):
                 return name
             refs = [key] + ([pen] if s.get("penguin") else [])
-            if aspect != "16:9":
+            if aspect != "16:9" and suffix:
                 wide = self.have(f"{s['id']}.png")
                 refs = ([wide] if wide else []) + refs
                 prompt = ("Recompose the first reference image as a vertical 9:16 frame: same scene, same style, same characters, re-framed for a phone screen "
@@ -186,9 +186,9 @@ class Art:
             try:
                 budget.check(self.job, "video_per_sec", 8)
                 if gai.backend() == "vertex":
-                    data, model = gai.veo_any(prompt, b64(src), "16:9", 8, audio=True)
+                    data, model = gai.veo_any(prompt, b64(src), self.aspect, 8, audio=True)
                 else:
-                    data, model = gai.omni(prompt, b64(src)), "omni"
+                    data, model = gai.omni(prompt, b64(src), self.aspect), "omni"
                 open(self.path(name), "wb").write(data)
                 budget.log(self.job, "video_per_sec", 8, gai.backend())
                 self.keep(name, "video/mp4")

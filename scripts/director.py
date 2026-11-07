@@ -25,10 +25,10 @@ def recent_universes(exclude_id):
     return out[-6:]
 
 
-def direct(st, est_seconds, max_motion=6, notes=""):
+def direct(st, est_seconds, max_motion=6, notes="", short=False):
     script = st["brew"]["script"]
     beats = [{"i": i, "vo": re.sub(r"\[[a-z ]+\]", "", b.get("vo", "")).strip(), "idea": b.get("visual", "")} for i, b in enumerate(script.get("beats", []))]
-    n_shots = max(8, round(est_seconds / 5.5))
+    n_shots = max(8, round(est_seconds / (3.2 if short else 5.5)))
     angle = st["brew"].get("angle", "")
     prompt = f"""You are the director and production designer of Curious Penguin, a YouTube channel where every video is a different creative experience.
 Read the creative bible, then direct this video.
@@ -42,6 +42,8 @@ Audience: {st['brew'].get('aud', 'general curious')}
 Creator's angle and tone notes: {angle or 'none'}
 Universes used in the last videos (do NOT reuse): {recent_universes(st['id']) or 'none yet'}
 {('Reviewer notes from the last cut, apply them: ' + notes) if notes else ''}
+
+FORMAT: {"a vertical 9:16 YouTube Short. Compose every shot for a phone screen (tall frames, subject in the middle third, big readable shapes), cut fast, hook in the first second. One penguin cameo is enough (0 to 2). Return an empty shorts list." if short else "a 16:9 long-form video."}
 
 Script beats (VO is final, do not rewrite it):
 {json.dumps(beats, ensure_ascii=False)}
