@@ -56,18 +56,21 @@ SPEND = []  # (kind, model, units, backend) appended by callers for the ledger
 
 
 def generate(model, body, timeout=300):
-    """Vertex first when configured (bills the Cloud credits); falls back to the AI Studio key if Vertex lacks the model."""
+    """Vertex when configured (bills the Cloud credits). Tries the global endpoint, then us-central1. No silent fallback to the wallet."""
     if _SA:
-        host = "aiplatform.googleapis.com" if _LOC == "global" else f"{_LOC}-aiplatform.googleapis.com"
-        url = f"https://{host}/v1/projects/{project()}/locations/{_LOC}/publishers/google/models/{model}:generateContent"
-        try:
-            out = _req(url, body, {"Content-Type": "application/json", "Authorization": f"Bearer {_vertex_token()}"}, timeout)
-            LAST["backend"] = "vertex"
-            return out
-        except RuntimeError as e:
-            if not (os.environ.get("GEMINI_API_KEY") and re.search(r"HTTP (400|403|404)", str(e))):
-                raise
-            print(f"[gai] vertex could not serve {model} ({str(e)[:160]}), using AI Studio", flush=True)
+        last = None
+        for loc in ([_LOC] + [l for l in ("global", "us-central1") if l != _LOC]):
+            host = "aiplatform.googleapis.com" if loc == "global" else f"{loc}-aiplatform.googleapis.com"
+            url = f"https://{host}/v1/projects/{project()}/locations/{loc}/publishers/google/models/{model}:generateContent"
+            try:
+                out = _req(url, body, {"Content-Type": "application/json", "Authorization": f"Bearer {_vertex_token()}"}, timeout)
+                LAST["backend"] = "vertex"
+                return out
+            except RuntimeError as e:
+                last = e
+                if not re.search(r"HTTP 404", str(e)):
+                    raise
+        raise last
     LAST["backend"] = "studio"
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
     return _req(url, body, {"Content-Type": "application/json", "x-goog-api-key": os.environ["GEMINI_API_KEY"]}, timeout)
@@ -101,10 +104,14 @@ def veo(model, prompt, image_b64=None, aspect="16:9", seconds=8, resolution="720
 
 # ---------------- model choice with fallbacks ----------------
 CANDIDATES = {
-    "text": ["gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.6-flash", "gemini-3.5-flash", "gemini-3-flash-preview", "gemini-2.5-flash"],
-    "pro": ["gemini-3.8-pro", "gemini-3.7-pro", "gemini-3.5-pro", "gemini-3.1-pro-preview", "gemini-3-pro-preview", "gemini-2.5-pro"],
-    "image": ["gemini-nano-banana-2.1", "gemini-3.1-flash-image", "gemini-3.1-flash-image-preview", "gemini-3-pro-image-preview", "gemini-2.5-flash-image"],
-    "tts": ["gemini-3.1-flash-tts-preview", "gemini-3.1-flash-tts", "gemini-2.5-pro-tts", "gemini-2.5-pro-preview-tts", "gemini-2.5-flash-tts", "gemini-2.5-flash-preview-tts"],
+    "text": ["gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.6-flash", "gemini-3.5-flash", "gemini-3.1-flash", "gemini-3.1-flash-preview",
+             "gemini-3-flash", "gemini-3-flash-preview", "gemini-2.5-flash"],
+    "pro": ["gemini-3.8-pro", "gemini-3.7-pro", "gemini-3.5-pro", "gemini-3.1-pro", "gemini-3.1-pro-preview", "gemini-3-pro", "gemini-3-pro-preview",
+            "gemini-2.5-pro", "gemini-3.8-flash", "gemini-3.5-flash", "gemini-3-flash-preview", "gemini-2.5-flash"],
+    "image": ["gemini-nano-banana-2.1", "gemini-3.1-flash-image", "gemini-3.1-flash-image-preview", "gemini-3-pro-image", "gemini-3-pro-image-preview",
+              "gemini-2.5-flash-image", "gemini-2.5-flash-image-preview"],
+    "tts": ["gemini-3.1-flash-tts-preview", "gemini-3.1-flash-tts", "gemini-2.5-pro-tts", "gemini-2.5-flash-tts", "gemini-2.5-pro-preview-tts",
+            "gemini-2.5-flash-preview-tts"],
     "veo": ["veo-3.1-fast-generate-001", "veo-3.1-generate-001", "veo-3.1-fast-generate-preview", "veo-3.1-generate-preview", "veo-3.0-fast-generate-001", "veo-3.0-generate-001"],
 }
 _chosen = {}
@@ -132,6 +139,7 @@ def generate_any(kind, body, timeout=300, tries=4):
                 if "HTTP 402" in msg:
                     raise RuntimeError("Gemini API wallet is empty and Vertex is not configured (add the GCP_SA_KEY secret)")
                 if _MISSING.search(msg) and not _BUSY.search(msg):
+                    print(f"[gai] {kind}: {model} not available here", flush=True)
                     break
                 if _BUSY.search(msg):
                     time.sleep(min(90, 12 * (attempt + 1)))
