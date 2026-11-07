@@ -43,7 +43,7 @@ Creator's angle and tone notes: {angle or 'none'}
 Universes used in the last videos (do NOT reuse): {recent_universes(st['id']) or 'none yet'}
 {('Reviewer notes from the last cut, apply them: ' + notes) if notes else ''}
 
-FORMAT: {"a vertical 9:16 YouTube Short. Compose every shot for a phone screen (tall frames, subject in the middle third, big readable shapes), cut fast, hook in the first second. One penguin cameo is enough (0 to 2). Return an empty shorts list." if short else "a 16:9 long-form video."}
+FORMAT: {"a vertical 9:16 YouTube Short. Compose every shot for a phone screen (tall frames, subject in the middle third, big readable shapes), cut fast, hook in the first second. Cast the penguin per the bible (as a cameo, one appearance is enough). Return an empty shorts list." if short else "a 16:9 long-form video."}
 
 Script beats (VO is final, do not rewrite it):
 {json.dumps(beats, ensure_ascii=False)}
@@ -51,7 +51,7 @@ Script beats (VO is final, do not rewrite it):
 Your job:
 1. Follow the anthology rule: invent this episode's studio (name, point of view), choose ONE visual universe that fits the topic's emotional truth (from the bible palette or a fresh invention) and explain why in one line. Decide the pacing, the signature shot, and an optional medium-break gag (max one, never on a serious beat).
 2. Write the look bible: one dense paragraph that will be appended to every image prompt (medium, materials, palette, lighting, lens, texture, camera language). Make it specific enough that 40 frames look like one film.
-3. Describe how the penguin is rendered in this universe (keep all its fixed traits).
+3. Cast the penguin for this story (universe "penguin_role": protagonist, sidekick, villain, antagonist, npc or cameo, chosen to fit the topic and script) and describe how it is rendered in this universe (keep all its fixed traits).
 4. Write about {n_shots} shots ({n_shots - 4} to {n_shots + 6}) covering every beat in order. Each shot:
    - "beat": beat index; "cue": the exact first 3 to 5 words of the VO line where this shot starts (copied from the VO, so we can cut on the word).
    - "prompt": the scene for the image model: subject, action, composition, shot size, foreground and background, one focal point, calm lower fifth. Concrete and visual, with a small idea or joke in it. No numbers or important text inside images (a deliberate sign or label gag is fine, max 3 words, spelled exactly). Never name a real company, brand or product in a prompt and never ask for a logo: describe them generically ("four giant tech-company cable ships"). No stick figures: people are made of the universe's own material. Every shot must look different from the others (vary subject, scale, angle, location); never repeat the same hero object more than 3 times.
@@ -60,7 +60,7 @@ Your job:
    - "camera": one of {CAMERAS} (for stills; pick for meaning: push_in reveal, crane_down scale, static for deadpan, snap_zoom for punchlines, handheld for tension).
    - "focus": [x, y] 0-1 of the focal point.
    - "transition": one of {TRANSITIONS} into this shot (mostly cut; whip for energy, dip for time jumps, flash for shocks, fade for emotion).
-   - "penguin": null, or {{"type": one of {CAMEOS}, "bit": "exactly what it is doing, its outfit, where in frame"}}. 2 to 4 cameos across the video, varied types, at least one subtle hidden one, none on tragic or serious beats, a fly_attempt near the end.
+   - "penguin": null, or {{"type": one of {CAMEOS}, "bit": "exactly what it is doing, its outfit, where in frame"}}. How often it appears follows its role (bible): as a cameo 2 to 4 appearances; as protagonist, sidekick or villain in most shots, driving or reacting to the action; as an npc busy in the background of many shots. Varied bits, none on tragic or serious beats, a fly_attempt near the end. Never repeat a composition: consecutive shots differ in at least two of angle, shot size and location, and the hero object appears in at most a third of the shots.
    - "overlay": null, or a designed overlay for numbers and key words, drawn in the universe's style: {{"type": "counter", "value": number, "prefix": "", "suffix": "", "text": "what it counts", "at": seconds_into_shot, "pos": "top|center|left|right"}}, or {{"type": "label", "text": "max 7 words", "pos": "top"}}, or {{"type": "bars", "text": "title with the unit", "bars": [{{"label": "", "value": real number in that unit}}], "suffix": " unit"}} (real values from the VO or verify notes, never made-up index numbers), or {{"type": "quote"|"chapter", "text": "max 6 words"}}. Numbers ONLY from the VO. Use overlays where a number or idea needs to stick, not on every shot.
    - "serious": true when this shot shows real harm, loss or people suffering (no penguin, no jokes there).
    - "nerd_bonus": true when the VO says nerd bonus or gives the deep technical detail; that shot is drawn as a blueprint plate whatever the universe.
@@ -71,7 +71,7 @@ Your job:
 8. Shorts: pick {int(st['brew'].get('format', {}).get('shorts', 1) or 1)} runs of consecutive beats (25 to 55 seconds of VO) that work alone, hook first. Give each a title.
 
 Return JSON:
-{{"universe": {{"name": "", "studio": "", "why": "", "pacing": "", "signature_shot": "", "medium_break": "", "look_bible": "", "penguin_render": "", "palette": {{"paper": "#", "ink": "#", "accent": "#", "accent2": "#"}},
+{{"universe": {{"name": "", "studio": "", "why": "", "pacing": "", "signature_shot": "", "medium_break": "", "look_bible": "", "penguin_role": "", "penguin_render": "", "palette": {{"paper": "#", "ink": "#", "accent": "#", "accent2": "#"}},
   "font": "", "film": "", "grain": 0.3, "vignette": 0.5, "letterbox": false, "music": ""}},
  "shots": [{{"id": "s01", "beat": 0, "cue": "", "kind": "still", "prompt": "", "motion": "", "camera": "", "focus": [0.5, 0.5], "transition": "cut", "penguin": null, "overlay": null, "serious": false, "nerd_bonus": false, "sfx": null}}],
  "thumbnail": {{"prompt": "", "text": ""}},
