@@ -1,5 +1,5 @@
 {
- "note": "Lab 4 (2026-11-07): why shots morph. A first frame only + camera prompt, B first+last with a SMALL move in the same scene, C first+last with a BIG move (the method that scored 2-4 in production), D first frame only with an orbit.",
+ "note": "Lab 4 (2026-11-07): why shots morph. A first frame only + camera prompt, B first+last with a SMALL move in the same scene, C first+last with a BIG move (the method that scored 2-4 in production), D first frame only with an orbit. Rerun: first run's results failed to push. All 4 scored 3.0, which smells like a miscalibrated reviewer, so keep the review issues and judge by eye too.",
  "image_models": [
   "gemini-nano-banana-2.1",
   "gemini-3.1-flash-image"

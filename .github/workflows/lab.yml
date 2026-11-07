@@ -38,4 +38,4 @@ jobs:
           git config user.email "engine-bot@users.noreply.github.com"
           for f in logs/lab-last.log lab/out/*.jpg lab/out/*.mp3 lab/out/report.json lab/out/*-small.mp4; do [ -e "$f" ] && git add -f "$f"; done
           git diff --cached --quiet || git commit -m "Lab results"
-          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done
+          for i in 1 2 3; do git pull --rebase --autostash -q && git push -q && break; sleep 5; done

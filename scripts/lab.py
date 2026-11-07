@@ -249,7 +249,7 @@ def main():
                 if REQ.get("review"):
                     import qc
                     r = qc.clip(path, {"motion": t["prompt"][:600]}, {"universe": {"look_bible": REQ.get("look", "")}}, "lab")
-                    entry["review"] = {"score": r["score"], "issues": r.get("issues", [])[:4]}
+                    entry["review"] = {"score": r["score"], "issues": r.get("issues", [])[:6], "fix": r.get("fix", "")}
                     log("review", t["id"], r["score"])
                 report["videos"].append(entry)
                 log("motion ok", t["id"], model, f"{time.time() - t0:.0f}s")
