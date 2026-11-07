@@ -1,0 +1,266 @@
+{
+ "format": "short",
+ "universe": {
+  "name": "Mudlark Clay Works",
+  "studio": "Mudlark Clay Works",
+  "why": "A tactile, slightly absurd medium to ground an abstract, massive scale idea. It makes the gold feel heavy and real.",
+  "pacing": "Methodical build-up, shifting to frantic at the end.",
+  "signature_shot": "The massive gold cube towering over a clay baseball field with a tiny clay penguin chipping away at the base.",
+  "medium_break": "The penguin accidentally reveals a giant human thumbprint left in the side of the pristine gold clay cube.",
+  "look_bible": "Stop-motion claymation miniature set. Tactile, visible fingerprints and slight imperfections in the clay. Warm, directional studio lighting casting hard, realistic miniature shadows. Rich, earthy color palette dominated by metallic shiny gold clay, terracotta reds, slate greys, and crisp whites. Macro lens with shallow depth of field for close-ups, wide angle for scale shots. Motion is stepped (12 fps feel), objects have weight and slight squash-and-stretch. The gold is highly reflective but clearly sculpted from clay.",
+  "penguin_render": "Tiny claymation penguin, sculpted with visible thumbprints, matte finish, slightly chunky proportions, 3 stiff clay feathers on head.",
+  "palette": {
+   "paper": "#F4E8D1",
+   "ink": "#2C3E50",
+   "accent": "#D4AF37",
+   "accent2": "#C0392B"
+  },
+  "font": "anton",
+  "film": "clean",
+  "grain": 0.1,
+  "vignette": 0.3,
+  "music": "Plucky woodwinds, pizzicato strings, and quirky toy percussion, methodical build-up shifting to frantic.",
+  "letterbox": false
+ },
+ "penguin": {
+  "role": "villain",
+  "arc": "Quietly stealing gold chunks the whole time, eventually tries to fly away with a heavy stolen bar and plummets."
+ },
+ "keyframes": {
+  "k01": {
+   "id": "k01",
+   "seq": 0,
+   "prompt": "Massive pile of shiny gold clay bars, coins, and artifacts resting on a terracotta clay baseball infield. Stop-motion claymation miniature set, warm studio lighting, visible fingerprints in the clay.",
+   "penguin": "Sneaking a gold bar into a burlap sack in the bottom right corner.",
+   "prev": null
+  },
+  "k02": {
+   "id": "k02",
+   "seq": 0,
+   "prompt": "The pile morphs into a perfect, massive, shiny gold clay cube on the terracotta dirt. Stop-motion claymation miniature set, warm studio lighting, visible fingerprints in the clay.",
+   "penguin": "Startled, dropping the sack, looking up at the towering cube in awe.",
+   "prev": "k01"
+  },
+  "k03": {
+   "id": "k03",
+   "seq": 0,
+   "prompt": "Wide shot showing the entire terracotta clay baseball infield with white bases, the giant gold clay cube dominating the center. Stop-motion claymation miniature set, warm studio lighting, visible fingerprints in the clay.",
+   "penguin": "Tiny at the bottom left, swinging a tiny pickaxe at the base of the cube.",
+   "prev": "k02"
+  },
+  "k04": {
+   "id": "k04",
+   "seq": 1,
+   "prompt": "Low angle looking up at the massive gold clay cube from the clay dirt. A highly detailed 7-storey clay apartment building stands next to it. Stop-motion claymation miniature set, warm studio lighting.",
+   "penguin": "Standing on the fire escape of the building, trying to reach the cube with a fishing rod.",
+   "prev": null
+  },
+  "k05": {
+   "id": "k05",
+   "seq": 1,
+   "prompt": "Top edge of the gold cube and the building roof, revealing clay pharaoh masks and Roman coins embedded in the gold surface. Stop-motion claymation miniature set, warm studio lighting.",
+   "penguin": "On the roof of the building, reaching out with a net to catch a gold mask.",
+   "prev": "k04"
+  },
+  "k06": {
+   "id": "k06",
+   "seq": 1,
+   "prompt": "Close-up on the clay pharaoh masks and artifacts as they sink into the solid gold mass. Stop-motion claymation miniature set, warm studio lighting.",
+   "penguin": "Stubbornly pulling on a gold clay Roman coin, feet braced against the cube.",
+   "prev": "k05"
+  },
+  "k07": {
+   "id": "k07",
+   "seq": 2,
+   "prompt": "Technical blueprint on blue paper. A cubic wireframe grid containing twelve tiny cars stacked tightly. Clean white linework.",
+   "penguin": "Drawn in white linework, sweating, trying to lift the bottom car with a tiny jack.",
+   "prev": null
+  },
+  "k08": {
+   "id": "k08",
+   "seq": 2,
+   "prompt": "Technical blueprint on blue paper. The cubic wireframe grid viewed from a slightly different angle, showing the dense cross-hatching of the stacked cars. Clean white linework.",
+   "penguin": "Jumping up and down on the handle of the car jack, getting nowhere.",
+   "prev": "k07"
+  },
+  "k09": {
+   "id": "k09",
+   "seq": 3,
+   "prompt": "A giant clay pie chart made of gold. A heavy central bank vault door represents one small slice. Stop-motion claymation miniature set, warm studio lighting.",
+   "penguin": "Wearing a tiny black suit and monocle, standing guard by the vault door.",
+   "prev": null
+  },
+  "k10": {
+   "id": "k10",
+   "seq": 3,
+   "prompt": "The rest of the giant clay pie chart, which is a massive, exaggerated tangle of shiny gold clay necklaces and oversized pendants. Stop-motion claymation miniature set, warm studio lighting.",
+   "penguin": "Tangled upside down in the massive gold chains, struggling to get free.",
+   "prev": "k09"
+  },
+  "k11": {
+   "id": "k11",
+   "seq": 3,
+   "prompt": "Extreme close-up on the tangled gold clay necklaces, with a huge gaudy diamond pendant swinging into focus. Stop-motion claymation miniature set, warm studio lighting.",
+   "penguin": "Reaching desperately for the swinging diamond pendant while still tangled.",
+   "prev": "k10"
+  },
+  "k12": {
+   "id": "k12",
+   "seq": 4,
+   "prompt": "Wide shot of the gold cube on the baseball field, glowing under a warm spotlight. A massive clay price tag hanging from it. Stop-motion claymation miniature set.",
+   "penguin": "At the bottom right, loading a tiny wheelbarrow with shiny gold chunks.",
+   "prev": null
+  },
+  "k13": {
+   "id": "k13",
+   "seq": 4,
+   "prompt": "The base of the gold cube. There is a neat square hole where several gold bars are missing, with a giant human thumbprint visible in the clay wall above it. Stop-motion claymation miniature set.",
+   "penguin": "Wearing aviator goggles, leaping off the edge of the cube holding a heavy gold bar.",
+   "prev": "k12"
+  },
+  "k14": {
+   "id": "k14",
+   "seq": 4,
+   "prompt": "Looking down against the massive shiny gold clay wall of the cube. Stop-motion claymation miniature set, warm studio lighting.",
+   "penguin": "Plummeting straight down, frantically flapping its short wings, clutching the heavy gold bar.",
+   "prev": "k13"
+  }
+ },
+ "shots": [
+  {
+   "id": "s01",
+   "seq": 0,
+   "from": "k01",
+   "to": "k02",
+   "cue": "Every bar of gold",
+   "motion": "Camera pushes in as the chaotic pile of shiny clay gold bars and artifacts melts smoothly into a perfect, massive gold cube.",
+   "overlay": null,
+   "transition": "cut",
+   "sfx": "heavy clay squish and morphing sound",
+   "serious": false
+  },
+  {
+   "id": "s02",
+   "seq": 0,
+   "from": "k02",
+   "to": "k03",
+   "cue": "Around two hundred and",
+   "motion": "Camera pulls back rapidly and tilts down to reveal the giant gold cube is sitting squarely on a detailed clay baseball infield.",
+   "overlay": {
+    "type": "counter",
+    "value": 216000,
+    "suffix": " t",
+    "pos": "top"
+   },
+   "transition": "chain",
+   "sfx": "distant stadium echo and heavy thud",
+   "serious": false
+  },
+  {
+   "id": "s03",
+   "seq": 1,
+   "from": "k04",
+   "to": "k05",
+   "cue": "Stand next to it",
+   "motion": "Camera tilts up from the clay dirt, panning up the side of the gold cube and the adjacent 7-storey clay building.",
+   "overlay": {
+    "type": "label",
+    "text": "7 storeys",
+    "pos": "top"
+   },
+   "transition": "cut",
+   "sfx": "creaking clay and wind",
+   "serious": false
+  },
+  {
+   "id": "s04",
+   "seq": 1,
+   "from": "k05",
+   "to": "k06",
+   "cue": "Thousands of years of",
+   "motion": "Camera pushes in slowly on the top of the cube as the clay pharaoh masks and coins sink into the solid gold mass.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "soft squishing and clinking",
+   "serious": false
+  },
+  {
+   "id": "s05",
+   "seq": 2,
+   "from": "k07",
+   "to": "k08",
+   "cue": "Gold is so dense",
+   "motion": "Camera rotates smoothly around the wireframe cube, revealing the dense cross-hatching of the stacked cars.",
+   "overlay": {
+    "type": "counter",
+    "value": 19,
+    "suffix": " tonnes",
+    "pos": "top"
+   },
+   "transition": "match",
+   "sfx": "clean synth pulse and drafting pencil scratches",
+   "serious": false
+  },
+  {
+   "id": "s06",
+   "seq": 3,
+   "from": "k09",
+   "to": "k10",
+   "cue": "And who owns it?",
+   "motion": "Camera pans rapidly from the vault door slice across the giant clay pie chart, revealing a massive tangle of gold clay necklaces.",
+   "overlay": {
+    "type": "label",
+    "text": "1/6 Central Banks",
+    "pos": "top"
+   },
+   "transition": "cut",
+   "sfx": "heavy metal clank and sliding clay",
+   "serious": false
+  },
+  {
+   "id": "s07",
+   "seq": 3,
+   "from": "k10",
+   "to": "k11",
+   "cue": "Humanity's greatest treasure is",
+   "motion": "Camera pushes in for an extreme close-up on the tangled gold clay necklaces, as a huge diamond pendant swings into focus.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "exaggerated clinking of heavy chains",
+   "serious": false
+  },
+  {
+   "id": "s08",
+   "seq": 4,
+   "from": "k12",
+   "to": "k13",
+   "cue": "At today's prices, that",
+   "motion": "Camera swoops down from the wide shot of the glowing cube to its base, revealing a neat square hole and a giant human thumbprint.",
+   "overlay": {
+    "type": "label",
+    "text": "Tens of trillions",
+    "pos": "top"
+   },
+   "transition": "cut",
+   "sfx": "warm hum and a quiet plop",
+   "serious": false
+  },
+  {
+   "id": "s09",
+   "seq": 4,
+   "from": "k13",
+   "to": "k14",
+   "cue": "And it would still",
+   "motion": "Camera tilts down rapidly, tracking the penguin as it leaps and plummets straight down against the massive shiny gold clay wall.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "cartoonish falling whistle and wind rush",
+   "serious": false
+  }
+ ],
+ "cover": {
+  "prompt": "A massive, shiny gold clay cube towering over a terracotta clay baseball infield, with a tiny clay penguin chipping at the base with a pickaxe. Stop-motion claymation miniature set, warm studio lighting.",
+  "text": "ALL THE GOLD"
+ },
+ "n_beats": 10
+}

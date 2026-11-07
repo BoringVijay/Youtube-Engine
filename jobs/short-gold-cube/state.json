@@ -71,15 +71,147 @@
  },
  "brew_at": "2026-11-07T05:33:41+00:00",
  "created": "2026-11-07T05:33:41+00:00",
- "stage": "queued",
- "pct": 2,
- "step": "Queued: fully animated Short, voice style B",
+ "stage": "final_ready",
+ "pct": 90,
+ "step": "Short ready (Mudlark Clay Works, penguin as villain). Watch it and approve or send notes",
  "steps": [
   {
    "stage": "queued",
    "at": "2026-11-07T05:33:41+00:00"
+  },
+  {
+   "stage": "directing",
+   "at": "2026-11-07T05:34:23+00:00"
+  },
+  {
+   "stage": "voicing",
+   "at": "2026-11-07T05:36:42+00:00"
+  },
+  {
+   "stage": "art",
+   "at": "2026-11-07T05:37:26+00:00"
+  },
+  {
+   "stage": "motion",
+   "at": "2026-11-07T05:42:26+00:00"
+  },
+  {
+   "stage": "final_render",
+   "at": "2026-11-07T05:48:50+00:00"
+  },
+  {
+   "stage": "metadata",
+   "at": "2026-11-07T05:58:11+00:00"
+  },
+  {
+   "stage": "final_ready",
+   "at": "2026-11-07T05:58:21+00:00"
   }
  ],
  "fails": 0,
- "updated": "2026-11-07T05:33:41+00:00"
+ "updated": "2026-11-07T05:58:21+00:00",
+ "error": null,
+ "cost": 8.342,
+ "universe": "Mudlark Clay Works · Mudlark Clay Works",
+ "penguin_role": "villain",
+ "cameos": [
+  {
+   "shot": "k01",
+   "bit": "Sneaking a gold bar into a burlap sack in the bottom right corner."
+  },
+  {
+   "shot": "k02",
+   "bit": "Startled, dropping the sack, looking up at the towering cube in awe."
+  },
+  {
+   "shot": "k03",
+   "bit": "Tiny at the bottom left, swinging a tiny pickaxe at the base of the cube."
+  },
+  {
+   "shot": "k04",
+   "bit": "Standing on the fire escape of the building, trying to reach the cube with a fishing rod."
+  },
+  {
+   "shot": "k05",
+   "bit": "On the roof of the building, reaching out with a net to catch a gold mask."
+  },
+  {
+   "shot": "k06",
+   "bit": "Stubbornly pulling on a gold clay Roman coin, feet braced against the cube."
+  },
+  {
+   "shot": "k07",
+   "bit": "Drawn in white linework, sweating, trying to lift the bottom car with a tiny jack."
+  },
+  {
+   "shot": "k08",
+   "bit": "Jumping up and down on the handle of the car jack, getting nowhere."
+  },
+  {
+   "shot": "k09",
+   "bit": "Wearing a tiny black suit and monocle, standing guard by the vault door."
+  },
+  {
+   "shot": "k10",
+   "bit": "Tangled upside down in the massive gold chains, struggling to get free."
+  },
+  {
+   "shot": "k11",
+   "bit": "Reaching desperately for the swinging diamond pendant while still tangled."
+  },
+  {
+   "shot": "k12",
+   "bit": "At the bottom right, loading a tiny wheelbarrow with shiny gold chunks."
+  },
+  {
+   "shot": "k13",
+   "bit": "Wearing aviator goggles, leaping off the edge of the cube holding a heavy gold bar."
+  },
+  {
+   "shot": "k14",
+   "bit": "Plummeting straight down, frantically flapping its short wings, clutching the heavy gold bar."
+  }
+ ],
+ "voice_style": "B",
+ "duration": 54.6,
+ "final": {
+  "id": "17vkNrhaAM5TUyDV0lZnNl0ErEwUF4kXA",
+  "view": "https://drive.google.com/file/d/17vkNrhaAM5TUyDV0lZnNl0ErEwUF4kXA/view",
+  "download": "https://drive.google.com/uc?id=17vkNrhaAM5TUyDV0lZnNl0ErEwUF4kXA&export=download",
+  "size_mb": 86.8,
+  "duration": 55.4,
+  "stills": []
+ },
+ "preview": {
+  "id": "17vkNrhaAM5TUyDV0lZnNl0ErEwUF4kXA",
+  "view": "https://drive.google.com/file/d/17vkNrhaAM5TUyDV0lZnNl0ErEwUF4kXA/view",
+  "download": "https://drive.google.com/uc?id=17vkNrhaAM5TUyDV0lZnNl0ErEwUF4kXA&export=download",
+  "size_mb": 86.8,
+  "duration": 55.4,
+  "stills": []
+ },
+ "meta": {
+  "title": "All the World’s Gold Fits in One Tiny Cube",
+  "alt_titles": [
+   "How Big Is ALL the Gold Ever Mined?",
+   "Every Bar of Gold in History Melted into One Cube"
+  ],
+  "description": "Every ounce of gold ever mined fits into a cube smaller than a baseball infield.\nThough someone seems to be sneaking a few bars off the pile...\n\n#Shorts #Gold #ScienceFacts #Animation",
+  "tags": [
+   "all gold ever mined",
+   "gold cube",
+   "science facts",
+   "curious penguin",
+   "mudlark clay works",
+   "claymation",
+   "fun facts",
+   "gold facts",
+   "history facts",
+   "stop motion",
+   "how much gold exists",
+   "economics"
+  ],
+  "pinned_comment": "At what point in the heist did you realize this bird definitely cannot fly with nineteen kilograms of bullion?",
+  "instagram_caption": "Every gram of gold in human history fits into a 22-metre cube. Just keep an eye on the penguin in the corner.\n\n#GoldFacts #ScienceFacts #Claymation #StopMotion #MudlarkClayWorks"
+ }
 }

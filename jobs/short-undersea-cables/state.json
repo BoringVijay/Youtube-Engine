@@ -67,15 +67,131 @@
  },
  "brew_at": "2026-11-07T05:33:41+00:00",
  "created": "2026-11-07T05:33:41+00:00",
- "stage": "queued",
- "pct": 2,
- "step": "Queued: fully animated Short, voice style A",
+ "stage": "final_ready",
+ "pct": 90,
+ "step": "Short ready (Macro photography of handmade miniature sets, penguin as protagonist). Watch it and approve or send notes",
  "steps": [
   {
    "stage": "queued",
    "at": "2026-11-07T05:33:41+00:00"
+  },
+  {
+   "stage": "directing",
+   "at": "2026-11-07T05:58:23+00:00"
+  },
+  {
+   "stage": "voicing",
+   "at": "2026-11-07T06:00:09+00:00"
+  },
+  {
+   "stage": "art",
+   "at": "2026-11-07T06:01:43+00:00"
+  },
+  {
+   "stage": "motion",
+   "at": "2026-11-07T06:17:17+00:00"
+  },
+  {
+   "stage": "final_render",
+   "at": "2026-11-07T06:24:58+00:00"
+  },
+  {
+   "stage": "metadata",
+   "at": "2026-11-07T06:37:57+00:00"
+  },
+  {
+   "stage": "final_ready",
+   "at": "2026-11-07T06:38:13+00:00"
   }
  ],
  "fails": 0,
- "updated": "2026-11-07T05:33:41+00:00"
+ "updated": "2026-11-07T06:38:13+00:00",
+ "error": null,
+ "cost": 9.312,
+ "universe": "Macro photography of handmade miniature sets · Tiny Props Workshop",
+ "penguin_role": "protagonist",
+ "cameos": [
+  {
+   "shot": "k03",
+   "bit": "Riding the giant cable, inspecting it with a tiny clipboard."
+  },
+  {
+   "shot": "k04",
+   "bit": "Clinging to the main cable in absolute shock, hard hat knocked sideways."
+  },
+  {
+   "shot": "k05",
+   "bit": "Hugging the main cable as bright pulses of light zip past underneath it."
+  },
+  {
+   "shot": "k06",
+   "bit": "Standing in the center of the red cables, looking around frantically."
+  },
+  {
+   "shot": "k07",
+   "bit": "Knocked backwards into the sand, orange feet sticking up in the air."
+  },
+  {
+   "shot": "k08",
+   "bit": "Clinging to a floating piece of cork debris in the foreground, looking at the dark city."
+  },
+  {
+   "shot": "k09",
+   "bit": "White chalk linework drawing, standing next to the ship diagram, holding an oversized wrench."
+  },
+  {
+   "shot": "k12",
+   "bit": "Standing between the severed cable ends, holding up a tiny roll of silver duct tape with a determined look."
+  },
+  {
+   "shot": "k13",
+   "bit": "Wrapping duct tape around the massive sparking cable, face illuminated by a blue spark."
+  },
+  {
+   "shot": "k14",
+   "bit": "Launched upward into the water, flapping flippers frantically trying to fly, failing entirely."
+  }
+ ],
+ "voice_style": "A",
+ "duration": 74.0,
+ "final": {
+  "id": "174jzKKIUkDx8v72Ijb9Vl23bEf_dwAJC",
+  "view": "https://drive.google.com/file/d/174jzKKIUkDx8v72Ijb9Vl23bEf_dwAJC/view",
+  "download": "https://drive.google.com/uc?id=174jzKKIUkDx8v72Ijb9Vl23bEf_dwAJC&export=download",
+  "size_mb": 119.9,
+  "duration": 74.8,
+  "stills": []
+ },
+ "preview": {
+  "id": "174jzKKIUkDx8v72Ijb9Vl23bEf_dwAJC",
+  "view": "https://drive.google.com/file/d/174jzKKIUkDx8v72Ijb9Vl23bEf_dwAJC/view",
+  "download": "https://drive.google.com/uc?id=174jzKKIUkDx8v72Ijb9Vl23bEf_dwAJC&export=download",
+  "size_mb": 119.9,
+  "duration": 74.8,
+  "stills": []
+ },
+ "meta": {
+  "title": "What If Every Undersea Cable Snapped at Once?",
+  "alt_titles": [
+   "The Internet Isn't in the Cloud. It's Underwater.",
+   "What Happens When Ocean Internet Cables Break?"
+  ],
+  "description": "95% of international data crawls through garden-hose-sized tubes on the ocean floor.\nOne tiny penguin is doing his absolute best with electrical tape.\n\n#Shorts #CuriousPenguin #TinyPropsWorkshop #InternetFacts",
+  "tags": [
+   "undersea internet cables",
+   "submarine cables",
+   "how internet works",
+   "curious penguin",
+   "tiny props workshop",
+   "macro photography",
+   "miniature set",
+   "internet outage",
+   "science facts",
+   "tonga cable",
+   "ocean tech",
+   "tech shorts"
+  ],
+  "pinned_comment": "Should we issue him waterproof tape next time, or just promote him to Cloud Architect? 🐧⚡",
+  "instagram_caption": "Your messages don't fly through space—they crawl along the seafloor. Meet the world's smallest technician trying to keep the internet alive.\n\n#CuriousPenguin #TinyPropsWorkshop #MiniatureWorld #InternetFacts #MacroPhotography"
+ }
 }

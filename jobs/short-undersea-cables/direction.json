@@ -1,0 +1,278 @@
+{
+ "format": "short",
+ "universe": {
+  "name": "Macro photography of handmade miniature sets",
+  "studio": "Tiny Props Workshop",
+  "why": "Grounds the abstract 'internet' into tangible, physical, vulnerable wires that viewers can almost touch, emphasizing how fragile our global connection really is.",
+  "pacing": "Methodical and tactile, smoothly gliding through the miniature world until the sudden, chaotic snap.",
+  "signature_shot": "The tiny felt penguin desperately trying to tape two massive, sparking ends of a garden-hose cable together with a roll of miniature duct tape.",
+  "medium_break": "In the opening shot, the 'starry sky' is visibly a piece of black cardboard held up by a giant strip of masking tape stuck to a wooden workbench.",
+  "look_bible": "Macro photography of miniature handmade sets built from actual electronics, wire, resin, and household objects. Deep depth of field drop-off (macro bokeh) keeps foreground and background elements out of focus to emphasize small scale. Cinematic miniature lighting, rich saturated oceanic blues, neon fiber-optic glows against rusty metallic textures. Fluid motion control camera glides.",
+  "penguin_render": "A tiny handmade felt-and-wire miniature penguin wearing a yellow plastic hard hat. Egg-shaped, big white eye-rings, small dark beak with orange tip, orange feet, three stubborn wire feathers sticking out under the hard hat.",
+  "palette": {
+   "paper": "#0b1021",
+   "ink": "#e2e8f0",
+   "accent": "#39ff14",
+   "accent2": "#ff4500"
+  },
+  "font": "mono",
+  "film": "16mm",
+  "grain": 0.4,
+  "vignette": 0.6,
+  "music": "Plucky synth arpeggios mixed with ticking clockwork mechanisms and deep ambient cello.",
+  "letterbox": false
+ },
+ "penguin": {
+  "role": "protagonist",
+  "arc": "The planet's smallest, most overworked cable-repair technician who tries to tape the internet back together and ultimately gets blown away by a spark."
+ },
+ "keyframes": {
+  "k01": {
+   "id": "k01",
+   "seq": 0,
+   "prompt": "Miniature starry sky backdrop made of black cardboard with pinholes, visibly held up by masking tape. A tiny tin-foil satellite dangles from a string. Macro photography of miniature handmade sets built from wire, resin, and household objects. Cinematic miniature lighting, rich saturated oceanic blues, deep depth of field drop-off, macro bokeh.",
+   "penguin": null,
+   "prev": null
+  },
+  "k02": {
+   "id": "k02",
+   "seq": 0,
+   "prompt": "Camera points down at a dark, translucent resin ocean floor. A massive, glowing neon-green braided cable, resembling a rubber garden hose, stretches across the sand. Macro photography of miniature handmade sets built from wire, resin, and household objects. Cinematic miniature lighting, rich saturated oceanic blues, deep depth of field drop-off, macro bokeh.",
+   "penguin": null,
+   "prev": "k01"
+  },
+  "k03": {
+   "id": "k03",
+   "seq": 0,
+   "prompt": "Close-up on the glowing neon-green braided cable. The tiny felt penguin is straddling the massive cable like a horse, wearing a yellow hard hat and holding a tiny clipboard. Macro photography of miniature handmade sets built from wire, resin, and household objects. Cinematic miniature lighting, rich saturated oceanic blues, deep depth of field drop-off, macro bokeh.",
+   "penguin": "Riding the giant cable, inspecting it with a tiny clipboard.",
+   "prev": "k02"
+  },
+  "k04": {
+   "id": "k04",
+   "seq": 0,
+   "prompt": "A massive, rusty iron ship anchor has violently crashed into the miniature sand, severing a smaller blue side-cable. The penguin clings to the main green cable in shock, hard hat askew. Macro photography of miniature handmade sets built from wire, resin, and household objects. Cinematic miniature lighting, rich saturated oceanic blues, deep depth of field drop-off, macro bokeh.",
+   "penguin": "Clinging to the main cable in absolute shock, hard hat knocked sideways.",
+   "prev": "k03"
+  },
+  "k05": {
+   "id": "k05",
+   "seq": 0,
+   "prompt": "The severed blue cable lies dark, while intense, bright neon-green light pulses rapidly through the main intact cable that the penguin is hugging. Macro photography of miniature handmade sets built from wire, resin, and household objects. Cinematic miniature lighting, rich saturated oceanic blues, deep depth of field drop-off, macro bokeh.",
+   "penguin": "Hugging the main cable as bright pulses of light zip past underneath it.",
+   "prev": "k04"
+  },
+  "k06": {
+   "id": "k06",
+   "seq": 1,
+   "prompt": "Wide view of a complex network of overlapping garden-hose cables on the resin seabed. Every cable is pulled tight and glowing a dangerous, angry neon red. The penguin stands in the center, looking around frantically. Macro photography of miniature handmade sets built from wire, resin, and household objects. Cinematic miniature lighting, deep depth of field drop-off, macro bokeh.",
+   "penguin": "Standing in the center of the red cables, looking around frantically.",
+   "prev": null
+  },
+  "k07": {
+   "id": "k07",
+   "seq": 1,
+   "prompt": "All the glowing red cables have violently snapped, curling up into the air with bright orange sparks. The tiny felt penguin is knocked backwards into the sand, legs in the air. Macro photography of miniature handmade sets built from wire, resin, and household objects. Cinematic miniature lighting, deep depth of field drop-off, macro bokeh.",
+   "penguin": "Knocked backwards into the sand, orange feet sticking up in the air.",
+   "prev": "k06"
+  },
+  "k08": {
+   "id": "k08",
+   "seq": 1,
+   "prompt": "Above the resin water surface, a miniature coastal city diorama sits on a foam rock. Most of the tiny LED windows are pitch black, except for one dim emergency light in a small brick server building. The penguin clings to a floating piece of cork debris in the foreground. Macro photography of miniature handmade sets built from wire, resin, and household objects. Cinematic miniature lighting, deep depth of field drop-off, macro bokeh.",
+   "penguin": "Clinging to a floating piece of cork debris in the foreground, looking at the dark city.",
+   "prev": "k07"
+  },
+  "k09": {
+   "id": "k09",
+   "seq": 2,
+   "prompt": "A flat cyanotype architectural blueprint with stark white linework on deep blue paper, showing a cross-section of a high-tech cable repair ship. A chalk-drawn linework penguin stands next to the ship diagram, holding an oversized wrench. Clean technical drawing, blueprint aesthetic.",
+   "penguin": "White chalk linework drawing, standing next to the ship diagram, holding an oversized wrench.",
+   "prev": null
+  },
+  "k10": {
+   "id": "k10",
+   "seq": 2,
+   "prompt": "The cyanotype blueprint tracks over to a vast global map made of white gridlines on blue paper, showing mostly empty ocean space with only three tiny ship icons scattered thousands of miles apart. Clean technical drawing, blueprint aesthetic.",
+   "penguin": null,
+   "prev": "k09"
+  },
+  "k11": {
+   "id": "k11",
+   "seq": 3,
+   "prompt": "A physical miniature diorama of a lush, tiny island surrounded by vast, empty dark resin water. A single thick green cable leading to the island's shore is cleanly sliced in half. Macro photography of miniature handmade sets built from wire, resin, and household objects. Cinematic miniature lighting, rich saturated oceanic blues, deep depth of field drop-off, macro bokeh.",
+   "penguin": null,
+   "prev": null
+  },
+  "k12": {
+   "id": "k12",
+   "seq": 3,
+   "prompt": "Down on the dark resin seabed. The tiny felt penguin stands between two massive, severed ends of the giant green garden-hose cable, holding a tiny roll of silver duct tape. Macro photography of miniature handmade sets built from wire, resin, and household objects. Cinematic miniature lighting, rich saturated oceanic blues, deep depth of field drop-off, macro bokeh.",
+   "penguin": "Standing between the severed cable ends, holding up a tiny roll of silver duct tape with a determined look.",
+   "prev": "k11"
+  },
+  "k13": {
+   "id": "k13",
+   "seq": 3,
+   "prompt": "Extreme close-up. The penguin has desperately wrapped the silver duct tape around the two giant sparking cable ends. A bright blue spark brightly illuminates the penguin's face. Macro photography of miniature handmade sets built from wire, resin, and household objects. Cinematic miniature lighting, rich saturated oceanic blues, deep depth of field drop-off, macro bokeh.",
+   "penguin": "Wrapping duct tape around the massive sparking cable, face illuminated by a blue spark.",
+   "prev": "k12"
+  },
+  "k14": {
+   "id": "k14",
+   "seq": 3,
+   "prompt": "The penguin is propelled upward into the mid-water by a blast of sparks, flapping its overly short flippers desperately in mid-air, clearly failing to fly, about to plummet back down. Macro photography of miniature handmade sets built from wire, resin, and household objects. Cinematic miniature lighting, rich saturated oceanic blues, deep depth of field drop-off, macro bokeh.",
+   "penguin": "Launched upward into the water, flapping flippers frantically trying to fly, failing entirely.",
+   "prev": "k13"
+  }
+ },
+ "shots": [
+  {
+   "id": "s01",
+   "seq": 0,
+   "from": "k01",
+   "to": "k02",
+   "cue": "Your messages don't fly",
+   "motion": "Crane down past the foil satellite, descending smoothly to the dark resin ocean floor to reveal the glowing cable.",
+   "overlay": null,
+   "transition": "cut",
+   "sfx": "vinyl crackle, deep underwater whoosh",
+   "serious": false
+  },
+  {
+   "id": "s02",
+   "seq": 0,
+   "from": "k02",
+   "to": "k03",
+   "cue": "About ninety-five percent of",
+   "motion": "Fast push-in tracking along the thick glowing cable until we find the penguin riding it.",
+   "overlay": {
+    "type": "counter",
+    "value": 95,
+    "suffix": "%",
+    "text": "of intercontinental data",
+    "pos": "top"
+   },
+   "transition": "chain",
+   "sfx": "low electric hum",
+   "serious": false
+  },
+  {
+   "id": "s03",
+   "seq": 0,
+   "from": "k03",
+   "to": "k04",
+   "cue": "And they break. A",
+   "motion": "Snap pan right as the giant anchor crashes down, kicking up resin sand.",
+   "overlay": {
+    "type": "counter",
+    "value": 150,
+    "suffix": " times",
+    "text": "a year",
+    "pos": "top"
+   },
+   "transition": "chain",
+   "sfx": "heavy metallic thud, underwater crunch",
+   "serious": false
+  },
+  {
+   "id": "s04",
+   "seq": 0,
+   "from": "k04",
+   "to": "k05",
+   "cue": "Usually the internet just",
+   "motion": "Camera locks off as the severed cable darkens, and bright pulses of light race through the penguin's cable.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "electronic zipping, data pulse",
+   "serious": false
+  },
+  {
+   "id": "s05",
+   "seq": 1,
+   "from": "k06",
+   "to": "k07",
+   "cue": "But what if every",
+   "motion": "Snap zoom out as all the cables turn red, instantly followed by them violently snapping upwards.",
+   "overlay": null,
+   "transition": "whip",
+   "sfx": "multiple heavy cables snapping, electrical buzzing",
+   "serious": false
+  },
+  {
+   "id": "s06",
+   "seq": 1,
+   "from": "k07",
+   "to": "k08",
+   "cue": "Your local internet would",
+   "motion": "Fast whip-pan straight up, breaking the resin water surface to reveal the darkened miniature city.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "water splash, power down drone",
+   "serious": false
+  },
+  {
+   "id": "s07",
+   "seq": 2,
+   "from": "k09",
+   "to": "k10",
+   "cue": "And here's the problem.",
+   "motion": "Smooth technical pan right, sliding from the ship cross-section to the vast, empty global map.",
+   "overlay": {
+    "type": "label",
+    "text": "Few dozen ships",
+    "pos": "top"
+   },
+   "transition": "cut",
+   "sfx": "paper slide, technical beep",
+   "serious": false
+  },
+  {
+   "id": "s08",
+   "seq": 3,
+   "from": "k11",
+   "to": "k12",
+   "cue": "In 2022, Tonga lost",
+   "motion": "Plunge straight down from the isolated island diorama, through the resin water, landing on the dark seabed.",
+   "overlay": {
+    "type": "counter",
+    "value": 5,
+    "suffix": " weeks",
+    "text": "Tonga offline",
+    "pos": "top"
+   },
+   "transition": "match",
+   "sfx": "deep water plunge, bubbles",
+   "serious": false
+  },
+  {
+   "id": "s09",
+   "seq": 3,
+   "from": "k12",
+   "to": "k13",
+   "cue": "So the internet isn't",
+   "motion": "Slow push-in tight on the penguin as it desperately attempts to tape the massive cables together.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "duct tape ripping, electrical crackle",
+   "serious": false
+  },
+  {
+   "id": "s10",
+   "seq": 3,
+   "from": "k13",
+   "to": "k14",
+   "cue": "At the bottom of",
+   "motion": "Snap tilt up as the spark violently launches the penguin into the water column.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "loud zap, sad trombone, pathetic flapping sound",
+   "serious": false
+  }
+ ],
+ "cover": {
+  "prompt": "Macro photography of a tiny miniature felt penguin wearing a yellow hard hat, frantically trying to wrap silver duct tape around a massive glowing green severed garden-hose cable on a dark resin ocean floor.",
+  "text": "INTERNET IN A HOSE"
+ },
+ "n_beats": 9
+}
