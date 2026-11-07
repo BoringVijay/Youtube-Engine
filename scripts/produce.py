@@ -15,6 +15,7 @@ import art as artmod  # noqa: E402
 import budget  # noqa: E402
 import instagram  # noqa: E402
 import youtube  # noqa: E402
+import qc  # noqa: E402
 import director  # noqa: E402
 import drive  # noqa: E402
 import gai  # noqa: E402
@@ -91,7 +92,7 @@ def publish_status():
     for st in sorted(all_states(), key=lambda s: s.get("updated", ""), reverse=True)[:40]:
         j = {k: st.get(k) for k in ("id", "q", "series", "stage", "pct", "step", "steps", "preview", "final", "shorts", "thumb", "meta",
                                      "error", "updated", "created", "duration", "notes_in", "universe", "cameos", "cost", "youtube", "instagram", "format", "penguin_role", "v",
-                                     "slot", "posted_claimed", "voice_style")}
+                                     "slot", "posted_claimed", "voice_style", "qc")}
         jobs.append(j)
     body = {"at": now(), "engine": "github-actions", "version": 3, "backend": gai.backend(), "budget": budget.summary(), "jobs": jobs,
             "instagram": instagram.account(), "youtube": {k: v for k, v in youtube.channel().items() if k != "uploads"},
@@ -674,27 +675,59 @@ def advance_short(st):
     pdir = os.path.join(PUB, jid)
     os.makedirs(pdir, exist_ok=True)
     shutil.copy(os.path.join(jdir(jid), "voice", "voice.mp3"), os.path.join(pdir, "voice.mp3"))
-    media, missing = {}, []
-    for sh in d["shots"]:
-        m = {}
-        v = a.have(f"{sh['id']}.mp4")
-        if v:
-            dst = os.path.join(pdir, f"{sh['id']}.mp4")
-            shutil.copy(v, dst)
-            m["vid"] = f"job/{jid}/{sh['id']}.mp4"
-            m["vid_secs"] = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", dst], capture_output=True, text=True).stdout or 8)
-        else:
-            missing.append(sh["id"])
-        img = a.have(f"{sh['from']}.png")
-        if img:
-            jpg = os.path.join(pdir, f"{sh['from']}.jpg")
-            if not os.path.exists(jpg):
-                subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", img, "-q:v", "2", jpg], check=True)
-            m["img"] = f"job/{jid}/{sh['from']}.jpg"
-        media[sh["id"]] = m
-    if missing:
-        log("shots without motion (shown as stills):", missing)
-    mp4 = render(shorts.build_film(st, d, words, total, media), os.path.join(OUT, jid, "short.mp4"), crf=shorts.CFG.get("crf", 20))
+    def cut():
+        media, missing = {}, []
+        for sh in d["shots"]:
+            m = {}
+            v = a.have(f"{sh['id']}.mp4")
+            if v:
+                dst = os.path.join(pdir, f"{sh['id']}.mp4")
+                shutil.copy(v, dst)
+                m["vid"] = f"job/{jid}/{sh['id']}.mp4"
+                m["vid_secs"] = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", dst], capture_output=True, text=True).stdout or 8)
+            else:
+                missing.append(sh["id"])
+            img = a.have(f"{sh['from']}.png")
+            if img:
+                jpg = os.path.join(pdir, f"{sh['from']}.jpg")
+                if not os.path.exists(jpg):
+                    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", img, "-q:v", "2", jpg], check=True)
+                m["img"] = f"job/{jid}/{sh['from']}.jpg"
+            media[sh["id"]] = m
+        if missing:
+            log("shots without motion (shown as stills):", missing)
+        mp4 = render(shorts.build_film(st, d, words, total, media), os.path.join(OUT, jid, "short.mp4"), crf=shorts.CFG.get("crf", 20))
+        return mp4, missing
+    gaps = [x["id"] for x in d["shots"] if not a.have(f"{x['id']}.mp4")]
+    if gaps:  # never ship a still where a shot should move
+        log("re-trying shots with no motion:", gaps)
+        try:
+            shorts.motion(a, d, spans, None, only=set(gaps))
+        except budget.OverBudget:
+            pass
+    mp4, missing = cut()
+    # final review against the 7 standards; weak shots get re-animated with the reviewer's fix, then a re-cut
+    script_txt = " ".join(voice.strip_tags(b.get("vo", "")) for b in st["brew"]["script"].get("beats", []))
+    review = qc.film(mp4, d, script_txt, jid) if qc.enabled() else None
+    for rnd in range(int(qc.CFG.get("final_rounds", 1)) if review else 0):
+        weak = [w for w in review.get("weak_shots", []) if w.get("id") in {x["id"] for x in d["shots"]}][:int(qc.CFG.get("max_reshoots", 4))]
+        log(f"final review {review['score']:.1f}: {review.get('verdict', '')[:200]}")
+        if review["score"] >= float(qc.CFG.get("final_min", 8)) or not weak:
+            break
+        try:
+            set_stage(st, "motion", f"Review scored {review['score']:.1f}/10. Re-shooting {len(weak)} weak shot(s)", 78)
+            shorts.motion(a, d, spans, None, cancelled=lambda: cancel_requested(jid), only={w["id"] for w in weak},
+                          notes={w["id"]: (w.get("issue", "") + ". " + w.get("fix", "")).strip() for w in weak})
+        except budget.OverBudget:
+            log("no budget left for re-shoots")
+            break
+        set_stage(st, "final_render", "Re-cutting with the fixed shots", 80)
+        mp4, missing = cut()
+        review = qc.film(mp4, d, script_txt, jid)
+    if review:
+        st["qc"] = {"overall": round(review["score"], 1), "scores": review.get("scores", {}), "verdict": review.get("verdict", ""),
+                    "weak": [w.get("id") + ": " + w.get("issue", "") for w in review.get("weak_shots", [])][:5]}
+        json.dump(review, open(jfile(jid, "qc.json"), "w"), indent=1, ensure_ascii=False)
     st["final"] = {**link(drive.upload(job_folder(jid), "short.mp4", mp4, "video/mp4")), "size_mb": round(os.path.getsize(mp4) / 1e6, 1),
                    "duration": round(total + 0.8, 1), "stills": missing}
     st["preview"] = st["final"]
@@ -774,6 +807,11 @@ def main():
     make_sfx()
     handle_inbox()
     backfill_reviews()
+    if qc.enabled():  # finished Shorts that never went through the quality review get reviewed and polished before Vijay sees them
+        for s0 in all_states():
+            if s0.get("v") == 3 and s0.get("stage") == "final_ready" and not s0.get("qc") and not s0.get("qc_skip"):
+                s0["stage"], s0["step"] = "final_render", "Quality review against the 7 standards, then polish"
+                save_state(s0)
     order = {s: i for i, s in enumerate(["motion", "final_render", "metadata", "queued", "directing", "voicing", "art", "test_render"])}
     work = sorted([s for s in all_states() if s.get("stage") in order and s.get("v") in (2, 3)], key=lambda s: (order[s["stage"]], s.get("updated", "")))
     publish_status()

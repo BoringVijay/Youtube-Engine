@@ -13,5 +13,15 @@
  "note": "Lab 3 (2026-11-07): Veo 3.1 Fast holds one continuous move between keyframes; Lite dissolves halfway. Use Fast.",
  "max_seconds": 59,
  "crf": 20,
- "note2": "2026-11-07 proofs: 9-10 shots of 6-8 s left 10-15 s holds on one framing; cables ran 74.8 s. Now: voice first, 10-16 shots of ~4 s, every keyframe a new camera position, voice time-fitted to 59 s."
+ "note2": "2026-11-07 proofs: 9-10 shots of 6-8 s left 10-15 s holds on one framing; cables ran 74.8 s. Now: voice first, 10-16 shots of ~4 s, every keyframe a new camera position, voice time-fitted to 59 s.",
+ "qc": {
+  "enabled": true,
+  "keyframe_min": 7.5,
+  "clip_min": 7.5,
+  "final_min": 8,
+  "retries": 2,
+  "final_rounds": 1,
+  "max_reshoots": 4,
+  "note": "Gemini Pro reviews every keyframe, every shot and the final cut against the 7 standards in the bible; below the bar it regenerates with the reviewer's fix."
+ }
 }

@@ -5,10 +5,11 @@ Plan: the director writes 3-5 SEQUENCES. Inside a sequence, shots are chained: e
 to K(i+1) with Veo's first+last frame control, so the sequence plays as one continuous camera move. Between sequences
 we cut (match cut, whip, dip). The penguin is cast in a role for every story.
 """
-import base64, json, os, re, subprocess, time
+import base64, json, os, re, shutil, subprocess, time
 from concurrent.futures import ThreadPoolExecutor
 
 import art as artmod
+import qc
 import budget
 import gai
 
@@ -75,6 +76,14 @@ Plan it like a film:
    and characters moved on, so they can be animated into each other: keep outfits, props and lighting identical inside a sequence (change a costume only
    at a cut). Describe glows as LED or neon light, never as fire, unless it really is fire. No text or numbers in keyframes (a deliberate 1-3 word sign gag is ok, spelled exactly).
    Never name real companies, brands or logos. No stick figures.
+   STANDARDS (non-negotiable, every shot is reviewed against them and regenerated if it falls short):
+   - Logic and physics: every action, transformation and object behaves consistently (proportions, gravity, materials, cause and effect,
+     object permanence). Real processes (melting, casting, cables, orbits, chemistry) are shown the way they really work, within the medium.
+   - Seamless handoffs: plan each sequence's last keyframe and the next sequence's first keyframe as a deliberate match (shape, colour,
+     motion direction, or the camera passing through an object), so a cut feels designed, never abrupt.
+   - Story: each shot advances the story; set up, escalate, pay off. The final shot lands the payoff visually.
+   - Premium craft: simple, readable actions that animation models render cleanly (one main motion per shot, no crowds of tiny moving parts,
+     no complex hand interactions, no text). Avoid anything that would look goofy, cheap or AI-made.
    MOTION RULE (the most important rule): every pair of consecutive keyframes must be a clearly DIFFERENT camera position, so the animation between them travels.
    Each step does at least one big move: push in 3x or more, pull back to reveal, orbit 60 to 180 degrees, crane up or down a whole level, fly through a gap or
    object, or follow the subject somewhere new. Never two keyframes with the same framing. Something also happens in every shot (a reveal, a transformation,
@@ -203,16 +212,36 @@ def keyframes(a, d, progress=None, cancelled=None):
                 refs.append(a.have(f"{kf['prev']}.png"))
             if kf.get("penguin"):
                 refs.append(pen)
-            for attempt in range(3):
-                try:
-                    artmod.image(keyframe_prompt(kf, d), a.path(name), refs=refs, aspect="9:16", job=a.job)
-                    a.keep(name, "image/png")
+            fix, best = "", None
+            for rnd in range(1 + (int(qc.CFG.get("retries", 2)) if qc.enabled() else 0)):
+                made = False
+                for attempt in range(3):
+                    try:
+                        artmod.image(keyframe_prompt(kf, d) + (f"\nMust fix from review: {fix}" if fix else ""), a.path(name), refs=refs, aspect="9:16", job=a.job)
+                        made = True
+                        break
+                    except budget.OverBudget:
+                        raise
+                    except Exception as e:
+                        log(f"keyframe {k} attempt {attempt + 1}: {str(e)[:160]}")
+                        time.sleep(10 * (attempt + 1))
+                if not made:
                     break
-                except budget.OverBudget:
-                    raise
-                except Exception as e:
-                    log(f"keyframe {k} attempt {attempt + 1}: {str(e)[:160]}")
-                    time.sleep(10 * (attempt + 1))
+                if not qc.enabled():
+                    best = (10, None)
+                    break
+                r = qc.keyframe(a.path(name), refs[0] if kf.get("prev") and refs else None, kf, d, a.job)
+                log(f"keyframe {k} review {r['score']:.1f}: {'; '.join(r.get('issues', []))[:200]}")
+                if best is None or r["score"] > best[0]:
+                    best = (r["score"], a.path(name) + ".best")
+                    shutil.copy(a.path(name), best[1])
+                if r["score"] >= float(qc.CFG.get("keyframe_min", 7.5)):
+                    break
+                fix = r.get("fix") or "; ".join(r.get("issues", []))
+            if best and best[1] and os.path.exists(best[1]):
+                shutil.move(best[1], a.path(name))
+            if best:
+                a.keep(name, "image/png")
             done[0] += 1
             if progress:
                 progress(done[0], len(kfs))
@@ -229,16 +258,17 @@ def veo_seconds(span):
     return 8
 
 
-def motion(a, d, spans, progress=None, cancelled=None):
+def motion(a, d, spans, progress=None, cancelled=None, only=None, notes=None):
     """Animate every shot. Chained shots use first AND last frame so the sequence flows without a seam."""
     tier = CFG.get("veo_tier", "veo")
     res = CFG.get("resolution", "720p")
-    shots = d["shots"]
+    shots = [s for s in d["shots"] if not only or s["id"] in only]
+    notes = notes or {}
     done = [0]
 
     def one(sh):
         name = f"{sh['id']}.mp4"
-        if a.have(name):
+        if a.have(name) and sh["id"] not in notes:
             done[0] += 1
             return
         if cancelled and cancelled():
@@ -251,36 +281,55 @@ def motion(a, d, spans, progress=None, cancelled=None):
         secs = veo_seconds(spans.get(sh["id"], CFG["shot_seconds"]))
         u = d["universe"]
         prompt = (f"{sh['motion']}\n\nOne continuous shot, no cuts. Keep the exact look of the frames: {u['look_bible']}\n"
-                  "Smooth, physically plausible motion that suits the medium. No morphing faces, no new text, no captions, no logos.")
+                  "Smooth, physically plausible motion that suits the medium. Objects keep their shape, size and count; nothing appears or vanishes "
+                  "unless the action causes it. No morphing faces, no new text, no captions, no logos. Premium, deliberate camera work.")
+        if notes.get(sh["id"]):
+            prompt += f"\nMust fix from review: {notes[sh['id']]}"
         if any(d["keyframes"][k].get("penguin") for k in (sh["from"], sh.get("to")) if k):
             prompt += f"\nThe penguin keeps its exact design: {artmod.PENGUIN}"
         price_kind = "video_lite_per_sec" if tier == "veo_lite" else "video_per_sec"
-        budget.check(a.job, price_kind, secs)
-        order = gai.CANDIDATES[tier] + ([m for m in gai.CANDIDATES["veo"]] if tier == "veo_lite" else [])
-        last_err = None
-        for attempt in range(3):
-            for model in ([gai._chosen[tier]] if tier in gai._chosen else order):
-                try:
-                    data = gai.veo(model, prompt, artmod.b64(first), "9:16", secs, res, False, last_b64=artmod.b64(last) if last else None)
-                    gai._chosen[tier] = model
-                    open(a.path(name), "wb").write(data)
-                    budget.log(a.job, price_kind, secs, "vertex")
-                    a.keep(name, "video/mp4")
-                    last_err = None
-                    break
-                except Exception as e:
-                    last_err = str(e)
-                    if re.search(r"HTTP 404|NOT_FOUND|not found", last_err):
-                        continue
-                    if re.search(r"429|RESOURCE_EXHAUSTED|503|UNAVAILABLE|timed out", last_err):
-                        time.sleep(30 * (attempt + 1))
-                        break
-                    if last and re.search(r"lastFrame|last_frame|last frame", last_err, re.I):
-                        last = None  # model can't do first+last: fall back to first frame only
-                        break
-                    break
-            if last_err is None:
-                break
+        base_prompt, best, rounds = prompt, None, 1 + (int(qc.CFG.get("retries", 2)) if qc.enabled() else 0)
+        for rnd in range(rounds):
+          budget.check(a.job, price_kind, secs)
+          order = gai.CANDIDATES[tier] + ([m for m in gai.CANDIDATES["veo"]] if tier == "veo_lite" else [])
+          last_err = None
+          for attempt in range(3):
+              for model in ([gai._chosen[tier]] if tier in gai._chosen else order):
+                  try:
+                      data = gai.veo(model, prompt, artmod.b64(first), "9:16", secs, res, False, last_b64=artmod.b64(last) if last else None)
+                      gai._chosen[tier] = model
+                      open(a.path(name), "wb").write(data)
+                      budget.log(a.job, price_kind, secs, "vertex")
+                      a.keep(name, "video/mp4")
+                      last_err = None
+                      break
+                  except Exception as e:
+                      last_err = str(e)
+                      if re.search(r"HTTP 404|NOT_FOUND|not found", last_err):
+                          continue
+                      if re.search(r"429|RESOURCE_EXHAUSTED|503|UNAVAILABLE|timed out", last_err):
+                          time.sleep(30 * (attempt + 1))
+                          break
+                      if last and re.search(r"lastFrame|last_frame|last frame", last_err, re.I):
+                          last = None  # model can't do first+last: fall back to first frame only
+                          break
+                      break
+              if last_err is None:
+                  break
+
+          if last_err or not qc.enabled():
+              break
+          r = qc.clip(a.path(name), sh, d, a.job)
+          log(f"shot {sh['id']} review {r['score']:.1f}: {'; '.join(r.get('issues', []))[:200]}")
+          if best is None or r["score"] > best[0]:
+              best = (r["score"], a.path(name) + ".best")
+              shutil.copy(a.path(name), best[1])
+          if r["score"] >= float(qc.CFG.get("clip_min", 7.5)):
+              break
+          prompt = base_prompt + f"\nMust fix from review: {r.get('fix') or '; '.join(r.get('issues', []))}"
+        if best and os.path.exists(best[1]):
+            shutil.move(best[1], a.path(name))
+            a.keep(name, "video/mp4")
         if last_err:
             log(f"motion {sh['id']} failed: {last_err[:240]}")
         done[0] += 1

@@ -4,6 +4,18 @@
 
 The director stage reads this file before planning any video. Change it here and every new video follows.
 
+## Non-negotiable standards (Vijay, Nov 2026)
+Every video is reviewed against these, shot by shot and as a finished cut. Anything that falls short is regenerated before it reaches Vijay.
+1. **Satisfying visuals.** Every sequence feels intentional and complete: detail, movement, composition, the whole viewing experience.
+2. **Clean transitions and handoffs.** Fluid, seamless, convincing. No abrupt cuts, awkward movements or disconnected sequences.
+3. **Compelling story.** A clear narrative, progression and payoff. The viewer wants to know what happens next and gets a satisfying ending.
+4. **Logical consistency.** Every action, transformation and sequence makes sense. Consistent proportions, physics and spatial relationships.
+5. **Audio-visual sync.** Picture, narration, SFX and music work together. Every sound matches what is on screen, precisely timed.
+6. **Scientific and physical accuracy.** Real processes, materials and transformations are shown accurately. Creative freedom, never at the cost of logic or facts.
+7. **Premium execution.** Nothing cheap, goofy, unfinished or obviously AI-generated. No artefacts, inconsistent objects, unnatural motion, distorted details or weak effects.
+
+Quality beats speed and quantity. Never settle for acceptable.
+
 ## Retired
 - Stickman explainers and template infotainment (title card, stat card, bar chart, repeat). Never again. No stick figures anywhere, even as background extras: people are rendered in the video's universe (paper people, clay people, painted people).
 - Same look twice in a row. Two consecutive videos never share a visual universe.
