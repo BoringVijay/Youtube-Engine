@@ -1,7 +1,7 @@
 {
  "id": "how-did-a-tiny-republic-survive-inside-italy-for-centuries-",
  "created": "2026-11-07T15:25:57+00:00",
- "pct": 37,
+ "pct": 75,
  "v": 3,
  "format": "short",
  "q": "How did a tiny republic survive inside Italy for centuries?",
@@ -91,16 +91,16 @@
   }
  },
  "brew_at": "2026-11-07T15:11:48.942Z",
- "error": "Drive resumable chunk -> HTTP 502: b'<!DOCTYPE html>\\n<html lang=en>\\n  <meta charset=utf-8>\\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\\n  <title>Error 502 (Server Error)!!1</title>\\n  <style>\\n    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;paddin'",
- "fails": 1,
+ "error": "<urlopen error EOF occurred in violation of protocol (_ssl.c:2417)>",
+ "fails": 2,
  "preview": null,
  "final": null,
  "shorts": null,
  "thumb": null,
  "meta": null,
- "stage": "art",
+ "stage": "motion",
  "step": "Hit an error. Retrying next run",
- "cost": 2.929,
+ "cost": 10.805,
  "steps": [
   {
    "stage": "queued",
@@ -116,10 +116,14 @@
   },
   {
    "stage": "art",
-   "at": "2026-11-07T19:39:19+00:00"
+   "at": "2026-11-07T22:58:08+00:00"
+  },
+  {
+   "stage": "motion",
+   "at": "2026-11-07T23:00:15+00:00"
   }
  ],
- "updated": "2026-11-07T20:11:11+00:00",
+ "updated": "2026-11-07T23:10:45+00:00",
  "voice_style": "B",
  "voice_fit": 1.2,
  "duration": 62.8,
