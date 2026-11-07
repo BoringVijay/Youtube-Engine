@@ -1,0 +1,81 @@
+{
+ "id": "short-undersea-cables",
+ "v": 3,
+ "format": "short",
+ "q": "What if every undersea internet cable snapped at once?",
+ "series": "Curious Penguin",
+ "brew": {
+  "type": "brew",
+  "id": "short-undersea-cables",
+  "at": "2026-11-07T05:33:41+00:00",
+  "q": "What if every undersea internet cable snapped at once?",
+  "series": "Curious Penguin",
+  "aud": "curious people",
+  "format": {
+   "long": false,
+   "minutes": 1,
+   "shorts": 0
+  },
+  "angle": "Zack D. Films-style curiosity Short: one wild premise, played straight, escalating, with a twist at the end.",
+  "notes": [],
+  "refs": [],
+  "voice_style": "A",
+  "penguin_role": "protagonist: the planet's smallest cable-repair technician, hard hat and all",
+  "script": {
+   "titles": [
+    "Your Internet Lives in a Garden Hose"
+   ],
+   "beats": [
+    {
+     "vo": "Your messages don't fly through space. They crawl along the bottom of the ocean."
+    },
+    {
+     "vo": "About ninety-five percent of the data between continents runs through cables no thicker than a garden hose. One point four million kilometres of them."
+    },
+    {
+     "vo": "And they break. A lot. Around a hundred and fifty times a year. Fishing gear, ship anchors. Occasionally, a shark."
+    },
+    {
+     "vo": "Usually the internet just reroutes around the damage. You never notice."
+    },
+    {
+     "vo": "But what if every cable snapped at once?"
+    },
+    {
+     "vo": "Your local internet would keep working. Anything hosted abroad? Gone. Cloud apps. International payments. Half the websites you use."
+    },
+    {
+     "vo": "And here's the problem. There are only a few dozen repair ships on the entire planet. Fixing every break could take months."
+    },
+    {
+     "vo": "In 2022, Tonga lost its only cable for five weeks."
+    },
+    {
+     "vo": "So the internet isn't in the cloud. It's in a garden hose. At the bottom of the sea."
+    }
+   ],
+   "verify": [
+    "95%+ of intercontinental data via submarine cables (commonly cited 95-99%)",
+    "about 1.4 million km of cable (TeleGeography)",
+    "150-200 faults a year, mostly fishing and anchors (ICPC)",
+    "a few dozen cable repair ships worldwide",
+    "Tonga, January 2022: Hunga Tonga eruption cut its only international cable, about five weeks to restore",
+    "deep-sea cable about 17-25 mm, garden-hose thick"
+   ],
+   "vo": "Your messages don't fly through space. They crawl along the bottom of the ocean. About ninety-five percent of the data between continents runs through cables no thicker than a garden hose. One point four million kilometres of them. And they break. A lot. Around a hundred and fifty times a year. Fishing gear, ship anchors. Occasionally, a shark. Usually the internet just reroutes around the damage. You never notice. But what if every cable snapped at once? Your local internet would keep working. Anything hosted abroad? Gone. Cloud apps. International payments. Half the websites you use. And here's the problem. There are only a few dozen repair ships on the entire planet. Fixing every break could take months. In 2022, Tonga lost its only cable for five weeks. So the internet isn't in the cloud. It's in a garden hose. At the bottom of the sea."
+  }
+ },
+ "brew_at": "2026-11-07T05:33:41+00:00",
+ "created": "2026-11-07T05:33:41+00:00",
+ "stage": "queued",
+ "pct": 2,
+ "step": "Queued: fully animated Short, voice style A",
+ "steps": [
+  {
+   "stage": "queued",
+   "at": "2026-11-07T05:33:41+00:00"
+  }
+ ],
+ "fails": 0,
+ "updated": "2026-11-07T05:33:41+00:00"
+}

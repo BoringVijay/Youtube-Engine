@@ -72,7 +72,8 @@ Plan it like a film:
 4. Keyframes: a list of still frames. For each sequence give its keyframes in order (n shots in a sequence need n+1 keyframes).
    Each keyframe: a vivid vertical composition (subject, action pose, foreground/midground/background layers, one focal point, calm lower fifth for captions),
    whether the penguin is in it (and exactly what it is doing, wearing, where in frame). Consecutive keyframes in a sequence are the SAME world with the camera
-   and characters moved on, so they can be animated into each other. No text or numbers in keyframes (a deliberate 1-3 word sign gag is ok, spelled exactly).
+   and characters moved on, so they can be animated into each other: keep outfits, props and lighting identical inside a sequence (change a costume only
+   at a cut). Describe glows as LED or neon light, never as fire, unless it really is fire. No text or numbers in keyframes (a deliberate 1-3 word sign gag is ok, spelled exactly).
    Never name real companies, brands or logos. No stick figures.
 5. Shots: each shot animates keyframe "from" to keyframe "to" (consecutive in its sequence). Give "motion": one sentence of continuous camera move + action,
    physically plausible for the medium, and "cue": the exact first 3 to 5 words of the VO where this shot starts (copied from the beats, in order, every beat covered).

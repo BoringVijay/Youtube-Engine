@@ -1,0 +1,85 @@
+{
+ "id": "short-gold-cube",
+ "v": 3,
+ "format": "short",
+ "q": "What if all the gold ever mined were melted into one cube?",
+ "series": "Curious Penguin",
+ "brew": {
+  "type": "brew",
+  "id": "short-gold-cube",
+  "at": "2026-11-07T05:33:41+00:00",
+  "q": "What if all the gold ever mined were melted into one cube?",
+  "series": "Curious Penguin",
+  "aud": "curious people",
+  "format": {
+   "long": false,
+   "minutes": 1,
+   "shorts": 0
+  },
+  "angle": "Zack D. Films-style curiosity Short: one wild premise, played straight, escalating, with a twist at the end.",
+  "notes": [],
+  "refs": [],
+  "voice_style": "B",
+  "penguin_role": "villain: a tiny clay penguin who has been quietly stealing gold bars the whole time",
+  "script": {
+   "titles": [
+    "All the Gold Ever Mined Fits in One Cube"
+   ],
+   "beats": [
+    {
+     "vo": "Every bar of gold humans have ever mined. All of it. Fits in one cube."
+    },
+    {
+     "vo": "Around two hundred and sixteen thousand tonnes. Melt it down and you get a cube about twenty-two metres wide."
+    },
+    {
+     "vo": "That's smaller than a baseball infield."
+    },
+    {
+     "vo": "Stand next to it and it's about as tall as a seven-storey building."
+    },
+    {
+     "vo": "Thousands of years of pharaohs, empires and gold rushes. One cube."
+    },
+    {
+     "vo": "Gold is so dense that a single cubic metre weighs about nineteen tonnes. That's a dozen cars, in a box you could stand in."
+    },
+    {
+     "vo": "And who owns it? Central banks hold about a sixth. Nearly half is jewellery."
+    },
+    {
+     "vo": "Humanity's greatest treasure is mostly necklaces."
+    },
+    {
+     "vo": "At today's prices, that cube is worth tens of trillions of dollars."
+    },
+    {
+     "vo": "And it would still fit between the bases. Minus a few bars."
+    }
+   ],
+   "verify": [
+    "about 216,000 tonnes above ground (World Gold Council, end 2024)",
+    "density 19.32 g/cm3: about 11,200 m3, cube side about 22.4 m",
+    "baseball bases 27.4 m apart",
+    "1 m3 of gold about 19.3 t, a car about 1.5 t, so about a dozen cars",
+    "central banks about 36,000 t, about a sixth",
+    "jewellery about 45%",
+    "value: about 6.9 billion oz at spot, tens of trillions of dollars"
+   ],
+   "vo": "Every bar of gold humans have ever mined. All of it. Fits in one cube. Around two hundred and sixteen thousand tonnes. Melt it down and you get a cube about twenty-two metres wide. That's smaller than a baseball infield. Stand next to it and it's about as tall as a seven-storey building. Thousands of years of pharaohs, empires and gold rushes. One cube. Gold is so dense that a single cubic metre weighs about nineteen tonnes. That's a dozen cars, in a box you could stand in. And who owns it? Central banks hold about a sixth. Nearly half is jewellery. Humanity's greatest treasure is mostly necklaces. At today's prices, that cube is worth tens of trillions of dollars. And it would still fit between the bases. Minus a few bars."
+  }
+ },
+ "brew_at": "2026-11-07T05:33:41+00:00",
+ "created": "2026-11-07T05:33:41+00:00",
+ "stage": "queued",
+ "pct": 2,
+ "step": "Queued: fully animated Short, voice style B",
+ "steps": [
+  {
+   "stage": "queued",
+   "at": "2026-11-07T05:33:41+00:00"
+  }
+ ],
+ "fails": 0,
+ "updated": "2026-11-07T05:33:41+00:00"
+}

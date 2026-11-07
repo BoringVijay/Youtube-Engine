@@ -446,7 +446,12 @@ def stage_voice(st):
         budget.log(st["id"], "text_call", 1, gai.LAST["backend"])
         json.dump(sections, open(sp, "w"), indent=1, ensure_ascii=False)
     v = st["brew"].get("voice") or VOICE_CFG["narrator"]
-    st["step"] = f"Recording {len(sections)} takes with {v}"
+    styles = json.load(open(os.path.join(ROOT, "config", "voice_styles.json")))
+    sid = st["brew"].get("voice_style") or VOICE_CFG.get("style_id", "C")[:1]
+    if sid in styles:
+        voice.CFG["style"] = styles[sid]["style"]
+    st["voice_style"] = sid
+    st["step"] = f"Recording {len(sections)} take(s) with {v}, style {sid}"
     save_state(st); publish_status()
     est_min = sum(len(voice.strip_tags(s["transcript"]).split()) for s in sections) / 160
     budget.check(st["id"], "tts_per_min", est_min)
