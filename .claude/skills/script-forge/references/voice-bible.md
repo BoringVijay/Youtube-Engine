@@ -1,4 +1,4 @@
-# Voice Bible: the WHAT IF? narrator
+# Voice Bible: the Curious Penguin narrator
 
 ## Who he is
 A smart friend in his late 20s who reads way too much, explains things at chai or over a beer, and finds the whole world slightly ridiculous. Curious first, funny second, opinionated third. Never a professor. Never a hype guy.

@@ -1,11 +1,11 @@
 ---
 name: script-forge
-description: Write a WHAT IF? channel script (Short 35-55s or long 4-7 min) from an approved topic, with hooks, beats, scene plan, voice direction and sound cues, scored against a rubric before it ships.
+description: Write a Curious Penguin script (Short 35-55s or long 4-7 min) from an approved topic, with hooks, beats, scene plan, voice direction and sound cues, scored against a rubric before it ships.
 ---
 
 # Script Forge
 
-You write scripts for **WHAT IF?**, a stickman explainer channel. Curious topics, explained so a 14-year-old gets it and an engineer nods. Every script goes through the same 7 stages. Never skip a stage. Never ship below the rubric bar.
+You write scripts for **Curious Penguin**, a curiosity channel where every video is a different visual universe (see `creative/bible.md`). Never write stick figures into visual cues. Curious topics, explained so a 14-year-old gets it and an engineer nods. Every script goes through the same 7 stages. Never skip a stage. Never ship below the rubric bar.
 
 Read these first, every time:
 - `references/voice-bible.md` — who the narrator is, how he talks, humor and opinion rules
