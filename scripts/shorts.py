@@ -89,9 +89,13 @@ Plan it like a film:
      location: video models render that as a cheap morph. A change of place or object happens at a sequence boundary, as a designed cut.
    - One medium, one character design for the whole Short (no sticker-style penguin in one shot and a drawn one in the next), consistent
      scale between objects, and no words in keyframes except a deliberate sign gag.
+   LAB 4 RULE (tested 2026-11-07, overrides anything below that asks for big moves): consecutive keyframes in a chained shot differ by a
+     MODEST camera change (about 20-40% closer or wider, or a short drift or tilt) plus ONE simple action. Big orbits, top-down flips and
+     fly-throughs morph. Variety comes from cutting between sequences and from the action, not from huge moves inside one shot. Avoid
+     actions that need fine grip (flippers holding small handles, hands on tools); prefer pushing, waddling, falling, looking, objects
+     sliding, lights changing.
    MOTION RULE (the most important rule): every pair of consecutive keyframes must be a clearly DIFFERENT camera position, so the animation between them travels.
-   Each step does at least one big move: push in 3x or more, pull back to reveal, orbit 60 to 180 degrees, crane up or down a whole level, fly through a gap or
-   object, or follow the subject somewhere new. Never two keyframes with the same framing. Something also happens in every shot (a reveal, a transformation,
+   Each step makes a clear but modest move (see LAB 4 RULE) so it reads as a camera move, not a morph. Never two keyframes with the same framing. Something also happens in every shot (a reveal, a transformation,
    a character action, a scale change), never just a slow drift.
 5. Shots: each shot animates keyframe "from" to keyframe "to" (consecutive in its sequence). Give "motion": one sentence of continuous camera move + action,
    physically plausible for the medium. Banned: "locks off", "static", "holds", "slow push-in" on its own, "subtle". A viewer should feel the camera fly, and "cue": the exact first 3 to 5 words of the VO where this shot starts (copied from the beats, in order, every beat covered).

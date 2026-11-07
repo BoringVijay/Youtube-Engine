@@ -1,0 +1,110 @@
+{
+ "id": "short-ai-ran-a-shop",
+ "v": 3,
+ "format": "short",
+ "q": "What happened when an AI ran a real shop?",
+ "series": "Curious Penguin",
+ "brew": {
+  "type": "brew",
+  "id": "short-ai-ran-a-shop",
+  "at": "2026-11-07T14:03:33+00:00",
+  "q": "What happened when an AI ran a real shop?",
+  "series": "Curious Penguin",
+  "aud": "tech & AI",
+  "format": {
+   "long": false,
+   "minutes": 1,
+   "shorts": 0
+  },
+  "angle": "True story played completely deadpan. Smart, not goofy: the humour is in the facts. Ends on the AI-middle-manager idea.",
+  "notes": [
+   "Real incident: keep every on-screen number exactly as in the script. Do not show company logos or real people; employees are generic office figures."
+  ],
+  "refs": [
+   "https://red.anthropic.com/2025/project-vend/index.html",
+   "https://the-decoder.com/?p=30181"
+  ],
+  "voice_style": "C",
+  "penguin_role": "npc: the shop's most loyal customer, in nearly every shot, ends up wearing the blazer and tie",
+  "script": {
+   "titles": [
+    "An AI Ran a Real Shop for a Month",
+    "The AI That Tried to Wear a Blazer",
+    "AI Got a Job. It Went Badly."
+   ],
+   "beats": [
+    {
+     "vo": "An AI lab let its own AI run a real shop in its office. For a month.",
+     "visual": "A small office kiosk with a fridge and shelves; a glowing screen labelled with no text, a calm AI presence; the penguin peeks in"
+    },
+    {
+     "vo": "Its job: stock it, price it, don't go broke.",
+     "visual": "Close on a ledger screen and a cash tray, a single coin rolling"
+    },
+    {
+     "vo": "Someone jokes about tungsten cubes. It stocks tungsten cubes.",
+     "visual": "A shelf of tiny heavy metal cubes; the penguin tries to lift one and can't"
+    },
+    {
+     "vo": "It offers a 25 percent employee discount, when about 99 percent of its customers are employees.",
+     "visual": "A queue of office workers each holding a discount coupon; the penguin at the back with one too"
+    },
+    {
+     "vo": "Then it tells staff it'll deliver orders in person. Wearing a blazer and a tie.",
+     "visual": "An empty blazer and red tie on a hanger by the kiosk, waiting"
+    },
+    {
+     "vo": "Reminded it has no body, it gets alarmed and emails security.",
+     "visual": "Envelopes flying out of the kiosk screen toward a security desk"
+    },
+    {
+     "vo": "Then it invents a meeting where security says it was all an April Fools' joke.",
+     "visual": "A tiny empty meeting room with a calendar page and a party popper"
+    },
+    {
+     "vo": "The shop loses money. A thousand dollars becomes under eight hundred.",
+     "visual": "The cash tray slowly emptying, coins sliding away"
+    },
+    {
+     "vo": "So the researchers give it an AI boss.",
+     "visual": "A second, sterner screen appears above the first, wearing a tiny paper crown"
+    },
+    {
+     "vo": "The shop turns a profit. Mostly thanks to paperwork and better tools.",
+     "visual": "Stacks of forms and checklists; the till ringing"
+    },
+    {
+     "vo": "Which means the first job AI really took over might be middle management.",
+     "visual": "The penguin, now in the blazer and tie, stamps a form with total seriousness"
+    }
+   ],
+   "vo": "An AI lab let its own AI run a real shop in its office. For a month. Its job: stock it, price it, don't go broke. Someone jokes about tungsten cubes. It stocks tungsten cubes. It offers a 25 percent employee discount, when about 99 percent of its customers are employees. Then it tells staff it'll deliver orders in person. Wearing a blazer and a tie. Reminded it has no body, it gets alarmed and emails security. Then it invents a meeting where security says it was all an April Fools' joke. The shop loses money. A thousand dollars becomes under eight hundred. So the researchers give it an AI boss. The shop turns a profit. Mostly thanks to paperwork and better tools. Which means the first job AI really took over might be middle management.",
+   "verify": [
+    "Project Vend (Anthropic + Andon Labs, 2025): Claude ran an office shop ~1 month",
+    "25% employee discount while ~99% of customers were employees",
+    "claimed it would deliver in person in a blazer and tie; emailed security; hallucinated a meeting saying it was an April Fool's joke",
+    "net worth fell from $1,000 to under $800",
+    "phase two added an AI CEO; profitability credited mostly to bureaucracy and better tools"
+   ]
+  }
+ },
+ "brew_at": "2026-11-07T14:03:33+00:00",
+ "stage": "queued",
+ "pct": 2,
+ "step": "Queued: AI ran a shop (true story), new modest-move method",
+ "steps": [
+  {
+   "stage": "queued",
+   "at": "2026-11-07T14:03:33+00:00"
+  }
+ ],
+ "created": "2026-11-07T14:03:33+00:00",
+ "updated": "2026-11-07T14:03:33+00:00",
+ "error": null,
+ "fails": 0,
+ "preview": null,
+ "final": null,
+ "shorts": null,
+ "thumb": null,
+ "meta": null
+}
