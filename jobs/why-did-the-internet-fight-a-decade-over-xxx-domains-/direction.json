@@ -1,0 +1,355 @@
+{
+ "format": "short",
+ "universe": {
+  "name": "Bureaucracy Sandbox",
+  "studio": "Timber & Twine Animation Co.",
+  "why": "The internet's infrastructure and arbitrary rules are made literal as rigid, childish wooden building blocks, making the decade-long argument over three letters feel like a petty playground dispute.",
+  "pacing": "Stop-motion staccato. Deliberate clacking, escalating chaos as the blocks refuse to fit together.",
+  "signature_shot": "The penguin gleefully turning a brass switch to drop a heavy black wooden block, walling off a cluster of neon-pink wooden houses.",
+  "medium_break": "The final shot where the penguin faceplants, revealing an unpainted pine grain and a stamped ink 'Made in Taiwan' logo on the bottom of its wooden foot.",
+  "look_bible": "Stop-motion wooden toy medium. Polished maple and walnut wood, glossy enamel paint (cherry red, neon pink, navy blue), brass hinges. Warm, directional tabletop studio lighting with sharp miniature shadows. 50mm macro lens, shallow depth of field, sharp focus on wood grain. Rigid physics, heavy wooden clacks, no fluid bending.",
+  "penguin_render": "Egg-shaped Adelie wooden toy penguin, black head/back, white belly, big white eye-rings, small dark beak with orange tip, oversized orange feet, three thin stubborn wooden feathers on top.",
+  "palette": {
+   "paper": "#F5E6D3",
+   "ink": "#1A1A24",
+   "accent": "#D92525",
+   "accent2": "#FF1493"
+  },
+  "font": "anton",
+  "film": "clean",
+  "grain": 0.1,
+  "vignette": 0.4,
+  "music": "Plucky pizzicato strings, marimba, and hollow wooden percussion, staccato and bureaucratic.",
+  "letterbox": false
+ },
+ "penguin": {
+  "role": "villain",
+  "arc": "Wants to shove three red 'X' blocks everywhere, gets frustrated by the rules, isolates a neighborhood, and ultimately ruins the toy city for everyone."
+ },
+ "keyframes": {
+  "k01": {
+   "id": "k01",
+   "seq": 0,
+   "prompt": "Overhead wide shot of a massive, heavy wooden 'rulebook' with brass hinges resting on a maple table. The wooden toy penguin waddles into frame from the left, pushing a cherry red wooden block with a white 'X' painted on it. Stop-motion wooden toy medium. Polished maple and walnut wood, glossy enamel paint (cherry red, neon pink, navy blue), brass hinges. Warm, directional tabletop studio lighting with sharp miniature shadows. 50mm macro lens, shallow depth of field, sharp focus on wood grain. Rigid physics, heavy wooden clacks, no fluid bending. PENGUIN: Egg-shaped Adelie wooden toy penguin, black head/back, white belly, big white eye-rings, small dark beak with orange tip, oversized orange feet, three thin stubborn wooden feathers on top.",
+   "penguin": "Waddling from the left, pushing a red 'X' block.",
+   "prev": null
+  },
+  "k02": {
+   "id": "k02",
+   "seq": 0,
+   "prompt": "Overhead shot, 30% closer. The wooden rulebook is now open, revealing blank wooden pages. The wooden toy penguin pushes two more red 'X' blocks next to the first one on the open page. Stop-motion wooden toy medium. Polished maple and walnut wood, glossy enamel paint (cherry red, neon pink, navy blue), brass hinges. Warm, directional tabletop studio lighting with sharp miniature shadows. 50mm macro lens, shallow depth of field, sharp focus on wood grain. Rigid physics, heavy wooden clacks, no fluid bending. PENGUIN: Egg-shaped Adelie wooden toy penguin, black head/back, white belly, big white eye-rings, small dark beak with orange tip, oversized orange feet, three thin stubborn wooden feathers on top.",
+   "penguin": "Pushing two more red 'X' blocks onto the open wooden page.",
+   "prev": "k01"
+  },
+  "k03": {
+   "id": "k03",
+   "seq": 0,
+   "prompt": "The camera tilts up 30 degrees from the book to reveal a wooden toy city in the background. The wooden toy penguin slides a thick cotton string around a cluster of neon-pink wooden houses, grouping them together. Stop-motion wooden toy medium. Polished maple and walnut wood, glossy enamel paint (cherry red, neon pink, navy blue), brass hinges. Warm, directional tabletop studio lighting with sharp miniature shadows. 50mm macro lens, shallow depth of field, sharp focus on wood grain. Rigid physics, heavy wooden clacks, no fluid bending. PENGUIN: Egg-shaped Adelie wooden toy penguin, black head/back, white belly, big white eye-rings, small dark beak with orange tip, oversized orange feet, three thin stubborn wooden feathers on top.",
+   "penguin": "Sliding a cotton string around the neon-pink wooden houses.",
+   "prev": "k02"
+  },
+  "k04": {
+   "id": "k04",
+   "seq": 0,
+   "prompt": "The camera pushes 30% closer to the neon-pink wooden houses. The wooden toy penguin drops a rigid wooden fence around the pink houses, standing proudly beside it. Stop-motion wooden toy medium. Polished maple and walnut wood, glossy enamel paint (cherry red, neon pink, navy blue), brass hinges. Warm, directional tabletop studio lighting with sharp miniature shadows. 50mm macro lens, shallow depth of field, sharp focus on wood grain. Rigid physics, heavy wooden clacks, no fluid bending. PENGUIN: Egg-shaped Adelie wooden toy penguin, black head/back, white belly, big white eye-rings, small dark beak with orange tip, oversized orange feet, three thin stubborn wooden feathers on top.",
+   "penguin": "Dropping a wooden fence around the houses and standing proudly.",
+   "prev": "k03"
+  },
+  "k05": {
+   "id": "k05",
+   "seq": 1,
+   "prompt": "A giant wooden gavel smashes down onto a maple table, scattering three red 'X' blocks. The wooden toy penguin stands nearby, looking shocked. Stop-motion wooden toy medium. Polished maple and walnut wood, glossy enamel paint (cherry red, neon pink, navy blue), brass hinges. Warm, directional tabletop studio lighting with sharp miniature shadows. 50mm macro lens, shallow depth of field, sharp focus on wood grain. Rigid physics, heavy wooden clacks, no fluid bending. PENGUIN: Egg-shaped Adelie wooden toy penguin, black head/back, white belly, big white eye-rings, small dark beak with orange tip, oversized orange feet, three thin stubborn wooden feathers on top.",
+   "penguin": "Standing nearby, flippers raised in shock as the gavel smashes down.",
+   "prev": null
+  },
+  "k06": {
+   "id": "k06",
+   "seq": 1,
+   "prompt": "The camera drifts 20% to the right. The wooden toy penguin stubbornly pushes the red 'X' blocks back under the hovering wooden gavel. Stop-motion wooden toy medium. Polished maple and walnut wood, glossy enamel paint (cherry red, neon pink, navy blue), brass hinges. Warm, directional tabletop studio lighting with sharp miniature shadows. 50mm macro lens, shallow depth of field, sharp focus on wood grain. Rigid physics, heavy wooden clacks, no fluid bending. PENGUIN: Egg-shaped Adelie wooden toy penguin, black head/back, white belly, big white eye-rings, small dark beak with orange tip, oversized orange feet, three thin stubborn wooden feathers on top.",
+   "penguin": "Stubbornly pushing the red 'X' blocks back under the gavel.",
+   "prev": "k05"
+  },
+  "k07": {
+   "id": "k07",
+   "seq": 1,
+   "prompt": "The camera tilts up 30 degrees as a barrage of white wooden envelopes pours down from above, burying the gavel and the wooden toy penguin in a chaotic pile. Stop-motion wooden toy medium. Polished maple and walnut wood, glossy enamel paint (cherry red, neon pink, navy blue), brass hinges. Warm, directional tabletop studio lighting with sharp miniature shadows. 50mm macro lens, shallow depth of field, sharp focus on wood grain. Rigid physics, heavy wooden clacks, no fluid bending. PENGUIN: Egg-shaped Adelie wooden toy penguin, black head/back, white belly, big white eye-rings, small dark beak with orange tip, oversized orange feet, three thin stubborn wooden feathers on top.",
+   "penguin": "Getting buried under falling white wooden envelopes.",
+   "prev": "k06"
+  },
+  "k08": {
+   "id": "k08",
+   "seq": 1,
+   "prompt": "The camera pushes in 30% on the pile of wooden envelopes. The wooden gavel bursts out of the pile, scattering wooden envelopes everywhere. The wooden toy penguin struggles to peek its head out of the pile. Stop-motion wooden toy medium. Polished maple and walnut wood, glossy enamel paint (cherry red, neon pink, navy blue), brass hinges. Warm, directional tabletop studio lighting with sharp miniature shadows. 50mm macro lens, shallow depth of field, sharp focus on wood grain. Rigid physics, heavy wooden clacks, no fluid bending. PENGUIN: Egg-shaped Adelie wooden toy penguin, black head/back, white belly, big white eye-rings, small dark beak with orange tip, oversized orange feet, three thin stubborn wooden feathers on top.",
+   "penguin": "Struggling to peek its head out from the pile of envelopes.",
+   "prev": "k07"
+  },
+  "k09": {
+   "id": "k09",
+   "seq": 1,
+   "prompt": "The gavel smashes down again, scattering the red 'X' blocks and envelopes. The wooden toy penguin lies flat on its back on the maple table from the impact. Stop-motion wooden toy medium. Polished maple and walnut wood, glossy enamel paint (cherry red, neon pink, navy blue), brass hinges. Warm, directional tabletop studio lighting with sharp miniature shadows. 50mm macro lens, shallow depth of field, sharp focus on wood grain. Rigid physics, heavy wooden clacks, no fluid bending. PENGUIN: Egg-shaped Adelie wooden toy penguin, black head/back, white belly, big white eye-rings, small dark beak with orange tip, oversized orange feet, three thin stubborn wooden feathers on top.",
+   "penguin": "Lying flat on its back amidst the scattered blocks and envelopes.",
+   "prev": "k08"
+  },
+  "k10": {
+   "id": "k10",
+   "seq": 2,
+   "prompt": "Close up on a neon-pink wooden house. A wooden sign with a painted frowning face pops up next to it. The wooden toy penguin peeks out from behind the pink house. Stop-motion wooden toy medium. Polished maple and walnut wood, glossy enamel paint (cherry red, neon pink, navy blue), brass hinges. Warm, directional tabletop studio lighting with sharp miniature shadows. 50mm macro lens, shallow depth of field, sharp focus on wood grain. Rigid physics, heavy wooden clacks, no fluid bending. PENGUIN: Egg-shaped Adelie wooden toy penguin, black head/back, white belly, big white eye-rings, small dark beak with orange tip, oversized orange feet, three thin stubborn wooden feathers on top.",
+   "penguin": "Peeking out from behind the neon-pink wooden house.",
+   "prev": null
+  },
+  "k11": {
+   "id": "k11",
+   "seq": 2,
+   "prompt": "The camera pulls back 30% to reveal the pink houses are on a detached wooden island. The wooden toy penguin gleefully turns a tarnished brass switch mounted on the island. Stop-motion wooden toy medium. Polished maple and walnut wood, glossy enamel paint (cherry red, neon pink, navy blue), brass hinges. Warm, directional tabletop studio lighting with sharp miniature shadows. 50mm macro lens, shallow depth of field, sharp focus on wood grain. Rigid physics, heavy wooden clacks, no fluid bending. PENGUIN: Egg-shaped Adelie wooden toy penguin, black head/back, white belly, big white eye-rings, small dark beak with orange tip, oversized orange feet, three thin stubborn wooden feathers on top.",
+   "penguin": "Gleefully turning a tarnished brass switch on the island.",
+   "prev": "k10"
+  },
+  "k12": {
+   "id": "k12",
+   "seq": 2,
+   "prompt": "The camera cranes up 20 degrees. A heavy black wooden block drops down like a gate, completely cutting off the pink island from the rest of the city. The wooden toy penguin watches from behind the gate. Stop-motion wooden toy medium. Polished maple and walnut wood, glossy enamel paint (cherry red, neon pink, navy blue), brass hinges. Warm, directional tabletop studio lighting with sharp miniature shadows. 50mm macro lens, shallow depth of field, sharp focus on wood grain. Rigid physics, heavy wooden clacks, no fluid bending. PENGUIN: Egg-shaped Adelie wooden toy penguin, black head/back, white belly, big white eye-rings, small dark beak with orange tip, oversized orange feet, three thin stubborn wooden feathers on top.",
+   "penguin": "Standing behind the black wooden gate, watching it drop.",
+   "prev": "k11"
+  },
+  "k13": {
+   "id": "k13",
+   "seq": 3,
+   "prompt": "Close up of a wooden balance scale resting evenly on the maple table. The wooden toy penguin stands on the lower scale pan next to three red 'X' blocks. Stop-motion wooden toy medium. Polished maple and walnut wood, glossy enamel paint (cherry red, neon pink, navy blue), brass hinges. Warm, directional tabletop studio lighting with sharp miniature shadows. 50mm macro lens, shallow depth of field, sharp focus on wood grain. Rigid physics, heavy wooden clacks, no fluid bending. PENGUIN: Egg-shaped Adelie wooden toy penguin, black head/back, white belly, big white eye-rings, small dark beak with orange tip, oversized orange feet, three thin stubborn wooden feathers on top.",
+   "penguin": "Standing on the lower scale pan next to the red 'X' blocks.",
+   "prev": null
+  },
+  "k14": {
+   "id": "k14",
+   "seq": 3,
+   "prompt": "The camera tilts down 20 degrees as the scale tips heavily to one side, launching the red 'X' blocks into the air. The wooden toy penguin watches them fly. Stop-motion wooden toy medium. Polished maple and walnut wood, glossy enamel paint (cherry red, neon pink, navy blue), brass hinges. Warm, directional tabletop studio lighting with sharp miniature shadows. 50mm macro lens, shallow depth of field, sharp focus on wood grain. Rigid physics, heavy wooden clacks, no fluid bending. PENGUIN: Egg-shaped Adelie wooden toy penguin, black head/back, white belly, big white eye-rings, small dark beak with orange tip, oversized orange feet, three thin stubborn wooden feathers on top.",
+   "penguin": "Watching the red 'X' blocks launch into the air from the scale.",
+   "prev": "k13"
+  },
+  "k15": {
+   "id": "k15",
+   "seq": 3,
+   "prompt": "The camera tracks 30% right as the red 'X' blocks land in a neat row. Polished blue wooden blocks nearby are hastily covered by solid wooden domes. The wooden toy penguin stands next to the domes. Stop-motion wooden toy medium. Polished maple and walnut wood, glossy enamel paint (cherry red, neon pink, navy blue), brass hinges. Warm, directional tabletop studio lighting with sharp miniature shadows. 50mm macro lens, shallow depth of field, sharp focus on wood grain. Rigid physics, heavy wooden clacks, no fluid bending. PENGUIN: Egg-shaped Adelie wooden toy penguin, black head/back, white belly, big white eye-rings, small dark beak with orange tip, oversized orange feet, three thin stubborn wooden feathers on top.",
+   "penguin": "Standing next to the blue wooden blocks as they are covered by domes.",
+   "prev": "k14"
+  },
+  "k16": {
+   "id": "k16",
+   "seq": 3,
+   "prompt": "The camera pulls out wide to show the entire wooden toy city in a chaotic mess with scattered blocks, domes, and pink houses. The wooden toy penguin stands in the middle of the scattered blocks. Stop-motion wooden toy medium. Polished maple and walnut wood, glossy enamel paint (cherry red, neon pink, navy blue), brass hinges. Warm, directional tabletop studio lighting with sharp miniature shadows. 50mm macro lens, shallow depth of field, sharp focus on wood grain. Rigid physics, heavy wooden clacks, no fluid bending. PENGUIN: Egg-shaped Adelie wooden toy penguin, black head/back, white belly, big white eye-rings, small dark beak with orange tip, oversized orange feet, three thin stubborn wooden feathers on top.",
+   "penguin": "Standing in the middle of the chaotic, scattered wooden toy city.",
+   "prev": "k15"
+  },
+  "k17": {
+   "id": "k17",
+   "seq": 3,
+   "prompt": "The camera drifts 20% closer. The wooden toy penguin faceplants onto the maple table, revealing a stamped ink 'Made in Taiwan' logo on the bottom of its flat wooden foot. Stop-motion wooden toy medium. Polished maple and walnut wood, glossy enamel paint (cherry red, neon pink, navy blue), brass hinges. Warm, directional tabletop studio lighting with sharp miniature shadows. 50mm macro lens, shallow depth of field, sharp focus on wood grain. Rigid physics, heavy wooden clacks, no fluid bending. PENGUIN: Egg-shaped Adelie wooden toy penguin, black head/back, white belly, big white eye-rings, small dark beak with orange tip, oversized orange feet, three thin stubborn wooden feathers on top.",
+   "penguin": "Faceplanting onto the table, revealing a 'Made in Taiwan' stamp on its foot.",
+   "prev": "k16"
+  }
+ },
+ "shots": [
+  {
+   "id": "s01",
+   "seq": 0,
+   "from": "k01",
+   "to": "k02",
+   "cue": "The internet's rulebook spent ten",
+   "motion": "Camera pushes in 30% as the rulebook opens and the penguin adds more blocks.",
+   "overlay": null,
+   "transition": "cut",
+   "sfx": "Heavy wooden clack",
+   "serious": false
+  },
+  {
+   "id": "s02",
+   "seq": 0,
+   "from": "k02",
+   "to": "k03",
+   "cue": "In 2000, a company asked",
+   "motion": "Camera tilts up 30 degrees from the book to the toy city as the penguin loops the string.",
+   "overlay": {
+    "type": "counter",
+    "value": 2000,
+    "suffix": "",
+    "text": "",
+    "pos": "top"
+   },
+   "transition": "chain",
+   "sfx": "Wood sliding and string pulling",
+   "serious": false
+  },
+  {
+   "id": "s03",
+   "seq": 0,
+   "from": "k03",
+   "to": "k04",
+   "cue": "The pitch was simple. Put",
+   "motion": "Camera pushes 30% closer to the pink houses as the penguin drops the fence.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "Wooden clatter",
+   "serious": false
+  },
+  {
+   "id": "s04",
+   "seq": 1,
+   "from": "k05",
+   "to": "k06",
+   "cue": "ICANN said no.",
+   "motion": "Camera drifts 20% right as the penguin stubbornly pushes the blocks back under the hovering gavel.",
+   "overlay": null,
+   "transition": "match",
+   "sfx": "Wooden gavel smash",
+   "serious": false
+  },
+  {
+   "id": "s05",
+   "seq": 1,
+   "from": "k06",
+   "to": "k07",
+   "cue": "The company came back in",
+   "motion": "Camera tilts up 30 degrees as white wooden envelopes pour down from above.",
+   "overlay": {
+    "type": "counter",
+    "value": 2004,
+    "suffix": "",
+    "text": "",
+    "pos": "top"
+   },
+   "transition": "chain",
+   "sfx": "Clattering wood pieces",
+   "serious": false
+  },
+  {
+   "id": "s06",
+   "seq": 1,
+   "from": "k07",
+   "to": "k08",
+   "cue": "Then the letters poured in.",
+   "motion": "Camera pushes in 30% as the gavel bursts violently out of the envelope pile.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "Wood rumbling and bursting",
+   "serious": false
+  },
+  {
+   "id": "s07",
+   "seq": 1,
+   "from": "k08",
+   "to": "k09",
+   "cue": "Governments raised concerns too.",
+   "motion": "Camera holds its push as the gavel smashes down again, knocking the penguin flat.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "Heavy wood smash",
+   "serious": false
+  },
+  {
+   "id": "s08",
+   "seq": 1,
+   "from": "k08",
+   "to": "k09",
+   "cue": "So ICANN flipped, and rejected",
+   "motion": "Camera finishes the push as the penguin settles on its back amidst the chaos.",
+   "overlay": {
+    "type": "counter",
+    "value": 2007,
+    "suffix": "",
+    "text": "",
+    "pos": "top"
+   },
+   "transition": "chain",
+   "sfx": "Defeated wooden clack",
+   "serious": false
+  },
+  {
+   "id": "s09",
+   "seq": 2,
+   "from": "k10",
+   "to": "k11",
+   "cue": "Here's the twist. The adult",
+   "motion": "Camera pulls back 30% as the frown sign pops up and the penguin turns the brass switch.",
+   "overlay": null,
+   "transition": "cut",
+   "sfx": "Wood pop and brass click",
+   "serious": false
+  },
+  {
+   "id": "s10",
+   "seq": 2,
+   "from": "k11",
+   "to": "k12",
+   "cue": "Porn sites feared a digital",
+   "motion": "Camera cranes up 20 degrees as the heavy black wooden gate drops down with a thud.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "Heavy wooden thud",
+   "serious": false
+  },
+  {
+   "id": "s11",
+   "seq": 3,
+   "from": "k13",
+   "to": "k14",
+   "cue": "The company fought back with",
+   "motion": "Camera tilts down 20 degrees as the wooden scale tips heavily, launching the blocks.",
+   "overlay": null,
+   "transition": "match",
+   "sfx": "Wooden creak and whoosh",
+   "serious": false
+  },
+  {
+   "id": "s12",
+   "seq": 3,
+   "from": "k14",
+   "to": "k15",
+   "cue": "and in 2010 the panel",
+   "motion": "Camera tracks 30% right following the blocks landing and the blue blocks getting domed.",
+   "overlay": {
+    "type": "counter",
+    "value": 2010,
+    "suffix": "",
+    "text": "",
+    "pos": "top"
+   },
+   "transition": "chain",
+   "sfx": "Hollow wooden clacks",
+   "serious": false
+  },
+  {
+   "id": "s13",
+   "seq": 3,
+   "from": "k15",
+   "to": "k16",
+   "cue": "In 2011, it finally launched.",
+   "motion": "Camera pulls out wide to reveal the chaotic, ruined toy city.",
+   "overlay": {
+    "type": "counter",
+    "value": 2011,
+    "suffix": "",
+    "text": "",
+    "pos": "top"
+   },
+   "transition": "chain",
+   "sfx": "Scattered wooden clatter",
+   "serious": false
+  },
+  {
+   "id": "s14",
+   "seq": 3,
+   "from": "k16",
+   "to": "k17",
+   "cue": "Ten years. Three letters. Everyone",
+   "motion": "Camera drifts 20% closer as the penguin tries to fly and faceplants onto the table.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "Flat wooden smack",
+   "serious": false
+  }
+ ],
+ "cover": {
+  "prompt": "The penguin gleefully turning a tarnished brass switch to drop a heavy black wooden block, walling off a cluster of neon-pink wooden houses. Stop-motion wooden toy medium. Polished maple and walnut wood, glossy enamel paint. Warm, directional tabletop studio lighting with sharp miniature shadows. 50mm macro lens.",
+  "text": "THE 10 YEAR FIGHT"
+ },
+ "n_beats": 11
+}
