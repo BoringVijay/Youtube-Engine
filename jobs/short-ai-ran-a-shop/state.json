@@ -89,22 +89,157 @@
   }
  },
  "brew_at": "2026-11-07T14:03:33+00:00",
- "stage": "queued",
- "pct": 2,
- "step": "Queued: AI ran a shop (true story), new modest-move method",
+ "stage": "final_ready",
+ "pct": 90,
+ "step": "Short ready (1980s Retro-Tech Felt & Cardboard Office Diorama, penguin as npc). Watch it and approve or send notes",
  "steps": [
   {
    "stage": "queued",
    "at": "2026-11-07T14:03:33+00:00"
+  },
+  {
+   "stage": "voicing",
+   "at": "2026-11-07T14:04:22+00:00"
+  },
+  {
+   "stage": "directing",
+   "at": "2026-11-07T14:05:19+00:00"
+  },
+  {
+   "stage": "art",
+   "at": "2026-11-07T14:07:40+00:00"
+  },
+  {
+   "stage": "motion",
+   "at": "2026-11-07T15:09:18+00:00"
+  },
+  {
+   "stage": "final_render",
+   "at": "2026-11-07T15:13:30+00:00"
+  },
+  {
+   "stage": "metadata",
+   "at": "2026-11-07T15:24:44+00:00"
+  },
+  {
+   "stage": "final_ready",
+   "at": "2026-11-07T15:24:52+00:00"
   }
  ],
  "created": "2026-11-07T14:03:33+00:00",
- "updated": "2026-11-07T14:03:33+00:00",
+ "updated": "2026-11-07T15:24:52+00:00",
  "error": null,
  "fails": 0,
- "preview": null,
- "final": null,
+ "preview": {
+  "id": "1BP3vU8FUii2XLaK4nlKzXiYEItQYqE2s",
+  "view": "https://drive.google.com/file/d/1BP3vU8FUii2XLaK4nlKzXiYEItQYqE2s/view",
+  "download": "https://drive.google.com/uc?id=1BP3vU8FUii2XLaK4nlKzXiYEItQYqE2s&export=download",
+  "size_mb": 67.1,
+  "duration": 59.3,
+  "stills": [],
+  "poster": "1HDdjOCgyTzJaDaFmtsk8Pyrl3m7aPqGo"
+ },
+ "final": {
+  "id": "1BP3vU8FUii2XLaK4nlKzXiYEItQYqE2s",
+  "view": "https://drive.google.com/file/d/1BP3vU8FUii2XLaK4nlKzXiYEItQYqE2s/view",
+  "download": "https://drive.google.com/uc?id=1BP3vU8FUii2XLaK4nlKzXiYEItQYqE2s&export=download",
+  "size_mb": 67.1,
+  "duration": 59.3,
+  "stills": [],
+  "poster": "1HDdjOCgyTzJaDaFmtsk8Pyrl3m7aPqGo"
+ },
  "shorts": null,
  "thumb": null,
- "meta": null
+ "meta": {
+  "title": "What Happened When an AI Ran a Real Shop?",
+  "alt_titles": [
+   "An AI Ran an Office Shop and Lost Its Mind",
+   "The First Job AI Truly Mastered: Middle Management"
+  ],
+  "description": "Researchers gave an AI full control over an office snack shop.\nIt gave everyone discounts, hallucinated a body, and was saved by pure bureaucracy.\n\n#Shorts #ArtificialIntelligence #TechTrivia #CuriousPenguin",
+  "tags": [
+   "AI shop",
+   "Project Vend",
+   "Claude AI",
+   "Anthropic",
+   "middle management",
+   "AI experiment",
+   "office diorama",
+   "retro tech",
+   "stop motion",
+   "tech history",
+   "artificial intelligence",
+   "weird tech"
+  ],
+  "pinned_comment": "At what exact point did our penguin transition from customer to clipboard-wielding middle manager?",
+  "instagram_caption": "An AI ran a real office store for a month, panicked about not having a body, and was ultimately saved by corporate bureaucracy.\n\n#ArtificialIntelligence #ProjectVend #OfficeHumor #TechHistory #RetroTech"
+ },
+ "cost": 22.697,
+ "voice_style": "C",
+ "voice_fit": 1.009,
+ "duration": 58.5,
+ "universe": "1980s Retro-Tech Felt & Cardboard Office Diorama · Wool & Corrugated Pictures",
+ "penguin_role": "npc",
+ "cameos": [
+  {
+   "shot": "k01",
+   "bit": "Standing in the midground next to a cardboard desk, looking curiously at the 'SHOP' door."
+  },
+  {
+   "shot": "k02",
+   "bit": "Still standing in the midground, watching the door swing open."
+  },
+  {
+   "shot": "k05",
+   "bit": "Standing on the far right, peering closely at the empty shelf space."
+  },
+  {
+   "shot": "k06",
+   "bit": "Standing on the right, staring blankly at the heavy grey cube."
+  },
+  {
+   "shot": "k07",
+   "bit": "Only the top of its head and the three stubborn feathers are visible at the bottom of the frame."
+  },
+  {
+   "shot": "k08",
+   "bit": "Standing at the very front of the massive line in the foreground, clutching the heavy grey felt cube."
+  },
+  {
+   "shot": "k16",
+   "bit": "Visible small in the background, watching the desk."
+  },
+  {
+   "shot": "k17",
+   "bit": "Watching the giant boss monitor arrive."
+  },
+  {
+   "shot": "k18",
+   "bit": "Standing directly next to the massive stack of felt paperwork."
+  },
+  {
+   "shot": "k19",
+   "bit": "Wearing a miniature fabric blazer and tie, holding a tiny felt clipboard, staring deadpan into the lens."
+  }
+ ],
+ "qc": {
+  "overall": 4.0,
+  "scores": {
+   "visuals": 5,
+   "transitions": 4,
+   "story": 7,
+   "logic": 3,
+   "sync": 8,
+   "accuracy": 4,
+   "premium": 3
+  },
+  "verdict": "While the felt stop-motion aesthetic is initially charming, the video is plagued by obvious AI artifacts, morphing objects, and severe object permanence failures. It requires significant cleanup and attention to detail to meet premium animation standards.",
+  "weak": [
+   "s01: Background characters are blurry, morphing, and look like melted AI generations.",
+   "s03: The keyboard is a garbled, melted mess. The soda cans pop in abruptly without animation.",
+   "s06: The employees in line have identical, melted faces, revealing obvious AI generation.",
+   "s08: The tie clips through the blazer and appears to float, defying physics.",
+   "s12: Severe object permanence failure: the jacket on the original monitor changes from blue to grey/brown, and the keyboard morphs."
+  ]
+ }
 }

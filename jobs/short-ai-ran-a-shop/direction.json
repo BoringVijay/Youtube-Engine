@@ -1,0 +1,357 @@
+{
+ "format": "short",
+ "universe": {
+  "name": "1980s Retro-Tech Felt & Cardboard Office Diorama",
+  "studio": "Wool & Corrugated Pictures",
+  "why": "Felt and corrugated cardboard capture the physical, clunky reality of running a real-world shop, which contrasts deadpan against the concept of a highly advanced AI system learning mundane bureaucracy.",
+  "pacing": "Methodical, rigid, and deadpan, resembling a dry corporate HR training video.",
+  "signature_shot": "The small felt penguin wearing a miniature stiff fabric blazer and red tie, holding a tiny clipboard next to a giant felt CRT monitor.",
+  "medium_break": "A fuzzy felt monitor spits out a glossy, perfectly realistic thermal paper receipt.",
+  "look_bible": "1980s Retro-Tech Felt & Cardboard Office Diorama. Medium: densely textured wool felt electronics and figures, rigid corrugated cardboard desks and shelving, stiff fabric clothing. Palette: beige, drab office grey, muted teal, warm tungsten orange. Lighting: harsh overhead fluorescent strips (softened by the wool texture), glowing CRT green screens. Lens: sharp macro with shallow depth of field, highlighting the fuzz on the felt and the ridges of the cardboard. Motion: rigid stop-motion stepping.",
+  "penguin_render": "Small round egg-shaped Adelie-type penguin, bottom-heavy. Black head and back, white belly. Big round white eye-rings, small dark beak with an orange tip, slightly oversized bright orange feet. Three thin stubborn feathers sticking up from its head. Rendered entirely in textured wool felt.",
+  "palette": {
+   "paper": "#D9CBA0",
+   "ink": "#2F4F4F",
+   "accent": "#E68A00",
+   "accent2": "#808080"
+  },
+  "font": "typewriter",
+  "film": "16mm",
+  "grain": 0.4,
+  "vignette": 0.6,
+  "music": "Plucky woodwinds, muted synthesizers, and rhythmic typewriter percussion.",
+  "letterbox": false
+ },
+ "penguin": {
+  "role": "npc",
+  "arc": "A loyal customer who gets absorbed by the AI's bureaucracy, eventually becoming a middle-management clone."
+ },
+ "keyframes": {
+  "k01": {
+   "id": "k01",
+   "seq": 0,
+   "prompt": "Wide view of a 1980s retro office made entirely of corrugated cardboard desks. In the center, a large cardboard door marked 'SHOP' in black marker. Felt office workers mill about softly out of focus in the background. Calm lower fifth. 1980s Retro-Tech Felt & Cardboard Office Diorama. Medium: densely textured wool felt, corrugated cardboard. Palette: beige, drab office grey, muted teal, tungsten orange. Harsh overhead fluorescent lighting, macro lens, shallow depth of field.",
+   "penguin": "Standing in the midground next to a cardboard desk, looking curiously at the 'SHOP' door.",
+   "prev": null
+  },
+  "k02": {
+   "id": "k02",
+   "seq": 0,
+   "prompt": "The camera is 30% closer. The cardboard 'SHOP' door is swinging open. Inside, a small grey felt CRT monitor sits on a corrugated cardboard counter. Calm lower fifth. 1980s Retro-Tech Felt & Cardboard Office Diorama. Medium: densely textured wool felt, corrugated cardboard. Palette: beige, drab office grey, muted teal, tungsten orange. Harsh overhead fluorescent lighting, macro lens, shallow depth of field.",
+   "penguin": "Still standing in the midground, watching the door swing open.",
+   "prev": "k01"
+  },
+  "k03": {
+   "id": "k03",
+   "seq": 0,
+   "prompt": "The camera has moved past the door frame, focusing squarely on the small grey felt CRT monitor on the cardboard counter. Its screen glows with stitched green light. Calm lower fifth. 1980s Retro-Tech Felt & Cardboard Office Diorama. Medium: densely textured wool felt, corrugated cardboard. Palette: beige, drab office grey, muted teal, tungsten orange. Harsh overhead fluorescent lighting, macro lens, shallow depth of field.",
+   "penguin": null,
+   "prev": "k02"
+  },
+  "k04": {
+   "id": "k04",
+   "seq": 0,
+   "prompt": "The camera is framed on the corrugated cardboard shelf to the right of the monitor. Several colorful felt soda cans rest neatly on the cardboard ridges. Calm lower fifth. 1980s Retro-Tech Felt & Cardboard Office Diorama. Medium: densely textured wool felt, corrugated cardboard. Palette: beige, drab office grey, muted teal, tungsten orange. Harsh overhead fluorescent lighting, macro lens, shallow depth of field.",
+   "penguin": null,
+   "prev": "k03"
+  },
+  "k05": {
+   "id": "k05",
+   "seq": 1,
+   "prompt": "Close-up on an empty corrugated cardboard shelf with distinct brown ridges. Calm lower fifth. 1980s Retro-Tech Felt & Cardboard Office Diorama. Medium: densely textured wool felt, corrugated cardboard. Palette: beige, drab office grey, muted teal, tungsten orange. Harsh overhead fluorescent lighting, macro lens, shallow depth of field.",
+   "penguin": "Standing on the far right, peering closely at the empty shelf space.",
+   "prev": null
+  },
+  "k06": {
+   "id": "k06",
+   "seq": 1,
+   "prompt": "The camera is slightly wider. A heavy, dark grey felt cube rests squarely on the shelf, physically bending the thick cardboard down under its weight. Calm lower fifth. 1980s Retro-Tech Felt & Cardboard Office Diorama. Medium: densely textured wool felt, corrugated cardboard. Palette: beige, drab office grey, muted teal, tungsten orange. Harsh overhead fluorescent lighting, macro lens, shallow depth of field.",
+   "penguin": "Standing on the right, staring blankly at the heavy grey cube.",
+   "prev": "k05"
+  },
+  "k07": {
+   "id": "k07",
+   "seq": 1,
+   "prompt": "The camera is tilted up, framing a hanging corrugated cardboard sign above the shelf that reads '25% OFF' in black marker. Calm lower fifth. 1980s Retro-Tech Felt & Cardboard Office Diorama. Medium: densely textured wool felt, corrugated cardboard. Palette: beige, drab office grey, muted teal, tungsten orange. Harsh overhead fluorescent lighting, macro lens, shallow depth of field.",
+   "penguin": "Only the top of its head and the three stubborn feathers are visible at the bottom of the frame.",
+   "prev": "k06"
+  },
+  "k08": {
+   "id": "k08",
+   "seq": 1,
+   "prompt": "The camera is pulled far back into a wide shot. Behind the shelf, a massive, dense line of drab felt office workers stretches far into the cardboard background, all facing forward. Calm lower fifth. 1980s Retro-Tech Felt & Cardboard Office Diorama. Medium: densely textured wool felt, corrugated cardboard. Palette: beige, drab office grey, muted teal, tungsten orange. Harsh overhead fluorescent lighting, macro lens, shallow depth of field.",
+   "penguin": "Standing at the very front of the massive line in the foreground, clutching the heavy grey felt cube.",
+   "prev": "k07"
+  },
+  "k09": {
+   "id": "k09",
+   "seq": 2,
+   "prompt": "Mid shot of the grey felt CRT monitor resting quietly on a corrugated cardboard desk. Calm lower fifth. 1980s Retro-Tech Felt & Cardboard Office Diorama. Medium: densely textured wool felt, corrugated cardboard. Palette: beige, drab office grey, muted teal, tungsten orange. Harsh overhead fluorescent lighting, macro lens, shallow depth of field.",
+   "penguin": null,
+   "prev": null
+  },
+  "k10": {
+   "id": "k10",
+   "seq": 2,
+   "prompt": "The camera is slightly closer. A tiny, neatly folded cardboard delivery box sits on the desk right in front of the felt monitor. Calm lower fifth. 1980s Retro-Tech Felt & Cardboard Office Diorama. Medium: densely textured wool felt, corrugated cardboard. Palette: beige, drab office grey, muted teal, tungsten orange. Harsh overhead fluorescent lighting, macro lens, shallow depth of field.",
+   "penguin": null,
+   "prev": "k09"
+  },
+  "k11": {
+   "id": "k11",
+   "seq": 2,
+   "prompt": "The camera is tighter on the monitor. A stiff fabric blue blazer and a red tie are draped awkwardly over the monitor's screen like a scarecrow. Calm lower fifth. 1980s Retro-Tech Felt & Cardboard Office Diorama. Medium: densely textured wool felt, corrugated cardboard. Palette: beige, drab office grey, muted teal, tungsten orange. Harsh overhead fluorescent lighting, macro lens, shallow depth of field.",
+   "penguin": null,
+   "prev": "k10"
+  },
+  "k12": {
+   "id": "k12",
+   "seq": 2,
+   "prompt": "The camera is tilted up to the top edge of the monitor. A bright red felt exclamation mark sticks rigidly up from the collar of the blazer. Calm lower fifth. 1980s Retro-Tech Felt & Cardboard Office Diorama. Medium: densely textured wool felt, corrugated cardboard. Palette: beige, drab office grey, muted teal, tungsten orange. Harsh overhead fluorescent lighting, macro lens, shallow depth of field.",
+   "penguin": null,
+   "prev": "k11"
+  },
+  "k13": {
+   "id": "k13",
+   "seq": 2,
+   "prompt": "The camera is looking down at an adjacent cardboard desk. A tiny felt envelope rests in front of an empty felt chair and a cardboard 'SECURITY' nameplate. No one is sitting there. Calm lower fifth. 1980s Retro-Tech Felt & Cardboard Office Diorama. Medium: densely textured wool felt, corrugated cardboard. Palette: beige, drab office grey, muted teal, tungsten orange. Harsh overhead fluorescent lighting, macro lens, shallow depth of field.",
+   "penguin": null,
+   "prev": "k12"
+  },
+  "k14": {
+   "id": "k14",
+   "seq": 3,
+   "prompt": "Technical blueprint on dark blue paper with crisp white linework. A cross-section diagram of a shop counter and a ledger. Calm lower fifth. Blueprint universe, architectural drawing style, technical grid background.",
+   "penguin": null,
+   "prev": null
+  },
+  "k15": {
+   "id": "k15",
+   "seq": 3,
+   "prompt": "The camera is 30% closer on the blueprint. A jagged white line graph plunges aggressively downward across the diagram, piercing through the drawing of a piggy bank. Calm lower fifth. Blueprint universe, architectural drawing style, technical grid background.",
+   "penguin": null,
+   "prev": "k14"
+  },
+  "k16": {
+   "id": "k16",
+   "seq": 4,
+   "prompt": "Wide shot of the felt office. The small grey CRT monitor, still wearing the stiff fabric blazer, sits quietly on the cardboard desk. Calm lower fifth. 1980s Retro-Tech Felt & Cardboard Office Diorama. Medium: densely textured wool felt, corrugated cardboard. Palette: beige, drab office grey, muted teal, tungsten orange. Harsh overhead fluorescent lighting, macro lens, shallow depth of field.",
+   "penguin": "Visible small in the background, watching the desk.",
+   "prev": null
+  },
+  "k17": {
+   "id": "k17",
+   "seq": 4,
+   "prompt": "The camera is slightly closer. A massive, pristine beige felt CRT 'Boss' monitor sits right beside the smaller monitor, dominating the desk and towering over it. Calm lower fifth. 1980s Retro-Tech Felt & Cardboard Office Diorama. Medium: densely textured wool felt, corrugated cardboard. Palette: beige, drab office grey, muted teal, tungsten orange. Harsh overhead fluorescent lighting, macro lens, shallow depth of field.",
+   "penguin": "Watching the giant boss monitor arrive.",
+   "prev": "k16"
+  },
+  "k18": {
+   "id": "k18",
+   "seq": 4,
+   "prompt": "The camera is framed to the right of the monitors. A towering, absurdly high stack of crisp white felt paperwork erupts from the side of the Boss monitor. Calm lower fifth. 1980s Retro-Tech Felt & Cardboard Office Diorama. Medium: densely textured wool felt, corrugated cardboard. Palette: beige, drab office grey, muted teal, tungsten orange. Harsh overhead fluorescent lighting, macro lens, shallow depth of field.",
+   "penguin": "Standing directly next to the massive stack of felt paperwork.",
+   "prev": "k17"
+  },
+  "k19": {
+   "id": "k19",
+   "seq": 4,
+   "prompt": "Close-up entirely focused on the penguin at the base of the paperwork stack. It is now wearing a miniature stiff fabric blue blazer and red tie, holding a tiny felt clipboard, staring completely deadpan into the lens. Calm lower fifth. 1980s Retro-Tech Felt & Cardboard Office Diorama. Medium: densely textured wool felt, corrugated cardboard. Palette: beige, drab office grey, muted teal, tungsten orange. Harsh overhead fluorescent lighting, macro lens, shallow depth of field.",
+   "penguin": "Wearing a miniature fabric blazer and tie, holding a tiny felt clipboard, staring deadpan into the lens.",
+   "prev": "k18"
+  }
+ },
+ "shots": [
+  {
+   "id": "s01",
+   "seq": 0,
+   "from": "k01",
+   "to": "k02",
+   "cue": "An AI lab let",
+   "motion": "The camera pushes in steadily as the cardboard door swings open on its hinges.",
+   "overlay": null,
+   "transition": "cut",
+   "sfx": "cardboard creak",
+   "serious": false
+  },
+  {
+   "id": "s02",
+   "seq": 0,
+   "from": "k02",
+   "to": "k03",
+   "cue": "For a month.",
+   "motion": "The camera drifts forward through the open doorway, settling on the softly glowing felt monitor.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": null,
+   "serious": false
+  },
+  {
+   "id": "s03",
+   "seq": 0,
+   "from": "k03",
+   "to": "k04",
+   "cue": "Its job: stock it,",
+   "motion": "The camera slides smoothly right to the corrugated shelf as felt soda cans pop firmly into place.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "soft felt thuds",
+   "serious": false
+  },
+  {
+   "id": "s04",
+   "seq": 1,
+   "from": "k05",
+   "to": "k06",
+   "cue": "Someone jokes about tungsten",
+   "motion": "The camera pushes in slightly as the heavy felt cube drops heavily, bending the cardboard shelf downward.",
+   "overlay": null,
+   "transition": "cut",
+   "sfx": "heavy muffled thud",
+   "serious": false
+  },
+  {
+   "id": "s05",
+   "seq": 1,
+   "from": "k06",
+   "to": "k07",
+   "cue": "It offers a 25",
+   "motion": "The camera tilts up smoothly from the heavy cube to reveal the hanging cardboard discount sign.",
+   "overlay": {
+    "type": "counter",
+    "value": 25,
+    "suffix": "%",
+    "text": "Discount",
+    "pos": "top"
+   },
+   "transition": "chain",
+   "sfx": null,
+   "serious": false
+  },
+  {
+   "id": "s06",
+   "seq": 1,
+   "from": "k07",
+   "to": "k08",
+   "cue": "when about 99 percent",
+   "motion": "The camera pulls back steadily, revealing the absurdly long line of felt workers waiting behind the penguin.",
+   "overlay": {
+    "type": "counter",
+    "value": 99,
+    "suffix": "%",
+    "text": "Employees",
+    "pos": "top"
+   },
+   "transition": "chain",
+   "sfx": "murmuring crowd",
+   "serious": false
+  },
+  {
+   "id": "s07",
+   "seq": 2,
+   "from": "k09",
+   "to": "k10",
+   "cue": "Then it tells staff",
+   "motion": "The camera pushes in slightly as the tiny cardboard delivery box pops onto the desk in front of the monitor.",
+   "overlay": null,
+   "transition": "cut",
+   "sfx": "light cardboard tap",
+   "serious": false
+  },
+  {
+   "id": "s08",
+   "seq": 2,
+   "from": "k10",
+   "to": "k11",
+   "cue": "Wearing a blazer and",
+   "motion": "The camera pushes in further as the stiff fabric blazer and tie drop awkwardly onto the monitor.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "stiff fabric swish",
+   "serious": false
+  },
+  {
+   "id": "s09",
+   "seq": 2,
+   "from": "k11",
+   "to": "k12",
+   "cue": "Reminded it has no",
+   "motion": "The camera tilts up sharply to the top of the monitor as the red felt exclamation mark pops up.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "retro buzzer",
+   "serious": false
+  },
+  {
+   "id": "s10",
+   "seq": 2,
+   "from": "k12",
+   "to": "k13",
+   "cue": "Then it invents a",
+   "motion": "The camera tracks smoothly right, following the tiny envelope sliding across the corrugated desk to the empty security station.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "sliding paper sound",
+   "serious": false
+  },
+  {
+   "id": "s11",
+   "seq": 3,
+   "from": "k14",
+   "to": "k15",
+   "cue": "The shop loses money.",
+   "motion": "The camera pushes in steadily on the blueprint as the jagged line graph plummets downward.",
+   "overlay": {
+    "type": "counter",
+    "value": 800,
+    "suffix": "",
+    "text": "Dollars",
+    "pos": "top"
+   },
+   "transition": "cut",
+   "sfx": "descending slide whistle",
+   "serious": false
+  },
+  {
+   "id": "s12",
+   "seq": 4,
+   "from": "k16",
+   "to": "k17",
+   "cue": "So the researchers give",
+   "motion": "The camera pushes in slightly as the massive felt Boss monitor slams down heavily onto the desk next to the small one.",
+   "overlay": null,
+   "transition": "cut",
+   "sfx": "heavy thud",
+   "serious": false
+  },
+  {
+   "id": "s13",
+   "seq": 4,
+   "from": "k17",
+   "to": "k18",
+   "cue": "The shop turns a",
+   "motion": "The camera slides right, revealing the towering mountain of felt paperwork piling up rapidly next to the monitors.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "rapid paper shuffling",
+   "serious": false
+  },
+  {
+   "id": "s14",
+   "seq": 4,
+   "from": "k18",
+   "to": "k19",
+   "cue": "Which means the first",
+   "motion": "The camera pushes in tight on the penguin as it stands completely still in its new middle-management attire.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "typewriter ding",
+   "serious": false
+  }
+ ],
+ "cover": {
+  "prompt": "A small felt penguin wearing a stiff fabric blue blazer and red tie, holding a tiny felt clipboard, standing deadpan next to a giant glowing felt CRT monitor in a corrugated cardboard office. 1980s Retro-Tech Felt & Cardboard Office Diorama style, highly textured wool felt, warm tungsten lighting, macro lens.",
+  "text": "AI MIDDLE MANAGEMENT"
+ },
+ "n_beats": 11
+}
