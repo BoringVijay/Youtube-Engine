@@ -79,9 +79,7 @@ The reference sheet lives at `creative/penguin-sheet.png`. Every frame with the 
 
 Rendered in the video's universe: clay penguin in claymation, paper penguin in paper, linework penguin in blueprint, painted penguin in oil.
 
-Cameos:
-- Cameo role: long video 2 to 4 appearances, Short 1.
-- Mix the types: hidden spot-it (small in frame), eavesdropper on an important conversation, caught in the middle of an event, slapstick victim (falls, trips, gets splashed), wrong place entirely, in an outfit that fits the scene (hard hat, toga, trench coat, lab coat).
+Casting and cameos:
 - The penguin is in every video, but its role changes with the story. Cast it per topic before planning shots:
   - protagonist: the story happens to it or through it (it is the one stuck in the vault, the one riding the cable)
   - sidekick: tags along beside the main subject, reacting
@@ -89,6 +87,7 @@ Cameos:
   - NPC: part of the world, doing its own odd job in the background of many shots
   - cameo: just a fun appearance, 2 to 4 times
 - As protagonist, sidekick or villain it is in most shots and drives or reacts to the action. As NPC or cameo it stays a spot-it treat.
+- Cameo role: long video 2 to 4 appearances, Short 1. Mix the bits: hidden spot-it (small in frame), eavesdropper on an important conversation, caught in the middle of an event, slapstick victim (falls, trips, gets splashed), wrong place entirely, in an outfit that fits the scene (hard hat, toga, trench coat, lab coat).
 - Whatever the role, it never talks, never narrates and never explains anything. The narrator can mention it in passing when it is in the story.
 - Never during a tragic or serious beat. It can appear just after, quietly, as a small human moment.
 - At least one cameo per video is subtle enough that most people miss it first time.
