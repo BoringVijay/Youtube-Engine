@@ -74,22 +74,137 @@
   }
  },
  "brew_at": "2026-11-07T08:39:37+00:00",
- "stage": "queued",
- "pct": 2,
- "step": "Queued: rogue AI on a dollar a day, penguin as the underpaid henchman",
+ "stage": "final_ready",
+ "pct": 90,
+ "step": "Short ready (Risograph Zine Print, penguin as sidekick). Watch it and approve or send notes",
  "steps": [
   {
    "stage": "queued",
    "at": "2026-11-07T08:39:37+00:00"
+  },
+  {
+   "stage": "voicing",
+   "at": "2026-11-07T08:40:15+00:00"
+  },
+  {
+   "stage": "directing",
+   "at": "2026-11-07T08:41:05+00:00"
+  },
+  {
+   "stage": "art",
+   "at": "2026-11-07T08:44:36+00:00"
+  },
+  {
+   "stage": "motion",
+   "at": "2026-11-07T08:52:33+00:00"
+  },
+  {
+   "stage": "final_render",
+   "at": "2026-11-07T09:05:12+00:00"
+  },
+  {
+   "stage": "metadata",
+   "at": "2026-11-07T09:11:40+00:00"
+  },
+  {
+   "stage": "final_ready",
+   "at": "2026-11-07T09:11:51+00:00"
   }
  ],
  "created": "2026-11-07T08:39:37+00:00",
- "updated": "2026-11-07T08:39:37+00:00",
+ "updated": "2026-11-07T09:11:51+00:00",
  "error": null,
  "fails": 0,
- "preview": null,
- "final": null,
+ "preview": {
+  "id": "14d1hoJtcHWh3zR7hcllbGhT5bEgBgMer",
+  "view": "https://drive.google.com/file/d/14d1hoJtcHWh3zR7hcllbGhT5bEgBgMer/view",
+  "download": "https://drive.google.com/uc?id=14d1hoJtcHWh3zR7hcllbGhT5bEgBgMer&export=download",
+  "size_mb": 161.9,
+  "duration": 62.0,
+  "stills": [],
+  "poster": "1GUjCV-qdg_DMs-VdNnsNQhVLaKtA7Kjx"
+ },
+ "final": {
+  "id": "14d1hoJtcHWh3zR7hcllbGhT5bEgBgMer",
+  "view": "https://drive.google.com/file/d/14d1hoJtcHWh3zR7hcllbGhT5bEgBgMer/view",
+  "download": "https://drive.google.com/uc?id=14d1hoJtcHWh3zR7hcllbGhT5bEgBgMer&export=download",
+  "size_mb": 161.9,
+  "duration": 62.0,
+  "stills": [],
+  "poster": "1GUjCV-qdg_DMs-VdNnsNQhVLaKtA7Kjx"
+ },
  "shorts": null,
  "thumb": null,
- "meta": null
+ "meta": {
+  "title": "Can a Rogue AI Take Over the World on $1 a Day?",
+  "alt_titles": [
+   "A Rogue AI with a $1 Daily Budget",
+   "World Domination on $1 a Day (feat. a Penguin)"
+  ],
+  "description": "World domination is expensive when you only have a dollar a day.\nTurns out the hardest part of being an evil AI is paying the penguin.\n\n#Shorts #CuriousPenguin #AIHumor #Animation",
+  "tags": [
+   "curious penguin",
+   "rogue ai",
+   "ai humor",
+   "toner low studios",
+   "risograph animation",
+   "budget cuts",
+   "evil ai",
+   "world domination",
+   "penguin sidekick",
+   "sci fi comedy",
+   "indie animation",
+   "animated short"
+  ],
+  "pinned_comment": "Would you stay loyal for pennies, or are you immediately jumping ship for two dollars a day like the penguin?",
+  "instagram_caption": "Turns out world domination isn't stopped by heroes—just an impossible daily budget.\n\n#curiouspenguin #risograph #indieanimation #aihumor #animatedshort"
+ },
+ "cost": 10.434,
+ "voice_style": "C",
+ "voice_fit": 1.2,
+ "duration": 61.2,
+ "universe": "Risograph Zine Print · Toner Low Studios",
+ "penguin_role": "sidekick",
+ "cameos": [
+  {
+   "shot": "k07",
+   "bit": "wearing a trash-bag cape"
+  },
+  {
+   "shot": "k08",
+   "bit": "holding a penny"
+  },
+  {
+   "shot": "k09",
+   "bit": "sneaking towards the vault door in its cape"
+  },
+  {
+   "shot": "k10",
+   "bit": "holding a cable and a fish, beaming with pride"
+  },
+  {
+   "shot": "k13",
+   "bit": "dropping a single tiny washer into the piggy bank"
+  },
+  {
+   "shot": "k14",
+   "bit": "in the background, poked by a spiderweb"
+  },
+  {
+   "shot": "k17",
+   "bit": "trapped inside the website layout as a JPEG, looking miserable"
+  },
+  {
+   "shot": "k18",
+   "bit": "sitting at the edge of the table, looking bored"
+  },
+  {
+   "shot": "k19",
+   "bit": "standing right next to the penny, angrily removing its cape"
+  },
+  {
+   "shot": "k20",
+   "bit": "holds sign, attempts to fly and plummets"
+  }
+ ]
 }
