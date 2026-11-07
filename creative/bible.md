@@ -93,7 +93,7 @@ AI clips and images must not carry numbers or important text. Numbers, charts an
 - The score is part of the studio: each universe gets its own instrumentation (clay: plucky woodwinds and toy percussion; noir: brushed drums and muted trumpet; paper: music box and strings; blueprint: clean synth pulses).
 
 ## Shorts
-Shorts are re-composed, not cropped. When picking Shorts, choose a self-contained run of beats: hook in the first second, payoff by 30 to 45 seconds. Each Short should work as its own tiny episode.
+When picking Shorts, choose a self-contained run of beats: hook in the first second, payoff by 30 to 45 seconds. Each Short should work as its own tiny episode.
 
 ## Staying monetisable
 YouTube demonetises content that looks templated or repetitive, and AI personas posing as experts on money, health, law or politics. The anthology rule is our defence, so protect it: vary structure and pacing as well as visuals, frame finance and crypto as stories and curiosity, never advice, and disclose AI where a scene looks realistic.
