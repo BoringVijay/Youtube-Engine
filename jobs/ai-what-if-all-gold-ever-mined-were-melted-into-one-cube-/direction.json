@@ -189,19 +189,10 @@
    "transition": "cut",
    "penguin": null,
    "overlay": {
-    "type": "bars",
-    "text": "VALUE COMPARISON",
-    "bars": [
-     {
-      "label": "GOLD CUBE",
-      "value": 100
-     },
-     {
-      "label": "US ECONOMY",
-      "value": 98
-     }
-    ],
-    "suffix": ""
+    "type": "label",
+    "text": "Tens of trillions of dollars",
+    "sub": "about one year of the whole US economy",
+    "pos": "top"
    },
    "nerd_bonus": false,
    "sfx": null

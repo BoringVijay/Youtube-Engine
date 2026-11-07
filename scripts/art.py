@@ -15,7 +15,8 @@ CANON = os.path.join(ROOT, "creative", "penguin-sheet.png")
 PENGUIN = ("THE PENGUIN (fixed traits, keep every one): a small, round, egg-shaped Adelie-type penguin, a bit bottom-heavy. Black head and back, clean white belly. "
            "Big round white eye-rings that make it look permanently curious. Small dark beak with an orange tip. Slightly oversized bright orange feet. "
            "Flippers a little too short (it cannot fly). SIGNATURE: three thin stubborn feathers sticking up from the top of its head, slightly bent. Nosy, deadpan, quietly unlucky.")
-RULES = ("No watermark, no border, no logos or brand names, no real people, no famous characters. No numbers and no text unless the shot description asks for a sign or label; "
+RULES = ("No watermark, no border, no logos, no company or brand names or lettering that imitates them, no real people, no famous characters, no stick figures "
+         "(any people are made in this universe's own material). No numbers and no text unless the shot description asks for a sign or label; "
          "then spell it exactly. Keep the bottom fifth of the frame calm for captions. Cinematic composition, one clear focal point.")
 
 
@@ -71,7 +72,8 @@ def frame_prompt(shot, d):
                 f"one warm highlight in {u['palette']['accent']}. It is the channel's 'nerd bonus' device.")
     p = f"{shot['prompt']}\n\nVISUAL UNIVERSE: {look}\n"
     if shot.get("penguin"):
-        p += (f"\nPENGUIN CAMEO ({shot['penguin'].get('type', '')}): {shot['penguin']['bit']}. Use the penguin exactly as in the penguin reference image, "
+        p += (f"\nPENGUIN CAMEO ({shot['penguin'].get('type', '')}): {shot['penguin']['bit']}. The reference image shows ONLY the penguin's design: "
+              "copy the character exactly, but not its background, pose or framing. "
               f"rendered as: {u.get('penguin_render', 'part of this universe')}. {PENGUIN}\n")
     else:
         p += "\nNo penguin in this shot.\n"
@@ -147,7 +149,7 @@ class Art:
             name = f"{s['id']}{suffix}.png"
             if self.have(name):
                 return name
-            refs = [key] + ([pen] if s.get("penguin") else [])
+            refs = [pen] if s.get("penguin") else []  # no key-art ref: the model copies its composition
             if aspect != "16:9" and suffix:
                 wide = self.have(f"{s['id']}.png")
                 refs = ([wide] if wide else []) + refs

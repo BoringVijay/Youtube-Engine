@@ -182,7 +182,7 @@ const Captions: React.FC<{words: Word[]; look: Look}> = ({words, look}) => {
   const pop = interpolate(t - g[0].t0, [0, 0.12], [0.92, 1], clamp);
   return <div style={{position: 'absolute', left: 0, right: 0, bottom: (tall ? 360 : look.letterbox ? 105 : 80) * u, display: 'flex', justifyContent: 'center'}}>
     <div style={{background: look.captionBg, color: look.captionInk, fontFamily: F.family, fontWeight: F.weight, letterSpacing: `${F.tracking}em`,
-      fontSize: (tall ? 64 : 46) * u, lineHeight: 1.15, padding: `${10 * u}px ${24 * u}px`, borderRadius: 14 * u, transform: `scale(${pop})`,
+      fontSize: (tall ? 66 : 54) * u, lineHeight: 1.15, padding: `${10 * u}px ${24 * u}px`, borderRadius: 14 * u, transform: `scale(${pop})`,
       maxWidth: '86%', textAlign: 'center', textTransform: look.captionCase === 'upper' ? 'uppercase' : 'none'}}>
       {g.map((wd, i) => <span key={i} style={{color: t >= wd.t0 && t <= wd.t1 + 0.05 ? look.accent : undefined, marginRight: '0.28em'}}>{wd.w.replace(/[,;:]$/, '')}</span>)}
     </div>

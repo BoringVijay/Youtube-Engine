@@ -254,9 +254,9 @@
   }
  },
  "brew_at": "2026-11-06T15:26:28.303Z",
- "error": "open() got an unexpected keyword argument 'metadata_errors'",
- "stage": "test_ready",
- "step": "Test cut ready (Deep-sea layered paper diorama). 5 shots get real animation after you approve",
+ "error": null,
+ "stage": "queued",
+ "step": "Repainting every frame (fixing repeated anchor shots)",
  "steps": [
   {
    "stage": "queued",
@@ -283,7 +283,7 @@
    "at": "2026-11-07T03:06:52+00:00"
   }
  ],
- "updated": "2026-11-07T03:06:52+00:00",
+ "updated": "2026-11-07T03:25:40+00:00",
  "duration": 316.2,
  "preview": {
   "id": "1JmL34z_fwFvR_cbD6RebJzzaFE4BbqXy",
@@ -304,7 +304,7 @@
  "shorts": null,
  "thumb": null,
  "meta": null,
- "fails": 1,
+ "fails": 0,
  "cost": 4.162,
  "universe": "Deep-sea layered paper diorama",
  "cameos": [
