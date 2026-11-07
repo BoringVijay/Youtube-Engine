@@ -164,8 +164,14 @@ def main():
         except Exception as e:
             return {"scene": sc["id"], "error": str(e)[:300]}
     if img_model and REQ.get("scenes"):
-        with ThreadPoolExecutor(max_workers=3) as ex:
-            for r in ex.map(do_scene, REQ["scenes"]):
+        for sc in REQ["scenes"]:  # scenes that continue another scene use its image as the reference
+            if sc.get("ref_scene"):
+                sc["ref_path"] = os.path.relpath(os.path.join(OUT, f"img-{sc['ref_scene']}.png"), ROOT)
+        first_pass = [sc for sc in REQ["scenes"] if not sc.get("ref_scene")]
+        second_pass = [sc for sc in REQ["scenes"] if sc.get("ref_scene")]
+        for batch in (first_pass, second_pass):
+          with ThreadPoolExecutor(max_workers=3) as ex:
+            for r in ex.map(do_scene, batch):
                 (report["images"] if "file" in r else report["errors"]).append(r)
                 log("scene", r.get("scene"), r.get("error", "ok")[:160])
 
@@ -239,7 +245,13 @@ def main():
                 small = path.replace(".mp4", "-small.mp4")
                 subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", path, "-vf", "scale=-2:960", "-crf", "26", "-preset", "veryfast", "-an", small], check=True)
                 subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", path, "-vf", "fps=1,scale=-2:360,tile=8x1", "-frames:v", "1", path.replace(".mp4", "-frames.jpg")], check=True)
-                report["videos"].append({"id": t["id"], "model": model, "secs": round(time.time() - t0), "file": os.path.relpath(small, ROOT)})
+                entry = {"id": t["id"], "model": model, "secs": round(time.time() - t0), "file": os.path.relpath(small, ROOT)}
+                if REQ.get("review"):
+                    import qc
+                    r = qc.clip(path, {"motion": t["prompt"][:600]}, {"universe": {"look_bible": REQ.get("look", "")}}, "lab")
+                    entry["review"] = {"score": r["score"], "issues": r.get("issues", [])[:4]}
+                    log("review", t["id"], r["score"])
+                report["videos"].append(entry)
                 log("motion ok", t["id"], model, f"{time.time() - t0:.0f}s")
                 err = None
                 break
