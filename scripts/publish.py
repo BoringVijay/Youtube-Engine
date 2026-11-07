@@ -42,7 +42,7 @@ def api(method, path, body=None, params=None, ctype="application/json", raw=None
         raise RuntimeError(f"YouTube {method} {path} -> HTTP {e.code}: {e.read()[:400].decode('utf-8', 'replace')}")
 
 
-def upload_video(path, snippet, status):
+def upload_video(path, snippet, status, progress=None):
     size = os.path.getsize(path)
     meta = json.dumps({"snippet": snippet, "status": status}).encode()
     init = urllib.request.Request("https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status", data=meta, method="POST",
@@ -52,7 +52,7 @@ def upload_video(path, snippet, status):
         loc = urllib.request.urlopen(init, timeout=60).headers["Location"]
     except urllib.error.HTTPError as e:
         raise RuntimeError(f"YouTube upload start -> HTTP {e.code}: {e.read()[:400].decode('utf-8', 'replace')}")
-    chunk, pos = 16 * 1024 * 1024, 0
+    chunk, pos = 8 * 1024 * 1024, 0
     with open(path, "rb") as f:
         while pos < size:
             data = f.read(chunk)
@@ -65,6 +65,8 @@ def upload_video(path, snippet, status):
                 if e.code != 308:
                     raise RuntimeError(f"YouTube upload chunk -> HTTP {e.code}: {e.read()[:300].decode('utf-8', 'replace')}")
             pos = end + 1
+            if progress:
+                progress(int(pos * 100 / size))
     raise RuntimeError("upload ended without a video id")
 
 
@@ -157,7 +159,11 @@ def publish(st, save, status_cb):
         status = {"privacyStatus": "private", "selfDeclaredMadeForKids": False, "containsSyntheticMedia": True, "embeddable": True, "license": "youtube"}
         st["step"] = f"Uploading {kind} to YouTube (private)"
         save(st); status_cb()
-        res = upload_video(local, snippet, status)
+        def prog(pct, kind=kind):
+            st["step"] = f"Uploading {kind} to YouTube (private) {pct}%"
+            st["pct"] = 92 + pct // 25
+            save(st); status_cb()
+        res = upload_video(local, snippet, status, prog)
         vid = res["id"]
         entry = {"kind": kind, "id": vid, "url": f"https://youtu.be/{vid}", "studio": f"https://studio.youtube.com/video/{vid}/edit",
                  "title": title, "privacy": res.get("status", {}).get("privacyStatus", "private"), "uploaded": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")}

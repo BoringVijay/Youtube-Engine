@@ -14,6 +14,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import art as artmod  # noqa: E402
 import budget  # noqa: E402
 import instagram  # noqa: E402
+import youtube  # noqa: E402
 import director  # noqa: E402
 import drive  # noqa: E402
 import gai  # noqa: E402
@@ -72,6 +73,19 @@ def all_states():
     return out
 
 
+RUN = {"active": False}
+PUBLISH_CFG = json.load(open(os.path.join(ROOT, "config", "publish.json")))
+
+
+def next_check():
+    """The engine wakes hourly at :41 UTC (GitHub can start it a few minutes late)."""
+    t = dt.datetime.now(dt.timezone.utc).replace(second=0, microsecond=0)
+    nxt = t.replace(minute=41)
+    if nxt <= t:
+        nxt += dt.timedelta(hours=1)
+    return nxt.isoformat()
+
+
 def publish_status():
     jobs = []
     for st in sorted(all_states(), key=lambda s: s.get("updated", ""), reverse=True)[:40]:
@@ -79,7 +93,8 @@ def publish_status():
                                      "error", "updated", "created", "duration", "notes_in", "universe", "cameos", "cost", "youtube", "instagram", "format", "penguin_role", "v")}
         jobs.append(j)
     body = {"at": now(), "engine": "github-actions", "version": 3, "backend": gai.backend(), "budget": budget.summary(), "jobs": jobs,
-            "instagram": instagram.account()}
+            "instagram": instagram.account(), "youtube": {k: v for k, v in youtube.channel().items() if k != "uploads"},
+            "run": {**RUN, "next": next_check()}, "publish": {"api_upload": PUBLISH_CFG.get("api_audited", False)}}
     try:
         drive.put_json("outbox", "status.json", body)
     except Exception as e:
@@ -169,7 +184,13 @@ def handle_inbox():
                 st["approved_notes"] = m.get("notes", "")
                 set_stage(st, "motion", "Approved. Animating the key shots next")
             elif m.get("stage") == "final" and st["stage"] == "final_ready":
-                set_stage(st, "approved", "Approved. Waiting for the publisher")
+                if PUBLISH_CFG.get("api_audited"):
+                    set_stage(st, "approved", "Approved. Uploading to YouTube next")
+                else:
+                    import publish
+                    taken = [x.get("slot") for x in all_states() if x.get("slot")]
+                    st["slot"] = publish.next_slots(1, taken)[0]
+                    set_stage(st, "posting", "Ready to post. Open the posting kit, upload from the YouTube app, then tap I've posted it", 92)
             else:
                 save_state(st)
         elif t == "redo" and st:
@@ -182,7 +203,10 @@ def handle_inbox():
             set_stage(st, "queued", f"Redo requested ({what})")
         elif t == "audition":
             auditions.append(m)
-        elif t == "cancel" and st:
+        elif t == "posted" and st and st.get("stage") in ("posting", "approved", "final_ready"):
+            st["posted_claimed"] = m.get("at") or now()
+            set_stage(st, "posting", "Looking for it on your channel", 94)
+        elif t == "cancel" and st and st.get("stage") in ("queued", "directing", "voicing", "art", "test_render", "motion", "final_render", "metadata"):
             st.setdefault("notes_in", []).append({"at": m.get("at") or now(), "stage": "cancel", "notes": m.get("notes", "")})
             set_stage(st, "cancelled", "Stopped by you. Tap Resume to pick up where it stopped", st.get("pct", 0))
         elif t == "instagram" and st:
@@ -743,6 +767,7 @@ def backfill_reviews():
 
 
 def main():
+    RUN.update(active=True, started=now())
     os.makedirs(JOBS, exist_ok=True)
     make_sfx()
     handle_inbox()
@@ -754,9 +779,17 @@ def main():
         if time.time() - T0 > BUDGET_SEC:
             log("time budget used; the rest waits for the next run")
             break
+        try:
+            handle_inbox()  # approvals and posts sent while the previous Short was rendering
+        except Exception as e:
+            log("inbox re-check failed:", str(e)[:120])
+        st = load_state(st["id"]) or st
+        if st.get("stage") not in order:
+            continue
         if cancel_requested(st["id"]):
             set_stage(st, "cancelled", "Stopped by you. Tap Resume to pick up where it stopped", st.get("pct", 0))
             continue
+        RUN["job"] = st["id"]
         try:
             advance_short(st) if st.get("v") == 3 else advance(st)
         except Cancelled:
@@ -779,6 +812,7 @@ def main():
             if st["fails"] >= 3:
                 st["stage"] = "failed"
             save_state(st); publish_status()
+    RUN.update(active=False, finished=now(), job=None)
     publish_status()
 
 

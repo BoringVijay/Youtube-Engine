@@ -4,7 +4,7 @@ name: Produce videos
 # run: 1
 on:
   schedule:
-    - cron: "41 */2 * * *"
+    - cron: "41 * * * *"
   workflow_dispatch:
   push:
     branches: [main]
@@ -67,6 +67,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
           GDRIVE_REFRESH_TOKEN: ${{ secrets.GDRIVE_REFRESH_TOKEN }}
           GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
@@ -95,13 +96,27 @@ jobs:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
           GDRIVE_REFRESH_TOKEN: ${{ secrets.GDRIVE_REFRESH_TOKEN }}
           GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
         run: |
           set -o pipefail
           python3 -u scripts/instagram.py 2>&1 | tee -a logs/produce-last.log
+      - name: Track posted Shorts on YouTube (light, every run)
+        if: always()
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          GDRIVE_REFRESH_TOKEN: ${{ secrets.GDRIVE_REFRESH_TOKEN }}
+          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+        run: |
+          mkdir -p logs
+          python3 -u scripts/youtube.py sync 2>&1 | tee -a logs/produce-last.log || true
       - name: Save job state
-        if: always() && steps.check.outputs.work == 'yes'
+        if: always()
         run: |
           git config user.name "engine-bot"
           git config user.email "engine-bot@users.noreply.github.com"
