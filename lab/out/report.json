@@ -1,36 +1,94 @@
 {
- "at": "2026-11-06T17:36:16Z",
- "images": [],
- "voices": [],
- "videos": [],
- "errors": [
+ "at": "2026-11-07T05:29:05Z",
+ "images": [
   {
-   "character": "penguin-sheet",
-   "error": "image failed"
+   "scene": "cab-k1",
+   "file": "lab/out/img-cab-k1.jpg"
   },
   {
-   "scene": "cameo-tiltshift",
-   "error": "image failed"
-  },
-  {
-   "scene": "cameo-16mm",
-   "error": "image failed"
-  },
-  {
-   "scene": "cameo-clay-trip",
-   "error": "image failed"
-  },
-  {
-   "scene": "cameo-blueprint",
-   "error": "image failed"
-  },
-  {
-   "scene": "cameo-oilpainting",
-   "error": "image failed"
-  },
-  {
-   "video": "cameo-trip",
-   "error": "no model or no source frame"
+   "scene": "cab-k2",
+   "file": "lab/out/img-cab-k2.jpg"
   }
- ]
+ ],
+ "voices": [
+  {
+   "id": "A-charon",
+   "label": "A. Calm deadpan explainer (Charon)",
+   "model": "gemini-3.1-flash-tts-preview",
+   "voice": "Charon",
+   "sec": 27.9,
+   "file": "lab/out/voice-A-charon.mp3"
+  },
+  {
+   "id": "A-iapetus",
+   "label": "A. Calm deadpan explainer (Iapetus)",
+   "model": "gemini-3.1-flash-tts-preview",
+   "voice": "Iapetus",
+   "sec": 27.2,
+   "file": "lab/out/voice-A-iapetus.mp3"
+  },
+  {
+   "id": "A-puck",
+   "label": "A. Calm deadpan explainer (Puck)",
+   "model": "gemini-3.1-flash-tts-preview",
+   "voice": "Puck",
+   "sec": 25.1,
+   "file": "lab/out/voice-A-puck.mp3"
+  },
+  {
+   "id": "B-puck",
+   "label": "B. Punchy Shorts host (Puck)",
+   "model": "gemini-3.1-flash-tts-preview",
+   "voice": "Puck",
+   "sec": 24.6,
+   "file": "lab/out/voice-B-puck.mp3"
+  },
+  {
+   "id": "B-fenrir",
+   "label": "B. Punchy Shorts host (Fenrir)",
+   "model": "gemini-3.1-flash-tts-preview",
+   "voice": "Fenrir",
+   "sec": 23.7,
+   "file": "lab/out/voice-B-fenrir.mp3"
+  },
+  {
+   "id": "C-puck",
+   "label": "C. Mix: cool with a punch (Puck)",
+   "model": "gemini-3.1-flash-tts-preview",
+   "voice": "Puck",
+   "sec": 26.0,
+   "file": "lab/out/voice-C-puck.mp3"
+  },
+  {
+   "id": "C-orus",
+   "label": "C. Mix: cool with a punch (Orus)",
+   "model": "gemini-3.1-flash-tts-preview",
+   "voice": "Orus",
+   "sec": 25.0,
+   "file": "lab/out/voice-C-orus.mp3"
+  },
+  {
+   "id": "C-algenib",
+   "label": "C. Mix: cool with a punch (Algenib)",
+   "model": "gemini-3.1-flash-tts-preview",
+   "voice": "Algenib",
+   "sec": 28.3,
+   "file": "lab/out/voice-C-algenib.mp3"
+  }
+ ],
+ "videos": [
+  {
+   "id": "chain-fast",
+   "model": "veo-3.1-fast-generate-001",
+   "secs": 66,
+   "file": "lab/out/vid-chain-fast-small.mp4"
+  },
+  {
+   "id": "chain-lite",
+   "model": "veo-3.1-lite-generate-001",
+   "secs": 56,
+   "file": "lab/out/vid-chain-lite-small.mp4"
+  }
+ ],
+ "errors": []
 }

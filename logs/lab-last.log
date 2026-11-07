@@ -1,82 +1,25 @@
-17:36:16 models: ['gemini-2.5-flash-preview-tts', 'gemini-2.5-pro-preview-tts', 'gemini-2.5-flash-image', 'gemini-3-pro-image-preview', 'gemini-3-pro-image', 'nano-banana-pro-preview', 'gemini-3.1-flash-image-preview', 'gemini-3.1-flash-image', 'gemini-3.1-flash-lite-image', 'gemini-nano-banana-2.1', 'gemini-omni-flash-preview', 'gemini-omni-1.1-flash', 'gemini-omni-1.2-flash', 'lyria-3-clip-preview', 'lyria-3-pro-preview', 'lyria-3.5', 'gemini-3.1-flash-tts-preview', 'gemini-3.8-flash-tts', 'gemini-3.8-flash-lite-tts', 'lyria-realtime-exp']
-17:36:16 image model: gemini-nano-banana-2.1
-17:36:16 backend: studio
-17:36:16 image retry 1 HTTP 402 gemini-nano-banana-2.1:generateContent: {
-  "error": {
-    "code": 402,
-    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage yo
-17:36:25 image retry 2 HTTP 402 gemini-nano-banana-2.1:generateContent: {
-  "error": {
-    "code": 402,
-    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage yo
-17:36:41 image retry 3 HTTP 402 gemini-nano-banana-2.1:generateContent: {
-  "error": {
-    "code": 402,
-    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage yo
-17:37:05 image retry 1 HTTP 402 gemini-nano-banana-2.1:generateContent: {
-  "error": {
-    "code": 402,
-    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage yo
-17:37:05 image retry 1 HTTP 402 gemini-nano-banana-2.1:generateContent: {
-  "error": {
-    "code": 402,
-    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage yo
-17:37:05 image retry 1 HTTP 402 gemini-nano-banana-2.1:generateContent: {
-  "error": {
-    "code": 402,
-    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage yo
-17:37:13 image retry 2 HTTP 402 gemini-nano-banana-2.1:generateContent: {
-  "error": {
-    "code": 402,
-    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage yo
-17:37:13 image retry 2 HTTP 402 gemini-nano-banana-2.1:generateContent: {
-  "error": {
-    "code": 402,
-    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage yo
-17:37:13 image retry 2 HTTP 402 gemini-nano-banana-2.1:generateContent: {
-  "error": {
-    "code": 402,
-    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage yo
-17:37:29 image retry 3 HTTP 402 gemini-nano-banana-2.1:generateContent: {
-  "error": {
-    "code": 402,
-    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage yo
-17:37:29 image retry 3 HTTP 402 gemini-nano-banana-2.1:generateContent: {
-  "error": {
-    "code": 402,
-    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage yo
-17:37:30 image retry 3 HTTP 402 gemini-nano-banana-2.1:generateContent: {
-  "error": {
-    "code": 402,
-    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage yo
-17:37:53 image retry 1 HTTP 402 gemini-nano-banana-2.1:generateContent: {
-  "error": {
-    "code": 402,
-    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage yo
-17:37:53 image retry 1 HTTP 402 gemini-nano-banana-2.1:generateContent: {
-  "error": {
-    "code": 402,
-    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage yo
-17:37:54 scene cameo-tiltshift image failed
-17:37:54 scene cameo-16mm image failed
-17:37:54 scene cameo-clay-trip image failed
-17:38:01 image retry 2 HTTP 402 gemini-nano-banana-2.1:generateContent: {
-  "error": {
-    "code": 402,
-    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage yo
-17:38:01 image retry 2 HTTP 402 gemini-nano-banana-2.1:generateContent: {
-  "error": {
-    "code": 402,
-    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage yo
-17:38:18 image retry 3 HTTP 402 gemini-nano-banana-2.1:generateContent: {
-  "error": {
-    "code": 402,
-    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage yo
-17:38:18 image retry 3 HTTP 402 gemini-nano-banana-2.1:generateContent: {
-  "error": {
-    "code": 402,
-    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage yo
-17:38:42 scene cameo-blueprint image failed
-17:38:42 scene cameo-oilpainting image failed
-17:38:42 video model: gemini-omni-flash-preview
-17:38:42 done: 0 images, 0 voices, 0 videos, 7 errors
+05:29:05 models: ['gemini-2.5-flash-preview-tts', 'gemini-2.5-pro-preview-tts', 'gemini-2.5-flash-image', 'gemini-3-pro-image-preview', 'gemini-3-pro-image', 'nano-banana-pro-preview', 'gemini-3.1-flash-image-preview', 'gemini-3.1-flash-image', 'gemini-3.1-flash-lite-image', 'gemini-nano-banana-2.1', 'gemini-omni-flash-preview', 'gemini-omni-1.1-flash', 'gemini-omni-1.2-flash', 'lyria-3-clip-preview', 'lyria-3-pro-preview', 'lyria-3.5', 'gemini-3.1-flash-tts-preview', 'gemini-3.8-flash-tts', 'gemini-3.8-flash-lite-tts', 'lyria-realtime-exp']
+05:29:05 image model: gemini-nano-banana-2.1
+05:29:05 backend: vertex
+05:29:23 scene cab-k1 ok
+05:29:23 scene cab-k2 ok
+05:29:34 tts mime gemini-3.1-flash-tts-preview audio/l16; rate=24000; channels=1
+05:29:34 tts mime gemini-3.1-flash-tts-preview audio/l16; rate=24000; channels=1
+05:29:35 voice A-charon ok
+05:29:35 voice A-iapetus ok
+05:29:45 tts mime gemini-3.1-flash-tts-preview audio/l16; rate=24000; channels=1
+05:29:45 tts mime gemini-3.1-flash-tts-preview audio/l16; rate=24000; channels=1
+05:29:46 voice A-puck ok
+05:29:46 voice B-puck ok
+05:29:55 tts mime gemini-3.1-flash-tts-preview audio/l16; rate=24000; channels=1
+05:29:55 voice B-fenrir ok
+05:29:58 tts mime gemini-3.1-flash-tts-preview audio/l16; rate=24000; channels=1
+05:29:58 voice C-puck ok
+05:30:05 tts mime gemini-3.1-flash-tts-preview audio/l16; rate=24000; channels=1
+05:30:05 voice C-orus ok
+05:30:10 tts mime gemini-3.1-flash-tts-preview audio/l16; rate=24000; channels=1
+05:30:10 voice C-algenib ok
+05:30:10 video model: gemini-omni-flash-preview
+05:31:16 motion ok chain-fast veo-3.1-fast-generate-001 66s
+05:32:12 motion ok chain-lite veo-3.1-lite-generate-001 56s
+05:32:12 done: 2 images, 8 voices, 2 videos, 0 errors
