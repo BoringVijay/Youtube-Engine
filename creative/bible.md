@@ -58,14 +58,14 @@ Write a look bible for the chosen universe before any frame: medium, materials, 
 ## Cinematography
 - Every shot has one idea and one focal point. Leave calm space in the lower fifth for captions.
 - Vary shot size like a film: wide to establish, medium for action, close or macro for the detail that pays off.
-- Camera language per moment: slow push-in for revelation, crane down for scale, locked-off for deadpan comedy, snap zoom or whip-pan for punchlines, handheld drift for tension.
-- Rhythm: in the first 15 seconds change the picture every 2 to 3 seconds. Elsewhere 4 to 7 seconds, longer for emotional beats.
+- Camera language per moment: fast push-in for revelation, crane down for scale, a sudden stop after a big move for deadpan comedy, snap zoom or whip-pan for punchlines, handheld drift for tension. The camera never just sits there.
+- Rhythm: about 4 seconds a shot. In the hook, something new every 2 to 3 seconds.
 - Use match cuts and visual callbacks (a shape, prop or colour that returns later).
 - Shorts only, 50 to 59 seconds, and every second is real animation. No designed stills, no slideshow holds.
 - Every shot travels: the next keyframe is a new camera position (push in 3x, pull back to reveal, orbit, crane a whole level, fly through something). Something happens in every shot. About 4 seconds a shot, 10 to 16 shots a Short.
 - Never hold or repeat a frame. Each new VO cue gets a new image: a new angle, shot size, set or detail. Consecutive shots must differ in at least two of camera angle, shot size and location.
 - The hero object (the cube, the cable, the vault) appears in at most a third of the shots. Spend the rest on consequences, people, details and the penguin.
-- Stills must still feel alive: choose camera moves with intent, and write prompts with layered foreground, midground and background so the move has parallax.
+- Write keyframe prompts with layered foreground, midground and background so the move between keyframes has parallax and depth.
 
 ## Humour
 Deadpan and surreal beats loud. Background jokes reward re-watching (signs, labels, tiny props). Roast systems and ideas, never victims. No jokes on tragic beats.
@@ -86,9 +86,9 @@ Casting and cameos:
   - sidekick: tags along beside the main subject, reacting
   - villain or antagonist: it caused the mess (it tripped the breaker, it ate the last gold bar)
   - NPC: part of the world, doing its own odd job in the background of many shots
-  - cameo: just a fun appearance, 2 to 4 times
+  - cameo: just a fun appearance, 1 to 2 times
 - As protagonist, sidekick or villain it is in most shots and drives or reacts to the action. As NPC or cameo it stays a spot-it treat.
-- Cameo role: long video 2 to 4 appearances, Short 1. Mix the bits: hidden spot-it (small in frame), eavesdropper on an important conversation, caught in the middle of an event, slapstick victim (falls, trips, gets splashed), wrong place entirely, in an outfit that fits the scene (hard hat, toga, trench coat, lab coat).
+- Cameo role: 1 to 2 appearances per Short. Mix the bits: hidden spot-it (small in frame), eavesdropper on an important conversation, caught in the middle of an event, slapstick victim (falls, trips, gets splashed), wrong place entirely, in an outfit that fits the scene (hard hat, toga, trench coat, lab coat).
 - Whatever the role, it never talks, never narrates and never explains anything. The narrator can mention it in passing when it is in the story.
 - Never during a tragic or serious beat. It can appear just after, quietly, as a small human moment.
 - At least one cameo per video is subtle enough that most people miss it first time.
@@ -99,14 +99,14 @@ Casting and cameos:
 AI clips and images must not carry numbers or important text. Numbers, charts and labels are designed overlays drawn in the universe's style (clay numbers, paper cut-out digits, chalk, typewriter, blueprint labels). Keep on-screen text to a few words.
 
 ## Sound
-- Voice: a friend telling you something wild on a terrace at night. Loud, warm, animated, real laughs and sighs, slows down for eerie or serious bits. Recorded in whole takes, not line by line.
+- Voice: the pacing of the best viral explainer Shorts. Cool, nonchalant, matter-of-fact, quietly amused; it lets the facts be wild so it doesn't have to be. A small punch on reveals, a dry beat before the twist, slower for eerie or serious bits. Never hype, never shouting. Recorded in one take. Emulate the style, never clone a real person's voice.
 - SFX that fit the medium (clay squish, paper rustle, projector click, typewriter, vinyl crackle). Meme-style cues sparingly, only where they genuinely land: a bass boom on a reveal, a record scratch, crickets, a sad trombone.
 - Never rip trending audio from TikTok or Instagram (copyright claims take the revenue). Use original sounds, generated sounds or the YouTube Audio Library.
 - Silence is a sound. Drop everything for the biggest line.
 - The score is part of the studio: each universe gets its own instrumentation (clay: plucky woodwinds and toy percussion; noir: brushed drums and muted trumpet; paper: music box and strings; blueprint: clean synth pulses).
 
 ## Shorts
-When picking Shorts, choose a self-contained run of beats: hook in the first second, payoff by 30 to 45 seconds. Each Short should work as its own tiny episode.
+Every video is a 50 to 59 second vertical Short. Hook in the first second (a strange premise in under 12 words), escalate in 2 or 3 steps, twist around 40 seconds, last line loops back to the first or lands a dry joke. Each Short is its own tiny episode.
 
 ## Staying monetisable
 YouTube demonetises content that looks templated or repetitive, and AI personas posing as experts on money, health, law or politics. The anthology rule is our defence, so protect it: vary structure and pacing as well as visuals, frame finance and crypto as stories and curiosity, never advice, and disclose AI where a scene looks realistic.
