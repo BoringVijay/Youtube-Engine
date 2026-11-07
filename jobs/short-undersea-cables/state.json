@@ -67,9 +67,9 @@
  },
  "brew_at": "2026-11-07T05:33:41+00:00",
  "created": "2026-11-07T05:33:41+00:00",
- "stage": "final_ready",
- "pct": 90,
- "step": "Short ready (Macro photography of handmade miniature sets, penguin as protagonist). Watch it and approve or send notes",
+ "stage": "posting",
+ "pct": 92,
+ "step": "Ready to post. Open the posting kit, upload from the YouTube app, then tap I've posted it",
  "steps": [
   {
    "stage": "queued",
@@ -102,10 +102,14 @@
   {
    "stage": "final_ready",
    "at": "2026-11-07T06:38:13+00:00"
+  },
+  {
+   "stage": "posting",
+   "at": "2026-11-07T08:35:45+00:00"
   }
  ],
  "fails": 0,
- "updated": "2026-11-07T06:38:13+00:00",
+ "updated": "2026-11-07T08:35:45+00:00",
  "error": null,
  "cost": 9.312,
  "universe": "Macro photography of handmade miniature sets · Tiny Props Workshop",
@@ -193,5 +197,13 @@
   ],
   "pinned_comment": "Should we issue him waterproof tape next time, or just promote him to Cloud Architect? 🐧⚡",
   "instagram_caption": "Your messages don't fly through space—they crawl along the seafloor. Meet the world's smallest technician trying to keep the internet alive.\n\n#CuriousPenguin #TinyPropsWorkshop #MiniatureWorld #InternetFacts #MacroPhotography"
- }
+ },
+ "notes_in": [
+  {
+   "at": "2026-11-07T08:13:11.260Z",
+   "stage": "final",
+   "notes": ""
+  }
+ ],
+ "slot": "2026-11-08T12:30:00+05:30"
 }

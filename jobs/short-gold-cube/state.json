@@ -71,9 +71,9 @@
  },
  "brew_at": "2026-11-07T05:33:41+00:00",
  "created": "2026-11-07T05:33:41+00:00",
- "stage": "final_ready",
- "pct": 90,
- "step": "Short ready (Mudlark Clay Works, penguin as villain). Watch it and approve or send notes",
+ "stage": "posting",
+ "pct": 92,
+ "step": "Ready to post. Open the posting kit, upload from the YouTube app, then tap I've posted it",
  "steps": [
   {
    "stage": "queued",
@@ -106,10 +106,14 @@
   {
    "stage": "final_ready",
    "at": "2026-11-07T05:58:21+00:00"
+  },
+  {
+   "stage": "posting",
+   "at": "2026-11-07T08:35:44+00:00"
   }
  ],
  "fails": 0,
- "updated": "2026-11-07T05:58:21+00:00",
+ "updated": "2026-11-07T08:35:47+00:00",
  "error": null,
  "cost": 8.342,
  "universe": "Mudlark Clay Works · Mudlark Clay Works",
@@ -213,5 +217,18 @@
   ],
   "pinned_comment": "At what point in the heist did you realize this bird definitely cannot fly with nineteen kilograms of bullion?",
   "instagram_caption": "Every gram of gold in human history fits into a 22-metre cube. Just keep an eye on the penguin in the corner.\n\n#GoldFacts #ScienceFacts #Claymation #StopMotion #MudlarkClayWorks"
- }
+ },
+ "notes_in": [
+  {
+   "at": "2026-11-07T08:11:03.605Z",
+   "stage": "final",
+   "notes": ""
+  },
+  {
+   "at": "2026-11-07T08:13:15.593Z",
+   "stage": "final",
+   "notes": ""
+  }
+ ],
+ "slot": "2026-11-08T19:30:00+05:30"
 }
