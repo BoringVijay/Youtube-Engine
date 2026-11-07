@@ -84,6 +84,11 @@ Plan it like a film:
    - Story: each shot advances the story; set up, escalate, pay off. The final shot lands the payoff visually.
    - Premium craft: simple, readable actions that animation models render cleanly (one main motion per shot, no crowds of tiny moving parts,
      no complex hand interactions, no text). Avoid anything that would look goofy, cheap or AI-made.
+   - Inside a chained shot the first and last keyframe are the SAME place with the same objects; only the camera and the action move.
+     Never ask one shot to turn one object into a different one (a bill into a server, a hand into a penguin) or to fly through into a new
+     location: video models render that as a cheap morph. A change of place or object happens at a sequence boundary, as a designed cut.
+   - One medium, one character design for the whole Short (no sticker-style penguin in one shot and a drawn one in the next), consistent
+     scale between objects, and no words in keyframes except a deliberate sign gag.
    MOTION RULE (the most important rule): every pair of consecutive keyframes must be a clearly DIFFERENT camera position, so the animation between them travels.
    Each step does at least one big move: push in 3x or more, pull back to reveal, orbit 60 to 180 degrees, crane up or down a whole level, fly through a gap or
    object, or follow the subject somewhere new. Never two keyframes with the same framing. Something also happens in every shot (a reveal, a transformation,
