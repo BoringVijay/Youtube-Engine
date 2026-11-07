@@ -24,6 +24,8 @@ Answer in one line each:
 4. **Our take.** One honest opinion we will say out loud. Neutral by default, but the take is never mush.
 5. **The roast target.** One thing (never a private person, never a group identity) that deserves a gentle jab.
 
+6. **The penguin's role.** Cast it per `creative/bible.md`: protagonist, sidekick, villain, antagonist, NPC or cameo, whichever makes this story funnier or clearer. If it is a lead, sidekick or villain, write it into the visual cues of most beats. It never speaks; the narrator may mention it in passing.
+
 If you cannot fill 2 and 4, the topic is weak. Say so and stop.
 
 ## Stage 2: Facts first
@@ -50,7 +52,8 @@ Use the structure for the format from `references/structures.md`. For each beat:
 Rules:
 - Write how people talk. Contractions. Short sentences. One idea per sentence.
 - Words per minute: ~165 for narration. Short = 95-150 words. Long 4-7 min = 650-1,150 words.
-- Every 2-3 sentences, something changes on screen. Write the visual cue in brackets.
+- Every 2-3 sentences, something changes on screen. Write the visual cue in brackets. Each cue is a new image (new angle, set or detail), never the same hero shot again.
+- One number per fact. Use the same rounded figure every time it is said, and keep the exact value in the fact sheet.
 - Analogies over jargon. When a nerd term is needed, say it once, then translate ("a private key, basically the master password to the vault").
 - Give the nerds one "bonus" detail per segment that's precise and correct.
 - No lists announced as lists ("number three..."). Use transitions that pull forward: "But here's the thing." "Which sounds fine. Until..." "And that's where it gets weird."

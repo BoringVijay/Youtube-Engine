@@ -7,9 +7,12 @@ The director stage reads this file before planning any video. Change it here and
 ## Retired
 - Stickman explainers and template infotainment (title card, stat card, bar chart, repeat). Never again. No stick figures anywhere, even as background extras: people are rendered in the video's universe (paper people, clay people, painted people).
 - Same look twice in a row. Two consecutive videos never share a visual universe.
+- The slideshow feel (Vijay's verdict on the gold cube cut, Nov 2026): the same frame held under several captions, the same hero object on the same set shot after shot, a video that reads as frames stitched together. Never again.
 
 ## The benchmark
 The November 2026 lab: claymation boardroom with the shark staring at camera, the paper-diorama crane-down to the glowing cable, the blueprint with "minute taker (Aptenodytes forsteri)". Every frame has an idea in it, a clear focal point and a joke or a feeling. Nothing is generic.
+
+The motion bar is the lab's paper-cut ocean shot: the camera cranes down through layered paper waves to the seabed and data pulses along the glowing cables. It feels alive, crafted and expensive. Every video should feel like that, not like a slideshow.
 
 ## The anthology rule
 Think of the channel as an anthology series, the way Love, Death & Robots works: one brand, a new studio every episode. Each video should feel like a different team made it, while the penguin, the narrator's honesty and the craft bar stay constant.
@@ -59,6 +62,9 @@ Write a look bible for the chosen universe before any frame: medium, materials, 
 - Rhythm: in the first 15 seconds change the picture every 2 to 3 seconds. Elsewhere 4 to 7 seconds, longer for emotional beats.
 - Use match cuts and visual callbacks (a shape, prop or colour that returns later).
 - Motion budget goes to the hook, the twist, the biggest joke and the emotional peak. Everything else is a designed still with a camera move.
+- Never hold or repeat a frame. Each new VO cue gets a new image: a new angle, shot size, set or detail. Consecutive shots must differ in at least two of camera angle, shot size and location.
+- The hero object (the cube, the cable, the vault) appears in at most a third of the shots. Spend the rest on consequences, people, details and the penguin.
+- Stills must still feel alive: choose camera moves with intent, and write prompts with layered foreground, midground and background so the move has parallax.
 
 ## Humour
 Deadpan and surreal beats loud. Background jokes reward re-watching (signs, labels, tiny props). Roast systems and ideas, never victims. No jokes on tragic beats.
@@ -73,10 +79,16 @@ The reference sheet lives at `creative/penguin-sheet.png`. Every frame with the 
 
 Rendered in the video's universe: clay penguin in claymation, paper penguin in paper, linework penguin in blueprint, painted penguin in oil.
 
-Cameos:
-- Long video: 2 to 4 cameos. Short: 1 (sometimes 0, so people keep looking).
-- Mix the types: hidden spot-it (small in frame), eavesdropper on an important conversation, caught in the middle of an event, slapstick victim (falls, trips, gets splashed), wrong place entirely, in an outfit that fits the scene (hard hat, toga, trench coat, lab coat).
-- It is never the main character and never explains anything. Spotting it is the fun.
+Casting and cameos:
+- The penguin is in every video, but its role changes with the story. Cast it per topic before planning shots:
+  - protagonist: the story happens to it or through it (it is the one stuck in the vault, the one riding the cable)
+  - sidekick: tags along beside the main subject, reacting
+  - villain or antagonist: it caused the mess (it tripped the breaker, it ate the last gold bar)
+  - NPC: part of the world, doing its own odd job in the background of many shots
+  - cameo: just a fun appearance, 2 to 4 times
+- As protagonist, sidekick or villain it is in most shots and drives or reacts to the action. As NPC or cameo it stays a spot-it treat.
+- Cameo role: long video 2 to 4 appearances, Short 1. Mix the bits: hidden spot-it (small in frame), eavesdropper on an important conversation, caught in the middle of an event, slapstick victim (falls, trips, gets splashed), wrong place entirely, in an outfit that fits the scene (hard hat, toga, trench coat, lab coat).
+- Whatever the role, it never talks, never narrates and never explains anything. The narrator can mention it in passing when it is in the story.
 - Never during a tragic or serious beat. It can appear just after, quietly, as a small human moment.
 - At least one cameo per video is subtle enough that most people miss it first time.
 - Running gag: somewhere near the end it tries to fly. It always fails. Vary how.
@@ -99,4 +111,4 @@ When picking Shorts, choose a self-contained run of beats: hook in the first sec
 YouTube demonetises content that looks templated or repetitive, and AI personas posing as experts on money, health, law or politics. The anthology rule is our defence, so protect it: vary structure and pacing as well as visuals, frame finance and crypto as stories and curiosity, never advice, and disclose AI where a scene looks realistic.
 
 ## Truth
-Real numbers only, from the script's verify list. Speculation is framed as speculation. Fun never beats accuracy.
+Real numbers only, from the script's verify list. One number per fact: every on-screen figure matches the VO and the fact sheet exactly, and the same fact never shows two different values (the gold cube showed 197,037 and 216,000 tonnes for one total). Speculation is framed as speculation. Fun never beats accuracy.
