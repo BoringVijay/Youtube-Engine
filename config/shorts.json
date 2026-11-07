@@ -21,8 +21,10 @@
   "final_min": 6,
   "retries": 1,
   "final_rounds": 1,
-  "max_reshoots": 3,
+  "max_reshoots": 2,
   "note": "Gemini Pro reviews every keyframe, every shot and the final cut against the 7 standards in the bible; below the bar it regenerates with the reviewer's fix.",
-  "note2": "Lab 4: by eye, small-move first+last clips look clean but the reviewer scored them 3-5 (it nitpicks flipper/lever detail). Thresholds recalibrated to what Veo can reach; 1 retry."
+  "note2": "Lab 4: by eye, small-move first+last clips look clean but the reviewer scored them 3-5 (it nitpicks flipper/lever detail). Thresholds recalibrated to what Veo can reach; 1 retry.",
+  "clip_retries": 0,
+  "note3": "Cost control after 'AI ran a shop' ($22.70): keyframes get 1 redraw (cheap), shots are not re-animated on review, final cut re-shoots at most 2 shots. Target ~$10-12 a Short."
  }
 }

@@ -87,6 +87,7 @@ Plan it like a film:
    - Inside a chained shot the first and last keyframe are the SAME place with the same objects; only the camera and the action move.
      Never ask one shot to turn one object into a different one (a bill into a server, a hand into a penguin) or to fly through into a new
      location: video models render that as a cheap morph. A change of place or object happens at a sequence boundary, as a designed cut.
+   - No human hands or arms reaching into any frame, and no crowds of human faces (they melt); show people as a few simple figures at a distance.
    - One medium, one character design for the whole Short (no sticker-style penguin in one shot and a drawn one in the next), consistent
      scale between objects, and no words in keyframes except a deliberate sign gag.
    LAB 4 RULE (tested 2026-11-07, overrides anything below that asks for big moves): consecutive keyframes in a chained shot differ by a
@@ -297,7 +298,7 @@ def motion(a, d, spans, progress=None, cancelled=None, only=None, notes=None):
         if any(d["keyframes"][k].get("penguin") for k in (sh["from"], sh.get("to")) if k):
             prompt += f"\nThe penguin keeps its exact design: {artmod.PENGUIN}"
         price_kind = "video_lite_per_sec" if tier == "veo_lite" else "video_per_sec"
-        base_prompt, best, rounds = prompt, None, 1 + (int(qc.CFG.get("retries", 2)) if qc.enabled() else 0)
+        base_prompt, best, rounds = prompt, None, 1 + (int(qc.CFG.get("clip_retries", qc.CFG.get("retries", 2))) if qc.enabled() else 0)
         for rnd in range(rounds):
           budget.check(a.job, price_kind, secs)
           order = gai.CANDIDATES[tier] + ([m for m in gai.CANDIDATES["veo"]] if tier == "veo_lite" else [])
