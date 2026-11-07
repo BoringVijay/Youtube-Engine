@@ -389,7 +389,9 @@ def stage_direction(st):
     set_stage(st, "directing", "Choosing the visual universe and writing the shot list")
     words = sum(len(voice.strip_tags(b.get("vo", "")).split()) for b in st["brew"]["script"].get("beats", []))
     budget.check(st["id"], "text_call", 3)
-    d = director.direct(st, words / 2.6, max_motion=3 if is_short(st) else int(VOICE_CFG.get("max_motion", 6)), notes=st.get("redo_notes", ""), short=is_short(st))
+    anim = is_short(st) and VOICE_CFG.get("short_motion") == "all"
+    d = director.direct(st, words / 2.6, max_motion=99 if anim else (3 if is_short(st) else int(VOICE_CFG.get("max_motion", 6))), notes=st.get("redo_notes", ""),
+                        short=is_short(st), shot_seconds=float(VOICE_CFG.get("short_shot_seconds", 5.5)) if anim else None)
     budget.log(st["id"], "text_call", 3, gai.LAST["backend"])
     json.dump(d, open(p, "w"), indent=1, ensure_ascii=False)
     st["universe"] = d["universe"]["name"] + (f" · {d['universe']['studio']}" if d["universe"].get("studio") else "")

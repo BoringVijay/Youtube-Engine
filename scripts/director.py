@@ -25,10 +25,13 @@ def recent_universes(exclude_id):
     return out[-6:]
 
 
-def direct(st, est_seconds, max_motion=6, notes="", short=False):
+def direct(st, est_seconds, max_motion=6, notes="", short=False, shot_seconds=None):
     script = st["brew"]["script"]
     beats = [{"i": i, "vo": re.sub(r"\[[a-z ]+\]", "", b.get("vo", "")).strip(), "idea": b.get("visual", "")} for i, b in enumerate(script.get("beats", []))]
-    n_shots = max(8, round(est_seconds / (3.2 if short else 5.5)))
+    n_shots = max(6 if shot_seconds else 8, round(est_seconds / (shot_seconds or (3.2 if short else 5.5))))
+    all_motion = max_motion >= n_shots + 6
+    pace = (f"every shot is a living animated moment of about {shot_seconds or 5:g} seconds with its own action and camera move, "
+            "so the Short feels like a real animated film, not a slideshow") if all_motion else "cut fast"
     angle = st["brew"].get("angle", "")
     prompt = f"""You are the director and production designer of Curious Penguin, a YouTube channel where every video is a different creative experience.
 Read the creative bible, then direct this video.
@@ -43,7 +46,7 @@ Creator's angle and tone notes: {angle or 'none'}
 Universes used in the last videos (do NOT reuse): {recent_universes(st['id']) or 'none yet'}
 {('Reviewer notes from the last cut, apply them: ' + notes) if notes else ''}
 
-FORMAT: {"a vertical 9:16 YouTube Short. Compose every shot for a phone screen (tall frames, subject in the middle third, big readable shapes), cut fast, hook in the first second. Cast the penguin per the bible (as a cameo, one appearance is enough). Return an empty shorts list." if short else "a 16:9 long-form video."}
+FORMAT: {"a vertical 9:16 YouTube Short. Compose every shot for a phone screen (tall frames, subject in the middle third, big readable shapes), " + pace + ", hook in the first second. Cast the penguin per the bible (as a cameo, one appearance is enough). Return an empty shorts list." if short else "a 16:9 long-form video."}
 
 Script beats (VO is final, do not rewrite it):
 {json.dumps(beats, ensure_ascii=False)}
@@ -52,10 +55,10 @@ Your job:
 1. Follow the anthology rule: invent this episode's studio (name, point of view), choose ONE visual universe that fits the topic's emotional truth (from the bible palette or a fresh invention) and explain why in one line. Decide the pacing, the signature shot, and an optional medium-break gag (max one, never on a serious beat).
 2. Write the look bible: one dense paragraph that will be appended to every image prompt (medium, materials, palette, lighting, lens, texture, camera language). Make it specific enough that 40 frames look like one film.
 3. Cast the penguin for this story (universe "penguin_role": protagonist, sidekick, villain, antagonist, npc or cameo, chosen to fit the topic and script) and describe how it is rendered in this universe (keep all its fixed traits).
-4. Write about {n_shots} shots ({n_shots - 4} to {n_shots + 6}) covering every beat in order. Each shot:
+4. Write about {n_shots} shots ({n_shots - (1 if all_motion else 4)} to {n_shots + (1 if all_motion else 6)}) covering every beat in order. Each shot:
    - "beat": beat index; "cue": the exact first 3 to 5 words of the VO line where this shot starts (copied from the VO, so we can cut on the word).
    - "prompt": the scene for the image model: subject, action, composition, shot size, foreground and background, one focal point, calm lower fifth. Concrete and visual, with a small idea or joke in it. No numbers or important text inside images (a deliberate sign or label gag is fine, max 3 words, spelled exactly). Never name a real company, brand or product in a prompt and never ask for a logo: describe them generically ("four giant tech-company cable ships"). No stick figures: people are made of the universe's own material. Every shot must look different from the others (vary subject, scale, angle, location); never repeat the same hero object more than 3 times.
-   - "kind": "motion" for at most {max_motion} shots that deserve real animation (the hook shot, the twist, the biggest joke, the emotional peak, a cameo payoff). Everything else "still".
+   - "kind": {'"motion" for EVERY shot: this video is fully animated, so every shot needs a "motion" description' if all_motion else f'"motion" for at most {max_motion} shots that deserve real animation (the hook shot, the twist, the biggest joke, the emotional peak, a cameo payoff). Everything else "still"'}.
    - "motion": for motion shots, what moves in 8 seconds (camera and action, physically plausible, no text).
    - "camera": one of {CAMERAS} (for stills; pick for meaning: push_in reveal, crane_down scale, static for deadpan, snap_zoom for punchlines, handheld for tension).
    - "focus": [x, y] 0-1 of the focal point.
