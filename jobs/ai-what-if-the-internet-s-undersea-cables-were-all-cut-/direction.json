@@ -787,7 +787,7 @@
    "beat": 15,
    "cue": "In January 2022,",
    "kind": "motion",
-   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. A massive explosion of jagged grey and black paper ash erupts violently from the sea near the island. The hidden paper penguin, wearing a tiny Hawaiian shirt, stands on the beach looking alarmed.",
+   "prompt": "Layered paper diorama. Thick textured watercolor paper, translucent vellum water, glowing LED backlighting. Deep oceanic navy, stark white, glowing neon orange. Moody lighting, macro lens. A massive explosion of jagged grey and black paper ash erupts violently from the sea near the island.",
    "motion": "The paper ash cloud violently erupts upward and outward from the water, sending shockwaves across the vellum layers.",
    "camera": "static",
    "focus": [
@@ -795,10 +795,7 @@
     0.5
    ],
    "transition": "cut",
-   "penguin": {
-    "type": "outfit",
-    "bit": "Wearing a tiny Hawaiian shirt and holding a tropical drink, standing on the beach looking alarmed at the erupting ash cloud."
-   },
+   "penguin": null,
    "overlay": null,
    "nerd_bonus": false,
    "sfx": "muffled underwater explosion"

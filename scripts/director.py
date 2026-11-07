@@ -62,6 +62,7 @@ Your job:
    - "transition": one of {TRANSITIONS} into this shot (mostly cut; whip for energy, dip for time jumps, flash for shocks, fade for emotion).
    - "penguin": null, or {{"type": one of {CAMEOS}, "bit": "exactly what it is doing, its outfit, where in frame"}}. 2 to 4 cameos across the video, varied types, at least one subtle hidden one, none on tragic or serious beats, a fly_attempt near the end.
    - "overlay": null, or a designed overlay for numbers and key words, drawn in the universe's style: {{"type": "counter", "value": number, "prefix": "", "suffix": "", "text": "what it counts", "at": seconds_into_shot, "pos": "top|center|left|right"}}, or {{"type": "label", "text": "max 7 words", "pos": "top"}}, or {{"type": "bars", "text": "title with the unit", "bars": [{{"label": "", "value": real number in that unit}}], "suffix": " unit"}} (real values from the VO or verify notes, never made-up index numbers), or {{"type": "quote"|"chapter", "text": "max 6 words"}}. Numbers ONLY from the VO. Use overlays where a number or idea needs to stick, not on every shot.
+   - "serious": true when this shot shows real harm, loss or people suffering (no penguin, no jokes there).
    - "nerd_bonus": true when the VO says nerd bonus or gives the deep technical detail; that shot is drawn as a blueprint plate whatever the universe.
    - "sfx": a short sound cue that fits the medium and moment, or null. Meme-style cues only where they truly land.
 5. Visual style for captions and overlays: palette (paper, ink, accent, accent2 as hex), font from {FONTS}, film texture from {FILMS}, grain 0-1, vignette 0-1, letterbox true/false.
@@ -72,7 +73,7 @@ Your job:
 Return JSON:
 {{"universe": {{"name": "", "studio": "", "why": "", "pacing": "", "signature_shot": "", "medium_break": "", "look_bible": "", "penguin_render": "", "palette": {{"paper": "#", "ink": "#", "accent": "#", "accent2": "#"}},
   "font": "", "film": "", "grain": 0.3, "vignette": 0.5, "letterbox": false, "music": ""}},
- "shots": [{{"id": "s01", "beat": 0, "cue": "", "kind": "still", "prompt": "", "motion": "", "camera": "", "focus": [0.5, 0.5], "transition": "cut", "penguin": null, "overlay": null, "nerd_bonus": false, "sfx": null}}],
+ "shots": [{{"id": "s01", "beat": 0, "cue": "", "kind": "still", "prompt": "", "motion": "", "camera": "", "focus": [0.5, 0.5], "transition": "cut", "penguin": null, "overlay": null, "serious": false, "nerd_bonus": false, "sfx": null}}],
  "thumbnail": {{"prompt": "", "text": ""}},
  "shorts": [{{"title": "", "beats": [0, 1, 2]}}]}}"""
     d = gai.ask_json(prompt, kind="pro", temperature=0.9, timeout=300)
@@ -110,6 +111,8 @@ def validate(d, n_beats, max_motion):
             s["kind"] = "still"
         pg = s.get("penguin")
         s["penguin"] = pg if isinstance(pg, dict) and pg.get("bit") else None
+        if s["penguin"] and s.get("serious"):
+            s["penguin"] = None
         ov = s.get("overlay")
         if isinstance(ov, dict) and ov.get("type") in ("counter", "label", "bars", "quote", "chapter"):
             if ov["type"] == "counter" and not isinstance(ov.get("value"), (int, float)):
