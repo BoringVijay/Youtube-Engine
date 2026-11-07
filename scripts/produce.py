@@ -577,10 +577,27 @@ Return JSON: {{"title": "max 70 chars, curiosity first", "alt_titles": [2 more],
         return {"title": (script.get("titles") or [st.get("q")])[0], "description": st.get("q", ""), "tags": []}
 
 
+def backfill_reviews():
+    """Contact sheets for finished cuts that don't have one yet."""
+    for st in all_states():
+        if st.get("v") == 2 and st.get("preview") and not os.path.exists(jfile(st["id"], "review", "test-sheet.jpg")):
+            try:
+                mp4 = os.path.join(OUT, st["id"], "test.mp4")
+                os.makedirs(os.path.dirname(mp4), exist_ok=True)
+                if not os.path.exists(mp4):
+                    drive.download(st["preview"]["id"], mp4)
+                d = json.load(open(jfile(st["id"], "direction.json")))
+                review_sheet(st, mp4, artmod.Art(st, d, os.path.join(OUT, st["id"], "art")))
+                log("review sheet made for", st["id"][:40])
+            except Exception as e:
+                log("review backfill failed:", str(e)[:160])
+
+
 def main():
     os.makedirs(JOBS, exist_ok=True)
     make_sfx()
     handle_inbox()
+    backfill_reviews()
     order = {s: i for i, s in enumerate(["motion", "final_render", "metadata", "queued", "directing", "voicing", "art", "test_render"])}
     work = sorted([s for s in all_states() if s.get("stage") in order and s.get("v") == 2], key=lambda s: (order[s["stage"]], s.get("updated", "")))
     publish_status()
