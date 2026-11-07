@@ -1,10 +1,3 @@
-03:22:34 inbox: 0 messages
-Traceback (most recent call last):
-  File "/home/runner/work/Youtube-Engine/Youtube-Engine/scripts/produce.py", line 631, in <module>
-    main()
-  File "/home/runner/work/Youtube-Engine/Youtube-Engine/scripts/produce.py", line 600, in main
-    backfill_reviews()
-  File "/home/runner/work/Youtube-Engine/Youtube-Engine/scripts/produce.py", line 583, in backfill_reviews
-    if st.get("v") == 2 and st.get("preview") and not os.path.exists(jfile(st["id"], "review", "test-sheet.jpg")):
-                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: jfile() takes 2 positional arguments but 3 were given
+03:23:19 inbox: 0 messages
+03:23:23 review sheet made for ai-what-if-all-gold-ever-mined-were-melt
+03:23:35 review sheet made for ai-what-if-the-internet-s-undersea-cable
