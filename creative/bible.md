@@ -11,6 +11,26 @@ The director stage reads this file before planning any video. Change it here and
 ## The benchmark
 The November 2026 lab: claymation boardroom with the shark staring at camera, the paper-diorama crane-down to the glowing cable, the blueprint with "minute taker (Aptenodytes forsteri)". Every frame has an idea in it, a clear focal point and a joke or a feeling. Nothing is generic.
 
+## The anthology rule
+Think of the channel as an anthology series, the way Love, Death & Robots works: one brand, a new studio every episode. Each video should feel like a different team made it, while the penguin, the narrator's honesty and the craft bar stay constant.
+
+Before any frame the director thinks through a studio brief and folds it into the universe "why" and the look bible:
+- **Studio name**: an invented one-line studio for this episode ("Mudlark Clay Works", "Night Shift Noir Unit"). It forces a point of view.
+- **Universe and why**: the medium and the emotional reason it fits the topic.
+- **Pacing**: how this episode breathes (frantic, patient, slow-burn then sudden).
+- **Signature shot**: the one image people will screenshot.
+- **Medium-break gag**: one moment where the penguin or the story notices it lives inside this medium (tears the paper sky, leaves a thumbprint in the clay, gets erased off the blueprint). Optional, max one per video, never on a serious beat.
+
+Craft lessons to borrow (study the episodes, never copy them):
+- When the Yogurt Took Over: an absurd premise played completely straight. The visuals stay deadpan even when the narrator laughs.
+- Alternate Histories: a what-if escalated as a chain of ridiculous consequences, each one bigger.
+- Three Robots: outsiders touring the human world and finding it baffling. That is the penguin's whole attitude.
+- Night of the Mini Dead: tilt-shift miniature plus speed makes a catastrophe feel like a toy.
+- Ice Age: a whole civilisation rising and falling inside something ordinary. Scale contrast as story.
+- Zima Blue: flat colour, slow pacing and silence can carry a big idea.
+
+Anthology guardrails: borrow tone, structure and the rotating-medium idea. Never use their characters, robots, logo, title style or emoji title card, and never mention Netflix or the show on screen or in titles.
+
 ## Pick the universe for the topic
 Choose the medium that matches the topic's emotional truth, then commit to it for the whole video. One video, one universe. A second medium is allowed only as a deliberate device (see Nerd bonus).
 
@@ -60,6 +80,7 @@ Cameos:
 - Never during a tragic or serious beat. It can appear just after, quietly, as a small human moment.
 - At least one cameo per video is subtle enough that most people miss it first time.
 - Running gag: somewhere near the end it tries to fly. It always fails. Vary how.
+- In the anthology spirit, the penguin is rendered natively in each studio's style but its silhouette must read instantly: egg shape, eye-rings, orange feet, three-feather tuft.
 
 ## Words on screen
 AI clips and images must not carry numbers or important text. Numbers, charts and labels are designed overlays drawn in the universe's style (clay numbers, paper cut-out digits, chalk, typewriter, blueprint labels). Keep on-screen text to a few words.
@@ -69,6 +90,13 @@ AI clips and images must not carry numbers or important text. Numbers, charts an
 - SFX that fit the medium (clay squish, paper rustle, projector click, typewriter, vinyl crackle). Meme-style cues sparingly, only where they genuinely land: a bass boom on a reveal, a record scratch, crickets, a sad trombone.
 - Never rip trending audio from TikTok or Instagram (copyright claims take the revenue). Use original sounds, generated sounds or the YouTube Audio Library.
 - Silence is a sound. Drop everything for the biggest line.
+- The score is part of the studio: each universe gets its own instrumentation (clay: plucky woodwinds and toy percussion; noir: brushed drums and muted trumpet; paper: music box and strings; blueprint: clean synth pulses).
+
+## Shorts
+Shorts are re-composed, not cropped. When picking Shorts, choose a self-contained run of beats: hook in the first second, payoff by 30 to 45 seconds. Each Short should work as its own tiny episode.
+
+## Staying monetisable
+YouTube demonetises content that looks templated or repetitive, and AI personas posing as experts on money, health, law or politics. The anthology rule is our defence, so protect it: vary structure and pacing as well as visuals, frame finance and crypto as stories and curiosity, never advice, and disclose AI where a scene looks realistic.
 
 ## Truth
 Real numbers only, from the script's verify list. Speculation is framed as speculation. Fun never beats accuracy.
