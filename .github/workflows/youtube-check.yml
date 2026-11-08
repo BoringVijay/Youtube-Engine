@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       cmd:
-        description: whoami | kids | notkids
+        description: whoami | kids | notkids | instagram (read-only Instagram check, posts nothing)
         default: whoami
 jobs:
   whoami:
@@ -11,9 +11,18 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
-      - name: Which channel is the engine connected to?
+      - name: Which account is the engine connected to?
         env:
+          CMD: ${{ github.event.inputs.cmd || 'whoami' }}
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
-        run: python3 scripts/youtube.py ${{ github.event.inputs.cmd || 'whoami' }}
+          GDRIVE_REFRESH_TOKEN: ${{ secrets.GDRIVE_REFRESH_TOKEN }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+        run: |
+          case "$CMD" in
+            instagram) python3 scripts/instagram.py whoami ;;
+            whoami|kids|notkids) python3 scripts/youtube.py "$CMD" ;;
+            *) echo "unknown cmd"; exit 1 ;;
+          esac
