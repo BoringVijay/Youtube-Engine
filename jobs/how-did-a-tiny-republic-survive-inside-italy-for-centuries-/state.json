@@ -1,7 +1,7 @@
 {
  "id": "how-did-a-tiny-republic-survive-inside-italy-for-centuries-",
  "created": "2026-11-07T15:25:57+00:00",
- "pct": 75,
+ "pct": 90,
  "v": 3,
  "format": "short",
  "q": "How did a tiny republic survive inside Italy for centuries?",
@@ -91,16 +91,55 @@
   }
  },
  "brew_at": "2026-11-07T15:11:48.942Z",
- "error": "<urlopen error EOF occurred in violation of protocol (_ssl.c:2417)>",
+ "error": null,
  "fails": 2,
- "preview": null,
- "final": null,
+ "preview": {
+  "id": "1FBB0j7YqvA2TUaF8Drc7hq6vx4WTI_Rc",
+  "view": "https://drive.google.com/file/d/1FBB0j7YqvA2TUaF8Drc7hq6vx4WTI_Rc/view",
+  "download": "https://drive.google.com/uc?id=1FBB0j7YqvA2TUaF8Drc7hq6vx4WTI_Rc&export=download",
+  "size_mb": 87.8,
+  "duration": 63.6,
+  "stills": [],
+  "poster": "1YE-xADmE4DT80um3y9PXNO52KztVXLd_"
+ },
+ "final": {
+  "id": "1FBB0j7YqvA2TUaF8Drc7hq6vx4WTI_Rc",
+  "view": "https://drive.google.com/file/d/1FBB0j7YqvA2TUaF8Drc7hq6vx4WTI_Rc/view",
+  "download": "https://drive.google.com/uc?id=1FBB0j7YqvA2TUaF8Drc7hq6vx4WTI_Rc&export=download",
+  "size_mb": 87.8,
+  "duration": 63.6,
+  "stills": [],
+  "poster": "1YE-xADmE4DT80um3y9PXNO52KztVXLd_"
+ },
  "shorts": null,
  "thumb": null,
- "meta": null,
- "stage": "motion",
- "step": "Hit an error. Retrying next run",
- "cost": 10.805,
+ "meta": {
+  "title": "The Tiny Country That Simply Refused to Fall",
+  "alt_titles": [
+   "How San Marino Survived Every Empire",
+   "Why Italy Never Conquered This Tiny Republic"
+  ],
+  "description": "San Marino survived Rome, Napoleon, and Italian unification mostly by asking for nothing.\nSometimes the best defense is staying small and keeping your head down.\n\n#Shorts #History #SanMarino #ChiseledHistory",
+  "tags": [
+   "San Marino",
+   "history shorts",
+   "microstates",
+   "European history",
+   "Italian unification",
+   "Napoleon",
+   "Garibaldi",
+   "ancient republics",
+   "Chiseled History Studios",
+   "Curious Penguin",
+   "weird history",
+   "geography facts"
+  ],
+  "pinned_comment": "On a scale of 1 to 10, how would you rate our basalt guard's flight attempt? (Gravity already gave it a solid 0.)",
+  "instagram_caption": "Surviving 1,700 years of empires by politely turning down free real estate. San Marino truly cracked the code.\n\n#SanMarino #HistoryFacts #Microstate #EuropeanHistory #ChiseledHistory"
+ },
+ "stage": "final_ready",
+ "step": "Short ready (Chiseled History Studios, penguin as cameo). Watch it and approve or send notes",
+ "cost": 14.395,
  "steps": [
   {
    "stage": "queued",
@@ -116,14 +155,26 @@
   },
   {
    "stage": "art",
-   "at": "2026-11-07T22:58:08+00:00"
+   "at": "2026-11-08T02:41:02+00:00"
   },
   {
    "stage": "motion",
-   "at": "2026-11-07T23:00:15+00:00"
+   "at": "2026-11-08T02:51:12+00:00"
+  },
+  {
+   "stage": "final_render",
+   "at": "2026-11-08T02:53:26+00:00"
+  },
+  {
+   "stage": "metadata",
+   "at": "2026-11-08T03:02:32+00:00"
+  },
+  {
+   "stage": "final_ready",
+   "at": "2026-11-08T03:02:42+00:00"
   }
  ],
- "updated": "2026-11-07T23:10:45+00:00",
+ "updated": "2026-11-08T03:02:42+00:00",
  "voice_style": "B",
  "voice_fit": 1.2,
  "duration": 62.8,
@@ -138,5 +189,25 @@
    "shot": "k13",
    "bit": "Next to the door, dropping its heavy stone flippers in defeat after failing to fly."
   }
- ]
+ ],
+ "qc": {
+  "overall": 3.0,
+  "scores": {
+   "visuals": 6,
+   "transitions": 2,
+   "story": 8,
+   "logic": 2,
+   "sync": 8,
+   "accuracy": 4,
+   "premium": 2
+  },
+  "verdict": "The video ignores almost all requested camera transitions in favor of hard cuts and suffers from severe scale inconsistencies. The inclusion of obvious AI artifacts, sliding characters, a random penguin, and a giant human hand completely destroys the logic and premium feel of the miniature diorama concept.",
+  "weak": [
+   "s03: The transition is a hard cut instead of the requested rapid tilt down. The stonemason's animation is a stiff, robotic loop.",
+   "s04: Massive scale inconsistency; the Roman column is huge compared to the mountain behind it. The shattering debris morphs and disappears.",
+   "s05: The chess piece morphs its shape as it falls and lands. The impact physics and dust look unnatural.",
+   "s07: Jarring style shift to a flat 2D blueprint, breaking the established 3D miniature aesthetic.",
+   "s08: The 3D blocks that appear are untextured and look cheap, clashing with the detailed stone environment."
+  ]
+ }
 }
