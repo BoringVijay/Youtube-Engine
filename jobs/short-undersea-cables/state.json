@@ -67,9 +67,9 @@
  },
  "brew_at": "2026-11-07T05:33:41+00:00",
  "created": "2026-11-07T05:33:41+00:00",
- "stage": "approved",
- "pct": 92,
- "step": "Approved by Vijay: uploading to YouTube as private",
+ "stage": "scheduled",
+ "pct": 97,
+ "step": "On YouTube as private. Make it public or schedule it in YouTube Studio",
  "steps": [
   {
    "stage": "queued",
@@ -110,10 +110,22 @@
   {
    "stage": "approved",
    "at": "2026-11-08T10:56:19+00:00"
+  },
+  {
+   "stage": "uploading",
+   "at": "2026-11-08T10:57:38+00:00"
+  },
+  {
+   "stage": "scheduled",
+   "at": "2026-11-08T10:58:25+00:00"
+  },
+  {
+   "stage": "scheduled",
+   "at": "2026-11-08T11:02:43+00:00"
   }
  ],
  "fails": 0,
- "updated": "2026-11-08T10:56:19+00:00",
+ "updated": "2026-11-08T11:02:43+00:00",
  "error": null,
  "cost": 9.312,
  "universe": "Macro photography of handmade miniature sets · Tiny Props Workshop",
@@ -209,5 +221,27 @@
    "notes": ""
   }
  ],
- "slot": "2026-11-08T12:30:00+05:30"
+ "slot": "2026-11-08T12:30:00+05:30",
+ "youtube": {
+  "videos": [
+   {
+    "kind": "main",
+    "id": "wpG1WkDJjsI",
+    "url": "https://youtube.com/shorts/wpG1WkDJjsI",
+    "studio": "https://studio.youtube.com/video/wpG1WkDJjsI/edit",
+    "title": "What If Every Undersea Cable Snapped at Once?",
+    "privacy": "private",
+    "publish_at": null,
+    "published": "2026-11-08T10:57:46Z",
+    "upload_status": "processed",
+    "views": 0,
+    "likes": 0,
+    "comments": 0,
+    "checked": "2026-11-08T11:02:43+00:00"
+   }
+  ],
+  "audited": false,
+  "note": "Uploaded private. YouTube keeps API uploads from unaudited apps private, so publish from YouTube Studio at the proposed time (or schedule it there). Once the API audit is approved, the engine can schedule them itself.",
+  "channel": "@curiouspenguincantfly"
+ }
 }

@@ -74,9 +74,9 @@
   }
  },
  "brew_at": "2026-11-07T09:51:33+00:00",
- "stage": "approved",
- "pct": 90,
- "step": "Approved by Vijay: uploading to YouTube as private",
+ "stage": "scheduled",
+ "pct": 97,
+ "step": "On YouTube as private. Make it public or schedule it in YouTube Studio",
  "steps": [
   {
    "stage": "queued",
@@ -113,10 +113,22 @@
   {
    "stage": "approved",
    "at": "2026-11-08T10:56:19+00:00"
+  },
+  {
+   "stage": "uploading",
+   "at": "2026-11-08T10:59:34+00:00"
+  },
+  {
+   "stage": "scheduled",
+   "at": "2026-11-08T11:00:22+00:00"
+  },
+  {
+   "stage": "scheduled",
+   "at": "2026-11-08T11:02:43+00:00"
   }
  ],
  "created": "2026-11-07T09:51:33+00:00",
- "updated": "2026-11-08T10:56:19+00:00",
+ "updated": "2026-11-08T11:02:43+00:00",
  "error": null,
  "fails": 0,
  "preview": {
@@ -218,5 +230,27 @@
    "s05: Fails to push through the paper hole; the penguin's flipper morphs into a coin.",
    "s11: Missing the fast pull-back; a random hand appears to paint the screen instead of revealing a smoking burn hole."
   ]
+ },
+ "youtube": {
+  "videos": [
+   {
+    "kind": "main",
+    "id": "YwRe1Sds0hw",
+    "url": "https://youtube.com/shorts/YwRe1Sds0hw",
+    "studio": "https://studio.youtube.com/video/YwRe1Sds0hw/edit",
+    "title": "What If an Evil AI Only Had One Dollar a Day?",
+    "privacy": "private",
+    "publish_at": null,
+    "published": "2026-11-08T10:59:42Z",
+    "upload_status": "processed",
+    "views": 0,
+    "likes": 0,
+    "comments": 0,
+    "checked": "2026-11-08T11:02:43+00:00"
+   }
+  ],
+  "audited": false,
+  "note": "Uploaded private. YouTube keeps API uploads from unaudited apps private, so publish from YouTube Studio at the proposed time (or schedule it there). Once the API audit is approved, the engine can schedule them itself.",
+  "channel": "@curiouspenguincantfly"
  }
 }

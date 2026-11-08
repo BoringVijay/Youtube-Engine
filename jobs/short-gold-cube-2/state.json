@@ -70,9 +70,9 @@
   }
  },
  "brew_at": "2026-11-07T07:55:02+00:00",
- "stage": "approved",
- "pct": 90,
- "step": "Approved by Vijay: uploading to YouTube as private",
+ "stage": "scheduled",
+ "pct": 97,
+ "step": "On YouTube as private. Make it public or schedule it in YouTube Studio",
  "steps": [
   {
    "stage": "queued",
@@ -109,10 +109,22 @@
   {
    "stage": "approved",
    "at": "2026-11-08T10:56:19+00:00"
+  },
+  {
+   "stage": "uploading",
+   "at": "2026-11-08T11:00:24+00:00"
+  },
+  {
+   "stage": "scheduled",
+   "at": "2026-11-08T11:01:17+00:00"
+  },
+  {
+   "stage": "scheduled",
+   "at": "2026-11-08T11:02:43+00:00"
   }
  ],
  "created": "2026-11-07T07:55:02+00:00",
- "updated": "2026-11-08T10:56:19+00:00",
+ "updated": "2026-11-08T11:02:43+00:00",
  "error": null,
  "fails": 0,
  "preview": {
@@ -183,5 +195,27 @@
    "bit": "Wearing a tiny burglar mask, frantically pumping the handcar handles, then flailing its stubby wings desperately trying to fly as the cart drops."
   }
  ],
- "qc_skip": true
+ "qc_skip": true,
+ "youtube": {
+  "videos": [
+   {
+    "kind": "main",
+    "id": "CbelA-zMxmM",
+    "url": "https://youtube.com/shorts/CbelA-zMxmM",
+    "studio": "https://studio.youtube.com/video/CbelA-zMxmM/edit",
+    "title": "All the World’s Gold Fits in One Cube",
+    "privacy": "private",
+    "publish_at": null,
+    "published": "2026-11-08T11:00:31Z",
+    "upload_status": "processed",
+    "views": 0,
+    "likes": 0,
+    "comments": 0,
+    "checked": "2026-11-08T11:02:43+00:00"
+   }
+  ],
+  "audited": false,
+  "note": "Uploaded private. YouTube keeps API uploads from unaudited apps private, so publish from YouTube Studio at the proposed time (or schedule it there). Once the API audit is approved, the engine can schedule them itself.",
+  "channel": "@curiouspenguincantfly"
+ }
 }
