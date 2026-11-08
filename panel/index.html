@@ -788,10 +788,15 @@ $$("#studioSeg button").forEach((b) => (b.onclick = () => { S.studioF = b.datase
 $("#btnStatus").onclick = () => refreshStatus(true);
 function bucket(j) { return WORKING.has(j.stage) || j.stage === "cancelled" || j.stage === "failed" || j.stage === "test_ready" ? "now" : j.stage === "final_ready" || j.stage === "posting" ? "ready" : "out"; }
 function stepIdx(stage) { const m = { queued: -1, voicing: 0, directing: 1, art: 2, test_render: 2, motion: 3, final_render: 4, metadata: 4, final_ready: 5, posting: 6, approved: 6, uploading: 6, scheduled: 7, live: 7 }; return m[stage] ?? -1; }
+function anaHTML(a) {
+  const pct = a.averageViewPercentage != null ? Math.round(a.averageViewPercentage) + "%" : "–";
+  const dur = a.averageViewDuration != null ? Math.round(a.averageViewDuration) + "s" : "–";
+  return `<div class="ytstats"><div><b>${pct}</b><span>avg viewed</span></div><div><b>${dur}</b><span>avg watch</span></div><div><b>${fmt(a.subscribersGained || 0)}</b><span>subs gained</span></div></div>`;
+}
 function ytVideo(j) { return ((j.youtube || {}).videos || [])[0] || null; }
 function stageWord(j) {
   return { queued: "Queued", directing: "Directing", voicing: "Recording voice", art: "Painting frames", motion: "Animating", final_render: "Rendering", metadata: "Finishing", final_ready: "Ready for you",
-    posting: j.posted_claimed ? "Looking for it on YouTube" : "Ready to post", approved: "Approved", uploading: "Uploading",
+    posting: j.posted_claimed ? "Looking for it on YouTube" : "Ready to post", approved: "Uploading soon", uploading: "Uploading",
     scheduled: ytVideo(j) && ytVideo(j).publish_at ? "Scheduled" : "On YouTube, " + ((ytVideo(j) || {}).privacy || "private"), live: "Live",
     cancelled: "Stopped", failed: "Stopped on an error", test_ready: "Test cut" }[j.stage] || j.stage;
 }
@@ -811,6 +816,7 @@ function prodHTML(j) {
       ${pendingHTML(j)}
       ${!working && j.step && ["posting", "scheduled", "live", "approved", "cancelled", "failed"].includes(j.stage) ? `<div class="stepline"><span>${esc(j.step)}</span><span>${ago(j.updated)}</span></div>` : ""}
       ${j.stage === "posting" && j.slot ? `<div class="stepline"><span>Suggested time: <b style="color:var(--ink)">${when(j.slot)}</b></span></div>` : ""}
+      ${yt.length && yt[0].analytics ? anaHTML(yt[0].analytics) : ""}
       ${yt.length && yt[0].views != null ? `<div class="ytstats"><div><b>${fmt(yt[0].views)}</b><span>views</span></div><div><b>${fmt(yt[0].likes)}</b><span>likes</span></div><div><b>${fmt(yt[0].comments)}</b><span>comments</span></div></div>` : ""}
       ${yt.length || ig.status ? `<div class="pubs">${yt.map((v) => `<div class="pub">${ic("yt")}<div><div>YouTube · ${esc(v.privacy || "")}</div><div class="s">${v.publish_at ? "Goes public " + when(v.publish_at) : v.published ? "Posted " + when(v.published) : ""}${v.checked ? " · checked " + ago(v.checked) : ""}</div></div><a class="btn sm" href="${esc(v.url || v.studio)}" target="_blank" rel="noopener">Open ${ic("out")}</a></div>`).join("")}
         ${ig.status ? `<div class="pub">${ic("ig")}<div><div>Instagram · ${esc(ig.status)}</div>${ig.error ? `<div class="s">${esc(ig.error)}</div>` : ""}</div>${ig.permalink ? `<a class="btn sm" href="${esc(ig.permalink)}" target="_blank" rel="noopener">Open ${ic("out")}</a>` : ""}</div>` : ""}</div>` : ""}
@@ -822,7 +828,9 @@ function actions(j) {
   const a = [];
   if (WORKING.has(j.stage) && j.stage !== "uploading") a.push(`<button class="btn danger grow" data-act="cancel">${ic("stop")}Stop</button>`);
   if (j.stage === "cancelled" || j.stage === "failed") a.push(`<button class="btn primary grow" data-act="resume">${ic("resume")}Resume</button>`);
-  if (j.stage === "final_ready") { a.push(`<button class="btn primary grow" data-act="post">${ic("yt")}Post to YouTube</button>`); a.push(`<button class="btn grow" data-act="notes">${ic("pencil")}Notes and redo</button>`); }
+  const apiUp = ((S.files["status.json"] || {}).publish || {}).api_upload;
+  if (j.stage === "final_ready" && apiUp) { a.push(`<button class="btn primary grow" data-act="approve">${ic("yt")}Approve, upload private</button>`); a.push(`<button class="btn grow" data-act="notes">${ic("pencil")}Notes and redo</button>`); }
+  if (j.stage === "final_ready" && !apiUp) { a.push(`<button class="btn primary grow" data-act="post">${ic("yt")}Post to YouTube</button>`); a.push(`<button class="btn grow" data-act="notes">${ic("pencil")}Notes and redo</button>`); }
   if (j.stage === "posting") { a.push(`<button class="btn primary grow" data-act="kit">${ic("yt")}Posting kit</button>`); if (!j.posted_claimed) a.push(`<button class="btn grow" data-act="posted">${ic("check")}I've posted it</button>`); }
   if ((j.stage === "scheduled" || j.stage === "live") && ytVideo(j)) a.push(`<a class="btn grow" href="${esc(ytVideo(j).studio)}" target="_blank" rel="noopener">${ic("yt")}YouTube Studio</a>`);
   if (["final_ready", "posting", "approved", "scheduled", "live"].includes(j.stage) && !(j.instagram && ["posted", "queued", "posting"].includes(j.instagram.status))) a.push(`<button class="btn grow" data-act="ig">${ic("ig")}Post to Instagram</button>`);
@@ -864,6 +872,7 @@ function wireProd(card, j) {
     try {
       if (act === "cancel") { await inbox("cancel", { id: j.id }); toast("Stopping. Finished frames and clips are kept."); }
       if (act === "resume") { await inbox("resume", { id: j.id }); toast("Resuming " + engineState().short + "."); }
+      if (act === "approve") { await inbox("approve", { id: j.id, stage: "final" }); toast("Approved. It uploads as private, then you flip it to Public in Studio."); }
       if (act === "posted") { await inbox("posted", { id: j.id }); toast("Nice. The engine finds it on your channel and starts tracking."); }
       if (act === "ig") { await inbox("instagram", { id: j.id }); toast("Queued for Instagram."); }
       PENDING.set(j.id, { act, at: Date.now() }); savePending();
@@ -947,6 +956,7 @@ function renderStats() {
       <div class="tile"><div class="n">${all.filter((j) => j.stage === "scheduled" || j.stage === "live").length}</div><div class="l">Shorts on YouTube</div></div>
       <div class="tile"><div class="n">${all.filter((j) => WORKING.has(j.stage)).length}</div><div class="l">In production</div></div>
     </div>
+    <div class="section"><h2>Analytics</h2>${anaSection(st, all)}</div>
     <div class="section"><h2>YouTube</h2>${ytSection(st, all)}</div>
     <div class="section"><h2>Narration</h2>
       <div class="pick" id="vsPick">${VSTYLES.map(([k, l]) => `<button data-v="${k}" aria-pressed="${(S.vstyle || "C") === k}">${l}</button>`).join("")}</div>
@@ -967,6 +977,22 @@ function renderStats() {
   $$("#vsPick button").forEach((btn) => (btn.onclick = async () => { S.vstyle = btn.dataset.v; $$("#vsPick button").forEach((x) => x.setAttribute("aria-pressed", String(x === btn))); if (S.db) { try { await S.db.doc("settings/voice").set({ name: S.voice || null, style: S.vstyle }); } catch (e) {} } toast("Saved"); }));
 }
 
+function anaSection(st, all) {
+  const a = st.analytics; if (!a || !a.totals) return `<div class="notice">${a && a.error ? "<b>Analytics error:</b> " + esc(a.error) : "Analytics show up after the engine's next check. YouTube's numbers lag a day or two."}</div>`;
+  const t = a.totals, days = a.daily || [], max = Math.max(1, ...days.map((d) => d[1]));
+  const W = 320, H = 90, bw = W / Math.max(1, days.length);
+  const bars = days.map((d, i) => `<rect x="${(i * bw + 1).toFixed(1)}" y="${(H - (d[1] / max) * (H - 4)).toFixed(1)}" width="${Math.max(1, bw - 2).toFixed(1)}" height="${((d[1] / max) * (H - 4)).toFixed(1)}" rx="2" fill="var(--accent)"><title>${esc(d[0])}: ${d[1]} views</title></rect>`).join("");
+  const rows = all.filter((j) => ytVideo(j)).map((j) => ({ j, v: ytVideo(j) })).sort((x, y) => (y.v.views || 0) - (x.v.views || 0))
+    .map(({ j, v }) => `<div class="pub"><div style="flex:1;min-width:0"><div style="font-weight:650;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc((j.meta && j.meta.title) || j.q)}</div><div class="s">${esc(v.privacy || "")} · ${fmt(v.views)} views${v.analytics && v.analytics.averageViewPercentage != null ? " · " + Math.round(v.analytics.averageViewPercentage) + "% viewed" : ""}</div></div><a class="btn sm" href="${esc(v.url)}" target="_blank" rel="noopener">${ic("out")}</a></div>`).join("");
+  return `<div class="tiles">
+      <div class="tile"><div class="n">${fmt(t.views)}</div><div class="l">views, last 28 days</div></div>
+      <div class="tile"><div class="n">${fmt(Math.round((t.estimatedMinutesWatched || 0) / 60))}h</div><div class="l">watch time</div></div>
+      <div class="tile"><div class="n">${t.averageViewPercentage != null ? Math.round(t.averageViewPercentage) + "%" : "–"}</div><div class="l">avg viewed</div></div>
+      <div class="tile"><div class="n">${fmt(t.subscribersGained || 0)}</div><div class="l">subs gained</div></div>
+      <div class="tile wide"><div class="l" style="margin:0 0 8px">Daily views</div><svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto" role="img" aria-label="Daily views, last 28 days">${bars}</svg><div class="l" style="margin-top:6px">Updated ${ago(a.at)}. YouTube's numbers lag a day or two.</div></div>
+    </div>
+    ${rows ? `<div class="pubs" style="margin-top:12px">${rows}</div>` : ""}`;
+}
 function ytSection(st, all) {
   const c = st.youtube || {}, live = all.filter((j) => ytVideo(j));
   const views = live.reduce((n, j) => n + (ytVideo(j).views || 0), 0);
@@ -976,7 +1002,7 @@ function ytSection(st, all) {
       <div class="ytstats"><div><b>${c.subs == null ? "hidden" : fmt(c.subs)}</b><span>subscribers</span></div><div><b>${fmt(c.videos)}</b><span>videos</span></div><div><b>${fmt(views)}</b><span>Curious Penguin views</span></div></div>
       <div class="btnrow"><a class="btn grow" href="${esc(c.url)}" target="_blank" rel="noopener">${ic("yt")}Open channel</a><a class="btn grow" href="${esc(c.studio)}" target="_blank" rel="noopener">${ic("out")}YouTube Studio</a></div>
     </div>
-    <div class="notice" style="margin-top:12px">The engine is signed in to this channel. Shorts get posted from the YouTube app with the <b>posting kit</b>, because Google locks API uploads from unaudited apps as private for good. Once a Short is up, the engine finds it by title and refreshes views, likes and comments every hour.</div>`;
+    <div class="notice" style="margin-top:12px">Approve a Short and the engine uploads it here as <b>private</b> with title, description, tags and the AI disclosure. You flip it to Public (or schedule it) in YouTube Studio. The engine refreshes views every hour and full analytics every few hours.</div>`;
 }
 function badges() {
   const n1 = [...S.ideas.values()].filter((i) => ideaStatus(i) === "active").length;

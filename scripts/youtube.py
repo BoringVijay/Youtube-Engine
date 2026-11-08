@@ -150,7 +150,7 @@ def sync(states, save):
         elif d["publish_at"]:
             stage, step = "scheduled", "Scheduled on YouTube for " + d["publish_at"]
         else:
-            stage, step = "scheduled", f"On YouTube as {d['privacy']}. Make it public or schedule it in YouTube Studio"
+            stage, step = "scheduled", f"Uploaded as {d['privacy']}. Flip it to Public (or schedule it) in YouTube Studio"
         if stage != st.get("stage") or step != st.get("step"):
             st["stage"], st["step"] = stage, step
             st["pct"] = 100 if stage == "live" else 97
@@ -185,6 +185,73 @@ def set_audience(kids=True):
             log(v["id"], "madeForKids:", out.get("status", {}).get("madeForKids"), "selfDeclared:", out.get("status", {}).get("selfDeclaredMadeForKids"))
 
 
+ANALYTICS = os.path.join(ROOT, "analytics", "latest.json")
+YTA = "https://youtubeanalytics.googleapis.com/v2/reports"
+
+
+def report(start, end, metrics, dimensions="", filters="", sort="", max_results=None):
+    params = {"ids": "channel==MINE", "startDate": start, "endDate": end, "metrics": metrics}
+    if dimensions: params["dimensions"] = dimensions
+    if filters: params["filters"] = filters
+    if sort: params["sort"] = sort
+    if max_results: params["maxResults"] = max_results
+    r = urllib.request.Request(YTA + "?" + urllib.parse.urlencode(params), headers={"Authorization": f"Bearer {token()}"})
+    try:
+        with urllib.request.urlopen(r, timeout=40) as resp:
+            out = json.load(resp)
+    except urllib.error.HTTPError as e:
+        raise RuntimeError(f"Analytics -> HTTP {e.code}: {e.read()[:300].decode('utf-8', 'replace')}")
+    cols = [c["name"] for c in out.get("columnHeaders", [])]
+    return [dict(zip(cols, row)) for row in out.get("rows", []) or []]
+
+
+def analytics(states, save, every_hours=3):
+    """YouTube Analytics for the channel and every tracked Short. Analytics lags 1-2 days; the Data API views are live."""
+    if not channel().get("connected"):
+        return None
+    try:
+        prev = json.load(open(ANALYTICS))
+        age = (dt.datetime.now(dt.timezone.utc) - dt.datetime.fromisoformat(prev["at"])).total_seconds() / 3600
+        if age < every_hours:
+            return prev
+    except Exception:
+        prev = None
+    today = dt.date.today()
+    start28, end = (today - dt.timedelta(days=28)).isoformat(), today.isoformat()
+    m = "views,estimatedMinutesWatched,averageViewDuration,averageViewPercentage,likes,comments,shares,subscribersGained"
+    out = {"at": now(), "range": [start28, end], "note": "YouTube Analytics lags 1-2 days; live view counts come from the Data API."}
+    try:
+        tot = report(start28, end, m)
+        out["totals"] = tot[0] if tot else {}
+        out["daily"] = [[r["day"], r["views"], r.get("subscribersGained", 0)] for r in report(start28, end, "views,subscribersGained", "day", sort="day")]
+        ids = []
+        for st in states:
+            ids += [v["id"] for v in ((st.get("youtube") or {}).get("videos") or []) if v.get("id")]
+        per = {}
+        for i in range(0, len(ids), 200):
+            first = min((st.get("created") or end)[:10] for st in states if st.get("youtube")) if ids else start28
+            for r in report(first, end, m, "video", "video==" + ",".join(ids[i:i + 200]), "-views", 200):
+                per[r["video"]] = {k: r[k] for k in r if k != "video"}
+        out["videos"] = per
+        for st in states:
+            vids = (st.get("youtube") or {}).get("videos") or []
+            changed = False
+            for v in vids:
+                if v.get("id") in per:
+                    v["analytics"] = per[v["id"]]; changed = True
+            if changed:
+                save(st)
+    except Exception as e:
+        log("analytics failed:", str(e)[:200])
+        out["error"] = str(e)[:200]
+        if prev and not out.get("totals"):
+            prev["error"] = out["error"]
+            out = prev
+    os.makedirs(os.path.dirname(ANALYTICS), exist_ok=True)
+    json.dump(out, open(ANALYTICS, "w"), indent=1)
+    return out
+
+
 def main():
     cmd = sys.argv[1] if len(sys.argv) > 1 else "whoami"
     if cmd in ("kids", "notkids"):
@@ -201,6 +268,9 @@ def main():
         import produce as P
         n = sync(P.all_states(), P.save_state)
         log(f"{n} job(s) changed")
+        a = analytics(P.all_states(), P.save_state)
+        if a:
+            log("analytics:", json.dumps(a.get("totals", {}))[:200], a.get("error", ""))
         P.publish_status()
 
 

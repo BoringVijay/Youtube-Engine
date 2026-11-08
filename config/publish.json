@@ -9,8 +9,8 @@
   "08:00",
   "17:00"
  ],
- "api_audited": false,
+ "api_audited": true,
  "description_footer": "Made with AI-assisted visuals and voice, written and checked by humans. Spot the penguin? Tell us where.\nCurious Penguin: the world, one weird question at a time.",
- "audit_note": "Until the Google Cloud project passes the YouTube API Services audit (https://support.google.com/youtube/contact/yt_api_form), API uploads are locked private for good. So Approve opens a posting kit and Vijay posts from the YouTube app; scripts/youtube.py finds and tracks it.",
+ "audit_note": "2026-11-08: Vijay switched an API-uploaded video to Public in Studio and it worked, so Approve uploads straight to YouTube as private again. If Google ever emails that a video is locked private, set this back to false (posting kit).",
  "made_for_kids": false
 }
