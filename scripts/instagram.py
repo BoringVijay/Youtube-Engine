@@ -221,7 +221,9 @@ def post(st, save):
         ig.update(status="posting", container=c["id"], started=now())
         save(st)
         try:
-            how = send_video(c["id"], c.get("uri"), local, st, save)
+            how, newc = send_video(c["id"], c.get("uri"), local, st, save)
+            ig["container"] = newc
+            save(st)
         except Exception:
             ig.pop("container", None)  # start a fresh container next time
             unshare(st, save)
@@ -274,7 +276,7 @@ def send_video(cid, uri, local, st, save):
         up = call("POST", "", url=url, raw=open(local, "rb").read(),
                   headers={"Authorization": f"OAuth {tok()}", "offset": "0", "file_size": str(size)}, timeout=900)
         if up.get("success", True):
-            return "bytes"
+            return "bytes", cid
         raise RuntimeError(f"upload refused: {up}")
     except RuntimeError as e:
         if "ProcessingFailedError" not in str(e):
@@ -287,6 +289,7 @@ def send_video(cid, uri, local, st, save):
     ig["share"] = drive.req("POST", f"{drive.API}/files/{fid}/permissions", json.dumps({"type": "anyone", "role": "reader"}).encode()).get("id")
     save(st)
     link = f"https://drive.usercontent.google.com/download?id={fid}&export=download&confirm=t"
+    ig["link"] = link
     try:  # what will Meta's fetcher see? (anonymous request, first KB)
         rq = urllib.request.Request(link, headers={"Range": "bytes=0-1023", "User-Agent": "facebookexternalhit/1.1"})
         with urllib.request.urlopen(rq, timeout=60) as rr:
@@ -295,8 +298,9 @@ def send_video(cid, uri, local, st, save):
                 "| looks like mp4" if b"ftyp" in head else "| NOT a video: " + head[:40].decode("latin1"))
     except Exception as e:
         log("hosted link check failed:", str(e)[:150])
-    call("POST", "", url=url, raw=b"", headers={"Authorization": f"OAuth {tok()}", "file_url": link}, timeout=120)
-    return "hosted"
+    # the refused container can't take another upload; open a fresh one that fetches the link itself
+    c2 = call("POST", f"{ig_id()}/media", {"media_type": "REELS", "video_url": link, "caption": caption(st), "share_to_feed": "true"})
+    return "hosted", c2["id"]
 
 
 def whoami():
@@ -345,10 +349,10 @@ def dryrun(jid, trim=None):
     print("container:", c.get("id"), "| upload uri host:", urllib.parse.urlparse(c.get("uri", "")).netloc)
     st["instagram"] = {"status": "dryrun"}
     try:
-        how = send_video(c["id"], c.get("uri"), local, st, lambda s: None)
-        print(f"upload accepted via {how} in {time.time()-t0:.0f}s")
+        how, cid = send_video(c["id"], c.get("uri"), local, st, lambda s: None)
+        print(f"upload accepted via {how} in {time.time()-t0:.0f}s (container {cid})")
         for i in range(60):
-            r = call("GET", c["id"], {"fields": "status_code,status"})
+            r = call("GET", cid, {"fields": "status_code,status"})
             if r.get("status_code") in ("FINISHED", "ERROR", "EXPIRED"):
                 break
             time.sleep(10)
