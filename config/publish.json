@@ -1,50 +1,51 @@
 {
- "playlist": "Curious Penguin",
- "category_id": "27",
- "daily_cap": 2,
- "experiment_slots_ist": [
-  "19:30",
-  "12:30",
-  "21:00",
-  "08:00",
-  "17:00"
- ],
- "api_audited": true,
- "description_footer": "Made with AI-assisted visuals and voice, written and checked by humans. Spot the penguin? Tell us where.\nCurious Penguin: the world, one weird question at a time.",
- "audit_note": "2026-11-08: Vijay switched an API-uploaded video to Public in Studio and it worked, so Approve uploads straight to YouTube as private again. If Google ever emails that a video is locked private, set this back to false (posting kit).",
- "made_for_kids": false,
- "schedule": {
-  "tz": "Asia/Kolkata (IST, UTC+5:30)",
-  "windows": {
-   "global": {
-    "youtube": [
-     "07:30",
-     "18:30"
-    ],
-    "instagram": [
-     "07:30",
-     "19:30"
-    ],
-    "why": "07:30 IST is the Shorts morning scroll in India and 9 pm the night before on the US East Coast. 18:30 IST catches the India evening and US breakfast. Reels peak in the evening, so 19:30 IST for India, 07:30 IST for US night owls."
-   },
-   "india": {
-    "youtube": [
-     "08:00",
-     "19:00"
-    ],
-    "instagram": [
-     "19:30",
-     "21:00"
-    ],
-    "why": "India-first: Shorts do best on the morning commute (08:00) and after work (19:00). Reels peak 7 to 11 pm local."
-   }
+  "playlist": "Curious Penguin",
+  "category_id": "27",
+  "daily_cap": 2,
+  "experiment_slots_ist": [
+    "19:30",
+    "12:30",
+    "21:00",
+    "08:00",
+    "17:00"
+  ],
+  "api_audited": true,
+  "description_footer": "Made with AI-assisted visuals and voice, written and checked by humans. Spot the penguin? Tell us where.\nCurious Penguin: the world, one weird question at a time.",
+  "audit_note": "2026-11-08: Vijay switched an API-uploaded video to Public in Studio and it worked, so Approve uploads straight to YouTube as private again. If Google ever emails that a video is locked private, set this back to false (posting kit).",
+  "made_for_kids": false,
+  "schedule": {
+    "tz": "Asia/Kolkata (IST, UTC+5:30)",
+    "windows": {
+      "global": {
+        "youtube": [
+          "07:30",
+          "18:30"
+        ],
+        "instagram": [
+          "07:30",
+          "19:30"
+        ],
+        "why": "07:30 IST is the Shorts morning scroll in India and 9 pm the night before on the US East Coast. 18:30 IST catches the India evening and US breakfast. Reels peak in the evening, so 19:30 IST for India, 07:30 IST for US night owls."
+      },
+      "india": {
+        "youtube": [
+          "08:00",
+          "19:00"
+        ],
+        "instagram": [
+          "19:30",
+          "21:00"
+        ],
+        "why": "India-first: Shorts do best on the morning commute (08:00) and after work (19:00). Reels peak 7 to 11 pm local."
+      }
+    },
+    "audience_map": {
+      "India-first": "india"
+    },
+    "per_platform_per_day": 1,
+    "instagram_skip_weekends": true,
+    "min_lead_minutes": 45,
+    "note": "Starting points from 2026 timing studies (Buffer, SocialPilot): Shorts lean morning, Reels lean weekday evening, studies disagree, so the engine rotates windows and the analytics decide later."
   },
-  "audience_map": {
-   "India-first": "india"
-  },
-  "per_platform_per_day": 1,
-  "instagram_skip_weekends": true,
-  "min_lead_minutes": 45,
-  "note": "Starting points from 2026 timing studies (Buffer, SocialPilot): Shorts lean morning, Reels lean weekday evening, studies disagree, so the engine rotates windows and the analytics decide later."
- }
+  "instagram_user_id": "17841469591177905"
 }

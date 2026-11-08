@@ -118,6 +118,12 @@ def call(method, path, params=None, headers=None, raw=None, url=None, timeout=12
 def ig_id():
     if os.environ.get("IG_USER_ID", "").strip():
         return os.environ["IG_USER_ID"].strip()
+    try:
+        cid = json.load(open(os.path.join(ROOT, "config", "publish.json"))).get("instagram_user_id")
+        if cid:
+            return str(cid)
+    except Exception:
+        pass
     if _acct.get("id"):
         return _acct["id"]
     if ig_login():
