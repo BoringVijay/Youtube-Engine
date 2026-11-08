@@ -187,8 +187,8 @@ def set_audience(kids=True):
 
 def main():
     cmd = sys.argv[1] if len(sys.argv) > 1 else "whoami"
-    if cmd == "kids":
-        set_audience(True)
+    if cmd in ("kids", "notkids"):
+        set_audience(cmd == "kids")
         return
     if cmd == "whoami":
         c = channel()

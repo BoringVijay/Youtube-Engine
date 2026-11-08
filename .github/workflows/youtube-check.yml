@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       cmd:
-        description: whoami | kids
+        description: whoami | kids | notkids
         default: whoami
 jobs:
   whoami:
