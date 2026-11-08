@@ -151,7 +151,9 @@ def main():
             st = json.load(open(p))
         except Exception:
             continue
-        if (st.get("instagram") or {}).get("status") in ("queued", "posting", "error") and st.get("final"):
+        ig = st.get("instagram") or {}
+        due = ig.get("status") == "scheduled" and ig.get("at") and dt.datetime.fromisoformat(ig["at"]) <= dt.datetime.now(dt.timezone.utc) + dt.timedelta(minutes=12)
+        if (ig.get("status") in ("queued", "posting", "error") or due) and st.get("final"):
             todo.append(st)
     if not todo:
         return
@@ -163,6 +165,11 @@ def main():
             continue
         if ig.get("status") == "error" and ig.get("fails", 0) >= 3:
             continue
+        if ig.get("status") == "scheduled":  # runs start a few minutes early; wait for the exact time
+            wait = (dt.datetime.fromisoformat(ig["at"]) - dt.datetime.now(dt.timezone.utc)).total_seconds()
+            if 0 < wait < 900:
+                log(f"waiting {int(wait)}s for the scheduled time"); time.sleep(wait)
+            ig["status"] = "queued"
         try:
             post(st, P.save_state)
         except Exception as e:

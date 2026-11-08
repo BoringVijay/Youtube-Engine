@@ -797,7 +797,7 @@ function ytVideo(j) { return ((j.youtube || {}).videos || [])[0] || null; }
 function stageWord(j) {
   return { queued: "Queued", directing: "Directing", voicing: "Recording voice", art: "Painting frames", motion: "Animating", final_render: "Rendering", metadata: "Finishing", final_ready: "Ready for you",
     posting: j.posted_claimed ? "Looking for it on YouTube" : "Ready to post", approved: "Uploading soon", uploading: "Uploading",
-    scheduled: ytVideo(j) && ytVideo(j).publish_at ? "Scheduled" : "On YouTube, " + ((ytVideo(j) || {}).privacy || "private"), live: "Live",
+    scheduled: (ytVideo(j) && ytVideo(j).publish_at) || (j.schedule && j.schedule.youtube) ? "Scheduled" : "On YouTube, " + ((ytVideo(j) || {}).privacy || "private"), live: "Live",
     cancelled: "Stopped", failed: "Stopped on an error", test_ready: "Test cut" }[j.stage] || j.stage;
 }
 function prodHTML(j) {
@@ -815,6 +815,7 @@ function prodHTML(j) {
       ${j.error && j.stage !== "cancelled" ? `<div class="err">${esc(j.error)}</div>` : ""}
       ${pendingHTML(j)}
       ${!working && j.step && ["posting", "scheduled", "live", "approved", "cancelled", "failed"].includes(j.stage) ? `<div class="stepline"><span>${esc(j.step)}</span><span>${ago(j.updated)}</span></div>` : ""}
+      ${j.schedule && (j.schedule.youtube || j.schedule.instagram) && j.stage !== "live" ? `<div class="pubs">${j.schedule.youtube && !(ytVideo(j) && ytVideo(j).publish_at) ? `<div class="pub">${ic("yt")}<div><div>YouTube goes public</div><div class="s">${istLabel(j.schedule.youtube)}</div></div></div>` : ""}${j.schedule.instagram && !(j.instagram && j.instagram.status === "posted") ? `<div class="pub">${ic("ig")}<div><div>Instagram posts</div><div class="s">${istLabel(j.schedule.instagram)}${j.instagram && j.instagram.status === "needs setup" ? " · connect Instagram first" : ""}</div></div></div>` : ""}</div>` : ""}
       ${j.stage === "posting" && j.slot ? `<div class="stepline"><span>Suggested time: <b style="color:var(--ink)">${when(j.slot)}</b></span></div>` : ""}
       ${yt.length && yt[0].analytics ? anaHTML(yt[0].analytics) : ""}
       ${yt.length && yt[0].views != null ? `<div class="ytstats"><div><b>${fmt(yt[0].views)}</b><span>views</span></div><div><b>${fmt(yt[0].likes)}</b><span>likes</span></div><div><b>${fmt(yt[0].comments)}</b><span>comments</span></div></div>` : ""}
@@ -832,6 +833,7 @@ function actions(j) {
   if (j.stage === "final_ready" && apiUp) { a.push(`<button class="btn primary grow" data-act="approve">${ic("yt")}Approve, upload private</button>`); a.push(`<button class="btn grow" data-act="notes">${ic("pencil")}Notes and redo</button>`); }
   if (j.stage === "final_ready" && !apiUp) { a.push(`<button class="btn primary grow" data-act="post">${ic("yt")}Post to YouTube</button>`); a.push(`<button class="btn grow" data-act="notes">${ic("pencil")}Notes and redo</button>`); }
   if (j.stage === "posting") { a.push(`<button class="btn primary grow" data-act="kit">${ic("yt")}Posting kit</button>`); if (!j.posted_claimed) a.push(`<button class="btn grow" data-act="posted">${ic("check")}I've posted it</button>`); }
+  if (j.stage === "scheduled" || (j.stage === "approved" && j.schedule)) a.push(`<button class="btn grow" data-act="sched">${ic("clock")}Change time</button>`);
   if ((j.stage === "scheduled" || j.stage === "live") && ytVideo(j)) a.push(`<a class="btn grow" href="${esc(ytVideo(j).studio)}" target="_blank" rel="noopener">${ic("yt")}YouTube Studio</a>`);
   if (["final_ready", "posting", "approved", "scheduled", "live"].includes(j.stage) && !(j.instagram && ["posted", "queued", "posting"].includes(j.instagram.status))) a.push(`<button class="btn grow" data-act="ig">${ic("ig")}Post to Instagram</button>`);
   if (j.final) a.push(`<a class="btn icon" href="${esc(j.final.view)}" target="_blank" rel="noopener" aria-label="Open in Google Drive" title="Open in Google Drive">${ic("drive")}</a>`);
@@ -864,6 +866,8 @@ function wireProd(card, j) {
     const act = b.dataset.act;
     if (act === "notes") return openNotes(j);
     if (act === "kit") return openKit(j);
+    if (act === "approve" && (((S.files["status.json"] || {}).publish) || {}).schedule) return openSchedule(j, "approve");
+    if (act === "sched") return openSchedule(j, "edit");
     if (act === "post") { openKit(j); if (!PENDING.has(j.id)) { try { await inbox("approve", { id: j.id, stage: "final" }); PENDING.set(j.id, { act: "post", at: Date.now() }); savePending(); renderStudio(); } catch (e) { toast(mcpErr(e)); } } return; }
     if (act === "ig" && !((S.files["status.json"] || {}).instagram || {}).connected) { toast("Connect Instagram first. Steps are in Channel."); return showView("stats"); }
     if (act === "cancel" && !armed(b, "Tap again to stop")) return;
@@ -886,9 +890,62 @@ function armed(b, label) {
   setTimeout(() => { if (b.isConnected && !b.disabled) { delete b.dataset.armed; b.innerHTML = was; } }, 3000);
   return false;
 }
+
+/* ---------- scheduling (shown and entered in IST) ---------- */
+const IST_MS = 330 * 60000;
+const toIST = (iso) => new Date(Date.parse(iso) + IST_MS).toISOString().slice(0, 16);
+const fromIST = (v) => v ? v + ":00+05:30" : null;
+const istLabel = (iso) => { const d = new Date(Date.parse(iso) + IST_MS); const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], mons = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  let h = d.getUTCHours(); const m = String(d.getUTCMinutes()).padStart(2, "0"), ap = h >= 12 ? "pm" : "am"; h = h % 12 || 12;
+  return `${days[d.getUTCDay()]} ${d.getUTCDate()} ${mons[d.getUTCMonth()]}, ${h}:${m} ${ap} IST`; };
+function suggestTimes(j) {
+  const sc = (((S.files["status.json"] || {}).publish) || {}).schedule; if (!sc) return null;
+  const key = (sc.audience_map || {})[((j.brew || {}).aud) || j.aud || ""] || "global", win = sc.windows[key];
+  const lead = Date.now() + (sc.min_lead_minutes || 45) * 60000, out = { why: win.why };
+  for (const plat of ["youtube", "instagram"]) {
+    const busy = {}; for (const o of jobs()) { const t = (o.schedule || {})[plat]; if (t && o.id !== j.id) { const k = toIST(t).slice(0, 10); busy[k] = (busy[k] || 0) + 1; } }
+    for (let dd = 0; dd < 21 && !out[plat]; dd++) {
+      const day = new Date(Date.now() + IST_MS + dd * 864e5).toISOString().slice(0, 10), wd = new Date(day + "T12:00:00Z").getUTCDay();
+      if (plat === "instagram" && sc.instagram_skip_weekends && (wd === 0 || wd === 6)) continue;
+      if ((busy[day] || 0) >= (sc.per_platform_per_day || 1)) continue;
+      for (const hm of win[plat]) { const iso = day + "T" + hm + ":00+05:30"; if (Date.parse(iso) > lead) { out[plat] = iso; break; } }
+    }
+  }
+  return out;
+}
+function openSchedule(j, mode) {
+  const cur = j.schedule || {}, sug = suggestTimes(j) || {}, yt = mode === "approve" ? sug.youtube : cur.youtube, ig = mode === "approve" ? sug.instagram : cur.instagram;
+  const igOn = !!((S.files["status.json"] || {}).instagram || {}).connected;
+  openSheet(mode === "approve" ? "Approve and schedule" : "Change the schedule", `
+    <div class="notice">${mode === "approve" ? "Uploads to YouTube as <b>private</b> right away. YouTube makes it public at the time below. Instagram posts at its own time." : "All times are IST."}${sug.why ? `<br><span style="font-size:13px">${esc(sug.why)}</span>` : ""}</div>
+    <label class="field">YouTube goes public (IST)<input type="datetime-local" data-yt value="${yt ? toIST(yt) : ""}"></label>
+    ${sug.youtube ? `<div class="stepline"><span>Best next window: ${istLabel(sug.youtube)}</span><button class="btn sm" data-useyt>Use</button></div>` : ""}
+    <label class="field">Instagram posts (IST)<input type="datetime-local" data-ig value="${ig ? toIST(ig) : ""}"></label>
+    ${sug.instagram ? `<div class="stepline"><span>Best next window: ${istLabel(sug.instagram)}</span><button class="btn sm" data-useig>Use</button></div>` : ""}
+    <label class="stepline" style="justify-content:flex-start;gap:10px"><input type="checkbox" data-igon ${ig ? "checked" : ""}> Post to Instagram too${igOn ? "" : " (connect Instagram in Channel first)"}</label>
+    <div class="btnrow"><button class="btn primary grow" data-go>${ic("check")}${mode === "approve" ? "Approve and schedule" : "Save schedule"}</button>
+    ${mode === "approve" ? `<button class="btn grow" data-nosched>Upload private, no time</button>` : ""}</div>`, (root) => {
+    const ytIn = $("[data-yt]", root), igIn = $("[data-ig]", root), igOnEl = $("[data-igon]", root);
+    if ($("[data-useyt]", root)) $("[data-useyt]", root).onclick = () => (ytIn.value = toIST(sug.youtube));
+    if ($("[data-useig]", root)) $("[data-useig]", root).onclick = () => { igIn.value = toIST(sug.instagram); igOnEl.checked = true; };
+    const send = async (noTime) => {
+      const yAt = noTime ? null : fromIST(ytIn.value), iAt = !noTime && igOnEl.checked ? fromIST(igIn.value) : null;
+      if (yAt && Date.parse(yAt) < Date.now() + 20 * 60000) return toast("Pick a YouTube time at least 20 minutes out.");
+      try {
+        if (mode === "approve") await inbox("approve", { id: j.id, stage: "final", youtube_at: yAt || "none", instagram_at: iAt, instagram: !!iAt });
+        else await inbox("schedule", { id: j.id, youtube_at: yAt, instagram_at: iAt });
+        PENDING.set(j.id, { act: mode === "approve" ? "approve" : "schedule", at: Date.now() }); savePending();
+        toast(mode === "approve" ? (yAt ? "Approved. Goes public " + istLabel(yAt) + "." : "Approved. Uploads private, you flip it.") : "Schedule saved.");
+        closeSheet(); renderStudio();
+      } catch (e) { toast(mcpErr(e)); }
+    };
+    $("[data-go]", root).onclick = () => send(false);
+    if ($("[data-nosched]", root)) $("[data-nosched]", root).onclick = () => send(true);
+  });
+}
 function pendingHTML(j) {
   const p = PENDING.get(j.id); if (!p || Date.parse(j.updated) > p.at) return "";
-  const what = { post: "Marked for posting", posted: "Told the engine it's posted", cancel: "Stop sent", resume: "Resume sent", ig: "Instagram post queued", approve: "Approval sent" }[p.act] || "Sent";
+  const what = { schedule: "New schedule sent", post: "Marked for posting", posted: "Told the engine it's posted", cancel: "Stop sent", resume: "Resume sent", ig: "Instagram post queued", approve: "Approval sent" }[p.act] || "Sent";
   return `<div class="pending">${ic("clock")}<div><b>${what}</b> ${ago(new Date(p.at).toISOString())}. The engine picks it up ${engineState().short}.</div></div>`;
 }
 function kitText(j) {

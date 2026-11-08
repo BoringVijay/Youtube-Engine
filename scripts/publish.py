@@ -98,6 +98,53 @@ def set_thumbnail(vid, jpg):
         return False
 
 
+IST = dt.timezone(dt.timedelta(hours=5, minutes=30))
+
+
+def fmt_ist(iso):
+    return dt.datetime.fromisoformat(iso).astimezone(IST).strftime("%a %d %b, %I:%M %p IST").replace(" 0", " ")
+
+
+def suggest(st, others):
+    """Best YouTube and Instagram times (IST) for one Short: audience window, one per platform per day, Reels skip weekends."""
+    sc = CFG["schedule"]
+    key = sc["audience_map"].get((st.get("brew") or {}).get("aud") or st.get("aud") or "", "global")
+    win = sc["windows"][key]
+    now = dt.datetime.now(IST) + dt.timedelta(minutes=sc.get("min_lead_minutes", 45))
+    out = {"window": key, "why": win["why"]}
+    for plat in ("youtube", "instagram"):
+        busy = {}
+        for o in others:
+            t = (o.get("schedule") or {}).get(plat)
+            if t:
+                d = dt.datetime.fromisoformat(t).astimezone(IST).date()
+                busy[d] = busy.get(d, 0) + 1
+        day, pick = now.date(), None
+        while not pick:
+            if not (plat == "instagram" and sc.get("instagram_skip_weekends") and day.weekday() >= 5) and busy.get(day, 0) < sc.get("per_platform_per_day", 1):
+                for hhmm in win[plat]:
+                    hh, mm = map(int, hhmm.split(":"))
+                    cand = dt.datetime(day.year, day.month, day.day, hh, mm, tzinfo=IST)
+                    if cand > now:
+                        pick = cand
+                        break
+            day += dt.timedelta(days=1)
+        out[plat] = pick.isoformat()
+    return out
+
+
+def schedule_on_youtube(vid, at_iso):
+    """Set (or clear) publishAt on an uploaded private video. YouTube makes it public at that time."""
+    cur = api("GET", "videos", params={"part": "status", "id": vid}).get("items", [])
+    if not cur:
+        raise RuntimeError("video not found on YouTube")
+    stt = {k: cur[0]["status"][k] for k in ("embeddable", "license", "publicStatsViewable", "selfDeclaredMadeForKids", "containsSyntheticMedia") if k in cur[0]["status"]}
+    stt["privacyStatus"] = "private"
+    if at_iso:
+        stt["publishAt"] = dt.datetime.fromisoformat(at_iso).astimezone(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z")
+    return api("PUT", "videos", {"id": vid, "status": stt}, params={"part": "status"})
+
+
 def next_slots(n, taken):
     """Propose publishing slots: rotate experiment times (IST) and respect the daily cap."""
     tz = dt.timezone(dt.timedelta(hours=5, minutes=30))
@@ -171,6 +218,9 @@ def publish(st, save, status_cb):
         snippet = {"title": title[:100], "description": desc, "tags": (meta.get("tags") or [])[:30], "categoryId": CFG["category_id"],
                    "defaultLanguage": "en", "defaultAudioLanguage": "en"}
         status = {"privacyStatus": "private", "selfDeclaredMadeForKids": bool(CFG.get("made_for_kids", True)), "containsSyntheticMedia": True, "embeddable": True, "license": "youtube"}
+        when = (st.get("schedule") or {}).get("youtube") if kind == "main" else None
+        if when and dt.datetime.fromisoformat(when) > dt.datetime.now(dt.timezone.utc) + dt.timedelta(minutes=20):
+            status["publishAt"] = dt.datetime.fromisoformat(when).astimezone(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z")
         st["step"] = f"Uploading {kind} to YouTube (private)"
         save(st); status_cb()
         def prog(pct, kind=kind):
@@ -227,7 +277,8 @@ def main():
         try:
             P.set_stage(st, "uploading", "Uploading to YouTube as private")
             publish(st, P.save_state, P.publish_status)
-            P.set_stage(st, "scheduled", "On YouTube as private. Publish it at the suggested time in YouTube Studio", 97)
+            when = (st.get("schedule") or {}).get("youtube")
+            P.set_stage(st, "scheduled", ("Uploaded private. YouTube makes it public " + fmt_ist(when)) if when else "Uploaded private. Flip it to Public in YouTube Studio", 97)
         except Exception as e:
             st["error"] = str(e)[:400]
             st["step"] = "YouTube upload hit an error. Retrying next run"

@@ -100,12 +100,13 @@ def publish_status():
     for st in sorted(all_states(), key=lambda s: s.get("updated", ""), reverse=True)[:40]:
         j = {k: st.get(k) for k in ("id", "q", "series", "stage", "pct", "step", "steps", "preview", "final", "shorts", "thumb", "meta",
                                      "error", "updated", "created", "duration", "notes_in", "universe", "cameos", "cost", "youtube", "instagram", "format", "penguin_role", "v",
-                                     "slot", "posted_claimed", "voice_style", "qc")}
+                                     "slot", "posted_claimed", "voice_style", "qc", "schedule")}
         jobs.append(j)
     body = {"at": now(), "engine": "github-actions", "version": 3, "backend": gai.backend(), "budget": budget.summary(), "jobs": jobs,
             "instagram": instagram.account(), "youtube": {k: v for k, v in youtube.channel().items() if k != "uploads"},
             "run": {**RUN, "next": next_check()}, "analytics": _analytics(), "publish": {"api_upload": PUBLISH_CFG.get("api_audited", False), "footer": PUBLISH_CFG.get("description_footer", ""),
-                        "slots_ist": PUBLISH_CFG.get("experiment_slots_ist", []), "daily_cap": PUBLISH_CFG.get("daily_cap", 2)}}
+                        "slots_ist": PUBLISH_CFG.get("experiment_slots_ist", []), "daily_cap": PUBLISH_CFG.get("daily_cap", 2),
+                        "schedule": PUBLISH_CFG.get("schedule")}}
     try:
         drive.put_json("outbox", "status.json", body)
     except Exception as e:
@@ -196,7 +197,18 @@ def handle_inbox():
                 set_stage(st, "motion", "Approved. Animating the key shots next")
             elif m.get("stage") == "final" and st["stage"] == "final_ready":
                 if PUBLISH_CFG.get("api_audited"):
-                    set_stage(st, "approved", "Approved. Uploading to YouTube next")
+                    import publish
+                    sug = publish.suggest(st, [x for x in all_states() if x.get("id") != st["id"]])
+                    yat = m.get("youtube_at")
+                    sc = {"youtube": None if yat == "none" else (yat or sug["youtube"]), "instagram": m.get("instagram_at") or sug["instagram"],
+                          "why": sug["why"], "window": sug["window"]}
+                    if m.get("instagram") is False:
+                        sc["instagram"] = None
+                    st["schedule"], st["slot"] = sc, sc["youtube"]
+                    if sc.get("instagram"):
+                        st["instagram"] = {"status": "scheduled", "at": sc["instagram"]}
+                    set_stage(st, "approved", ("Approved. Uploading private, goes public " + publish.fmt_ist(sc["youtube"])) if sc["youtube"]
+                              else "Approved. Uploading private, you flip it public")
                 else:
                     import publish
                     taken = [x.get("slot") for x in all_states() if x.get("slot")]
@@ -214,6 +226,25 @@ def handle_inbox():
             set_stage(st, "queued", f"Redo requested ({what})")
         elif t == "audition":
             auditions.append(m)
+        elif t == "schedule" and st:
+            import publish
+            sc = st.setdefault("schedule", {})
+            if "youtube_at" in m:
+                sc["youtube"] = m["youtube_at"] or None
+                st["slot"] = sc["youtube"]
+                vid = (((st.get("youtube") or {}).get("videos") or [{}])[0]).get("id")
+                if vid and st.get("stage") in ("scheduled", "posting"):
+                    try:
+                        publish.schedule_on_youtube(vid, sc["youtube"])
+                        set_stage(st, "scheduled", ("Uploaded private. YouTube makes it public " + publish.fmt_ist(sc["youtube"])) if sc["youtube"] else "Uploaded private. Flip it to Public in YouTube Studio", 97)
+                    except Exception as e:
+                        st["error"] = "Couldn't set the YouTube schedule: " + str(e)[:200]
+            if "instagram_at" in m:
+                sc["instagram"] = m["instagram_at"] or None
+                ig = st.get("instagram") or {}
+                if ig.get("status") not in ("posted", "posting"):
+                    st["instagram"] = {"status": "scheduled", "at": sc["instagram"]} if sc["instagram"] else {}
+            save_state(st)
         elif t == "posted" and st and st.get("stage") in ("posting", "approved", "final_ready"):
             st["posted_claimed"] = m.get("at") or now()  # legacy posting-kit path
             set_stage(st, "posting", "Looking for it on your channel", 94)
