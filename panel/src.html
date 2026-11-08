@@ -820,7 +820,7 @@ function prodHTML(j) {
       ${yt.length && yt[0].analytics ? anaHTML(yt[0].analytics) : ""}
       ${yt.length && yt[0].views != null ? `<div class="ytstats"><div><b>${fmt(yt[0].views)}</b><span>views</span></div><div><b>${fmt(yt[0].likes)}</b><span>likes</span></div><div><b>${fmt(yt[0].comments)}</b><span>comments</span></div></div>` : ""}
       ${yt.length || ig.status ? `<div class="pubs">${yt.map((v) => `<div class="pub">${ic("yt")}<div><div>YouTube · ${esc(v.privacy || "")}</div><div class="s">${v.publish_at ? "Goes public " + when(v.publish_at) : v.published ? "Posted " + when(v.published) : ""}${v.checked ? " · checked " + ago(v.checked) : ""}</div></div><a class="btn sm" href="${esc(v.url || v.studio)}" target="_blank" rel="noopener">Open ${ic("out")}</a></div>`).join("")}
-        ${ig.status ? `<div class="pub">${ic("ig")}<div><div>Instagram · ${esc(ig.status)}</div>${ig.error ? `<div class="s">${esc(ig.error)}</div>` : ""}</div>${ig.permalink ? `<a class="btn sm" href="${esc(ig.permalink)}" target="_blank" rel="noopener">Open ${ic("out")}</a>` : ""}</div>` : ""}</div>` : ""}
+        ${ig.status ? `<div class="pub">${ic("ig")}<div><div>Instagram · ${esc(ig.status)}</div>${ig.stats ? `<div class="s">${fmt(ig.stats.views)} views · ${fmt(ig.stats.likes)} likes · ${fmt(ig.stats.shares)} shares · ${fmt(ig.stats.saved)} saves</div>` : ""}${ig.error ? `<div class="s">${esc(ig.error)}</div>` : ""}</div>${ig.permalink ? `<a class="btn sm" href="${esc(ig.permalink)}" target="_blank" rel="noopener">Open ${ic("out")}</a>` : ""}</div>` : ""}</div>` : ""}
       <div class="btnrow">${actions(j)}</div>
     </div>
   </article>`;
@@ -1019,15 +1019,14 @@ function renderStats() {
       <div class="pick" id="vsPick">${VSTYLES.map(([k, l]) => `<button data-v="${k}" aria-pressed="${(S.vstyle || "C") === k}">${l}</button>`).join("")}</div>
       <p class="muted" style="font-size:14px;margin:10px 2px 0">Default delivery for new Shorts. Each idea can override it.</p></div>
     <div class="section"><h2>Instagram</h2>
-      ${igOn ? `<div class="notice"><b>Connected${st.instagram.username ? " as @" + esc(st.instagram.username) : ""}.</b> Post any finished Short from the Studio. Nothing goes to Instagram unless you tap Post or approve a time.</div>` : `<div class="notice"><b>Not connected yet.</b> About 10 minutes, once. Reels post only when you tap Post or approve a scheduled time.${st.instagram && st.instagram.error ? `<br><span class="err">${esc(st.instagram.error)}</span>` : ""}</div>
+      ${igOn ? `<div class="notice"><b>Connected${st.instagram.username ? " as @" + esc(st.instagram.username) : ""}.</b> Post any finished Short from the Studio. Nothing goes to Instagram unless you tap Post or approve a time.</div><div style="margin-top:12px">${igSection(st)}</div>` : `<div class="notice"><b>Not connected yet.</b> About 10 minutes, once. Reels post only when you tap Post or approve a scheduled time.${st.instagram && st.instagram.error ? `<br><span class="err">${esc(st.instagram.error)}</span>` : ""}</div>
       <ol class="guide" style="margin-top:12px">
-        <li>In the Instagram app: <b>Settings, Account type and tools</b>. It should say <b>Creator</b> or <b>Business</b>. No Facebook Page needed.</li>
-        <li>Go to <b>developers.facebook.com</b> and register as a developer (your Facebook login is just the sign-in; nothing links to Instagram).</li>
-        <li><b>My Apps, Create app</b>. Name it Curious Penguin Engine, pick the <b>Instagram</b> use case, skip the business portfolio.</li>
-        <li>In the app: <b>Instagram, API setup with Instagram login</b>. Make sure <code>instagram_business_basic</code> and <code>instagram_business_content_publish</code> are on.</li>
-        <li><b>App roles, Roles, Add people, Instagram Tester</b> with the new account's username. Then in Instagram: <b>Settings, Website permissions, Apps and websites, Tester invites</b>, Accept.</li>
-        <li>Back in <b>API setup with Instagram login</b>: <b>Add account</b>, log in, <b>Generate token</b>. Copy the token and the Instagram user ID.</li>
-        <li>In GitHub, repo <b>Settings, Secrets and variables, Actions</b>: add <code>IG_ACCESS_TOKEN</code> and <code>IG_USER_ID</code>. Never paste them in chat. The engine renews the token itself every week.</li>
+        <li>Instagram account set to <b>Creator</b> or <b>Business</b>. No Facebook Page needed.</li>
+        <li><b>developers.facebook.com</b>: an app with the Instagram use case, connected to your business portfolio (Unified login).</li>
+        <li>In <b>business.facebook.com/settings</b>: add the Instagram account so it says <b>Owned by</b> your portfolio. If it's owned by another portfolio, remove it there and add it again here.</li>
+        <li><b>Users, System users, Add</b> (Admin). <b>Assign assets</b>: the app and the Instagram account, full control.</li>
+        <li><b>Generate new token</b>: your app, expiry <b>Never</b>, permissions <code>instagram_basic</code>, <code>instagram_content_publish</code>, <code>instagram_manage_insights</code>.</li>
+        <li>GitHub, repo <b>Settings, Secrets and variables, Actions</b>: save it as <code>IG_ACCESS_TOKEN</code>. Never paste it in chat. The account ID lives in <code>config/publish.json</code>.</li>
       </ol>`}
     </div>
 `;
@@ -1049,6 +1048,20 @@ function anaSection(st, all) {
       <div class="tile wide"><div class="l" style="margin:0 0 8px">Daily views</div><svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto" role="img" aria-label="Daily views, last 28 days">${bars}</svg><div class="l" style="margin-top:6px">Updated ${ago(a.at)}. YouTube's numbers lag a day or two.</div></div>
     </div>
     ${rows ? `<div class="pubs" style="margin-top:12px">${rows}</div>` : ""}`;
+}
+function igSection(st) {
+  const a = st.ig_analytics;
+  if (!a) return `<div class="notice">Instagram numbers arrive with the engine's next analytics pass (every 3 hours).</div>`;
+  const l = a.last_28d || {}, reels = (a.reels || []).slice().sort((x, y) => (y.views || 0) - (x.views || 0));
+  const rows = reels.map((r) => `<div class="pub"><div style="flex:1;min-width:0"><div style="font-weight:650;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(r.title || "Reel")}</div><div class="s">${fmt(r.views)} views · ${fmt(r.reach)} reached · ${fmt(r.likes)} likes · ${fmt(r.shares)} shares · ${fmt(r.saved)} saves${r.ig_reels_avg_watch_time ? " · " + (r.ig_reels_avg_watch_time / 1000).toFixed(1) + "s avg watch" : ""}</div></div>${r.permalink ? `<a class="btn sm" href="${esc(r.permalink)}" target="_blank" rel="noopener">${ic("out")}</a>` : ""}</div>`).join("");
+  return `<div class="tiles">
+      <div class="tile"><div class="n">${fmt(a.followers)}</div><div class="l">followers</div></div>
+      <div class="tile"><div class="n">${fmt(l.reach)}</div><div class="l">reached, last 28 days</div></div>
+      <div class="tile"><div class="n">${fmt(l.views)}</div><div class="l">views, last 28 days</div></div>
+      <div class="tile"><div class="n">${fmt(l.profile_views)}</div><div class="l">profile visits</div></div>
+    </div>
+    ${rows ? `<div class="pubs" style="margin-top:12px">${rows}</div>` : ""}
+    <p class="muted" style="font-size:13px;margin:10px 2px 0">@${esc(a.username || "")} · updated ${ago(a.updated)}. Audience breakdowns unlock at 100 followers.</p>`;
 }
 function ytSection(st, all) {
   const c = st.youtube || {}, live = all.filter((j) => ytVideo(j));

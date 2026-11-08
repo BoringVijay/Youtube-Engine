@@ -272,7 +272,15 @@ def send_video(cid, uri, local, st, save):
     Drive that Meta fetches itself, deleted once the container is ready."""
     url = uri or f"https://rupload.facebook.com/ig-api-upload/{VER}/{cid}"
     size = os.path.getsize(local)
+    import subprocess
     try:
+        secs = float(subprocess.run([_ffmpeg().replace("ffmpeg", "ffprobe"), "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", local],
+                                    capture_output=True, text=True).stdout.strip() or 0)
+    except Exception:
+        secs = 0
+    try:
+        if secs > 38:  # known refusal; go straight to the hosted link
+            raise RuntimeError(f"ProcessingFailedError (skipped byte upload, {secs:.0f} s Reel)")
         up = call("POST", "", url=url, raw=open(local, "rb").read(),
                   headers={"Authorization": f"OAuth {tok()}", "offset": "0", "file_size": str(size)}, timeout=900)
         if up.get("success", True):
@@ -410,7 +418,37 @@ def insights(save_to=None):
     return data
 
 
+def insights_sync(every_hours=3):
+    """Refresh Instagram numbers for the dashboard (every 3 h) and copy each posted Reel's stats onto its job."""
+    path = os.path.join(ROOT, "analytics", "instagram.json")
+    if not tok():
+        return
+    if os.path.exists(path) and time.time() - os.path.getmtime(path) < every_hours * 3600 - 300:
+        return
+    try:
+        d = insights(path)
+    except Exception as e:
+        log("insights failed:", str(e)[:200]); return
+    by_id = {r["id"]: r for r in d["reels"]}
+    import produce as P
+    for p in glob.glob(os.path.join(ROOT, "jobs", "*", "state.json")):
+        try:
+            st = json.load(open(p))
+        except Exception:
+            continue
+        ig = st.get("instagram") or {}
+        r = by_id.get(ig.get("media_id"))
+        if r:
+            ig["stats"] = {k: r.get(k) for k in ("views", "reach", "likes", "comments", "shares", "saved", "ig_reels_avg_watch_time")}
+            ig["stats_at"] = d["updated"]
+            st["instagram"] = ig
+            P.save_state(st)
+    log("insights:", d.get("followers"), "followers,", len(d["reels"]), "reels")
+
+
 def main():
+    if sys.argv[1:] == ["insights-sync"]:
+        return insights_sync()
     if sys.argv[1:] == ["whoami"]:
         return whoami()
     if sys.argv[1:2] == ["dryrun"]:

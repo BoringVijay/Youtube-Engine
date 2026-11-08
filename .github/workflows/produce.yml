@@ -131,6 +131,7 @@ jobs:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
         run: |
           mkdir -p logs
+          python3 -u scripts/instagram.py insights-sync 2>&1 | tee -a logs/produce-last.log || true
           python3 -u scripts/youtube.py sync 2>&1 | tee -a logs/produce-last.log || true
       - name: Save job state
         if: always()

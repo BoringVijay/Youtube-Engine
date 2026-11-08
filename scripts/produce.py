@@ -86,6 +86,16 @@ def _analytics():
         return None
 
 
+def _ig_analytics():
+    try:
+        a = json.load(open(os.path.join(ROOT, "analytics", "instagram.json")))
+        a["reels"] = [{k: r.get(k) for k in ("id", "permalink", "timestamp", "title", "views", "reach", "likes", "comments", "shares", "saved", "ig_reels_avg_watch_time")}
+                      for r in a.get("reels", [])][:20]
+        return a
+    except Exception:
+        return None
+
+
 def next_check():
     """The engine wakes hourly at :41 UTC (GitHub can start it a few minutes late)."""
     t = dt.datetime.now(dt.timezone.utc).replace(second=0, microsecond=0)
@@ -104,7 +114,7 @@ def publish_status():
         jobs.append(j)
     body = {"at": now(), "engine": "github-actions", "version": 3, "backend": gai.backend(), "budget": budget.summary(), "jobs": jobs,
             "instagram": instagram.account(), "youtube": {k: v for k, v in youtube.channel().items() if k != "uploads"},
-            "run": {**RUN, "next": next_check()}, "analytics": _analytics(), "publish": {"api_upload": PUBLISH_CFG.get("api_audited", False), "footer": PUBLISH_CFG.get("description_footer", ""),
+            "run": {**RUN, "next": next_check()}, "analytics": _analytics(), "ig_analytics": _ig_analytics(), "publish": {"api_upload": PUBLISH_CFG.get("api_audited", False), "footer": PUBLISH_CFG.get("description_footer", ""),
                         "slots_ist": PUBLISH_CFG.get("experiment_slots_ist", []), "daily_cap": PUBLISH_CFG.get("daily_cap", 2),
                         "schedule": PUBLISH_CFG.get("schedule")}}
     try:
