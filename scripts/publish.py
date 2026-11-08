@@ -170,7 +170,7 @@ def publish(st, save, status_cb):
             drive.download(fid, local)
         snippet = {"title": title[:100], "description": desc, "tags": (meta.get("tags") or [])[:30], "categoryId": CFG["category_id"],
                    "defaultLanguage": "en", "defaultAudioLanguage": "en"}
-        status = {"privacyStatus": "private", "selfDeclaredMadeForKids": False, "containsSyntheticMedia": True, "embeddable": True, "license": "youtube"}
+        status = {"privacyStatus": "private", "selfDeclaredMadeForKids": bool(CFG.get("made_for_kids", True)), "containsSyntheticMedia": True, "embeddable": True, "license": "youtube"}
         st["step"] = f"Uploading {kind} to YouTube (private)"
         save(st); status_cb()
         def prog(pct, kind=kind):

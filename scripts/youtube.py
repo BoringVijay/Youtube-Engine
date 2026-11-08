@@ -160,8 +160,36 @@ def sync(states, save):
     return changed
 
 
+def put(path, body, **params):
+    url = f"{YT}/{path}?" + urllib.parse.urlencode(params)
+    r = urllib.request.Request(url, data=json.dumps(body).encode(), method="PUT",
+                               headers={"Authorization": f"Bearer {token()}", "Content-Type": "application/json"})
+    try:
+        with urllib.request.urlopen(r, timeout=30) as resp:
+            return json.load(resp)
+    except urllib.error.HTTPError as e:
+        raise RuntimeError(f"YouTube {path} -> HTTP {e.code}: {e.read()[:300].decode('utf-8', 'replace')}")
+
+
+def set_audience(kids=True):
+    """Set made-for-kids on every Curious Penguin video the engine uploaded, keeping its other status settings."""
+    ids = []
+    for p in glob.glob(os.path.join(ROOT, "jobs", "*", "state.json")):
+        st = json.load(open(p))
+        ids += [v["id"] for v in ((st.get("youtube") or {}).get("videos") or []) if v.get("id")]
+    for i in range(0, len(ids), 50):
+        for v in get("videos", part="status", id=",".join(ids[i:i + 50])).get("items", []):
+            stt = {k: v["status"][k] for k in ("privacyStatus", "embeddable", "license", "publicStatsViewable", "publishAt", "containsSyntheticMedia") if k in v["status"]}
+            stt["selfDeclaredMadeForKids"] = kids
+            out = put("videos", {"id": v["id"], "status": stt}, part="status")
+            log(v["id"], "madeForKids:", out.get("status", {}).get("madeForKids"), "selfDeclared:", out.get("status", {}).get("selfDeclaredMadeForKids"))
+
+
 def main():
     cmd = sys.argv[1] if len(sys.argv) > 1 else "whoami"
+    if cmd == "kids":
+        set_audience(True)
+        return
     if cmd == "whoami":
         c = channel()
         print(json.dumps({k: v for k, v in c.items() if k != "uploads"}, indent=1))

@@ -1,6 +1,10 @@
 name: YouTube account check
 on:
   workflow_dispatch:
+    inputs:
+      cmd:
+        description: whoami | kids
+        default: whoami
 jobs:
   whoami:
     runs-on: ubuntu-latest
@@ -12,4 +16,4 @@ jobs:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
-        run: python3 scripts/youtube.py whoami
+        run: python3 scripts/youtube.py ${{ github.event.inputs.cmd || 'whoami' }}
