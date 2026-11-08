@@ -158,6 +158,30 @@ def account():
     return _acct["summary"]
 
 
+def _ffmpeg():
+    import shutil, subprocess
+    if shutil.which("ffmpeg"):
+        return "ffmpeg"
+    subprocess.run("curl -sL https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz | tar xJ -C /tmp && "
+                   "sudo cp /tmp/ffmpeg-*-static/ffmpeg /tmp/ffmpeg-*-static/ffprobe /usr/local/bin/", shell=True, check=True)
+    return "ffmpeg"
+
+
+def ig_ready(src):
+    """Re-encode to Instagram's Reels spec: H.264 High yuv420p, VBR ~6 Mbps capped at 8 (limit is 25),
+    AAC 48 kHz stereo 128k, moov atom first. A 59 s Short comes out around 40-50 MB."""
+    import subprocess
+    dst = src.replace(".mp4", ".ig.mp4")
+    if os.path.exists(dst) and os.path.getmtime(dst) >= os.path.getmtime(src):
+        return dst
+    subprocess.run([_ffmpeg(), "-y", "-loglevel", "error", "-i", src, "-c:v", "libx264", "-profile:v", "high", "-level", "4.1",
+                    "-pix_fmt", "yuv420p", "-preset", "medium", "-b:v", "6M", "-maxrate", "8M", "-bufsize", "16M",
+                    "-vf", "scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2,setsar=1",
+                    "-c:a", "aac", "-ar", "48000", "-ac", "2", "-b:a", "128k", "-movflags", "+faststart", dst], check=True)
+    log(f"instagram encode: {os.path.getsize(src)/1e6:.0f} MB -> {os.path.getsize(dst)/1e6:.0f} MB")
+    return dst
+
+
 def caption(st):
     meta = st.get("meta") or {}
     cap = (meta.get("instagram_caption") or "").strip()
@@ -191,6 +215,7 @@ def post(st, save):
         if not os.path.exists(local):
             import drive
             drive.download(st["final"]["id"], local)
+        local = ig_ready(local)
         size = os.path.getsize(local)
         c = call("POST", f"{uid}/media", {"media_type": "REELS", "upload_type": "resumable", "caption": caption(st), "share_to_feed": "true"})
         ig.update(status="posting", container=c["id"], started=now())
@@ -266,6 +291,8 @@ def dryrun(jid):
     local = os.path.join(out, "short.mp4")
     import drive
     drive.download(st["final"]["id"], local)
+    print(f"original: {os.path.getsize(local)/1e6:.1f} MB")
+    local = ig_ready(local)
     size = os.path.getsize(local)
     print(f"video: {size/1e6:.1f} MB, login type: {'Instagram' if ig_login() else 'Facebook/system user'}")
     lim = call("GET", f"{uid}/content_publishing_limit", {"fields": "quota_usage,config"})
