@@ -76,7 +76,7 @@
  "brew_at": "2026-11-07T09:51:33+00:00",
  "stage": "scheduled",
  "pct": 97,
- "step": "On YouTube as private. Make it public or schedule it in YouTube Studio",
+ "step": "Uploaded as private. Flip it to Public (or schedule it) in YouTube Studio",
  "steps": [
   {
    "stage": "queued",
@@ -125,10 +125,14 @@
   {
    "stage": "scheduled",
    "at": "2026-11-08T11:02:43+00:00"
+  },
+  {
+   "stage": "scheduled",
+   "at": "2026-11-08T11:39:19+00:00"
   }
  ],
  "created": "2026-11-07T09:51:33+00:00",
- "updated": "2026-11-08T11:33:31+00:00",
+ "updated": "2026-11-08T11:39:19+00:00",
  "error": null,
  "fails": 0,
  "preview": {
@@ -246,7 +250,7 @@
     "views": 0,
     "likes": 0,
     "comments": 0,
-    "checked": "2026-11-08T11:33:31+00:00"
+    "checked": "2026-11-08T11:39:19+00:00"
    }
   ],
   "audited": false,
