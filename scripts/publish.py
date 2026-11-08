@@ -119,10 +119,24 @@ def next_slots(n, taken):
     return slots
 
 
-def describe(meta, extra=""):
-    desc = (meta.get("description") or "").strip()
-    desc += "\n\n" + CFG["description_footer"]
-    return (desc + extra)[:4900]
+def describe(meta, extra="", refs=None, cameo=None):
+    """Clean YouTube description: hook, story line, sources (true stories), spot-the-penguin, footer, hashtags last."""
+    raw = (meta.get("description") or "").strip()
+    tags = re.findall(r"#\w+", raw)
+    body = re.sub(r"#\w+", "", raw).strip()
+    body = "\n".join(l.strip() for l in body.splitlines() if l.strip())
+    parts = [body]
+    if cameo:
+        parts.append("Spot the penguin: " + cameo.rstrip(".") + ".")
+    if refs:
+        parts.append("Sources:\n" + "\n".join("- " + r for r in refs[:4]))
+    parts.append(CFG["description_footer"].strip())
+    seen, hs = set(), []
+    for t in ["#Shorts"] + tags + ["#CuriousPenguin"]:
+        if t.lower() not in seen:
+            seen.add(t.lower()); hs.append(t)
+    parts.append(" ".join(hs[:6]))
+    return ("\n\n".join(p for p in parts if p) + extra)[:4900]
 
 
 def publish(st, save, status_cb):
@@ -142,7 +156,7 @@ def publish(st, save, status_cb):
     items = []
     if st.get("final") and "main" not in done_kinds:
         is_short = st.get("v") == 3 or not (st.get("brew", {}).get("format") or {}).get("long", True)
-        desc = describe(meta)
+        desc = describe(meta, refs=(st.get("brew") or {}).get("refs"))
         items.append(("main", st["final"]["id"], meta.get("title") or st.get("q"), desc + ("\n#Shorts" if is_short and "#shorts" not in desc.lower() else "")))
     for k, sh in enumerate(st.get("shorts") or []):
         if f"short{k + 1}" in done_kinds:

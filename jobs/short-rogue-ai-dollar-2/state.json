@@ -74,9 +74,9 @@
   }
  },
  "brew_at": "2026-11-07T09:51:33+00:00",
- "stage": "final_ready",
+ "stage": "approved",
  "pct": 90,
- "step": "Short ready (Scrap-Heap Cybernetics, penguin as sidekick). Watch it and approve or send notes",
+ "step": "Approved by Vijay: uploading to YouTube as private",
  "steps": [
   {
    "stage": "queued",
@@ -109,10 +109,14 @@
   {
    "stage": "final_ready",
    "at": "2026-11-07T13:13:41+00:00"
+  },
+  {
+   "stage": "approved",
+   "at": "2026-11-08T10:56:19+00:00"
   }
  ],
  "created": "2026-11-07T09:51:33+00:00",
- "updated": "2026-11-07T13:13:41+00:00",
+ "updated": "2026-11-08T10:56:19+00:00",
  "error": null,
  "fails": 0,
  "preview": {

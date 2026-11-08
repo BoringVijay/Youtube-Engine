@@ -67,9 +67,9 @@
  },
  "brew_at": "2026-11-07T05:33:41+00:00",
  "created": "2026-11-07T05:33:41+00:00",
- "stage": "posting",
+ "stage": "approved",
  "pct": 92,
- "step": "Ready to post. Open the posting kit, upload from the YouTube app, then tap I've posted it",
+ "step": "Approved by Vijay: uploading to YouTube as private",
  "steps": [
   {
    "stage": "queued",
@@ -106,10 +106,14 @@
   {
    "stage": "posting",
    "at": "2026-11-07T08:35:45+00:00"
+  },
+  {
+   "stage": "approved",
+   "at": "2026-11-08T10:56:19+00:00"
   }
  ],
  "fails": 0,
- "updated": "2026-11-07T08:35:45+00:00",
+ "updated": "2026-11-08T10:56:19+00:00",
  "error": null,
  "cost": 9.312,
  "universe": "Macro photography of handmade miniature sets · Tiny Props Workshop",

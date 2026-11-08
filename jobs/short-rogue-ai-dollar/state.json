@@ -74,9 +74,9 @@
   }
  },
  "brew_at": "2026-11-07T08:39:37+00:00",
- "stage": "posting",
+ "stage": "approved",
  "pct": 92,
- "step": "Ready to post. Open the posting kit, upload from the YouTube app, then tap I've posted it",
+ "step": "Approved by Vijay: uploading to YouTube as private",
  "steps": [
   {
    "stage": "queued",
@@ -113,10 +113,14 @@
   {
    "stage": "posting",
    "at": "2026-11-07T12:55:06+00:00"
+  },
+  {
+   "stage": "approved",
+   "at": "2026-11-08T10:56:19+00:00"
   }
  ],
  "created": "2026-11-07T08:39:37+00:00",
- "updated": "2026-11-07T12:55:06+00:00",
+ "updated": "2026-11-08T10:56:19+00:00",
  "error": null,
  "fails": 0,
  "preview": {
