@@ -244,16 +244,105 @@ def whoami():
         print("No IG_ACCESS_TOKEN secret yet."); return
     print("login type:", "Instagram Login" if ig_login() else "Facebook Login")
     uid = ig_id()
-    info = call("GET", uid, {"fields": "username,account_type,media_count" if ig_login() else "username,media_count"})
-    print("account:", info.get("username"), "| type:", info.get("account_type", "?"), "| posts:", info.get("media_count"))
+    info = call("GET", uid, {"fields": "username,account_type,media_count" if ig_login() else "username,followers_count,media_count"})
+    print("account:", info.get("username"), "| followers:", info.get("followers_count", "?"), "| posts:", info.get("media_count"))
+    dbg = call("GET", "", url="https://graph.facebook.com/debug_token?" + urllib.parse.urlencode({"input_token": tok(), "access_token": tok()}), timeout=20) if not ig_login() else {}
+    d = dbg.get("data", {})
+    if d:
+        print("token valid:", d.get("is_valid"), "| type:", d.get("type"), "| expires:", d.get("expires_at") or "never", "| scopes:", ",".join(d.get("scopes", [])))
     lim = call("GET", f"{uid}/content_publishing_limit", {"fields": "quota_usage,config"})
     print("publishing quota:", json.dumps(lim.get("data", lim))[:200])
     print("token renewed:", _live.get("renewed") or "not yet (uses the GitHub secret)")
 
 
+def dryrun(jid):
+    """Pressure test: upload a finished Short to Instagram and wait until it's ready to publish, then STOP.
+    Nothing is published. The unused container expires on its own within 24 hours."""
+    st = json.load(open(os.path.join(ROOT, "jobs", jid, "state.json")))
+    st = dict(st, instagram={"status": "queued"})
+    t0 = time.time()
+    uid = ig_id()
+    out = os.path.join(ROOT, "out", jid); os.makedirs(out, exist_ok=True)
+    local = os.path.join(out, "short.mp4")
+    import drive
+    drive.download(st["final"]["id"], local)
+    size = os.path.getsize(local)
+    print(f"video: {size/1e6:.1f} MB, login type: {'Instagram' if ig_login() else 'Facebook/system user'}")
+    lim = call("GET", f"{uid}/content_publishing_limit", {"fields": "quota_usage,config"})
+    print("quota before:", json.dumps(lim.get("data", lim))[:200])
+    if ig_login():
+        print("dry run only covers the Facebook-login route"); return
+    c = call("POST", f"{uid}/media", {"media_type": "REELS", "upload_type": "resumable", "caption": caption(st), "share_to_feed": "true"})
+    print("container:", c.get("id"), "| upload uri host:", urllib.parse.urlparse(c.get("uri", "")).netloc)
+    up = call("POST", "", url=c.get("uri") or f"https://rupload.facebook.com/ig-api-upload/{VER}/{c['id']}", raw=open(local, "rb").read(),
+              headers={"Authorization": f"OAuth {tok()}", "offset": "0", "file_size": str(size)}, timeout=900)
+    print(f"upload: {up} in {time.time()-t0:.0f}s")
+    for i in range(60):
+        r = call("GET", c["id"], {"fields": "status_code,status"})
+        if r.get("status_code") in ("FINISHED", "ERROR", "EXPIRED"):
+            break
+        time.sleep(10)
+    print(f"container status after {time.time()-t0:.0f}s:", r)
+    print("caption preview:\n" + caption(st))
+    print("RESULT:", "READY TO PUBLISH (not published)" if r.get("status_code") == "FINISHED" else "NOT READY")
+
+
+def _metrics(obj, wanted, extra=None):
+    """Ask for insight metrics; drop any the API rejects for this media/account and retry."""
+    wanted = list(wanted)
+    for _ in range(len(wanted)):
+        try:
+            res = call("GET", f"{obj}/insights", dict({"metric": ",".join(wanted)}, **(extra or {})), timeout=30).get("data", [])
+            out = {}
+            for m in res:
+                v = (m.get("total_value") or {}).get("value")
+                if v is None and m.get("values"):
+                    v = m["values"][-1].get("value")
+                out[m["name"]] = v
+            return out
+        except RuntimeError as e:
+            bad = [w for w in wanted if w in str(e)]
+            if not bad:
+                return {"error": str(e)[:200]}
+            wanted = [w for w in wanted if w not in bad]
+            if not wanted:
+                return {}
+    return {}
+
+
+def insights(save_to=None):
+    """Account + per-Reel numbers for the dashboard. Read-only."""
+    uid = ig_id()
+    acct = call("GET", uid, {"fields": "username,followers_count,media_count"}, timeout=30)
+    media = call("GET", f"{uid}/media", {"fields": "id,caption,permalink,timestamp,media_product_type,like_count,comments_count", "limit": 50}, timeout=30).get("data", [])
+    reels = []
+    for m in media:
+        row = {k: m.get(k) for k in ("id", "permalink", "timestamp", "like_count", "comments_count")}
+        row["title"] = ((m.get("caption") or "").split("\n")[0])[:90]
+        row.update(_metrics(m["id"], ["views", "reach", "likes", "comments", "shares", "saved", "total_interactions",
+                                       "ig_reels_avg_watch_time", "ig_reels_video_view_total_time"]))
+        reels.append(row)
+    since = int(time.time()) - 28 * 86400
+    acc = _metrics(uid, ["reach", "views", "profile_views", "accounts_engaged", "follows_and_unfollows"],
+                   {"period": "day", "metric_type": "total_value", "since": since, "until": int(time.time())})
+    data = {"updated": now(), "username": acct.get("username"), "followers": acct.get("followers_count"),
+            "posts": acct.get("media_count"), "last_28d": acc, "reels": reels}
+    if save_to:
+        os.makedirs(os.path.dirname(save_to), exist_ok=True)
+        json.dump(data, open(save_to, "w"), indent=1)
+    return data
+
+
 def main():
     if sys.argv[1:] == ["whoami"]:
         return whoami()
+    if sys.argv[1:2] == ["dryrun"]:
+        return dryrun(sys.argv[2])
+    if sys.argv[1:] == ["insights"]:
+        d = insights(os.path.join(ROOT, "analytics", "instagram.json"))
+        print(json.dumps({k: v for k, v in d.items() if k != "reels"}, indent=1)); print("reels:", len(d["reels"]))
+        for r in d["reels"][:5]: print(json.dumps(r)[:300])
+        return
     import produce as P
     todo = []
     for p in glob.glob(os.path.join(ROOT, "jobs", "*", "state.json")):

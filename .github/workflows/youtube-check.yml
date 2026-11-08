@@ -3,12 +3,12 @@ on:
   workflow_dispatch:
     inputs:
       cmd:
-        description: whoami | kids | notkids | instagram (read-only Instagram check, posts nothing)
+        description: whoami | kids | notkids | instagram (read-only) | instagram-insights (read-only) | instagram-dryrun:<job id> (uploads, never publishes)
         default: whoami
 jobs:
   whoami:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - name: Which account is the engine connected to?
@@ -23,6 +23,8 @@ jobs:
         run: |
           case "$CMD" in
             instagram) python3 scripts/instagram.py whoami ;;
+            instagram-insights) python3 scripts/instagram.py insights ;;
+            instagram-dryrun:*) python3 scripts/instagram.py dryrun "${CMD#instagram-dryrun:}" ;;
             whoami|kids|notkids) python3 scripts/youtube.py "$CMD" ;;
             *) echo "unknown cmd"; exit 1 ;;
           esac
