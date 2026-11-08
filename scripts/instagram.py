@@ -221,14 +221,12 @@ def post(st, save):
         ig.update(status="posting", container=c["id"], started=now())
         save(st)
         try:
-            up = call("POST", "", url=c.get("uri") or f"https://rupload.facebook.com/ig-api-upload/{VER}/{c['id']}", raw=open(local, "rb").read(),
-                      headers={"Authorization": f"OAuth {tok()}", "offset": "0", "file_size": str(size)}, timeout=900)
-            if not up.get("success", True):
-                raise RuntimeError(f"upload refused: {up}")
+            how = send_video(c["id"], c.get("uri"), local, st, save)
         except Exception:
             ig.pop("container", None)  # start a fresh container next time
+            unshare(st, save)
             raise
-        log("uploaded", jid, size, "bytes")
+        log("uploaded", jid, size, "bytes via", how)
     cid = ig["container"]
     for _ in range(60):  # up to ~10 minutes of processing
         s = call("GET", cid, {"fields": "status_code,status"})
@@ -253,14 +251,44 @@ def post(st, save):
 
 def unshare(st, save):
     ig = st.get("instagram") or {}
-    if ig.get("share"):
-        try:
-            import drive
+    try:
+        import drive
+        if ig.get("tmpfile"):  # temporary Instagram copy: delete it outright
+            drive.req("DELETE", f"{drive.API}/files/{ig['tmpfile']}")
+            ig.pop("tmpfile", None); ig.pop("share", None)
+        elif ig.get("share"):
             drive.req("DELETE", f"{drive.API}/files/{st['final']['id']}/permissions/{ig['share']}")
             ig.pop("share", None)
-            save(st)
-        except Exception as e:
-            log("could not unshare the Drive file:", str(e)[:150])
+        save(st)
+    except Exception as e:
+        log("could not unshare the Drive file:", str(e)[:150])
+
+
+def send_video(cid, uri, local, st, save):
+    """Push the video into a resumable container. Byte upload first; Instagram has refused byte uploads of Reels
+    over ~40 s since Oct 2026 (ProcessingFailedError), so fall back to file_url: a temporary link-shared copy in
+    Drive that Meta fetches itself, deleted once the container is ready."""
+    url = uri or f"https://rupload.facebook.com/ig-api-upload/{VER}/{cid}"
+    size = os.path.getsize(local)
+    try:
+        up = call("POST", "", url=url, raw=open(local, "rb").read(),
+                  headers={"Authorization": f"OAuth {tok()}", "offset": "0", "file_size": str(size)}, timeout=900)
+        if up.get("success", True):
+            return "bytes"
+        raise RuntimeError(f"upload refused: {up}")
+    except RuntimeError as e:
+        if "ProcessingFailedError" not in str(e):
+            raise
+        log("byte upload refused (known Instagram limit on longer Reels), switching to hosted link")
+    import drive
+    ig = st.setdefault("instagram", {})
+    fid = drive.upload(drive.CFG["videos"], f"ig-temp-{st['id']}.mp4", local, "video/mp4")
+    ig["tmpfile"] = fid
+    ig["share"] = drive.req("POST", f"{drive.API}/files/{fid}/permissions", json.dumps({"type": "anyone", "role": "reader"}).encode()).get("id")
+    save(st)
+    link = f"https://drive.usercontent.google.com/download?id={fid}&export=download&confirm=t"
+    call("POST", "", url=url, raw=b"", headers={"Authorization": f"OAuth {tok()}", "file_url": link}, timeout=120)
+    return "hosted"
 
 
 def whoami():
@@ -301,15 +329,19 @@ def dryrun(jid):
         print("dry run only covers the Facebook-login route"); return
     c = call("POST", f"{uid}/media", {"media_type": "REELS", "upload_type": "resumable", "caption": caption(st), "share_to_feed": "true"})
     print("container:", c.get("id"), "| upload uri host:", urllib.parse.urlparse(c.get("uri", "")).netloc)
-    up = call("POST", "", url=c.get("uri") or f"https://rupload.facebook.com/ig-api-upload/{VER}/{c['id']}", raw=open(local, "rb").read(),
-              headers={"Authorization": f"OAuth {tok()}", "offset": "0", "file_size": str(size)}, timeout=900)
-    print(f"upload: {up} in {time.time()-t0:.0f}s")
-    for i in range(60):
-        r = call("GET", c["id"], {"fields": "status_code,status"})
-        if r.get("status_code") in ("FINISHED", "ERROR", "EXPIRED"):
-            break
-        time.sleep(10)
-    print(f"container status after {time.time()-t0:.0f}s:", r)
+    st["instagram"] = {"status": "dryrun"}
+    try:
+        how = send_video(c["id"], c.get("uri"), local, st, lambda s: None)
+        print(f"upload accepted via {how} in {time.time()-t0:.0f}s")
+        for i in range(60):
+            r = call("GET", c["id"], {"fields": "status_code,status"})
+            if r.get("status_code") in ("FINISHED", "ERROR", "EXPIRED"):
+                break
+            time.sleep(10)
+        print(f"container status after {time.time()-t0:.0f}s:", r)
+    finally:
+        unshare(st, lambda s: None)
+        print("temporary Drive copy cleaned up")
     print("caption preview:\n" + caption(st))
     print("RESULT:", "READY TO PUBLISH (not published)" if r.get("status_code") == "FINISHED" else "NOT READY")
 
