@@ -162,8 +162,11 @@ def _ffmpeg():
     import shutil, subprocess
     if shutil.which("ffmpeg"):
         return "ffmpeg"
-    subprocess.run("curl -sL https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz | tar xJ -C /tmp && "
-                   "sudo cp /tmp/ffmpeg-*-static/ffmpeg /tmp/ffmpeg-*-static/ffprobe /usr/local/bin/", shell=True, check=True)
+    r = subprocess.run("curl -sL https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz | tar xJ -C /tmp && "
+                       "sudo cp /tmp/ffmpeg-*-static/ffmpeg /tmp/ffmpeg-*-static/ffprobe /usr/local/bin/", shell=True)
+    if r.returncode or not shutil.which("ffmpeg"):
+        subprocess.run("sudo DEBIAN_FRONTEND=noninteractive timeout 300 apt-get install -y -qq --no-install-recommends ffmpeg || "
+                       "(sudo apt-get update -qq && sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq --no-install-recommends ffmpeg)", shell=True, check=True)
     return "ffmpeg"
 
 
