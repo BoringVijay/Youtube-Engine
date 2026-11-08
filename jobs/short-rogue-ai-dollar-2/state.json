@@ -74,9 +74,9 @@
   }
  },
  "brew_at": "2026-11-07T09:51:33+00:00",
- "stage": "scheduled",
- "pct": 97,
- "step": "Uploaded as private. Flip it to Public (or schedule it) in YouTube Studio",
+ "stage": "live",
+ "pct": 100,
+ "step": "Live on YouTube · 2 views · 1 likes · 0 comments",
  "steps": [
   {
    "stage": "queued",
@@ -129,10 +129,14 @@
   {
    "stage": "scheduled",
    "at": "2026-11-08T11:39:19+00:00"
+  },
+  {
+   "stage": "live",
+   "at": "2026-11-08T16:16:10+00:00"
   }
  ],
  "created": "2026-11-07T09:51:33+00:00",
- "updated": "2026-11-08T12:01:16+00:00",
+ "updated": "2026-11-08T16:16:10+00:00",
  "error": null,
  "fails": 0,
  "preview": {
@@ -243,14 +247,14 @@
     "url": "https://youtube.com/shorts/YwRe1Sds0hw",
     "studio": "https://studio.youtube.com/video/YwRe1Sds0hw/edit",
     "title": "What If an Evil AI Only Had One Dollar a Day?",
-    "privacy": "private",
+    "privacy": "public",
     "publish_at": null,
-    "published": "2026-11-08T10:59:42Z",
+    "published": "2026-11-08T12:46:51Z",
     "upload_status": "processed",
-    "views": 0,
-    "likes": 0,
+    "views": 2,
+    "likes": 1,
     "comments": 0,
-    "checked": "2026-11-08T12:01:16+00:00"
+    "checked": "2026-11-08T16:16:10+00:00"
    }
   ],
   "audited": false,

@@ -67,9 +67,9 @@
  },
  "brew_at": "2026-11-07T05:33:41+00:00",
  "created": "2026-11-07T05:33:41+00:00",
- "stage": "scheduled",
- "pct": 97,
- "step": "Uploaded as private. Flip it to Public (or schedule it) in YouTube Studio",
+ "stage": "live",
+ "pct": 100,
+ "step": "Live on YouTube · 3 views · 1 likes · 0 comments",
  "steps": [
   {
    "stage": "queued",
@@ -126,10 +126,14 @@
   {
    "stage": "scheduled",
    "at": "2026-11-08T11:39:19+00:00"
+  },
+  {
+   "stage": "live",
+   "at": "2026-11-08T16:16:10+00:00"
   }
  ],
  "fails": 0,
- "updated": "2026-11-08T12:01:16+00:00",
+ "updated": "2026-11-08T16:16:10+00:00",
  "error": null,
  "cost": 9.312,
  "universe": "Macro photography of handmade miniature sets · Tiny Props Workshop",
@@ -234,14 +238,14 @@
     "url": "https://youtube.com/shorts/wpG1WkDJjsI",
     "studio": "https://studio.youtube.com/video/wpG1WkDJjsI/edit",
     "title": "What If Every Undersea Cable Snapped at Once?",
-    "privacy": "private",
+    "privacy": "public",
     "publish_at": null,
-    "published": "2026-11-08T10:57:46Z",
+    "published": "2026-11-08T12:47:55Z",
     "upload_status": "processed",
-    "views": 0,
-    "likes": 0,
+    "views": 3,
+    "likes": 1,
     "comments": 0,
-    "checked": "2026-11-08T12:01:16+00:00"
+    "checked": "2026-11-08T16:16:10+00:00"
    }
   ],
   "audited": false,
