@@ -287,6 +287,14 @@ def send_video(cid, uri, local, st, save):
     ig["share"] = drive.req("POST", f"{drive.API}/files/{fid}/permissions", json.dumps({"type": "anyone", "role": "reader"}).encode()).get("id")
     save(st)
     link = f"https://drive.usercontent.google.com/download?id={fid}&export=download&confirm=t"
+    try:  # what will Meta's fetcher see? (anonymous request, first KB)
+        rq = urllib.request.Request(link, headers={"Range": "bytes=0-1023", "User-Agent": "facebookexternalhit/1.1"})
+        with urllib.request.urlopen(rq, timeout=60) as rr:
+            head = rr.read(64)
+            log("hosted link check:", rr.status, rr.headers.get("Content-Type"), rr.headers.get("Content-Range") or rr.headers.get("Content-Length"),
+                "| looks like mp4" if b"ftyp" in head else "| NOT a video: " + head[:40].decode("latin1"))
+    except Exception as e:
+        log("hosted link check failed:", str(e)[:150])
     call("POST", "", url=url, raw=b"", headers={"Authorization": f"OAuth {tok()}", "file_url": link}, timeout=120)
     return "hosted"
 
@@ -308,7 +316,7 @@ def whoami():
     print("token renewed:", _live.get("renewed") or "not yet (uses the GitHub secret)")
 
 
-def dryrun(jid):
+def dryrun(jid, trim=None):
     """Pressure test: upload a finished Short to Instagram and wait until it's ready to publish, then STOP.
     Nothing is published. The unused container expires on its own within 24 hours."""
     st = json.load(open(os.path.join(ROOT, "jobs", jid, "state.json")))
@@ -321,6 +329,12 @@ def dryrun(jid):
     drive.download(st["final"]["id"], local)
     print(f"original: {os.path.getsize(local)/1e6:.1f} MB")
     local = ig_ready(local)
+    if trim:
+        import subprocess
+        cut = local.replace(".mp4", f".{int(trim)}s.mp4")
+        subprocess.run([_ffmpeg(), "-y", "-loglevel", "error", "-i", local, "-t", str(trim), "-c", "copy", "-movflags", "+faststart", cut], check=True)
+        local = cut
+        print(f"trimmed to first {trim:.0f} s for the test")
     size = os.path.getsize(local)
     print(f"video: {size/1e6:.1f} MB, login type: {'Instagram' if ig_login() else 'Facebook/system user'}")
     lim = call("GET", f"{uid}/content_publishing_limit", {"fields": "quota_usage,config"})
@@ -396,7 +410,7 @@ def main():
     if sys.argv[1:] == ["whoami"]:
         return whoami()
     if sys.argv[1:2] == ["dryrun"]:
-        return dryrun(sys.argv[2])
+        return dryrun(sys.argv[2], float(sys.argv[3]) if len(sys.argv) > 3 else None)
     if sys.argv[1:] == ["insights"]:
         d = insights(os.path.join(ROOT, "analytics", "instagram.json"))
         print(json.dumps({k: v for k, v in d.items() if k != "reels"}, indent=1)); print("reels:", len(d["reels"]))

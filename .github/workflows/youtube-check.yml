@@ -24,7 +24,7 @@ jobs:
           case "$CMD" in
             instagram) python3 scripts/instagram.py whoami ;;
             instagram-insights) python3 scripts/instagram.py insights ;;
-            instagram-dryrun:*) python3 scripts/instagram.py dryrun "${CMD#instagram-dryrun:}" ;;
+            instagram-dryrun:*) A="${CMD#instagram-dryrun:}"; python3 scripts/instagram.py dryrun "${A%%:*}" $( [ "$A" != "${A#*:}" ] && echo "${A#*:}" ) ;;
             whoami|kids|notkids) python3 scripts/youtube.py "$CMD" ;;
             *) echo "unknown cmd"; exit 1 ;;
           esac
