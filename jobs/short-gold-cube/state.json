@@ -73,7 +73,7 @@
  "created": "2026-11-07T05:33:41+00:00",
  "stage": "live",
  "pct": 100,
- "step": "Live on YouTube · 0 views · 0 likes · 0 comments",
+ "step": "Live on YouTube · 1 views · 0 likes · 0 comments",
  "steps": [
   {
    "stage": "queued",
@@ -130,10 +130,14 @@
   {
    "stage": "live",
    "at": "2026-11-08T11:33:31+00:00"
+  },
+  {
+   "stage": "live",
+   "at": "2026-11-09T01:10:58+00:00"
   }
  ],
  "fails": 0,
- "updated": "2026-11-08T20:44:41+00:00",
+ "updated": "2026-11-09T01:10:58+00:00",
  "error": null,
  "cost": 8.342,
  "universe": "Mudlark Clay Works · Mudlark Clay Works",
@@ -263,10 +267,10 @@
     "publish_at": null,
     "published": "2026-11-08T11:31:23Z",
     "upload_status": "processed",
-    "views": 0,
+    "views": 1,
     "likes": 0,
     "comments": 0,
-    "checked": "2026-11-08T20:44:41+00:00"
+    "checked": "2026-11-09T01:10:58+00:00"
    }
   ],
   "audited": false,
