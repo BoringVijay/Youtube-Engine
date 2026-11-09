@@ -1,5 +1,2758 @@
 [
  {
+  "id": "6d0ab3e72ae5",
+  "key": "how-did-bird-shaped-drones-fool-us-air-force-radar-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "hot",
+  "question": "How did bird-shaped drones fool US Air Force radar?",
+  "hook": "Radar systems were just fooled by mechanical pigeons.",
+  "about": "Engineers designed autonomous drones that mimic bird wing flaps and silhouettes to test military air defenses. During a recent Air Force exercise, these avian-mimicking drones managed to evade standard detection systems entirely.",
+  "surprise": "Drones built to look like birds evaded detection at an Air Force exercise.",
+  "series": "How It Works (cutaway)",
+  "audience": "tech & AI",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    5,
+    "Bizarre real tech outsmarting military radar"
+   ],
+   "explainability": [
+    5,
+    "Radar cross-sections and flapping wings animate easily"
+   ],
+   "shelf_life": [
+    4,
+    "Drone warfare technology stays relevant long-term"
+   ],
+   "money": [
+    3,
+    "Broad interest defense and tech audience"
+   ]
+  },
+  "risk": "",
+  "search_query": "bird drones military radar evasion",
+  "wiki_title": "Unmanned aerial vehicle",
+  "stats": {
+   "hn_points": 61,
+   "hn_comments": 45,
+   "wiki_article": "Unmanned aerial vehicle",
+   "wiki_avg_30d": 908,
+   "wiki_views_24h": 694,
+   "wiki_change_pct": -24
+  },
+  "origin": {
+   "time": "2026-11-08T15:00:42+00:00",
+   "hours_ago": 27.8
+  },
+  "sources": [
+   {
+    "src": "hacker_news",
+    "title": "Drones built to look like birds evaded detection at Air Force tech exercise",
+    "url": "https://taskandpurpose.com/news/drone-mimicking-bird-test/"
+   }
+  ],
+  "demand": 54,
+  "competition": null,
+  "quality": 85,
+  "opportunity": 66
+ },
+ {
+  "id": "41b391f44ee5",
+  "key": "why-does-the-exact-same-ai-chip-cost-4x-more-depending-on-who-rents-it-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "hot",
+  "question": "Why does the exact same AI chip cost 4x more depending on who rents it?",
+  "hook": "The exact same chip costs four times more elsewhere.",
+  "about": "Renting an Nvidia H100 GPU costs anywhere from $2.69 to $12.29 per hour across cloud providers. This massive pricing disparity reveals how compute brokers, cloud bundling, and artificial scarcity distort tech pricing.",
+  "surprise": "The same H100 costs $2.69 or $12.29 an hour depending where you rent it.",
+  "series": "Money Moves (charts)",
+  "audience": "tech & AI",
+  "format": "short",
+  "scores": {
+   "curiosity": [
+    4,
+    "Extreme price gap exposes AI economics"
+   ],
+   "explainability": [
+    5,
+    "Price comparison charts and server racks"
+   ],
+   "shelf_life": [
+    4,
+    "GPU cloud market dynamics persist strongly"
+   ],
+   "money": [
+    5,
+    "Attracts high-value tech and cloud advertisers"
+   ]
+  },
+  "risk": "",
+  "search_query": "H100 GPU rental cost comparison",
+  "wiki_title": "Graphics processing unit",
+  "stats": {
+   "hn_points": 125,
+   "hn_comments": 72,
+   "wiki_article": "Graphics processing unit",
+   "wiki_avg_30d": 936,
+   "wiki_views_24h": 743,
+   "wiki_change_pct": -21,
+   "yt_results": 31557,
+   "yt_top_views": 307381,
+   "yt_median_top10_views": 172,
+   "yt_recent_in_top10": 3,
+   "yt_top_title": "AI Subscription vs H100",
+   "yt_top_channel": "Caleb Writes Code",
+   "yt_top_url": "https://youtu.be/SmYNK0kqaDI",
+   "yt_query": "H100 GPU rental cost comparison"
+  },
+  "origin": {
+   "time": "2026-11-09T15:39:01+00:00",
+   "hours_ago": 3.2
+  },
+  "sources": [
+   {
+    "src": "hacker_news",
+    "title": "The same H100 costs $2.69 or $12.29 an hour depending where you rent it",
+    "url": "https://github.com/datareceipts/data-receipts/tree/main/109-gpu-pricing"
+   }
+  ],
+  "demand": 69,
+  "competition": 31,
+  "quality": 90,
+  "opportunity": 77
+ },
+ {
+  "id": "be7349208f27",
+  "key": "how-do-crypto-hackers-steal-millions-through-an-infinite-mint-glitch-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "hot",
+  "question": "How do crypto hackers steal millions through an 'Infinite Mint' glitch?",
+  "hook": "A single code bug created infinite free money.",
+  "about": "Exploits in crypto protocols routinely wipe out millions through logic bugs like infinite minting and compromised hot wallet keys. Looking at recent hacks like Initia's $2.6M loss and CoinDCX's $16M breach reveals the structural flaws in decentralized security.",
+  "surprise": "A hacker exploited an infinite mint flaw to drain $2.6 million from Initia.",
+  "series": "How It Works (cutaway)",
+  "audience": "finance & crypto",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    4,
+    "Fascinating mechanism of digital money printing"
+   ],
+   "explainability": [
+    4,
+    "Flowcharts showing token minting contract loops"
+   ],
+   "shelf_life": [
+    3,
+    "Smart contract exploits remain evergreen concepts"
+   ],
+   "money": [
+    5,
+    "Crypto finance yields premium ad revenue"
+   ]
+  },
+  "risk": "",
+  "search_query": "crypto infinite mint hack explained",
+  "wiki_title": "Cryptocurrency and crime",
+  "stats": {
+   "hack_usd": 40000000,
+   "wiki_article": "Cryptocurrency and crime",
+   "wiki_avg_30d": 130,
+   "wiki_views_24h": 75,
+   "wiki_change_pct": -42
+  },
+  "origin": {
+   "time": "2026-10-21T00:00:00+00:00",
+   "hours_ago": 474.9
+  },
+  "sources": [
+   {
+    "src": "defillama_hacks",
+    "title": "Initia hack: $2.6M via Infinite Mint",
+    "url": "https://defillama.com/hacks"
+   },
+   {
+    "src": "defillama_hacks",
+    "title": "CoinDCX hack: $16.0M via Hot Wallet Key Compromised",
+    "url": "https://defillama.com/hacks"
+   },
+   {
+    "src": "defillama_hacks",
+    "title": "Mercado Bitcoin hack: $40.0M via Unknown",
+    "url": "https://defillama.com/hacks"
+   }
+  ],
+  "demand": 37,
+  "competition": null,
+  "quality": 80,
+  "opportunity": 56
+ },
+ {
+  "id": "8ba76f45b911",
+  "key": "why-are-doctors-warning-ozempic-users-about-their-eyes-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "hot",
+  "question": "Why are doctors warning Ozempic users about their eyes?",
+  "hook": "The world's favorite weight-loss shot has a vision problem.",
+  "about": "Popular GLP-1 receptor agonists like Ozempic and Zepbound are facing new medical scrutiny over rare eye risk warnings. Researchers are examining how rapid glucose shifts and vascular impacts in the optic nerve might explain these unexpected complications.",
+  "surprise": "Regulatory warnings are emerging connecting popular weight-loss drugs with optic nerve risks.",
+  "series": "What Actually Happened (mini-doc)",
+  "audience": "general curious",
+  "format": "long",
+  "scores": {
+   "curiosity": [
+    5,
+    "Huge viral interest in weight-loss drugs"
+   ],
+   "explainability": [
+    4,
+    "Anatomical cutaways of eye blood vessels"
+   ],
+   "shelf_life": [
+    4,
+    "Weight loss medication safety remains huge"
+   ],
+   "money": [
+    4,
+    "Healthcare and pharmaceutical topics monetize well"
+   ]
+  },
+  "risk": "medical",
+  "search_query": "Ozempic eye side effects vision warning",
+  "wiki_title": "Semaglutide",
+  "stats": {
+   "google_searches": "1000+",
+   "google_geo": "US",
+   "wiki_article": "Semaglutide",
+   "wiki_avg_30d": 1092,
+   "wiki_views_24h": 932,
+   "wiki_change_pct": -15
+  },
+  "origin": {
+   "time": "2026-11-09T09:50:00-08:00",
+   "hours_ago": 1.0
+  },
+  "sources": [
+   {
+    "src": "google_trends_US",
+    "title": "ozempic zepbound eye risk warnings",
+    "url": "https://www.cnn.com/2026/11/09/health/glp1-vision-loss-fda-warning"
+   }
+  ],
+  "demand": 54,
+  "competition": null,
+  "quality": 85,
+  "opportunity": 66
+ },
+ {
+  "id": "c3266e25c8ba",
+  "key": "can-aerodynamic-physics-turn-a-sheet-of-paper-into-a-glider-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "hot",
+  "question": "Can aerodynamic physics turn a sheet of paper into a glider?",
+  "hook": "Folding paper can unlock jet fighter aerodynamic principles.",
+  "about": "Paper airplane design relies on real-world aeronautical engineering principles such as dihedral angles, lift-to-drag ratios, and center of gravity. Tweaking minor folds allows ordinary sheets of paper to glide hundreds of feet or perform sustained acrobatic maneuvers.",
+  "surprise": "Tiny micro-folds alter lift and drag enough to outperform standard glider models.",
+  "series": "How It Works (cutaway)",
+  "audience": "students",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    4,
+    "Universal nostalgic childhood activity backed by science"
+   ],
+   "explainability": [
+    5,
+    "Step-by-step fold overlays and airflow diagrams"
+   ],
+   "shelf_life": [
+    5,
+    "Physics of flight never expires ever"
+   ],
+   "money": [
+    2,
+    "Broad education content has moderate CPM"
+   ]
+  },
+  "risk": "",
+  "search_query": "aerodynamics of paper airplanes physics",
+  "wiki_title": "Paper plane",
+  "stats": {
+   "hn_points": 603,
+   "hn_comments": 96,
+   "wiki_article": "Paper plane",
+   "wiki_avg_30d": 119,
+   "wiki_views_24h": 81,
+   "wiki_change_pct": -32,
+   "yt_results": 773272,
+   "yt_top_views": 34577296,
+   "yt_median_top10_views": 817559,
+   "yt_recent_in_top10": 0,
+   "yt_top_title": "How This Guy Folds and Flies World Record Paper Airplanes | WIRED",
+   "yt_top_channel": "WIRED",
+   "yt_top_url": "https://youtu.be/3BNg4fDJC8A",
+   "yt_query": "aerodynamics of paper airplanes physics"
+  },
+  "origin": {
+   "time": "2026-11-09T12:19:22+00:00",
+   "hours_ago": 6.5
+  },
+  "sources": [
+   {
+    "src": "hacker_news",
+    "title": "Fold Epic Paper Airplanes",
+    "url": "https://www.foldableflight.com"
+   }
+  ],
+  "demand": 89,
+  "competition": 59,
+  "quality": 80,
+  "opportunity": 78
+ },
+ {
+  "id": "be31563b9355",
+  "key": "how-does-next-concept-modeling-speed-up-ai-text-generation-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "hot",
+  "question": "How does Next-Concept Modeling speed up AI text generation?",
+  "hook": "AI models might finally stop generating one token at a time.",
+  "about": "Current large language models generate text word-by-word sequentially, which creates significant computing bottlenecks. New methods like Next-Concept Modeling propose planning high-level thoughts first before filling in detailed words in parallel.",
+  "surprise": "Generating text coarse-to-fine enables parallel generation rather than step-by-step token guessing.",
+  "series": "How It Works (cutaway)",
+  "audience": "tech & AI",
+  "format": "long",
+  "scores": {
+   "curiosity": [
+    4,
+    "High intrigue for cutting-edge AI breakthroughs"
+   ],
+   "explainability": [
+    4,
+    "Conceptual hierarchy vs sequential line animation"
+   ],
+   "shelf_life": [
+    3,
+    "AI research shifts quickly over months"
+   ],
+   "money": [
+    5,
+    "Tech architecture commands top-tier tech CPMs"
+   ]
+  },
+  "risk": "",
+  "search_query": "next concept modeling parallel text generation",
+  "wiki_title": "Large language model",
+  "stats": {
+   "hn_points": 169,
+   "hn_comments": 39,
+   "wiki_article": "Large language model",
+   "wiki_avg_30d": 3289,
+   "wiki_views_24h": 2212,
+   "wiki_change_pct": -33
+  },
+  "origin": {
+   "time": "2026-11-09T07:20:37+00:00",
+   "hours_ago": 11.5
+  },
+  "sources": [
+   {
+    "src": "hacker_news",
+    "title": "Next-Concept Modeling: Fast, Parallel Coarse-to-Fine Text Generation",
+    "url": "https://arxiv.org/abs/2610.14162"
+   },
+   {
+    "src": "hacker_news",
+    "title": "Pigshell: Unix the Web",
+    "url": "http://pigshell.com/v/0.6.4/"
+   }
+  ],
+  "demand": 66,
+  "competition": null,
+  "quality": 80,
+  "opportunity": 69
+ },
+ {
+  "id": "1f9fa1b0c53a",
+  "key": "what-actually-happened-at-the-four-seasons-total-landscaping-fiasco-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "hot",
+  "question": "What actually happened at the Four Seasons Total Landscaping fiasco?",
+  "hook": "A presidential campaign booked a garage beside a crematorium.",
+  "about": "In November 2020, a major political campaign accidentally booked a small suburban landscaping shop instead of a luxury hotel for a crucial televised press conference. The resulting media circus became one of the most surreal logistical blunders in modern political history.",
+  "surprise": "The venue was squeezed directly between a crematorium and an adult bookstore.",
+  "series": "What Actually Happened (mini-doc)",
+  "audience": "general curious",
+  "format": "long",
+  "scores": {
+   "curiosity": [
+    5,
+    "Hilarious and absurd modern historical misadventure"
+   ],
+   "explainability": [
+    5,
+    "Maps, venue mix-up diagrams, comic animation"
+   ],
+   "shelf_life": [
+    5,
+    "Iconic political comedy lore forever memorable"
+   ],
+   "money": [
+    2,
+    "Political comedy can have uneven monetization"
+   ]
+  },
+  "risk": "",
+  "search_query": "four seasons total landscaping press conference story",
+  "wiki_title": "Four Seasons Total Landscaping press conference",
+  "stats": {
+   "wiki_views_24h": 46115,
+   "wiki_change_pct": 1685,
+   "wiki_7d": [
+    337,
+    473,
+    1849,
+    1641,
+    895,
+    603,
+    12291,
+    46115
+   ],
+   "wiki_article": "Four Seasons Total Landscaping press conference",
+   "wiki_avg_30d": 2390,
+   "yt_results": 25376,
+   "yt_top_views": 1384998,
+   "yt_median_top10_views": 31719,
+   "yt_recent_in_top10": 0,
+   "yt_top_title": "Four Seasons Total Landscaping Local Ad",
+   "yt_top_channel": "Michael Spicer",
+   "yt_top_url": "https://youtu.be/VAyh2xPrFvo",
+   "yt_query": "four seasons total landscaping press conference story"
+  },
+  "origin": null,
+  "sources": [
+   {
+    "src": "wikipedia",
+    "title": "Four Seasons Total Landscaping press conference",
+    "url": "https://en.wikipedia.org/wiki/Four_Seasons_Total_Landscaping_press_conference"
+   }
+  ],
+  "demand": 89,
+  "competition": 45,
+  "quality": 85,
+  "opportunity": 82
+ },
+ {
+  "id": "ddaaaf87edbe",
+  "key": "who-controls-top-level-web-domains-and-how-do-they-make-billions-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "hot",
+  "question": "Who controls top-level web domains and how do they make billions?",
+  "hook": "Buying three letters after a dot created digital empires.",
+  "about": "Alternative top-level domains like .xyz and .xxx reshaped the architecture and business of the internet after ICANN opened up domain extensions. Selling digital real estate became a cutthroat industry driven by brand speculation, internet governance, and massive registry fees.",
+  "surprise": "Entire multi-million dollar registry businesses exist solely on owning a single domain extension.",
+  "series": "Money Moves (charts)",
+  "audience": "tech & AI",
+  "format": "short",
+  "scores": {
+   "curiosity": [
+    4,
+    "Behind-the-scenes mechanics of how internet names exist"
+   ],
+   "explainability": [
+    4,
+    "DNS hierarchy trees and domain purchase flowcharts"
+   ],
+   "shelf_life": [
+    5,
+    "Domain registries operate on stable decadal cycles"
+   ],
+   "money": [
+    4,
+    "Attracts web hosting and SaaS sponsors"
+   ]
+  },
+  "risk": "",
+  "search_query": "how top level domains make money",
+  "wiki_title": "Top-level domain",
+  "stats": {
+   "wiki_views_24h": 242769,
+   "wiki_change_pct": 24,
+   "wiki_7d": [
+    197312,
+    172419,
+    255014,
+    174839,
+    159311,
+    199678,
+    215862,
+    242769
+   ],
+   "wiki_article": "Top-level domain",
+   "wiki_avg_30d": 1586,
+   "yt_results": 1000000,
+   "yt_top_views": 10203,
+   "yt_median_top10_views": 60,
+   "yt_recent_in_top10": 0,
+   "yt_top_title": "People are making life changing money off domains! \ud83e\udd2f\ud83d\ude31\ud83d\udc40 #web3 #domains #nft #nfts #money #crypto",
+   "yt_top_channel": "nft4noobs",
+   "yt_top_url": "https://youtu.be/xkZnge_Q8P0",
+   "yt_query": "how top level domains make money"
+  },
+  "origin": null,
+  "sources": [
+   {
+    "src": "wikipedia",
+    "title": ".xyz",
+    "url": "https://en.wikipedia.org/wiki/.xyz"
+   },
+   {
+    "src": "wikipedia",
+    "title": ".xxx",
+    "url": "https://en.wikipedia.org/wiki/.xxx"
+   }
+  ],
+  "demand": 83,
+  "competition": 18,
+  "quality": 85,
+  "opportunity": 84
+ },
+ {
+  "id": "6e1f09243f16",
+  "key": "how-can-giant-mechanical-chopsticks-catch-a-falling-rocket-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "hot",
+  "question": "How can giant mechanical chopsticks catch a falling rocket?",
+  "hook": "SpaceX wants to catch both rocket stages out of midair.",
+  "about": "SpaceX is pushing rocket reuse to its absolute limit by attempting to catch both the Super Heavy booster and the Starship upper stage with launch tower arms. Eliminating landing legs saves massive structural weight, but requires millimeter-precise aerodynamic maneuvering right above the ground.",
+  "surprise": "Flight 15 plans to catch both the booster and the ship using the tower.",
+  "series": "How It Works (cutaway)",
+  "audience": "tech & AI",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    5,
+    "Catching orbital rockets feels like sci-fi"
+   ],
+   "explainability": [
+    5,
+    "Tower arms and trajectories animate smoothly"
+   ],
+   "shelf_life": [
+    4,
+    "Relevant across multiple upcoming rocket flights"
+   ],
+   "money": [
+    4,
+    "Tech and engineering sponsors love rocketry"
+   ]
+  },
+  "risk": "",
+  "search_query": "spacex starship catch tower explained",
+  "wiki_title": "SpaceX Starship",
+  "stats": {
+   "hn_points": 135,
+   "hn_comments": 93,
+   "wiki_article": "SpaceX Starship",
+   "wiki_avg_30d": 1513,
+   "wiki_views_24h": 1696,
+   "wiki_change_pct": 12,
+   "yt_results": 560354,
+   "yt_top_views": 21894414,
+   "yt_median_top10_views": 585284,
+   "yt_recent_in_top10": 3,
+   "yt_top_title": "Elon Musk Reacts To Watching Starship Super Heavy Catch",
+   "yt_top_channel": "The Launch Pad",
+   "yt_top_url": "https://youtu.be/M-krN98_Vy4",
+   "yt_query": "spacex starship catch tower explained"
+  },
+  "origin": {
+   "time": "2026-11-08T19:49:46+00:00",
+   "hours_ago": 23.0
+  },
+  "sources": [
+   {
+    "src": "hacker_news",
+    "title": "Starship Flight 15 on 11/13 plans to catch both booster and ship",
+    "url": "https://www.spacex.com/launches/starship-flight-15"
+   }
+  ],
+  "demand": 89,
+  "competition": 67,
+  "quality": 90,
+  "opportunity": 81
+ },
+ {
+  "id": "70a14e8e8378",
+  "key": "what-actually-happens-inside-your-computer-when-software-calls-malloc-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "hot",
+  "question": "What actually happens inside your computer when software calls malloc?",
+  "hook": "Every program begs your operating system for blank scratchpad memory.",
+  "about": "Memory allocation seems instantaneous when writing code, but the operating system conducts a frantic scavenger hunt through virtual memory tables and heap boundaries. Understanding this mechanism reveals why programs leak memory, fragment space, and eventually crash your computer.",
+  "surprise": "Is memory really allocated immediately, or only when first touched?",
+  "series": "How It Works (cutaway)",
+  "audience": "students",
+  "format": "long",
+  "scores": {
+   "curiosity": [
+    4,
+    "Mysterious foundational mechanic of everyday software"
+   ],
+   "explainability": [
+    5,
+    "Memory blocks and pointers draw easily"
+   ],
+   "shelf_life": [
+    5,
+    "C memory fundamentals never change much"
+   ],
+   "money": [
+    4,
+    "Coding bootcamps and tech recruiters pay"
+   ]
+  },
+  "risk": "",
+  "search_query": "how malloc works computer memory",
+  "wiki_title": "C dynamic memory allocation",
+  "stats": {
+   "hn_points": 163,
+   "hn_comments": 35,
+   "wiki_article": "C dynamic memory allocation",
+   "wiki_avg_30d": 76,
+   "wiki_views_24h": 53,
+   "wiki_change_pct": -30,
+   "yt_results": 61806,
+   "yt_top_views": 567136,
+   "yt_median_top10_views": 115306,
+   "yt_recent_in_top10": 0,
+   "yt_top_title": "i wrote my own memory allocator in C to prove a point",
+   "yt_top_channel": "Low Level",
+   "yt_top_url": "https://youtu.be/CulF4YQt6zA",
+   "yt_query": "how malloc works computer memory"
+  },
+  "origin": {
+   "time": "2026-11-09T11:31:05+00:00",
+   "hours_ago": 7.3
+  },
+  "sources": [
+   {
+    "src": "hacker_news",
+    "title": "What is malloc doing, anyway?",
+    "url": "https://benmandrew.com/articles/what-is-malloc-doing-anyway"
+   }
+  ],
+  "demand": 69,
+  "competition": 51,
+  "quality": 90,
+  "opportunity": 74
+ },
+ {
+  "id": "2adf8857f44f",
+  "key": "how-did-a-hacker-steal-millions-using-a-10-second-flash-loan-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "hot",
+  "question": "How did a hacker steal millions using a 10-second flash loan?",
+  "hook": "Borrow millions without collateral, rig a vote, keep everything.",
+  "about": "In decentralized finance, flash loans allow users to borrow vast sums of cryptocurrency for a single block transaction as long as it is repaid seconds later. Attackers exploited this liquidity on protocol X100 to instantly buy majority voting power and approve their own theft.",
+  "surprise": "The attacker extracted 4.8 million dollars via a flashloan governance exploit.",
+  "series": "Money Moves (charts)",
+  "audience": "finance & crypto",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    5,
+    "Heists executed inside ten single seconds"
+   ],
+   "explainability": [
+    4,
+    "Timeline of block execution maps clearly"
+   ],
+   "shelf_life": [
+    3,
+    "Specific protocol fades but exploit persists"
+   ],
+   "money": [
+    5,
+    "DeFi topics draw premium crypto advertisers"
+   ]
+  },
+  "risk": "",
+  "search_query": "flash loan governance attack explained",
+  "wiki_title": "Decentralized finance",
+  "stats": {
+   "hack_usd": 4750000,
+   "wiki_article": "Decentralized finance",
+   "wiki_avg_30d": 179,
+   "wiki_views_24h": 95,
+   "wiki_change_pct": -47
+  },
+  "origin": {
+   "time": "2026-10-24T00:00:00+00:00",
+   "hours_ago": 402.9
+  },
+  "sources": [
+   {
+    "src": "defillama_hacks",
+    "title": "X100 hack: $4.8M via Flashloan Governance Attack",
+    "url": "https://defillama.com/hacks"
+   }
+  ],
+  "demand": 40,
+  "competition": null,
+  "quality": 85,
+  "opportunity": 60
+ },
+ {
+  "id": "0d77159a2223",
+  "key": "why-is-the-semiconductor-industry-racing-toward-silicon-carbide-wafers-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "hot",
+  "question": "Why is the semiconductor industry racing toward silicon carbide wafers?",
+  "hook": "Your electric car battery might soon run on synthetic diamonds.",
+  "about": "Traditional silicon chips waste valuable power as heat, limiting fast-charging speeds and power-grid efficiency. Power electronics are upgrading to wide-bandgap silicon carbide, where manufacturing massive 300-millimeter defect-free crystal disks represents an enormous chemical engineering feat.",
+  "surprise": "Infineon manufactured power silicon carbide on 300mm diameter wafers.",
+  "series": "How It Works (cutaway)",
+  "audience": "tech & AI",
+  "format": "long",
+  "scores": {
+   "curiosity": [
+    4,
+    "Hardware physics behind electric vehicle charging"
+   ],
+   "explainability": [
+    4,
+    "Crystal lattices and heat dissipation illustrate"
+   ],
+   "shelf_life": [
+    5,
+    "Silicon carbide drives clean tech transition"
+   ],
+   "money": [
+    4,
+    "Enterprise tech and semiconductor sponsorships pay"
+   ]
+  },
+  "risk": "",
+  "search_query": "silicon carbide chip manufacturing explained",
+  "wiki_title": "Silicon carbide",
+  "stats": {
+   "hn_points": 11,
+   "hn_comments": 0,
+   "wiki_article": "Silicon carbide",
+   "wiki_avg_30d": 276,
+   "wiki_views_24h": 258,
+   "wiki_change_pct": -6
+  },
+  "origin": {
+   "time": "2026-11-09T18:25:01+00:00",
+   "hours_ago": 0.4
+  },
+  "sources": [
+   {
+    "src": "hacker_news",
+    "title": "Infineon marks innovation milestone with 300mm power silicon carbide wafer",
+    "url": "https://www.infineon.com/press-release/2026/infpr202611-028"
+   }
+  ],
+  "demand": 43,
+  "competition": null,
+  "quality": 85,
+  "opportunity": 61
+ },
+ {
+  "id": "29cc12aa61b9",
+  "key": "how-do-real-time-payment-rails-move-bank-money-in-seconds-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "hot",
+  "question": "How do real-time payment rails move bank money in seconds?",
+  "hook": "Sending money between banks used to take three business days.",
+  "about": "Traditional banking networks settle transactions in sluggish overnight batches through centralized clearing houses. Modern real-time rails, like Canada's new infrastructure, execute irrevocable settlement and messaging simultaneously to make bank transfers as instant as physical cash.",
+  "surprise": "Payments Canada launched an official Real-Time Rail payment infrastructure.",
+  "series": "Money Moves (charts)",
+  "audience": "finance & crypto",
+  "format": "short",
+  "scores": {
+   "curiosity": [
+    3,
+    "Everyday annoyance of waiting for money transfers"
+   ],
+   "explainability": [
+    4,
+    "Pipes and ledgers make great animations"
+   ],
+   "shelf_life": [
+    4,
+    "Payment rails remain relevant for decades"
+   ],
+   "money": [
+    5,
+    "Fintech apps and digital banks pay"
+   ]
+  },
+  "risk": "",
+  "search_query": "real time payment rail banking works",
+  "wiki_title": "Real-time payment",
+  "stats": {
+   "hn_points": 251,
+   "hn_comments": 151,
+   "wiki_article": "Real-time payment",
+   "wiki_avg_30d": 2,
+   "wiki_views_24h": 2,
+   "wiki_change_pct": -14
+  },
+  "origin": {
+   "time": "2026-11-09T16:00:45+00:00",
+   "hours_ago": 2.8
+  },
+  "sources": [
+   {
+    "src": "hacker_news",
+    "title": "Payments Canada announces launch of Canada's Real-Time Rail (RTR) payment system",
+    "url": "https://www.payments.ca/canada-launches-real-time-rail-bringing-247-payment-infrastructure-national-economy"
+   }
+  ],
+  "demand": 60,
+  "competition": null,
+  "quality": 80,
+  "opportunity": 66
+ },
+ {
+  "id": "3129e65fd6f9",
+  "key": "why-did-an-early-crypto-project-demand-a-suicide-pledge-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "hot",
+  "question": "Why did an early crypto project demand a suicide pledge?",
+  "hook": "A crypto foundation contract included an actual suicide pledge.",
+  "about": "A shocking legal battle reveals extreme founder loyalty clauses and governance drama inside early cryptocurrency organizations. Behind the promise of decentralized, trustless code often lie bizarre legal mechanisms, bitter personal feuds, and intense pressure campaigns.",
+  "surprise": "A lawsuit alleges the Ethereum Foundation required a suicide pledge.",
+  "series": "True Weird Stories (comic)",
+  "audience": "finance & crypto",
+  "format": "long",
+  "scores": {
+   "curiosity": [
+    5,
+    "Bizarre legal clause shocks casual observers"
+   ],
+   "explainability": [
+    4,
+    "Contract drama works well in comics"
+   ],
+   "shelf_life": [
+    3,
+    "Tied to ongoing courtroom litigation outcomes"
+   ],
+   "money": [
+    4,
+    "Crypto audience attracts high CPM advertisers"
+   ]
+  },
+  "risk": "legal",
+  "search_query": "ethereum foundation lawsuit suicide pledge",
+  "wiki_title": "Ethereum",
+  "stats": {
+   "hn_points": 100,
+   "hn_comments": 106,
+   "wiki_article": "Ethereum",
+   "wiki_avg_30d": 704,
+   "wiki_views_24h": 462,
+   "wiki_change_pct": -34
+  },
+  "origin": {
+   "time": "2026-11-09T15:23:57+00:00",
+   "hours_ago": 3.5
+  },
+  "sources": [
+   {
+    "src": "hacker_news",
+    "title": "Cryptocurrency lawsuit: Ethereum Foundation required \"suicide pledge\"",
+    "url": "https://www.denverpost.com/2026/11/06/ethereum-suicide-pledge-lawsuit-mandate-boulder-crypto/"
+   }
+  ],
+  "demand": 58,
+  "competition": null,
+  "quality": 80,
+  "opportunity": 66
+ },
+ {
+  "id": "3b3dd754b2c4",
+  "key": "why-do-ai-models-suddenly-seem-dumber-after-stealth-updates-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "hot",
+  "question": "Why do AI models suddenly seem dumber after stealth updates?",
+  "hook": "Your favorite AI assistant might have changed its thinking style.",
+  "about": "Users frequently notice sudden drops in reasoning performance, code quality, and chain-of-thought depth following unannounced model adjustments. AI labs constantly tweak safety guardrails, quantization weights, and compute budgets, causing unintended side effects that look like quiet downgrades.",
+  "surprise": "Opus users noticed altered thinking patterns starting November 3.",
+  "series": "What Actually Happened (mini-doc)",
+  "audience": "tech & AI",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    5,
+    "Massive user paranoia over silent AI downgrades"
+   ],
+   "explainability": [
+    3,
+    "Neural weights and safety layers are abstract"
+   ],
+   "shelf_life": [
+    3,
+    "Model versions change rapidly within months"
+   ],
+   "money": [
+    5,
+    "AI tool subscriptions drive top bids"
+   ]
+  },
+  "risk": "",
+  "search_query": "ai model drift stealth nerf explained",
+  "wiki_title": "Claude (language model)",
+  "stats": {
+   "hn_points": 453,
+   "hn_comments": 344,
+   "wiki_article": "Claude (language model)",
+   "wiki_avg_30d": 376,
+   "wiki_views_24h": 233,
+   "wiki_change_pct": -38,
+   "yt_results": 2580,
+   "yt_top_views": 47943206,
+   "yt_median_top10_views": 1216609,
+   "yt_recent_in_top10": 1,
+   "yt_top_title": "The Quiet Kid Be Like\u2026",
+   "yt_top_channel": "Aman Studios",
+   "yt_top_url": "https://youtu.be/dey_uRF6Vf0",
+   "yt_query": "ai model drift stealth nerf explained"
+  },
+  "origin": {
+   "time": "2026-11-09T07:04:25+00:00",
+   "hours_ago": 11.8
+  },
+  "sources": [
+   {
+    "src": "hacker_news",
+    "title": "Is Opus 5.5 nerfed? Thinking patterns changed on November 3",
+    "url": "https://twitter.com/shanemelaugh/status/2119192075505893695"
+   }
+  ],
+  "demand": 90,
+  "competition": 64,
+  "quality": 80,
+  "opportunity": 78
+ },
+ {
+  "id": "8a254224d643",
+  "key": "how-do-hackers-trick-blockchain-bridges-into-printing-fake-deposits-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "hot",
+  "question": "How do hackers trick blockchain bridges into printing fake deposits?",
+  "hook": "A spoofed message tricked a bridge into giving away fortunes.",
+  "about": "Blockchains cannot inherently communicate with outside networks, relying instead on specialized bridge smart contracts to pass signed messages. When bridges fail to validate incoming message proofs properly, attackers can spoof fake deposit events and drain genuine assets from the other side.",
+  "surprise": "Cross-chain message spoofing enabled a theft of 800,000 dollars on zkLink.",
+  "series": "How It Works (cutaway)",
+  "audience": "tech & AI",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    4,
+    "Fascinating logic flaw in complex cryptography"
+   ],
+   "explainability": [
+    4,
+    "Two separate ledgers communicating visually"
+   ],
+   "shelf_life": [
+    4,
+    "Bridge security remains a persistent vulnerability"
+   ],
+   "money": [
+    4,
+    "Cybersecurity and Web3 auditing firms sponsor"
+   ]
+  },
+  "risk": "",
+  "search_query": "blockchain bridge hack message spoofing",
+  "wiki_title": "Cryptocurrency and crime",
+  "stats": {
+   "hack_usd": 783100,
+   "wiki_article": "Cryptocurrency and crime",
+   "wiki_avg_30d": 130,
+   "wiki_views_24h": 75,
+   "wiki_change_pct": -42
+  },
+  "origin": {
+   "time": "2026-10-22T00:00:00+00:00",
+   "hours_ago": 450.9
+  },
+  "sources": [
+   {
+    "src": "defillama_hacks",
+    "title": "zkLink Nova hack: $0.8M via Cross-Chain Message Spoofing",
+    "url": "https://defillama.com/hacks"
+   },
+   {
+    "src": "defillama_hacks",
+    "title": "WAX Multi-Chain Bridge hack: $0.1M via Missing Input Validation",
+    "url": "https://defillama.com/hacks"
+   }
+  ],
+  "demand": 37,
+  "competition": null,
+  "quality": 80,
+  "opportunity": 56
+ },
+ {
+  "id": "a3bc6957c03f",
+  "key": "why-does-the-date-of-diwali-shift-across-our-calendar-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "hot",
+  "question": "Why does the date of Diwali shift across our calendar?",
+  "hook": "A lunar alignment decides when millions light their lamps.",
+  "about": "Unlike solar calendars that fix dates to Earth's orbit around the sun, the celebration of Diwali is governed by the Hindu lunisolar calendar. It falls precisely on the darkest night of the Kartika month, requiring complex leap months to keep seasonal cycles synchronized.",
+  "surprise": "The festival is anchored to the new moon night of Amavasya.",
+  "series": "How It Works (cutaway)",
+  "audience": "India-first",
+  "format": "short",
+  "scores": {
+   "curiosity": [
+    4,
+    "Simple cultural question with orbital mechanics answer"
+   ],
+   "explainability": [
+    5,
+    "Earth, moon, and sun orbits draw cleanly"
+   ],
+   "shelf_life": [
+    5,
+    "Annual holiday with perennial educational value"
+   ],
+   "money": [
+    3,
+    "Festive seasonal demand with moderate CPM"
+   ]
+  },
+  "risk": "",
+  "search_query": "why diwali date changes lunisolar calendar",
+  "wiki_title": "Diwali",
+  "stats": {
+   "wiki_views_24h": 122787,
+   "wiki_change_pct": 352,
+   "wiki_7d": [
+    10104,
+    14860,
+    15783,
+    18444,
+    28130,
+    50000,
+    52715,
+    122787
+   ],
+   "wiki_article": "Diwali",
+   "wiki_avg_30d": 16138,
+   "yt_results": 165,
+   "yt_top_views": 4537,
+   "yt_median_top10_views": 162,
+   "yt_recent_in_top10": 8,
+   "yt_top_title": "Why Diwali Date changes Every Year\ud83e\udd14",
+   "yt_top_channel": "Pratik More ",
+   "yt_top_url": "https://youtu.be/dzsOzxz_eeo",
+   "yt_query": "why diwali date changes lunisolar calendar"
+  },
+  "origin": null,
+  "sources": [
+   {
+    "src": "wikipedia",
+    "title": "Diwali",
+    "url": "https://en.wikipedia.org/wiki/Diwali"
+   }
+  ],
+  "demand": 90,
+  "competition": 46,
+  "quality": 85,
+  "opportunity": 83
+ },
+ {
+  "id": "fe1c5bf54af1",
+  "key": "why-are-farmers-putting-magenta-solar-panels-over-crops-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "hot",
+  "question": "Why are farmers putting magenta solar panels over crops?",
+  "hook": "Plants hate green light, so solar panels stole it.",
+  "about": "Agrivoltaics pairs crop farming with solar power generation on the same field. Specially tuned magenta panels absorb the green light plants discard while transmitting the blue and red wavelengths needed for photosynthesis.",
+  "surprise": "Magenta panels generate clean electricity while allowing crops beneath to grow normally.",
+  "series": "How It Works (cutaway)",
+  "audience": "general curious",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    4,
+    "Tinted solar farms look totally alien."
+   ],
+   "explainability": [
+    5,
+    "Light spectrum cutaways are easily animated."
+   ],
+   "shelf_life": [
+    5,
+    "Agrivoltaics is expanding for next decade."
+   ],
+   "money": [
+    4,
+    "Clean energy tech attracts green sponsors."
+   ]
+  },
+  "risk": "",
+  "search_query": "magenta solar panels agrivoltaics",
+  "wiki_title": "Agrivoltaics",
+  "stats": {
+   "hn_points": 140,
+   "hn_comments": 54,
+   "wiki_article": "Agrivoltaics",
+   "wiki_avg_30d": 108,
+   "wiki_views_24h": 69,
+   "wiki_change_pct": -36,
+   "yt_results": 20,
+   "yt_top_views": 1683,
+   "yt_median_top10_views": 30,
+   "yt_recent_in_top10": 3,
+   "yt_top_title": "Agrivoltaics and the Future of Farming: Solar Panels on Every Field",
+   "yt_top_channel": "Green Energy Futures",
+   "yt_top_url": "https://youtu.be/Z6pYK7zAZzA",
+   "yt_query": "magenta solar panels agrivoltaics"
+  },
+  "origin": {
+   "time": "2026-11-09T14:31:39+00:00",
+   "hours_ago": 4.3
+  },
+  "sources": [
+   {
+    "src": "hacker_news",
+    "title": "Magenta solar panels may be agrivoltaics' cleverest trick yet",
+    "url": "https://www.anthropocenemagazine.org/2026/10/magenta-solar-panels-may-be-agrivoltaics-cleverest-trick-yet/"
+   }
+  ],
+  "demand": 59,
+  "competition": 24,
+  "quality": 90,
+  "opportunity": 74
+ },
+ {
+  "id": "5a8d2c7308be",
+  "key": "how-does-a-simple-math-error-drain-millions-from-crypto-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "hot",
+  "question": "How does a simple math error drain millions from crypto?",
+  "hook": "One misplaced share calculation evaporated a million.",
+  "about": "Decentralized finance relies on immutable smart contracts to distribute pooled assets among users. Hackers targeted Fence Finance for one million dollars by exploiting flaws in how user shares were accounted for.",
+  "surprise": "Fence Finance lost one million dollars because its share accounting math was flawed.",
+  "series": "Money Moves (charts)",
+  "audience": "finance & crypto",
+  "format": "long",
+  "scores": {
+   "curiosity": [
+    4,
+    "People wonder how code steals money."
+   ],
+   "explainability": [
+    4,
+    "Token balance pools animate cleanly visually."
+   ],
+   "shelf_life": [
+    4,
+    "Smart contract flaws remain perennial issues."
+   ],
+   "money": [
+    5,
+    "Crypto security commands massive advertiser value."
+   ]
+  },
+  "risk": "",
+  "search_query": "defi smart contract hack explained",
+  "wiki_title": "Decentralized finance",
+  "stats": {
+   "hack_usd": 2700000,
+   "wiki_article": "Decentralized finance",
+   "wiki_avg_30d": 179,
+   "wiki_views_24h": 95,
+   "wiki_change_pct": -47
+  },
+  "origin": {
+   "time": "2026-10-27T00:00:00+00:00",
+   "hours_ago": 330.9
+  },
+  "sources": [
+   {
+    "src": "defillama_hacks",
+    "title": "Fence Finance hack: $1.0M via Incorrect Share Accounting",
+    "url": "https://defillama.com/hacks"
+   },
+   {
+    "src": "defillama_hacks",
+    "title": "Polymarket International hack: $2.7M via Supply Chain Attack",
+    "url": "https://defillama.com/hacks"
+   }
+  ],
+  "demand": 40,
+  "competition": null,
+  "quality": 85,
+  "opportunity": 60
+ },
+ {
+  "id": "3d189269a0cf",
+  "key": "which-satellites-are-taking-pictures-of-your-house-right-now-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "hot",
+  "question": "Which satellites are taking pictures of your house right now?",
+  "hook": "Thousands of orbital cameras watch every coordinate daily.",
+  "about": "Earth observation constellations crisscross the planet continuously capturing high-resolution commercial and governmental imagery. Open-source mapping tools now let anyone see every satellite that flew over their hometown this week.",
+  "surprise": "You can now map every satellite pass and its photos over any location.",
+  "series": "How It Works (cutaway)",
+  "audience": "tech & AI",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    5,
+    "Surveillance overhead sparks immediate personal paranoia."
+   ],
+   "explainability": [
+    5,
+    "Orbital tracks around Earth animate effortlessly."
+   ],
+   "shelf_life": [
+    4,
+    "Satellite observation tech is permanent reality."
+   ],
+   "money": [
+    3,
+    "Mapping and data tools draw sponsors."
+   ]
+  },
+  "risk": "",
+  "search_query": "satellites passing over my house",
+  "wiki_title": "Earth observation satellite",
+  "stats": {
+   "hn_points": 5,
+   "hn_comments": 2,
+   "wiki_article": "Earth observation satellite",
+   "wiki_avg_30d": 55,
+   "wiki_views_24h": 57,
+   "wiki_change_pct": 3
+  },
+  "origin": {
+   "time": "2026-11-09T17:51:31+00:00",
+   "hours_ago": 1.0
+  },
+  "sources": [
+   {
+    "src": "hacker_news",
+    "title": "Show HN: Every satellite that passed over any place this week, and its photos",
+    "url": "https://www.watched.earth"
+   }
+  ],
+  "demand": 31,
+  "competition": null,
+  "quality": 85,
+  "opportunity": 55
+ },
+ {
+  "id": "46e64d7b3ce0",
+  "key": "why-is-formula-one-redesigning-its-engines-in-2026-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "hot",
+  "question": "Why is Formula One redesigning its engines in 2026?",
+  "hook": "Formula One cars are dumping traditional turbo power.",
+  "about": "The 2026 Formula One technical regulations mandate an almost fifty-fifty split between internal combustion and electric power. Teams must also deploy fully sustainable fuels and active aerodynamics to keep racing close and green.",
+  "surprise": "Can active aerodynamics compensate for significantly smaller engine displacement?",
+  "series": "How It Works (cutaway)",
+  "audience": "general curious",
+  "format": "long",
+  "scores": {
+   "curiosity": [
+    4,
+    "Racing fans love major rule shakeups."
+   ],
+   "explainability": [
+    5,
+    "Engine cutaways and wing aerodynamics pop."
+   ],
+   "shelf_life": [
+    4,
+    "These regulations will run for years."
+   ],
+   "money": [
+    4,
+    "Automotive brands pay high ad rates."
+   ]
+  },
+  "risk": "",
+  "search_query": "f1 2026 engine regulations explained",
+  "wiki_title": "2026 Formula One World Championship",
+  "stats": {
+   "wiki_views_24h": 54197,
+   "wiki_change_pct": 36,
+   "wiki_7d": [
+    62811,
+    102533,
+    35585,
+    21742,
+    16513,
+    16586,
+    23074,
+    54197
+   ],
+   "wiki_article": "2026 Formula One World Championship",
+   "wiki_avg_30d": 25723,
+   "yt_results": 1000000,
+   "yt_top_views": 3036450,
+   "yt_median_top10_views": 548612,
+   "yt_recent_in_top10": 0,
+   "yt_top_title": "Everything You Need To Know About the Formula 1 2026 Regulations",
+   "yt_top_channel": "FORMULA 1",
+   "yt_top_url": "https://youtu.be/GaDFJr5wSz0",
+   "yt_query": "f1 2026 engine regulations explained"
+  },
+  "origin": null,
+  "sources": [
+   {
+    "src": "wikipedia",
+    "title": "2026 Formula One World Championship",
+    "url": "https://en.wikipedia.org/wiki/2026_Formula_One_World_Championship"
+   }
+  ],
+  "demand": 85,
+  "competition": 57,
+  "quality": 85,
+  "opportunity": 79
+ },
+ {
+  "id": "cc79153161c2",
+  "key": "why-aren-t-computer-memory-pointers-just-numbers-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "hot",
+  "question": "Why aren't computer memory pointers just numbers?",
+  "hook": "Compilers treat memory pointers like magical passports.",
+  "about": "Programmers often think of memory pointers as simple integer addresses inside physical RAM. Modern compilers in languages like Rust and C++ track pointer provenance, remembering an address's entire origin history to block illegal optimizations.",
+  "surprise": "Two pointers with identical memory addresses can behave completely differently based on their history.",
+  "series": "How It Works (cutaway)",
+  "audience": "students",
+  "format": "short",
+  "scores": {
+   "curiosity": [
+    4,
+    "Reveals hidden magic beneath computer code."
+   ],
+   "explainability": [
+    4,
+    "Memory grids and passports illustrate smoothly."
+   ],
+   "shelf_life": [
+    5,
+    "Fundamental computer architecture concept stays relevant."
+   ],
+   "money": [
+    3,
+    "Developer tools and bootcamps love this."
+   ]
+  },
+  "risk": "",
+  "search_query": "pointer provenance explained rust cpp",
+  "wiki_title": "Pointer (computer programming)",
+  "stats": {
+   "hn_points": 16,
+   "hn_comments": 6,
+   "wiki_article": "Pointer (computer programming)",
+   "wiki_avg_30d": 127,
+   "wiki_views_24h": 82,
+   "wiki_change_pct": -35
+  },
+  "origin": {
+   "time": "2026-11-05T09:32:50+00:00",
+   "hours_ago": 105.3
+  },
+  "sources": [
+   {
+    "src": "hacker_news",
+    "title": "Pointer Provenance in Rust vs. C++: Pointers Are Not Just Glorified Ints",
+    "url": "https://sofiabelen.github.io/projects/pointer-provenance-in-rust-vs-cpp/"
+   }
+  ],
+  "demand": 38,
+  "competition": null,
+  "quality": 80,
+  "opportunity": 57
+ },
+ {
+  "id": "0dcb37c1881d",
+  "key": "why-is-australia-s-most-famous-beer-called-xxxx-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "hot",
+  "question": "Why is Australia's most famous beer called XXXX?",
+  "hook": "A beer named after four letter Xs.",
+  "about": "Castlemaine Perkins has brewed the iconic XXXX bitter ale in Queensland since the nineteenth century. The name originates from an old English tradition of grading beer strength using repeated crosses on wooden casks.",
+  "surprise": "The X marks originally designated brewing quality and tax ratings on barrels.",
+  "series": "True Weird Stories (comic)",
+  "audience": "general curious",
+  "format": "short",
+  "scores": {
+   "curiosity": [
+    4,
+    "The strange name invites immediate amusement."
+   ],
+   "explainability": [
+    5,
+    "Old brewery barrels and comics shine."
+   ],
+   "shelf_life": [
+    5,
+    "Historical branding trivia never goes stale."
+   ],
+   "money": [
+    2,
+    "Alcohol topics face slight advertiser limits."
+   ]
+  },
+  "risk": "",
+  "search_query": "why is xxxx beer called that",
+  "wiki_title": "XXXX (beer)",
+  "stats": {
+   "wiki_views_24h": 53463,
+   "wiki_change_pct": 2,
+   "wiki_7d": [
+    46829,
+    40847,
+    51094,
+    59009,
+    63372,
+    51388,
+    55608,
+    53463
+   ],
+   "wiki_article": "XXXX (beer)",
+   "wiki_avg_30d": 45007,
+   "yt_results": 1000000,
+   "yt_top_views": 172802,
+   "yt_median_top10_views": 7451,
+   "yt_recent_in_top10": 1,
+   "yt_top_title": "Castlemaine XXXX -  I can see the pub from here! (Advert 1988)",
+   "yt_top_channel": "Mali Yojez",
+   "yt_top_url": "https://youtu.be/XRJwJc6Yppo",
+   "yt_query": "why is xxxx beer called that"
+  },
+  "origin": null,
+  "sources": [
+   {
+    "src": "wikipedia",
+    "title": "XXXX (beer)",
+    "url": "https://en.wikipedia.org/wiki/XXXX_%28beer%29"
+   }
+  ],
+  "demand": 83,
+  "competition": 42,
+  "quality": 80,
+  "opportunity": 78
+ },
+ {
+  "id": "4eee5cdc80e2",
+  "key": "how-does-jensen-huang-manage-nvidia-with-fifty-direct-reports-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "hot",
+  "question": "How does Jensen Huang manage Nvidia with fifty direct reports?",
+  "hook": "Most CEOs manage ten people; Jensen manages fifty.",
+  "about": "Nvidia has grown into one of the world's most valuable companies by dominating artificial intelligence hardware. CEO Jensen Huang runs the massive chipmaker with an extremely flat hierarchy that eliminates status reports in favor of company-wide emails.",
+  "surprise": "Jensen Huang directly supervises roughly fifty executives with no formal one-on-ones.",
+  "series": "Money Moves (charts)",
+  "audience": "tech & AI",
+  "format": "long",
+  "scores": {
+   "curiosity": [
+    5,
+    "Corporate management style defies business school."
+   ],
+   "explainability": [
+    4,
+    "Org charts and communication flows animate."
+   ],
+   "shelf_life": [
+    4,
+    "Nvidia remains the defining AI powerhouse."
+   ],
+   "money": [
+    5,
+    "B2B viewers bring exceptionally high CPM."
+   ]
+  },
+  "risk": "",
+  "search_query": "jensen huang nvidia management style",
+  "wiki_title": "Jensen Huang",
+  "stats": {
+   "wiki_views_24h": 122360,
+   "wiki_change_pct": 1195,
+   "wiki_7d": [
+    5539,
+    5265,
+    6492,
+    4768,
+    4819,
+    6023,
+    33238,
+    122360
+   ],
+   "bet_volume_24h_usd": 292140,
+   "wiki_article": "Jensen Huang",
+   "wiki_avg_30d": 11678,
+   "yt_results": 482499,
+   "yt_top_views": 2938809,
+   "yt_median_top10_views": 22410,
+   "yt_recent_in_top10": 0,
+   "yt_top_title": "Nvidia CEO\u2019s crazy work schedule \ud83e\udd2f",
+   "yt_top_channel": "20VC with Harry Stebbings",
+   "yt_top_url": "https://youtu.be/vuDGmcW2ptA",
+   "yt_query": "jensen huang nvidia management style"
+  },
+  "origin": null,
+  "sources": [
+   {
+    "src": "wikipedia",
+    "title": "Jensen Huang",
+    "url": "https://en.wikipedia.org/wiki/Jensen_Huang"
+   },
+   {
+    "src": "polymarket",
+    "title": "Jensen Huang announced resignation or removal by December 31, 2026?",
+    "url": "https://polymarket.com/event/jensen-huang-announced-resignation-or-removal-by-december-31"
+   }
+  ],
+  "demand": 94,
+  "competition": 44,
+  "quality": 90,
+  "opportunity": 87
+ },
+ {
+  "id": "c81e611a5228",
+  "key": "why-are-bettors-wagering-millions-on-alien-disclosure-before-2027-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "hot",
+  "question": "Why are bettors wagering millions on alien disclosure before 2027?",
+  "hook": "People are betting real cash on alien disclosure.",
+  "about": "Prediction markets allow traders to speculate on whether the United States government will formally confirm non-human intelligence. Decades of declassification mandates and congressional UFO hearings have turned once-fringe extraterrestrial theories into financial contracts.",
+  "surprise": "Prediction markets now hold active betting pools on government alien confirmation.",
+  "series": "What If? (stickman)",
+  "audience": "general curious",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    5,
+    "Aliens combined with money hooks everyone."
+   ],
+   "explainability": [
+    5,
+    "Stickman government interrogations are pure fun."
+   ],
+   "shelf_life": [
+    4,
+    "UAP disclosure debate continues indefinitely onward."
+   ],
+   "money": [
+    3,
+    "Fintech prediction market ads pay decently."
+   ]
+  },
+  "risk": "",
+  "search_query": "us confirm aliens exist prediction market",
+  "wiki_title": "Unidentified anomalous phenomenon",
+  "stats": {
+   "bet_volume_24h_usd": 414948,
+   "wiki_article": "Unidentified anomalous phenomenon",
+   "wiki_avg_30d": 2,
+   "wiki_views_24h": 2,
+   "wiki_change_pct": 30,
+   "yt_results": 62266,
+   "yt_top_views": 2376896,
+   "yt_median_top10_views": 88,
+   "yt_recent_in_top10": 0,
+   "yt_top_title": "This Will Happen When the Govt Confirms Aliens Exist",
+   "yt_top_channel": "The Infographics Show",
+   "yt_top_url": "https://youtu.be/rhAZ2tL8X5A",
+   "yt_query": "us confirm aliens exist prediction market"
+  },
+  "origin": null,
+  "sources": [
+   {
+    "src": "polymarket",
+    "title": "Will the US confirm that aliens exist before 2027?",
+    "url": "https://polymarket.com/event/will-the-us-confirm-that-aliens-exist-before-2027-789-924-249"
+   }
+  ],
+  "demand": 73,
+  "competition": 19,
+  "quality": 85,
+  "opportunity": 79
+ },
+ {
+  "id": "663a5d7976d8",
+  "key": "how-can-computer-code-print-a-3d-spinning-globe-of-itself-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "hot",
+  "question": "How can computer code print a 3D spinning globe of itself?",
+  "hook": "This program prints itself while rendering a spinning globe.",
+  "about": "A quine is a program whose only output is its own exact source code. Developers took this puzzle to the extreme by structuring the code to output an animated, rotating 3D ASCII globe.",
+  "surprise": "Can a single block of text calculate 3D projection math and reproduce itself verbatim?",
+  "series": "How It Works (cutaway)",
+  "audience": "tech & AI",
+  "format": "short",
+  "scores": {
+   "curiosity": [
+    5,
+    "Mind bending code tricks fascinate programmers."
+   ],
+   "explainability": [
+    5,
+    "ASCII characters spinning makes great animation."
+   ],
+   "shelf_life": [
+    5,
+    "Classic computer science concepts stay timeless."
+   ],
+   "money": [
+    3,
+    "Niche programming topics attract developer tools."
+   ]
+  },
+  "risk": "",
+  "search_query": "rotating quine code explained",
+  "wiki_title": "Quine (computing)",
+  "stats": {
+   "hn_points": 39,
+   "hn_comments": 1,
+   "wiki_article": "Quine (computing)",
+   "wiki_avg_30d": 158,
+   "wiki_views_24h": 85,
+   "wiki_change_pct": -46
+  },
+  "origin": {
+   "time": "2026-11-09T03:15:17+00:00",
+   "hours_ago": 15.6
+  },
+  "sources": [
+   {
+    "src": "hacker_news",
+    "title": "The Qlobe: Rotating Quine (2010)",
+    "url": "http://mamememo.blogspot.com/2010/09/qlobe.html"
+   }
+  ],
+  "demand": 46,
+  "competition": null,
+  "quality": 90,
+  "opportunity": 64
+ },
+ {
+  "id": "d086441c594d",
+  "key": "how-did-fan-fiction-writers-build-the-cleanest-website-on-the-internet-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "hot",
+  "question": "How did fan fiction writers build the cleanest website on the internet?",
+  "hook": "Millions of fan stories live here without any ads.",
+  "about": "Archive of Our Own was created in 2008 by fans frustrated with commercial sites censoring creative writing. It operates entirely on open-source code and donations while managing millions of complex tag searches.",
+  "surprise": "Did a fanfiction archive really win an official Hugo Award for Best Related Work?",
+  "series": "What Actually Happened (mini-doc)",
+  "audience": "movie & pop culture",
+  "format": "long",
+  "scores": {
+   "curiosity": [
+    4,
+    "Underground internet subcultures hide surprising triumphs."
+   ],
+   "explainability": [
+    4,
+    "Drawing tag filtering systems is straightforward."
+   ],
+   "shelf_life": [
+    5,
+    "Internet preservation culture remains relevant indefinitely."
+   ],
+   "money": [
+    2,
+    "Noncommercial fan fiction yields lower ad-spend."
+   ]
+  },
+  "risk": "",
+  "search_query": "how AO3 works",
+  "wiki_title": "Archive of Our Own",
+  "stats": {
+   "wiki_views_24h": 43788,
+   "wiki_change_pct": -29,
+   "wiki_7d": [
+    43286,
+    78713,
+    85012,
+    78683,
+    62148,
+    46593,
+    37233,
+    43788
+   ],
+   "wiki_article": "Archive of Our Own",
+   "wiki_avg_30d": 20541,
+   "yt_results": 230181,
+   "yt_top_views": 2517263,
+   "yt_median_top10_views": 207964,
+   "yt_recent_in_top10": 0,
+   "yt_top_title": "the infamous fanfic that changed AO3 forever",
+   "yt_top_channel": "ColeyDoesThings",
+   "yt_top_url": "https://youtu.be/WWO-gUGYaEk",
+   "yt_query": "how AO3 works"
+  },
+  "origin": null,
+  "sources": [
+   {
+    "src": "wikipedia",
+    "title": "Archive of Our Own",
+    "url": "https://en.wikipedia.org/wiki/Archive_of_Our_Own"
+   }
+  ],
+  "demand": 84,
+  "competition": 53,
+  "quality": 75,
+  "opportunity": 75
+ },
+ {
+  "id": "58fb2989b81a",
+  "key": "why-is-jpeg-still-everywhere-when-better-image-formats-exist-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "hot",
+  "question": "Why is JPEG still everywhere when better image formats exist?",
+  "hook": "Your browser wastes data loading thirty year old formats.",
+  "about": "AVIF compresses high-resolution photographs into minuscule file sizes using modern video codec technology. Despite outperforming JPEG and WebP, adoption crawls due to legacy hardware encoders and browser rendering quirks.",
+  "surprise": "Why does an image format derived from video codecs beat dedicated photography formats?",
+  "series": "Versus (scoreboard)",
+  "audience": "tech & AI",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    4,
+    "People wonder why websites load slowly."
+   ],
+   "explainability": [
+    5,
+    "Pixel compression artifacts are easily illustrated."
+   ],
+   "shelf_life": [
+    4,
+    "Codec battles take years to settle."
+   ],
+   "money": [
+    4,
+    "Cloud hosting platforms love image optimization."
+   ]
+  },
+  "risk": "",
+  "search_query": "AVIF vs WebP vs JPEG",
+  "wiki_title": "AVIF",
+  "stats": {
+   "hn_points": 48,
+   "hn_comments": 34,
+   "wiki_article": "AVIF",
+   "wiki_avg_30d": 248,
+   "wiki_views_24h": 176,
+   "wiki_change_pct": -29
+  },
+  "origin": {
+   "time": "2026-11-07T17:34:07+00:00",
+   "hours_ago": 49.3
+  },
+  "sources": [
+   {
+    "src": "hacker_news",
+    "title": "Isn't It Time for AVIF Everywhere?",
+    "url": "https://www.michaelponders.com/2026/11/isnt-it-time-for-avif-everywhere.html"
+   }
+  ],
+  "demand": 49,
+  "competition": null,
+  "quality": 85,
+  "opportunity": 64
+ },
+ {
+  "id": "0c4e89d4c0c6",
+  "key": "what-would-actually-happen-if-humans-completely-stopped-having-babies-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "hot",
+  "question": "What would actually happen if humans completely stopped having babies?",
+  "hook": "Imagine a world where nobody is born anymore.",
+  "about": "The sci-fi classic Children of Men imagined an overnight collapse in global human fertility. Demographers and economists are now examining how rapid population decline unravels infrastructure, healthcare, and economic stability.",
+  "surprise": "Would society collapse from despair long before the final human died?",
+  "series": "What If? (stickman)",
+  "audience": "general curious",
+  "format": "long",
+  "scores": {
+   "curiosity": [
+    5,
+    "Existential human scenarios trigger intense intrigue."
+   ],
+   "explainability": [
+    4,
+    "Stick figures aging out simplifies economics."
+   ],
+   "shelf_life": [
+    5,
+    "Global birth rates remain major debates."
+   ],
+   "money": [
+    3,
+    "Broad demographic topics attract mainstream advertisers."
+   ]
+  },
+  "risk": "",
+  "search_query": "what if birth rate hits zero",
+  "wiki_title": "Children of Men",
+  "stats": {
+   "hn_points": 97,
+   "hn_comments": 77,
+   "wiki_article": "Children of Men",
+   "wiki_avg_30d": 2721,
+   "wiki_views_24h": 2230,
+   "wiki_change_pct": -18,
+   "yt_results": 1000000,
+   "yt_top_views": 6684256,
+   "yt_median_top10_views": 73992,
+   "yt_recent_in_top10": 3,
+   "yt_top_title": "How Japan Finally Made It Impossible to Make Babies",
+   "yt_top_channel": "Dr. Jonathan Tam",
+   "yt_top_url": "https://youtu.be/1QPMcWpJEgM",
+   "yt_query": "what if birth rate hits zero"
+  },
+  "origin": {
+   "time": "2026-11-09T13:27:01+00:00",
+   "hours_ago": 5.4
+  },
+  "sources": [
+   {
+    "src": "hacker_news",
+    "title": "Children of Men: The future is a mirror for the present",
+    "url": "https://reactormag.com/children-of-men-the-future-is-a-mirror-for-the-present/"
+   }
+  ],
+  "demand": 84,
+  "competition": 58,
+  "quality": 85,
+  "opportunity": 78
+ },
+ {
+  "id": "8bc9c7e1bbd9",
+  "key": "how-did-hackers-steal-400-thousand-dollars-without-touching-the-blockchain-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "hot",
+  "question": "How did hackers steal 400 thousand dollars without touching the blockchain?",
+  "hook": "The smart contract was safe, but users were robbed.",
+  "about": "Predict Fun suffered a $0.4M exploit through a frontend compromise rather than a protocol bug. By poisoning the user interface, attackers tricked traders into signing malicious permissions on perfectly secure smart contracts.",
+  "surprise": "Hackers took $0.4M by altering website code without breaking the blockchain.",
+  "series": "Money Moves (charts)",
+  "audience": "finance & crypto",
+  "format": "short",
+  "scores": {
+   "curiosity": [
+    4,
+    "Explaining invisible digital heists hooks viewers."
+   ],
+   "explainability": [
+    4,
+    "Flowcharts cleanly contrast frontends with contracts."
+   ],
+   "shelf_life": [
+    3,
+    "Crypto hack news cycles fade quickly."
+   ],
+   "money": [
+    5,
+    "Crypto cybersecurity brings massive ad rates."
+   ]
+  },
+  "risk": "",
+  "search_query": "crypto frontend hack explained",
+  "wiki_title": "Decentralized finance",
+  "stats": {
+   "hack_usd": 400000,
+   "wiki_article": "Decentralized finance",
+   "wiki_avg_30d": 179,
+   "wiki_views_24h": 95,
+   "wiki_change_pct": -47
+  },
+  "origin": {
+   "time": "2026-10-27T00:00:00+00:00",
+   "hours_ago": 330.9
+  },
+  "sources": [
+   {
+    "src": "defillama_hacks",
+    "title": "Predict Fun hack: $0.4M via Frontend Compromise",
+    "url": "https://defillama.com/hacks"
+   }
+  ],
+  "demand": 40,
+  "competition": null,
+  "quality": 80,
+  "opportunity": 58
+ },
+ {
+  "id": "c7919ace0113",
+  "key": "why-does-a-35-dollar-hobby-computer-now-cost-385-dollars-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "hot",
+  "question": "Why does a 35 dollar hobby computer now cost 385 dollars?",
+  "hook": "A cheap educational board became an expensive luxury.",
+  "about": "The Raspberry Pi was designed as a low-cost microcomputer to teach schoolchildren how to program. Now, upgraded 16GB models and supply shocks have pushed market prices to an eye-watering $385.",
+  "surprise": "A board designed for children now sells for $385.",
+  "series": "Money Moves (charts)",
+  "audience": "tech & AI",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    4,
+    "Viewers hate when budget gadgets skyrocket."
+   ],
+   "explainability": [
+    4,
+    "Supply charts clearly explain hardware pricing."
+   ],
+   "shelf_life": [
+    3,
+    "Hardware price spikes eventually normalize out."
+   ],
+   "money": [
+    4,
+    "Hardware tech enthusiasts spend serious money."
+   ]
+  },
+  "risk": "",
+  "search_query": "Raspberry Pi price increase reason",
+  "wiki_title": "Raspberry Pi",
+  "stats": {
+   "hn_points": 114,
+   "hn_comments": 82,
+   "wiki_article": "Raspberry Pi",
+   "wiki_avg_30d": 1239,
+   "wiki_views_24h": 931,
+   "wiki_change_pct": -25
+  },
+  "origin": {
+   "time": "2026-11-09T17:42:55+00:00",
+   "hours_ago": 1.1
+  },
+  "sources": [
+   {
+    "src": "hacker_news",
+    "title": "When will this stop? The Raspberry Pi 5 16GB SBC now sells for $385",
+    "url": "https://www.cnx-software.com/2026/11/03/when-will-this-stop-the-raspberry-pi-5-16gb-sbc-now-sells-for-385/"
+   }
+  ],
+  "demand": 61,
+  "competition": null,
+  "quality": 75,
+  "opportunity": 65
+ },
+ {
+  "id": "ecf3316e7885",
+  "key": "how-does-telecom-code-keep-whatsapp-running-when-servers-crash-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "hot",
+  "question": "How does telecom code keep WhatsApp running when servers crash?",
+  "hook": "This vintage software philosophy refuses to die.",
+  "about": "The BEAM virtual machine was created by Ericsson in the 1980s to prevent telephone switches from dropping calls. Modern programming languages like Gleam are resurrecting this crash-proof architecture for modern internet services.",
+  "surprise": "Can software embrace crashes as normal design without ever failing users?",
+  "series": "How It Works (cutaway)",
+  "audience": "tech & AI",
+  "format": "long",
+  "scores": {
+   "curiosity": [
+    4,
+    "Fault tolerant engineering contains cool paradoxes."
+   ],
+   "explainability": [
+    4,
+    "Actor models look great in animation."
+   ],
+   "shelf_life": [
+    5,
+    "Fundamental server architectures remain deeply durable."
+   ],
+   "money": [
+    4,
+    "Enterprise infrastructure software pays top dollar."
+   ]
+  },
+  "risk": "",
+  "search_query": "Erlang BEAM architecture explained",
+  "wiki_title": "BEAM (Erlang virtual machine)",
+  "stats": {
+   "hn_points": 71,
+   "hn_comments": 94,
+   "wiki_article": "BEAM (Erlang virtual machine)",
+   "wiki_avg_30d": 59,
+   "wiki_views_24h": 40,
+   "wiki_change_pct": -32
+  },
+  "origin": {
+   "time": "2026-11-09T11:55:14+00:00",
+   "hours_ago": 6.9
+  },
+  "sources": [
+   {
+    "src": "hacker_news",
+    "title": "Try Gleam",
+    "url": "https://nchagnet.eu/blog/you-should-try-gleam"
+   }
+  ],
+  "demand": 51,
+  "competition": null,
+  "quality": 85,
+  "opportunity": 64
+ },
+ {
+  "id": "ec662b82537b",
+  "key": "why-do-modern-desktop-apps-secretly-run-an-entire-web-browser-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "hot",
+  "question": "Why do modern desktop apps secretly run an entire web browser?",
+  "hook": "Your simple chat app is eating all your RAM.",
+  "about": "Desktop applications increasingly bundle full Chromium browsers inside wrappers just to display basic interfaces. Engineers argue modern web standards already provide native capabilities without the extreme memory overhead.",
+  "surprise": "Is your favorite desktop note app actually running an entire hidden web browser?",
+  "series": "Versus (scoreboard)",
+  "audience": "students",
+  "format": "short",
+  "scores": {
+   "curiosity": [
+    4,
+    "Everyone complains about slow computer memory."
+   ],
+   "explainability": [
+    5,
+    "Memory bloat charts illustrate very easily."
+   ],
+   "shelf_life": [
+    4,
+    "Software efficiency debates persist across decades."
+   ],
+   "money": [
+    3,
+    "General consumer computing attracts moderate ads."
+   ]
+  },
+  "risk": "",
+  "search_query": "why are desktop apps bloated",
+  "wiki_title": "Electron (software framework)",
+  "stats": {
+   "hn_points": 150,
+   "hn_comments": 104,
+   "wiki_article": "Electron (software framework)",
+   "wiki_avg_30d": 346,
+   "wiki_views_24h": 518,
+   "wiki_change_pct": 50
+  },
+  "origin": {
+   "time": "2026-11-08T19:48:32+00:00",
+   "hours_ago": 23.1
+  },
+  "sources": [
+   {
+    "src": "hacker_news",
+    "title": "The Web Is More Than Enough",
+    "url": "https://ftrain.com/aboard-the-web-is-more-than-enough"
+   }
+  ],
+  "demand": 62,
+  "competition": null,
+  "quality": 80,
+  "opportunity": 67
+ },
+ {
+  "id": "48721e3df404",
+  "key": "what-if-everyone-on-earth-flushed-their-toilet-simultaneously-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "evergreen",
+  "question": "What if everyone on Earth flushed their toilet simultaneously?",
+  "hook": "Eight billion toilets flush at the exact same millisecond.",
+  "about": "Urban sewer networks rely on predictable gravity gradients and steady sewage flow rates rather than massive simultaneous loads. Simulating this global thought experiment shows how municipal water pipes would violently buckle under sudden negative pressure.",
+  "surprise": "Water distribution pipes would instantly implode from negative pressure rather than burst outward from waste.",
+  "series": "What If? (stickman)",
+  "audience": "general curious",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    5,
+    "Bizarre global hypothetical drives massive clicks"
+   ],
+   "explainability": [
+    5,
+    "Simple stickmen and bursting cartoon pipes"
+   ],
+   "shelf_life": [
+    5,
+    "Physics scenarios remain timeless for decades"
+   ],
+   "money": [
+    2,
+    "Plumbing themes attract modest advertiser rates"
+   ]
+  },
+  "risk": "",
+  "search_query": "what if everyone flushed simultaneously",
+  "wiki_title": "Sewerage",
+  "stats": {
+   "wiki_article": "Sewerage",
+   "wiki_avg_30d": 103,
+   "wiki_views_24h": 83,
+   "wiki_change_pct": -20
+  },
+  "origin": null,
+  "sources": [],
+  "demand": 36,
+  "competition": null,
+  "quality": 85,
+  "opportunity": 58
+ },
+ {
+  "id": "f69a95c0ebbd",
+  "key": "how-do-noise-cancelling-headphones-erase-real-sound-waves-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "evergreen",
+  "question": "How do noise-cancelling headphones erase real sound waves?",
+  "hook": "Your headphones are blasting extra noise into your ears.",
+  "about": "Active noise cancellation uses miniature outward microphones to sample environmental acoustics and synthesize matching inverse sound waves in microseconds. Visualizing phase cancellation explains why consistent low engine rumbles vanish while sharp baby cries still pierce through.",
+  "surprise": "The headphones must play an inverted sound wave before the external wave reaches your eardrum.",
+  "series": "How It Works (cutaway)",
+  "audience": "tech & AI",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    4,
+    "Every commuter wonders how cancellation works"
+   ],
+   "explainability": [
+    5,
+    "Opposing audio waves cancel out cleanly"
+   ],
+   "shelf_life": [
+    5,
+    "Audio physics principles will never expire"
+   ],
+   "money": [
+    5,
+    "Consumer electronics brands pay premium ads"
+   ]
+  },
+  "risk": "",
+  "search_query": "how noise cancelling headphones work",
+  "wiki_title": "Active noise control",
+  "stats": {
+   "wiki_article": "Active noise control",
+   "wiki_avg_30d": 152,
+   "wiki_views_24h": 153,
+   "wiki_change_pct": 0
+  },
+  "origin": null,
+  "sources": [],
+  "demand": 39,
+  "competition": null,
+  "quality": 95,
+  "opportunity": 63
+ },
+ {
+  "id": "581180acb714",
+  "key": "how-did-indian-scientists-launch-a-space-program-using-bicycles-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "evergreen",
+  "question": "How did Indian scientists launch a space program using bicycles?",
+  "hook": "India transported its first space rocket on a bicycle.",
+  "about": "In 1963, early Indian space pioneers operated on a shoestring budget out of a coastal Catholic church in Kerala. Engineers carried fragile sounding rocket stages and nose cones across dirt roads strapped directly to bicycle luggage racks.",
+  "surprise": "The original rocket assembly workshop was located inside a functioning Catholic church bishopric.",
+  "series": "True Weird Stories (comic)",
+  "audience": "India-first",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    4,
+    "Shocking contrast between rockets and bicycles"
+   ],
+   "explainability": [
+    4,
+    "Comic panels illustrate humble historical origins"
+   ],
+   "shelf_life": [
+    5,
+    "National space history never gets outdated"
+   ],
+   "money": [
+    3,
+    "Broad appeal yields steady educational CPMs"
+   ]
+  },
+  "risk": "",
+  "search_query": "india first rocket on bicycle",
+  "wiki_title": "Thumba Equatorial Rocket Launching Station",
+  "stats": {
+   "wiki_article": "Thumba Equatorial Rocket Launching Station",
+   "wiki_avg_30d": 57,
+   "wiki_views_24h": 28,
+   "wiki_change_pct": -51
+  },
+  "origin": null,
+  "sources": [],
+  "demand": 31,
+  "competition": null,
+  "quality": 80,
+  "opportunity": 53
+ },
+ {
+  "id": "03f5c5f0887c",
+  "key": "why-is-movie-theater-popcorn-marked-up-by-over-one-thousand-percent-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "evergreen",
+  "question": "Why is movie theater popcorn marked up by over one thousand percent?",
+  "hook": "Movie theaters are actually restaurants that happen to show films.",
+  "about": "Film exhibitors hand over up to seventy percent of ticket revenue back to Hollywood distribution studios. Concessions carry absurd profit margins because popcorn and fountain soda are the only revenue streams keeping theater leases solvent.",
+  "surprise": "The raw corn kernels and butter oil cost theaters less than thirty cents per giant tub.",
+  "series": "Money Moves (charts)",
+  "audience": "finance & crypto",
+  "format": "long",
+  "scores": {
+   "curiosity": [
+    4,
+    "Everyone suspects concessions are total ripoffs"
+   ],
+   "explainability": [
+    5,
+    "Split profit bars make margins obvious"
+   ],
+   "shelf_life": [
+    5,
+    "Cinema business models change very slowly"
+   ],
+   "money": [
+    4,
+    "Personal finance audiences yield high rates"
+   ]
+  },
+  "risk": "",
+  "search_query": "movie theater popcorn profit margins",
+  "wiki_title": "Concession stand",
+  "stats": {
+   "wiki_article": "Concession stand",
+   "wiki_avg_30d": 54,
+   "wiki_views_24h": 48,
+   "wiki_change_pct": -10
+  },
+  "origin": null,
+  "sources": [],
+  "demand": 31,
+  "competition": null,
+  "quality": 90,
+  "opportunity": 57
+ },
+ {
+  "id": "f1d15ba1ba99",
+  "key": "diamond-vs-graphene-which-carbon-structure-is-truly-unbreakable-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "evergreen",
+  "question": "Diamond vs Graphene: Which carbon structure is truly unbreakable?",
+  "hook": "Two forms of pure carbon battle for ultimate material dominance.",
+  "about": "Diamond and graphene are made entirely of pure carbon atoms arranged in fundamentally different structural lattices. Comparing diamond's three-dimensional tetrahedral hardness against graphene's microscopic two-dimensional tensile strength proves why single atomic sheets resist tearing better.",
+  "surprise": "A one-atom-thick sheet of graphene is roughly two hundred times stronger than structural steel.",
+  "series": "Versus (scoreboard)",
+  "audience": "students",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    4,
+    "Material science match appeals to geeks"
+   ],
+   "explainability": [
+    5,
+    "Atomic lattices animate easily on scoreboard"
+   ],
+   "shelf_life": [
+    5,
+    "Fundamental material properties stay constant forever"
+   ],
+   "money": [
+    3,
+    "STEM educational topics attract standard advertisers"
+   ]
+  },
+  "risk": "",
+  "search_query": "diamond vs graphene strength comparison",
+  "wiki_title": "Graphene",
+  "stats": {
+   "wiki_article": "Graphene",
+   "wiki_avg_30d": 537,
+   "wiki_views_24h": 509,
+   "wiki_change_pct": -5
+  },
+  "origin": null,
+  "sources": [],
+  "demand": 49,
+  "competition": null,
+  "quality": 85,
+  "opportunity": 64
+ },
+ {
+  "id": "7c9d21e0c22a",
+  "key": "why-did-hollywood-film-a-major-movie-downwind-of-nuclear-tests-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "evergreen",
+  "question": "Why did Hollywood film a major movie downwind of nuclear tests?",
+  "hook": "An entire Hollywood film crew inhaled secret nuclear fallout.",
+  "about": "In 1954, an epic Genghis Khan film starring John Wayne was shot on location in St. George, Utah, directly downwind of federal atomic detonations. Years later, an extraordinarily high percentage of cast and crew members developed cancer after exposure to radioactive desert soil.",
+  "surprise": "The studio shipped sixty tons of radioactive desert dirt back to Hollywood for indoor reshoots.",
+  "series": "What Actually Happened (mini-doc)",
+  "audience": "movie & pop culture",
+  "format": "long",
+  "scores": {
+   "curiosity": [
+    5,
+    "Untold dark Hollywood history shocks viewers"
+   ],
+   "explainability": [
+    4,
+    "Historical maps and portraits explain fallout"
+   ],
+   "shelf_life": [
+    5,
+    "Historic Hollywood tragedies remain evergreen mysteries"
+   ],
+   "money": [
+    3,
+    "Entertainment history brings standard brand sponsorship"
+   ]
+  },
+  "risk": "tragedy",
+  "search_query": "the conqueror movie nuclear fallout",
+  "wiki_title": "The Conqueror (1956 film)",
+  "stats": {
+   "wiki_article": "The Conqueror (1956 film)",
+   "wiki_avg_30d": 429,
+   "wiki_views_24h": 386,
+   "wiki_change_pct": -10
+  },
+  "origin": null,
+  "sources": [],
+  "demand": 47,
+  "competition": null,
+  "quality": 85,
+  "opportunity": 63
+ },
+ {
+  "id": "d4e2beaab9c5",
+  "key": "what-color-is-an-everyday-mirror-when-nobody-is-looking-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "evergreen",
+  "question": "What color is an everyday mirror when nobody is looking?",
+  "hook": "Stand between two mirrors and watch the reflections turn green.",
+  "about": "Most people assume mirrors are completely silver or purely reflective across all wavelengths of visible light. Standard household mirrors reflect light through soda-lime float glass, which absorbs slightly less green light and turns deep recursive reflections jade.",
+  "surprise": "Mirrors do have a color: they reflect green light slightly better than any other color.",
+  "series": "How It Works (cutaway)",
+  "audience": "general curious",
+  "format": "short",
+  "scores": {
+   "curiosity": [
+    4,
+    "Everyday mystery with an unexpected answer"
+   ],
+   "explainability": [
+    5,
+    "Light bounces cleanly inside simple cutaways"
+   ],
+   "shelf_life": [
+    5,
+    "Optics and light physics never change"
+   ],
+   "money": [
+    2,
+    "General science attracts broad consumer ads"
+   ]
+  },
+  "risk": "",
+  "search_query": "what color is a mirror",
+  "wiki_title": "Mirror",
+  "stats": {
+   "wiki_article": "Mirror",
+   "wiki_avg_30d": 445,
+   "wiki_views_24h": 394,
+   "wiki_change_pct": -11
+  },
+  "origin": null,
+  "sources": [],
+  "demand": 47,
+  "competition": null,
+  "quality": 80,
+  "opportunity": 61
+ },
+ {
+  "id": "97b4986fc8bd",
+  "key": "how-did-a-plastic-cereal-toy-hack-the-entire-telephone-network-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "evergreen",
+  "question": "How did a plastic cereal toy hack the entire telephone network?",
+  "hook": "A toy cereal whistle unlocked AT&T's entire telephone network.",
+  "about": "During the 1970s, early phone phreaks discovered telecom switching systems routed administrative trunk connections using in-band audio frequencies. Free toy whistles included inside boxes of Cap'n Crunch breakfast cereal matched the exact high-pitch audio frequency needed to place free international calls.",
+  "surprise": "The toy whistle emitted exactly 2600 hertz, the master frequency telephone trunk switches used.",
+  "series": "True Weird Stories (comic)",
+  "audience": "tech & AI",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    5,
+    "Hacking major infrastructure with breakfast cereal"
+   ],
+   "explainability": [
+    4,
+    "Whistle frequencies animate easily in comics"
+   ],
+   "shelf_life": [
+    5,
+    "Legendary hacker lore remains permanently fascinating"
+   ],
+   "money": [
+    4,
+    "Cybersecurity themes command strong tech CPMs"
+   ]
+  },
+  "risk": "",
+  "search_query": "capn crunch 2600 hz whistle phone phreak",
+  "wiki_title": "John Draper",
+  "stats": {
+   "wiki_article": "John Draper",
+   "wiki_avg_30d": 102,
+   "wiki_views_24h": 80,
+   "wiki_change_pct": -22
+  },
+  "origin": null,
+  "sources": [],
+  "demand": 36,
+  "competition": null,
+  "quality": 90,
+  "opportunity": 60
+ },
+ {
+  "id": "eba34c4d50f6",
+  "key": "how-does-shazam-identify-almost-any-song-in-three-seconds-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "evergreen",
+  "question": "How does Shazam identify almost any song in three seconds?",
+  "hook": "Your favorite music app turns songs into constellation star maps.",
+  "about": "Shazam matches audio by converting raw sound waves into two-dimensional spectrogram graphs to locate distinct acoustic peaks. Comparing these geometric coordinate fingerprints against a central database takes seconds without storing entire song files.",
+  "surprise": "Shazam ignores 99% of a song's audio data and only saves peak frequency coordinates that resemble star constellations.",
+  "series": "How It Works (cutaway)",
+  "audience": "tech & AI",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    4,
+    "Millions use Shazam without understanding math."
+   ],
+   "explainability": [
+    5,
+    "Constellation spectrogram diagrams are highly visual."
+   ],
+   "shelf_life": [
+    5,
+    "Core audio algorithms remain relevant forever."
+   ],
+   "money": [
+    4,
+    "Tech audiences attract strong software sponsorships."
+   ]
+  },
+  "risk": "",
+  "search_query": "how shazam algorithm works",
+  "wiki_title": "Shazam (application)",
+  "stats": {
+   "wiki_article": "Shazam (application)",
+   "wiki_avg_30d": 3,
+   "wiki_views_24h": 1,
+   "wiki_change_pct": -67
+  },
+  "origin": null,
+  "sources": [],
+  "demand": 10,
+  "competition": null,
+  "quality": 90,
+  "opportunity": 48
+ },
+ {
+  "id": "d2a58b5aee2f",
+  "key": "why-did-the-cia-spend-millions-surgically-turning-cats-into-spies-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "evergreen",
+  "question": "Why did the CIA spend millions surgically turning cats into spies?",
+  "hook": "The Cold War's most expensive secret agent was a cat.",
+  "about": "In the 1960s, American intelligence officers surgically implanted microphones, batteries, and antennae inside domestic felines to secretly record Soviet diplomats. The project was immediately abandoned after their very first field test ended in sudden disaster.",
+  "surprise": "The surgically wired spy cat was accidentally hit by a taxi during its very first mission on a park bench.",
+  "series": "True Weird Stories (comic)",
+  "audience": "general curious",
+  "format": "short",
+  "scores": {
+   "curiosity": [
+    5,
+    "Surgically modified spy cats sound unbelievable."
+   ],
+   "explainability": [
+    4,
+    "Comic art brings vintage espionage alive."
+   ],
+   "shelf_life": [
+    5,
+    "Bizarre historical blunders stay hilarious forever."
+   ],
+   "money": [
+    2,
+    "Quirky history commands lower ad rates."
+   ]
+  },
+  "risk": "",
+  "search_query": "acoustic kitty cia cat project",
+  "wiki_title": "Acoustic Kitty",
+  "stats": {
+   "wiki_article": "Acoustic Kitty",
+   "wiki_avg_30d": 163,
+   "wiki_views_24h": 147,
+   "wiki_change_pct": -10
+  },
+  "origin": null,
+  "sources": [],
+  "demand": 40,
+  "competition": null,
+  "quality": 80,
+  "opportunity": 58
+ },
+ {
+  "id": "b7027f107fd3",
+  "key": "why-do-retail-companies-make-billions-from-unspent-gift-cards-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "evergreen",
+  "question": "Why do retail companies make billions from unspent gift cards?",
+  "hook": "Billions in forgotten gift cards turn into pure company profit.",
+  "about": "Retailers earn billions each year from breakage, which is the official accounting term for unredeemed customer gift balances. These abandoned balances act as completely interest-free loans until accounting rules allow companies to record them as pure profit.",
+  "surprise": "Major coffee chains hold more customer cash on prepaid balances than many actual regional American banks hold in deposits.",
+  "series": "Money Moves (charts)",
+  "audience": "finance & crypto",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    4,
+    "Everyone has forgotten unspent gift money."
+   ],
+   "explainability": [
+    4,
+    "Balance sheet charts reveal hidden profits."
+   ],
+   "shelf_life": [
+    5,
+    "Corporate gift accounting models never change."
+   ],
+   "money": [
+    5,
+    "Personal finance videos earn premium CPMs."
+   ]
+  },
+  "risk": "",
+  "search_query": "unredeemed gift cards corporate breakage",
+  "wiki_title": "Breakage (accounting)",
+  "stats": {
+   "wiki_article": "Breakage (accounting)",
+   "wiki_avg_30d": 10,
+   "wiki_views_24h": 7,
+   "wiki_change_pct": -31
+  },
+  "origin": null,
+  "sources": [],
+  "demand": 18,
+  "competition": null,
+  "quality": 90,
+  "opportunity": 52
+ },
+ {
+  "id": "a8bd2edb94ca",
+  "key": "how-did-golconda-fort-transmit-whisper-warnings-across-one-kilometer-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "evergreen",
+  "question": "How did Golconda Fort transmit whisper warnings across one kilometer?",
+  "hook": "Clapping at this fortress gate echoes an entire kilometer away.",
+  "about": "Golconda Fort features an ingenious medieval acoustic layout engineered by the Qutb Shahi dynasty to prevent surprise enemy sieges. A simple handclap at the entry portico resonates across stone arches all the way to the highest mountain pavilion.",
+  "surprise": "The fort's acoustic arches act like mechanical signal amplifiers, funneling low-frequency sound vibrations uphill without requiring line of sight.",
+  "series": "What Actually Happened (mini-doc)",
+  "audience": "India-first",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    4,
+    "Medieval acoustic engineering baffles modern tourists."
+   ],
+   "explainability": [
+    4,
+    "Cutaways map sound wave travel clearly."
+   ],
+   "shelf_life": [
+    5,
+    "Ancient architectural wonders never become outdated."
+   ],
+   "money": [
+    3,
+    "Cultural history content receives moderate advertising."
+   ]
+  },
+  "risk": "",
+  "search_query": "golconda fort acoustic engineering architecture",
+  "wiki_title": "Golconda Fort",
+  "stats": {
+   "wiki_article": "Golconda Fort",
+   "wiki_avg_30d": 27,
+   "wiki_views_24h": 27,
+   "wiki_change_pct": 2
+  },
+  "origin": null,
+  "sources": [],
+  "demand": 26,
+  "competition": null,
+  "quality": 80,
+  "opportunity": 51
+ },
+ {
+  "id": "58b1a7d6a7c2",
+  "key": "diamond-vs-graphene-which-carbon-material-is-truly-indestructible-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "evergreen",
+  "question": "Diamond vs Graphene: Which carbon material is truly indestructible?",
+  "hook": "One pure carbon structure can easily slice right through another.",
+  "about": "Both diamond and graphene consist purely of elemental carbon atoms arranged in contrasting geometrical crystal structures. Pitting diamond's rigid three-dimensional tetrahedral lattice against graphene's flexible two-dimensional honeycomb sheet determines the ultimate structural champion.",
+  "surprise": "Graphene has over forty times the tensile strength of diamond and can stretch up to twenty percent of its length without breaking.",
+  "series": "Versus (scoreboard)",
+  "audience": "students",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    4,
+    "People assume diamond is utterly unbeatable."
+   ],
+   "explainability": [
+    5,
+    "Molecular lattices compare easily in animation."
+   ],
+   "shelf_life": [
+    5,
+    "Fundamental materials science remains forever evergreen."
+   ],
+   "money": [
+    3,
+    "Educational science topics earn decent CPMs."
+   ]
+  },
+  "risk": "",
+  "search_query": "diamond vs graphene strength comparison",
+  "wiki_title": "Graphene",
+  "stats": {
+   "wiki_article": "Graphene",
+   "wiki_avg_30d": 537,
+   "wiki_views_24h": 509,
+   "wiki_change_pct": -5
+  },
+  "origin": null,
+  "sources": [],
+  "demand": 49,
+  "competition": null,
+  "quality": 85,
+  "opportunity": 64
+ },
+ {
+  "id": "230e8b35e60e",
+  "key": "how-do-hollywood-sound-designers-fake-bone-snaps-with-celery-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "evergreen",
+  "question": "How do Hollywood sound designers fake bone snaps with celery?",
+  "hook": "Your favorite movie gore sounds were probably recorded using cabbage.",
+  "about": "Foley artists engineer cinematic combat violence and gruesome injuries by crushing, breaking, and twisting common market vegetables before sensitive microphones. Analyzing psychoacoustics reveals why exaggerated produce noises sound far more convincing to human ears than authentic bone fractures.",
+  "surprise": "Real human bones snap with a dull, hollow thud that movie audiences consistently reject as fake, forcing sound artists to use celery instead.",
+  "series": "How It Works (cutaway)",
+  "audience": "movie & pop culture",
+  "format": "short",
+  "scores": {
+   "curiosity": [
+    4,
+    "Movie gore origins surprise cinema lovers."
+   ],
+   "explainability": [
+    5,
+    "Side-by-side vegetable squishing animates brilliantly."
+   ],
+   "shelf_life": [
+    5,
+    "Practical audio design methods remain evergreen."
+   ],
+   "money": [
+    3,
+    "Entertainment production niches draw steady sponsors."
+   ]
+  },
+  "risk": "",
+  "search_query": "how foley artists vegetable sounds",
+  "wiki_title": "Foley (filmmaking)",
+  "stats": {
+   "wiki_article": "Foley (filmmaking)",
+   "wiki_avg_30d": 46,
+   "wiki_views_24h": 42,
+   "wiki_change_pct": -9
+  },
+  "origin": null,
+  "sources": [],
+  "demand": 30,
+  "competition": null,
+  "quality": 85,
+  "opportunity": 55
+ },
+ {
+  "id": "7a43edd25aec",
+  "key": "how-did-a-tanzanian-schoolboy-discover-an-impossible-physics-paradox-",
+  "created_at": "2026-11-09T18:51:39.974697+00:00",
+  "kind": "evergreen",
+  "question": "How did a Tanzanian schoolboy discover an impossible physics paradox?",
+  "hook": "A high schooler proved his physics teachers dead wrong.",
+  "about": "In 1963, teenager Erasto Mpemba realized that boiling ice cream mixture froze significantly faster than cooled mixture in his cookery classroom. His persistence forced respected university physicists to acknowledge a counterintuitive thermodynamic anomaly known since antiquity.",
+  "surprise": "Mpemba's physics teacher publicly mocked him in front of the entire class, claiming his observation was just confused 'Mpemba physics'.",
+  "series": "What Actually Happened (mini-doc)",
+  "audience": "students",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    5,
+    "Schoolboy defying established physics fascinates viewers."
+   ],
+   "explainability": [
+    4,
+    "Freezing molecules make vivid visual explanations."
+   ],
+   "shelf_life": [
+    5,
+    "Classic physics debates remain timeless forever."
+   ],
+   "money": [
+    3,
+    "Student educational videos secure steady revenue."
+   ]
+  },
+  "risk": "",
+  "search_query": "mpemba effect hot water freezes faster",
+  "wiki_title": "Mpemba effect",
+  "stats": {
+   "wiki_article": "Mpemba effect",
+   "wiki_avg_30d": 344,
+   "wiki_views_24h": 401,
+   "wiki_change_pct": 17
+  },
+  "origin": null,
+  "sources": [],
+  "demand": 46,
+  "competition": null,
+  "quality": 85,
+  "opportunity": 62
+ },
+ {
   "id": "00c338669e49",
   "key": "why-do-tree-branches-follow-leonardo-da-vinci-s-rule-",
   "created_at": "2026-11-09T06:43:55.854032+00:00",
@@ -19890,2711 +22643,5 @@
   "competition": null,
   "quality": 80,
   "opportunity": 75
- },
- {
-  "id": "990a8efad531",
-  "key": "why-do-millions-of-clay-lamps-illuminate-diwali-every-single-year-",
-  "created_at": "2026-11-07T06:06:04.270494+00:00",
-  "kind": "hot",
-  "question": "Why do millions of clay lamps illuminate Diwali every single year?",
-  "hook": "An entire subcontinent turns visible from outer space.",
-  "about": "Diwali celebrates the triumph of light over spiritual darkness across diverse regional traditions in India. Beyond myth, the festival coordinates lunar astronomical calendars, harvest economies, and ancient oil-lamp engineering.",
-  "surprise": "Diwali dates shift yearly based on Hindu lunar cycles.",
-  "series": "What Actually Happened (mini-doc)",
-  "audience": "India-first",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    4,
-    "Massive global holiday with rich traditions"
-   ],
-   "explainability": [
-    5,
-    "Clay lamps and fireworks animate beautifully"
-   ],
-   "shelf_life": [
-    5,
-    "Cultural traditions repeat on annual cycles"
-   ],
-   "money": [
-    3,
-    "Seasonal retail and travel ads boom"
-   ]
-  },
-  "risk": "",
-  "search_query": "diwali festival of lights explained",
-  "wiki_title": "Diwali",
-  "stats": {
-   "wiki_views_24h": 50000,
-   "wiki_change_pct": 232,
-   "wiki_7d": [
-    9242,
-    8735,
-    10104,
-    14860,
-    15783,
-    18444,
-    28130,
-    50000
-   ],
-   "wiki_article": "Diwali",
-   "wiki_avg_30d": 11527,
-   "yt_results": 1000000,
-   "yt_top_views": 3002662,
-   "yt_median_top10_views": 231908,
-   "yt_recent_in_top10": 0,
-   "yt_top_title": "Story of Ramayana | Why is Diwali called the Festival of Light? | Diwali Mythology | The Dr. Binocs",
-   "yt_top_channel": "Peekaboo Kidz",
-   "yt_top_url": "https://youtu.be/cvCv7kTcRXI",
-   "yt_query": "diwali festival of lights explained"
-  },
-  "origin": null,
-  "sources": [
-   {
-    "src": "wikipedia",
-    "title": "Diwali",
-    "url": "https://en.wikipedia.org/wiki/Diwali"
-   }
-  ],
-  "demand": 94,
-  "competition": 54,
-  "quality": 85,
-  "opportunity": 83
- },
- {
-  "id": "151ce92aef7c",
-  "key": "what-actually-happens-between-pressing-your-power-button-and-loading-windows-",
-  "created_at": "2026-11-07T06:06:04.270494+00:00",
-  "kind": "hot",
-  "question": "What actually happens between pressing your power button and loading Windows?",
-  "hook": "Your computer runs an OS before your OS.",
-  "about": "When power flows to a motherboard, Unified Extensible Firmware Interface firmware takes over bare-metal execution. Writing bare-metal code reveals how processors initialize hardware registers before any operating system exists.",
-  "surprise": "UEFI is practically its own mini operating system.",
-  "series": "How It Works (cutaway)",
-  "audience": "tech & AI",
-  "format": "long",
-  "scores": {
-   "curiosity": [
-    5,
-    "Boot sequence remains a mysterious blackbox"
-   ],
-   "explainability": [
-    4,
-    "Stepwise hardware handoffs animate very clearly"
-   ],
-   "shelf_life": [
-    5,
-    "PC architecture basics change very slowly"
-   ],
-   "money": [
-    4,
-    "Hardware brands and developer platforms love this"
-   ]
-  },
-  "risk": "",
-  "search_query": "how uefi boots a computer",
-  "wiki_title": "UEFI",
-  "stats": {
-   "hn_points": 209,
-   "hn_comments": 39,
-   "wiki_article": "UEFI",
-   "wiki_avg_30d": 625,
-   "wiki_views_24h": 550,
-   "wiki_change_pct": -12
-  },
-  "origin": {
-   "time": "2026-11-06T16:50:29+00:00",
-   "hours_ago": 13.3
-  },
-  "sources": [
-   {
-    "src": "hacker_news",
-    "title": "First steps in bare-metal programming using UEFI",
-    "url": "https://kevinboone.me/efitest_index.html"
-   }
-  ],
-  "demand": 66,
-  "competition": null,
-  "quality": 90,
-  "opportunity": 73
- },
- {
-  "id": "126f4e4f8a03",
-  "key": "why-are-airplanes-still-guided-by-1980s-floppy-disks-",
-  "created_at": "2026-11-07T06:06:04.270494+00:00",
-  "kind": "hot",
-  "question": "Why are airplanes still guided by 1980s floppy disks?",
-  "hook": "Critical air traffic control systems still run on floppy disks.",
-  "about": "The US Federal Aviation Administration announced plans to finally phase out physical floppy disks from air traffic control systems by 2028. Decades-old avionics hardware remains in service because updating certified flight-critical systems carries immense bureaucratic and technical friction.",
-  "surprise": "The US FAA will only phase out floppy disks by 2028.",
-  "series": "How It Works (cutaway)",
-  "audience": "general curious",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    5,
-    "Floppy disks running modern airports sounds crazy"
-   ],
-   "explainability": [
-    5,
-    "Visualizing magnetic media inside modern towers"
-   ],
-   "shelf_life": [
-    4,
-    "Relevant until the 2028 upgrade completes"
-   ],
-   "money": [
-    3,
-    "Broad enterprise and tech sponsor appeal"
-   ]
-  },
-  "risk": "",
-  "search_query": "faa floppy disks air traffic control",
-  "wiki_title": "Federal Aviation Administration",
-  "stats": {
-   "hn_points": 309,
-   "hn_comments": 254,
-   "wiki_article": "Federal Aviation Administration",
-   "wiki_avg_30d": 380,
-   "wiki_views_24h": 445,
-   "wiki_change_pct": 17
-  },
-  "origin": {
-   "time": "2026-11-06T04:00:28+00:00",
-   "hours_ago": 26.1
-  },
-  "sources": [
-   {
-    "src": "hacker_news",
-    "title": "US FAA says it will phase out floppy disks from air traffic control by 2028",
-    "url": "https://www.reuters.com/world/us/us-faa-says-it-will-phase-out-floppy-disks-air-traffic-control-by-2028-2026-11-05/"
-   }
-  ],
-  "demand": 70,
-  "competition": null,
-  "quality": 85,
-  "opportunity": 73
- },
- {
-  "id": "1a91661414b2",
-  "key": "can-cheap-chinese-humanoid-robots-defeat-western-robotics-giants-",
-  "created_at": "2026-11-07T06:06:04.270494+00:00",
-  "kind": "hot",
-  "question": "Can cheap Chinese humanoid robots defeat Western robotics giants?",
-  "hook": "A tour of Chinese humanoid factories exposed surprising truths.",
-  "about": "Robotics engineers touring Unitree's Chinese factory floor observed lightning-fast manufacturing and low unit costs alongside noticeable software bottlenecks. The emerging battle pits mass-market Chinese hardware scaling directly against sophisticated Western foundation models.",
-  "surprise": "Could sheer manufacturing speed outpace Western software models?",
-  "series": "Versus (scoreboard)",
-  "audience": "tech & AI",
-  "format": "long",
-  "scores": {
-   "curiosity": [
-    4,
-    "Humanoid robotics race sparks huge intrigue"
-   ],
-   "explainability": [
-    4,
-    "Side by side specs and cost breakdowns"
-   ],
-   "shelf_life": [
-    4,
-    "Humanoid robotics debate will last years"
-   ],
-   "money": [
-    5,
-    "High hardware and tech advertising interest"
-   ]
-  },
-  "risk": "",
-  "search_query": "Unitree robotics vs Boston Dynamics",
-  "wiki_title": "Unitree Robotics",
-  "stats": {
-   "hn_points": 88,
-   "hn_comments": 56,
-   "wiki_article": "Unitree Robotics",
-   "wiki_avg_30d": 226,
-   "wiki_views_24h": 142,
-   "wiki_change_pct": -37
-  },
-  "origin": {
-   "time": "2026-11-07T01:05:16+00:00",
-   "hours_ago": 5.0
-  },
-  "sources": [
-   {
-    "src": "hacker_news",
-    "title": "I toured Unitree's factory. I'm more bullish on the West",
-    "url": "https://josef.cn/blog/unitree"
-   }
-  ],
-  "demand": 55,
-  "competition": null,
-  "quality": 85,
-  "opportunity": 66
- },
- {
-  "id": "b9a7d4b1ae2b",
-  "key": "what-happens-when-artificial-intelligence-starts-designing-better-artificial-int",
-  "created_at": "2026-11-07T06:06:04.270494+00:00",
-  "kind": "hot",
-  "question": "What happens when artificial intelligence starts designing better artificial intelligence?",
-  "hook": "AI models are now running their own AI research.",
-  "about": "Artificial intelligence algorithms are increasingly being deployed to automate the engineering, testing, and fine-tuning of next-generation AI architectures. This recursive loop could dramatically compress the time required to build frontier software systems.",
-  "surprise": "Can recursive AI research trigger an intelligence explosion?",
-  "series": "What If? (stickman)",
-  "audience": "tech & AI",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    5,
-    "Recursive machine self-improvement fascinates tech minds"
-   ],
-   "explainability": [
-    4,
-    "Stickman loops showing models training models"
-   ],
-   "shelf_life": [
-    5,
-    "Foundational theme for the next decade"
-   ],
-   "money": [
-    5,
-    "Peak tech and SaaS advertising value"
-   ]
-  },
-  "risk": "",
-  "search_query": "AI automating AI research recursive",
-  "wiki_title": "Artificial intelligence",
-  "stats": {
-   "hn_points": 254,
-   "hn_comments": 206,
-   "wiki_article": "Artificial intelligence",
-   "wiki_avg_30d": 15834,
-   "wiki_views_24h": 14464,
-   "wiki_change_pct": -9,
-   "yt_results": 686792,
-   "yt_top_views": 697446,
-   "yt_median_top10_views": 10488,
-   "yt_recent_in_top10": 4,
-   "yt_top_title": "OpenAI researcher on agent swarms & recursive self-improvement",
-   "yt_top_channel": "Dwarkesh Patel",
-   "yt_top_url": "https://youtu.be/6AgOfiZOWiY",
-   "yt_query": "AI automating AI research recursive"
-  },
-  "origin": {
-   "time": "2026-11-06T20:27:23+00:00",
-   "hours_ago": 9.6
-  },
-  "sources": [
-   {
-    "src": "hacker_news",
-    "title": "AI is dramatically accelerating AI research",
-    "url": "https://www.planned-obsolescence.org/p/ai-is-dramatically-accelerating-ai"
-   }
-  ],
-  "demand": 77,
-  "competition": 52,
-  "quality": 95,
-  "opportunity": 80
- },
- {
-  "id": "09b7d0edd212",
-  "key": "why-did-the-father-of-modern-linguistics-reject-modern-ai-",
-  "created_at": "2026-11-07T06:06:04.270494+00:00",
-  "kind": "hot",
-  "question": "Why did the father of modern linguistics reject modern AI?",
-  "hook": "Noam Chomsky famously rejected modern statistical machine learning.",
-  "about": "A decade-old debate between Noam Chomsky and statistical pioneers like Peter Norvig explains the philosophical rift behind today's generative models. While linguists pursued underlying rule-based universal grammar, modern AI succeeded by simply predicting statistical patterns across massive data.",
-  "surprise": "Does statistical language prediction actually count as understanding?",
-  "series": "Versus (scoreboard)",
-  "audience": "students",
-  "format": "long",
-  "scores": {
-   "curiosity": [
-    4,
-    "Intellectual clash between grammar and statistics"
-   ],
-   "explainability": [
-    3,
-    "Grammar trees versus neural network probability"
-   ],
-   "shelf_life": [
-    5,
-    "Timeless philosophical debate in machine learning"
-   ],
-   "money": [
-    3,
-    "Appeals to academic and education niches"
-   ]
-  },
-  "risk": "",
-  "search_query": "Chomsky statistical learning artificial intelligence debate",
-  "wiki_title": "Noam Chomsky",
-  "stats": {
-   "hn_points": 117,
-   "hn_comments": 95,
-   "wiki_article": "Noam Chomsky",
-   "wiki_avg_30d": 2559,
-   "wiki_views_24h": 2761,
-   "wiki_change_pct": 8
-  },
-  "origin": {
-   "time": "2026-11-06T08:18:36+00:00",
-   "hours_ago": 21.8
-  },
-  "sources": [
-   {
-    "src": "hacker_news",
-    "title": "Chomsky and the two cultures of statistical learning (2011)",
-    "url": "https://www.norvig.com/chomsky.html"
-   }
-  ],
-  "demand": 62,
-  "competition": null,
-  "quality": 75,
-  "opportunity": 65
- },
- {
-  "id": "fec713c7fe8c",
-  "key": "how-do-hackers-silently-drain-millions-from-cross-chain-crypto-bridges-",
-  "created_at": "2026-11-07T06:06:04.270494+00:00",
-  "kind": "hot",
-  "question": "How do hackers silently drain millions from cross-chain crypto bridges?",
-  "hook": "Crypto bridges are the easiest targets for hackers.",
-  "about": "Cross-chain bridges allow users to transfer assets between blockchains, but they represent high-value honeypots riddled with verification bugs and missing input validation. Exploits on platforms like WAX and Vara demonstrate how minor logic flaws in smart contracts trigger total liquidity collapse.",
-  "surprise": "A missing input validation can wipe entire liquidity pools.",
-  "series": "How It Works (cutaway)",
-  "audience": "finance & crypto",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    4,
-    "Crypto robberies intrigue curious web3 observers"
-   ],
-   "explainability": [
-    4,
-    "Animated smart contract logic and gates"
-   ],
-   "shelf_life": [
-    3,
-    "Vulnerabilities evolve but principles remain constant"
-   ],
-   "money": [
-    5,
-    "Crypto security tools command premium ads"
-   ]
-  },
-  "risk": "",
-  "search_query": "how crypto bridge hacks work exploit",
-  "wiki_title": "Cryptocurrency and crime",
-  "stats": {
-   "hack_usd": 90500,
-   "wiki_article": "Cryptocurrency and crime",
-   "wiki_avg_30d": 130,
-   "wiki_views_24h": 135,
-   "wiki_change_pct": 3
-  },
-  "origin": {
-   "time": "2026-10-19T00:00:00+00:00",
-   "hours_ago": 462.1
-  },
-  "sources": [
-   {
-    "src": "defillama_hacks",
-    "title": "WAX Multi-Chain Bridge hack: $0.1M via Missing Input Validation",
-    "url": "https://defillama.com/hacks"
-   },
-   {
-    "src": "defillama_hacks",
-    "title": "Vara Bridge hack: $0.0M via Proof Verifier Bug",
-    "url": "https://defillama.com/hacks"
-   }
-  ],
-  "demand": 38,
-  "competition": null,
-  "quality": 80,
-  "opportunity": 57
- },
- {
-  "id": "b3d9aeb8fc1a",
-  "key": "how-did-ansel-adams-capture-impossible-contrast-without-digital-editing-",
-  "created_at": "2026-11-07T06:06:04.270494+00:00",
-  "kind": "hot",
-  "question": "How did Ansel Adams capture impossible contrast without digital editing?",
-  "hook": "Ansel Adams used photographic math, not fancy cameras.",
-  "about": "Photographer Ansel Adams co-developed the Zone System to gain precise creative control over high-contrast landscapes before digital sensors existed. The technique divides visible light into distinct tonal zones, matching exposure directly to film development chemical times.",
-  "surprise": "He calculated chemical development times before shooting frames.",
-  "series": "How It Works (cutaway)",
-  "audience": "general curious",
-  "format": "long",
-  "scores": {
-   "curiosity": [
-    4,
-    "Vintage analog techniques reveal stunning practical science"
-   ],
-   "explainability": [
-    5,
-    "Tonal zone gradients are perfectly animatable"
-   ],
-   "shelf_life": [
-    5,
-    "Classic art photography technique never expires"
-   ],
-   "money": [
-    3,
-    "Creative software and camera brand sponsors"
-   ]
-  },
-  "risk": "",
-  "search_query": "Ansel Adams Zone System explained photography",
-  "wiki_title": "Zone System",
-  "stats": {
-   "wiki_views_24h": 95161,
-   "wiki_change_pct": 0,
-   "wiki_7d": [
-    98266,
-    123576,
-    113390,
-    84438,
-    87663,
-    79560,
-    80817,
-    95161
-   ],
-   "wiki_article": "Zone System",
-   "wiki_avg_30d": 62
-  },
-  "origin": null,
-  "sources": [
-   {
-    "src": "wikipedia",
-    "title": "Ansel Adams",
-    "url": "https://en.wikipedia.org/wiki/Ansel_Adams"
-   }
-  ],
-  "demand": 75,
-  "competition": null,
-  "quality": 85,
-  "opportunity": 75
- },
- {
-  "id": "0b87e2aed6ca",
-  "key": "how-did-elizabeth-holmes-fool-investors-with-fake-blood-analyzers-",
-  "created_at": "2026-11-07T06:06:04.270494+00:00",
-  "kind": "hot",
-  "question": "How did Elizabeth Holmes fool investors with fake blood analyzers?",
-  "hook": "Inside Theranos machines sat ordinary third-party testing equipment.",
-  "about": "Theranos claimed to perform hundreds of clinical medical tests using a single drop of blood inside proprietary mini-labs. In reality, the company diluted micro-samples and ran them covertly on commercial Siemens machines while falsifying calibration data.",
-  "surprise": "Could tiny blood droplets ever run hundreds of tests?",
-  "series": "What Actually Happened (mini-doc)",
-  "audience": "general curious",
-  "format": "long",
-  "scores": {
-   "curiosity": [
-    5,
-    "Corporate fraud mechanics remain universally gripping stories"
-   ],
-   "explainability": [
-    5,
-    "Cutaways of Edison box versus microfluidics"
-   ],
-   "shelf_life": [
-    4,
-    "Iconic case study in venture capital delusion"
-   ],
-   "money": [
-    4,
-    "High CPMs around business and finance"
-   ]
-  },
-  "risk": "legal",
-  "search_query": "how Elizabeth Holmes Theranos scam worked",
-  "wiki_title": "Theranos",
-  "stats": {
-   "wiki_views_24h": 72623,
-   "wiki_change_pct": -35,
-   "wiki_7d": [
-    133733,
-    150897,
-    135985,
-    127361,
-    87659,
-    75826,
-    70918,
-    72623
-   ],
-   "wiki_article": "Theranos",
-   "wiki_avg_30d": 29677,
-   "yt_results": 101931,
-   "yt_top_views": 12851847,
-   "yt_median_top10_views": 1951845,
-   "yt_recent_in_top10": 1,
-   "yt_top_title": "Theranos \u2013 Silicon Valley\u2019s Greatest Disaster",
-   "yt_top_channel": "ColdFusion",
-   "yt_top_url": "https://youtu.be/3CccfnRpPtM",
-   "yt_query": "how Elizabeth Holmes Theranos scam worked"
-  },
-  "origin": null,
-  "sources": [
-   {
-    "src": "wikipedia",
-    "title": "Elizabeth Holmes",
-    "url": "https://en.wikipedia.org/wiki/Elizabeth_Holmes"
-   }
-  ],
-  "demand": 92,
-  "competition": 66,
-  "quality": 90,
-  "opportunity": 82
- },
- {
-  "id": "d595b51c756d",
-  "key": "why-is-australia-s-most-iconic-beer-named-four-x-s-",
-  "created_at": "2026-11-07T06:06:04.270494+00:00",
-  "kind": "hot",
-  "question": "Why is Australia's most iconic beer named four X's?",
-  "hook": "Australia's famous beer name comes from brewing traditions.",
-  "about": "Queensland's Castlemaine XXXX beer carries a distinctive four-letter name that has spurred countless cultural jokes and myths. The naming convention actually originated from historical British brewing marks indicating alcoholic strength and regional quality standards.",
-  "surprise": "The X marks originally indicated tax and alcohol strength.",
-  "series": "True Weird Stories (comic)",
-  "audience": "general curious",
-  "format": "short",
-  "scores": {
-   "curiosity": [
-    3,
-    "Odd branding origins make fun trivia shorts"
-   ],
-   "explainability": [
-    5,
-    "Comic illustrations of 19th century brewers"
-   ],
-   "shelf_life": [
-    5,
-    "Brewery history never changes or expires"
-   ],
-   "money": [
-    2,
-    "Beverage trivia attracts lower ad rates"
-   ]
-  },
-  "risk": "",
-  "search_query": "why is XXXX beer named XXXX",
-  "wiki_title": "XXXX (beer)",
-  "stats": {
-   "wiki_views_24h": 51388,
-   "wiki_change_pct": 5,
-   "wiki_7d": [
-    40266,
-    41738,
-    46829,
-    40847,
-    51094,
-    59009,
-    63372,
-    51388
-   ],
-   "wiki_article": "XXXX (beer)",
-   "wiki_avg_30d": 43961
-  },
-  "origin": null,
-  "sources": [
-   {
-    "src": "wikipedia",
-    "title": "XXXX (beer)",
-    "url": "https://en.wikipedia.org/wiki/XXXX_%28beer%29"
-   }
-  ],
-  "demand": 84,
-  "competition": null,
-  "quality": 75,
-  "opportunity": 75
- },
- {
-  "id": "901696036ac9",
-  "key": "why-is-adapting-the-ramayana-so-challenging-for-modern-cinema-",
-  "created_at": "2026-11-07T06:06:04.270494+00:00",
-  "kind": "hot",
-  "question": "Why is adapting the Ramayana so challenging for modern cinema?",
-  "hook": "Bringing the ancient epic Ramayana to screens breaks cinema.",
-  "about": "Major Indian film studios are embarking on massive cinematic adaptations of the Ramayana using cutting-edge visual effects. Balancing deep spiritual reverence against high-octane CGI superhero blockbuster expectations presents one of the most volatile creative challenges in global cinema.",
-  "surprise": "How do filmmakers balance holy scripture with blockbuster CGI?",
-  "series": "What Actually Happened (mini-doc)",
-  "audience": "India-first",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    5,
-    "Massive cultural interest across Indian moviegoers nationwide"
-   ],
-   "explainability": [
-    4,
-    "Side by side mythological iconography visual comparisons"
-   ],
-   "shelf_life": [
-    3,
-    "Tied to ongoing cinematic release cycles"
-   ],
-   "money": [
-    3,
-    "High regional volume offsets lower local CPMs"
-   ]
-  },
-  "risk": "",
-  "search_query": "Ramayana movie adaptation budget VFX challenges",
-  "wiki_title": "Ramayana",
-  "stats": {
-   "wiki_views_24h": 785245,
-   "wiki_change_pct": 448,
-   "wiki_7d": [
-    49705,
-    52126,
-    55707,
-    60024,
-    72890,
-    103372,
-    609307,
-    785245
-   ],
-   "wiki_article": "Ramayana",
-   "wiki_avg_30d": 7069,
-   "yt_results": 322,
-   "yt_top_views": 1276391,
-   "yt_median_top10_views": 436379,
-   "yt_recent_in_top10": 1,
-   "yt_top_title": "Ramayana trailer 2 VFX breakdown: still not done!!",
-   "yt_top_channel": "BnfTV",
-   "yt_top_url": "https://youtu.be/BPLRB4OtRJk",
-   "yt_query": "Ramayana movie adaptation budget VFX challenges"
-  },
-  "origin": null,
-  "sources": [
-   {
-    "src": "wikipedia",
-    "title": "Ramayana: Part 1",
-    "url": "https://en.wikipedia.org/wiki/Ramayana%3A_Part_1"
-   }
-  ],
-  "demand": 100,
-  "competition": 59,
-  "quality": 75,
-  "opportunity": 81
- },
- {
-  "id": "995d97bde7eb",
-  "key": "how-does-github-actually-store-billions-of-lines-of-code-",
-  "created_at": "2026-11-07T06:06:04.270494+00:00",
-  "kind": "hot",
-  "question": "How does GitHub actually store billions of lines of code?",
-  "hook": "Your tiny code push triggers a massive invisible machine.",
-  "about": "GitHub manages petabytes of source code across millions of repositories simultaneously. To handle ballooning data demands, engineers had to overhaul the underlying Git storage architecture without taking the platform offline.",
-  "surprise": "Does Git store whole files or just the differences between them?",
-  "series": "How It Works (cutaway)",
-  "audience": "tech & AI",
-  "format": "long",
-  "scores": {
-   "curiosity": [
-    4,
-    "Developers rarely understand back-end storage mechanics."
-   ],
-   "explainability": [
-    5,
-    "Object trees make fantastic visual diagrams."
-   ],
-   "shelf_life": [
-    5,
-    "Fundamental infrastructure architecture stays relevant years."
-   ],
-   "money": [
-    4,
-    "Software developers command premium advertising rates."
-   ]
-  },
-  "risk": "",
-  "search_query": "github git storage architecture",
-  "wiki_title": "GitHub",
-  "stats": {
-   "hn_points": 104,
-   "hn_comments": 20,
-   "wiki_article": "GitHub",
-   "wiki_avg_30d": 4343,
-   "wiki_views_24h": 3839,
-   "wiki_change_pct": -12
-  },
-  "origin": {
-   "time": "2026-11-06T19:24:21+00:00",
-   "hours_ago": 10.7
-  },
-  "sources": [
-   {
-    "src": "hacker_news",
-    "title": "GitHub's new Git storage architecture",
-    "url": "https://github.blog/engineering/architecture-optimization/inside-githubs-new-git-storage-architecture/"
-   }
-  ],
-  "demand": 65,
-  "competition": null,
-  "quality": 90,
-  "opportunity": 73
- },
- {
-  "id": "87e1ee9b8da4",
-  "key": "how-did-an-attacker-steal-millions-using-a-flash-loan-vote-",
-  "created_at": "2026-11-07T06:06:04.270494+00:00",
-  "kind": "hot",
-  "question": "How did an attacker steal millions using a flash loan vote?",
-  "hook": "Borrow millions without collateral and rewrite the rules instantly.",
-  "about": "A decentralized protocol named X100 lost $4.8 million in a targeted governance exploit. By borrowing massive voting power in a single transaction block, an attacker passed a proposal to drain the treasury before repaying the loan.",
-  "surprise": "The attacker borrowed millions and drained 4.8 million dollars in one block.",
-  "series": "Money Moves (charts)",
-  "audience": "finance & crypto",
-  "format": "short",
-  "scores": {
-   "curiosity": [
-    5,
-    "Instant uncollateralized wealth heist sounds impossible."
-   ],
-   "explainability": [
-    4,
-    "Step-by-step transaction flowcharts work perfectly."
-   ],
-   "shelf_life": [
-    4,
-    "Flashloan governance attacks remain ongoing threats."
-   ],
-   "money": [
-    5,
-    "Crypto finance audiences offer high CPMs."
-   ]
-  },
-  "risk": "",
-  "search_query": "flash loan governance attack explained",
-  "wiki_title": "Flash loan",
-  "stats": {
-   "hack_usd": 4750000,
-   "wiki_article": "Flash loan",
-   "wiki_avg_30d": 1,
-   "wiki_views_24h": 2,
-   "wiki_change_pct": 48
-  },
-  "origin": {
-   "time": "2026-10-24T00:00:00+00:00",
-   "hours_ago": 342.1
-  },
-  "sources": [
-   {
-    "src": "defillama_hacks",
-    "title": "X100 hack: $4.8M via Flashloan Governance Attack",
-    "url": "https://defillama.com/hacks"
-   }
-  ],
-  "demand": 8,
-  "competition": null,
-  "quality": 90,
-  "opportunity": 47
- },
- {
-  "id": "7e769b355cd9",
-  "key": "why-is-installing-linux-on-apple-silicon-almost-impossible-",
-  "created_at": "2026-11-07T06:06:04.270494+00:00",
-  "kind": "hot",
-  "question": "Why is installing Linux on Apple Silicon almost impossible?",
-  "hook": "Apple built a silicon fortress, but hackers breached it.",
-  "about": "Apple custom-designs its own processors with proprietary hardware blocks, boot mechanisms, and GPU drivers. The Asahi Linux project has been painstakingly reverse-engineering the Apple M-series chips to bring pure open-source Linux to Macs.",
-  "surprise": "How do developers write GPU drivers without Apple documentation?",
-  "series": "How It Works (cutaway)",
-  "audience": "tech & AI",
-  "format": "long",
-  "scores": {
-   "curiosity": [
-    5,
-    "Fascinating clash between open source and Apple."
-   ],
-   "explainability": [
-    4,
-    "Hardware registers convert cleanly into diagrams."
-   ],
-   "shelf_life": [
-    4,
-    "Silicon reverse engineering remains technically relevant."
-   ],
-   "money": [
-    4,
-    "High appeal to computer engineering sponsors."
-   ]
-  },
-  "risk": "",
-  "search_query": "asahi linux apple silicon reverse engineering",
-  "wiki_title": "Asahi Linux",
-  "stats": {
-   "hn_points": 5,
-   "hn_comments": 0,
-   "wiki_article": "Asahi Linux",
-   "wiki_avg_30d": 145,
-   "wiki_views_24h": 143,
-   "wiki_change_pct": -1
-  },
-  "origin": {
-   "time": "2026-11-07T05:20:18+00:00",
-   "hours_ago": 0.8
-  },
-  "sources": [
-   {
-    "src": "hacker_news",
-    "title": "Asahi Linux Progress Linux 7.3",
-    "url": "https://asahilinux.org/2026/11/progress-report-7-3/"
-   }
-  ],
-  "demand": 37,
-  "competition": null,
-  "quality": 85,
-  "opportunity": 58
- },
- {
-  "id": "bab9c1eb76f6",
-  "key": "how-are-hackers-quietly-stealing-credit-cards-from-restaurant-websites-",
-  "created_at": "2026-11-07T06:06:04.270494+00:00",
-  "kind": "hot",
-  "question": "How are hackers quietly stealing credit cards from restaurant websites?",
-  "hook": "Ordering dinner might have handed hackers your card.",
-  "about": "Cybersecurity researchers uncovered widespread web skimming malware injected directly into online restaurant checkout systems. Instead of breaching banks, criminals hide silent JavaScript scripts inside delivery menus to harvest payment details as you type.",
-  "surprise": "How do hackers inject scripts into third-party ordering platforms?",
-  "series": "How It Works (cutaway)",
-  "audience": "general curious",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    5,
-    "Affects everyday people ordering food takeout."
-   ],
-   "explainability": [
-    4,
-    "Browser network inspectors make relatable visuals."
-   ],
-   "shelf_life": [
-    4,
-    "Magecart skimming attacks evolve constantly worldwide."
-   ],
-   "money": [
-    3,
-    "Cybersecurity tools provide solid advertising value."
-   ]
-  },
-  "risk": "",
-  "search_query": "restaurant web payment skimmer hack",
-  "wiki_title": "Magecart",
-  "stats": {
-   "hn_points": 110,
-   "hn_comments": 56,
-   "wiki_article": "Magecart",
-   "wiki_avg_30d": 2,
-   "wiki_views_24h": 5,
-   "wiki_change_pct": 159
-  },
-  "origin": {
-   "time": "2026-11-06T19:19:27+00:00",
-   "hours_ago": 10.8
-  },
-  "sources": [
-   {
-    "src": "hacker_news",
-    "title": "Restaurant Delivery Payment-Skimming Campaign",
-    "url": "https://www.infohawk.com/news/2026-11-05-scamwich-restaurant-skimming"
-   }
-  ],
-  "demand": 62,
-  "competition": null,
-  "quality": 80,
-  "opportunity": 67
- },
- {
-  "id": "c57cdb4c1582",
-  "key": "what-actually-happened-to-guy-fawkes-beneath-parliament-",
-  "created_at": "2026-11-07T06:06:04.270494+00:00",
-  "kind": "hot",
-  "question": "What actually happened to Guy Fawkes beneath Parliament?",
-  "hook": "Thirty-six barrels of gunpowder nearly obliterated London.",
-  "about": "In 1605, English Catholic conspirators plotted to blow up the House of Lords during the State Opening of Parliament. Guy Fawkes was caught red-handed guarding the explosives, sparking an enduring holiday and an iconic cultural mask.",
-  "surprise": "Who tipped off Lord Monteagle to expose the plot?",
-  "series": "What Actually Happened (mini-doc)",
-  "audience": "students",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    4,
-    "Global mask icon with mysterious history."
-   ],
-   "explainability": [
-    5,
-    "Underground tunnels and barrels animate easily."
-   ],
-   "shelf_life": [
-    5,
-    "Historical events never lose their relevance."
-   ],
-   "money": [
-    2,
-    "History channels attract modest advertiser CPMs."
-   ]
-  },
-  "risk": "",
-  "search_query": "gunpowder plot guy fawkes history",
-  "wiki_title": "Guy Fawkes",
-  "stats": {
-   "wiki_views_24h": 77311,
-   "wiki_change_pct": 156,
-   "wiki_7d": [
-    6207,
-    8816,
-    15740,
-    12378,
-    12502,
-    21842,
-    133874,
-    77311
-   ],
-   "wiki_article": "Guy Fawkes",
-   "wiki_avg_30d": 11641
-  },
-  "origin": null,
-  "sources": [
-   {
-    "src": "wikipedia",
-    "title": "Guy Fawkes",
-    "url": "https://en.wikipedia.org/wiki/Guy_Fawkes"
-   }
-  ],
-  "demand": 90,
-  "competition": null,
-  "quality": 80,
-  "opportunity": 80
- },
- {
-  "id": "0123dbbc4932",
-  "key": "how-did-xyz-become-the-internet-s-weirdest-domain-suffix-",
-  "created_at": "2026-11-07T06:06:04.270494+00:00",
-  "kind": "hot",
-  "question": "How did .xyz become the internet's weirdest domain suffix?",
-  "hook": "One cheap domain suffix conquered the startup world.",
-  "about": "When ICANN opened top-level domain registrations, .xyz launched as an inexpensive alternative to crowded .com addresses. It exploded into mainstream tech when Alphabet adopted abc.xyz, later becoming the default home for decentralized Web3 startups.",
-  "surprise": "Why did Google choose abc.xyz over traditional domains?",
-  "series": "Money Moves (charts)",
-  "audience": "tech & AI",
-  "format": "short",
-  "scores": {
-   "curiosity": [
-    4,
-    "Everyone sees the suffix without knowing why."
-   ],
-   "explainability": [
-    4,
-    "Domain registry economics chart very cleanly."
-   ],
-   "shelf_life": [
-    4,
-    "Top-level domain infrastructure rarely changes overnight."
-   ],
-   "money": [
-    4,
-    "Domain registrars pay lucrative affiliate sponsorships."
-   ]
-  },
-  "risk": "",
-  "search_query": "why do tech companies use xyz domains",
-  "wiki_title": ".xyz",
-  "stats": {
-   "wiki_views_24h": 209858,
-   "wiki_change_pct": 85,
-   "wiki_7d": [
-    29480,
-    31598,
-    52164,
-    65692,
-    104155,
-    254329,
-    255809,
-    209858
-   ],
-   "wiki_article": ".xyz",
-   "wiki_avg_30d": 61698
-  },
-  "origin": null,
-  "sources": [
-   {
-    "src": "wikipedia",
-    "title": ".xyz",
-    "url": "https://en.wikipedia.org/wiki/.xyz"
-   }
-  ],
-  "demand": 88,
-  "competition": null,
-  "quality": 80,
-  "opportunity": 79
- },
- {
-  "id": "93721eeafc7a",
-  "key": "why-does-the-us-president-s-party-almost-always-lose-midterms-",
-  "created_at": "2026-11-07T06:06:04.270494+00:00",
-  "kind": "hot",
-  "question": "Why does the US President's party almost always lose midterms?",
-  "hook": "Winning the White House guarantees losing Congress next.",
-  "about": "American midterm elections consistently punish the incumbent president's political party regardless of policy successes. Political scientists attribute this midterm penalty to voter fatigue, surge-and-decline turnout dynamics, and angry opposition mobilization.",
-  "surprise": "Has an incumbent party ever gained midterm seats?",
-  "series": "What Actually Happened (mini-doc)",
-  "audience": "general curious",
-  "format": "long",
-  "scores": {
-   "curiosity": [
-    4,
-    "Reliable historical patterns fascinate political observers."
-   ],
-   "explainability": [
-    5,
-    "Voter turnout swings make great charts."
-   ],
-   "shelf_life": [
-    5,
-    "Midterm pattern recurs every four years."
-   ],
-   "money": [
-    3,
-    "Broad demographic reach brings steady CPMs."
-   ]
-  },
-  "risk": "Avoid endorsing any specific party or candidate.",
-  "search_query": "why president party loses midterm elections",
-  "wiki_title": "United States midterm election",
-  "stats": {
-   "wiki_views_24h": 56948,
-   "wiki_change_pct": -66,
-   "wiki_7d": [
-    44326,
-    45896,
-    62914,
-    131229,
-    244478,
-    523575,
-    134210,
-    56948
-   ],
-   "wiki_article": "United States midterm election",
-   "wiki_avg_30d": 58854,
-   "yt_results": 1000000,
-   "yt_top_views": 1352892,
-   "yt_median_top10_views": 47211,
-   "yt_recent_in_top10": 9,
-   "yt_top_title": "Trump accepts midterm election results",
-   "yt_top_channel": "FOX 11 Los Angeles",
-   "yt_top_url": "https://youtu.be/xk5NfjaawmQ",
-   "yt_query": "why president party loses midterm elections"
-  },
-  "origin": null,
-  "sources": [
-   {
-    "src": "wikipedia",
-    "title": "United States midterm election",
-    "url": "https://en.wikipedia.org/wiki/United_States_midterm_election"
-   }
-  ],
-  "demand": 85,
-  "competition": 74,
-  "quality": 85,
-  "opportunity": 76
- },
- {
-  "id": "bbe6baf7052d",
-  "key": "how-did-an-infinite-mint-bug-print-2-6-million-dollars-",
-  "created_at": "2026-11-07T06:06:04.270494+00:00",
-  "kind": "hot",
-  "question": "How did an infinite mint bug print 2.6 million dollars?",
-  "hook": "A single misplaced line printed free cryptocurrency forever.",
-  "about": "A critical vulnerability in Initia's smart contract logic permitted an attacker to invoke an unconstrained token mint function. By tricking the protocol's validation checks, the hacker generated $2.6 million worth of assets out of thin air.",
-  "surprise": "The attacker extracted 2.6 million dollars through an infinite mint.",
-  "series": "How It Works (cutaway)",
-  "audience": "finance & crypto",
-  "format": "short",
-  "scores": {
-   "curiosity": [
-    5,
-    "Creating millions from nothing grabs attention."
-   ],
-   "explainability": [
-    5,
-    "Math logic flaws are easily animated."
-   ],
-   "shelf_life": [
-    3,
-    "Specific exploits fade as patches release."
-   ],
-   "money": [
-    4,
-    "DeFi tech viewers attract premium ads."
-   ]
-  },
-  "risk": "",
-  "search_query": "infinite mint smart contract exploit",
-  "wiki_title": "Smart contract",
-  "stats": {
-   "hack_usd": 2600000,
-   "wiki_article": "Smart contract",
-   "wiki_avg_30d": 120,
-   "wiki_views_24h": 89,
-   "wiki_change_pct": -26
-  },
-  "origin": {
-   "time": "2026-10-23T00:00:00+00:00",
-   "hours_ago": 366.1
-  },
-  "sources": [
-   {
-    "src": "defillama_hacks",
-    "title": "Initia hack: $2.6M via Infinite Mint",
-    "url": "https://defillama.com/hacks"
-   }
-  ],
-  "demand": 37,
-  "competition": null,
-  "quality": 85,
-  "opportunity": 58
- },
- {
-  "id": "088b504aad4a",
-  "key": "how-do-barcode-scanners-read-data-using-white-space-",
-  "created_at": "2026-11-07T06:06:04.270494+00:00",
-  "kind": "evergreen",
-  "question": "How do barcode scanners read data using white space?",
-  "hook": "The red laser measures white reflections, not lines.",
-  "about": "Barcodes appear on nearly every consumer package, yet most people fundamentally misunderstand how lasers decode them. The scanner sensor does not actually measure the black lines, but rather measures laser reflections bouncing off the empty white spaces.",
-  "surprise": "Scanners decode reflected laser light bouncing off white spaces, ignoring black ink entirely.",
-  "series": "How It Works (cutaway)",
-  "audience": "tech & AI",
-  "format": "short",
-  "scores": {
-   "curiosity": [
-    4,
-    "Everyday item with completely counterintuitive mechanics"
-   ],
-   "explainability": [
-    5,
-    "Laser beam reflections animate very cleanly"
-   ],
-   "shelf_life": [
-    5,
-    "Barcode technology remains ubiquitous globally today"
-   ],
-   "money": [
-    3,
-    "Retail technology topics attract moderate CPMs"
-   ]
-  },
-  "risk": "",
-  "search_query": "how barcode scanners work",
-  "wiki_title": "Barcode",
-  "stats": {
-   "wiki_article": "Barcode",
-   "wiki_avg_30d": 795,
-   "wiki_views_24h": 1160,
-   "wiki_change_pct": 46
-  },
-  "origin": null,
-  "sources": [],
-  "demand": 52,
-  "competition": null,
-  "quality": 85,
-  "opportunity": 65
- },
- {
-  "id": "e78de8c15bbd",
-  "key": "how-did-one-con-artist-sell-the-eiffel-tower-twice-",
-  "created_at": "2026-11-07T06:06:04.270494+00:00",
-  "kind": "evergreen",
-  "question": "How did one con artist sell the Eiffel Tower twice?",
-  "hook": "He convinced scrap metal dealers Paris wanted it scrapped.",
-  "about": "In 1925, con artist Victor Lustig forged official government stationery to secretly auction off Paris's most famous landmark as scrap metal. His brazen pitch succeeded so thoroughly that he fled the country with a suitcase of cash and returned months later to run the exact same scam.",
-  "surprise": "The embarrassed buyer hid the scam from police to protect his reputation.",
-  "series": "True Weird Stories (comic)",
-  "audience": "movie & pop culture",
-  "format": "long",
-  "scores": {
-   "curiosity": [
-    5,
-    "Bizarre historical heist story grips audiences"
-   ],
-   "explainability": [
-    5,
-    "Comic panel storytelling makes scams engaging"
-   ],
-   "shelf_life": [
-    5,
-    "Historical con stories remain entertaining forever"
-   ],
-   "money": [
-    3,
-    "True crime history draws standard advertisers"
-   ]
-  },
-  "risk": "",
-  "search_query": "victor lustig eiffel tower scam",
-  "wiki_title": "Victor Lustig",
-  "stats": {
-   "wiki_article": "Victor Lustig",
-   "wiki_avg_30d": 368,
-   "wiki_views_24h": 207,
-   "wiki_change_pct": -44
-  },
-  "origin": null,
-  "sources": [],
-  "demand": 45,
-  "competition": null,
-  "quality": 90,
-  "opportunity": 64
- },
- {
-  "id": "60a2fb90dc52",
-  "key": "why-do-airlines-make-more-money-selling-points-than-flights-",
-  "created_at": "2026-11-07T06:06:04.270494+00:00",
-  "kind": "evergreen",
-  "question": "Why do airlines make more money selling points than flights?",
-  "hook": "Airlines are basically credit card companies owning planes.",
-  "about": "Major commercial airlines generate billions in high-margin profits by minting loyalty miles and selling them directly to financial institutions. In modern airline corporate finance, frequent flyer programs often carry valuations far exceeding the actual aircraft and passenger operations combined.",
-  "surprise": "Major frequent flyer programs are often worth more than the actual airlines.",
-  "series": "Money Moves (charts)",
-  "audience": "finance & crypto",
-  "format": "long",
-  "scores": {
-   "curiosity": [
-    4,
-    "Shocking corporate business models surprise travelers"
-   ],
-   "explainability": [
-    4,
-    "Flowcharts clearly map banking partnership cash"
-   ],
-   "shelf_life": [
-    5,
-    "Frequent flyer loyalty economics stay relevant"
-   ],
-   "money": [
-    5,
-    "Credit card financial content pays exceptionally"
-   ]
-  },
-  "risk": "",
-  "search_query": "airline loyalty programs business model",
-  "wiki_title": "Frequent-flyer program",
-  "stats": {
-   "wiki_article": "Frequent-flyer program",
-   "wiki_avg_30d": 88,
-   "wiki_views_24h": 66,
-   "wiki_change_pct": -25
-  },
-  "origin": null,
-  "sources": [],
-  "demand": 35,
-  "competition": null,
-  "quality": 90,
-  "opportunity": 59
- },
- {
-  "id": "7dff1ed90f96",
-  "key": "why-did-the-british-build-a-2-300-mile-hedge-across-india-",
-  "created_at": "2026-11-07T06:06:04.270494+00:00",
-  "kind": "evergreen",
-  "question": "Why did the British build a 2,300-mile hedge across India?",
-  "hook": "Colonial forces grew a thorny wall dividing India.",
-  "about": "In the nineteenth century, the British Empire constructed a massive, dense hedge of thorny vegetation across India to enforce an extortionate salt tax. Guarded continuously by thousands of armed customs men, this forgotten botanical megastructure stretched for thousands of miles before being dismantled.",
-  "surprise": "Twelve thousand customs guards patrolled an impenetrable twelve-foot thorn wall.",
-  "series": "What Actually Happened (mini-doc)",
-  "audience": "India-first",
-  "format": "long",
-  "scores": {
-   "curiosity": [
-    5,
-    "Forgotten colonial megastructure sounds completely absurd"
-   ],
-   "explainability": [
-    4,
-    "Maps and botanical barrier animations shine"
-   ],
-   "shelf_life": [
-    5,
-    "Colonial historical engineering retains constant interest"
-   ],
-   "money": [
-    3,
-    "History explainer videos attract modest advertising"
-   ]
-  },
-  "risk": "",
-  "search_query": "inland customs line great hedge",
-  "wiki_title": "Inland Customs Line",
-  "stats": {
-   "wiki_article": "Inland Customs Line",
-   "wiki_avg_30d": 90,
-   "wiki_views_24h": 42,
-   "wiki_change_pct": -53
-  },
-  "origin": null,
-  "sources": [],
-  "demand": 34,
-  "competition": null,
-  "quality": 85,
-  "opportunity": 57
- },
- {
-  "id": "1b3b43f64c9c",
-  "key": "katana-vs-longsword-which-blade-was-actually-deadlier-in-battle-",
-  "created_at": "2026-11-07T06:06:04.270494+00:00",
-  "kind": "evergreen",
-  "question": "Katana vs Longsword: Which blade was actually deadlier in battle?",
-  "hook": "Pop culture loves katanas, but knights had steel.",
-  "about": "Cinema frequently depicts the Japanese katana as an unstoppable, razor-sharp superweapon capable of slicing through armor. A side-by-side engineering and metallurgical analysis reveals how European longswords were shaped to pierce steel plates without suffering catastrophic blade fractures.",
-  "surprise": "European longswords could flex under stress while brittle katanas could snap.",
-  "series": "Versus (scoreboard)",
-  "audience": "general curious",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    5,
-    "Perennial nerd debate sparks intense engagement"
-   ],
-   "explainability": [
-    5,
-    "Side-by-side stats and physics cutaways shine"
-   ],
-   "shelf_life": [
-    5,
-    "Weapon comparisons remain evergreen for decades"
-   ],
-   "money": [
-    3,
-    "Gaming enthusiast demographics attract decent sponsors"
-   ]
-  },
-  "risk": "",
-  "search_query": "katana vs longsword comparison",
-  "wiki_title": "Longsword",
-  "stats": {
-   "wiki_article": "Longsword",
-   "wiki_avg_30d": 323,
-   "wiki_views_24h": 306,
-   "wiki_change_pct": -5
-  },
-  "origin": null,
-  "sources": [],
-  "demand": 45,
-  "competition": null,
-  "quality": 90,
-  "opportunity": 64
- },
- {
-  "id": "521891a5d5a5",
-  "key": "how-did-a-giant-wave-of-molasses-destroy-a-boston-neighborhood-",
-  "created_at": "2026-11-07T06:06:04.270494+00:00",
-  "kind": "evergreen",
-  "question": "How did a giant wave of molasses destroy a Boston neighborhood?",
-  "hook": "A twenty-five-foot tidal wave of syrup flooded Boston.",
-  "about": "In 1919, an enormous commercial holding tank ruptured in Boston, unleashing millions of gallons of thick molasses onto city streets. The resulting flash flood crushed buildings, overturned railcars, and established lasting legal precedents regarding industrial structural negligence.",
-  "surprise": "The thick molasses wave rushed down streets at thirty-five miles per hour.",
-  "series": "True Weird Stories (comic)",
-  "audience": "general curious",
-  "format": "short",
-  "scores": {
-   "curiosity": [
-    5,
-    "Absurd sticky disaster hooks viral curiosity"
-   ],
-   "explainability": [
-    5,
-    "Comic style animation captures urban chaos"
-   ],
-   "shelf_life": [
-    5,
-    "Historical disaster stories stay endlessly rewatchable"
-   ],
-   "money": [
-    3,
-    "General historical storytelling earns standard CPMs"
-   ]
-  },
-  "risk": "tragedy",
-  "search_query": "great molasses flood boston",
-  "wiki_title": "Great Molasses Flood",
-  "stats": {
-   "wiki_article": "Great Molasses Flood",
-   "wiki_avg_30d": 1714,
-   "wiki_views_24h": 1900,
-   "wiki_change_pct": 11
-  },
-  "origin": null,
-  "sources": [],
-  "demand": 58,
-  "competition": null,
-  "quality": 90,
-  "opportunity": 70
- },
- {
-  "id": "c3ff2f1403e2",
-  "key": "how-do-mumbai-dabbawalas-deliver-lunch-without-using-any-computers-",
-  "created_at": "2026-11-07T06:06:04.270494+00:00",
-  "kind": "evergreen",
-  "question": "How do Mumbai dabbawalas deliver lunch without using any computers?",
-  "hook": "Two hundred thousand lunches delivered daily without computers.",
-  "about": "Mumbai's dabbawala cooperative delivers hundreds of thousands of freshly cooked tiffin lunches from suburban homes to downtown desks every day. The operation relies completely on alphanumeric color codes, railway baggage cars, and decentralized human relays without any digital tracking software.",
-  "surprise": "Their color-coded sorting system operates with six sigma reliability without software.",
-  "series": "How It Works (cutaway)",
-  "audience": "India-first",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    4,
-    "Logistical perfection without computers amazes viewers"
-   ],
-   "explainability": [
-    5,
-    "Visualizing color codes and train routes"
-   ],
-   "shelf_life": [
-    5,
-    "Famous management case study remains evergreen"
-   ],
-   "money": [
-    4,
-    "Logistics business case studies attract advertisers"
-   ]
-  },
-  "risk": "",
-  "search_query": "mumbai dabbawala delivery system explained",
-  "wiki_title": "Dabbawala",
-  "stats": {
-   "wiki_article": "Dabbawala",
-   "wiki_avg_30d": 171,
-   "wiki_views_24h": 148,
-   "wiki_change_pct": -13
-  },
-  "origin": null,
-  "sources": [],
-  "demand": 40,
-  "competition": null,
-  "quality": 90,
-  "opportunity": 62
- },
- {
-  "id": "d149f35892d1",
-  "key": "how-does-a-car-airbag-inflate-in-under-thirty-milliseconds-",
-  "created_at": "2026-11-07T06:06:04.270494+00:00",
-  "kind": "evergreen",
-  "question": "How does a car airbag inflate in under thirty milliseconds?",
-  "hook": "Your steering wheel hides a controlled rocket fuel explosion.",
-  "about": "Mechanical sensors detect sudden deceleration and ignite a solid chemical pellet within milliseconds. The resulting nitrogen gas fills the nylon cushion before your head can strike the dashboard.",
-  "surprise": "Airbags don't use compressed air; they use chemical rocket propellants.",
-  "series": "How It Works (cutaway)",
-  "audience": "students",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    4,
-    "Everyday safety features hide extreme chemistry."
-   ],
-   "explainability": [
-    5,
-    "Cutaway diagrams reveal mechanical trigger chambers."
-   ],
-   "shelf_life": [
-    5,
-    "Automotive safety principles remain true perpetually."
-   ],
-   "money": [
-    4,
-    "Automotive tech topics command premium advertisers."
-   ]
-  },
-  "risk": "",
-  "search_query": "how car airbags work chemistry",
-  "wiki_title": "Airbag",
-  "stats": {
-   "wiki_article": "Airbag",
-   "wiki_avg_30d": 219,
-   "wiki_views_24h": 220,
-   "wiki_change_pct": 0
-  },
-  "origin": null,
-  "sources": [],
-  "demand": 42,
-  "competition": null,
-  "quality": 90,
-  "opportunity": 62
- },
- {
-  "id": "a992684af116",
-  "key": "how-did-a-giant-wave-of-molasses-drown-downtown-boston-",
-  "created_at": "2026-11-07T06:06:04.270494+00:00",
-  "kind": "evergreen",
-  "question": "How did a giant wave of molasses drown downtown Boston?",
-  "hook": "A two-million-gallon wave of syrup flattened city buildings.",
-  "about": "In 1919, a poorly constructed commercial storage tank burst open in Boston's North End. The resulting twenty-five-foot wave of hot molasses moved at thirty-five miles per hour, destroying everything in its path.",
-  "surprise": "Molasses moved at 35 miles per hour, making it impossible to outrun.",
-  "series": "True Weird Stories (comic)",
-  "audience": "general curious",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    5,
-    "Bizarre historical disaster sparks immediate disbelief."
-   ],
-   "explainability": [
-    4,
-    "Comic art makes sticky chaos readable."
-   ],
-   "shelf_life": [
-    5,
-    "Historic bizarre disasters remain timeless stories."
-   ],
-   "money": [
-    3,
-    "Weird history attracts solid mainstream brands."
-   ]
-  },
-  "risk": "tragedy",
-  "search_query": "boston molasses flood 1919",
-  "wiki_title": "Great Molasses Flood",
-  "stats": {
-   "wiki_article": "Great Molasses Flood",
-   "wiki_avg_30d": 1714,
-   "wiki_views_24h": 1900,
-   "wiki_change_pct": 11
-  },
-  "origin": null,
-  "sources": [],
-  "demand": 58,
-  "competition": null,
-  "quality": 85,
-  "opportunity": 68
- },
- {
-  "id": "a0938c51b383",
-  "key": "how-do-blockbuster-movies-make-billions-and-still-claim-zero-profit-",
-  "created_at": "2026-11-07T06:06:04.270494+00:00",
-  "kind": "evergreen",
-  "question": "How do blockbuster movies make billions and still claim zero profit?",
-  "hook": "Harry Potter technically lost money on paper to dodge taxes.",
-  "about": "Major film studios create shell companies that charge exorbitant internal distribution fees to wipe out accounting profits. This legally prevents actors and creators from collecting net profit royalties promised in their contracts.",
-  "surprise": "Return of the Jedi never officially turned a profit under studio accounting.",
-  "series": "Money Moves (charts)",
-  "audience": "movie & pop culture",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    5,
-    "Hollywood financial trickery stuns casual fans."
-   ],
-   "explainability": [
-    4,
-    "Flowcharts expose clever corporate fee routing."
-   ],
-   "shelf_life": [
-    5,
-    "Accounting loopholes persist across entertainment decades."
-   ],
-   "money": [
-    4,
-    "Entertainment finance pulls high entertainment ads."
-   ]
-  },
-  "risk": "",
-  "search_query": "hollywood accounting net points explained",
-  "wiki_title": "Hollywood accounting",
-  "stats": {
-   "wiki_article": "Hollywood accounting",
-   "wiki_avg_30d": 168,
-   "wiki_views_24h": 105,
-   "wiki_change_pct": -38
-  },
-  "origin": null,
-  "sources": [],
-  "demand": 39,
-  "competition": null,
-  "quality": 90,
-  "opportunity": 61
- },
- {
-  "id": "99048dd27bb8",
-  "key": "grizzly-bear-vs-silverback-gorilla-who-actually-wins-in-a-fight-",
-  "created_at": "2026-11-07T06:06:04.270494+00:00",
-  "kind": "evergreen",
-  "question": "Grizzly Bear vs Silverback Gorilla: Who actually wins in a fight?",
-  "hook": "Bone density and claw length settle this legendary internet debate.",
-  "about": "Animal enthusiasts have debated the theoretical collision of apex forest primates and heavyweight predators for decades. Examining bite force, skeletal thickness, and muscle mass reveals an overwhelming physical mismatch.",
-  "surprise": "A grizzly bear outweighs an adult silverback gorilla by over five hundred pounds.",
-  "series": "Versus (scoreboard)",
-  "audience": "students",
-  "format": "short",
-  "scores": {
-   "curiosity": [
-    5,
-    "Endless playground debate drives massive clicks."
-   ],
-   "explainability": [
-    5,
-    "Split scoreboard stats make comparisons thrilling."
-   ],
-   "shelf_life": [
-    5,
-    "Hypothetical animal matchups never lose appeal."
-   ],
-   "money": [
-    2,
-    "Wildlife matchups yield lower commercial CPM."
-   ]
-  },
-  "risk": "",
-  "search_query": "grizzly bear vs silverback gorilla",
-  "wiki_title": "Grizzly bear",
-  "stats": {
-   "wiki_article": "Grizzly bear",
-   "wiki_avg_30d": 1359,
-   "wiki_views_24h": 1612,
-   "wiki_change_pct": 19
-  },
-  "origin": null,
-  "sources": [],
-  "demand": 56,
-  "competition": null,
-  "quality": 85,
-  "opportunity": 67
- },
- {
-  "id": "78b2ac482116",
-  "key": "how-do-mumbai-dabbawalas-deliver-thousands-of-lunches-without-modern-technology-",
-  "created_at": "2026-11-07T06:06:04.270494+00:00",
-  "kind": "evergreen",
-  "question": "How do Mumbai dabbawalas deliver thousands of lunches without modern technology?",
-  "hook": "Five thousand couriers deliver hot lunches with near-zero mistakes.",
-  "about": "Mumbai's century-old lunch delivery collective relies on colored symbols and railway networks instead of smartphones or GPS. Their logistical system achieves Six Sigma efficiency, sparking management studies from Harvard to Forbes.",
-  "surprise": "They achieve a Six Sigma rating without barcode scanners or computers.",
-  "series": "What Actually Happened (mini-doc)",
-  "audience": "India-first",
-  "format": "long",
-  "scores": {
-   "curiosity": [
-    4,
-    "Low-tech logistical mastery surprises digital natives."
-   ],
-   "explainability": [
-    4,
-    "Step-by-step route maps clarify coding schemes."
-   ],
-   "shelf_life": [
-    5,
-    "Century-old cultural institutions hold lasting value."
-   ],
-   "money": [
-    3,
-    "Logistics management case studies attract enterprise."
-   ]
-  },
-  "risk": "",
-  "search_query": "mumbai dabbawala logistics system explained",
-  "wiki_title": "Dabbawala",
-  "stats": {
-   "wiki_article": "Dabbawala",
-   "wiki_avg_30d": 171,
-   "wiki_views_24h": 148,
-   "wiki_change_pct": -13
-  },
-  "origin": null,
-  "sources": [],
-  "demand": 40,
-  "competition": null,
-  "quality": 80,
-  "opportunity": 58
- },
- {
-  "id": "3224ae122b2c",
-  "key": "how-does-gps-find-your-phone-without-sending-any-data-back-",
-  "created_at": "2026-11-07T06:06:04.270494+00:00",
-  "kind": "evergreen",
-  "question": "How does GPS find your phone without sending any data back?",
-  "hook": "Your phone never speaks; it only listens to atomic clocks.",
-  "about": "Global Positioning System satellites continuously broadcast precise timecodes and orbit positions to the entire planet. Receivers calculate exact distances from four simultaneous satellite signals using trilateration math.",
-  "surprise": "GPS satellites must adjust their clocks for Einstein's relativity daily.",
-  "series": "How It Works (cutaway)",
-  "audience": "tech & AI",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    4,
-    "Passive positioning mechanism baffles most users."
-   ],
-   "explainability": [
-    5,
-    "Orbital sphere intersections animate very cleanly."
-   ],
-   "shelf_life": [
-    5,
-    "Satellite navigation principles remain constant globally."
-   ],
-   "money": [
-    5,
-    "Tech infrastructure topics draw top advertisers."
-   ]
-  },
-  "risk": "",
-  "search_query": "how gps works trilateration explained",
-  "wiki_title": "Global Positioning System",
-  "stats": {
-   "wiki_article": "Global Positioning System",
-   "wiki_avg_30d": 1010,
-   "wiki_views_24h": 889,
-   "wiki_change_pct": -12
-  },
-  "origin": null,
-  "sources": [],
-  "demand": 54,
-  "competition": null,
-  "quality": 95,
-  "opportunity": 70
- },
- {
-  "id": "74bfdaac1bb1",
-  "key": "how-did-automated-trading-algorithms-cause-the-2010-flash-crash-",
-  "created_at": "2026-11-07T06:06:04.270494+00:00",
-  "kind": "evergreen",
-  "question": "How did automated trading algorithms cause the 2010 Flash Crash?",
-  "hook": "One trillion dollars vanished from Wall Street in thirty-six minutes.",
-  "about": "High-frequency trading algorithms fed on recursive feedback loops after a massive spoofing sell order hit the stock market. The Dow plunged nearly a thousand points before automated safety circuit breakers halted total collapse.",
-  "surprise": "Market algorithms traded shares between each other thousands of times per second.",
-  "series": "Money Moves (charts)",
-  "audience": "finance & crypto",
-  "format": "long",
-  "scores": {
-   "curiosity": [
-    4,
-    "Algorithmic market panic triggers intense intrigue."
-   ],
-   "explainability": [
-    4,
-    "Order book depth charts animate clearly."
-   ],
-   "shelf_life": [
-    4,
-    "Market microstructure history educates modern traders."
-   ],
-   "money": [
-    5,
-    "Algorithmic trading content commands high rates."
-   ]
-  },
-  "risk": "",
-  "search_query": "2010 flash crash algorithmic trading",
-  "wiki_title": "2010 flash crash",
-  "stats": {
-   "wiki_article": "2010 flash crash",
-   "wiki_avg_30d": 306,
-   "wiki_views_24h": 275,
-   "wiki_change_pct": -10
-  },
-  "origin": null,
-  "sources": [],
-  "demand": 45,
-  "competition": null,
-  "quality": 85,
-  "opportunity": 62
- },
- {
-  "id": "c97463f4a441",
-  "key": "why-did-a-bronze-age-volcano-wipe-out-greece-s-pompeii-",
-  "created_at": "2026-11-07T04:34:26.253009+00:00",
-  "kind": "hot",
-  "question": "Why did a bronze age volcano wipe out Greece's Pompeii?",
-  "hook": "Long before Pompeii, another paradise vanished under volcanic ash.",
-  "about": "Around 3,600 years ago, the volcanic island of Thera erupted with cataclysmic force, burying the advanced Minoan town of Akrotiri in thick ash. Unlike Pompeii, no human remains or gold have been found, suggesting residents foresaw the blast and fled.",
-  "surprise": "Akrotiri was buried in ash centuries before Pompeii, yet almost zero human skeletons were found.",
-  "series": "What Actually Happened (mini-doc)",
-  "audience": "general curious",
-  "format": "long",
-  "scores": {
-   "curiosity": [
-    5,
-    "Mystery of an ancient lost city"
-   ],
-   "explainability": [
-    5,
-    "Volcano cross sections and buried ruins"
-   ],
-   "shelf_life": [
-    5,
-    "Ancient history stories never expire completely"
-   ],
-   "money": [
-    2,
-    "Educational history attracts modest advertiser rates"
-   ]
-  },
-  "risk": "",
-  "search_query": "Akrotiri Minoan Pompeii Thera eruption",
-  "wiki_title": "Akrotiri (prehistoric city)",
-  "stats": {
-   "hn_points": 50,
-   "hn_comments": 4,
-   "wiki_article": "Akrotiri (prehistoric city)",
-   "wiki_avg_30d": 219,
-   "wiki_views_24h": 167,
-   "wiki_change_pct": -24
-  },
-  "origin": {
-   "time": "2026-11-04T02:19:16+00:00",
-   "hours_ago": 74.3
-  },
-  "sources": [
-   {
-    "src": "hacker_news",
-    "title": "Greece has its own Pompeii: Thera buried Akrotiri in ash 17th-16th century BCE",
-    "url": "https://www.smithsonianmag.com/history/greece-has-its-own-pompeii-and-the-ruins-tell-a-captivating-story-of-a-sophisticated-seafaring-bronze-age-society-180989747/"
-   }
-  ],
-  "demand": 49,
-  "competition": null,
-  "quality": 85,
-  "opportunity": 64
- },
- {
-  "id": "0a3b3e4e6fab",
-  "key": "how-did-a-math-rounding-error-drain-an-entire-crypto-vault-",
-  "created_at": "2026-11-07T04:34:26.253009+00:00",
-  "kind": "hot",
-  "question": "How did a math rounding error drain an entire crypto vault?",
-  "hook": "A single rounded fraction just broke this crypto vault.",
-  "about": "Smart contracts handle millions in transactions, but computers can struggle with infinite decimal division. Attackers exploit subtle integer division and rounding flaws to repeatedly drain protocol balances one micro-fraction at a time.",
-  "surprise": "Smart contracts can be drained of real money purely through integer rounding errors.",
-  "series": "How It Works (cutaway)",
-  "audience": "finance & crypto",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    4,
-    "Tiny math error causes massive chaos"
-   ],
-   "explainability": [
-    5,
-    "Visualize fractions multiplying into huge stolen pools"
-   ],
-   "shelf_life": [
-    4,
-    "Smart contract exploits remain permanently relevant"
-   ],
-   "money": [
-    5,
-    "Crypto security attracts premium advertising CPMs"
-   ]
-  },
-  "risk": "",
-  "search_query": "crypto rounding error smart contract hack",
-  "wiki_title": "Smart contract",
-  "stats": {
-   "hack_usd": 0.7,
-   "wiki_article": "Smart contract",
-   "wiki_avg_30d": 120,
-   "wiki_views_24h": 89,
-   "wiki_change_pct": -26
-  },
-  "origin": {
-   "time": "2026-10-18T00:00:00+00:00",
-   "hours_ago": 484.6
-  },
-  "sources": [
-   {
-    "src": "defillama_hacks",
-    "title": "Coffer hack: $0.0M via Rounding Error",
-    "url": "https://defillama.com/hacks"
-   }
-  ],
-  "demand": 37,
-  "competition": null,
-  "quality": 90,
-  "opportunity": 60
- },
- {
-  "id": "f165b102fedb",
-  "key": "how-do-browser-coding-sandboxes-run-untrusted-code-safely-",
-  "created_at": "2026-11-07T04:34:26.253009+00:00",
-  "kind": "hot",
-  "question": "How do browser coding sandboxes run untrusted code safely?",
-  "hook": "Your browser runs untrusted stranger code without exploding.",
-  "about": "Cloud development platforms like Replit allow millions of users to write and execute arbitrary, potentially malicious code in seconds. To prevent hackers from escaping into server infrastructure, modern hosts are replacing heavy containers with ultra-lightweight microVMs.",
-  "surprise": "MicroVMs can boot isolated virtual machines in milliseconds just to run a script.",
-  "series": "How It Works (cutaway)",
-  "audience": "tech & AI",
-  "format": "long",
-  "scores": {
-   "curiosity": [
-    4,
-    "Fascinating look behind everyday developer tools"
-   ],
-   "explainability": [
-    5,
-    "Layers of sandboxes and nested virtualization"
-   ],
-   "shelf_life": [
-    4,
-    "Cloud infrastructure fundamentals evolve very steadily"
-   ],
-   "money": [
-    5,
-    "B2B cloud computing has high value"
-   ]
-  },
-  "risk": "",
-  "search_query": "microVM sandboxing cloud security replit",
-  "wiki_title": "Virtual machine",
-  "stats": {
-   "hn_points": 76,
-   "hn_comments": 26,
-   "wiki_article": "Virtual machine",
-   "wiki_avg_30d": 346,
-   "wiki_views_24h": 380,
-   "wiki_change_pct": 10
-  },
-  "origin": {
-   "time": "2026-11-06T19:06:10+00:00",
-   "hours_ago": 9.5
-  },
-  "sources": [
-   {
-    "src": "hacker_news",
-    "title": "Replit rebuilt its sandbox engine with microVMs",
-    "url": "https://frontier.replit.com/sandbox-engine-microvms-part-1/"
-   }
-  ],
-  "demand": 55,
-  "competition": null,
-  "quality": 90,
-  "opportunity": 68
- },
- {
-  "id": "fa79801cf76c",
-  "key": "how-does-github-store-billions-of-code-commits-efficiently-",
-  "created_at": "2026-11-07T04:34:26.253009+00:00",
-  "kind": "hot",
-  "question": "How does GitHub store billions of code commits efficiently?",
-  "hook": "Storing every software revision on Earth requires wizardry.",
-  "about": "GitHub handles petabytes of version-controlled code repositories with interconnected histories across millions of developers. As traditional file systems hit physical scaling limits, engineers had to re-architect how Git data packets are packaged and indexed.",
-  "surprise": "Git repositories are tracked as directed acyclic graphs across distributed drives.",
-  "series": "How It Works (cutaway)",
-  "audience": "tech & AI",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    4,
-    "Engineers wonder how GitHub scales massively"
-   ],
-   "explainability": [
-    4,
-    "Visual trees, commits, and disk blocks"
-   ],
-   "shelf_life": [
-    4,
-    "Core computer science infrastructure remains relevant"
-   ],
-   "money": [
-    4,
-    "Software developer audience commands high CPMs"
-   ]
-  },
-  "risk": "",
-  "search_query": "how github stores git repositories architecture",
-  "wiki_title": "Git",
-  "stats": {
-   "hn_points": 92,
-   "hn_comments": 17,
-   "wiki_article": "Git",
-   "wiki_avg_30d": 1099,
-   "wiki_views_24h": 964,
-   "wiki_change_pct": -12
-  },
-  "origin": {
-   "time": "2026-11-06T19:24:21+00:00",
-   "hours_ago": 9.2
-  },
-  "sources": [
-   {
-    "src": "hacker_news",
-    "title": "GitHub's new Git storage architecture",
-    "url": "https://github.blog/engineering/architecture-optimization/inside-githubs-new-git-storage-architecture/"
-   }
-  ],
-  "demand": 58,
-  "competition": null,
-  "quality": 80,
-  "opportunity": 66
- },
- {
-  "id": "8548925a0d03",
-  "key": "how-do-digital-card-skimmers-quietly-steal-delivery-orders-",
-  "created_at": "2026-11-07T04:34:26.253009+00:00",
-  "kind": "hot",
-  "question": "How do digital card skimmers quietly steal delivery orders?",
-  "hook": "Your takeout food order just leaked your credit card.",
-  "about": "Cybercriminals target independent restaurant ordering systems by injecting malicious scripts into third-party payment checkout pages. Because the food order still goes through smoothly, customers often have no idea their cards were cloned until fraud alerts appear weeks later.",
-  "surprise": "Online skimmers capture payment data before it even hits the processor.",
-  "series": "How It Works (cutaway)",
-  "audience": "general curious",
-  "format": "short",
-  "scores": {
-   "curiosity": [
-    5,
-    "Directly affects everyday digital consumer habits"
-   ],
-   "explainability": [
-    5,
-    "Clear split-screen animation of data paths"
-   ],
-   "shelf_life": [
-    4,
-    "Web skimming tactics persist across industries"
-   ],
-   "money": [
-    4,
-    "Fintech and cybersecurity ads pay well"
-   ]
-  },
-  "risk": "",
-  "search_query": "restaurant payment skimming cyber attack explained",
-  "wiki_title": "Credit card fraud",
-  "stats": {
-   "hn_points": 105,
-   "hn_comments": 55,
-   "wiki_article": "Credit card fraud",
-   "wiki_avg_30d": 63,
-   "wiki_views_24h": 66,
-   "wiki_change_pct": 4
-  },
-  "origin": {
-   "time": "2026-11-06T19:19:27+00:00",
-   "hours_ago": 9.2
-  },
-  "sources": [
-   {
-    "src": "hacker_news",
-    "title": "Restaurant Delivery Payment-Skimming Campaign",
-    "url": "https://www.infohawk.com/news/2026-11-05-scamwich-restaurant-skimming"
-   }
-  ],
-  "demand": 55,
-  "competition": null,
-  "quality": 90,
-  "opportunity": 68
- },
- {
-  "id": "bc7e19ad6a92",
-  "key": "why-are-ai-data-centers-moving-to-remote-desert-ranches-",
-  "created_at": "2026-11-07T04:34:26.253009+00:00",
-  "kind": "hot",
-  "question": "Why are AI data centers moving to remote desert ranches?",
-  "hook": "Big Tech is buying empty desert land for power.",
-  "about": "Artificial intelligence model training consumes gigawatts of electricity, overwhelming urban municipal power grids. Tech giants like Google are purchasing rural data center sites in places like southeast Wyoming to secure stranded energy and industrial power capacity.",
-  "surprise": "Data center location is now dictated by power grid access, not proximity to users.",
-  "series": "Money Moves (charts)",
-  "audience": "tech & AI",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    4,
-    "Unlikely locations turned into AI supercomputers"
-   ],
-   "explainability": [
-    4,
-    "Maps, transmission lines, and cooling airflow"
-   ],
-   "shelf_life": [
-    4,
-    "AI power demand will dominate decade"
-   ],
-   "money": [
-    5,
-    "Clean energy and AI tech advertising"
-   ]
-  },
-  "risk": "",
-  "search_query": "AI data centers energy crisis wyoming",
-  "wiki_title": "Data center",
-  "stats": {
-   "hn_points": 54,
-   "hn_comments": 9,
-   "wiki_article": "Data center",
-   "wiki_avg_30d": 2148,
-   "wiki_views_24h": 4456,
-   "wiki_change_pct": 107,
-   "yt_results": 85497,
-   "yt_top_views": 8237472,
-   "yt_median_top10_views": 283,
-   "yt_recent_in_top10": 2,
-   "yt_top_title": "Exposing The Dark Side of America's AI Data Center Explosion | View From Above | Business Insider",
-   "yt_top_channel": "Business Insider",
-   "yt_top_url": "https://youtu.be/t-8TDOFqkQA",
-   "yt_query": "AI data centers energy crisis wyoming"
-  },
-  "origin": {
-   "time": "2026-11-06T20:09:14+00:00",
-   "hours_ago": 8.4
-  },
-  "sources": [
-   {
-    "src": "hacker_news",
-    "title": "Google has acquired Crusoe's data center site in southeast Wyoming",
-    "url": "https://www.crusoe.ai/resources/newsroom/crusoe-wyoming-data-center-campus-update"
-   }
-  ],
-  "demand": 95,
-  "competition": 31,
-  "quality": 85,
-  "opportunity": 87
- },
- {
-  "id": "74c0997752cd",
-  "key": "what-is-muhurat-trading-and-why-does-the-stock-market-open-at-night-",
-  "created_at": "2026-11-07T04:34:26.253009+00:00",
-  "kind": "hot",
-  "question": "What is Muhurat Trading and why does the stock market open at night?",
-  "hook": "The stock market opens for exactly one lucky hour.",
-  "about": "During the festival of Diwali, Indian stock exchanges open for a special one-hour evening trading window known as Muhurat Trading. Rooted in traditional accounting practices, traders execute symbolic orders to invite wealth and prosperity for the new financial year.",
-  "surprise": "Brokers open trading for just sixty minutes to buy symbolic token investments.",
-  "series": "True Weird Stories (comic)",
-  "audience": "India-first",
-  "format": "short",
-  "scores": {
-   "curiosity": [
-    4,
-    "Unique blend of ancient tradition and markets"
-   ],
-   "explainability": [
-    5,
-    "Fun cartoon of stock tickers and lamps"
-   ],
-   "shelf_life": [
-    4,
-    "Happens predictably every single calendar year"
-   ],
-   "money": [
-    4,
-    "Financial brokerages eagerly sponsor trading content"
-   ]
-  },
-  "risk": "",
-  "search_query": "diwali muhurat trading tradition stock market",
-  "wiki_title": "Muhurat trading",
-  "stats": {
-   "google_searches": "2000+",
-   "google_geo": "IN",
-   "wiki_article": "Muhurat trading",
-   "wiki_avg_30d": 35,
-   "wiki_views_24h": 339,
-   "wiki_change_pct": 866
-  },
-  "origin": {
-   "time": "2026-11-06T20:00:00-08:00",
-   "hours_ago": 0.6
-  },
-  "sources": [
-   {
-    "src": "google_trends_IN",
-    "title": "diwali muhurat trading 2026",
-    "url": "https://www.moneycontrol.com/news/business/markets/diwali-stock-picks-2026-titan-icici-bank-hdfc-bank-bse-eternal-among-25-stocks-with-up-to-46-upside-for-samvat-2083-check-target-prices-14072831.html"
-   }
-  ],
-  "demand": 59,
-  "competition": null,
-  "quality": 85,
-  "opportunity": 68
- },
- {
-  "id": "914f87d3d821",
-  "key": "how-did-the-adult-entertainment-industry-get-its-own-domain-extension-",
-  "created_at": "2026-11-07T04:34:26.253009+00:00",
-  "kind": "hot",
-  "question": "How did the adult entertainment industry get its own domain extension?",
-  "hook": "The fight over three letters on the internet.",
-  "about": "The creation of top-level internet domains sparked an intense decade-long regulatory battle over the launch of the .xxx extension. ICANN weighed moral debates, trademark protection concerns, and free speech arguments before finally greenlighting the red-light district of the web.",
-  "surprise": "Mainstream brands spent millions pre-emptively buying their own .xxx domains just to block them.",
-  "series": "What Actually Happened (mini-doc)",
-  "audience": "general curious",
-  "format": "long",
-  "scores": {
-   "curiosity": [
-    5,
-    "Unusual behind-the-scenes internet governance story"
-   ],
-   "explainability": [
-    4,
-    "DNS routing diagrams mixed with boardrooms"
-   ],
-   "shelf_life": [
-    5,
-    "Historical internet culture documentary format"
-   ],
-   "money": [
-    2,
-    "Domain topic intersects adult industry keywords"
-   ]
-  },
-  "risk": "Adult industry topic; keep purely focused on domain policy and ICANN.",
-  "search_query": "history of xxx domain icann controversy",
-  "wiki_title": ".xxx",
-  "stats": {
-   "wiki_views_24h": 199678,
-   "wiki_change_pct": -13,
-   "wiki_7d": [
-    358084,
-    296412,
-    197312,
-    172419,
-    255014,
-    174839,
-    159311,
-    199678
-   ],
-   "wiki_article": ".xxx",
-   "wiki_avg_30d": 145547,
-   "yt_results": 5,
-   "yt_top_views": 1496023,
-   "yt_median_top10_views": 401,
-   "yt_recent_in_top10": 0,
-   "yt_top_title": "Lec-81: Domain Name System (DNS) in computer Networks",
-   "yt_top_channel": "Gate Smashers",
-   "yt_top_url": "https://youtu.be/vhfRArT11jc",
-   "yt_query": "history of xxx domain icann controversy"
-  },
-  "origin": null,
-  "sources": [
-   {
-    "src": "wikipedia",
-    "title": ".xxx",
-    "url": "https://en.wikipedia.org/wiki/.xxx"
-   }
-  ],
-  "demand": 92,
-  "competition": 26,
-  "quality": 80,
-  "opportunity": 84
- },
- {
-  "id": "e61045911f76",
-  "key": "how-tall-could-a-jenga-tower-theoretically-get-",
-  "created_at": "2026-11-07T04:34:26.253009+00:00",
-  "kind": "hot",
-  "question": "How tall could a Jenga tower theoretically get?",
-  "hook": "What if you built Jenga without gravity limits?",
-  "about": "Jenga math explores the theoretical overhang and structural height possible with standard blocks. Engineers use harmonic series and center-of-mass equations to test real-world stacking extremes.",
-  "surprise": "How many blocks can theoretically overhang before tumbling?",
-  "series": "What If? (stickman)",
-  "audience": "students",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    5,
-    "Everyone has played and collapsed Jenga."
-   ],
-   "explainability": [
-    5,
-    "Simple wooden blocks are easily animated."
-   ],
-   "shelf_life": [
-    5,
-    "Physics of block stacking never expires."
-   ],
-   "money": [
-    2,
-    "Toy physics attracts low ad rates."
-   ]
-  },
-  "risk": "",
-  "search_query": "jenga physics theoretical limit",
-  "wiki_title": "Block-stacking problem",
-  "stats": {
-   "hn_points": 8,
-   "hn_comments": 4,
-   "wiki_article": "Block-stacking problem",
-   "wiki_avg_30d": 44,
-   "wiki_views_24h": 39,
-   "wiki_change_pct": -12
-  },
-  "origin": {
-   "time": "2026-11-05T02:19:18+00:00",
-   "hours_ago": 50.3
-  },
-  "sources": [
-   {
-    "src": "hacker_news",
-    "title": "How tall can you build with 54 Jenga blocks?",
-    "url": "https://johnjwang.com/post/2026/10/25/tallest-jenga-tower"
-   }
-  ],
-  "demand": 30,
-  "competition": null,
-  "quality": 85,
-  "opportunity": 55
- },
- {
-  "id": "d5b979179c14",
-  "key": "who-decides-what-new-emojis-get-added-to-your-phone-",
-  "created_at": "2026-11-07T04:34:26.253009+00:00",
-  "kind": "hot",
-  "question": "Who decides what new emojis get added to your phone?",
-  "hook": "Your keyboard is running out of emoji room.",
-  "about": "The Unicode Consortium governs how symbols and characters are encoded across digital devices worldwide. As keyboards expand past thousands of symbols, designers are debating how future emojis are generated.",
-  "surprise": "How does Unicode plan to standardize the next 4000 emoji?",
-  "series": "How It Works (cutaway)",
-  "audience": "tech & AI",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    4,
-    "Everyone uses emojis without knowing governance."
-   ],
-   "explainability": [
-    5,
-    "Icons and pixel grids animate cleanly."
-   ],
-   "shelf_life": [
-    4,
-    "Unicode standards update slowly over years."
-   ],
-   "money": [
-    3,
-    "Consumer tech commands decent digital rates."
-   ]
-  },
-  "risk": "",
-  "search_query": "how emojis are approved unicode",
-  "wiki_title": "Unicode Consortium",
-  "stats": {
-   "hn_points": 15,
-   "hn_comments": 3,
-   "wiki_article": "Unicode Consortium",
-   "wiki_avg_30d": 94,
-   "wiki_views_24h": 96,
-   "wiki_change_pct": 2
-  },
-  "origin": {
-   "time": "2026-11-05T20:46:26+00:00",
-   "hours_ago": 31.8
-  },
-  "sources": [
-   {
-    "src": "hacker_news",
-    "title": "What do the next 4000 emoji look like?",
-    "url": "https://jenniferdaniel.substack.com/p/what-do-the-next-4000-emoji-look"
-   }
-  ],
-  "demand": 36,
-  "competition": null,
-  "quality": 80,
-  "opportunity": 56
- },
- {
-  "id": "c5143c3d1f3a",
-  "key": "is-the-current-ai-boom-repeating-the-dot-com-crash-",
-  "created_at": "2026-11-07T04:34:26.253009+00:00",
-  "kind": "hot",
-  "question": "Is the current AI boom repeating the dot-com crash?",
-  "hook": "History says every tech revolution crashes first.",
-  "about": "Investors are comparing recent artificial intelligence market swings against historic market crashes like the dot-com bubble. Examining capital expenditure versus actual enterprise revenues reveals structural similarities to past tech sell-offs.",
-  "surprise": "Are modern AI private valuations actually outstripping dot-com peaks?",
-  "series": "Money Moves (charts)",
-  "audience": "finance & crypto",
-  "format": "long",
-  "scores": {
-   "curiosity": [
-    5,
-    "Massive public interest in AI bubbles."
-   ],
-   "explainability": [
-    4,
-    "Comparative chart overlays show clear trends."
-   ],
-   "shelf_life": [
-    4,
-    "Economic cycle lessons remain broadly relevant."
-   ],
-   "money": [
-    5,
-    "Finance and investing audiences pay top."
-   ]
-  },
-  "risk": "",
-  "search_query": "ai bubble compared to dot com",
-  "wiki_title": "Dot-com bubble",
-  "stats": {
-   "hn_points": 259,
-   "hn_comments": 516,
-   "wiki_article": "Dot-com bubble",
-   "wiki_avg_30d": 1910,
-   "wiki_views_24h": 3196,
-   "wiki_change_pct": 67
-  },
-  "origin": {
-   "time": "2026-11-06T16:54:36+00:00",
-   "hours_ago": 11.7
-  },
-  "sources": [
-   {
-    "src": "hacker_news",
-    "title": "The AI sell-off compared to well-known stock market crashes",
-    "url": "https://www.kadoa.com/companies/insights/ai-selloff-perspective"
-   },
-   {
-    "src": "hacker_news",
-    "title": "Anthropic IPO buyers see valuation as low as $1.1T",
-    "url": "https://www.bloomberg.com/news/articles/2026-11-06/anthropic-ipo-valuation-expectations-pressured-after-ai-rout"
-   }
-  ],
-  "demand": 70,
-  "competition": null,
-  "quality": 90,
-  "opportunity": 75
- },
- {
-  "id": "87f3b7bf5aae",
-  "key": "why-is-net-neutrality-still-being-fought-over-today-",
-  "created_at": "2026-11-07T04:34:26.253009+00:00",
-  "kind": "hot",
-  "question": "Why is net neutrality still being fought over today?",
-  "hook": "Internet providers want fast lanes for websites.",
-  "about": "Net neutrality rules dictate whether internet service providers can throttle or prioritize specific web traffic. Decade-long court battles and regulatory ping-pong keep shifting how data travels to your screen.",
-  "surprise": "How many times has net neutrality policy flipped?",
-  "series": "What Actually Happened (mini-doc)",
-  "audience": "tech & AI",
-  "format": "long",
-  "scores": {
-   "curiosity": [
-    4,
-    "Affects everyday internet speeds and costs."
-   ],
-   "explainability": [
-    5,
-    "Data pipelines and tollbooths animate well."
-   ],
-   "shelf_life": [
-    4,
-    "Core networking policy debates endure constantly."
-   ],
-   "money": [
-    4,
-    "Telecom and tech policy attracts advertisers."
-   ]
-  },
-  "risk": "",
-  "search_query": "net neutrality explained fcc rules",
-  "wiki_title": "Net neutrality in the United States",
-  "stats": {
-   "wiki_article": "Net neutrality in the United States",
-   "wiki_avg_30d": 71,
-   "wiki_views_24h": 93,
-   "wiki_change_pct": 31
-  },
-  "origin": {
-   "time": "2026-11-07T00:47:28+00:00",
-   "hours_ago": 3.8
-  },
-  "sources": [
-   {
-    "src": "reddit_r/OutOfTheLoop",
-    "title": "What's going on with Net Neutrality?",
-    "url": "https://www.reddit.com/r/OutOfTheLoop/comments/1xpt4wp/whats_going_on_with_net_neutrality/"
-   }
-  ],
-  "demand": 34,
-  "competition": null,
-  "quality": 85,
-  "opportunity": 57
- },
- {
-  "id": "6ebb132cf521",
-  "key": "how-do-hackers-steal-millions-from-crypto-smart-contracts-",
-  "created_at": "2026-11-07T04:34:26.253009+00:00",
-  "kind": "hot",
-  "question": "How do hackers steal millions from crypto smart contracts?",
-  "hook": "One missing line drained forty million dollars.",
-  "about": "Smart contracts and crypto exchanges routinely lose millions to withdrawal logic flaws and frontend hijacks. Breaking down these exploit mechanisms shows why autonomous financial code remains fragile.",
-  "surprise": "Mercado Bitcoin lost $40.0M to an unknown exploit vector.",
-  "series": "How It Works (cutaway)",
-  "audience": "finance & crypto",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    4,
-    "Huge dollar figures always draw eyeballs."
-   ],
-   "explainability": [
-    4,
-    "Contract logic bugs map onto diagrams."
-   ],
-   "shelf_life": [
-    3,
-    "Specific exploits age, but concepts stick."
-   ],
-   "money": [
-    5,
-    "Cybersecurity and crypto yield premium CPMs."
-   ]
-  },
-  "risk": "",
-  "search_query": "how smart contracts get hacked",
-  "wiki_title": "Cryptocurrency and crime",
-  "stats": {
-   "hack_usd": 40000000,
-   "wiki_article": "Cryptocurrency and crime",
-   "wiki_avg_30d": 130,
-   "wiki_views_24h": 135,
-   "wiki_change_pct": 3
-  },
-  "origin": {
-   "time": "2026-10-27T00:00:00+00:00",
-   "hours_ago": 268.6
-  },
-  "sources": [
-   {
-    "src": "defillama_hacks",
-    "title": "Predict Fun hack: $0.4M via Frontend Compromise",
-    "url": "https://defillama.com/hacks"
-   },
-   {
-    "src": "defillama_hacks",
-    "title": "Premia V3 hack: $0.4M via Withdrawal Logic Flaw",
-    "url": "https://defillama.com/hacks"
-   },
-   {
-    "src": "defillama_hacks",
-    "title": "Mercado Bitcoin hack: $40.0M via Unknown",
-    "url": "https://defillama.com/hacks"
-   },
-   {
-    "src": "defillama_hacks",
-    "title": "TENDRIL hack: $0.6M via Swap Logic Flaw",
-    "url": "https://defillama.com/hacks"
-   }
-  ],
-  "demand": 38,
-  "competition": null,
-  "quality": 80,
-  "opportunity": 57
- },
- {
-  "id": "8aaa8b1a6dde",
-  "key": "can-small-ai-models-beat-giants-by-asking-for-help-",
-  "created_at": "2026-11-07T04:34:26.253009+00:00",
-  "kind": "hot",
-  "question": "Can small AI models beat giants by asking for help?",
-  "hook": "Tiny AI models just found a cheat-code.",
-  "about": "Model cascading routes easy prompts through lightweight models and delegates tough queries to expensive frontier models. This hybrid workflow delivers state-of-the-art accuracy at a fraction of the operating cost.",
-  "surprise": "Cascading can achieve flagship accuracy at 4x lower cost.",
-  "series": "Versus (scoreboard)",
-  "audience": "tech & AI",
-  "format": "short",
-  "scores": {
-   "curiosity": [
-    4,
-    "Clever architectural trick solving huge costs."
-   ],
-   "explainability": [
-    4,
-    "Routing flowcharts and scoreboards work brilliantly."
-   ],
-   "shelf_life": [
-    4,
-    "Model routing architectures are becoming standard."
-   ],
-   "money": [
-    5,
-    "B2B AI engineering tools pay well."
-   ]
-  },
-  "risk": "",
-  "search_query": "llm model cascading routing cost",
-  "wiki_title": "Large language model",
-  "stats": {
-   "hn_points": 390,
-   "hn_comments": 87,
-   "wiki_article": "Large language model",
-   "wiki_avg_30d": 3418,
-   "wiki_views_24h": 2817,
-   "wiki_change_pct": -18
-  },
-  "origin": {
-   "time": "2026-11-06T19:48:51+00:00",
-   "hours_ago": 8.8
-  },
-  "sources": [
-   {
-    "src": "hacker_news",
-    "title": "A Jev that can ask Opus for help gives Opus accuracy at 4x lower cost",
-    "url": "https://hightouch.com/blog/llm-judges-identity-resolution"
-   }
-  ],
-  "demand": 75,
-  "competition": null,
-  "quality": 85,
-  "opportunity": 75
- },
- {
-  "id": "7487d968b80e",
-  "key": "why-did-tech-startups-suddenly-abandon-com-for-xyz-",
-  "created_at": "2026-11-07T04:34:26.253009+00:00",
-  "kind": "hot",
-  "question": "Why did tech startups suddenly abandon .com for .xyz?",
-  "hook": "How three cheap letters shook the internet.",
-  "about": "The .xyz top-level domain launched as a cheap alternative to saturated .com names before exploding into tech and crypto prominence. Its adoption by major corporations and decentralized projects turned an oddity into digital prime real estate.",
-  "surprise": "How did Alphabet choose abc.xyz over traditional domains?",
-  "series": "True Weird Stories (comic)",
-  "audience": "tech & AI",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    4,
-    "People notice weird URL endings everywhere."
-   ],
-   "explainability": [
-    4,
-    "Domain registry auctions make fun animations."
-   ],
-   "shelf_life": [
-    5,
-    "Domain naming history stays relevant indefinitely."
-   ],
-   "money": [
-    4,
-    "Web hosting and registrars sponsor heavily."
-   ]
-  },
-  "risk": "",
-  "search_query": "xyz domain name history alphabet",
-  "wiki_title": ".xyz",
-  "stats": {
-   "wiki_views_24h": 209858,
-   "wiki_change_pct": 85,
-   "wiki_7d": [
-    29480,
-    31598,
-    52164,
-    65692,
-    104155,
-    254329,
-    255809,
-    209858
-   ],
-   "wiki_article": ".xyz",
-   "wiki_avg_30d": 61698
-  },
-  "origin": null,
-  "sources": [
-   {
-    "src": "wikipedia",
-    "title": ".xyz",
-    "url": "https://en.wikipedia.org/wiki/.xyz"
-   }
-  ],
-  "demand": 88,
-  "competition": null,
-  "quality": 85,
-  "opportunity": 81
  }
 ]
