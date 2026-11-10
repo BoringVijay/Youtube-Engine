@@ -1,19 +1,19 @@
 {
- "at": "2026-11-10T18:11:26+00:00",
+ "at": "2026-11-10T21:21:38+00:00",
  "range": [
   "2026-10-13",
   "2026-11-10"
  ],
  "note": "YouTube Analytics lags 1-2 days; live view counts come from the Data API.",
  "totals": {
-  "views": 6,
-  "estimatedMinutesWatched": 1,
-  "averageViewDuration": 19,
-  "averageViewPercentage": 48.46,
-  "likes": 0,
+  "views": 2530,
+  "estimatedMinutesWatched": 650,
+  "averageViewDuration": 26,
+  "averageViewPercentage": 44.51,
+  "likes": 63,
   "comments": 0,
   "shares": 0,
-  "subscribersGained": 0
+  "subscribersGained": 8
  },
  "daily": [
   [
@@ -145,7 +145,73 @@
    "2026-11-07",
    4,
    0
+  ],
+  [
+   "2026-11-08",
+   2524,
+   8
   ]
  ],
- "videos": {}
+ "videos": {
+  "CbelA-zMxmM": {
+   "views": 1288,
+   "estimatedMinutesWatched": 409,
+   "averageViewDuration": 33,
+   "averageViewPercentage": 55.779999999999994,
+   "likes": 38,
+   "comments": 0,
+   "shares": 0,
+   "subscribersGained": 2
+  },
+  "TwXuZG8N-Os": {
+   "views": 1223,
+   "estimatedMinutesWatched": 238,
+   "averageViewDuration": 19,
+   "averageViewPercentage": 32.75,
+   "likes": 23,
+   "comments": 0,
+   "shares": 0,
+   "subscribersGained": 5
+  },
+  "GrB6YuCN4Fk": {
+   "views": 5,
+   "estimatedMinutesWatched": 0,
+   "averageViewDuration": 0,
+   "averageViewPercentage": 0,
+   "likes": 0,
+   "comments": 0,
+   "shares": 0,
+   "subscribersGained": 0
+  },
+  "wpG1WkDJjsI": {
+   "views": 4,
+   "estimatedMinutesWatched": 0,
+   "averageViewDuration": 19,
+   "averageViewPercentage": 25.71,
+   "likes": 1,
+   "comments": 0,
+   "shares": 0,
+   "subscribersGained": 0
+  },
+  "YwRe1Sds0hw": {
+   "views": 2,
+   "estimatedMinutesWatched": 0,
+   "averageViewDuration": 0,
+   "averageViewPercentage": 0,
+   "likes": 1,
+   "comments": 0,
+   "shares": 0,
+   "subscribersGained": 0
+  },
+  "2v5m1XtzISE": {
+   "views": 1,
+   "estimatedMinutesWatched": 0,
+   "averageViewDuration": 0,
+   "averageViewPercentage": 0,
+   "likes": 0,
+   "comments": 0,
+   "shares": 0,
+   "subscribersGained": 0
+  }
+ }
 }
