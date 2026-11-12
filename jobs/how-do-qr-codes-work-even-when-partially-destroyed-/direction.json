@@ -1,0 +1,349 @@
+{
+ "format": "short",
+ "universe": {
+  "name": "Studio Lumina",
+  "studio": "Light-Floor Grid",
+  "why": "A QR code is literally a grid of binary data. Making it a physical, interactive glowing floor turns abstract algebra into a tangible puzzle that visually rebuilds itself.",
+  "pacing": "Deliberate and mechanical, escalating into frantic slapstick, ending in an abrupt deadpan stop.",
+  "signature_shot": "The penguin standing in pitch darkness with only its glowing white eye-rings visible after shattering the crucial corner square.",
+  "medium_break": "The penguin destroys the corner tile and the entire medium's lighting grid hard-cuts to black, shutting down the universe.",
+  "look_bible": "Retro-futuristic 1980s arcade light-floor medium. Thick frosted glass tiles (pure white and obsidian black) set in a heavy brushed steel grid. Illuminated from beneath with intense neon glows. Deep shadows, volumetric fog rolling across the floor, anamorphic lens flares, macro scale depth of field. Palette: obsidian, frosted white, neon magenta, cyan. The motion feels like heavy physical switches clicking and glass sliding.",
+  "penguin_render": "Chubby steel/acrylic penguin with a brushed steel back, frosted white acrylic belly, glowing neon orange feet, and three thin steel wire feathers on top.",
+  "palette": {
+   "paper": "#0f0f12",
+   "ink": "#f2f2f5",
+   "accent": "#ff00ff",
+   "accent2": "#00ffff"
+  },
+  "font": "mono",
+  "film": "clean",
+  "grain": 0.2,
+  "vignette": 0.6,
+  "music": "1980s synthwave arcade loop with heavy bass pulses and analog synthesizer arpeggios, instrumental",
+  "letterbox": false
+ },
+ "penguin": {
+  "role": "villain",
+  "arc": "Wants to destroy the floor for fun, gets frustrated when it keeps repairing itself, finally discovers the fatal flaw and ruins it completely."
+ },
+ "keyframes": {
+  "k01": {
+   "id": "k01",
+   "seq": 0,
+   "prompt": "Mid-angle of a glowing frosted glass QR floor made of white and obsidian square tiles. A chubby steel/acrylic penguin (brushed steel back, frosted white acrylic belly, glowing neon orange feet, three thin steel wire feathers) stands holding a heavy steel mallet. Retro-futuristic 1980s arcade light-floor medium. Thick frosted glass tiles set in a heavy brushed steel grid. Illuminated from beneath with intense neon glows. Deep shadows, volumetric fog rolling across the floor, anamorphic lens flares, macro scale depth of field.",
+   "penguin": "standing on the grid holding a heavy steel mallet",
+   "prev": null
+  },
+  "k02": {
+   "id": "k02",
+   "seq": 0,
+   "prompt": "The camera is 20 percent closer. The steel/acrylic penguin raises the heavy steel mallet high above a cluster of glowing white glass tiles. Retro-futuristic 1980s arcade light-floor medium. Thick frosted glass tiles set in a heavy brushed steel grid. Illuminated from beneath with intense neon glows. Deep shadows, volumetric fog rolling across the floor, anamorphic lens flares, macro scale depth of field.",
+   "penguin": "raising the heavy steel mallet high above its head, ready to strike",
+   "prev": "k01"
+  },
+  "k03": {
+   "id": "k03",
+   "seq": 0,
+   "prompt": "The camera is tilted down slightly. The mallet impacts the glass tiles, sending thick frosted glass shards flying, leaving a dark, unlit hole in the grid. The steel/acrylic penguin follows through the swing. Retro-futuristic 1980s arcade light-floor medium. Thick frosted glass tiles set in a heavy brushed steel grid. Illuminated from beneath with intense neon glows. Deep shadows, volumetric fog rolling across the floor, anamorphic lens flares, macro scale depth of field.",
+   "penguin": "following through on a heavy mallet swing, smashing the tiles",
+   "prev": "k02"
+  },
+  "k04": {
+   "id": "k04",
+   "seq": 0,
+   "prompt": "The camera pans horizontally to reveal a section of the floor that is a 1D barcode made of long, striped glass panels. The steel/acrylic penguin stares blankly at the stripes, the mallet resting on the floor. Retro-futuristic 1980s arcade light-floor medium. Thick frosted glass tiles set in a heavy brushed steel grid. Illuminated from beneath with intense neon glows. Deep shadows, volumetric fog rolling across the floor, anamorphic lens flares, macro scale depth of field.",
+   "penguin": "staring blankly at the striped barcode section, mallet resting on the floor",
+   "prev": "k03"
+  },
+  "k05": {
+   "id": "k05",
+   "seq": 1,
+   "prompt": "Overhead angle of the main QR grid, healthy glass tiles glowing bright white and obsidian black. Retro-futuristic 1980s arcade light-floor medium. Thick frosted glass tiles set in a heavy brushed steel grid. Illuminated from beneath with intense neon glows. Deep shadows, volumetric fog rolling across the floor, anamorphic lens flares, macro scale depth of field.",
+   "penguin": null,
+   "prev": null
+  },
+  "k06": {
+   "id": "k06",
+   "seq": 1,
+   "prompt": "The camera pushes in 30 percent towards the top-left corner of the grid, focusing on the massive concentric corner square glowing brightly. Retro-futuristic 1980s arcade light-floor medium. Thick frosted glass tiles set in a heavy brushed steel grid. Illuminated from beneath with intense neon glows. Deep shadows, volumetric fog rolling across the floor, anamorphic lens flares, macro scale depth of field.",
+   "penguin": null,
+   "prev": "k05"
+  },
+  "k07": {
+   "id": "k07",
+   "seq": 1,
+   "prompt": "The camera tilts up to frame the massive concentric corner square. The steel/acrylic penguin is leaning casually against the outer edge of the square, dwarfed by its massive size. Retro-futuristic 1980s arcade light-floor medium. Thick frosted glass tiles set in a heavy brushed steel grid. Illuminated from beneath with intense neon glows. Deep shadows, volumetric fog rolling across the floor, anamorphic lens flares, macro scale depth of field.",
+   "penguin": "leaning casually against the giant corner square, looking small",
+   "prev": "k06"
+  },
+  "k08": {
+   "id": "k08",
+   "seq": 2,
+   "prompt": "Technical blueprint of a QR grid on deep blue drafting paper. Clean white technical lines map the data pathways, with intricate mathematical symbols. Blueprint / technical cutaway medium. Crisp linework, cyan glows, paper texture, top-down orthographic view.",
+   "penguin": null,
+   "prev": null
+  },
+  "k09": {
+   "id": "k09",
+   "seq": 2,
+   "prompt": "The camera drifts across the blueprint. The mapped data pathways illuminate in bright neon cyan, simulating data flow across the technical grid. Blueprint / technical cutaway medium. Crisp linework, cyan glows, paper texture, top-down orthographic view.",
+   "penguin": null,
+   "prev": "k08"
+  },
+  "k10": {
+   "id": "k10",
+   "seq": 3,
+   "prompt": "Mid shot of a dark, unlit hole in the glowing glass floor where tiles are missing. Retro-futuristic 1980s arcade light-floor medium. Thick frosted glass tiles set in a heavy brushed steel grid. Illuminated from beneath with intense neon glows. Deep shadows, volumetric fog rolling across the floor, anamorphic lens flares, macro scale depth of field.",
+   "penguin": null,
+   "prev": null
+  },
+  "k11": {
+   "id": "k11",
+   "seq": 3,
+   "prompt": "The camera pushes in 20 percent. Liquid neon magenta light flows into the dark hole, filling the empty steel grid spaces. Retro-futuristic 1980s arcade light-floor medium. Thick frosted glass tiles set in a heavy brushed steel grid. Illuminated from beneath with intense neon glows. Deep shadows, volumetric fog rolling across the floor, anamorphic lens flares, macro scale depth of field.",
+   "penguin": null,
+   "prev": "k10"
+  },
+  "k12": {
+   "id": "k12",
+   "seq": 3,
+   "prompt": "The camera tilts up slightly. The magenta light solidifies into fresh, pristine frosted glass tiles. The steel/acrylic penguin steps into the frame, gripping the mallet. Retro-futuristic 1980s arcade light-floor medium. Thick frosted glass tiles set in a heavy brushed steel grid. Illuminated from beneath with intense neon glows. Deep shadows, volumetric fog rolling across the floor, anamorphic lens flares, macro scale depth of field.",
+   "penguin": "stepping into the frame, gripping the mallet tightly",
+   "prev": "k11"
+  },
+  "k13": {
+   "id": "k13",
+   "seq": 3,
+   "prompt": "The camera cranes up 30 percent to a wider view. The steel/acrylic penguin frantically swings the mallet, smashing a massive circular swath of tiles around him into unlit dark shards. Retro-futuristic 1980s arcade light-floor medium. Thick frosted glass tiles set in a heavy brushed steel grid. Illuminated from beneath with intense neon glows. Deep shadows, volumetric fog rolling across the floor, anamorphic lens flares, macro scale depth of field.",
+   "penguin": "frantically swinging the mallet in a circle, destroying a huge swath of tiles",
+   "prev": "k12"
+  },
+  "k14": {
+   "id": "k14",
+   "seq": 3,
+   "prompt": "The camera pushes in 20 percent on the destroyed circle. The entire broken area flashes with bright magenta neon and instantly replaces itself with pristine glass tiles. The steel/acrylic penguin drops the mallet in shock. Retro-futuristic 1980s arcade light-floor medium. Thick frosted glass tiles set in a heavy brushed steel grid. Illuminated from beneath with intense neon glows. Deep shadows, volumetric fog rolling across the floor, anamorphic lens flares, macro scale depth of field.",
+   "penguin": "dropping the mallet in complete shock as the floor repairs itself",
+   "prev": "k13"
+  },
+  "k15": {
+   "id": "k15",
+   "seq": 3,
+   "prompt": "The camera tilts down 20 percent. A massive, heavy solid steel emblem drops from above, permanently crushing the center tiles of the grid. The steel/acrylic penguin stands nearby, unharmed, as the surrounding tiles continue to glow happily. Retro-futuristic 1980s arcade light-floor medium. Thick frosted glass tiles set in a heavy brushed steel grid. Illuminated from beneath with intense neon glows. Deep shadows, volumetric fog rolling across the floor, anamorphic lens flares, macro scale depth of field.",
+   "penguin": "standing nearby, watching the giant steel emblem crush the center",
+   "prev": "k14"
+  },
+  "k16": {
+   "id": "k16",
+   "seq": 4,
+   "prompt": "Close-up of a pristine, giant concentric corner square made of glowing glass blocks. The steel/acrylic penguin approaches, dragging his heavy mallet. Retro-futuristic 1980s arcade light-floor medium. Thick frosted glass tiles set in a heavy brushed steel grid. Illuminated from beneath with intense neon glows. Deep shadows, volumetric fog rolling across the floor, anamorphic lens flares, macro scale depth of field.",
+   "penguin": "dragging the heavy mallet, approaching the pristine corner square",
+   "prev": null
+  },
+  "k17": {
+   "id": "k17",
+   "seq": 4,
+   "prompt": "The camera pulls back 20 percent. The steel/acrylic penguin swings the heavy mallet horizontally into the giant corner square. Retro-futuristic 1980s arcade light-floor medium. Thick frosted glass tiles set in a heavy brushed steel grid. Illuminated from beneath with intense neon glows. Deep shadows, volumetric fog rolling across the floor, anamorphic lens flares, macro scale depth of field.",
+   "penguin": "swinging the heavy mallet forcefully into the giant corner square",
+   "prev": "k16"
+  },
+  "k18": {
+   "id": "k18",
+   "seq": 4,
+   "prompt": "The camera pushes in 20 percent. The giant corner square completely shatters into hundreds of dark, unlit glass pieces. Retro-futuristic 1980s arcade light-floor medium. Thick frosted glass tiles set in a heavy brushed steel grid. Illuminated from beneath with intense neon glows. Deep shadows, volumetric fog rolling across the floor, anamorphic lens flares, macro scale depth of field.",
+   "penguin": "following through the swing as the corner shatters completely",
+   "prev": "k17"
+  },
+  "k19": {
+   "id": "k19",
+   "seq": 4,
+   "prompt": "The camera cranes up 30 percent. Every single neon light on the entire floor shuts off instantly, leaving only pitch blackness and the steel/acrylic penguin's glowing white eye-rings visible in the dark. Retro-futuristic 1980s arcade light-floor medium. Thick frosted glass tiles set in a heavy brushed steel grid. Illuminated from beneath with intense neon glows. Deep shadows, volumetric fog rolling across the floor, anamorphic lens flares, macro scale depth of field.",
+   "penguin": "standing in pitch darkness, only its glowing white eye-rings are visible",
+   "prev": "k18"
+  }
+ },
+ "shots": [
+  {
+   "id": "s01",
+   "seq": 0,
+   "from": "k01",
+   "to": "k02",
+   "cue": "Punch holes in a",
+   "motion": "Camera pushes in 20 percent as the penguin raises the heavy mallet.",
+   "overlay": null,
+   "transition": "cut",
+   "sfx": "heavy metallic clink",
+   "serious": false
+  },
+  {
+   "id": "s02",
+   "seq": 0,
+   "from": "k02",
+   "to": "k03",
+   "cue": "code. It still scans.",
+   "motion": "Camera tilts down slightly as the mallet strikes, shattering the glass tiles into a dark hole.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "thick glass shattering",
+   "serious": false
+  },
+  {
+   "id": "s03",
+   "seq": 0,
+   "from": "k03",
+   "to": "k04",
+   "cue": "A regular barcode is",
+   "motion": "Camera pans horizontally to reveal the long barcode stripes.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "sliding glass hum",
+   "serious": false
+  },
+  {
+   "id": "s04",
+   "seq": 1,
+   "from": "k05",
+   "to": "k06",
+   "cue": "A QR code is",
+   "motion": "Camera pushes in 30 percent overhead towards the glowing corner square.",
+   "overlay": null,
+   "transition": "cut",
+   "sfx": "electric hum",
+   "serious": false
+  },
+  {
+   "id": "s05",
+   "seq": 1,
+   "from": "k06",
+   "to": "k07",
+   "cue": "Those three big squares",
+   "motion": "Camera tilts up to reveal the penguin leaning against the massive corner structure.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "deep bass thrum",
+   "serious": false
+  },
+  {
+   "id": "s06",
+   "seq": 2,
+   "from": "k08",
+   "to": "k09",
+   "cue": "But your message isn't",
+   "motion": "Camera drifts slowly across the blueprint as the cyan technical pathways light up.",
+   "overlay": {
+    "type": "label",
+    "text": "Reed-Solomon Math",
+    "pos": "top"
+   },
+   "transition": "cut",
+   "sfx": "clean synth pulses",
+   "serious": false
+  },
+  {
+   "id": "s07",
+   "seq": 3,
+   "from": "k10",
+   "to": "k11",
+   "cue": "Think of a puzzle",
+   "motion": "Camera pushes in 20 percent as liquid magenta light fills the dark empty space.",
+   "overlay": null,
+   "transition": "cut",
+   "sfx": "liquid neon flowing",
+   "serious": false
+  },
+  {
+   "id": "s08",
+   "seq": 3,
+   "from": "k11",
+   "to": "k12",
+   "cue": "Your phone reads whatever",
+   "motion": "Camera tilts up slightly as the magenta light hardens into pristine glass tiles and the penguin steps in.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "satisfying mechanical snap",
+   "serious": false
+  },
+  {
+   "id": "s09",
+   "seq": 3,
+   "from": "k12",
+   "to": "k13",
+   "cue": "At the highest setting,",
+   "motion": "Camera cranes up 30 percent to reveal the penguin frantically smashing a huge area of the floor.",
+   "overlay": {
+    "type": "counter",
+    "value": 30,
+    "suffix": "%",
+    "text": "damage capacity",
+    "pos": "top"
+   },
+   "transition": "chain",
+   "sfx": "rapid chaotic glass breaking",
+   "serious": false
+  },
+  {
+   "id": "s10",
+   "seq": 3,
+   "from": "k13",
+   "to": "k14",
+   "cue": "can be wrecked and",
+   "motion": "Camera pushes in 20 percent as the huge damaged area flashes magenta and instantly rebuilds.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "massive synth chord repair",
+   "serious": false
+  },
+  {
+   "id": "s11",
+   "seq": 3,
+   "from": "k14",
+   "to": "k15",
+   "cue": "That's why some codes",
+   "motion": "Camera tilts down 20 percent as a heavy steel emblem slams into the center.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "heavy metallic slam",
+   "serious": false
+  },
+  {
+   "id": "s12",
+   "seq": 4,
+   "from": "k16",
+   "to": "k17",
+   "cue": "Just spare the corner",
+   "motion": "Camera pulls back 20 percent as the penguin winds up a huge horizontal swing.",
+   "overlay": null,
+   "transition": "cut",
+   "sfx": "heavy dragging sound",
+   "serious": false
+  },
+  {
+   "id": "s13",
+   "seq": 4,
+   "from": "k17",
+   "to": "k18",
+   "cue": "Without them, your phone",
+   "motion": "Camera pushes in 20 percent as the mallet connects, shattering the massive corner tile.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "catastrophic glass explosion",
+   "serious": false
+  },
+  {
+   "id": "s14",
+   "seq": 4,
+   "from": "k18",
+   "to": "k19",
+   "cue": "So go ahead. Punch",
+   "motion": "Camera cranes up 30 percent as the entire floor instantly powers down into blackness.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "loud power down switch",
+   "serious": false
+  }
+ ],
+ "cover": {
+  "prompt": "Pitch black darkness, with only the glowing white eye-rings of the penguin visible, standing next to a shattered unlit glass corner square on a heavy steel grid. Retro-futuristic 1980s arcade light-floor medium.",
+  "text": "HOW QR WORKS"
+ },
+ "n_beats": 11
+}

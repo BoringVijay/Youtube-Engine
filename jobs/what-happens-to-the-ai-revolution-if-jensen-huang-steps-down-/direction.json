@@ -1,0 +1,344 @@
+{
+ "format": "short",
+ "universe": {
+  "name": "Precision Carved Wood Automata",
+  "studio": "Timber & Gear Co.",
+  "why": "The foundation of AI is physical manufacturing, but driven by intricate invisible architecture. Wood automata perfectly captures the physical precision of hardware and the clockwork logic of code.",
+  "pacing": "Patient, mechanical, and rhythmic. Like a well-oiled machine ticking perfectly.",
+  "signature_shot": "A carved wooden microchip pulsing with inlaid green resin, sliding perfectly down a brass rail.",
+  "medium_break": "The wooden penguin touches wet varnish on an empty chip mold and leaves a flipper-print.",
+  "look_bible": "Precision carved marquetry and gear-driven wood automata. Medium: polished walnut, maple cream, brass pins, inlaid glowing green resin. Warm, directional workshop lighting creating deep shadows. Shallow depth of field macro photography. Texture: visible wood grain, sawdust motes in the air, shiny brass. Motion: stop-motion mechanical stepping, sliding wooden parts clicking on brass rails. No text or numbers.",
+  "penguin_render": "A carved, painted wooden toy penguin, egg-shaped, with black painted back, white belly, orange painted feet, and three thin brass wires for head feathers.",
+  "palette": {
+   "paper": "#1E1E1E",
+   "ink": "#F5E6D3",
+   "accent": "#D4AF37",
+   "accent2": "#4CAF50"
+  },
+  "font": "serif",
+  "film": "clean",
+  "grain": 0.1,
+  "vignette": 0.6,
+  "music": "Plucky cello pizzicato, ticking clockwork percussion, and warm woodwinds.",
+  "letterbox": false
+ },
+ "penguin": {
+  "role": "cameo",
+  "arc": "Wanders the workshop, ruins a fresh varnish job, and later tries to fly off a high wooden ledge only to tumble into sawdust."
+ },
+ "keyframes": {
+  "k01": {
+   "id": "k01",
+   "seq": 0,
+   "prompt": "Precision carved marquetry and gear-driven wood automata. Macro shot of a black-painted carved wood leather jacket torso resting on a polished maple pedestal. Warm, directional workshop lighting creating deep shadows. Shallow depth of field macro photography. Texture: visible wood grain, sawdust motes in the air, shiny brass.",
+   "penguin": null,
+   "prev": null
+  },
+  "k02": {
+   "id": "k02",
+   "seq": 0,
+   "prompt": "Precision carved marquetry and gear-driven wood automata. The black-painted carved wood leather jacket torso rests on a polished maple pedestal, which sits atop a large, intricately carved brass gear. Warm, directional workshop lighting creating deep shadows. Shallow depth of field macro photography. Texture: visible wood grain, sawdust motes in the air, shiny brass.",
+   "penguin": null,
+   "prev": "k01"
+  },
+  "k03": {
+   "id": "k03",
+   "seq": 0,
+   "prompt": "Precision carved marquetry and gear-driven wood automata. The large, intricately carved brass gear spins, pushing a line of polished wooden microchips down a brass rail. Warm, directional workshop lighting creating deep shadows. Shallow depth of field macro photography. Texture: visible wood grain, sawdust motes in the air, shiny brass.",
+   "penguin": null,
+   "prev": "k02"
+  },
+  "k04": {
+   "id": "k04",
+   "seq": 0,
+   "prompt": "Precision carved marquetry and gear-driven wood automata. Close-up on the polished wooden microchips sliding down the brass rail. Glowing green inlaid resin lines pulse with light on the surface of the wood. Warm, directional workshop lighting creating deep shadows. Shallow depth of field macro photography. Texture: visible wood grain, sawdust motes in the air, shiny brass.",
+   "penguin": null,
+   "prev": "k03"
+  },
+  "k05": {
+   "id": "k05",
+   "seq": 1,
+   "prompt": "Precision carved marquetry and gear-driven wood automata. Wide shot of a wooden balance scale. The carved jacket figure sits on the left pan. Warm, directional workshop lighting creating deep shadows. Shallow depth of field macro photography. Texture: visible wood grain, sawdust motes in the air, shiny brass.",
+   "penguin": null,
+   "prev": null
+  },
+  "k06": {
+   "id": "k06",
+   "seq": 1,
+   "prompt": "Precision carved marquetry and gear-driven wood automata. The wooden balance scale tips downward on the right side as heavy brass coins cascade into the right pan. Warm, directional workshop lighting creating deep shadows. Shallow depth of field macro photography. Texture: visible wood grain, sawdust motes in the air, shiny brass.",
+   "penguin": null,
+   "prev": "k05"
+  },
+  "k07": {
+   "id": "k07",
+   "seq": 1,
+   "prompt": "Precision carved marquetry and gear-driven wood automata. Below the scale, an empty wooden mold block sits on a workbench. The carved toy penguin stands beside it, touching wet varnish on the mold and leaving a flipper-print. Warm, directional workshop lighting creating deep shadows. Shallow depth of field macro photography. Texture: visible wood grain, sawdust motes in the air, shiny brass.",
+   "penguin": "Standing beside the wooden mold, touching the wet varnish with one flipper.",
+   "prev": "k06"
+  },
+  "k08": {
+   "id": "k08",
+   "seq": 1,
+   "prompt": "Precision carved marquetry and gear-driven wood automata. A brass conveyor belt carries raw maple wood blocks past the workbench. Warm, directional workshop lighting creating deep shadows. Shallow depth of field macro photography. Texture: visible wood grain, sawdust motes in the air, shiny brass.",
+   "penguin": null,
+   "prev": "k07"
+  },
+  "k09": {
+   "id": "k09",
+   "seq": 1,
+   "prompt": "Precision carved marquetry and gear-driven wood automata. Close-up on the brass conveyor belt. A mechanical brass chisel stamps down onto a raw maple wood block, leaving a finished chip shape. Warm, directional workshop lighting creating deep shadows. Shallow depth of field macro photography. Texture: visible wood grain, sawdust motes in the air, shiny brass.",
+   "penguin": null,
+   "prev": "k08"
+  },
+  "k10": {
+   "id": "k10",
+   "seq": 2,
+   "prompt": "Cyanotype blueprint technical drawing. Crisp white drafting lines on textured cyan paper show a hardware chip base. Flat lighting, orthographic camera style.",
+   "penguin": null,
+   "prev": null
+  },
+  "k11": {
+   "id": "k11",
+   "seq": 2,
+   "prompt": "Cyanotype blueprint technical drawing. Crisp white drafting lines draw a massive castle wall locking onto the chip base. Flat lighting, orthographic camera style.",
+   "penguin": null,
+   "prev": "k10"
+  },
+  "k12": {
+   "id": "k12",
+   "seq": 2,
+   "prompt": "Cyanotype blueprint technical drawing. A new drafted chip shape tries to slide under the castle wall. Flat lighting, orthographic camera style.",
+   "penguin": null,
+   "prev": "k11"
+  },
+  "k13": {
+   "id": "k13",
+   "seq": 2,
+   "prompt": "Cyanotype blueprint technical drawing. The new chip's drafted gears clash with the drawn padlocks and freeze. Flat lighting, orthographic camera style.",
+   "penguin": null,
+   "prev": "k12"
+  },
+  "k14": {
+   "id": "k14",
+   "seq": 2,
+   "prompt": "Cyanotype blueprint technical drawing. A giant drafted red 'X' flashes over the rejected new chip. Flat lighting, orthographic camera style.",
+   "penguin": null,
+   "prev": "k13"
+  },
+  "k15": {
+   "id": "k15",
+   "seq": 3,
+   "prompt": "Precision carved marquetry and gear-driven wood automata. Finished carved chips slide seamlessly down brass rails, glowing with green resin. Warm, directional workshop lighting creating deep shadows. Shallow depth of field macro photography. Texture: visible wood grain, sawdust motes in the air, shiny brass.",
+   "penguin": null,
+   "prev": null
+  },
+  "k16": {
+   "id": "k16",
+   "seq": 3,
+   "prompt": "Precision carved marquetry and gear-driven wood automata. Above the track, the carved toy penguin stands on a high wooden ledge, flapping its stiff wooden wings. Warm, directional workshop lighting creating deep shadows. Shallow depth of field macro photography. Texture: visible wood grain, sawdust motes in the air, shiny brass.",
+   "penguin": "Standing on a high wooden ledge, flapping stiff wooden wings.",
+   "prev": "k15"
+  },
+  "k17": {
+   "id": "k17",
+   "seq": 3,
+   "prompt": "Precision carved marquetry and gear-driven wood automata. The carved toy penguin tumbles off the ledge, falling out of frame toward a pile of sawdust. Warm, directional workshop lighting creating deep shadows. Shallow depth of field macro photography. Texture: visible wood grain, sawdust motes in the air, shiny brass.",
+   "penguin": "Tumbling mid-air off the ledge.",
+   "prev": "k16"
+  },
+  "k18": {
+   "id": "k18",
+   "seq": 3,
+   "prompt": "Precision carved marquetry and gear-driven wood automata. An empty brass display hook holding just the black painted wooden leather jacket. Warm, directional workshop lighting creating deep shadows. Shallow depth of field macro photography. Texture: visible wood grain, sawdust motes in the air, shiny brass.",
+   "penguin": null,
+   "prev": "k17"
+  }
+ },
+ "shots": [
+  {
+   "id": "s01",
+   "seq": 0,
+   "from": "k01",
+   "to": "k02",
+   "cue": "One man in a leather jacket",
+   "motion": "Camera pulls back 30% smoothly as the brass gear beneath the pedestal begins to rotate.",
+   "overlay": null,
+   "transition": "cut",
+   "sfx": "wooden clack and brass ticking",
+   "serious": false
+  },
+  {
+   "id": "s02",
+   "seq": 0,
+   "from": "k02",
+   "to": "k03",
+   "cue": "His name is Jensen Huang,",
+   "motion": "Camera tilts down 20% as the spinning gear pushes the wooden microchips forward along the rail.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "sliding wood on metal",
+   "serious": false
+  },
+  {
+   "id": "s03",
+   "seq": 0,
+   "from": "k03",
+   "to": "k04",
+   "cue": "Nvidia designs the chips that",
+   "motion": "Camera pushes in 20% on the wooden chips as the green inlaid resin lines illuminate.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "low hum",
+   "serious": false
+  },
+  {
+   "id": "s04",
+   "seq": 1,
+   "from": "k05",
+   "to": "k06",
+   "cue": "So when people wonder if",
+   "motion": "Camera pushes in 30% as brass coins fall into the right pan, tipping the scale heavily.",
+   "overlay": null,
+   "transition": "cut",
+   "sfx": "heavy coins clinking",
+   "serious": false
+  },
+  {
+   "id": "s05",
+   "seq": 1,
+   "from": "k06",
+   "to": "k07",
+   "cue": "Some people even put real",
+   "motion": "Camera tilts down 30% to the workbench below, revealing the penguin ruining the varnish.",
+   "overlay": {
+    "type": "label",
+    "text": "Polymarket",
+    "pos": "top"
+   },
+   "transition": "chain",
+   "sfx": "wet squish",
+   "serious": false
+  },
+  {
+   "id": "s06",
+   "seq": 1,
+   "from": "k07",
+   "to": "k08",
+   "cue": "But here is the twist.",
+   "motion": "Camera pans right 30% following the bench to reveal the brass conveyor belt carrying raw wood blocks.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "gears turning",
+   "serious": false
+  },
+  {
+   "id": "s07",
+   "seq": 1,
+   "from": "k08",
+   "to": "k09",
+   "cue": "It designs them. A company",
+   "motion": "Camera pushes in 20% as the mechanical brass chisel stamps rapidly down onto the wood block.",
+   "overlay": {
+    "type": "label",
+    "text": "TSMC",
+    "pos": "top"
+   },
+   "transition": "chain",
+   "sfx": "mechanical stamping thud",
+   "serious": false
+  },
+  {
+   "id": "s08",
+   "seq": 2,
+   "from": "k10",
+   "to": "k11",
+   "cue": "And the real moat is",
+   "motion": "Camera pans up 30% as complex white lines rapidly draw the castle wall snapping shut.",
+   "overlay": null,
+   "transition": "cut",
+   "sfx": "paper rustle and pencil scratching",
+   "serious": false
+  },
+  {
+   "id": "s09",
+   "seq": 2,
+   "from": "k11",
+   "to": "k12",
+   "cue": "CUDA, a toolkit developers have",
+   "motion": "Camera pushes in 20% as the new drafted chip attempts to slide under the wall.",
+   "overlay": {
+    "type": "label",
+    "text": "CUDA",
+    "pos": "top"
+   },
+   "transition": "chain",
+   "sfx": "sliding paper sound",
+   "serious": false
+  },
+  {
+   "id": "s10",
+   "seq": 2,
+   "from": "k12",
+   "to": "k13",
+   "cue": "Switching chips can mean rewriting",
+   "motion": "Camera drifts right 20% as the drawn gears clash and aggressively lock up.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "metallic grinding click",
+   "serious": false
+  },
+  {
+   "id": "s11",
+   "seq": 2,
+   "from": "k13",
+   "to": "k14",
+   "cue": "Most companies would rather not.",
+   "motion": "Camera pulls back 20% as the giant red 'X' aggressively strikes through the new chip.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "heavy marker strike",
+   "serious": false
+  },
+  {
+   "id": "s12",
+   "seq": 3,
+   "from": "k15",
+   "to": "k16",
+   "cue": "So if he left, the",
+   "motion": "Camera tilts up 30% from the sliding chips to reveal the penguin on the ledge.",
+   "overlay": null,
+   "transition": "match",
+   "sfx": "smooth sliding wood",
+   "serious": false
+  },
+  {
+   "id": "s13",
+   "seq": 3,
+   "from": "k16",
+   "to": "k17",
+   "cue": "The revolution would be fine.",
+   "motion": "Camera pushes in 20% as the penguin tumbles clumsily off the ledge.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "wooden clatter",
+   "serious": false
+  },
+  {
+   "id": "s14",
+   "seq": 3,
+   "from": "k17",
+   "to": "k18",
+   "cue": "The jacket, though, has no",
+   "motion": "Camera pans left 30% to land solemnly on the empty display hook holding only the wooden jacket.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "soft final click",
+   "serious": false
+  }
+ ],
+ "cover": {
+  "prompt": "Precision carved marquetry and gear-driven wood automata. A carved wooden microchip pulsing with inlaid green resin, sliding perfectly down a brass rail. Warm, directional workshop lighting creating deep shadows. Shallow depth of field macro photography. Texture: visible wood grain, sawdust motes in the air, shiny brass.",
+  "text": "IF JENSEN LEAVES"
+ },
+ "n_beats": 11
+}

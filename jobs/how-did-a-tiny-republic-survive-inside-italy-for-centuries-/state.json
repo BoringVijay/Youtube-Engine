@@ -1,7 +1,7 @@
 {
  "id": "how-did-a-tiny-republic-survive-inside-italy-for-centuries-",
  "created": "2026-11-07T15:25:57+00:00",
- "pct": 90,
+ "pct": 97,
  "v": 3,
  "format": "short",
  "q": "How did a tiny republic survive inside Italy for centuries?",
@@ -137,8 +137,8 @@
   "pinned_comment": "On a scale of 1 to 10, how would you rate our basalt guard's flight attempt? (Gravity already gave it a solid 0.)",
   "instagram_caption": "Surviving 1,700 years of empires by politely turning down free real estate. San Marino truly cracked the code.\n\n#SanMarino #HistoryFacts #Microstate #EuropeanHistory #ChiseledHistory"
  },
- "stage": "final_ready",
- "step": "Short ready (Chiseled History Studios, penguin as cameo). Watch it and approve or send notes",
+ "stage": "scheduled",
+ "step": "Uploaded as private. Flip it to Public (or schedule it) in YouTube Studio",
  "cost": 14.395,
  "steps": [
   {
@@ -172,9 +172,25 @@
   {
    "stage": "final_ready",
    "at": "2026-11-08T03:02:42+00:00"
+  },
+  {
+   "stage": "approved",
+   "at": "2026-11-12T17:44:07+00:00"
+  },
+  {
+   "stage": "uploading",
+   "at": "2026-11-12T19:39:33+00:00"
+  },
+  {
+   "stage": "scheduled",
+   "at": "2026-11-12T19:40:11+00:00"
+  },
+  {
+   "stage": "scheduled",
+   "at": "2026-11-12T19:40:42+00:00"
   }
  ],
- "updated": "2026-11-08T03:02:42+00:00",
+ "updated": "2026-11-12T19:40:42+00:00",
  "voice_style": "B",
  "voice_fit": 1.2,
  "duration": 62.8,
@@ -209,5 +225,46 @@
    "s07: Jarring style shift to a flat 2D blueprint, breaking the established 3D miniature aesthetic.",
    "s08: The 3D blocks that appear are untextured and look cheap, clashing with the detailed stone environment."
   ]
+ },
+ "notes_in": [
+  {
+   "at": "2026-11-12T12:36:37.793Z",
+   "stage": "final",
+   "notes": ""
+  },
+  {
+   "at": "2026-11-12T12:37:14.142Z",
+   "stage": "final",
+   "notes": ""
+  }
+ ],
+ "schedule": {
+  "youtube": null,
+  "instagram": null,
+  "why": "07:30 IST is the Shorts morning scroll in India and 9 pm the night before on the US East Coast. 18:30 IST catches the India evening and US breakfast. Reels peak in the evening, so 19:30 IST for India, 07:30 IST for US night owls.",
+  "window": "global"
+ },
+ "slot": null,
+ "youtube": {
+  "videos": [
+   {
+    "kind": "main",
+    "id": "YlvgvEeBUEs",
+    "url": "https://youtube.com/shorts/YlvgvEeBUEs",
+    "studio": "https://studio.youtube.com/video/YlvgvEeBUEs/edit",
+    "title": "The Tiny Country That Simply Refused to Fall",
+    "privacy": "private",
+    "publish_at": null,
+    "published": "2026-11-12T19:39:42Z",
+    "upload_status": "processed",
+    "views": 0,
+    "likes": 0,
+    "comments": 0,
+    "checked": "2026-11-12T19:40:42+00:00"
+   }
+  ],
+  "audited": true,
+  "note": "Scheduled.",
+  "channel": "@curiouspenguincantfly"
  }
 }

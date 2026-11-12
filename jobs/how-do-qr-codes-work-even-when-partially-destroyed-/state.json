@@ -1,0 +1,250 @@
+{
+ "id": "how-do-qr-codes-work-even-when-partially-destroyed-",
+ "created": "2026-11-12T17:44:04+00:00",
+ "pct": 90,
+ "v": 3,
+ "format": "short",
+ "q": "How do QR codes work even when partially destroyed?",
+ "series": "Curious Penguin",
+ "brew": {
+  "type": "brew",
+  "at": "2026-11-12T12:39:09.993Z",
+  "id": "how-do-qr-codes-work-even-when-partially-destroyed-",
+  "q": "How do QR codes work even when partially destroyed?",
+  "series": "Curious Penguin",
+  "aud": "tech & AI",
+  "format": {
+   "long": false,
+   "minutes": 1,
+   "shorts": 0
+  },
+  "angle": "fun and informative, realistic and accurate explanation scientific",
+  "notes": [],
+  "refs": [],
+  "penguin_role": "villain",
+  "voice_style": "C",
+  "script": {
+   "titles": [
+    "Punch Holes In A QR Code. It Still Scans.",
+    "Why Broken QR Codes Still Work",
+    "The QR Code That Fixes Itself"
+   ],
+   "beats": [
+    {
+     "visual": "Claymation world. A clay QR code poster hangs on a tiny clay wall. The penguin, in a black burglar mask, creeps in holding an oversized hole punch and chomps three holes in it. A clay phone scans it anyway and beeps green. The penguin's beak drops.",
+     "vo": "Punch holes in a QR code. It still scans."
+    },
+    {
+     "visual": "A clay supermarket barcode lies flat. A thin red laser line sweeps straight across it, left to right, like a train on one track.",
+     "vo": "A regular barcode is read along a single line of stripes."
+    },
+    {
+     "visual": "Camera dives into the QR code. The clay squares pop up like little black and white tiles, each stamped with a tiny 1 or 0 as the camera glides over them.",
+     "vo": "A QR code is a grid of tiny squares. Each one is a bit, a one or a zero."
+    },
+    {
+     "visual": "The three corner squares light up like lighthouses. A clay phone camera spins around, then snaps upright as it locks onto all three.",
+     "vo": "Those three big squares in the corners tell your camera where the code is, and which way is up."
+    },
+    {
+     "visual": "Some tiles glow blue as the message. Others glow orange as backup, weaving between them. Hand-drawn chalk equations float above the grid. The penguin peeks from behind a tile, scheming.",
+     "vo": "But your message isn't stored just once. The code also carries backup data, built with math called Reed-Solomon."
+    },
+    {
+     "visual": "A clay jigsaw puzzle with gaps. The empty spaces faintly outline the exact shapes of the missing pieces.",
+     "vo": "Think of a puzzle that knows what its missing pieces should look like."
+    },
+    {
+     "visual": "The penguin rips out a handful of tiles and runs off with them. Behind him, ghostly clay tiles squish back into the holes, one by one, perfectly.",
+     "vo": "Your phone reads whatever survived, solves some algebra, and rebuilds the rest."
+    },
+    {
+     "visual": "A clay meter labeled L, M, Q, H. The needle cranks to H. The penguin goes full villain, smashing a big chunk of the code with a tiny clay hammer. The phone still beeps green.",
+     "vo": "At the highest setting, roughly thirty percent of the data can be wrecked and it still reads."
+    },
+    {
+     "visual": "A clay restaurant menu QR code with a pizza logo pressed into its center. The penguin stares at it, betrayed, realizing humans do his job for free.",
+     "vo": "That's why some codes have a logo stamped in the middle. The logo is damage. On purpose."
+    },
+    {
+     "visual": "The penguin creeps toward a corner square with the hole punch. A clay phone turns, frowns, and the penguin freezes mid-tiptoe.",
+     "vo": "Just spare the corner squares. Without them, your phone can't find the code."
+    },
+    {
+     "visual": "Back to the opening wall. The penguin, defeated, sets down the hole punch, then quietly punches one hole in the middle. Green beep. He shrugs. Cut.",
+     "vo": "So go ahead. Punch holes in it. Leave the corners alone."
+    }
+   ],
+   "vo": "Punch holes in a QR code. It still scans. A regular barcode is read along a single line of stripes. A QR code is a grid of tiny squares. Each one is a bit, a one or a zero. Those three big squares in the corners tell your camera where the code is, and which way is up. But your message isn't stored just once. The code also carries backup data, built with math called Reed-Solomon. Think of a puzzle that knows what its missing pieces should look like. Your phone reads whatever survived, solves some algebra, and rebuilds the rest. At the highest setting, roughly thirty percent of the data can be wrecked and it still reads. That's why some codes have a logo stamped in the middle. The logo is damage. On purpose. Just spare the corner squares. Without them, your phone can't find the code. So go ahead. Punch holes in it. Leave the corners alone.",
+   "verify": [
+    "QR error correction levels are commonly given as about 7% (L), 15% (M), 25% (Q) and 30% (H) recoverable. This refers to codewords (data), not exactly surface area, so the script says 'roughly thirty percent of the data'.",
+    "QR codes use Reed-Solomon error correction.",
+    "The three large corner squares are the finder (position detection) patterns, used for locating and orienting the code. Heavy damage to them typically prevents scanning.",
+    "Logos placed in the center of QR codes rely on error correction to absorb the covered area, usually with a higher correction level.",
+    "Each module representing a single bit is a simplification. Function patterns, format info and masking also exist."
+   ]
+  }
+ },
+ "brew_at": "2026-11-12T12:39:09.993Z",
+ "error": null,
+ "fails": 0,
+ "preview": {
+  "id": "1sreqjazy-0jhtSOvph03ivuI-CjlUq54",
+  "view": "https://drive.google.com/file/d/1sreqjazy-0jhtSOvph03ivuI-CjlUq54/view",
+  "download": "https://drive.google.com/uc?id=1sreqjazy-0jhtSOvph03ivuI-CjlUq54&export=download",
+  "size_mb": 68.9,
+  "duration": 59.4,
+  "stills": [],
+  "poster": "1uPtB8dfG4GGbSuiSSnkwNPKePBhlm5GP"
+ },
+ "final": {
+  "id": "1sreqjazy-0jhtSOvph03ivuI-CjlUq54",
+  "view": "https://drive.google.com/file/d/1sreqjazy-0jhtSOvph03ivuI-CjlUq54/view",
+  "download": "https://drive.google.com/uc?id=1sreqjazy-0jhtSOvph03ivuI-CjlUq54&export=download",
+  "size_mb": 68.9,
+  "duration": 59.4,
+  "stills": [],
+  "poster": "1uPtB8dfG4GGbSuiSSnkwNPKePBhlm5GP"
+ },
+ "shorts": null,
+ "thumb": null,
+ "meta": {
+  "title": "Why Damaged QR Codes Still Work",
+  "alt_titles": [
+   "The Fatal Flaw Inside Every QR Code",
+   "You Can Destroy 30% of a QR Code"
+  ],
+  "description": "QR codes use error-correcting math to piece missing data back together on the fly.\nBreak the wrong three squares, though, and the entire grid goes blind.\n\n#Shorts #TechExplained #HowItWorks #Engineering",
+  "tags": [
+   "qr code",
+   "how qr codes work",
+   "reed solomon",
+   "error correction",
+   "tech explained",
+   "computer science",
+   "barcode vs qr code",
+   "how it works",
+   "curious penguin",
+   "studio lumina",
+   "math facts",
+   "technology"
+  ],
+  "pinned_comment": "Did the penguin go too far, or would you have stomped those corners too?",
+  "instagram_caption": "Up to 30% of a QR code can be completely wrecked and your phone will still read it. Just keep curious penguins away from the three corner squares.\n\n#TechExplained #HowItWorks #ComputerScience #MathTrivia #Engineering"
+ },
+ "stage": "final_ready",
+ "step": "Short ready (Studio Lumina, penguin as villain). Watch it and approve or send notes",
+ "cost": 13.583,
+ "steps": [
+  {
+   "stage": "queued",
+   "at": "2026-11-12T17:44:04+00:00"
+  },
+  {
+   "stage": "voicing",
+   "at": "2026-11-12T18:38:30+00:00"
+  },
+  {
+   "stage": "directing",
+   "at": "2026-11-12T18:39:21+00:00"
+  },
+  {
+   "stage": "art",
+   "at": "2026-11-12T18:41:37+00:00"
+  },
+  {
+   "stage": "motion",
+   "at": "2026-11-12T19:29:44+00:00"
+  },
+  {
+   "stage": "final_render",
+   "at": "2026-11-12T19:32:52+00:00"
+  },
+  {
+   "stage": "metadata",
+   "at": "2026-11-12T19:39:18+00:00"
+  },
+  {
+   "stage": "final_ready",
+   "at": "2026-11-12T19:39:29+00:00"
+  }
+ ],
+ "updated": "2026-11-12T19:39:29+00:00",
+ "voice_style": "C",
+ "duration": 58.6,
+ "universe": "Studio Lumina · Light-Floor Grid",
+ "penguin_role": "villain",
+ "cameos": [
+  {
+   "shot": "k01",
+   "bit": "standing on the grid holding a heavy steel mallet"
+  },
+  {
+   "shot": "k02",
+   "bit": "raising the heavy steel mallet high above its head, ready to strike"
+  },
+  {
+   "shot": "k03",
+   "bit": "following through on a heavy mallet swing, smashing the tiles"
+  },
+  {
+   "shot": "k04",
+   "bit": "staring blankly at the striped barcode section, mallet resting on the floor"
+  },
+  {
+   "shot": "k07",
+   "bit": "leaning casually against the giant corner square, looking small"
+  },
+  {
+   "shot": "k12",
+   "bit": "stepping into the frame, gripping the mallet tightly"
+  },
+  {
+   "shot": "k13",
+   "bit": "frantically swinging the mallet in a circle, destroying a huge swath of tiles"
+  },
+  {
+   "shot": "k14",
+   "bit": "dropping the mallet in complete shock as the floor repairs itself"
+  },
+  {
+   "shot": "k15",
+   "bit": "standing nearby, watching the giant steel emblem crush the center"
+  },
+  {
+   "shot": "k16",
+   "bit": "dragging the heavy mallet, approaching the pristine corner square"
+  },
+  {
+   "shot": "k17",
+   "bit": "swinging the heavy mallet forcefully into the giant corner square"
+  },
+  {
+   "shot": "k18",
+   "bit": "following through the swing as the corner shatters completely"
+  },
+  {
+   "shot": "k19",
+   "bit": "standing in pitch darkness, only its glowing white eye-rings are visible"
+  }
+ ],
+ "qc": {
+  "overall": 4.0,
+  "scores": {
+   "visuals": 4,
+   "transitions": 5,
+   "story": 8,
+   "logic": 3,
+   "sync": 8,
+   "accuracy": 7,
+   "premium": 2
+  },
+  "verdict": "While the script provides a clear and engaging explanation of QR codes, the visual execution fails our premium standards due to pervasive AI artifacts. The persistent clipping of props through the character model and garbled text on the blueprint must be resolved before shipping.",
+  "weak": [
+   "s06: The blueprint features garbled, nonsensical text, a clear hallmark of raw AI generation.",
+   "s08: The mallet handle clips directly through the penguin's torso, breaking object permanence.",
+   "s09: During the rapid smashing animation, the penguin's body morphs and the wooden mallet handle bends like rubber.",
+   "s12: The mallet handle is visibly embedded inside the penguin's stomach."
+  ]
+ }
+}
