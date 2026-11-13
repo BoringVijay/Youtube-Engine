@@ -1,7 +1,7 @@
 {
  "id": "how-did-samoa-legally-delete-an-entire-day-from-its-calendar-",
  "created": "2026-11-13T16:37:11+00:00",
- "pct": 90,
+ "pct": 97,
  "v": 3,
  "format": "short",
  "q": "How did Samoa legally delete an entire day from its calendar?",
@@ -131,8 +131,8 @@
   "pinned_comment": "Did our little cartographer friend genuinely think flapping hard enough would launch him straight into Saturday?",
   "instagram_caption": "Samoa legally skipped December 30, 2011, just to align its work week with its neighbors. 119 years earlier, they actually lived the same day twice.\n\n#GeographyTrivia #TimeZones #Samoa #OddHistory #MapPorn"
  },
- "stage": "final_ready",
- "step": "Short ready (Cartographica Tactile, penguin as npc). Watch it and approve or send notes",
+ "stage": "scheduled",
+ "step": "Uploaded as private. Flip it to Public (or schedule it) in YouTube Studio",
  "cost": 13.437,
  "steps": [
   {
@@ -166,9 +166,25 @@
   {
    "stage": "final_ready",
    "at": "2026-11-13T21:40:02+00:00"
+  },
+  {
+   "stage": "approved",
+   "at": "2026-11-13T22:48:09+00:00"
+  },
+  {
+   "stage": "uploading",
+   "at": "2026-11-13T23:49:26+00:00"
+  },
+  {
+   "stage": "scheduled",
+   "at": "2026-11-13T23:50:02+00:00"
+  },
+  {
+   "stage": "scheduled",
+   "at": "2026-11-13T23:50:06+00:00"
   }
  ],
- "updated": "2026-11-13T21:40:02+00:00",
+ "updated": "2026-11-13T23:50:06+00:00",
  "voice_style": "C",
  "voice_fit": 1.2,
  "duration": 60.1,
@@ -271,5 +287,41 @@
    "s07: The brass mechanism is a garbled, morphing blob of metal parts that lacks mechanical sense.",
    "s11: The blueprint animation is a chaotic AI hallucination; the dividers morph and the glowing lines are nonsensical."
   ]
+ },
+ "notes_in": [
+  {
+   "at": "2026-11-13T22:16:00.000Z",
+   "stage": "final",
+   "notes": ""
+  }
+ ],
+ "schedule": {
+  "youtube": null,
+  "instagram": null,
+  "why": "07:30 IST is the Shorts morning scroll in India and 9 pm the night before on the US East Coast. 18:30 IST catches the India evening and US breakfast. Reels peak in the evening, so 19:30 IST for India, 07:30 IST for US night owls.",
+  "window": "global"
+ },
+ "slot": null,
+ "youtube": {
+  "videos": [
+   {
+    "kind": "main",
+    "id": "awiZq9nsepM",
+    "url": "https://youtube.com/shorts/awiZq9nsepM",
+    "studio": "https://studio.youtube.com/video/awiZq9nsepM/edit",
+    "title": "The Country That Legally Deleted Friday",
+    "privacy": "private",
+    "publish_at": null,
+    "published": "2026-11-13T23:49:35Z",
+    "upload_status": "uploaded",
+    "views": 0,
+    "likes": 0,
+    "comments": 0,
+    "checked": "2026-11-13T23:50:06+00:00"
+   }
+  ],
+  "audited": true,
+  "note": "Scheduled.",
+  "channel": "@curiouspenguincantfly"
  }
 }

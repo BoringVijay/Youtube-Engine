@@ -1,0 +1,344 @@
+{
+ "format": "short",
+ "universe": {
+  "name": "Layered Banknote Engraving Diorama",
+  "studio": "Copperplate Cartel",
+  "why": "The story is literally about a man whose name ended up on the nation's paper money. Telling his life story through the visual language of 19th-century currency engraving makes the medium the message.",
+  "pacing": "Deliberate, sweeping, like a printing press rolling out history.",
+  "signature_shot": "A giant engraved fountain pen signing a massive, flowing ribbon of paper money.",
+  "medium_break": "The penguin gets stuck in the cross-hatching lines and has to pull one like a guitar string to snap free.",
+  "look_bible": "3D layered diorama made entirely of intaglio engraved paper. Fine cross-hatched linework in deep forest green, charcoal black, and cream parchment. Lighting is dramatic, casting soft shadows between the paper layers to emphasize depth. The texture is fibrous cotton paper with raised ink lines.",
+  "penguin_render": "Engraved paper cut-out penguin, cross-hatched shading, cream belly, dark green/black back, orange-tinted ink for feet/beak.",
+  "palette": {
+   "paper": "#F5F5DC",
+   "ink": "#004B23",
+   "accent": "#1A1A1A",
+   "accent2": "#CC5500"
+  },
+  "font": "serif",
+  "film": "print",
+  "grain": 0.2,
+  "vignette": 0.4,
+  "music": "Plucky strings and rhythmic mechanical percussion mimicking a printing press.",
+  "letterbox": false
+ },
+ "penguin": {
+  "role": "protagonist",
+  "arc": "Wants to help write the history, pushes the giant pen to sign the bill, but slips on the wet ink at the end."
+ },
+ "keyframes": {
+  "k01": {
+   "id": "k01",
+   "seq": 0,
+   "prompt": "Close up on heavy iron chains made of cross-hatched paper. 3D layered diorama made entirely of intaglio engraved paper. Fine cross-hatched linework in deep forest green, charcoal black, and cream parchment. Lighting is dramatic, casting soft shadows between the paper layers to emphasize depth. The texture is fibrous cotton paper with raised ink lines.",
+   "penguin": null,
+   "prev": null
+  },
+  "k02": {
+   "id": "k02",
+   "seq": 0,
+   "prompt": "Medium shot of heavy iron chains made of cross-hatched paper breaking apart. 3D layered diorama made entirely of intaglio engraved paper. Fine cross-hatched linework in deep forest green, charcoal black, and cream parchment. Lighting is dramatic, casting soft shadows between the paper layers to emphasize depth. The texture is fibrous cotton paper with raised ink lines.",
+   "penguin": null,
+   "prev": "k01"
+  },
+  "k03": {
+   "id": "k03",
+   "seq": 0,
+   "prompt": "Medium shot of a torn paper map of Virginia. 3D layered diorama made entirely of intaglio engraved paper. Fine cross-hatched linework in deep forest green, charcoal black, and cream parchment. Lighting is dramatic, casting soft shadows between the paper layers to emphasize depth. The texture is fibrous cotton paper with raised ink lines.",
+   "penguin": null,
+   "prev": "k02"
+  },
+  "k04": {
+   "id": "k04",
+   "seq": 0,
+   "prompt": "Close up on a torn paper map of Virginia, with dark shadows looming over paper silhouettes of plantation workers. 3D layered diorama made entirely of intaglio engraved paper. Fine cross-hatched linework in deep forest green, charcoal black, and cream parchment. Lighting is dramatic, casting soft shadows between the paper layers to emphasize depth. The texture is fibrous cotton paper with raised ink lines.",
+   "penguin": null,
+   "prev": "k03"
+  },
+  "k05": {
+   "id": "k05",
+   "seq": 0,
+   "prompt": "Medium shot of a Kansas schoolhouse chalkboard. 3D layered diorama made entirely of intaglio engraved paper. Fine cross-hatched linework in deep forest green, charcoal black, and cream parchment. Lighting is dramatic, casting soft shadows between the paper layers to emphasize depth. The texture is fibrous cotton paper with raised ink lines.",
+   "penguin": "Pointing at the chalkboard with a tiny piece of chalk.",
+   "prev": "k04"
+  },
+  "k06": {
+   "id": "k06",
+   "seq": 1,
+   "prompt": "Medium shot of a wooden fence in Mississippi, with paper cotton plants growing. 3D layered diorama made entirely of intaglio engraved paper. Fine cross-hatched linework in deep forest green, charcoal black, and cream parchment. Lighting is dramatic, casting soft shadows between the paper layers to emphasize depth. The texture is fibrous cotton paper with raised ink lines.",
+   "penguin": "Wearing a tiny paper straw hat, standing next to the cotton plants.",
+   "prev": null
+  },
+  "k07": {
+   "id": "k07",
+   "seq": 1,
+   "prompt": "Wide shot of a grand paper plantation house rising from the fields. 3D layered diorama made entirely of intaglio engraved paper. Fine cross-hatched linework in deep forest green, charcoal black, and cream parchment. Lighting is dramatic, casting soft shadows between the paper layers to emphasize depth. The texture is fibrous cotton paper with raised ink lines.",
+   "penguin": "Wearing a tiny paper straw hat, looking up at the house.",
+   "prev": "k06"
+  },
+  "k08": {
+   "id": "k08",
+   "seq": 1,
+   "prompt": "Wide shot of the US Capitol dome made of layered paper. 3D layered diorama made entirely of intaglio engraved paper. Fine cross-hatched linework in deep forest green, charcoal black, and cream parchment. Lighting is dramatic, casting soft shadows between the paper layers to emphasize depth. The texture is fibrous cotton paper with raised ink lines.",
+   "penguin": "Looking up at the Capitol dome.",
+   "prev": "k07"
+  },
+  "k09": {
+   "id": "k09",
+   "seq": 1,
+   "prompt": "Medium shot of the US Capitol steps, with paper figures of senators. 3D layered diorama made entirely of intaglio engraved paper. Fine cross-hatched linework in deep forest green, charcoal black, and cream parchment. Lighting is dramatic, casting soft shadows between the paper layers to emphasize depth. The texture is fibrous cotton paper with raised ink lines.",
+   "penguin": "Waddling proudly up the steps.",
+   "prev": "k08"
+  },
+  "k10": {
+   "id": "k10",
+   "seq": 1,
+   "prompt": "Close up on the grand pillars of the Senate chamber. 3D layered diorama made entirely of intaglio engraved paper. Fine cross-hatched linework in deep forest green, charcoal black, and cream parchment. Lighting is dramatic, casting soft shadows between the paper layers to emphasize depth. The texture is fibrous cotton paper with raised ink lines.",
+   "penguin": "Standing proudly next to a pillar.",
+   "prev": "k09"
+  },
+  "k11": {
+   "id": "k11",
+   "seq": 2,
+   "prompt": "Medium shot of a 19th-century currency printing press. Blueprint and technical cutaway style. Crisp white linework on deep cyan paper. Clean, precise architectural drafting lines. Flat lighting.",
+   "penguin": "Wearing a tiny hard hat, inspecting a gear.",
+   "prev": null
+  },
+  "k12": {
+   "id": "k12",
+   "seq": 2,
+   "prompt": "Close up on the massive central roller of a printing press pressing ink onto paper. Blueprint and technical cutaway style. Crisp white linework on deep cyan paper. Clean, precise architectural drafting lines. Flat lighting.",
+   "penguin": "Watching the roller closely.",
+   "prev": "k11"
+  },
+  "k13": {
+   "id": "k13",
+   "seq": 2,
+   "prompt": "Close up on the paper coming out of the printing press roller. Blueprint and technical cutaway style. Crisp white linework on deep cyan paper. Clean, precise architectural drafting lines. Flat lighting.",
+   "penguin": "Following the paper as it comes out.",
+   "prev": "k12"
+  },
+  "k14": {
+   "id": "k14",
+   "seq": 3,
+   "prompt": "Close up on a blank engraved banknote, with a giant fountain pen hovering over it. 3D layered diorama made entirely of intaglio engraved paper. Fine cross-hatched linework in deep forest green, charcoal black, and cream parchment. Lighting is dramatic, casting soft shadows between the paper layers to emphasize depth. The texture is fibrous cotton paper with raised ink lines.",
+   "penguin": "Trying to push the heavy barrel of the giant pen.",
+   "prev": null
+  },
+  "k15": {
+   "id": "k15",
+   "seq": 3,
+   "prompt": "Medium shot of a giant fountain pen pressing into an engraved banknote, leaving a thick trail of wet ink. 3D layered diorama made entirely of intaglio engraved paper. Fine cross-hatched linework in deep forest green, charcoal black, and cream parchment. Lighting is dramatic, casting soft shadows between the paper layers to emphasize depth. The texture is fibrous cotton paper with raised ink lines.",
+   "penguin": "Pushing the pen barrel with all its might.",
+   "prev": "k14"
+  },
+  "k16": {
+   "id": "k16",
+   "seq": 3,
+   "prompt": "Close up on an elegant signature being written on an engraved banknote. 3D layered diorama made entirely of intaglio engraved paper. Fine cross-hatched linework in deep forest green, charcoal black, and cream parchment. Lighting is dramatic, casting soft shadows between the paper layers to emphasize depth. The texture is fibrous cotton paper with raised ink lines.",
+   "penguin": null,
+   "prev": "k15"
+  },
+  "k17": {
+   "id": "k17",
+   "seq": 3,
+   "prompt": "Medium shot of an engraved banknote sitting inside an antique leather wallet. 3D layered diorama made entirely of intaglio engraved paper. Fine cross-hatched linework in deep forest green, charcoal black, and cream parchment. Lighting is dramatic, casting soft shadows between the paper layers to emphasize depth. The texture is fibrous cotton paper with raised ink lines.",
+   "penguin": null,
+   "prev": "k16"
+  },
+  "k18": {
+   "id": "k18",
+   "seq": 3,
+   "prompt": "Close up on the signature on an engraved banknote inside an antique leather wallet. 3D layered diorama made entirely of intaglio engraved paper. Fine cross-hatched linework in deep forest green, charcoal black, and cream parchment. Lighting is dramatic, casting soft shadows between the paper layers to emphasize depth. The texture is fibrous cotton paper with raised ink lines.",
+   "penguin": "Slipping on the wet ink of the signature and falling backward.",
+   "prev": "k17"
+  }
+ },
+ "shots": [
+  {
+   "id": "s01",
+   "seq": 0,
+   "from": "k01",
+   "to": "k02",
+   "cue": "Born enslaved, his signature",
+   "motion": "Camera pulls back slightly as the paper chains physically break apart.",
+   "overlay": null,
+   "transition": "cut",
+   "sfx": "heavy paper tearing",
+   "serious": true
+  },
+  {
+   "id": "s02",
+   "seq": 0,
+   "from": "k02",
+   "to": "k03",
+   "cue": "Blanche Kelso Bruce was",
+   "motion": "Camera drifts right from the broken chains to a torn paper map of Virginia.",
+   "overlay": {
+    "type": "label",
+    "text": "1841",
+    "pos": "top"
+   },
+   "transition": "chain",
+   "sfx": null,
+   "serious": true
+  },
+  {
+   "id": "s03",
+   "seq": 0,
+   "from": "k03",
+   "to": "k04",
+   "cue": "owned by another man.",
+   "motion": "Camera pushes in on the map as dark shadows loom over the silhouettes.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": null,
+   "serious": true
+  },
+  {
+   "id": "s04",
+   "seq": 0,
+   "from": "k04",
+   "to": "k05",
+   "cue": "During the Civil War,",
+   "motion": "Camera drifts right from the map to a Kansas schoolhouse chalkboard.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "chalk writing",
+   "serious": false
+  },
+  {
+   "id": "s05",
+   "seq": 1,
+   "from": "k06",
+   "to": "k07",
+   "cue": "Then Mississippi. He bought",
+   "motion": "Camera pulls back to reveal a grand paper plantation house rising from the fields.",
+   "overlay": null,
+   "transition": "match",
+   "sfx": "paper folding up",
+   "serious": false
+  },
+  {
+   "id": "s06",
+   "seq": 1,
+   "from": "k07",
+   "to": "k08",
+   "cue": "and started winning local",
+   "motion": "Camera drifts right from the plantation house to the US Capitol dome.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": null,
+   "serious": false
+  },
+  {
+   "id": "s07",
+   "seq": 1,
+   "from": "k08",
+   "to": "k09",
+   "cue": "In 1874, the state",
+   "motion": "Camera pushes in on the Capitol steps as paper senators appear.",
+   "overlay": {
+    "type": "label",
+    "text": "1874",
+    "pos": "top"
+   },
+   "transition": "chain",
+   "sfx": null,
+   "serious": false
+  },
+  {
+   "id": "s08",
+   "seq": 1,
+   "from": "k09",
+   "to": "k10",
+   "cue": "Hiram Revels got there",
+   "motion": "Camera tilts up the steps to the grand pillars of the Senate chamber.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": null,
+   "serious": false
+  },
+  {
+   "id": "s09",
+   "seq": 2,
+   "from": "k11",
+   "to": "k12",
+   "cue": "Here's the turn. In",
+   "motion": "Camera pushes in on the massive central roller pressing ink onto paper.",
+   "overlay": {
+    "type": "label",
+    "text": "1881",
+    "pos": "top"
+   },
+   "transition": "match",
+   "sfx": "heavy mechanical clanking",
+   "serious": false
+  },
+  {
+   "id": "s10",
+   "seq": 2,
+   "from": "k12",
+   "to": "k13",
+   "cue": "That job came with",
+   "motion": "Camera drifts right along the paper coming out of the roller.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": null,
+   "serious": false
+  },
+  {
+   "id": "s11",
+   "seq": 3,
+   "from": "k14",
+   "to": "k15",
+   "cue": "The Register's signature was",
+   "motion": "Camera pulls back slightly as the pen presses into the paper, leaving a thick trail of wet ink.",
+   "overlay": null,
+   "transition": "match",
+   "sfx": "scratchy fountain pen",
+   "serious": false
+  },
+  {
+   "id": "s12",
+   "seq": 3,
+   "from": "k15",
+   "to": "k16",
+   "cue": "So for years, you",
+   "motion": "Camera drifts right, following the elegant signature being written.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": null,
+   "serious": false
+  },
+  {
+   "id": "s13",
+   "seq": 3,
+   "from": "k16",
+   "to": "k17",
+   "cue": "The country once counted",
+   "motion": "Camera tilts up from the signature to reveal the banknote is sitting inside an antique leather wallet.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": null,
+   "serious": true
+  },
+  {
+   "id": "s14",
+   "seq": 3,
+   "from": "k17",
+   "to": "k18",
+   "cue": "Born enslaved. His name",
+   "motion": "Camera pushes in on the signature inside the wallet as the penguin slips.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "wet slip and thud",
+   "serious": false
+  }
+ ],
+ "cover": {
+  "prompt": "A giant engraved fountain pen signing a massive, flowing ribbon of paper money. 3D layered diorama made entirely of intaglio engraved paper. Fine cross-hatched linework in deep forest green, charcoal black, and cream parchment. Lighting is dramatic, casting soft shadows between the paper layers to emphasize depth. The texture is fibrous cotton paper with raised ink lines.",
+  "text": "BORN ENSLAVED"
+ },
+ "n_beats": 11
+}
