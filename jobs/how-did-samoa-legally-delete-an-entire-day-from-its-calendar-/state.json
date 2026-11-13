@@ -1,7 +1,7 @@
 {
  "id": "how-did-samoa-legally-delete-an-entire-day-from-its-calendar-",
  "created": "2026-11-13T16:37:11+00:00",
- "pct": 2,
+ "pct": 90,
  "v": 3,
  "format": "short",
  "q": "How did Samoa legally delete an entire day from its calendar?",
@@ -87,19 +87,189 @@
  "brew_at": "2026-11-13T16:26:05.062Z",
  "error": null,
  "fails": 0,
- "preview": null,
- "final": null,
+ "preview": {
+  "id": "1UfNQ7uXLvhQQBbrVjNGEfuhwTDImamVi",
+  "view": "https://drive.google.com/file/d/1UfNQ7uXLvhQQBbrVjNGEfuhwTDImamVi/view",
+  "download": "https://drive.google.com/uc?id=1UfNQ7uXLvhQQBbrVjNGEfuhwTDImamVi&export=download",
+  "size_mb": 76.1,
+  "duration": 60.9,
+  "stills": [],
+  "poster": "1mcE7hSiweYFWkJzyB_jcsHXEfovdZ103"
+ },
+ "final": {
+  "id": "1UfNQ7uXLvhQQBbrVjNGEfuhwTDImamVi",
+  "view": "https://drive.google.com/file/d/1UfNQ7uXLvhQQBbrVjNGEfuhwTDImamVi/view",
+  "download": "https://drive.google.com/uc?id=1UfNQ7uXLvhQQBbrVjNGEfuhwTDImamVi&export=download",
+  "size_mb": 76.1,
+  "duration": 60.9,
+  "stills": [],
+  "poster": "1mcE7hSiweYFWkJzyB_jcsHXEfovdZ103"
+ },
  "shorts": null,
  "thumb": null,
- "meta": null,
- "stage": "queued",
- "step": "Waiting for a render slot",
- "cost": 0,
+ "meta": {
+  "title": "The Country That Legally Deleted Friday",
+  "alt_titles": [
+   "How Samoa Skipped an Entire Day on Purpose",
+   "Why December 30, 2011 Never Happened in Samoa"
+  ],
+  "description": "In 2011, an entire nation went to sleep on Thursday and woke up on Saturday.\nHere is how Samoa legally erased a full day to fix its trade week.\n\n#Shorts #Geography #HistoryFacts #TimeZones #Maps",
+  "tags": [
+   "samoa",
+   "international date line",
+   "time zones",
+   "geography facts",
+   "map history",
+   "curious penguin",
+   "deleted day",
+   "cartographica tactile",
+   "felt and meridian",
+   "history trivia",
+   "pacific islands",
+   "weird history"
+  ],
+  "pinned_comment": "Did our little cartographer friend genuinely think flapping hard enough would launch him straight into Saturday?",
+  "instagram_caption": "Samoa legally skipped December 30, 2011, just to align its work week with its neighbors. 119 years earlier, they actually lived the same day twice.\n\n#GeographyTrivia #TimeZones #Samoa #OddHistory #MapPorn"
+ },
+ "stage": "final_ready",
+ "step": "Short ready (Cartographica Tactile, penguin as npc). Watch it and approve or send notes",
+ "cost": 13.437,
  "steps": [
   {
    "stage": "queued",
    "at": "2026-11-13T16:37:11+00:00"
+  },
+  {
+   "stage": "voicing",
+   "at": "2026-11-13T20:41:12+00:00"
+  },
+  {
+   "stage": "directing",
+   "at": "2026-11-13T20:41:59+00:00"
+  },
+  {
+   "stage": "art",
+   "at": "2026-11-13T20:45:20+00:00"
+  },
+  {
+   "stage": "motion",
+   "at": "2026-11-13T21:30:24+00:00"
+  },
+  {
+   "stage": "final_render",
+   "at": "2026-11-13T21:32:38+00:00"
+  },
+  {
+   "stage": "metadata",
+   "at": "2026-11-13T21:39:52+00:00"
+  },
+  {
+   "stage": "final_ready",
+   "at": "2026-11-13T21:40:02+00:00"
   }
  ],
- "updated": "2026-11-13T16:37:11+00:00"
+ "updated": "2026-11-13T21:40:02+00:00",
+ "voice_style": "C",
+ "voice_fit": 1.2,
+ "duration": 60.1,
+ "universe": "Cartographica Tactile · Felt & Meridian",
+ "penguin_role": "npc",
+ "cameos": [
+  {
+   "shot": "k01",
+   "bit": "A small round egg-shaped wooden penguin with brass eye-rings is standing on the empty third slot."
+  },
+  {
+   "shot": "k02",
+   "bit": "The wooden penguin is riding the bright maple SAT block as it sits heavily in the third slot."
+  },
+  {
+   "shot": "k03",
+   "bit": "The wooden penguin is standing next to the miniature carved wooden bed in the gap."
+  },
+  {
+   "shot": "k04",
+   "bit": "The wooden penguin is startled, flippers raised, next to the crashed brass stamp."
+  },
+  {
+   "shot": "k05",
+   "bit": "The wooden penguin is inspecting the glinting brass stamp closely."
+  },
+  {
+   "shot": "k06",
+   "bit": "The wooden penguin is sitting on the edge of the round brass map pin with a tiny brass telescope."
+  },
+  {
+   "shot": "k07",
+   "bit": "The wooden penguin is looking through the telescope at the golden amber landmasses."
+  },
+  {
+   "shot": "k08",
+   "bit": "The wooden penguin is frantically trying to hold the wobbling stack of wooden tiles together."
+  },
+  {
+   "shot": "k09",
+   "bit": "The wooden penguin is pushing alongside the jammed brass mechanical arm."
+  },
+  {
+   "shot": "k10",
+   "bit": "The wooden penguin falls backward as the brass arm splinters."
+  },
+  {
+   "shot": "k11",
+   "bit": "The wooden penguin is standing on the small oak island block, looking at the large brass hook."
+  },
+  {
+   "shot": "k12",
+   "bit": "The wooden penguin is looking up in awe as the crimson thread is pulled over its head."
+  },
+  {
+   "shot": "k13",
+   "bit": "The wooden penguin is basking in the bright golden amber light on the island block."
+  },
+  {
+   "shot": "k14",
+   "bit": "A linework blueprint penguin is holding a giant drafted clock spring."
+  },
+  {
+   "shot": "k15",
+   "bit": "The blueprint penguin is frantically rewinding the giant clock spring as the compass spins."
+  },
+  {
+   "shot": "k16",
+   "bit": "The blueprint penguin is wearing drafted sunglasses under the two overlapping suns."
+  },
+  {
+   "shot": "k17",
+   "bit": "The wooden penguin is sitting proudly on top of the brass sweeper arm."
+  },
+  {
+   "shot": "k18",
+   "bit": "The wooden penguin flaps its short wooden flippers, trying to take off into the dark."
+  },
+  {
+   "shot": "k19",
+   "bit": "The wooden penguin has landed face-first on the peaceful island block under the silver moonlight."
+  }
+ ],
+ "qc": {
+  "overall": 3.0,
+  "scores": {
+   "visuals": 3,
+   "transitions": 3,
+   "story": 7,
+   "logic": 2,
+   "sync": 6,
+   "accuracy": 3,
+   "premium": 1
+  },
+  "verdict": "The video suffers from severe AI hallucinations, with constantly morphing props, garbled text, and nonsensical mechanical elements. While the script is engaging, the visual execution is far below premium standards and requires a complete overhaul to fix the logical and visual inconsistencies.",
+  "weak": [
+   "s01: The clock face features garbled Roman numerals and nonsensical, morphing dials.",
+   "s05: The telescope merges directly into the penguin's eye and head, breaking physical logic.",
+   "s06: The penguin's flippers morph into the wooden tiles it is holding.",
+   "s07: The brass mechanism is a garbled, morphing blob of metal parts that lacks mechanical sense.",
+   "s11: The blueprint animation is a chaotic AI hallucination; the dividers morph and the glowing lines are nonsensical."
+  ]
+ }
 }

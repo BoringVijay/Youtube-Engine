@@ -1,0 +1,355 @@
+{
+ "format": "short",
+ "universe": {
+  "name": "Cartographica Tactile",
+  "studio": "Felt & Meridian",
+  "why": "Time zones are arbitrary human lines drawn on maps; representing them as physical sliding wooden blocks and thick threads on parchment grounds the abstract concept of 'skipping a day' in a tangible, deeply satisfying way.",
+  "pacing": "Deliberate, mechanical, shifting, like a giant antique clockwork map.",
+  "signature_shot": "A top-down macro view of a heavy brass hook physically lifting a thick crimson thread and moving it over a carved oak island.",
+  "medium_break": "A blueprint sequence where the mechanical rules of the map are exposed as drafted linework.",
+  "look_bible": "Vintage cartography diorama. Thick textured watercolor parchment, stained oak wood borders, and polished brass mechanisms. Palette: deep navy ocean, warm ochre landmasses, vibrant crimson date-line thread, and brass highlights. Lighting is warm, directional museum spotlighting casting soft shadows. Lenses are macro with shallow depth of field. Motion feels like heavy, satisfying sliding of wooden blocks and turning of brass gears.",
+  "penguin_render": "Carved from smooth painted ebony and ivory wood, with brass rings around its eyes, orange-stained wooden feet, and three thin wooden splinters on its head.",
+  "palette": {
+   "paper": "#F4ECD8",
+   "ink": "#1A2A3A",
+   "accent": "#C1272D",
+   "accent2": "#D4AF37"
+  },
+  "font": "inter",
+  "film": "print",
+  "grain": 0.15,
+  "vignette": 0.4,
+  "music": "Heavy, rhythmic clockwork ticking mixed with slow, resonant cello plucks and soft wooden clacks.",
+  "letterbox": false
+ },
+ "penguin": {
+  "role": "npc",
+  "arc": "Quietly tries to maintain the chaotic wooden map calendar, eventually attempting to fly into the new day and failing."
+ },
+ "keyframes": {
+  "k01": {
+   "id": "k01",
+   "seq": 0,
+   "prompt": "Split layout. Top half shows a brass sun dial set to night, bottom half shows three carved calendar slots. A dark oak block reading THU sits in the first slot.",
+   "penguin": "A small round egg-shaped wooden penguin with brass eye-rings is standing on the empty third slot.",
+   "prev": null
+  },
+  "k02": {
+   "id": "k02",
+   "seq": 0,
+   "prompt": "Closer angle. Top half brass sun dial. Bottom half shows the THU block in slot one, and a bright maple block reading SAT in slot three. The middle slot is empty and dark.",
+   "penguin": "The wooden penguin is riding the bright maple SAT block as it sits heavily in the third slot.",
+   "prev": "k01"
+  },
+  "k03": {
+   "id": "k03",
+   "seq": 0,
+   "prompt": "Tilted down angle focusing on the empty middle slot between the THU and SAT blocks. Inside the shadowed gap rests a miniature carved wooden bed.",
+   "penguin": "The wooden penguin is standing next to the miniature carved wooden bed in the gap.",
+   "prev": "k02"
+  },
+  "k04": {
+   "id": "k04",
+   "seq": 0,
+   "prompt": "Shifted right angle. Next to the miniature carved wooden bed in the gap, a heavy brass stamp in the shape of a government seal has crashed down.",
+   "penguin": "The wooden penguin is startled, flippers raised, next to the crashed brass stamp.",
+   "prev": "k03"
+  },
+  "k05": {
+   "id": "k05",
+   "seq": 0,
+   "prompt": "Tight close-up on the round heavy brass stamp next to the wooden bed. The brass seal glints brightly under a warm spotlight.",
+   "penguin": "The wooden penguin is inspecting the glinting brass stamp closely.",
+   "prev": "k04"
+  },
+  "k06": {
+   "id": "k06",
+   "seq": 1,
+   "prompt": "Tight macro shot of a round brass map pin holding a thick, taut crimson thread on a navy painted parchment ocean.",
+   "penguin": "The wooden penguin is sitting on the edge of the round brass map pin with a tiny brass telescope.",
+   "prev": null
+  },
+  "k07": {
+   "id": "k07",
+   "seq": 1,
+   "prompt": "Panned left macro shot. The crimson thread is on the right, and on the left are large polished oak landmasses bathed in bright golden amber light.",
+   "penguin": "The wooden penguin is looking through the telescope at the golden amber landmasses.",
+   "prev": "k06"
+  },
+  "k08": {
+   "id": "k08",
+   "seq": 1,
+   "prompt": "Tilted up angle. Behind the oak landmasses and crimson thread, two tall stacks of wooden tiles stand completely misaligned and chaotic.",
+   "penguin": "The wooden penguin is frantically trying to hold the wobbling stack of wooden tiles together.",
+   "prev": "k07"
+  },
+  "k09": {
+   "id": "k09",
+   "seq": 1,
+   "prompt": "Closer angle on the misaligned wooden tiles. A brass mechanical arm is jammed hard against the tiles, trying to shove them across the crimson thread.",
+   "penguin": "The wooden penguin is pushing alongside the jammed brass mechanical arm.",
+   "prev": "k08"
+  },
+  "k10": {
+   "id": "k10",
+   "seq": 1,
+   "prompt": "Low worm's-eye angle of the jammed brass mechanical arm. The arm is bent and splintering under pressure, with a small wooden gear popping loose.",
+   "penguin": "The wooden penguin falls backward as the brass arm splinters.",
+   "prev": "k09"
+  },
+  "k11": {
+   "id": "k11",
+   "seq": 2,
+   "prompt": "Tight macro shot. A large brass hook reaches down and grabs the thick crimson thread right next to a small carved oak island block.",
+   "penguin": "The wooden penguin is standing on the small oak island block, looking at the large brass hook.",
+   "prev": null
+  },
+  "k12": {
+   "id": "k12",
+   "seq": 2,
+   "prompt": "Craned up top-down view. The large brass hook has pulled the crimson thread completely over to the right side of the small carved oak island block.",
+   "penguin": "The wooden penguin is looking up in awe as the crimson thread is pulled over its head.",
+   "prev": "k11"
+  },
+  "k13": {
+   "id": "k13",
+   "seq": 2,
+   "prompt": "Closer top-down view of the small carved oak island block. The crimson thread is on its right. The island is illuminated by bright golden amber light.",
+   "penguin": "The wooden penguin is basking in the bright golden amber light on the island block.",
+   "prev": "k12"
+  },
+  "k14": {
+   "id": "k14",
+   "seq": 3,
+   "prompt": "Glowing cyan and white technical blueprint of the island and the date line. A drafting compass needle points firmly to the right.",
+   "penguin": "A linework blueprint penguin is holding a giant drafted clock spring.",
+   "prev": null
+  },
+  "k15": {
+   "id": "k15",
+   "seq": 3,
+   "prompt": "Rotated angle of the glowing cyan blueprint. The drafting compass needle now points firmly to the left.",
+   "penguin": "The blueprint penguin is frantically rewinding the giant clock spring as the compass spins.",
+   "prev": "k14"
+  },
+  "k16": {
+   "id": "k16",
+   "seq": 3,
+   "prompt": "Closer angle on the glowing cyan blueprint. Two glowing drafted suns are drawn right next to each other, overlapping above the island.",
+   "penguin": "The blueprint penguin is wearing drafted sunglasses under the two overlapping suns.",
+   "prev": "k15"
+  },
+  "k17": {
+   "id": "k17",
+   "seq": 4,
+   "prompt": "Tight macro on the wooden map border. A single dark oak block rests near the edge. A brass sweeper arm rests against it.",
+   "penguin": "The wooden penguin is sitting proudly on top of the brass sweeper arm.",
+   "prev": null
+  },
+  "k18": {
+   "id": "k18",
+   "seq": 4,
+   "prompt": "Drifted left angle. The brass sweeper arm has pushed the dark oak block completely off the edge of the wooden map border into darkness.",
+   "penguin": "The wooden penguin flaps its short wooden flippers, trying to take off into the dark.",
+   "prev": "k17"
+  },
+  "k19": {
+   "id": "k19",
+   "seq": 4,
+   "prompt": "Wide pulled-back shot of the wooden map. The carved oak island block rests peacefully on the navy parchment ocean, bathed in calm silver moonlight. The crimson thread sits safely on its right.",
+   "penguin": "The wooden penguin has landed face-first on the peaceful island block under the silver moonlight.",
+   "prev": "k18"
+  }
+ },
+ "shots": [
+  {
+   "id": "s01",
+   "seq": 0,
+   "from": "k01",
+   "to": "k02",
+   "cue": "An entire country went",
+   "motion": "Camera pushes in 20% as the bright maple block reading SAT drops heavily into the third slot.",
+   "overlay": null,
+   "transition": "cut",
+   "sfx": "heavy wooden thud",
+   "serious": false
+  },
+  {
+   "id": "s02",
+   "seq": 0,
+   "from": "k02",
+   "to": "k03",
+   "cue": "Thursday and woke up",
+   "motion": "Camera tilts down 20% into the empty middle slot, revealing the miniature carved wooden bed resting in the shadow.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "soft wood sliding",
+   "serious": false
+  },
+  {
+   "id": "s03",
+   "seq": 0,
+   "from": "k03",
+   "to": "k04",
+   "cue": "This is Samoa, December",
+   "motion": "Camera drifts right 20% as a heavy brass stamp in the shape of a government seal crashes down next to the bed.",
+   "overlay": {
+    "type": "label",
+    "text": "DECEMBER 2011",
+    "pos": "top"
+   },
+   "transition": "chain",
+   "sfx": "heavy brass slam",
+   "serious": false
+  },
+  {
+   "id": "s04",
+   "seq": 0,
+   "from": "k04",
+   "to": "k05",
+   "cue": "Friday the 30th never",
+   "motion": "Camera pushes in 30% on the brass seal, which glints brightly under a warm spotlight.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "low hum",
+   "serious": false
+  },
+  {
+   "id": "s05",
+   "seq": 1,
+   "from": "k06",
+   "to": "k07",
+   "cue": "No storm. No glitch.",
+   "motion": "Camera pans left 30% along the ocean surface, revealing the polished oak landmasses bathed in golden amber light.",
+   "overlay": null,
+   "transition": "match",
+   "sfx": "parchment rustle",
+   "serious": false
+  },
+  {
+   "id": "s06",
+   "seq": 1,
+   "from": "k07",
+   "to": "k08",
+   "cue": "Samoa sat just east",
+   "motion": "Camera tilts up 20% to show the two tall stacks of wooden tiles on either side of the thread, entirely misaligned.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "wooden clatter",
+   "serious": false
+  },
+  {
+   "id": "s07",
+   "seq": 1,
+   "from": "k08",
+   "to": "k09",
+   "cue": "Its biggest trading partners,",
+   "motion": "Camera pushes in 25% on the tiles as the brass mechanical arm tries to shove a tile across the thread, jamming against the opposite stack.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "brass gear grinding",
+   "serious": false
+  },
+  {
+   "id": "s08",
+   "seq": 1,
+   "from": "k09",
+   "to": "k10",
+   "cue": "So your Friday was",
+   "motion": "Camera drops low 20% to a worm's-eye view as the jammed brass arm bends and splinters under the immense pressure.",
+   "overlay": {
+    "type": "label",
+    "text": "2 DAYS LOST",
+    "pos": "top"
+   },
+   "transition": "chain",
+   "sfx": "wood splintering",
+   "serious": false
+  },
+  {
+   "id": "s09",
+   "seq": 2,
+   "from": "k11",
+   "to": "k12",
+   "cue": "Two working days lost,",
+   "motion": "Camera cranes up 30% to a top-down view as the brass hook pulls the crimson thread completely over to the right side of the island.",
+   "overlay": null,
+   "transition": "match",
+   "sfx": "heavy thread stretching",
+   "serious": false
+  },
+  {
+   "id": "s10",
+   "seq": 2,
+   "from": "k12",
+   "to": "k13",
+   "cue": "The fix was simple.",
+   "motion": "Camera pushes in 20% on the island block as its lighting instantly snaps from cool blue to bright golden amber.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "warm light click",
+   "serious": false
+  },
+  {
+   "id": "s11",
+   "seq": 3,
+   "from": "k14",
+   "to": "k15",
+   "cue": "Samoa moved to the",
+   "motion": "Camera rotates 20 degrees as the compass needle violently spins backwards to point left.",
+   "overlay": null,
+   "transition": "flash",
+   "sfx": "rapid clock rewinding",
+   "serious": false
+  },
+  {
+   "id": "s12",
+   "seq": 3,
+   "from": "k15",
+   "to": "k16",
+   "cue": "Here's the twist. Samoa",
+   "motion": "Camera pushes in 30% as a second glowing blueprint sun is drafted right next to the first one, overlapping.",
+   "overlay": {
+    "type": "label",
+    "text": "1892",
+    "pos": "top"
+   },
+   "transition": "chain",
+   "sfx": "pencil drafting scratch",
+   "serious": false
+  },
+  {
+   "id": "s13",
+   "seq": 4,
+   "from": "k17",
+   "to": "k18",
+   "cue": "In 1892, to match",
+   "motion": "Camera drifts left 20% as the brass sweeper smoothly pushes the block off the edge into darkness.",
+   "overlay": {
+    "type": "label",
+    "text": "119 YEARS LATER",
+    "pos": "top"
+   },
+   "transition": "cut",
+   "sfx": "smooth brass sliding",
+   "serious": false
+  },
+  {
+   "id": "s14",
+   "seq": 4,
+   "from": "k18",
+   "to": "k19",
+   "cue": "So after 119 years,",
+   "motion": "Camera pulls back 30% as the penguin tries to fly but face-plants onto the peaceful island block bathed in calm silver moonlight.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "soft wooden tap",
+   "serious": false
+  }
+ ],
+ "cover": {
+  "prompt": "A thick crimson thread pulled across a navy parchment ocean, with a tiny carved wooden penguin standing on a stained oak island.",
+  "text": "THE MISSING DAY"
+ },
+ "n_beats": 10
+}
