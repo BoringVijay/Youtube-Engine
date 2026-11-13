@@ -1,7 +1,7 @@
 {
  "id": "why-do-advanced-ai-models-keep-crashing-under-peak-user-demand-",
  "created": "2026-11-13T16:37:08+00:00",
- "pct": 90,
+ "pct": 97,
  "v": 3,
  "format": "short",
  "q": "Why do advanced AI models keep crashing under peak user demand?",
@@ -131,8 +131,8 @@
   "pinned_comment": "On a scale of 1 to 'penguin attempting flight to unjam server pipes,' how hectic was your morning rush?",
   "instagram_caption": "Millions of prompts, warehouses of interconnected chips, and one overwhelmed switchboard operator. Here’s why AI models really choke under peak demand.\n\n#ArtificialIntelligence #TechExplained #AnimationStudio #CloudInfrastructure #BehindTheScreen"
  },
- "stage": "final_ready",
- "step": "Short ready (Clockwork Glasshouse, penguin as protagonist). Watch it and approve or send notes",
+ "stage": "scheduled",
+ "step": "Uploaded as private. Flip it to Public (or schedule it) in YouTube Studio",
  "cost": 14.176,
  "steps": [
   {
@@ -166,9 +166,25 @@
   {
    "stage": "final_ready",
    "at": "2026-11-13T20:23:50+00:00"
+  },
+  {
+   "stage": "approved",
+   "at": "2026-11-13T21:40:53+00:00"
+  },
+  {
+   "stage": "uploading",
+   "at": "2026-11-13T22:46:41+00:00"
+  },
+  {
+   "stage": "scheduled",
+   "at": "2026-11-13T22:47:10+00:00"
+  },
+  {
+   "stage": "scheduled",
+   "at": "2026-11-13T22:47:12+00:00"
   }
  ],
- "updated": "2026-11-13T20:23:50+00:00",
+ "updated": "2026-11-13T22:47:12+00:00",
  "voice_style": "C",
  "voice_fit": 1.156,
  "duration": 58.5,
@@ -271,5 +287,41 @@
    "s05: The falling blue balls look like a flat 2D overlay lacking proper 3D physics, depth, and collision with the container.",
    "s06: The penguin's flippers abruptly morph into orange hands, and the lever's geometry shifts as it is pulled."
   ]
+ },
+ "notes_in": [
+  {
+   "at": "2026-11-13T20:49:00.000Z",
+   "stage": "final",
+   "notes": ""
+  }
+ ],
+ "schedule": {
+  "youtube": null,
+  "instagram": null,
+  "why": "07:30 IST is the Shorts morning scroll in India and 9 pm the night before on the US East Coast. 18:30 IST catches the India evening and US breakfast. Reels peak in the evening, so 19:30 IST for India, 07:30 IST for US night owls.",
+  "window": "global"
+ },
+ "slot": null,
+ "youtube": {
+  "videos": [
+   {
+    "kind": "main",
+    "id": "YyQViUzkPrI",
+    "url": "https://youtube.com/shorts/YyQViUzkPrI",
+    "studio": "https://studio.youtube.com/video/YyQViUzkPrI/edit",
+    "title": "Why Your AI Chatbot Freezes Mid-Sentence",
+    "privacy": "private",
+    "publish_at": null,
+    "published": "2026-11-13T22:46:46Z",
+    "upload_status": "uploaded",
+    "views": 0,
+    "likes": 0,
+    "comments": 0,
+    "checked": "2026-11-13T22:47:12+00:00"
+   }
+  ],
+  "audited": true,
+  "note": "Scheduled.",
+  "channel": "@curiouspenguincantfly"
  }
 }

@@ -1,0 +1,359 @@
+{
+ "format": "short",
+ "universe": {
+  "name": "Art Deco Pneumatic Tube Network",
+  "studio": "Brass & Bellows Animation Co.",
+  "why": "Pneumatic tubes and physical brass switches perfectly physicalize the abstract concept of digital money routing, the 'leaky pipe' of bureaucracy, and the seamless flow of direct benefit transfers.",
+  "pacing": "Rhythmic and mechanical, starting fast, slowing for the historical context, then escalating to a smooth, high-speed flow.",
+  "signature_shot": "The penguin standing before a colossal, spinning brass switchboard, looking up in awe as millions of glowing cyan orbs shoot through a cathedral of frosted glass tubes.",
+  "medium_break": "The penguin taps a glass tube, and it rings with a hollow, physical glass clink, momentarily stopping the glowing digital flow inside before it resumes.",
+  "look_bible": "Art Deco pneumatic tube network. Materials: highly polished brass, frosted glass, dark mahogany wood, and glowing neon-cyan energy representing digital cash. Palette: deep mahogany brown, gleaming gold/brass, neon cyan, stark white. Lighting: dramatic, high-contrast cinematic lighting with volumetric beams cutting through dust motes in the air. Lens: anamorphic with slight edge distortion and warm horizontal flares. Motion: heavy, satisfying mechanical clunks, smooth sliding brass pistons, and fast-flowing glowing orbs inside glass.",
+  "penguin_render": "A stylized Art Deco penguin: smooth polished obsidian body, brushed steel belly, glowing orange glass feet and beak, and three stiff brass wire feathers sticking up from its head.",
+  "palette": {
+   "paper": "#1A1A1A",
+   "ink": "#FFFFFF",
+   "accent": "#00FFFF",
+   "accent2": "#B5A642"
+  },
+  "font": "anton",
+  "film": "clean",
+  "grain": 0.1,
+  "vignette": 0.6,
+  "music": "Rhythmic, ticking clockwork percussion layered with smooth, sweeping cello lines and occasional brass chimes.",
+  "letterbox": false
+ },
+ "penguin": {
+  "role": "protagonist",
+  "arc": "Marvels at the new glowing biometric tube system, tries to use it, but ultimately gets rejected by the scanner because it has no fingerprints."
+ },
+ "keyframes": {
+  "k01": {
+   "id": "k01",
+   "seq": 0,
+   "prompt": "Art Deco pneumatic tube network. Mid shot, looking up at a towering cluster of frosted glass tubes against a dark mahogany background. Glowing neon-cyan orbs zip downwards through the tubes, illuminating the polished brass fittings.",
+   "penguin": null,
+   "prev": null
+  },
+  "k02": {
+   "id": "k02",
+   "seq": 0,
+   "prompt": "Art Deco pneumatic tube network. Camera tilted down to the base of the glass tubes. In the foreground, the obsidian and steel penguin stands holding a polished brass receiving tray out, looking up expectantly.",
+   "penguin": "Standing at the base of the tubes, holding a brass tray out with its flippers, looking up.",
+   "prev": "k01"
+  },
+  "k03": {
+   "id": "k03",
+   "seq": 0,
+   "prompt": "Art Deco pneumatic tube network. Close up on the penguin and the brass tray. A glowing neon-cyan orb drops perfectly from the glass tube into the tray, casting a bright blue light on the penguin's brushed steel belly.",
+   "penguin": "Holding the tray, looking down in awe at the glowing cyan orb that just landed.",
+   "prev": "k02"
+  },
+  "k04": {
+   "id": "k04",
+   "seq": 0,
+   "prompt": "Art Deco pneumatic tube network. Wide shot, pulling back to reveal the penguin standing in a vast, pristine, empty Art Deco hall with gleaming marble floors. No desks, no queues, just the penguin and the glowing tubes.",
+   "penguin": "Standing small in the vast empty hall, holding the glowing tray, looking around the empty space.",
+   "prev": "k03"
+  },
+  "k05": {
+   "id": "k05",
+   "seq": 1,
+   "prompt": "Art Deco pneumatic tube network. Mid shot, a dusty, dimly lit mahogany room. A rusty, open brass gutter carries a dull, non-glowing gold coin. The penguin stands in the background, watching it roll.",
+   "penguin": "Standing in the background, watching the dull gold coin roll down the rusty gutter.",
+   "prev": null
+  },
+  "k06": {
+   "id": "k06",
+   "seq": 1,
+   "prompt": "Art Deco pneumatic tube network. Camera tracks right alongside the rolling dull gold coin moving slowly down the rusty, uneven brass gutter. The penguin waddles alongside it in the background.",
+   "penguin": "Waddling in the background, keeping pace with the rolling coin.",
+   "prev": "k05"
+  },
+  "k07": {
+   "id": "k07",
+   "seq": 1,
+   "prompt": "Art Deco pneumatic tube network. Close up as the camera pushes in on a wide, jagged crack in the rusty brass gutter. The dull gold coin hits the edge of the crack and begins to tip sideways.",
+   "penguin": null,
+   "prev": "k06"
+  },
+  "k08": {
+   "id": "k08",
+   "seq": 1,
+   "prompt": "Art Deco pneumatic tube network. Camera tilts down heavily as the dull gold coin falls through the crack into a dark, unseen grate below. The penguin leans over the edge of the gutter, looking down sadly.",
+   "penguin": null,
+   "prev": "k07"
+  },
+  "k09": {
+   "id": "k09",
+   "seq": 2,
+   "prompt": "Blueprint technical cutaway. Top-down view of dark blue drafting paper. Glowing cyan linework rapidly draws a perfectly sealed, straight pipe replacing a jagged broken one.",
+   "penguin": null,
+   "prev": null
+  },
+  "k10": {
+   "id": "k10",
+   "seq": 2,
+   "prompt": "Blueprint technical cutaway. Camera pans right across the dark blue paper to reveal glowing cyan schematic drawings of a human fingerprint and a human iris side by side.",
+   "penguin": null,
+   "prev": "k09"
+  },
+  "k11": {
+   "id": "k11",
+   "seq": 2,
+   "prompt": "Blueprint technical cutaway. Camera pushes in on the cyan fingerprint schematic as it physically morphs into a 12-toothed gear, spinning and locking into place.",
+   "penguin": null,
+   "prev": "k10"
+  },
+  "k12": {
+   "id": "k12",
+   "seq": 2,
+   "prompt": "Blueprint technical cutaway. Camera tilts up slightly as the spinning cyan fingerprint gear interlocks with a larger gear shaped like a bank vault door, turning it.",
+   "penguin": null,
+   "prev": "k11"
+  },
+  "k13": {
+   "id": "k13",
+   "seq": 3,
+   "prompt": "Art Deco pneumatic tube network. Wide shot of a colossal, spinning brass switchboard mechanism. Hundreds of frosted glass tubes converge on a central rotating brass drum. Glowing cyan orbs wait at the top.",
+   "penguin": null,
+   "prev": null
+  },
+  "k14": {
+   "id": "k14",
+   "seq": 3,
+   "prompt": "Art Deco pneumatic tube network. Camera pushes in on the central rotating brass drum of the switchboard. The drum spins with heavy mechanical precision, aligning a glass tube perfectly.",
+   "penguin": null,
+   "prev": "k13"
+  },
+  "k15": {
+   "id": "k15",
+   "seq": 3,
+   "prompt": "Art Deco pneumatic tube network. Camera tracks a glowing cyan orb as it shoots out of the newly aligned tube, illuminating the polished brass around it.",
+   "penguin": null,
+   "prev": "k14"
+  },
+  "k16": {
+   "id": "k16",
+   "seq": 3,
+   "prompt": "Art Deco pneumatic tube network. Camera pans right to a thick frosted glass panel set in brass. A glowing cyan silhouette of a human hand illuminates from behind the glass.",
+   "penguin": null,
+   "prev": "k15"
+  },
+  "k17": {
+   "id": "k17",
+   "seq": 4,
+   "prompt": "Art Deco pneumatic tube network. Mid shot. The obsidian and steel penguin stands at a polished brass biometric terminal. It is pressing its smooth, featureless steel flipper flat against a glowing glass scanner plate.",
+   "penguin": "Pressing its smooth steel flipper against a glowing glass scanner plate.",
+   "prev": null
+  },
+  "k18": {
+   "id": "k18",
+   "seq": 4,
+   "prompt": "Art Deco pneumatic tube network. Camera pushes in slightly on the glass scanner plate. The glowing cyan light under the penguin's flipper suddenly flashes a harsh, warning red.",
+   "penguin": "Still pressing its flipper on the glass, looking down as the light turns red.",
+   "prev": "k17"
+  },
+  "k19": {
+   "id": "k19",
+   "seq": 4,
+   "prompt": "Art Deco pneumatic tube network. Camera tilts up slightly to frame the penguin's face. The penguin stares deadpan directly into the camera, its three brass wire feathers drooping slightly in defeat. The red light reflects on its obsidian face.",
+   "penguin": "Staring deadpan directly at the camera, three brass feathers drooping, illuminated by red light.",
+   "prev": "k18"
+  }
+ },
+ "shots": [
+  {
+   "id": "s01",
+   "seq": 0,
+   "from": "k01",
+   "to": "k02",
+   "cue": "Every month, money just appears",
+   "motion": "Camera tilts down rapidly, following the glowing cyan orbs as they shoot down the glass tubes to reveal the penguin at the bottom.",
+   "overlay": null,
+   "transition": "cut",
+   "sfx": "Fast, high-pitched glass whooshes and a satisfying mechanical click.",
+   "serious": false
+  },
+  {
+   "id": "s02",
+   "seq": 0,
+   "from": "k02",
+   "to": "k03",
+   "cue": "in millions of bank accounts.",
+   "motion": "Camera pushes in smoothly on the brass tray as the glowing orb drops into it, illuminating the scene.",
+   "overlay": {
+    "type": "label",
+    "text": "MILLIONS OF ACCOUNTS",
+    "pos": "top"
+   },
+   "transition": "chain",
+   "sfx": "A bright, resonant ding as the orb hits the brass tray.",
+   "serious": false
+  },
+  {
+   "id": "s03",
+   "seq": 0,
+   "from": "k03",
+   "to": "k04",
+   "cue": "No envelope. No queue. No guy at a desk taking a cut.",
+   "motion": "Camera pulls back and pans slightly left to reveal the vast, empty, pristine hall surrounding the penguin.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "A low, echoing ambient hum of the empty hall.",
+   "serious": false
+  },
+  {
+   "id": "s04",
+   "seq": 1,
+   "from": "k05",
+   "to": "k06",
+   "cue": "In Madhya Pradesh, a scheme called Ladli Behna",
+   "motion": "Camera tracks right smoothly, following the slow, wobbly path of the dull gold coin down the rusty gutter.",
+   "overlay": null,
+   "transition": "cut",
+   "sfx": "Heavy, metallic scraping and a slow, rhythmic clanking.",
+   "serious": false
+  },
+  {
+   "id": "s05",
+   "seq": 1,
+   "from": "k06",
+   "to": "k07",
+   "cue": "sends eligible women a fixed amount, every single month.",
+   "motion": "Camera pushes in on the jagged crack in the gutter as the coin approaches and begins to tip.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "A scraping metal halt.",
+   "serious": false
+  },
+  {
+   "id": "s06",
+   "seq": 1,
+   "from": "k07",
+   "to": "k08",
+   "cue": "It didn't always work like this. Welfare money used to travel down a chain of offices before it reached you.",
+   "motion": "Camera tilts down, following the coin as it falls into the dark grate, revealing the sad penguin above.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "A hollow, echoing metallic clatter fading into darkness.",
+   "serious": true
+  },
+  {
+   "id": "s07",
+   "seq": 1,
+   "from": "k08",
+   "to": null,
+   "cue": "Every hand on that chain was a place for some of it to leak.",
+   "motion": "Camera slowly pushes in on the dark grate as the penguin continues to stare down into the abyss.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "A low, ominous bass rumble.",
+   "serious": true
+  },
+  {
+   "id": "s08",
+   "seq": 2,
+   "from": "k09",
+   "to": "k10",
+   "cue": "So India rebuilt the pipe. Step one, bank accounts for millions who never had one.",
+   "motion": "Camera pans smoothly to the right across the blueprint as the glowing cyan schematics draw themselves.",
+   "overlay": null,
+   "transition": "cut",
+   "sfx": "Crisp paper rustling and rapid, high-tech drafting sounds.",
+   "serious": false
+  },
+  {
+   "id": "s09",
+   "seq": 2,
+   "from": "k10",
+   "to": "k11",
+   "cue": "Step two, Aadhaar. A twelve digit ID tied to your fingerprints and your irises.",
+   "motion": "Camera pushes in on the fingerprint schematic as it transforms into a spinning gear.",
+   "overlay": {
+    "type": "label",
+    "text": "12 DIGIT ID",
+    "pos": "top"
+   },
+   "transition": "chain",
+   "sfx": "A precise, mechanical ratcheting sound.",
+   "serious": false
+  },
+  {
+   "id": "s10",
+   "seq": 2,
+   "from": "k11",
+   "to": "k12",
+   "cue": "Step three, link them. Now the government doesn't need your account number.",
+   "motion": "Camera tilts up to follow the interlocking gears as they connect the fingerprint to the bank vault symbol.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "A heavy, satisfying metallic lock engaging.",
+   "serious": false
+  },
+  {
+   "id": "s11",
+   "seq": 3,
+   "from": "k13",
+   "to": "k14",
+   "cue": "Here's the twist. The treasury pays your Aadhaar number,",
+   "motion": "Camera pushes in heavily on the central spinning brass drum of the colossal switchboard.",
+   "overlay": null,
+   "transition": "cut",
+   "sfx": "Massive, booming clockwork gears turning.",
+   "serious": false
+  },
+  {
+   "id": "s12",
+   "seq": 3,
+   "from": "k14",
+   "to": "k15",
+   "cue": "and a national switch figures out which bank you're in.",
+   "motion": "Camera tracks down smoothly as the glowing cyan orb shoots out of the aligned tube.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "A powerful pneumatic whoosh.",
+   "serious": false
+  },
+  {
+   "id": "s13",
+   "seq": 3,
+   "from": "k15",
+   "to": "k16",
+   "cue": "Your body is basically the address.",
+   "motion": "Camera pans right to reveal the glowing cyan hand silhouette illuminating on the frosted glass panel.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "A warm, pulsing electronic hum.",
+   "serious": false
+  },
+  {
+   "id": "s14",
+   "seq": 4,
+   "from": "k17",
+   "to": "k18",
+   "cue": "So every month, money just appears. Unless you're a penguin.",
+   "motion": "Camera pushes in slightly on the scanner plate as the penguin presses its flipper down and the light flashes red.",
+   "overlay": null,
+   "transition": "cut",
+   "sfx": "A harsh, low-frequency error buzz.",
+   "serious": false
+  },
+  {
+   "id": "s15",
+   "seq": 4,
+   "from": "k18",
+   "to": "k19",
+   "cue": "No fingerprints.",
+   "motion": "Camera tilts up to the penguin's deadpan face as it stares into the lens, feathers drooping.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "A sad, muted brass trombone note.",
+   "serious": false
+  }
+ ],
+ "cover": {
+  "prompt": "Art Deco pneumatic tube network. The obsidian and steel penguin standing before a colossal, spinning brass switchboard, looking up in awe as millions of glowing cyan orbs shoot through a cathedral of frosted glass tubes.",
+  "text": "MONEY JUST APPEARS"
+ },
+ "n_beats": 11
+}

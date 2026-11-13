@@ -1,178 +1,226 @@
-20:40:56 inbox: 5 messages
-[gai] tts model: gemini-3.1-flash-tts-preview via vertex
-20:41:11 inbox: 0 messages
-20:41:14 [how-did-samoa-legally-delete-an-entire-d] voicing 6% Directing the narrator's performance
+21:40:53 inbox: 1 messages
+21:40:55 [why-do-advanced-ai-models-keep-crashing-] approved 92% Approved. Uploading private, you flip it public
+21:40:58 inbox: 0 messages
+21:40:59 [how-does-india-send-cash-straight-to-mil] voicing 6% Directing the narrator's performance
 [gai] text model: gemini-3.8-flash via vertex
-[voice] take 1/1 recorded: 71.6s
-20:41:53 voice 72.1s over the 59s cap; tightened x1.20
-[voice] alignment matched 92% of words
-20:42:00 [how-did-samoa-legally-delete-an-entire-d] directing 12% Casting the penguin and planning the shots
+[gai] tts model: gemini-3.1-flash-tts-preview via vertex
+[voice] take 1/1 recorded: 56.7s
+[voice] alignment matched 94% of words
+21:41:44 [how-does-india-send-cash-straight-to-mil] directing 12% Casting the penguin and planning the shots
 [gai] pro: gemini-3.8-pro not available here
 [gai] pro: gemini-3.7-pro not available here
 [gai] pro: gemini-3.5-pro not available here
 [gai] pro: gemini-3.1-pro not available here
 [gai] pro model: gemini-3.1-pro-preview via vertex
-20:45:20 [shorts] universe Cartographica Tactile / Felt & Meridian; penguin npc; 19 keyframes, 14 shots in 5 sequences
-20:45:22 [how-did-samoa-legally-delete-an-entire-d] art 22% Painting 19 keyframes in Cartographica Tactile
+21:43:18 [shorts] universe Art Deco Pneumatic Tube Network / Brass & Bellows Animation Co.; penguin protagonist; 19 keyframes, 15 shots in 5 sequences
+21:43:20 [how-does-india-send-cash-straight-to-mil] art 22% Painting 19 keyframes in Art Deco Pneumatic Tube Network
 [gai] image model: gemini-nano-banana-2.1 via vertex
-20:46:21 [shorts] keyframe k11 review 6.0: Penguin is off-model: the beak is solid orange instead of dark with an orange tip.; Penguin eyes have misaligned pupils creating a derpy expression, and feature brass rims instead of the canonical whi
-20:46:24 [shorts] keyframe k06 review 6.0: Penguin is standing on the pin, not sitting as requested.; The telescope physically merges into the brass eye-ring; it should be a separate object held by the flipper.; The three-feather tuft looks li
-20:46:24 [shorts] keyframe k01 review 6.0: Penguin is off-model: the three-feather tuft looks like wooden toothpicks, eye-rings are wooden instead of polished brass, beak is solid orange instead of dark with an orange tip, and the eyes are asy
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 15s
-20:47:09 [shorts] keyframe k01 review 6.0: The Roman numerals on the sundial are nonsensical and repeat incorrectly (e.g., VI, VII, VIII appear twice on the outer ring).; The red thread in the bottom panel clips directly through the solid wood
-20:47:14 [shorts] keyframe k06 review 6.0: The brass telescope is fused directly into the penguin's eye instead of being held by the flipper.; The penguin's feet appear glued to the front of its belly rather than anatomically attached to the b
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 15s
-20:47:31 [shorts] keyframe k11 review 6.0: The crimson thread's physics are illogical; it appears to melt into the side of the wooden base and merges into the upper brass arm instead of tying or wrapping cleanly.; The penguin is off-model: it 
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 30s
-20:47:59 [shorts] keyframe k07 review 4.0: Major continuity error: The map topology completely changed from flat stained parchment in the previous frame to raised 3D wooden blocks in this frame.; Continuity error: The brass pedestal the pengui
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 15s
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 45s
-[qc] reviewer error (passing): 'list' object has no attribute 'get'
-20:48:19 [shorts] keyframe k12 review 10.0: 
+  "error"), waiting 15s
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 30s
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 45s
-[qc] reviewer error (passing): 'list' object has no attribute 'get'
-20:49:03 [shorts] keyframe k13 review 10.0: 
+  "error"), waiting 30s
+21:44:24 [shorts] keyframe k01 review 6.0: Spatial logic failure in the center: the curved frosted glass pipe clips through and merges impossibly with the vertical pipes, creating an Escher-like geometry.; Brass wall brackets exhibit minor AI 
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 60s
+  "error"), waiting 45s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 45s
+21:44:53 [shorts] keyframe k01 review 8.0: The glowing orbs inside the tubes appear slightly stretched or smeared, which could be interpreted as motion blur but might look like an artefact in a still frame.; Some of the brass fittings have min
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 15s
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 60s
-20:50:11 [shorts] keyframe k14 review 4.0: The penguin is a solid 3D figure instead of the requested 'linework blueprint penguin'.; The clock spring is a solid brass object instead of a 'drafted clock spring'.; Garbled, nonsensical AI text is 
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 75s
+  "error"), waiting 60s
+21:46:06 [shorts] keyframe k02 review 5.0: The penguin character looks like a cheap plastic toy rather than premium obsidian and steel.; The penguin's feet and beak appear to be made of translucent gummy material or glass instead of solid mate
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 15s
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 75s
-20:51:21 [shorts] keyframe k14 review 5.0: Penguin is off-model: the beak is distorted into a flat, wide smiling mouth instead of a pointed beak.; Penguin's feet are rendered as lumpy claws rather than oversized webbed feet.; Garbled, nonsensi
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 90s
-20:52:13 [shorts] keyframe k15 review 4.0: The penguin's flippers are merged into the spiral spring in a messy, garbled tangle of cyan lines instead of clearly holding it.; The brass drafting compass has teleported to a completely different po
+  "error"), waiting 75s
+21:47:07 [shorts] keyframe k02 review 6.0: The penguin has misaligned, derpy eyes, breaking the premium feel.; The beak looks like a translucent gem rather than a solid beak.; The feet appear to be made of translucent gummy material instead of
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 15s
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 90s
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 105s
+  "error"), waiting 90s
 [qc] reviewer error (passing): 'list' object has no attribute 'get'
-20:53:26 [shorts] keyframe k15 review 10.0: 
+21:48:10 [shorts] keyframe k03 review 10.0: 
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+21:49:10 [shorts] keyframe k04 review 5.0: Spatial continuity error: the central brass bell of the pneumatic tube is much higher above the penguin than in the previous frame; Prompt adherence: the floor is dark wood with brass inlays instead o
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 105s
-20:54:22 [shorts] keyframe k16 review 5.0: An unprompted physical 3D penguin figure has appeared on the right side of the frame, breaking continuity with the previous shot.; The physical penguin figure looks like cheap plastic or clay with a d
-[qc] reviewer error (passing): 'list' object has no attribute 'get'
-20:55:03 [shorts] keyframe k16 review 10.0: 
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 120s
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 15s
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 120s
-20:56:02 [shorts] keyframe k17 review 7.0: Penguin beak is entirely orange/brown wood instead of dark with an orange tip as per canon.; The pupils inside the brass eye-rings are slightly misaligned, giving the penguin a slightly derpy or wall-
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 15s
-20:57:05 [shorts] keyframe k18 review 4.0: Logical consistency failure: In the previous frame, the brass arm was attached to the top of the wooden block with a rivet. In this frame, the block has magically detached and is falling, while the ar
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 15s
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 135s
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 135s
-20:58:15 [shorts] keyframe k18 review 5.0: Broken physics: The wooden block is falling at a steep angle, but the brass arm and rivet attached to it remain perfectly horizontal, creating an impossible joint.; Continuity error: The red thread vi
-20:59:08 [shorts] keyframe k19 review 5.0: Lighting is warm instead of the requested calm silver moonlight; Penguin's head tuft has changed from carved wood to literal toothpicks; Penguin's beak has changed from dark with an orange tip to soli
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 15s
-20:59:28 [shorts] keyframe k02 attempt 1: no image model worked: HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error": {
-    "code": 429,
-    "message": "Resource exhausted. Please try again lat
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 15s
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 30s
-21:00:07 [shorts] keyframe k19 review 4.0: Penguin anatomy is completely broken: the three-feather tuft is on its rear end instead of its head.; The white belly placement is incorrect for a face-down pose, making it look like a featureless pil
-21:00:10 [shorts] keyframe k07 attempt 1: no image model worked: HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error": {
-    "code": 429,
-    "message": "Resource exhausted. Please try again lat
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 45s
-21:01:10 [shorts] keyframe k07 review 5.0: The prompt requested 'large polished oak landmasses' on the left, but the image shows a flat map with a bright yellow glowing spot painted on it, lacking the requested 3D wooden texture.; The red thre
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 15s
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 30s
-21:02:12 [shorts] keyframe k02 review 7.0: The penguin's beak is solid orange, deviating from the canon 'orange-tipped dark beak'.; The brass gears visible on the right side of the wooden box are slightly jumbled and melted, lacking precise me
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 45s
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 15s
+21:50:23 [shorts] keyframe k09 review 4.0: The central glowing pipe is shattered and broken with flying shards, completely failing the prompt's requirement to show a 'perfectly sealed, straight pipe'.; The brass drafting tools on the edges (ca
+21:50:58 [shorts] keyframe k09 review 6.0: The glowing cyan section resembles magical energy tendrils rather than precise technical blueprint linework of a solid pipe.; The central pipe lacks structural drafting lines (outer and inner walls), 
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 60s
-21:03:16 [shorts] keyframe k03 review 5.0: The 'THU' block has morphed into a larger, differently shaped piece of wood with only 'HU' visible, breaking continuity.; The penguin's left eye is malformed and missing the white ring.; The penguin's
-[qc] reviewer error (passing): 'list' object has no attribute 'get'
-21:04:10 [shorts] keyframe k03 review 10.0: 
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 30s
+21:51:57 [shorts] keyframe k05 review 5.0: The penguin is rendered as a metallic and glass toy rather than a living character (brushed metal belly, translucent plastic feet, brass wire tuft).; The penguin's beak is entirely orange instead of d
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 45s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 75s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 60s
+21:53:07 [shorts] keyframe k05 review 6.0: Garbled, nonsensical AI text and symbols on the face of the gold coin; Penguin's beak is entirely orange/copper instead of dark with an orange tip; The brass gutter emerges from a wall opening on the 
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 30s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 75s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 45s
+21:54:22 [shorts] keyframe k04 review 9.0: Loss of detail on the penguin's face at a distance, specifically missing pupils compared to the previous frame.; The connection between the penguin's flippers and the tray is unclear; it looks slightl
+21:55:03 [shorts] keyframe k13 review 6.0: Glass tubes on the left side have illogical routing, appearing to float or loop awkwardly without clear structural support.; Connections between the frosted glass tubes and the brass drum appear melte
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 60s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 30s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 45s
+21:56:08 [shorts] keyframe k10 review 8.0: The glowing orange particles on the right side resemble fire embers rather than illuminated dust motes, which feels out of place and illogical on a paper blueprint.
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 75s
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 15s
-21:05:11 [shorts] keyframe k04 review 6.0: Penguin is off-model: the orange beak from the previous frame is missing.; Continuity error: the dark wooden block next to the 'TU' block in the previous frame has disappeared.; The debris from the st
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 60s
+21:57:11 [shorts] keyframe k11 review 6.0: The fingerprint is not morphing into the gear; instead, a 3D spinning gear has been superimposed on top of the static 2D fingerprint, which is still fully visible underneath.; The brass mechanical arm
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 15s
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 30s
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 45s
+  "error"), waiting 75s
 [qc] reviewer error (passing): 'list' object has no attribute 'get'
-21:06:17 [shorts] keyframe k08 review 10.0: 
+21:58:05 [shorts] keyframe k06 review 10.0: 
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 45s
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 60s
-21:07:08 [shorts] keyframe k09 review 3.0: Major continuity errors: the second stack of tiles, the compass, and the bottom gear from the previous frame have completely disappeared.; The map layout and the position of the red thread have change
+21:59:23 [shorts] keyframe k07 review 5.0: Severe continuity errors: the gutter's texture has changed from smooth rusty metal to heavily bumpy/corroded, its shape is deeper, and the gold coin is noticeably thicker with different edge details c
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 30s
+22:00:03 [shorts] keyframe k13 review 7.0: Structural inconsistencies: several glass tubes physically merge into each other or lack logical, distinct connections to the brass fittings (AI melting).; Depth and material failure: the glowing cyan
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 15s
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 75s
-21:08:23 [shorts] keyframe k09 review 5.0: Action mismatch: The penguin is not 'pushing alongside' the mechanical arm; they appear to be on opposite sides of the stack.; Artefact/Logic: The brass mechanical arm has a nonsensical, AI-generated 
-[qc] reviewer error (passing): 'list' object has no attribute 'get'
-21:09:03 [shorts] keyframe k10 review 10.0: 
-21:10:30 [shorts] keyframe k04 review 5.0: Object permanence failure: The miniature carved wooden bed from the previous frame has disappeared or morphed into splinters, rather than the stamp landing 'next to' it as requested.; The splintered w
-21:11:10 [shorts] keyframe k05 review 5.0: The penguin's eye has morphed into a protruding, cylindrical shape instead of a flat ring.; The penguin's beak is entirely orange, violating the 'orange-tipped dark beak' design rule.; Continuity erro
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 30s
+22:01:01 [shorts] keyframe k07 review 5.0: Major continuity error: A large, jagged crack has appeared in the gutter that was completely smooth and intact in the previous frame.; Material physics: The broken edges of the brass gutter look thin 
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 45s
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 15s
-21:12:14 [shorts] keyframe k05 review 4.0: Severe continuity errors: The wooden blocks with text ('TU', 'SA') from the previous frame have disappeared or become blank.; Continuity error: The shape of the wooden bed, the brass stamp handle, and
-21:12:21 [how-did-samoa-legally-delete-an-entire-d] motion 60% Animating 14 shots
-21:14:12 [shorts] shot s01 review 2.0: 00:00-00:01: The penguin and 'SAT' block in the top half of the screen completely vanish.; 00:00-00:02: The penguin in the bottom half teleports erratically, first appearing on top of the 'SAT' block,
-21:14:20 [shorts] shot s03 review 3.0: 00:01-00:02: The brass stamp completely morphs from a flat-bottomed stamp held by a hand into a cylindrical object resting on its side.; 00:00-00:03: The camera barely moves, failing to execute the in
-21:14:31 [shorts] shot s02 review 3.0: 00:00: Unintended split-screen composition, not matching the prompt's description of a single diorama.; 00:01-00:03: The tuft of hair on the penguin's head morphs and changes shape.; 00:02-00:03: The 
-21:15:59 [shorts] shot s04 review 2.0: 00:00-00:03: Severe morphing of the penguin figure; its beak disappears, eyes distort, and overall shape changes drastically.; 00:00-00:03: The intricate details on the brass seal morph and lose defin
-21:16:10 [shorts] shot s05 review 2.0: 00:01: Wooden blocks suddenly pop into existence around the penguin.; 00:02: The penguin ghosts and duplicates into two overlapping figures, while the wooden blocks morph into a completely different s
-21:16:35 [shorts] shot s06 review 2.0: 00:01 - 00:03: Severe morphing and melting of the penguin, telescope, and brass stand.; 00:03: Abrupt scene change where new objects (wooden stacks, compass, gears) pop in and the map layout changes c
-21:17:59 [shorts] shot s07 review 3.0: 00:03-00:05: Severe morphing of the wooden tiles as they are pushed; they bend and melt like rubber instead of remaining rigid individual blocks.; 00:03-00:05: The brass mechanical arm materializes ou
-21:18:02 [shorts] shot s08 review 3.0: 00:01 - 00:03: The wooden blocks fall and scatter, but then magically morph and reassemble into a neat stack in the background, violating physical logic and object permanence.; 00:00 - 00:03: The requ
-21:18:50 [shorts] shot s09 review 4.0: 00:00 - 00:03: The penguin's beak disappears as the camera cranes up, flattening completely into its face.; 00:00 - 00:03: The topographical lines and texture on the wooden block morph and shift unnat
-21:20:03 [shorts] shot s10 review 4.0: 00:00 - 00:03: The requested 20% camera push-in does not occur; the framing remains static.; 00:00 - 00:03: The lighting remains a constant warm amber throughout, failing to snap from cool blue as ins
-21:20:16 [shorts] shot s11 review 3.0: 00:00-00:05: Camera is completely static, failing the intended 20-degree rotation.; 00:00-00:05: Severe morphing of the brass compass; the hinge mechanism and legs constantly change shape and structur
-21:21:17 [shorts] shot s12 review 4.0: 00:01 - Glasses suddenly pop onto the penguin's face.; 00:02-00:03 - The brass compass slides unnaturally across the map and its shape warps slightly during the movement.; 00:07 - The penguin's glasse
-21:22:10 [shorts] shot s14 review 3.0: 00:00-00:02: Complete loss of object permanence during the camera move; the brass lever disappears, background gears change layout, a red thread appears, and map details change.; 00:01: The wooden blo
-21:22:16 [shorts] shot s13 review 3.0: 00:05-00:07: The brass arm, which is clearly screwed into the wooden block, remains floating in mid-air while the block falls away, completely breaking physical logic.; 00:05-00:07: The wooden block m
-21:22:48 [how-did-samoa-legally-delete-an-entire-d] final_render 80% Rendering the Short
-21:29:22 rendered short.mp4 in 391s, 74.8 MB
-21:30:24 final review 3.0: The video is plagued by severe AI hallucinations, including melting limbs, morphing props, and impossible physics. Furthermore, it completely ignores the visual directions for the final two shots, res
-21:30:25 [how-did-samoa-legally-delete-an-entire-d] motion 78% Review scored 3.0/10. Re-shooting 2 weak shot(s)
-21:32:23 [shorts] shot s06 review 3.0: 00:00-00:01: The brass telescope morphs into a different object, and the brass stand beneath the penguin disappears.; 00:01-00:02: Two tall stacks of wooden tiles abruptly pop into existence on either
-21:32:36 [shorts] shot s05 review 3.0: 00:00-00:05: The map texture, grid lines, and landmass shapes continuously morph and shift.; 00:03: A sudden, unprompted bright yellow light flashes across the map, washing out details.; 00:03-00:04: 
-21:32:39 [how-did-samoa-legally-delete-an-entire-d] final_render 80% Re-cutting with the fixed shots
-21:38:52 rendered short.mp4 in 373s, 76.1 MB
-21:39:54 [how-did-samoa-legally-delete-an-entire-d] metadata 88% Writing the title and description
-21:40:04 [how-did-samoa-legally-delete-an-entire-d] final_ready 90% Short ready (Cartographica Tactile, penguin as npc). Watch it and approve or send notes
-21:40:04 time budget used; the rest waits for the next run
-21:40:08 [youtube] 5 job(s) changed
-21:40:08 [youtube] analytics: {"views": 2547, "estimatedMinutesWatched": 652, "averageViewDuration": 26, "averageViewPercentage": 44.51, "likes": 65, "comments": 0, "shares": 0, "subscribersGained": 8} 
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 90s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 60s
+[qc] reviewer error (passing): 'list' object has no attribute 'get'
+22:02:06 [shorts] keyframe k08 review 10.0: 
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 75s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 105s
+22:03:25 [shorts] keyframe k17 review 4.0: The penguin is pressing its elongated beak against the scanner instead of its flipper, completely missing the core action of the prompt.; The beak is severely distorted, stretched, and looks like a st
+22:04:16 [shorts] keyframe k17 review 4.0: Severe anatomical artifact: The right flipper is unnaturally stretched into a long, rigid pole to reach the screen, completely breaking the 'short flippers' canon.; Penguin off-model: The beak is enti
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 30s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 120s
+[qc] reviewer error (passing): 'list' object has no attribute 'get'
+22:05:19 [shorts] keyframe k14 review 10.0: 
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 45s
+22:05:55 [shorts] keyframe k15 review 3.0: Severe continuity error: the continuous horizontal glass tube from the previous frame is now broken and disconnected on the right.; A completely new circular port and curved tube have spontaneously ap
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 60s
+22:07:01 [shorts] keyframe k15 review 6.0: The camera is static instead of tracking the orb as requested; the background remains identical while the orb moves to the edge of the frame.; The motion trail behind the foreground orb looks like a m
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 135s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 75s
+22:08:01 [shorts] keyframe k16 review 7.0: The glowing hand appears as a sharp neon outline rather than a solid silhouette illuminating from behind frosted glass (which would diffuse the light).; The anatomy of the hand is slightly distorted, 
+22:09:23 [shorts] keyframe k11 attempt 1: no image model worked: HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error": {
+    "code": 429,
+    "message": "Resource exhausted. Please try again lat
+[qc] reviewer error (passing): 'list' object has no attribute 'get'
+22:09:24 [shorts] keyframe k18 review 10.0: 
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 30s
+[qc] reviewer error (passing): 'list' object has no attribute 'get'
+22:10:20 [shorts] keyframe k19 review 10.0: 
+22:11:15 [shorts] keyframe k11 review 5.0: The gear has 10 teeth instead of the requested 12.; The fingerprint has not morphed into the gear; the gear is simply overlaid on top of the existing fingerprint, creating a messy double-exposure effe
+22:12:03 [shorts] keyframe k12 review 5.0: The structure of the cyan gear has morphed: in the previous frame it had solid brass teeth on the outside, but here the teeth are made of the glowing cyan pattern.; The interlocking point between the 
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+22:12:56 [shorts] keyframe k12 review 7.0: The interlocking teeth between the brass vault gear and the cyan fingerprint gear appear slightly melted and blended together, lacking distinct, solid mechanical edges.; The teeth on the large brass g
+22:13:02 [how-does-india-send-cash-straight-to-mil] motion 60% Animating 15 shots
+22:14:52 [shorts] shot s02 review 4.0: 00:02 - 00:03: The penguin's face, particularly the eyes and beak, warps and distorts significantly when the glowing orb lands.; 00:02 - 00:03: The brass tray held by the penguin morphs and changes sh
+22:14:53 [shorts] shot s01 review 3.0: 00:00-00:03: The camera remains completely static, failing to execute the requested downward tilt.; 00:01: A large, disconnected blue energy beam flashes across the screen, looking like a cheap overla
+22:15:14 [shorts] shot s03 review 4.0: 00:00-00:05: Severe morphing and distortion of the penguin character as the camera pulls back.; 00:01-00:05: The penguin's eyes, beak, and body shape lose consistency and warp significantly.; 00:01-00
+22:16:30 [shorts] shot s05 review 3.0: 00:01 - The penguin character completely morphs and disappears from the scene, a major object permanence failure.; 00:02 - The coin shatters into pieces instead of tipping as described in the intended
+22:16:41 [shorts] shot s04 review 3.0: 00:00-00:03: The camera remains completely static, failing to execute the intended tracking motion.; 00:00-00:03: The coin does not move or roll down the gutter as intended.; 00:01-00:03: The penguin 
+22:17:22 [shorts] shot s06 review 3.0: 00:02 - A large metal cylinder suddenly appears out of nowhere above the coin.; 00:03 - The coin changes color from gold to silver.; 00:04-00:07 - Broken pieces of the pipe float in mid-air instead of
+22:18:05 [shorts] shot s07 review 3.0: 00:00-00:03: The requested penguin character is completely missing from the shot.; 00:00-00:03: The camera remains static instead of pushing in on the grate.; 00:00-00:03: The broken structure in the 
+22:18:57 [shorts] shot s08 review 4.0: 00:00-00:07: The animation completely ignores the requested 3D materials (brass, glass, wood) and Art Deco style, rendering as a flat 2D glowing schematic instead.; 00:02-00:04: The transition from th
+22:19:23 [shorts] shot s09 review 3.0: 00:02: A brass gear abruptly pops into existence over the fingerprint schematic instead of smoothly transforming from it.; 00:03-00:05: The gear shatters and the pieces morph and melt into a swirling,
+22:20:07 [shorts] shot s10 review 3.0: 00:00-00:03: Severe morphing of all gear structures; teeth change shape, size, and number continuously.; 00:01-00:02: The top gear pops into existence from the background and morphs into shape rather 
+[qc] reviewer error (passing): 'list' object has no attribute 'get'
+22:20:58 [shorts] shot s11 review 10.0: 
+22:21:13 [shorts] shot s12 review 4.0: 00:00 - 00:03: The camera remains completely static, failing to execute the intended downward tracking motion.; 00:00 - 00:03: The intricate brass details and vertical slots on the central cylinder co
+22:22:12 [shorts] shot s13 review 6.0: 00:00 - 00:03: Subtle morphing and shifting of the intricate details on the brass cylinder and background tubes during the camera pan.; 00:02 - 00:03: The glowing cyan hand silhouette has warped, unev
+22:22:49 [shorts] shot s14 review 4.0: 00:01 - 00:03: The penguin's flipper stretches and morphs unnaturally, losing its solid metallic structure and appearing rubbery as it touches the panel.; 00:02 - 00:03: The penguin's face and beak wa
+22:23:06 [shorts] shot s15 review 4.0: The penguin's eyes and expression morph drastically and inconsistently, changing from wide-eyed (00:01) to angry with sudden eyebrows (00:02), and back to a different wide-eyed look (00:03).; The inte
+22:23:37 [how-does-india-send-cash-straight-to-mil] final_render 80% Rendering the Short
+22:33:06 rendered short.mp4 in 564s, 97.7 MB
+22:34:02 final review 4.0: The clear narrative is completely undermined by severe AI morphing artifacts throughout, particularly in the coin and gear sequences. The lack of physical logic, object permanence, and basic mechanica
+22:34:03 [how-does-india-send-cash-straight-to-mil] motion 78% Review scored 4.0/10. Re-shooting 2 weak shot(s)
+22:35:41 [shorts] shot s05 review 2.0: 00:01-00:02: The penguin character inexplicably explodes into debris.; 00:02-00:03: The penguin completely disappears, violating object permanence.; The animation completely fails to execute the inten
+22:35:55 [shorts] shot s10 review 4.0: 00:00-00:03: The glowing blue fingerprint pattern on the lower gear continuously morphs and warps as it rotates, lacking solid consistency.; 00:01-00:03: The upper brass gear and lower blue gear do no
+22:35:59 [how-does-india-send-cash-straight-to-mil] final_render 80% Re-cutting with the fixed shots
+22:45:13 rendered short.mp4 in 554s, 97.0 MB
+22:46:24 [how-does-india-send-cash-straight-to-mil] metadata 88% Writing the title and description
+22:46:36 [how-does-india-send-cash-straight-to-mil] final_ready 90% Short ready (Art Deco Pneumatic Tube Network, penguin as protagonist). Watch it and approve or send notes
+22:46:36 time budget used; the rest waits for the next run
+22:46:42 [why-do-advanced-ai-models-keep-crashing-] uploading 95% Uploading to YouTube as private
+22:47:10 [publish] uploaded main YyQViUzkPrI
+22:47:11 [why-do-advanced-ai-models-keep-crashing-] scheduled 97% Uploaded private. Flip it to Public in YouTube Studio
+22:47:12 [youtube] 4 job(s) changed
+22:47:13 [youtube] analytics: {"views": 2549, "estimatedMinutesWatched": 654, "averageViewDuration": 26, "averageViewPercentage": 44.59, "likes": 65, "comments": 0, "shares": 0, "subscribersGained": 8} 

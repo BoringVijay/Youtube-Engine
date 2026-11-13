@@ -1,7 +1,7 @@
 {
  "id": "how-does-india-send-cash-straight-to-millions-of-bank-accounts-",
  "created": "2026-11-13T16:37:14+00:00",
- "pct": 2,
+ "pct": 90,
  "v": 3,
  "format": "short",
  "q": "How does India send cash straight to millions of bank accounts?",
@@ -93,19 +93,144 @@
  "brew_at": "2026-11-13T16:26:45.150Z",
  "error": null,
  "fails": 0,
- "preview": null,
- "final": null,
+ "preview": {
+  "id": "1tTSTKCAKERCQ4bZAlH_dhSNWosPs1-xZ",
+  "view": "https://drive.google.com/file/d/1tTSTKCAKERCQ4bZAlH_dhSNWosPs1-xZ/view",
+  "download": "https://drive.google.com/uc?id=1tTSTKCAKERCQ4bZAlH_dhSNWosPs1-xZ&export=download",
+  "size_mb": 97.0,
+  "duration": 57.9,
+  "stills": [],
+  "poster": "1AlS9DA4KjJx89uQpchH4-hZBp5PTkAsP"
+ },
+ "final": {
+  "id": "1tTSTKCAKERCQ4bZAlH_dhSNWosPs1-xZ",
+  "view": "https://drive.google.com/file/d/1tTSTKCAKERCQ4bZAlH_dhSNWosPs1-xZ/view",
+  "download": "https://drive.google.com/uc?id=1tTSTKCAKERCQ4bZAlH_dhSNWosPs1-xZ&export=download",
+  "size_mb": 97.0,
+  "duration": 57.9,
+  "stills": [],
+  "poster": "1AlS9DA4KjJx89uQpchH4-hZBp5PTkAsP"
+ },
  "shorts": null,
  "thumb": null,
- "meta": null,
- "stage": "queued",
- "step": "Waiting for a render slot",
- "cost": 0,
+ "meta": {
+  "title": "How India Sends Cash Straight to Your Body",
+  "alt_titles": [
+   "How Millions Get Paid Without Account Numbers",
+   "The System That Bypassed Cash Middlemen"
+  ],
+  "description": "India rebuilt its financial pipes so payments route directly to biometric IDs, cutting out the middlemen entirely. Unfortunately, flippers don't register on fingerprint scanners.\n\n#Shorts #Fintech #India #Animation #CuriousPenguin",
+  "tags": [
+   "Direct Benefit Transfer",
+   "Aadhaar",
+   "India Stack",
+   "NPCI",
+   "Ladli Behna",
+   "Fintech",
+   "Brass and Bellows",
+   "Curious Penguin",
+   "Animation",
+   "Biometrics",
+   "Aadhaar Payment Bridge",
+   "Economics"
+  ],
+  "pinned_comment": "Should we issue him an official flipper-print, or is our penguin locked out of the pneumatic vault forever?",
+  "instagram_caption": "When your biometrics become your bank address, middleman leaks vanish into thin air. Flippers, however, still cause system errors.\n\n#Fintech #Animation #IndiaStack #BrassAndBellows #CuriousPenguin"
+ },
+ "stage": "final_ready",
+ "step": "Short ready (Art Deco Pneumatic Tube Network, penguin as protagonist). Watch it and approve or send notes",
+ "cost": 12.796,
  "steps": [
   {
    "stage": "queued",
    "at": "2026-11-13T16:37:14+00:00"
+  },
+  {
+   "stage": "voicing",
+   "at": "2026-11-13T21:40:58+00:00"
+  },
+  {
+   "stage": "directing",
+   "at": "2026-11-13T21:41:42+00:00"
+  },
+  {
+   "stage": "art",
+   "at": "2026-11-13T21:43:18+00:00"
+  },
+  {
+   "stage": "motion",
+   "at": "2026-11-13T22:34:02+00:00"
+  },
+  {
+   "stage": "final_render",
+   "at": "2026-11-13T22:35:57+00:00"
+  },
+  {
+   "stage": "metadata",
+   "at": "2026-11-13T22:46:22+00:00"
+  },
+  {
+   "stage": "final_ready",
+   "at": "2026-11-13T22:46:35+00:00"
   }
  ],
- "updated": "2026-11-13T16:37:14+00:00"
+ "updated": "2026-11-13T22:46:35+00:00",
+ "voice_style": "C",
+ "duration": 57.1,
+ "universe": "Art Deco Pneumatic Tube Network · Brass & Bellows Animation Co.",
+ "penguin_role": "protagonist",
+ "cameos": [
+  {
+   "shot": "k02",
+   "bit": "Standing at the base of the tubes, holding a brass tray out with its flippers, looking up."
+  },
+  {
+   "shot": "k03",
+   "bit": "Holding the tray, looking down in awe at the glowing cyan orb that just landed."
+  },
+  {
+   "shot": "k04",
+   "bit": "Standing small in the vast empty hall, holding the glowing tray, looking around the empty space."
+  },
+  {
+   "shot": "k05",
+   "bit": "Standing in the background, watching the dull gold coin roll down the rusty gutter."
+  },
+  {
+   "shot": "k06",
+   "bit": "Waddling in the background, keeping pace with the rolling coin."
+  },
+  {
+   "shot": "k17",
+   "bit": "Pressing its smooth steel flipper against a glowing glass scanner plate."
+  },
+  {
+   "shot": "k18",
+   "bit": "Still pressing its flipper on the glass, looking down as the light turns red."
+  },
+  {
+   "shot": "k19",
+   "bit": "Staring deadpan directly at the camera, three brass feathers drooping, illuminated by red light."
+  }
+ ],
+ "qc": {
+  "overall": 5.0,
+  "scores": {
+   "visuals": 7,
+   "transitions": 6,
+   "story": 8,
+   "logic": 5,
+   "sync": 8,
+   "accuracy": 5,
+   "premium": 4
+  },
+  "verdict": "While the narrative concept is strong and the audio sync is solid, the execution is heavily marred by obvious AI artifacts. Morphing objects, inconsistent character details, and poor physics prevent this from reaching a premium standard.",
+  "weak": [
+   "s04: The penguin suddenly has glowing orange feet that were not present before. The coin rolls unnaturally along the gutter.",
+   "s06: The metal pipe morphs and breaks in a very unnatural, AI-generated way. The coin's fall is floaty and lacks physical accuracy.",
+   "s09: The fingerprint graphic morphs into a gear in a messy, undefined manner, showing clear AI generation artifacts.",
+   "s14: The penguin's flipper melts into the scanner plate as it presses down. The red spark effect is messy and unstructured.",
+   "s15: The penguin's eyes are asymmetrical, distorted, and off-model compared to earlier shots."
+  ]
+ }
 }
