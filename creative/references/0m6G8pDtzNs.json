@@ -1,0 +1,173 @@
+{
+ "title_guess": "Why Japan's Banishment Rooms Are Worse Than Getting Fired",
+ "channel_guess": "Zack D. Films",
+ "duration_s": 60,
+ "format": "explainer",
+ "premise": "An explanation of Japan's corporate 'banishment rooms,' where employees are paid to do nothing until they are psychologically broken and quit.",
+ "hook": {
+  "first_2s_visual": "A close-up of a red button labeled 'FIRE EMPLOYEE' being pressed, followed immediately by a cartoon man being literally launched out of an office window.",
+  "first_line_technique": "States a highly counter-intuitive 'fact' ('It's impossible to get fired in Japan') that challenges the viewer's understanding of the world, forcing them to stop scrolling to hear the explanation.",
+  "text_on_screen": "impossible fired companies way worse"
+ },
+ "structure": [
+  {
+   "t": "0:00-0:04",
+   "beat": "setup",
+   "what_happens": "The narrator claims firing is impossible in Japan, but companies found a worse alternative.",
+   "why_it_works": "It establishes a mystery. If they can't fire you, what do they do? The promise of something 'way worse' hooks the viewer."
+  },
+  {
+   "t": "0:04-0:19",
+   "beat": "escalation",
+   "what_happens": "The viewer's POV is led into a tiny, empty room. The boss says the new job is to do nothing until 6 PM.",
+   "why_it_works": "It presents a 'Monkey's Paw' scenario. Initially, getting paid to do nothing sounds like a dream, creating a contrast with the 'way worse' promise."
+  },
+  {
+   "t": "0:19-0:39",
+   "beat": "twist",
+   "what_happens": "The reality sets in. Coworkers stare, emails stop, someone else takes the old desk. The psychological isolation begins, contrasted by a seemingly happy coworker who has been there for years.",
+   "why_it_works": "It subverts the expectation of a 'vacation.' It shows, rather than just tells, the social and professional death the employee is experiencing."
+  },
+  {
+   "t": "0:39-0:49",
+   "beat": "escalation",
+   "what_happens": "The happy coworker suddenly vanishes without a trace, leaving an empty desk.",
+   "why_it_works": "It introduces a thriller/horror element. The disappearance of the only other person heightens the sense of dread and isolation."
+  },
+  {
+   "t": "0:49-1:00",
+   "beat": "payoff",
+   "what_happens": "The legal loophole is explained. The boss is shown literally switching off 'hope' and 'friends' at a breaker box. The goal is to make the employee miserable enough to quit.",
+   "why_it_works": "It answers the initial mystery of *why* this happens, uses a brilliant visual metaphor (the breaker box), and ends on a bleak note that emphasizes the psychological torture."
+  }
+ ],
+ "shots": [
+  {
+   "t": "0:00",
+   "framing": "close",
+   "camera": "static",
+   "transition": "none",
+   "subject": "A red button labeled 'FIRE EMPLOYEE'."
+  },
+  {
+   "t": "0:01",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "A man is launched out of a window on a chair."
+  },
+  {
+   "t": "0:03",
+   "framing": "medium",
+   "camera": "push-in",
+   "transition": "cut",
+   "subject": "A smiling boss holding a key labeled 'STORAGE'."
+  },
+  {
+   "t": "0:06",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Entering a small, green-walled room labeled 'CAREER DEVELOPMENT ROOM'."
+  },
+  {
+   "t": "0:09",
+   "framing": "medium",
+   "camera": "push-in",
+   "transition": "cut",
+   "subject": "A man sitting at an empty desk, scrolling on his phone."
+  },
+  {
+   "t": "0:21",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Coworkers in the main office stopping to stare at the viewer."
+  },
+  {
+   "t": "0:29",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "The boss popping his head in the door with a sinister smile."
+  },
+  {
+   "t": "0:45",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "The happy coworker's desk is now completely empty."
+  },
+  {
+   "t": "0:50",
+   "framing": "close",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "A fire alarm pull station locked by a padlock labeled 'LABOR LAW'."
+  },
+  {
+   "t": "0:54",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "The boss standing next to an electrical breaker box with switches for 'HOPE', 'FRIENDS', 'WORK', etc."
+  }
+ ],
+ "pacing": {
+  "avg_shot_s": 2.1,
+  "cuts_in_first_5s": 4,
+  "where_it_slows_down": "Between 0:20 and 0:35, the pacing slows slightly to emphasize the boring, repetitive nature of the banishment room and the passage of time.",
+  "where_it_speeds_up": "From 0:43 onwards, the cuts become slightly faster as the mystery of the missing coworker is revealed and the final explanation is delivered."
+ },
+ "look": {
+  "style": "3D animation designed to look like 2D vector/Flash animation.",
+  "palette": "Bright, sterile corporate colors (blues, greens, greys) that gradually shift to darker, moodier tones in the final shots.",
+  "lighting": "Flat and even initially, transitioning to dramatic, directional shadows in the banishment room to emphasize isolation.",
+  "texture": "Smooth, untextured, and cartoonish.",
+  "character_design": "Simple, pill-shaped bodies with large, expressive, circular heads and dot eyes."
+ },
+ "voice": {
+  "present": true,
+  "gender_age_impression": "Male, 20s-30s",
+  "tone": "Informative, slightly ominous, and highly engaging.",
+  "pace_wpm": 160,
+  "energy_curve": "Starts with high energy for the hook, settles into a steady storytelling rhythm, and drops to a sinister, serious tone for the final payoff.",
+  "delivery_tricks": "Heavy emphasis on key contrasting words like 'impossible', 'worse', 'nothing', and 'forever'."
+ },
+ "music": {
+  "present": true,
+  "genre": "Quirky, pizzicato string instrumental with a slightly dark/tense undertone.",
+  "bpm_estimate": 105,
+  "where_it_drops": "The music doesn't drop; it maintains a steady, repetitive rhythm that mirrors the monotony of the banishment room.",
+  "how_it_supports_the_story": "The slightly unsettling, repetitive nature of the track adds a layer of mild anxiety that perfectly matches the psychological torture being described."
+ },
+ "sfx": "A cartoon 'boing' when the employee is fired out the window. A loud, rhythmic ticking clock in the banishment room to emphasize boredom and time passing. A heavy 'clunk' when the boss flips the switches in the breaker box.",
+ "hero_moments": "The sequence from 0:50 to 0:58. It starts with a visual pun (the fire alarm locked by 'Labor Law'), then moves to the video's strongest visual metaphor: the boss opening a breaker box and physically switching off abstract concepts like 'Hope', 'Lunch', and 'Friends'. This perfectly visualizes the psychological manipulation.",
+ "captions": "Single-word, center-screen, bold sans-serif font. White text with a thick black outline. The words pop in with a slight scale animation, keeping the viewer's eye anchored to the center.",
+ "why_it_works": [
+  "The hook relies on a counter-intuitive statement that challenges common knowledge.",
+  "It takes a relatable setting (an office) and introduces a bizarre, almost dystopian element.",
+  "It uses a 'Monkey's Paw' narrative structure: getting paid to do nothing sounds great until the psychological toll is revealed.",
+  "The animation uses clever visual metaphors (the breaker box, the locked fire alarm) to explain abstract concepts quickly.",
+  "The pacing is relentless, with visual changes happening every ~2 seconds to maintain retention."
+ ],
+ "rules_to_borrow": [
+  "The 'Counter-Intuitive Hook': Start your video by stating a 'fact' that sounds wrong or impossible to immediately grab attention.",
+  "The 'Monkey's Paw' Narrative: Present a scenario that sounds like a dream, then slowly reveal why it's actually a nightmare.",
+  "Visual Metaphors for Abstract Concepts: Don't just narrate abstract ideas (like isolation or loss of hope); create literal, physical manifestations of them in your visuals.",
+  "The 'Missing Person' Escalation: Introduce a secondary element or character that seems fine, then remove them without explanation to build dread or mystery.",
+  "Literal Visualizations: If you use a common idiom or word (like 'fired'), show a literal, exaggerated visual representation of it.",
+  "The 'Looping Ending': End your script on a word or concept that naturally flows back into the first frame of the video to encourage re-watching.",
+  "Dynamic Single-Word Captions: Keep the viewer's eye anchored to the center of the screen with fast-paced, popping text to prevent them from looking away.",
+  "Sound Design for Atmosphere: Use subtle, repetitive sounds (like a ticking clock or dripping water) to convey the passage of time or a specific mood without needing dialogue."
+ ],
+ "do_not_copy": [
+  "The specific character models (pill-shaped bodies, large round heads with simple dot eyes) which are a signature of Zack D. Films.",
+  "The exact voiceover cadence and specific tonal inflections unique to this creator.",
+  "The specific 'FIRE EMPLOYEE' button asset and the exact layout of the breaker box."
+ ],
+ "url": "https://youtube.com/shorts/0m6G8pDtzNs",
+ "id": "0m6G8pDtzNs",
+ "studied_at": "2026-11-13T19:09:16Z",
+ "model": "gemini-3.1-pro-preview"
+}

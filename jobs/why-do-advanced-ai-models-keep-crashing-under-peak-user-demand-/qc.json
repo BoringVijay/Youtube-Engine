@@ -1,0 +1,66 @@
+{
+ "scores": {
+  "visuals": 4,
+  "transitions": 3,
+  "story": 6,
+  "logic": 3,
+  "sync": 7,
+  "accuracy": 4,
+  "premium": 2
+ },
+ "overall": 3.0,
+ "weak_shots": [
+  {
+   "id": "s01",
+   "issue": "The wrench morphs and disappears into the penguin's body at the end of the shot.",
+   "fix": "Ensure prop permanence and stable character geometry throughout the motion."
+  },
+  {
+   "id": "s02",
+   "issue": "The visuals contradict the script's 'dead tube' and 'inspect the darkness' cues; the tube is brightly lit with glowing balls.",
+   "fix": "Match the visual state to the script's description of a powered-down, dark tube."
+  },
+  {
+   "id": "s04",
+   "issue": "Severe morphing of the clipboard and pen; the penguin's flippers are garbled and constantly shifting.",
+   "fix": "Maintain consistent prop geometry and stable character anatomy while writing."
+  },
+  {
+   "id": "s05",
+   "issue": "The falling blue balls look like a flat 2D overlay lacking proper 3D physics, depth, and collision with the container.",
+   "fix": "Use proper 3D particle simulations so the objects interact realistically with the environment."
+  },
+  {
+   "id": "s06",
+   "issue": "The penguin's flippers abruptly morph into orange hands, and the lever's geometry shifts as it is pulled.",
+   "fix": "Keep character design consistent and stabilize the prop geometry during interaction."
+  },
+  {
+   "id": "s07",
+   "issue": "The penguin's walk cycle is a stiff, sliding translation without proper foot contact or weight distribution.",
+   "fix": "Animate a proper walk cycle with realistic body mechanics and footfalls."
+  },
+  {
+   "id": "s09",
+   "issue": "The penguin's jump defies gravity, appearing as a simple, rigid vertical translation with unnatural flapping.",
+   "fix": "Animate a realistic jump with anticipation, a proper physical arc, and follow-through."
+  },
+  {
+   "id": "s10",
+   "issue": "The fall is completely stiff; the penguin rotates rigidly and lands without any impact physics or bodily reaction.",
+   "fix": "Animate a realistic fall with proper body mechanics, weight, and a physical reaction to hitting the surface."
+  },
+  {
+   "id": "s11",
+   "issue": "The abrupt shift to a 2D blueprint style completely breaks the established 3D visual consistency of the video.",
+   "fix": "Convey the rerouting concept using the established 3D steampunk environment and characters."
+  },
+  {
+   "id": "s13",
+   "issue": "The penguin's flipper morphs through the lever handle, and a random water drop emoji appears.",
+   "fix": "Ensure proper collision and gripping animation between the character and prop, and remove out-of-place 2D assets."
+  }
+ ],
+ "verdict": "The video is plagued by severe AI artifacts, including morphing props, garbled anatomy, and unnatural physics that destroy any premium feel. Furthermore, the abrupt cut to 2D blueprint graphics completely breaks the established 3D visual consistency.",
+ "score": 3.0
+}

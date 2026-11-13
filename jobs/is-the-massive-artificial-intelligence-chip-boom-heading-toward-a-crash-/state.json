@@ -1,7 +1,7 @@
 {
  "id": "is-the-massive-artificial-intelligence-chip-boom-heading-toward-a-crash-",
  "created": "2026-11-13T16:37:06+00:00",
- "pct": 90,
+ "pct": 97,
  "v": 3,
  "format": "short",
  "q": "Is the massive artificial intelligence chip boom heading toward a crash?",
@@ -137,8 +137,8 @@
   "pinned_comment": "Did anyone check on our penguin friend at the brass ramp, or are we still letting him try to fly?",
   "instagram_caption": "Trillions are chasing AI hardware while most of us type into chatbots for free. Are we watching the future or history repeating itself?\n\n#ArtificialIntelligence #TechHistory #Nvidia #SiliconValley #FutureOfTech"
  },
- "stage": "final_ready",
- "step": "Short ready (Mechanical Pinball Metropolis, penguin as cameo). Watch it and approve or send notes",
+ "stage": "scheduled",
+ "step": "Uploaded as private. Flip it to Public (or schedule it) in YouTube Studio",
  "cost": 13.829,
  "steps": [
   {
@@ -172,9 +172,25 @@
   {
    "stage": "final_ready",
    "at": "2026-11-13T18:53:26+00:00"
+  },
+  {
+   "stage": "approved",
+   "at": "2026-11-13T19:01:33+00:00"
+  },
+  {
+   "stage": "uploading",
+   "at": "2026-11-13T20:23:53+00:00"
+  },
+  {
+   "stage": "scheduled",
+   "at": "2026-11-13T20:24:33+00:00"
+  },
+  {
+   "stage": "scheduled",
+   "at": "2026-11-13T20:24:36+00:00"
   }
  ],
- "updated": "2026-11-13T18:53:26+00:00",
+ "updated": "2026-11-13T20:24:36+00:00",
  "voice_style": "C",
  "voice_fit": 1.189,
  "duration": 58.5,
@@ -209,5 +225,41 @@
    "s12: A penguin toy slides down the ramp and inexplicably morphs into a pinball, while the machine's architecture completely changes.",
    "s14: The 'TILT?' text reflection is garbled into alien symbols, and the falling balls melt into a continuous, morphing stream."
   ]
+ },
+ "notes_in": [
+  {
+   "at": "2026-11-13T18:58:30.000Z",
+   "stage": "final",
+   "notes": ""
+  }
+ ],
+ "schedule": {
+  "youtube": null,
+  "instagram": null,
+  "why": "07:30 IST is the Shorts morning scroll in India and 9 pm the night before on the US East Coast. 18:30 IST catches the India evening and US breakfast. Reels peak in the evening, so 19:30 IST for India, 07:30 IST for US night owls.",
+  "window": "global"
+ },
+ "slot": null,
+ "youtube": {
+  "videos": [
+   {
+    "kind": "main",
+    "id": "qA7Rdxm01XM",
+    "url": "https://youtube.com/shorts/qA7Rdxm01XM",
+    "studio": "https://studio.youtube.com/video/qA7Rdxm01XM/edit",
+    "title": "Is the AI Chip Boom Replaying the Year 2000?",
+    "privacy": "private",
+    "publish_at": null,
+    "published": "2026-11-13T20:24:01Z",
+    "upload_status": "uploaded",
+    "views": 0,
+    "likes": 0,
+    "comments": 0,
+    "checked": "2026-11-13T20:24:36+00:00"
+   }
+  ],
+  "audited": true,
+  "note": "Scheduled.",
+  "channel": "@curiouspenguincantfly"
  }
 }

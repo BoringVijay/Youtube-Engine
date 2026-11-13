@@ -1,0 +1,156 @@
+{
+ "title_guess": "Ranking Best Of Beyblade Moments",
+ "channel_guess": "MrPurifiedWater",
+ "duration_s": 35,
+ "format": "hype",
+ "premise": "A fast-paced countdown of the top 5 most chaotic, funny, and dramatic Beyblade battle moments caught on camera.",
+ "hook": {
+  "first_2s_visual": "Two Beyblades clashing intensely in an arena, viewed from a high angle.",
+  "first_line_technique": "Starts mid-action with an aggressive, high-energy voiceover ('You're a dead man!') that immediately grabs attention and sets a chaotic tone.",
+  "text_on_screen": "Ranking Best Of Beyblade Moments"
+ },
+ "structure": [
+  {
+   "t": "0:00-0:06",
+   "beat": "setup",
+   "what_happens": "Rank 5: A Beyblade battle ends in a sudden burst, punctuated by a shocked reaction meme overlay.",
+   "why_it_works": "Establishes the format (ranking) and the tone (action mixed with internet humor)."
+  },
+  {
+   "t": "0:06-0:11",
+   "beat": "escalation",
+   "what_happens": "Rank 4: A Beyblade is launched with such force it immediately flies out of the arena.",
+   "why_it_works": "Keeps the pacing fast with a quick, unexpected physical comedy moment."
+  },
+  {
+   "t": "0:11-0:18",
+   "beat": "twist",
+   "what_happens": "Rank 3: A Beyblade is knocked out of the ring, followed by a cut to a Piccolo (Dragon Ball) meme to emphasize the defeat.",
+   "why_it_works": "Uses a recognizable anime reference to add humor and exaggerate the drama of the toy battle."
+  },
+  {
+   "t": "0:18-0:24",
+   "beat": "escalation",
+   "what_happens": "Rank 2: A Beyblade flies straight up out of the arena towards the camera/bystanders, accompanied by a Mario jump sound effect.",
+   "why_it_works": "Breaks the fourth wall of the arena, creating a sense of real-world danger/chaos, enhanced by the comedic sound effect."
+  },
+  {
+   "t": "0:24-0:35",
+   "beat": "payoff",
+   "what_happens": "Rank 1: A dramatic battle where one Beyblade completely shatters the other. The edit switches to black and white with heavy phonk music.",
+   "why_it_works": "Delivers the ultimate 'hype' moment for the number one spot, using visual and audio shifts to signify peak intensity."
+  }
+ ],
+ "shots": [
+  {
+   "t": "0:00",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "none",
+   "subject": "Beyblade arena from above"
+  },
+  {
+   "t": "0:04",
+   "framing": "close",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Shocked reaction meme face overlaid on the arena"
+  },
+  {
+   "t": "0:06",
+   "framing": "medium",
+   "camera": "handheld",
+   "transition": "cut",
+   "subject": "Green Beyblade arena, players launching"
+  },
+  {
+   "t": "0:11",
+   "framing": "medium",
+   "camera": "handheld",
+   "transition": "cut",
+   "subject": "Red and white Beyblade arena outdoors"
+  },
+  {
+   "t": "0:16",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Piccolo from Dragon Ball standing on a cliff"
+  },
+  {
+   "t": "0:18",
+   "framing": "medium",
+   "camera": "handheld",
+   "transition": "cut",
+   "subject": "Blue Beyblade arena, Beyblade flies towards camera"
+  },
+  {
+   "t": "0:24",
+   "framing": "medium",
+   "camera": "handheld",
+   "transition": "cut",
+   "subject": "Cardboard box arena, intense battle begins"
+  },
+  {
+   "t": "0:26",
+   "framing": "medium",
+   "camera": "handheld",
+   "transition": "flash",
+   "subject": "Cardboard box arena, footage turns black and white as Beyblade shatters"
+  }
+ ],
+ "pacing": {
+  "avg_shot_s": 4.3,
+  "cuts_in_first_5s": 2,
+  "where_it_slows_down": "The final clip (Rank 1) is given the most time to breathe and build tension before the impact.",
+  "where_it_speeds_up": "Ranks 4, 3, and 2 are shown in rapid succession to maintain viewer retention."
+ },
+ "look": {
+  "style": "live action mixed with 2D meme overlays",
+  "palette": "varied, depends on the source clips, ending in a dramatic black and white filter",
+  "lighting": "natural and indoor lighting from original user-generated content",
+  "texture": "raw, slightly low-fi internet video aesthetic",
+  "character_design": "N/A"
+ },
+ "voice": {
+  "present": true,
+  "gender_age_impression": "male, young adult (in the first clip)",
+  "tone": "aggressive, hyped, comedic",
+  "pace_wpm": 150,
+  "energy_curve": "Starts at 100% with the voiceover, dips slightly to let the natural audio of the clips play, then spikes again with the music drop at the end.",
+  "delivery_tricks": "Using an over-the-top, aggressive voiceover for a toy battle creates immediate comedic contrast."
+ },
+ "music": {
+  "present": true,
+  "genre": "Phonk / Trap",
+  "bpm_estimate": 120,
+  "where_it_drops": "0:26, exactly when the Beyblade shatters in the Rank 1 clip.",
+  "how_it_supports_the_story": "The music is absent or low in the early clips, saving the heavy, bass-boosted phonk track exclusively for the number one spot to maximize its impact."
+ },
+ "sfx": "Meme sound effects (Mario jump, anime swooshes) are used to punctuate physical actions, turning mundane toy collisions into cartoonish events.",
+ "hero_moments": "The Rank 1 moment is built by showing a seemingly normal battle, then using a flash transition to black and white right before the impact, syncing the visual shatter with a heavy music drop.",
+ "captions": "A persistent, vertical list of numbers (1-5) stays on the left side of the screen. The current rank is highlighted, acting as a visual progress bar for the viewer.",
+ "why_it_works": [
+  "The persistent ranking list on the left tells the viewer exactly how much video is left, encouraging them to stay until number 1.",
+  "It mixes raw, relatable user-generated content with internet culture (memes, phonk music).",
+  "The pacing is relentless; if a viewer doesn't like one clip, the next one appears seconds later.",
+  "It saves the objectively most visually impressive clip for the very end, rewarding the viewer for watching.",
+  "The use of comedic sound effects adds a layer of entertainment beyond just watching spinning tops."
+ ],
+ "rules_to_borrow": [
+  "Use a persistent on-screen progress indicator (like a ranking list) to improve retention.",
+  "Punctuate physical comedy or impacts in raw footage with recognizable meme sound effects.",
+  "Save your best, most dramatic piece of footage for the final payoff.",
+  "Use visual filters (like sudden black and white) and heavy music drops to artificially boost the 'hype' of a climax.",
+  "Start mid-action with high-energy audio to stop the scroll immediately.",
+  "Keep compilation clips under 7 seconds each to maintain a fast, TikTok-native pace."
+ ],
+ "do_not_copy": [
+  "The specific 'MrPurifiedWater' watermark.",
+  "The exact sequence of these specific Beyblade clips."
+ ],
+ "url": "https://youtube.com/shorts/qrzihMEbcOI",
+ "id": "qrzihMEbcOI",
+ "studied_at": "2026-11-13T19:06:39Z",
+ "model": "gemini-3.1-pro-preview"
+}

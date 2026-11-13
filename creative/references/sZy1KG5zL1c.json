@@ -1,0 +1,162 @@
+{
+ "title_guess": "The 13 Year Wait for GTA 6",
+ "channel_guess": "Generic Animation Channel",
+ "duration_s": 102,
+ "format": "gaming",
+ "premise": "A humorous animated timeline detailing a gamer's frustratingly long, 13-year wait for the release of Grand Theft Auto 6.",
+ "hook": {
+  "first_2s_visual": "A split screen showing a young gamer in a bright room on the left, and an older, tired version of the same gamer in a dark room on the right.",
+  "first_line_technique": "It immediately establishes a massive time jump and a relatable premise (waiting for a highly anticipated game).",
+  "text_on_screen": "JAKE WAS SEVENTEEN"
+ },
+ "structure": [
+  {
+   "t": "0:00-0:07",
+   "beat": "setup",
+   "what_happens": "Introduces Jake at 17 waiting for GTA 6, and reveals he'll be 30 when he finally plays it.",
+   "why_it_works": "Sets the stakes and the comedic premise of the extreme wait."
+  },
+  {
+   "t": "0:07-0:40",
+   "beat": "escalation",
+   "what_happens": "Explains how the massive success of GTA 5 and GTA Online caused Rockstar to delay a sequel.",
+   "why_it_works": "Uses facts and relatable gamer behavior to explain the delay."
+  },
+  {
+   "t": "0:40-0:54",
+   "beat": "twist",
+   "what_happens": "The year Jake expected GTA 6, Rockstar releases Red Dead Redemption 2 instead.",
+   "why_it_works": "Adds another layer of delay, though a welcome one, extending the timeline."
+  },
+  {
+   "t": "0:54-1:19",
+   "beat": "escalation",
+   "what_happens": "More years pass, GTA 5 is re-released again, GTA 6 is finally announced but suffers multiple release date pushbacks.",
+   "why_it_works": "Builds frustration and highlights the absurdity of the wait."
+  },
+  {
+   "t": "1:19-1:28",
+   "beat": "payoff",
+   "what_happens": "Present day: Jake is 30, a father, and finally has the game pre-loaded.",
+   "why_it_works": "Resolves the initial setup, showing the passage of time in his personal life."
+  },
+  {
+   "t": "1:28-1:42",
+   "beat": "loop",
+   "what_happens": "A scary thought: if GTA 7 takes another 13 years, Jake will be 43 and his kid will be 13, starting the cycle over.",
+   "why_it_works": "Ends on a funny, slightly depressing realization that loops back to the beginning."
+  }
+ ],
+ "shots": [
+  {
+   "t": "0:00",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "none",
+   "subject": "Split screen of young Jake (day) and older Jake (night) sitting on a beanbag/couch playing games."
+  },
+  {
+   "t": "0:05",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "wipe",
+   "subject": "The screen wipes to show only young Jake in his bright room in 2013."
+  },
+  {
+   "t": "0:18",
+   "framing": "close",
+   "camera": "pan",
+   "transition": "cut",
+   "subject": "A pan across a shelf showing the relatively quick release schedule of previous GTA games."
+  },
+  {
+   "t": "0:21",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Back to young Jake on his beanbag."
+  },
+  {
+   "t": "0:40",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "wipe",
+   "subject": "A time-lapse wipe changes Jake's appearance (older, different clothes) and his room setup (better chair, new console)."
+  },
+  {
+   "t": "0:54",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "wipe",
+   "subject": "Another wipe shows Jake even older, wearing a tie, sitting on a proper couch in a new apartment."
+  },
+  {
+   "t": "1:19",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "wipe",
+   "subject": "A wipe to the present day, Jake in a hoodie in a dark room, looking tired."
+  },
+  {
+   "t": "1:30",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "wipe",
+   "subject": "A wipe back to the original young Jake in 2013."
+  }
+ ],
+ "pacing": {
+  "avg_shot_s": 15,
+  "cuts_in_first_5s": 1,
+  "where_it_slows_down": "During the explanation of Red Dead Redemption 2's development taking up all resources.",
+  "where_it_speeds_up": "When listing the rapid succession of GTA 6 release date delays."
+ },
+ "look": {
+  "style": "2D vector animation",
+  "palette": "Bright, flat colors for the past, transitioning to cooler, darker tones for the present.",
+  "lighting": "Flat and even, except for the final scene which uses the glow of the TV screen to light the character.",
+  "texture": "Clean, smooth, digital.",
+  "character_design": "Simple, meme-inspired 'sock puppet' style characters with minimal facial features but expressive accessories (hair, hats, clothes)."
+ },
+ "voice": {
+  "present": true,
+  "gender_age_impression": "Male, late 20s",
+  "tone": "Wry, narrative, slightly cynical but relatable.",
+  "pace_wpm": 150,
+  "energy_curve": "Starts steady, builds slight frustration during the delays, ends on a contemplative, humorous note.",
+  "delivery_tricks": "Uses pauses effectively before delivering punchlines or revealing new delays."
+ },
+ "music": {
+  "present": true,
+  "genre": "Lo-fi hip hop",
+  "bpm_estimate": 80,
+  "where_it_drops": "No major drops, it serves as a continuous, chill background track.",
+  "how_it_supports_the_story": "The relaxed, repetitive nature of the beat contrasts humorously with the frustrating, decades-long wait being described."
+ },
+ "sfx": "Subtle 'pop' sounds when new items (consoles, games, money) appear on screen; cash register 'cha-ching' for GTA 5's success; 'whoosh' sounds for the time-lapse wipes.",
+ "hero_moments": "The final sequence where the narrator calculates the wait for GTA 7, and an older, grey-haired Jake appears next to the young Jake, visually representing the cyclical nature of the wait.",
+ "captions": "Center-screen, dynamic, popping in word-by-word or in short phrases, white text with a thick black outline for readability.",
+ "why_it_works": [
+  "Taps into a universally understood frustration within the gaming community.",
+  "Uses a single character's aging process to visually represent the passage of time.",
+  "The simple animation style allows for quick visual gags and easy transitions.",
+  "The script is tight, moving quickly through a 13-year timeline without getting bogged down.",
+  "The ending provides a clever, cyclical punchline that rewards the viewer."
+ ],
+ "rules_to_borrow": [
+  "Use a split-screen 'before and after' in the first 3 seconds to establish the core conflict.",
+  "Visually represent the passage of time by changing the character's clothes, environment, or accessories rather than just stating the year.",
+  "Use pop-up graphics (like the money raining or the tweets) to illustrate data points without breaking the visual style.",
+  "If telling a chronological story, use a consistent transition effect (like the vertical wipe) to signify time jumps.",
+  "End with a 'scary thought' or a projection into the future to leave the audience with a lingering idea.",
+  "Keep the background music consistent if the story spans a long time, to provide a sense of continuity."
+ ],
+ "do_not_copy": [
+  "The specific 'Flork' character design (white blob with simple face).",
+  "The exact timeline of GTA releases."
+ ],
+ "url": "https://youtube.com/shorts/sZy1KG5zL1c",
+ "id": "sZy1KG5zL1c",
+ "studied_at": "2026-11-13T19:02:54Z",
+ "model": "gemini-3.1-pro-preview"
+}

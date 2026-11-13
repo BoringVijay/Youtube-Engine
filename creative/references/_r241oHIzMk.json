@@ -1,0 +1,100 @@
+{
+ "title_guess": "How the Moon was Formed",
+ "channel_guess": "Space Simulation / Science Explainer",
+ "duration_s": 31,
+ "format": "silent",
+ "premise": "A continuous 3D simulation visualizing the giant-impact hypothesis of the Moon's formation.",
+ "hook": {
+  "first_2s_visual": "Two planets, Theia and Young Earth, suspended in the dark void of space, on an imminent collision course.",
+  "first_line_technique": "Directly states the premise in text, promising the answer to a fundamental cosmic question without needing audio.",
+  "text_on_screen": "This is how the Moon was formed\nTheia\nYoung Earth"
+ },
+ "structure": [
+  {
+   "t": "0:00-0:03",
+   "beat": "setup",
+   "what_happens": "Theia approaches Young Earth as a timer begins counting the minutes.",
+   "why_it_works": "Builds immediate anticipation for the collision."
+  },
+  {
+   "t": "0:03-0:15",
+   "beat": "escalation",
+   "what_happens": "The planets collide, shattering the crusts and turning Earth into a glowing, molten ball while ejecting a massive tail of debris.",
+   "why_it_works": "Delivers on the visual promise with a satisfying and spectacular physics simulation."
+  },
+  {
+   "t": "0:15-0:25",
+   "beat": "twist",
+   "what_happens": "A specific chunk of debris is labeled 'Theia's iron core' as it travels through the debris field and begins to orbit.",
+   "why_it_works": "Adds a layer of specific scientific detail to the chaotic visual, educating the viewer."
+  },
+  {
+   "t": "0:25-0:31",
+   "beat": "payoff",
+   "what_happens": "The debris coalesces into a glowing sphere labeled 'The Moon', accompanied by a final fact about its composition.",
+   "why_it_works": "Completes the story loop and rewards the viewer with a final piece of trivia."
+  }
+ ],
+ "shots": [
+  {
+   "t": "0:00",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "none",
+   "subject": "Earth and Theia collision simulation"
+  }
+ ],
+ "pacing": {
+  "avg_shot_s": 31,
+  "cuts_in_first_5s": 0,
+  "where_it_slows_down": "The visual pacing remains steady throughout, though the on-screen timer indicates rapid time progression.",
+  "where_it_speeds_up": "The initial impact at 0:03 feels sudden and explosive compared to the slow approach."
+ },
+ "look": {
+  "style": "3D simulation",
+  "palette": "Black background with stark greys and browns transitioning into vibrant, glowing oranges and yellows.",
+  "lighting": "High contrast; initially lit by a distant light source, then illuminated by the glowing heat of the molten collision.",
+  "texture": "Realistic rocky surfaces that shatter into fluid-like, glowing particle simulations.",
+  "character_design": ""
+ },
+ "voice": {
+  "present": false,
+  "gender_age_impression": "",
+  "tone": "",
+  "pace_wpm": 0,
+  "energy_curve": "",
+  "delivery_tricks": ""
+ },
+ "music": {
+  "present": true,
+  "genre": "Epic cinematic orchestral",
+  "bpm_estimate": 60,
+  "where_it_drops": "The music swells continuously, reaching a grand crescendo as the Moon finally takes shape around 0:25.",
+  "how_it_supports_the_story": "Provides a sense of cosmic scale, awe, and grandeur, entirely compensating for the lack of voiceover or sound effects."
+ },
+ "sfx": "No sound effects are used; the audio relies entirely on the cinematic score to carry the emotional weight.",
+ "hero_moments": "The impact at 0:03 where the crust breaks to reveal glowing magma; the labeling of 'Theia's iron core' at 0:16 which isolates a fascinating detail within the massive debris cloud.",
+ "captions": "Minimalist, static white text with thin lines tracking the celestial bodies, plus a running timer at the top center.",
+ "why_it_works": [
+  "The continuous, unbroken shot keeps the viewer mesmerized by the physics simulation.",
+  "The on-screen timer provides a surprising sense of scale, showing the event takes hours, not millennia.",
+  "Epic music elevates a simple visual into a cinematic experience.",
+  "Clear, unobtrusive labels explain the science without interrupting the visual spectacle."
+ ],
+ "rules_to_borrow": [
+  "Use a single, unbroken simulation shot for processes that are visually captivating from start to finish.",
+  "Include a running timer or scale indicator to ground abstract scientific concepts in reality.",
+  "Rely on a powerful, swelling musical score when omitting voiceovers to maintain viewer engagement.",
+  "Use simple tracking lines and text to identify key elements in a chaotic scene.",
+  "Deliver a final, surprising fact at the very end to reward viewers who watch the whole video.",
+  "Transition color palettes (e.g., dull grey to glowing orange) to visually signify a massive change in state."
+ ],
+ "do_not_copy": [
+  "The exact layout of the timer and tracking lines.",
+  "The specific 3D models and textures of the planets."
+ ],
+ "url": "https://youtube.com/shorts/_r241oHIzMk",
+ "id": "_r241oHIzMk",
+ "studied_at": "2026-11-13T19:05:55Z",
+ "model": "gemini-3.1-pro-preview"
+}

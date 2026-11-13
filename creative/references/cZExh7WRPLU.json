@@ -1,0 +1,215 @@
+{
+ "title_guess": "3 Things Normal in India but Impossible in America",
+ "channel_guess": "Explainer Animation Channel",
+ "duration_s": 40,
+ "format": "explainer",
+ "premise": "A fast-paced comparison of three everyday conveniences that are cheap and easy in India but difficult or expensive in the US.",
+ "hook": {
+  "first_2s_visual": "A vibrant Indian street scene instantly cuts to a blander American street scene, establishing the comparison visually.",
+  "first_line_technique": "Directly states a counter-intuitive premise that challenges Western assumptions, creating an immediate curiosity gap.",
+  "text_on_screen": "Three things normal in India but almost impossible in America."
+ },
+ "structure": [
+  {
+   "t": "0:00-0:03",
+   "beat": "setup",
+   "what_happens": "The core premise is introduced with contrasting visuals of India and America.",
+   "why_it_works": "It sets the expectations immediately and tells the viewer exactly what the video will be about."
+  },
+  {
+   "t": "0:03-0:16",
+   "beat": "escalation",
+   "what_happens": "Point 1: UPI vs Credit Cards. Shows seamless payments in India across various vendors, contrasted with America's reliance on fee-heavy credit cards.",
+   "why_it_works": "Uses rapid visual examples (boutique, chai stall, fruit vendor) to prove the point quickly before showing the negative contrast."
+  },
+  {
+   "t": "0:16-0:27",
+   "beat": "escalation",
+   "what_happens": "Point 2: Mobile Data. Highlights cheap, fast 5G in India versus expensive, spotty coverage in the US.",
+   "why_it_works": "Relatable frustration (bad cell service) is used to make the American side feel painfully true."
+  },
+  {
+   "t": "0:27-0:39",
+   "beat": "payoff",
+   "what_happens": "Point 3: Medicine. Contrasts over-the-counter availability in India with the expensive, prescription-gated system in America.",
+   "why_it_works": "Tackles a well-known pain point (US healthcare costs) to deliver the strongest contrast last."
+  },
+  {
+   "t": "0:39-0:40",
+   "beat": "loop",
+   "what_happens": "The final scene fades out as the audio seamlessly leads back into the opening line.",
+   "why_it_works": "Encourages re-watching by making the end and beginning indistinguishable."
+  }
+ ],
+ "shots": [
+  {
+   "t": "0:00",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "none",
+   "subject": "Vibrant Indian street with a chai stall."
+  },
+  {
+   "t": "0:01",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Bland American street with a food truck."
+  },
+  {
+   "t": "0:03",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "A large '1' sign dropping down on a building."
+  },
+  {
+   "t": "0:04",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Customer paying instantly at an Indian boutique."
+  },
+  {
+   "t": "0:06",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Customer paying instantly at a chai stall."
+  },
+  {
+   "t": "0:09",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Customer paying instantly at a fruit stall."
+  },
+  {
+   "t": "0:10",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Customer paying with a card at an American food truck."
+  },
+  {
+   "t": "0:13",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Smug businessman standing on a pile of gold coins."
+  },
+  {
+   "t": "0:16",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "A large '2' sign dropping down."
+  },
+  {
+   "t": "0:17",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Indian character happily using a phone with full 5G signal."
+  },
+  {
+   "t": "0:22",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "American character struggling to get a signal, sweating."
+  },
+  {
+   "t": "0:27",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "A large '3' sign dropping down."
+  },
+  {
+   "t": "0:28",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Indian character walking out of a pharmacy with medicine."
+  },
+  {
+   "t": "0:32",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "American character waiting in a drab clinic."
+  },
+  {
+   "t": "0:35",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "American character receiving a massive, expensive medical bill."
+  },
+  {
+   "t": "0:39",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "fade",
+   "subject": "Transition back to the opening Indian street scene."
+  }
+ ],
+ "pacing": {
+  "avg_shot_s": 2.5,
+  "cuts_in_first_5s": 4,
+  "where_it_slows_down": "During the explanations of the American drawbacks, allowing the frustration to register visually.",
+  "where_it_speeds_up": "During the rapid-fire examples of Indian conveniences (e.g., the three quick payment shots)."
+ },
+ "look": {
+  "style": "3D animation with a 2D cel-shaded, comic-book aesthetic.",
+  "palette": "High contrast: India is depicted with warm, vibrant colors (yellows, oranges, bright blues), while America uses cooler, muted tones (grays, pale blues).",
+  "lighting": "Flat, stylized lighting to maintain the cartoon look.",
+  "texture": "Smooth, untextured surfaces typical of vector-style 3D.",
+  "character_design": "Simple, stylized figures with thin limbs, round heads, and exaggerated facial expressions."
+ },
+ "voice": {
+  "present": true,
+  "gender_age_impression": "Male, 20s-30s",
+  "tone": "Informative, upbeat, slightly cheeky when highlighting the contrasts.",
+  "pace_wpm": 160,
+  "energy_curve": "Starts high to hook the viewer, maintains a steady, driving rhythm, and punches key words ('billions', 'hundreds') for emphasis.",
+  "delivery_tricks": "Uses slight pauses before delivering the punchline of the American counterpart to build anticipation."
+ },
+ "music": {
+  "present": true,
+  "genre": "Upbeat, quirky instrumental",
+  "bpm_estimate": 110,
+  "where_it_drops": "No major drops; it acts as a consistent metronome to keep the fast pace moving.",
+  "how_it_supports_the_story": "The lighthearted tone prevents the video from feeling like a serious critique, keeping it entertaining."
+ },
+ "sfx": "Crucial use of UI sounds: cheerful 'ding' and green scan effects for Indian payments, contrasting with heavy printing sounds and error-like buzzes for American bills and bad signals.",
+ "hero_moments": "The visual gag of the American medical bill printing out endlessly, accompanied by the character's shocked expression and the sound of a dot-matrix printer.",
+ "captions": "Large, dynamic, center-screen text. Words pop in individually, colored yellow or white with thick black outlines for maximum readability against the colorful backgrounds.",
+ "why_it_works": [
+  "The 'Us vs Them' comparison format naturally drives engagement and debate in the comments.",
+  "Color palettes subconsciously reinforce the narrative (vibrant = good/easy, drab = bad/hard).",
+  "Rapid visual proof (showing three examples of UPI in 5 seconds) builds credibility fast.",
+  "Sound design heavily does the heavy lifting to convey emotion (success dings vs error buzzes).",
+  "The script is incredibly tight, wasting zero words on fluff.",
+  "The seamless audio and visual loop at the end artificially inflates retention metrics."
+ ],
+ "rules_to_borrow": [
+  "Use distinct color grading or palettes to separate different locations, timelines, or concepts instantly.",
+  "When making a claim, show 2-3 rapid visual examples to prove it before moving on.",
+  "Use exaggerated UI elements (giant green checkmarks, massive red price tags) to make abstract concepts visual.",
+  "Write scripts that end on a sentence fragment that connects perfectly to the opening word.",
+  "Assign specific sound profiles to 'good' and 'bad' outcomes to guide the viewer's emotional response.",
+  "Keep character designs simple so you can produce animations faster; rely on expressions rather than detail.",
+  "Use numbered lists as a structural backbone to keep the viewer anchored in the video's progression."
+ ],
+ "do_not_copy": [
+  "The specific cel-shaded 3D character models.",
+  "The exact 'India vs America' script structure if not relevant to your niche.",
+  "The specific font and color combination of the captions, to avoid looking like a direct clone."
+ ],
+ "url": "https://youtube.com/shorts/cZExh7WRPLU",
+ "id": "cZExh7WRPLU",
+ "studied_at": "2026-11-13T19:05:07Z",
+ "model": "gemini-3.1-pro-preview"
+}

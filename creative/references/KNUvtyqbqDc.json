@@ -1,0 +1,165 @@
+{
+ "title_guess": "Why You Can't Stop Eating Junk Food",
+ "channel_guess": "Zack D. Films",
+ "duration_s": 55,
+ "format": "explainer",
+ "premise": "Explains the concept of the 'bliss point' in food engineering and why our evolutionary biology makes us overeat modern processed foods.",
+ "hook": {
+  "first_2s_visual": "Close up of red sauce being poured into a glass jar, which then multiplies into dozens of jars on a metal table.",
+  "first_line_technique": "Starts with a specific, intriguing number ('45 versions') and an action that raises a question (why make so many?).",
+  "text_on_screen": "He made 45 versions"
+ },
+ "structure": [
+  {
+   "t": "0:00-0:10",
+   "beat": "setup",
+   "what_happens": "Introduces the premise of creating many variations of a sauce to find the perfect one.",
+   "why_it_works": "Creates immediate curiosity about the purpose of the experiment."
+  },
+  {
+   "t": "0:10-0:18",
+   "beat": "twist",
+   "what_happens": "Reveals the creator is a scientist, not a chef, aiming to engineer craving.",
+   "why_it_works": "Subverts expectations and shifts the topic from cooking to science/psychology."
+  },
+  {
+   "t": "0:18-0:29",
+   "beat": "context",
+   "what_happens": "Flashes back to a caveman to explain the evolutionary purpose of craving sweet/rich foods for survival.",
+   "why_it_works": "Provides a logical, relatable foundation for the core concept."
+  },
+  {
+   "t": "0:29-0:44",
+   "beat": "escalation",
+   "what_happens": "Shows how modern food companies weaponize this biology by adding 'perfect ingredients' to everything, creating the 'bliss point'.",
+   "why_it_works": "Connects the historical context to a modern, everyday problem, raising the stakes."
+  },
+  {
+   "t": "0:44-0:55",
+   "beat": "payoff",
+   "what_happens": "Concludes that overeating isn't a lack of self-control, but a biological mismatch, ending with a visual metaphor of an Oreo turning into a honeycomb.",
+   "why_it_works": "Delivers a satisfying conclusion that absolves the viewer of guilt while perfectly summarizing the video's thesis."
+  }
+ ],
+ "shots": [
+  {
+   "t": "0:00",
+   "framing": "close",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Sauce being poured into a jar"
+  },
+  {
+   "t": "0:01",
+   "framing": "medium",
+   "camera": "pan",
+   "transition": "cut",
+   "subject": "Multiple jars being filled on a moving line"
+  },
+  {
+   "t": "0:03",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "A very long table with dozens of sauce jars"
+  },
+  {
+   "t": "0:09",
+   "framing": "medium",
+   "camera": "push-in",
+   "transition": "cut",
+   "subject": "Chef looking directly at the camera"
+  },
+  {
+   "t": "0:11",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "morph",
+   "subject": "Chef transforms into a scientist in a lab coat"
+  },
+  {
+   "t": "0:18",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Caveman in a natural environment"
+  },
+  {
+   "t": "0:23",
+   "framing": "close",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Caveman eagerly eating a honeycomb"
+  },
+  {
+   "t": "0:36",
+   "framing": "close",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Modern man eating a chocolate chip cookie"
+  },
+  {
+   "t": "0:50",
+   "framing": "close",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Transparent head showing a glowing brain reacting to ingredients"
+  }
+ ],
+ "pacing": {
+  "avg_shot_s": 1.5,
+  "cuts_in_first_5s": 5,
+  "where_it_slows_down": "During the explanation of the 'bliss point' and the brain's reaction (0:38-0:42) to emphasize the concept.",
+  "where_it_speeds_up": "The opening sequence showing the different sauce variations (0:04-0:09) to establish the scale of the experiment quickly."
+ },
+ "look": {
+  "style": "3D animation",
+  "palette": "Bright, saturated colors against a clean, solid light blue background.",
+  "lighting": "Even, bright, studio-style lighting with soft shadows.",
+  "texture": "Smooth, slightly plastic-like textures typical of fast-turnaround 3D.",
+  "character_design": "Semi-realistic but slightly uncanny human models with exaggerated facial expressions."
+ },
+ "voice": {
+  "present": true,
+  "gender_age_impression": "Young adult male",
+  "tone": "Informative, engaging, slightly dramatic",
+  "pace_wpm": 160,
+  "energy_curve": "Starts high with the hook, maintains a steady, engaging pace, and slows slightly for the final profound realization.",
+  "delivery_tricks": "Emphasizes key words ('scientist', 'survive', 'bliss point') and uses pauses effectively before reveals."
+ },
+ "music": {
+  "present": true,
+  "genre": "Ambient/Electronic",
+  "bpm_estimate": 100,
+  "where_it_drops": "No major drops; subtle shifts occur when transitioning between eras (modern to caveman).",
+  "how_it_supports_the_story": "Provides a subtle, slightly mysterious undertone that fits the 'scientific secret' vibe without overpowering the voiceover."
+ },
+ "sfx": "Rich and constant. Pouring liquids, sprinkling powders, whooshes for transitions, crunching sounds for eating, magical chimes for the 'bliss point', and electrical zaps for the brain.",
+ "hero_moments": "The visual transition at 0:51 where the brain is shown inside the head, reacting to the 'perfect ingredients' jar, followed by the Oreo morphing into a honeycomb, perfectly visualizing the core concept.",
+ "captions": "Dynamic, word-by-word or short phrase delivery. White text with a black outline, placed in the lower third, popping in sync with the audio.",
+ "why_it_works": [
+  "Starts with a highly specific and intriguing scenario (45 versions of sauce).",
+  "Uses a clear 'twist' early on (scientist vs. chef) to reframe the narrative.",
+  "Connects a relatable modern problem (overeating junk food) to a fascinating evolutionary explanation.",
+  "Employs strong visual metaphors (Oreo = honeycomb) to make abstract concepts concrete.",
+  "Maintains a rapid pace with constant visual changes to hold attention."
+ ],
+ "rules_to_borrow": [
+  "Open with a specific, unusual number or action to create immediate curiosity.",
+  "Use the 'Expectation vs. Reality' or 'Twist' technique early in the script to keep viewers engaged.",
+  "When explaining complex or abstract concepts, use clear, relatable visual metaphors.",
+  "Ground modern behaviors or problems in historical or evolutionary context to add depth.",
+  "Ensure every sentence in the script is accompanied by a distinct visual change or action.",
+  "Use sound design (SFX) heavily to emphasize actions and transitions, not just music.",
+  "Keep captions dynamic (1-3 words at a time) to guide the viewer's eye and reinforce pacing."
+ ],
+ "do_not_copy": [
+  "The specific 3D character models and their slightly uncanny facial animations.",
+  "The 'Zack D. Films' logo and branding on clothing and sets.",
+  "The exact solid blue background style used throughout the video."
+ ],
+ "url": "https://youtube.com/shorts/KNUvtyqbqDc",
+ "id": "KNUvtyqbqDc",
+ "studied_at": "2026-11-13T19:04:23Z",
+ "model": "gemini-3.1-pro-preview"
+}

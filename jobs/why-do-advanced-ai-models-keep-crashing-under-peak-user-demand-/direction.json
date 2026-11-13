@@ -1,0 +1,351 @@
+{
+ "format": "short",
+ "universe": {
+  "name": "Clockwork Glasshouse",
+  "studio": "Filament & Brass Animation Co.",
+  "why": "The script discusses 'warehouses of chips' and 'plumbing'. A retro-futuristic, physical marble-run factory makes abstract digital routing visceral, literal, and prone to physical jamming.",
+  "pacing": "Starts rhythmic and steady, accelerates into chaotic overload, snaps to a sudden halt, then resolves into smooth flowing calm.",
+  "signature_shot": "The penguin desperately flapping its short flippers, suspended mid-air trying to reach three massive glowing red iron valves hissing steam.",
+  "medium_break": null,
+  "look_bible": "Retro-futuristic tactile diorama of a steampunk data factory. Giant polished brass pipes, thick scratched glass vacuum tubes, heavy bakelite switches. Data is represented by glowing neon-blue glass marbles. Deep warm amber lighting bouncing off the polished brass, contrasted heavily with the cool electric cyan glows from the glass tubes. Macro photography feel, shallow depth of field, tactile brushed metal textures. Stop-motion physical lighting with rich, cinematic directional shadows. Color coding: Cyan means flowing/good, Red means jammed/bad.",
+  "penguin_render": "Physical miniature model with felt texture. Small round egg-shaped Adelie-type penguin, bottom-heavy. Black head and back, white belly. Big round white eye-rings. Small dark beak with an orange tip. Slightly oversized bright orange feet. Three thin stubborn black feathers sticking up from the top of its head, slightly bent.",
+  "palette": {
+   "paper": "#1A1A1A",
+   "ink": "#FFFFFF",
+   "accent": "#00FFFF",
+   "accent2": "#FF3333"
+  },
+  "font": "anton",
+  "film": "print",
+  "grain": 0.4,
+  "vignette": 0.6,
+  "music": "Rhythmic, ticking clockwork percussion layered with plucky upright bass and cheerful high-frequency xylophone pings.",
+  "letterbox": false
+ },
+ "penguin": {
+  "role": "protagonist",
+  "arc": "Acts as the diligent switchboard operator, gets overwhelmed by the massive morning rush, tries to fly up to unjam the pipes (fails), and ultimately pulls the master reset lever to save the system."
+ },
+ "keyframes": {
+  "k01": {
+   "id": "k01",
+   "seq": 0,
+   "prompt": "Close-up macro shot of a single elegant, thick glass vacuum tube glowing brightly with a cool cyan light, set in a polished brass socket. Retro-futuristic tactile diorama of a steampunk data factory. Giant polished brass pipes, thick scratched glass vacuum tubes. Deep warm amber lighting bouncing off the polished brass, contrasted with the cool electric cyan glow. Macro photography feel, shallow depth of field.",
+   "penguin": "Standing next to the glowing tube, looking into it with wide-eyed awe, holding a tiny brass wrench.",
+   "prev": null
+  },
+  "k02": {
+   "id": "k02",
+   "seq": 0,
+   "prompt": "Close-up macro shot of a single elegant, thick glass vacuum tube. The cool cyan light has died out, replaced by a dull, flickering orange ember inside the glass. Retro-futuristic tactile diorama of a steampunk data factory. Giant polished brass pipes, thick scratched glass vacuum tubes. Deep warm amber lighting bouncing off the polished brass. Macro photography feel, shallow depth of field.",
+   "penguin": "Tapping the dark glass of the tube with its flipper, looking confused, the brass wrench hanging loosely at its side.",
+   "prev": "k01"
+  },
+  "k03": {
+   "id": "k03",
+   "seq": 0,
+   "prompt": "Medium close-up macro shot of the dead vacuum tube in its brass socket. The tube is completely dark. Retro-futuristic tactile diorama of a steampunk data factory. Giant polished brass pipes, thick scratched glass vacuum tubes. Deep warm amber lighting bouncing off the polished brass. Macro photography feel, shallow depth of field.",
+   "penguin": "Leaning in extremely close to the dark glass, its big white eye-rings reflecting the dull ambient amber light.",
+   "prev": "k02"
+  },
+  "k04": {
+   "id": "k04",
+   "seq": 1,
+   "prompt": "Medium-wide shot of a towering, cavernous rack of interlocking brass pipes and thousands of glass vacuum tubes stretching upward. Retro-futuristic tactile diorama of a steampunk data factory. Glowing neon-blue glass marbles represent data. Deep warm amber lighting bouncing off the polished brass, cool electric cyan glows from the glass tubes. Macro photography feel, shallow depth of field.",
+   "penguin": "Standing at the very base of the towering rack, looking straight up, looking tiny against the massive brass structure.",
+   "prev": null
+  },
+  "k05": {
+   "id": "k05",
+   "seq": 1,
+   "prompt": "Medium shot of the lower base level of the rack. A clear, beautifully crafted brass and glass manifold routes a steady, perfectly spaced stream of glowing cyan glass marbles. Retro-futuristic tactile diorama of a steampunk data factory. Deep warm amber lighting bouncing off the polished brass, cool electric cyan glows from the marbles. Macro photography feel.",
+   "penguin": "Standing beside the flowing manifold, happily ticking off a checklist on a tiny clipboard.",
+   "prev": "k04"
+  },
+  "k06": {
+   "id": "k06",
+   "seq": 1,
+   "prompt": "Medium shot of the clear glass manifold. The glowing cyan glass marbles zip through the pipes in perfect, rhythmic synchronization. Retro-futuristic tactile diorama of a steampunk data factory. Deep warm amber lighting bouncing off the polished brass, cool electric cyan glows from the marbles. Macro photography feel.",
+   "penguin": "Walking alongside the manifold, following the flow of the marbles with its clipboard.",
+   "prev": "k05"
+  },
+  "k07": {
+   "id": "k07",
+   "seq": 1,
+   "prompt": "Medium shot tilting upward toward a massive vertical glass chute above the manifold. A blinding, overwhelming avalanche of thousands of glowing cyan marbles floods down the pipe simultaneously. Retro-futuristic tactile diorama of a steampunk data factory. Deep warm amber lighting, intense cool electric cyan glows from the massive wave of marbles. Macro photography feel.",
+   "penguin": "Looking up in absolute shock, dropping the clipboard as the blinding cyan light washes over its face.",
+   "prev": "k06"
+  },
+  "k08": {
+   "id": "k08",
+   "seq": 2,
+   "prompt": "Medium shot of a massive, heavy bakelite switchboard covered in brass levers. The glass pipes behind it are packed with cyan marbles. Retro-futuristic tactile diorama of a steampunk data factory. Deep warm amber lighting bouncing off the polished brass, cool electric cyan glows. Macro photography feel.",
+   "penguin": "Standing at the switchboard, aggressively pulling multiple heavy brass levers with both flippers to open new pathways.",
+   "prev": null
+  },
+  "k09": {
+   "id": "k09",
+   "seq": 2,
+   "prompt": "Close-up shot of the massive bakelite switchboard and the pipes directly behind it. The glass pipes bulge dangerously under pressure. A massive brass gear grinds to a complete halt. The glowing marbles instantly turn an angry, glowing red. Retro-futuristic tactile diorama of a steampunk data factory. Deep warm amber lighting, intense angry red glow from the jammed marbles. Macro photography feel.",
+   "penguin": "Leaning back in horror, hands off the levers, illuminated by the harsh red light.",
+   "prev": "k08"
+  },
+  "k10": {
+   "id": "k10",
+   "seq": 2,
+   "prompt": "Medium shot looking down below the shiny glass pipes, revealing thick, dirty, heavy iron pipes underneath. The iron pipes are vibrating and glowing red at the seams. Retro-futuristic tactile diorama of a steampunk data factory. Deep warm amber lighting, intense angry red glow. Macro photography feel.",
+   "penguin": "Peering over the edge of the switchboard platform, looking down at the dark iron pipes below.",
+   "prev": "k09"
+  },
+  "k11": {
+   "id": "k11",
+   "seq": 2,
+   "prompt": "Medium shot tracking along the heavy iron plumbing. Three massive cast-iron junction valves, deliberately labeled 'API', 'AI', and 'CODE' in raised metal letters, flash a warning red and hiss thick white steam. Retro-futuristic tactile diorama of a steampunk data factory. Intense angry red glow, heavy shadows. Macro photography feel.",
+   "penguin": "Standing on a lower pipe directly under the hissing valves, looking up at them in a panic.",
+   "prev": "k10"
+  },
+  "k12": {
+   "id": "k12",
+   "seq": 2,
+   "prompt": "Medium shot of the heavy iron plumbing and the three hissing valves. Retro-futuristic tactile diorama of a steampunk data factory. Intense angry red glow, heavy shadows. Macro photography feel.",
+   "penguin": "Suspended mid-air, frantically flapping its short flippers trying to fly up to reach the high valves, feathers standing straight up.",
+   "prev": "k11"
+  },
+  "k13": {
+   "id": "k13",
+   "seq": 2,
+   "prompt": "Medium shot tilting down to the lower iron pipes. Retro-futuristic tactile diorama of a steampunk data factory. Intense angry red glow, heavy shadows. Macro photography feel.",
+   "penguin": "Lying flat on its back on the lower iron pipe after failing to fly, looking dizzy, with a tiny wisp of steam rising from its head.",
+   "prev": "k12"
+  },
+  "k14": {
+   "id": "k14",
+   "seq": 3,
+   "prompt": "A flat technical cyanotype blueprint of a pipe network. A thick red marker line fiercely crosses out a blocked circular node. White architectural linework on deep blue paper.",
+   "penguin": "Rendered as a clean white architectural line-drawing, standing on the blueprint pointing at the crossed-out node with a ruler.",
+   "prev": null
+  },
+  "k15": {
+   "id": "k15",
+   "seq": 3,
+   "prompt": "A flat technical cyanotype blueprint of a pipe network. A bright green marker line is smoothly drawn, creating a bypass route around the crossed-out red node. White architectural linework on deep blue paper.",
+   "penguin": "Rendered as a clean white architectural line-drawing, proudly holding a green marker.",
+   "prev": "k14"
+  },
+  "k16": {
+   "id": "k16",
+   "seq": 3,
+   "prompt": "A flat technical cyanotype blueprint of a pipe network. The bright green bypass line extends across the page, glowing slightly against the blue paper.",
+   "penguin": "Rendered as a clean white architectural line-drawing, walking happily along the newly drawn green line.",
+   "prev": "k15"
+  },
+  "k17": {
+   "id": "k17",
+   "seq": 4,
+   "prompt": "Close-up shot of a massive, heavy brass master lever with a green handle in the factory. Retro-futuristic tactile diorama of a steampunk data factory. Deep warm amber lighting. Macro photography feel.",
+   "penguin": "Jumping onto the green handle with its full body weight to pull the massive lever down.",
+   "prev": null
+  },
+  "k18": {
+   "id": "k18",
+   "seq": 4,
+   "prompt": "Medium shot of the factory pipes behind the main console. The angry red glow flushes completely out of the pipes, instantly replaced by a smooth, calm cyan pulse. Retro-futuristic tactile diorama of a steampunk data factory. Deep warm amber lighting, cool electric cyan glows. Macro photography feel.",
+   "penguin": "Standing next to the successfully pulled lever, wiping a drop of sweat from its forehead with a flipper.",
+   "prev": "k17"
+  },
+  "k19": {
+   "id": "k19",
+   "seq": 4,
+   "prompt": "Close-up macro shot of the single elegant glass vacuum tube from the very beginning. It is glowing perfectly and brightly with a cool cyan light, completely restored. Retro-futuristic tactile diorama of a steampunk data factory. Deep warm amber lighting, cool electric cyan glows. Macro photography feel.",
+   "penguin": "Standing proudly next to the perfectly glowing tube, giving a subtle nod of satisfaction.",
+   "prev": "k18"
+  }
+ },
+ "shots": [
+  {
+   "id": "s01",
+   "seq": 0,
+   "from": "k01",
+   "to": "k02",
+   "cue": "Your favorite AI chatbot just stopped thinking. Mid-sentence.",
+   "motion": "Camera drifts slowly right as the cyan light abruptly powers down into a dull orange flicker, and the penguin taps the glass.",
+   "overlay": null,
+   "transition": "cut",
+   "sfx": "Deep, heavy low-frequency power-down hum.",
+   "serious": false
+  },
+  {
+   "id": "s02",
+   "seq": 0,
+   "from": "k02",
+   "to": "k03",
+   "cue": "Here's what's behind the chat box.",
+   "motion": "Camera pushes in slightly on the dead tube as the penguin leans in to inspect the darkness.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": null,
+   "serious": false
+  },
+  {
+   "id": "s03",
+   "seq": 1,
+   "from": "k04",
+   "to": "k05",
+   "cue": "Not one brain. Warehouses of chips, wired together, running the same model.",
+   "motion": "Camera drifts slowly down from the towering rack to the base manifold where the marbles flow.",
+   "overlay": {
+    "type": "label",
+    "text": "Not one brain",
+    "pos": "top"
+   },
+   "transition": "cut",
+   "sfx": null,
+   "serious": false
+  },
+  {
+   "id": "s04",
+   "seq": 1,
+   "from": "k05",
+   "to": "k06",
+   "cue": "Every question you type gets split across many of those chips. They pass numbers back and forth, fast, in perfect step.",
+   "motion": "Camera tracks right, following the smooth, rhythmic flow of the cyan marbles passing through the pipes.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "Cheerful high-frequency rhythmic glass dings.",
+   "serious": false
+  },
+  {
+   "id": "s05",
+   "seq": 1,
+   "from": "k06",
+   "to": "k07",
+   "cue": "Now picture the morning rush. Millions of people hit send at once.",
+   "motion": "Camera tilts up rapidly as the massive avalanche of marbles crashes down the main chute.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "Heavy rushing rumble of thousands of glass marbles.",
+   "serious": false
+  },
+  {
+   "id": "s06",
+   "seq": 2,
+   "from": "k08",
+   "to": "k09",
+   "cue": "The system tries to spread the load. Spin up more machines. Shuffle traffic between them.",
+   "motion": "Camera pushes in sharply as the penguin pulls the levers and the massive gear suddenly jams, turning the lighting red.",
+   "overlay": null,
+   "transition": "cut",
+   "sfx": null,
+   "serious": false
+  },
+  {
+   "id": "s07",
+   "seq": 2,
+   "from": "k09",
+   "to": "k10",
+   "cue": "But these clusters are tightly coupled. One slow link, one bad update, and the whole line waits.",
+   "motion": "Camera tilts down from the jammed glass pipes to reveal the heavy, vibrating iron plumbing below.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "Heavy low-frequency grinding metal and buzzing.",
+   "serious": false
+  },
+  {
+   "id": "s08",
+   "seq": 2,
+   "from": "k10",
+   "to": "k11",
+   "cue": "Twist: it often isn't the chips. Many outages trace back to the plumbing around them. Routing, settings, the software deciding who goes where.",
+   "motion": "Camera tracks right along the dirty iron pipes, settling on the three massive hissing valves.",
+   "overlay": {
+    "type": "label",
+    "text": "The Plumbing",
+    "pos": "bottom"
+   },
+   "transition": "chain",
+   "sfx": "Hissing steam.",
+   "serious": false
+  },
+  {
+   "id": "s09",
+   "seq": 2,
+   "from": "k11",
+   "to": "k12",
+   "cue": "Claude.ai, Claude Code and the developer API can share a lot of that plumbing. So during one incident, all three threw errors at once.",
+   "motion": "Camera drifts slowly left as the penguin leaps and frantically tries to fly up to the valves.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "Frantic flapping sound.",
+   "serious": false
+  },
+  {
+   "id": "s10",
+   "seq": 2,
+   "from": "k12",
+   "to": "k13",
+   "cue": "So engineers reroute, roll back, restart.",
+   "motion": "Camera dips down quickly, following the penguin as it crashes onto the lower pipe.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "Comedic hollow thud.",
+   "serious": false
+  },
+  {
+   "id": "s11",
+   "seq": 3,
+   "from": "k14",
+   "to": "k15",
+   "cue": "The error rate drops.",
+   "motion": "Camera pushes in on the blueprint as the green bypass route solidifies.",
+   "overlay": null,
+   "transition": "cut",
+   "sfx": "Scratchy marker drawing sound.",
+   "serious": false
+  },
+  {
+   "id": "s12",
+   "seq": 3,
+   "from": "k15",
+   "to": "k16",
+   "cue": "The status page turns green.",
+   "motion": "Camera pans right, following the glowing green bypass line.",
+   "overlay": {
+    "type": "label",
+    "text": "Status: Green",
+    "pos": "top"
+   },
+   "transition": "chain",
+   "sfx": "Cheerful high-frequency ding.",
+   "serious": false
+  },
+  {
+   "id": "s13",
+   "seq": 4,
+   "from": "k17",
+   "to": "k18",
+   "cue": "And your chatbot finishes its sentence.",
+   "motion": "Camera pulls back slightly as the lever engages and the lighting shifts from angry red back to cool cyan.",
+   "overlay": null,
+   "transition": "cut",
+   "sfx": "Heavy metallic clunk followed by a smooth power-up hum.",
+   "serious": false
+  },
+  {
+   "id": "s14",
+   "seq": 4,
+   "from": "k18",
+   "to": "k19",
+   "cue": "Like nothing happened.",
+   "motion": "Camera tilts up to rest perfectly on the single glowing vacuum tube, matching the peaceful feeling of the opening.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "Gentle, ambient hum.",
+   "serious": false
+  }
+ ],
+ "cover": {
+  "prompt": "The penguin suspended mid-air, frantically flapping its short flippers trying to reach three massive glowing red iron valves hissing steam. Retro-futuristic tactile diorama of a steampunk data factory. Intense angry red glow, heavy shadows.",
+  "text": "AI PLUMBING JAM"
+ },
+ "n_beats": 10
+}
