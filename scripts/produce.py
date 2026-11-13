@@ -20,6 +20,7 @@ import director  # noqa: E402
 import drive  # noqa: E402
 import gai  # noqa: E402
 import voice  # noqa: E402
+import creative  # noqa: E402
 import shorts  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -236,6 +237,9 @@ def handle_inbox():
             set_stage(st, "queued", f"Redo requested ({what})")
         elif t == "audition":
             auditions.append(m)
+        elif t == "study":
+            import study
+            study.queue_add(m.get("urls") or [])
         elif t == "schedule" and st:
             import publish
             sc = st.setdefault("schedule", {})
@@ -274,6 +278,12 @@ def handle_inbox():
             drive.mark_done(m["_file"])
         except Exception as e:
             log("mark_done failed", str(e)[:120])
+    if any(m.get("type") == "study" for m in msgs):
+        try:
+            import study
+            study.run(budget_log=lambda: budget.log("study", "text_call", 5, gai.LAST["backend"]))
+        except Exception as e:
+            log("reference study failed:", str(e)[:200])
     if auditions:
         try:
             run_audition(auditions[-1])
@@ -309,19 +319,32 @@ class Cancelled(Exception):
 def run_audition(m):
     line = m.get("line") or ("[cheerfully] Okay so, you think this video flew to you from a satellite, right? [short pause] Nope. [soft laugh] Not even close. "
                              "It came through a cable about as thick as a garden hose, [whispering] at the bottom of the ocean.")
-    voices = m.get("voices") or VOICE_CFG.get("audition", ["Puck", "Fenrir", "Zubenelgenubi", "Sadachbia", "Umbriel"])
+    voices = [v for v in (m.get("voices") or VOICE_CFG.get("audition", ["Puck", "Fenrir", "Zubenelgenubi", "Sadachbia", "Umbriel"])) if v in creative.voices()]
+    tid = m.get("tone") if m.get("tone") in creative.CAT["tones"] else None
+    base_style = voice.CFG.get("style")
+    if tid:
+        voice.CFG["style"] = creative.CAT["tones"][tid]["style"]
     os.makedirs(os.path.join(OUT, "aud"), exist_ok=True)
+    try:
+        prev = drive.get_json("outbox", "auditions.json") or {}
+    except Exception:
+        prev = {}
+    lib = {f"{x.get('voice')}|{x.get('tone') or ''}": x for x in (prev.get("library") or prev.get("voices") or []) if x.get("voice")}
     res = []
     for v in voices[:8]:
-        pcm, rate, model = voice.tts_take(line, "excited, warm, conversational", v)
-        wav = os.path.join(OUT, "aud", f"{v}.wav")
+        pcm, rate, model = voice.tts_take(line, "follow the style direction" if tid else "excited, warm, conversational", v)
+        wav = os.path.join(OUT, "aud", f"{v}-{tid or 'default'}.wav")
         with wave.open(wav, "wb") as w:
             w.setnchannels(1); w.setsampwidth(2); w.setframerate(rate); w.writeframes(pcm)
         mp3 = wav[:-4] + ".mp3"
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", wav, "-b:a", "96k", mp3], check=True)
         budget.log("audition", "tts_per_min", len(pcm) / 2 / rate / 60, gai.LAST["backend"])
-        res.append({"voice": v, "file": drive.put_file("outbox", f"audition-{v}.mp3", mp3, "audio/mpeg"), "model": model})
-    drive.put_json("outbox", "auditions.json", {"at": now(), "line": voice.strip_tags(line), "voices": res, "current": VOICE_CFG["narrator"]})
+        item = {"voice": v, "tone": tid, "file": drive.put_file("outbox", f"audition-{v}-{tid or 'default'}.mp3", mp3, "audio/mpeg"), "model": model, "at": now()}
+        res.append(item)
+        lib[f"{v}|{tid or ''}"] = item
+    voice.CFG["style"] = base_style
+    drive.put_json("outbox", "auditions.json", {"at": now(), "line": voice.strip_tags(line), "voices": res, "library": list(lib.values())[-120:],
+                                                "current": VOICE_CFG["narrator"]})
 
 
 # ---------------- sound kit ----------------
@@ -514,26 +537,58 @@ def stage_direction(st):
     return d
 
 
+def silent_track(st, vdir, wp):
+    """Music-only Short: no narration. Each beat becomes an on-screen text card; timing is spread so every card can be read."""
+    set_stage(st, "voicing", "No narration: timing the on-screen text to the music")
+    os.makedirs(vdir, exist_ok=True)
+    beats = [voice.strip_tags(b.get("vo", "")) for b in st["brew"]["script"].get("beats", []) if voice.strip_tags(b.get("vo", ""))]
+    spans = [max(3.6, min(7.0, 2.4 + 0.45 * len(b.split()))) for b in beats]
+    total = sum(spans)
+    cap = shorts.CFG.get("max_seconds", 59) - 1
+    if total > cap:
+        spans = [x * cap / total for x in spans]
+        total = cap
+    words, t = [], 0.6
+    for b, span in zip(beats, spans):
+        ws = b.split()
+        step = min(0.42, (span * 0.6) / max(1, len(ws)))
+        for k, w in enumerate(ws):
+            words.append({"w": w, "t0": round(t + k * step, 3), "t1": round(t + (k + 1) * step, 3)})
+        t += span
+    total = round(t + 0.6, 2)
+    full = os.path.join(vdir, "full.wav")
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "lavfi", "-i", "anullsrc=r=44100:cl=mono", "-t", str(total), full], check=True)
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", full, "-b:a", "64k", os.path.join(vdir, "voice.mp3")], check=True)
+    json.dump({"words": words, "total": total, "matched": 1.0, "voice": None, "music_only": True}, open(wp, "w"))
+    st["voice_style"] = "music"
+    st["duration"] = total
+    return words, total
+
+
 def stage_voice(st):
     vdir = jfile(st["id"], "voice")
     wp = jfile(st["id"], "words.json")
     if os.path.exists(wp) and os.path.exists(os.path.join(vdir, "voice.mp3")):
         w = json.load(open(wp))
         return w["words"], w["total"]
+    if creative.music_only(st):
+        return silent_track(st, vdir, wp)
     set_stage(st, "voicing", "Directing the narrator's performance")
+    v = st["brew"].get("voice") or VOICE_CFG["narrator"]
+    styles = json.load(open(os.path.join(ROOT, "config", "voice_styles.json")))
+    sid, style = creative.tone(st, styles)
+    if not style:
+        sid = VOICE_CFG.get("style_id", "C")[:1]
+        style = (styles.get(sid) or {}).get("style") or VOICE_CFG.get("style")
+    voice.CFG["style"] = style  # reset every job, so one Short's tone never leaks into the next
+    st["voice_style"] = sid
     sp = jfile(st["id"], "sections.json")
     if os.path.exists(sp):
         sections = json.load(open(sp))
     else:
-        sections = voice.performance(st, short=st.get("v") == 3)
+        sections = voice.performance(st, short=st.get("v") == 3, delivery=style if creative.tone(st)[0] else None)
         budget.log(st["id"], "text_call", 1, gai.LAST["backend"])
         json.dump(sections, open(sp, "w"), indent=1, ensure_ascii=False)
-    v = st["brew"].get("voice") or VOICE_CFG["narrator"]
-    styles = json.load(open(os.path.join(ROOT, "config", "voice_styles.json")))
-    sid = st["brew"].get("voice_style") or VOICE_CFG.get("style_id", "C")[:1]
-    if sid in styles:
-        voice.CFG["style"] = styles[sid]["style"]
-    st["voice_style"] = sid
     st["step"] = f"Recording {len(sections)} take(s) with {v}, style {sid}"
     save_state(st); publish_status()
     est_min = sum(len(voice.strip_tags(s["transcript"]).split()) for s in sections) / 160

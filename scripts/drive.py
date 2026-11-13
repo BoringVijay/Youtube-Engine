@@ -97,6 +97,12 @@ def put_json(folder_key, name, obj):
     return put_bytes(CFG[folder_key], name, json.dumps(obj, ensure_ascii=False, separators=(",", ":")).encode(), "text/plain")
 
 
+def get_json(folder_key, name):
+    """Read a JSON file we wrote earlier (None if it isn't there)."""
+    got = find(CFG[folder_key], name)
+    return json.loads(read_text(got[0]["id"])) if got else None
+
+
 def put_file(folder_key, name, path, mime):
     if os.path.getsize(path) > 4 * 1024 * 1024:
         return put_large(CFG[folder_key], name, path, mime)

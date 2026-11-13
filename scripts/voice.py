@@ -26,13 +26,13 @@ def strip_tags(t):
     return re.sub(r"\s+", " ", re.sub(r"\[[a-z ]+\]", " ", t)).strip()
 
 
-def performance(st, short=False):
+def performance(st, short=False, delivery=None):
     """Split into sections by mood (one take for a Short) and add acting tags without changing the words."""
     beats = [re.sub(r"\[[a-z ]+\]", "", b.get("vo", "")).strip() for b in st["brew"]["script"].get("beats", [])]
     prompt = f"""You are a voice director preparing a script for an expressive TTS actor that understands inline audio tags.
 {"Keep all beats in ONE section: it is a 55-second Short recorded in a single take." if short else "Group these consecutive beats into 2 to 5 sections where the mood changes (each section at most 550 words)."}
 For each section write the performance transcript: the SAME words as the beats, in order, adding only:
-- inline audio tags from this list where they genuinely help: {TAGS} (written like [sighs]); {"at most 3 or 4 tags in total, mostly [short pause] before reveals; the delivery is cool and nonchalant, not theatrical" if short else "about one tag every 20 to 30 words, never stacked, never on every sentence"};
+- inline audio tags from this list where they genuinely help: {TAGS} (written like [sighs]); {("at most 3 or 4 tags in total, mostly [short pause] before reveals; " + (f"the delivery follows this direction: {delivery}" if delivery else "the delivery is cool and nonchalant, not theatrical")) if short else "about one tag every 20 to 30 words, never stacked, never on every sentence"};
 - punctuation that guides delivery (commas between tagged clauses, question marks, ellipses for a real pause);
 - at most one tiny filler ("okay", "like", "honestly") per 60 words if it makes it sound spoken.
 Do NOT add, remove or reword anything else. Spell numbers the way they are spoken.

@@ -9,6 +9,7 @@ import base64, json, os, re, shutil, subprocess, time
 from concurrent.futures import ThreadPoolExecutor
 
 import art as artmod
+import creative
 import qc
 import budget
 import gai
@@ -18,7 +19,7 @@ BIBLE = open(os.path.join(ROOT, "creative", "bible.md")).read()
 CFG = json.load(open(os.path.join(ROOT, "config", "shorts.json")))
 FONTS = ["inter", "anton", "serif", "typewriter", "marker", "mono", "archivo"]
 FILMS = ["clean", "16mm", "vhs", "print", "noir"]
-ROLES = ["protagonist", "sidekick", "villain", "antagonist", "npc", "cameo"]
+ROLES = ["protagonist", "sidekick", "villain", "antagonist", "npc", "cameo", "ending", "none"]
 
 
 def log(*a):
@@ -54,6 +55,7 @@ Topic: {st.get('q')}
 Creator notes / angle: {st['brew'].get('angle', '') or 'none'}
 Penguin casting hint (optional): {st['brew'].get('penguin_role', '') or 'decide from the story'}
 Universes used recently (do NOT reuse): {recent_universes(st['id']) or 'none yet'}
+{creative.director_block(st)}
 {('Reviewer notes from the last cut, apply them: ' + notes) if notes else ''}
 
 VO beats (final, do not rewrite), about {secs:.0f} seconds:
@@ -65,7 +67,7 @@ Inside a sequence the shots are CHAINED: the end frame of one shot is the start 
 
 Plan it like a film:
 1. Studio brief (anthology rule): studio name, universe and why, pacing, signature shot, optional medium-break gag.
-2. Cast the penguin for THIS story: one of {ROLES}. As protagonist, sidekick, villain or antagonist it appears in most shots and drives or reacts to the action;
+2. Cast the penguin for THIS story: one of {ROLES[:6]} (unless the creator picks below say otherwise). As protagonist, sidekick, villain or antagonist it appears in most shots and drives or reacts to the action;
    as npc it does its own odd job in the background of many shots; as cameo it appears 1 to 2 times. It never talks. Never in a shot that shows real harm or loss.
    Write the penguin's arc in one line (what it wants, what goes wrong, the payoff).
 3. Look bible: one dense paragraph appended to every image and motion prompt (medium, materials, palette, lighting, lens, texture, how motion feels in this medium:
@@ -116,7 +118,7 @@ Return JSON:
    "shots": [{{"from": "k01", "to": "k02", "cue": "", "motion": "", "overlay": null, "transition": "cut", "sfx": null, "serious": false}}]}}],
  "cover": {{"prompt": "", "text": ""}}}}"""
     d = gai.ask_json(prompt, kind="pro", temperature=0.9, timeout=300)
-    return validate(d, len(beats))
+    return creative.apply_penguin_mode(st, validate(d, len(beats)))
 
 
 def validate(d, n_beats):
@@ -194,7 +196,7 @@ def keyframe_prompt(kf, d):
 def keyframes(a, d, progress=None, cancelled=None):
     """Generate keyframes in sequence order. A chained keyframe uses its predecessor as the continuity reference."""
     pen = a.have("penguin.png")
-    if not pen:
+    if not pen and any(k.get("penguin") for k in d["keyframes"].values()):
         u = d["universe"]
         artmod.image(f"The penguin from the reference sheet re-imagined inside this visual universe: {u['look_bible']}\nRender it as: {u.get('penguin_render', '')}. "
                      f"Full body, three-quarter view, neutral pose, plain background in the universe's palette. {artmod.PENGUIN}", a.path("penguin.png"),
@@ -397,7 +399,7 @@ def build_film(st, d, words, total, media, w=1080, h=1920, preview=False):
             "grain": min(u["grain"], 0.35), "vignette": u["vignette"], "letterbox": False, "captionBg": pal["ink"], "captionInk": pal["paper"]}
     audio.insert(0, {"src": f"job/{st['id']}/voice.mp3", "start": 0, "volume": 1})
     pub = os.path.join(ROOT, "public", "job", st["id"], "music.wav")
-    music = {"src": f"job/{st['id']}/music.wav", "volume": 0.08} if os.path.exists(pub) else None
+    music = {"src": f"job/{st['id']}/music.wav", "volume": creative.music_volume(st)} if os.path.exists(pub) else None
     return {"w": w, "h": h, "fps": fps, "look": look, "shots": film, "words": words, "audio": audio, "music": music, "captions": True}
 
 

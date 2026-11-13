@@ -1,0 +1,40 @@
+name: Study reference Shorts
+# Gemini watches the YouTube links you give it and writes down how they're made (format, pacing, camera, sound, voice),
+# into creative/references/. The director reads the playbook for each story format. Formats, never copies.
+on:
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: "YouTube links, separated by spaces or commas"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: study
+  cancel-in-progress: false
+
+jobs:
+  study:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - name: Study
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+          STUDY_URLS: ${{ github.event.inputs.urls }}
+        run: |
+          pip install -q cryptography
+          python3 -u scripts/study.py
+      - name: Save
+        if: always()
+        run: |
+          git config user.name "engine-bot"
+          git config user.email "engine-bot@users.noreply.github.com"
+          git add creative/references || true
+          git diff --cached --quiet || git commit -m "Reference study"
+          for i in 1 2 3; do git pull --rebase --autostash -q && git push -q && break; sleep 5; done
