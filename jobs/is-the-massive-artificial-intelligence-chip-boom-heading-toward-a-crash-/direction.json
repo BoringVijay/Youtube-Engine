@@ -1,0 +1,343 @@
+{
+ "format": "short",
+ "universe": {
+  "name": "Mechanical Pinball Metropolis",
+  "studio": "Tilt & Flipper Studios",
+  "why": "A vintage mechanical pinball machine perfectly captures the frenetic energy of money bouncing around the tech industry, the complex plumbing of investment loops, and the inevitable 'tilt' of an overloaded system.",
+  "pacing": "Kinetic and snappy, slowing down for a moment of eerie realization before escalating to a vibrating, overloaded finale.",
+  "signature_shot": "Hundreds of silver pinballs vibrating wildly on a glowing neon playfield, reflecting off the glass under an amber 'TILT?' sign.",
+  "medium_break": "The camera pulls back to the glass covering the playfield, revealing the reflection of the arcade room lights above the miniature tech city.",
+  "look_bible": "Macro photography of a vintage-style mechanical pinball machine built like a miniature tech city. Materials include rich mahogany wood, shiny silver steel pinballs, polished brass wireform ramps, and a detailed painted enamel playfield. The lighting is moody arcade lighting with deep shadows, illuminated by bright glowing neon pops of cyan, emerald green, and amber. The lens is a macro lens creating a shallow depth of field with beautiful, cinematic bokeh on the glowing background lights. Motion feels physical, heavy, and kinetic, with hard, snappy mechanical physics.",
+  "penguin_render": "A tiny, glossy enamel-painted metal penguin figure with white eye-rings, orange feet, and three bent wire feathers on its head.",
+  "palette": {
+   "paper": "#0A0A0A",
+   "ink": "#F0F0F0",
+   "accent": "#00FFCC",
+   "accent2": "#FF9900"
+  },
+  "font": "anton",
+  "film": "clean",
+  "grain": 0.2,
+  "vignette": 0.6,
+  "music": "A driving, mechanical instrumental loop with snappy rhythmic clicks, deep synth bass, and vintage arcade chime melodies.",
+  "letterbox": false
+ },
+ "penguin": {
+  "role": "cameo",
+  "arc": "Wanders onto the playfield to investigate a dark sinkhole, and is later seen fruitlessly trying to fly off a brass wire ramp."
+ },
+ "keyframes": {
+  "k01": {
+   "id": "k01",
+   "seq": 0,
+   "prompt": "Low angle looking up a wooden pinball plunger chute. A massive cluster of shiny silver pinballs is being launched upward. Macro photography of a vintage-style mechanical pinball machine built like a miniature tech city. Materials include rich mahogany wood, shiny silver steel pinballs, polished brass wireform ramps, and a detailed painted enamel playfield. The lighting is moody arcade lighting with deep shadows, illuminated by bright glowing neon pops of cyan, emerald green, and amber. The lens is a macro lens creating a shallow depth of field with beautiful, cinematic bokeh on the glowing background lights. Motion feels physical, heavy, and kinetic, with hard, snappy mechanical physics.",
+   "penguin": null,
+   "prev": null
+  },
+  "k02": {
+   "id": "k02",
+   "seq": 0,
+   "prompt": "Camera tracks up the wooden chute. The silver pinballs spill out of the top of the chute onto a painted enamel playfield, illuminated by distant neon lights. Macro photography of a vintage-style mechanical pinball machine built like a miniature tech city. Materials include rich mahogany wood, shiny silver steel pinballs, polished brass wireform ramps, and a detailed painted enamel playfield. The lighting is moody arcade lighting with deep shadows, illuminated by bright glowing neon pops of cyan, emerald green, and amber. The lens is a macro lens creating a shallow depth of field with beautiful, cinematic bokeh on the glowing background lights. Motion feels physical, heavy, and kinetic, with hard, snappy mechanical physics.",
+   "penguin": null,
+   "prev": "k01"
+  },
+  "k03": {
+   "id": "k03",
+   "seq": 0,
+   "prompt": "Camera drifts forward over the playfield, following the silver pinballs as they roll toward a large, glowing emerald green central bumper shaped like a microchip. Macro photography of a vintage-style mechanical pinball machine built like a miniature tech city. Materials include rich mahogany wood, shiny silver steel pinballs, polished brass wireform ramps, and a detailed painted enamel playfield. The lighting is moody arcade lighting with deep shadows, illuminated by bright glowing neon pops of cyan, emerald green, and amber. The lens is a macro lens creating a shallow depth of field with beautiful, cinematic bokeh on the glowing background lights. Motion feels physical, heavy, and kinetic, with hard, snappy mechanical physics.",
+   "penguin": null,
+   "prev": "k02"
+  },
+  "k04": {
+   "id": "k04",
+   "seq": 0,
+   "prompt": "Camera pushes in close on the glowing emerald green bumper as multiple silver pinballs crash into it, causing it to flare with bright neon light. Macro photography of a vintage-style mechanical pinball machine built like a miniature tech city. Materials include rich mahogany wood, shiny silver steel pinballs, polished brass wireform ramps, and a detailed painted enamel playfield. The lighting is moody arcade lighting with deep shadows, illuminated by bright glowing neon pops of cyan, emerald green, and amber. The lens is a macro lens creating a shallow depth of field with beautiful, cinematic bokeh on the glowing background lights. Motion feels physical, heavy, and kinetic, with hard, snappy mechanical physics.",
+   "penguin": null,
+   "prev": "k03"
+  },
+  "k05": {
+   "id": "k05",
+   "seq": 1,
+   "prompt": "Close up on a polished brass wireform ramp. A silver pinball rolls rapidly down the brass wire, illuminated by green ambient light from the previous bumper. Macro photography of a vintage-style mechanical pinball machine built like a miniature tech city. Materials include rich mahogany wood, shiny silver steel pinballs, polished brass wireform ramps, and a detailed painted enamel playfield. The lighting is moody arcade lighting with deep shadows, illuminated by bright glowing neon pops of cyan, emerald green, and amber. The lens is a macro lens creating a shallow depth of field with beautiful, cinematic bokeh on the glowing background lights. Motion feels physical, heavy, and kinetic, with hard, snappy mechanical physics.",
+   "penguin": null,
+   "prev": null
+  },
+  "k06": {
+   "id": "k06",
+   "seq": 1,
+   "prompt": "Camera tracks the pinball down the brass ramp. In the background, a row of monolithic black drop-targets with neon cyan server-rack patterns awaits. Macro photography of a vintage-style mechanical pinball machine built like a miniature tech city. Materials include rich mahogany wood, shiny silver steel pinballs, polished brass wireform ramps, and a detailed painted enamel playfield. The lighting is moody arcade lighting with deep shadows, illuminated by bright glowing neon pops of cyan, emerald green, and amber. The lens is a macro lens creating a shallow depth of field with beautiful, cinematic bokeh on the glowing background lights. Motion feels physical, heavy, and kinetic, with hard, snappy mechanical physics.",
+   "penguin": null,
+   "prev": "k05"
+  },
+  "k07": {
+   "id": "k07",
+   "seq": 1,
+   "prompt": "Camera stops and pans slightly right as the pinball smashes into the drop-targets, triggering a cascade of cyan neon lights across a massive data center zone of the playfield. Macro photography of a vintage-style mechanical pinball machine built like a miniature tech city. Materials include rich mahogany wood, shiny silver steel pinballs, polished brass wireform ramps, and a detailed painted enamel playfield. The lighting is moody arcade lighting with deep shadows, illuminated by bright glowing neon pops of cyan, emerald green, and amber. The lens is a macro lens creating a shallow depth of field with beautiful, cinematic bokeh on the glowing background lights. Motion feels physical, heavy, and kinetic, with hard, snappy mechanical physics.",
+   "penguin": null,
+   "prev": "k06"
+  },
+  "k08": {
+   "id": "k08",
+   "seq": 1,
+   "prompt": "Camera pulls back and tilts down slightly to reveal two mechanical flippers at the bottom, funneling dozens of silver pinballs directly up into the glowing cyan data center zone. Macro photography of a vintage-style mechanical pinball machine built like a miniature tech city. Materials include rich mahogany wood, shiny silver steel pinballs, polished brass wireform ramps, and a detailed painted enamel playfield. The lighting is moody arcade lighting with deep shadows, illuminated by bright glowing neon pops of cyan, emerald green, and amber. The lens is a macro lens creating a shallow depth of field with beautiful, cinematic bokeh on the glowing background lights. Motion feels physical, heavy, and kinetic, with hard, snappy mechanical physics.",
+   "penguin": null,
+   "prev": "k07"
+  },
+  "k09": {
+   "id": "k09",
+   "seq": 2,
+   "prompt": "Close up on a glowing cyan sinkhole on the wooden playfield labeled 'CHAT' in painted enamel. A silver pinball drops into the dark hole. Macro photography of a vintage-style mechanical pinball machine built like a miniature tech city. Materials include rich mahogany wood, shiny silver steel pinballs, polished brass wireform ramps, and a detailed painted enamel playfield. The lighting is moody arcade lighting with deep shadows, illuminated by bright glowing neon pops of cyan, emerald green, and amber. The lens is a macro lens creating a shallow depth of field with beautiful, cinematic bokeh on the glowing background lights. Motion feels physical, heavy, and kinetic, with hard, snappy mechanical physics.",
+   "penguin": "A tiny, glossy enamel-painted metal penguin figure stands next to the sinkhole, peering over the edge into the dark hole.",
+   "prev": null
+  },
+  "k10": {
+   "id": "k10",
+   "seq": 2,
+   "prompt": "Camera drifts left from the sinkhole to a physical mechanical score counter embedded in the wood, its painted number reels spinning but showing only zeroes. Macro photography of a vintage-style mechanical pinball machine built like a miniature tech city. Materials include rich mahogany wood, shiny silver steel pinballs, polished brass wireform ramps, and a detailed painted enamel playfield. The lighting is moody arcade lighting with deep shadows, illuminated by bright glowing neon pops of cyan, emerald green, and amber. The lens is a macro lens creating a shallow depth of field with beautiful, cinematic bokeh on the glowing background lights. Motion feels physical, heavy, and kinetic, with hard, snappy mechanical physics.",
+   "penguin": null,
+   "prev": "k09"
+  },
+  "k11": {
+   "id": "k11",
+   "seq": 2,
+   "prompt": "Camera pans right, moving past the mechanical counter to reveal a hidden brass loop ramp. A silver pinball shoots rapidly through the loop. Macro photography of a vintage-style mechanical pinball machine built like a miniature tech city. Materials include rich mahogany wood, shiny silver steel pinballs, polished brass wireform ramps, and a detailed painted enamel playfield. The lighting is moody arcade lighting with deep shadows, illuminated by bright glowing neon pops of cyan, emerald green, and amber. The lens is a macro lens creating a shallow depth of field with beautiful, cinematic bokeh on the glowing background lights. Motion feels physical, heavy, and kinetic, with hard, snappy mechanical physics.",
+   "penguin": null,
+   "prev": "k10"
+  },
+  "k12": {
+   "id": "k12",
+   "seq": 2,
+   "prompt": "Camera tracks the silver pinball as it travels up the curved brass loop, heading back toward the upper section of the playfield. Macro photography of a vintage-style mechanical pinball machine built like a miniature tech city. Materials include rich mahogany wood, shiny silver steel pinballs, polished brass wireform ramps, and a detailed painted enamel playfield. The lighting is moody arcade lighting with deep shadows, illuminated by bright glowing neon pops of cyan, emerald green, and amber. The lens is a macro lens creating a shallow depth of field with beautiful, cinematic bokeh on the glowing background lights. Motion feels physical, heavy, and kinetic, with hard, snappy mechanical physics.",
+   "penguin": null,
+   "prev": "k11"
+  },
+  "k13": {
+   "id": "k13",
+   "seq": 2,
+   "prompt": "Camera pushes in as the silver pinball exits the brass loop and crashes directly back into the glowing emerald green central microchip bumper from earlier, completing the circuit. Macro photography of a vintage-style mechanical pinball machine built like a miniature tech city. Materials include rich mahogany wood, shiny silver steel pinballs, polished brass wireform ramps, and a detailed painted enamel playfield. The lighting is moody arcade lighting with deep shadows, illuminated by bright glowing neon pops of cyan, emerald green, and amber. The lens is a macro lens creating a shallow depth of field with beautiful, cinematic bokeh on the glowing background lights. Motion feels physical, heavy, and kinetic, with hard, snappy mechanical physics.",
+   "penguin": null,
+   "prev": "k12"
+  },
+  "k14": {
+   "id": "k14",
+   "seq": 3,
+   "prompt": "Technical blueprint schematic of a mechanical pinball bumper shaped like a 2000-era internet router, drawn in clean cyan and white lines on a dark blue grid. Architectural drafting style, precise linework, engineering aesthetic.",
+   "penguin": null,
+   "prev": null
+  },
+  "k15": {
+   "id": "k15",
+   "seq": 3,
+   "prompt": "Camera pushes in slightly as the blueprint router bumper shatters into technical drafting lines and geometric fragments, the word 'TILT' appearing in mechanical font. Architectural drafting style, precise linework, engineering aesthetic.",
+   "penguin": null,
+   "prev": "k14"
+  },
+  "k16": {
+   "id": "k16",
+   "seq": 4,
+   "prompt": "Close on an old, dusty section of the playfield wood with a faded, unlit 2000-era bumper. A shiny brass wireform ramp sits in the dust. Macro photography of a vintage-style mechanical pinball machine built like a miniature tech city. Materials include rich mahogany wood, shiny silver steel pinballs, polished brass wireform ramps, and a detailed painted enamel playfield. The lighting is moody arcade lighting with deep shadows, illuminated by bright glowing neon pops of cyan, emerald green, and amber. The lens is a macro lens creating a shallow depth of field with beautiful, cinematic bokeh on the glowing background lights. Motion feels physical, heavy, and kinetic, with hard, snappy mechanical physics.",
+   "penguin": "A tiny, glossy enamel-painted metal penguin figure is on the brass ramp, trying to flap its wings to fly but sliding backwards down the slope into the dust.",
+   "prev": null
+  },
+  "k17": {
+   "id": "k17",
+   "seq": 4,
+   "prompt": "Camera tilts up slowly from the dusty section to reveal the towering, glowing modern section of the pinball machine above it, overflowing with hundreds of wildly bouncing silver pinballs. Macro photography of a vintage-style mechanical pinball machine built like a miniature tech city. Materials include rich mahogany wood, shiny silver steel pinballs, polished brass wireform ramps, and a detailed painted enamel playfield. The lighting is moody arcade lighting with deep shadows, illuminated by bright glowing neon pops of cyan, emerald green, and amber. The lens is a macro lens creating a shallow depth of field with beautiful, cinematic bokeh on the glowing background lights. Motion feels physical, heavy, and kinetic, with hard, snappy mechanical physics.",
+   "penguin": null,
+   "prev": "k16"
+  },
+  "k18": {
+   "id": "k18",
+   "seq": 4,
+   "prompt": "Camera pulls back wider, showing the entire mechanical pinball playfield vibrating violently under the weight of the massive cluster of silver pinballs. Macro photography of a vintage-style mechanical pinball machine built like a miniature tech city. Materials include rich mahogany wood, shiny silver steel pinballs, polished brass wireform ramps, and a detailed painted enamel playfield. The lighting is moody arcade lighting with deep shadows, illuminated by bright glowing neon pops of cyan, emerald green, and amber. The lens is a macro lens creating a shallow depth of field with beautiful, cinematic bokeh on the glowing background lights. Motion feels physical, heavy, and kinetic, with hard, snappy mechanical physics.",
+   "penguin": null,
+   "prev": "k17"
+  },
+  "k19": {
+   "id": "k19",
+   "seq": 4,
+   "prompt": "Camera pushes in on the thick glass covering the playfield. A neon amber reflection of the word 'TILT?' flickers on the glass surface as the silver balls blur beneath it. Macro photography of a vintage-style mechanical pinball machine built like a miniature tech city. Materials include rich mahogany wood, shiny silver steel pinballs, polished brass wireform ramps, and a detailed painted enamel playfield. The lighting is moody arcade lighting with deep shadows, illuminated by bright glowing neon pops of cyan, emerald green, and amber. The lens is a macro lens creating a shallow depth of field with beautiful, cinematic bokeh on the glowing background lights. Motion feels physical, heavy, and kinetic, with hard, snappy mechanical physics.",
+   "penguin": null,
+   "prev": "k18"
+  }
+ },
+ "shots": [
+  {
+   "id": "s01",
+   "seq": 0,
+   "from": "k01",
+   "to": "k02",
+   "cue": "Trillions of dollars are chasing",
+   "motion": "Camera tracks rapidly up the wooden plunger chute as the silver pinballs launch and spill onto the playfield.",
+   "overlay": null,
+   "transition": "cut",
+   "sfx": "Heavy mechanical spring launching, followed by rolling steel balls on wood.",
+   "serious": false
+  },
+  {
+   "id": "s02",
+   "seq": 0,
+   "from": "k02",
+   "to": "k03",
+   "cue": "a chipmaker with questions.",
+   "motion": "Camera drifts forward, following the cluster of silver pinballs as they roll aggressively toward the central bumper.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "Rolling steel rumble and mechanical clicking.",
+   "serious": false
+  },
+  {
+   "id": "s03",
+   "seq": 0,
+   "from": "k03",
+   "to": "k04",
+   "cue": "The chipmaker is Nvidia.",
+   "motion": "Camera pushes in tightly on the central bumper as the silver balls strike it, triggering bright neon green flashes.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "Snappy, resonant electronic arcade bumper chimes.",
+   "serious": false
+  },
+  {
+   "id": "s04",
+   "seq": 1,
+   "from": "k05",
+   "to": "k06",
+   "cue": "So the biggest tech",
+   "motion": "Camera tracks smoothly down the polished brass ramp, matching the speed of the rolling silver pinball.",
+   "overlay": null,
+   "transition": "match",
+   "sfx": "Smooth metallic rolling sound of steel on brass wire.",
+   "serious": false
+  },
+  {
+   "id": "s05",
+   "seq": 1,
+   "from": "k06",
+   "to": "k07",
+   "cue": "Together they're spending hundreds",
+   "motion": "Camera pans right as the pinball strikes the targets, following the sudden wave of cyan neon light turning on.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "Heavy mechanical clacks of drop targets falling, followed by a powering-up hum.",
+   "serious": false
+  },
+  {
+   "id": "s06",
+   "seq": 1,
+   "from": "k07",
+   "to": "k08",
+   "cue": "Nvidia sells most of",
+   "motion": "Camera pulls back and tilts down, revealing the mechanical flippers rapidly batting a barrage of silver balls upward.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "Loud, rhythmic clacking of pinball flippers engaging rapidly.",
+   "serious": false
+  },
+  {
+   "id": "s07",
+   "seq": 2,
+   "from": "k09",
+   "to": "k10",
+   "cue": "Here's the catch. You,",
+   "motion": "Camera watches the ball drop, then drifts left to land on the mechanical score counter spinning zeroes.",
+   "overlay": null,
+   "transition": "match",
+   "sfx": "A hollow wooden clunk as the ball drops, followed by the dry clicking of score reels spinning without payout.",
+   "serious": false
+  },
+  {
+   "id": "s08",
+   "seq": 2,
+   "from": "k10",
+   "to": "k11",
+   "cue": "The money going into",
+   "motion": "Camera pans right off the zeroed score counter, revealing the hidden brass loop as a silver ball rockets into it.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "A sharp mechanical solenoid click and a swoosh of the ball launching.",
+   "serious": false
+  },
+  {
+   "id": "s09",
+   "seq": 2,
+   "from": "k11",
+   "to": "k12",
+   "cue": "Twist: Nvidia has invested",
+   "motion": "Camera tracks the silver pinball seamlessly up the curved brass wireform loop.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "Continuous smooth metallic rolling sound.",
+   "serious": false
+  },
+  {
+   "id": "s10",
+   "seq": 2,
+   "from": "k12",
+   "to": "k13",
+   "cue": "companies that turn around",
+   "motion": "Camera pushes in as the ball completes the loop, crashing forcefully back into the green central bumper.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "A resonant, snappy arcade bumper chime.",
+   "serious": false
+  },
+  {
+   "id": "s11",
+   "seq": 3,
+   "from": "k14",
+   "to": "k15",
+   "cue": "In 2000, Cisco sold",
+   "motion": "Camera pushes in steadily as the blueprint schematic of the router bumper abruptly shatters into technical lines.",
+   "overlay": {
+    "type": "label",
+    "text": "2000",
+    "pos": "top"
+   },
+   "transition": "flash",
+   "sfx": "A sharp, synthesized glass-shatter sound mixed with a digital error tone.",
+   "serious": false
+  },
+  {
+   "id": "s12",
+   "seq": 4,
+   "from": "k16",
+   "to": "k17",
+   "cue": "The internet won anyway.",
+   "motion": "Camera tilts up slowly from the quiet, dusty section to the chaotic, glowing neon section above filled with balls.",
+   "overlay": null,
+   "transition": "cut",
+   "sfx": "A low, ominous mechanical hum that builds in intensity.",
+   "serious": false
+  },
+  {
+   "id": "s13",
+   "seq": 4,
+   "from": "k17",
+   "to": "k18",
+   "cue": "Crash or not? Nobody",
+   "motion": "Camera pulls back to reveal the full scope of the machine as it begins to vibrate violently under the strain.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "The chaotic cacophony of hundreds of steel balls bouncing and heavy mechanical rattling.",
+   "serious": false
+  },
+  {
+   "id": "s14",
+   "seq": 4,
+   "from": "k18",
+   "to": "k19",
+   "cue": "The trillions of dollars",
+   "motion": "Camera pushes in toward the playfield glass, focusing sharply on the flickering amber 'TILT?' reflection as the machine shakes.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "A loud, buzzing electrical fault sound, cutting to abrupt silence on the final frame.",
+   "serious": false
+  }
+ ],
+ "cover": {
+  "prompt": "Macro photography of a vintage mechanical pinball machine playfield covered in hundreds of silver pinballs. The thick glass covering the machine reflects a glowing neon amber 'TILT?' sign. Moody arcade lighting, deep shadows, cinematic bokeh.",
+  "text": "CRASH OR TILT?"
+ },
+ "n_beats": 11
+}

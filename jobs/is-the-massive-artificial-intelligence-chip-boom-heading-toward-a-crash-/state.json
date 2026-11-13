@@ -1,7 +1,7 @@
 {
  "id": "is-the-massive-artificial-intelligence-chip-boom-heading-toward-a-crash-",
  "created": "2026-11-13T16:37:06+00:00",
- "pct": 2,
+ "pct": 90,
  "v": 3,
  "format": "short",
  "q": "Is the massive artificial intelligence chip boom heading toward a crash?",
@@ -93,19 +93,121 @@
  "brew_at": "2026-11-13T16:24:20.243Z",
  "error": null,
  "fails": 0,
- "preview": null,
- "final": null,
+ "preview": {
+  "id": "1S5kQOQ0WCPsPBRI7CYEgNbmDLquTxSTp",
+  "view": "https://drive.google.com/file/d/1S5kQOQ0WCPsPBRI7CYEgNbmDLquTxSTp/view",
+  "download": "https://drive.google.com/uc?id=1S5kQOQ0WCPsPBRI7CYEgNbmDLquTxSTp&export=download",
+  "size_mb": 86.3,
+  "duration": 59.3,
+  "stills": [],
+  "poster": "1jLKDIuW5btagGwIwd1oob3fgRRvxilYd"
+ },
+ "final": {
+  "id": "1S5kQOQ0WCPsPBRI7CYEgNbmDLquTxSTp",
+  "view": "https://drive.google.com/file/d/1S5kQOQ0WCPsPBRI7CYEgNbmDLquTxSTp/view",
+  "download": "https://drive.google.com/uc?id=1S5kQOQ0WCPsPBRI7CYEgNbmDLquTxSTp&export=download",
+  "size_mb": 86.3,
+  "duration": 59.3,
+  "stills": [],
+  "poster": "1jLKDIuW5btagGwIwd1oob3fgRRvxilYd"
+ },
  "shorts": null,
  "thumb": null,
- "meta": null,
- "stage": "queued",
- "step": "Waiting for a render slot",
- "cost": 0,
+ "meta": {
+  "title": "Is the AI Chip Boom Replaying the Year 2000?",
+  "alt_titles": [
+   "What Happens When AI Shovels Cost More Than Gold?",
+   "Can Trillions in Chips Survive Free Chatbots?"
+  ],
+  "description": "Tech giants are pouring hundreds of billions into AI hardware, but app revenue hasn't caught up.\nHistory has an eerie warning about the last company that sold the internet's plumbing.\n\n#Shorts #Nvidia #AIBubble #TechHistory #Economy",
+  "tags": [
+   "nvidia",
+   "ai boom",
+   "tech bubble",
+   "cisco 2000",
+   "artificial intelligence",
+   "gpus",
+   "data centers",
+   "curious penguin",
+   "tilt and flipper studios",
+   "ai chips",
+   "tech economy",
+   "stock market history"
+  ],
+  "pinned_comment": "Did anyone check on our penguin friend at the brass ramp, or are we still letting him try to fly?",
+  "instagram_caption": "Trillions are chasing AI hardware while most of us type into chatbots for free. Are we watching the future or history repeating itself?\n\n#ArtificialIntelligence #TechHistory #Nvidia #SiliconValley #FutureOfTech"
+ },
+ "stage": "final_ready",
+ "step": "Short ready (Mechanical Pinball Metropolis, penguin as cameo). Watch it and approve or send notes",
+ "cost": 13.829,
  "steps": [
   {
    "stage": "queued",
    "at": "2026-11-13T16:37:06+00:00"
+  },
+  {
+   "stage": "voicing",
+   "at": "2026-11-13T17:51:30+00:00"
+  },
+  {
+   "stage": "directing",
+   "at": "2026-11-13T17:52:37+00:00"
+  },
+  {
+   "stage": "art",
+   "at": "2026-11-13T17:54:27+00:00"
+  },
+  {
+   "stage": "motion",
+   "at": "2026-11-13T18:43:48+00:00"
+  },
+  {
+   "stage": "final_render",
+   "at": "2026-11-13T18:46:29+00:00"
+  },
+  {
+   "stage": "metadata",
+   "at": "2026-11-13T18:53:14+00:00"
+  },
+  {
+   "stage": "final_ready",
+   "at": "2026-11-13T18:53:26+00:00"
   }
  ],
- "updated": "2026-11-13T16:37:06+00:00"
+ "updated": "2026-11-13T18:53:26+00:00",
+ "voice_style": "C",
+ "voice_fit": 1.189,
+ "duration": 58.5,
+ "universe": "Mechanical Pinball Metropolis · Tilt & Flipper Studios",
+ "penguin_role": "cameo",
+ "cameos": [
+  {
+   "shot": "k09",
+   "bit": "A tiny, glossy enamel-painted metal penguin figure stands next to the sinkhole, peering over the edge into the dark hole."
+  },
+  {
+   "shot": "k16",
+   "bit": "A tiny, glossy enamel-painted metal penguin figure is on the brass ramp, trying to flap its wings to fly but sliding backwards down the slope into the dust."
+  }
+ ],
+ "qc": {
+  "overall": 2.0,
+  "scores": {
+   "visuals": 3,
+   "transitions": 2,
+   "story": 5,
+   "logic": 1,
+   "sync": 5,
+   "accuracy": 1,
+   "premium": 1
+  },
+  "verdict": "The video is plagued by severe AI generation artifacts, including constant morphing, melting objects, and garbled text, completely destroying the illusion of a physical pinball machine. The lack of logical consistency and realistic physics makes it fall far below premium standards.",
+  "weak": [
+   "s02: The cluster of silver pinballs morphs and merges into a liquid-like mass instead of remaining solid individual spheres.",
+   "s06: The flippers and the barrage of balls are a chaotic mess of AI morphing; balls appear and disappear, and the flippers change shape.",
+   "s07: The text on the score counter is garbled gibberish, and the numbers morph continuously.",
+   "s12: A penguin toy slides down the ramp and inexplicably morphs into a pinball, while the machine's architecture completely changes.",
+   "s14: The 'TILT?' text reflection is garbled into alien symbols, and the falling balls melt into a continuous, morphing stream."
+  ]
+ }
 }

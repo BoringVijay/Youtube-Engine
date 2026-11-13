@@ -1,197 +1,230 @@
-16:37:02 inbox: 19 messages
-16:37:06 [how-does-a-single-cloud-glitch-crash-mic] queued 2% Waiting for a render slot
-16:37:08 [is-the-massive-artificial-intelligence-c] queued 2% Waiting for a render slot
-16:37:11 [why-do-advanced-ai-models-keep-crashing-] queued 2% Waiting for a render slot
-16:37:14 [how-did-samoa-legally-delete-an-entire-d] queued 2% Waiting for a render slot
-16:37:17 [how-does-india-send-cash-straight-to-mil] queued 2% Waiting for a render slot
-16:37:20 [who-was-the-first-former-slave-to-sign-u] queued 2% Waiting for a render slot
-16:37:22 [what-happens-to-the-ai-revolution-if-jen] approved 92% Approved. Uploading private, you flip it public
-16:37:25 [how-do-qr-codes-work-even-when-partially] approved 92% Approved. Uploading private, you flip it public
-16:37:27 [how-did-the-adult-entertainment-industry] approved 92% Approved. Uploading private, you flip it public
-16:37:55 inbox: 0 messages
-16:37:57 [how-does-a-single-cloud-glitch-crash-mic] voicing 6% Directing the narrator's performance
+17:51:08 inbox: 6 messages
+17:51:11 [how-do-qr-codes-work-even-when-partially] scheduled 97% Uploaded private. Flip it to Public in YouTube Studio
+17:51:14 [what-happens-to-the-ai-revolution-if-jen] scheduled 97% Uploaded private. Flip it to Public in YouTube Studio
+17:51:17 [how-did-the-adult-entertainment-industry] scheduled 97% Uploaded private. Flip it to Public in YouTube Studio
+17:51:20 [how-does-a-single-cloud-glitch-crash-mic] approved 92% Approved. Uploading private, you flip it public
+17:51:30 inbox: 0 messages
+17:51:32 [is-the-massive-artificial-intelligence-c] voicing 6% Directing the narrator's performance
 [gai] text model: gemini-3.8-flash via vertex
 [gai] tts model: gemini-3.1-flash-tts-preview via vertex
-[voice] take 1/1 recorded: 64.7s
-16:38:38 voice 65.1s over the 59s cap; tightened x1.11
-[voice] alignment matched 99% of words
-16:38:47 [how-does-a-single-cloud-glitch-crash-mic] directing 12% Casting the penguin and planning the shots
+[voice] take 1/1 recorded: 69.1s
+17:52:31 voice 69.6s over the 59s cap; tightened x1.19
+[voice] alignment matched 95% of words
+17:52:39 [is-the-massive-artificial-intelligence-c] directing 12% Casting the penguin and planning the shots
 [gai] pro: gemini-3.8-pro not available here
 [gai] pro: gemini-3.7-pro not available here
 [gai] pro: gemini-3.5-pro not available here
 [gai] pro: gemini-3.1-pro not available here
 [gai] pro model: gemini-3.1-pro-preview via vertex
-16:41:02 [shorts] universe Woolen Wire Cloud / Felt & Spool Studios; penguin protagonist; 18 keyframes, 14 shots in 5 sequences
-16:41:04 [how-does-a-single-cloud-glitch-crash-mic] art 22% Painting 18 keyframes in Woolen Wire Cloud
+17:54:27 [shorts] universe Mechanical Pinball Metropolis / Tilt & Flipper Studios; penguin cameo; 19 keyframes, 14 shots in 5 sequences
+17:54:30 [is-the-massive-artificial-intelligence-c] art 22% Painting 19 keyframes in Mechanical Pinball Metropolis
 [gai] image model: gemini-nano-banana-2.1 via vertex
-16:42:07 [shorts] keyframe k01 review 8.0: Penguin's beak is solid orange instead of dark with an orange tip as per canon.; Miniature documents on the desk and cubicle walls feature garbled AI squiggles instead of clean stitched lines or blank
-16:42:12 [shorts] keyframe k10 review 7.0: Penguin beak is solid orange, violating canon (must be dark with an orange tip); The wooden lever mechanism has structural ambiguity; the handle and base pieces melt into each other at the pivot point
-16:42:13 [shorts] keyframe k05 review 5.0: The penguin is rendered as a 3D felt doll instead of the requested 'linework penguin'.; The background is stitched felt instead of the requested 'cyan paper background'.; Severe AI artifact: The white
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+17:55:16 [shorts] keyframe k05 review 9.0: The image is very strong and meets the prompt well.; There is a slight lack of clarity in the lower fifth, which could be slightly calmer for captions, though the dark area currently serves this purpo
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 30s
-16:42:57 [shorts] keyframe k05 review 4.0: Extensive garbled and nonsensical text throughout the blueprint (e.g., 'TECHAHICAL PAGAJS', 'FOGREEG', 'SSOMI').; Missed the 'felt and yarn' universe constraint entirely; rendered as a standard digita
-[qc] reviewer error (passing): 'list' object has no attribute 'get'
-16:43:03 [shorts] keyframe k02 review 10.0: 
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 45s
-16:43:50 [shorts] keyframe k06 review 4.0: Severe continuity errors: the background changed from split navy/cyan to solid cyan, and the central junction design/stitching has altered.; Physical logic error: the white string melts directly into 
-16:43:54 [shorts] keyframe k03 review 4.0: Continuity: The monitor in the foreground has changed completely into a flat grey board instead of the thick monitor from the previous frame.; Continuity: The cable coming from the computer is suddenl
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 15s
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 15s
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 30s
-16:44:38 [shorts] keyframe k11 review 5.0: The lever base on the machine has morphed from a single mechanism in the previous frame into two separate curved wooden pieces.; The broken handle in the penguin's flipper doesn't logically match the 
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 15s
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 45s
-16:45:05 [shorts] keyframe k03 review 4.0: Spatial continuity is broken: based on the previous frame, if the camera is now behind the monitor looking at the wall, the penguin's position and facing direction make no sense.; Penguin is off-model
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 15s
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 30s
-[qc] reviewer error (passing): 'list' object has no attribute 'get'
-16:45:46 [shorts] keyframe k11 review 10.0: 
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 60s
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 15s
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 30s
-16:46:53 [shorts] keyframe k04 review 5.0: Spatial logic error: An out-of-focus interior wall with pinned papers is inexplicably in the foreground of an exterior cityscape shot.; Cluttered lower fifth: The foreground wall interferes with the a
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 75s
 [gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
   "error"), waiting 45s
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 15s
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 60s
-16:48:22 [shorts] keyframe k04 review 5.0: Severe continuity error: In the previous interior frame, the cable runs down the solid wall beside the window. In this exterior frame, it inexplicably comes out of the window pane.; The cyan yarn clip
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 15s
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 30s
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 75s
-16:49:01 [shorts] keyframe k06 review 4.0: Severe continuity error: The penguin has teleported from the right side to the left side between frames and dropped the white yarn it was holding.; Style failure: The background remains stitched felt,
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 45s
-16:49:45 [shorts] keyframe k07 review 3.0: Major continuity error: The long yarn strands extending horizontally and vertically from the central hub in the previous frame have completely disappeared.; The yarn configuration inside the hub has c
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 15s
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 90s
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 60s
-16:50:46 [shorts] keyframe k07 review 8.0: The red yarn warning circle is uneven, slightly jagged, and appears to float awkwardly over the central yarn bundles rather than being physically integrated into the tactile scene.
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 15s
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 75s
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 105s
-16:52:05 [shorts] keyframe k08 review 4.0: Major continuity error: The central leather hub has changed design, size, and grommet placement compared to the previous frame.; Major continuity error: The large red yarn circle present in the previo
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 90s
-16:52:58 [shorts] keyframe k08 review 7.0: The camera framing is identical to the previous keyframe, completely ignoring the instruction to be 'slightly pulled back from the valve'.
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 120s
-[qc] reviewer error (passing): 'list' object has no attribute 'get'
-16:53:50 [shorts] keyframe k09 review 10.0: 
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 15s
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 105s
-16:54:58 [shorts] keyframe k16 review 6.0: Penguin's feet are incorrectly attached to the front of its belly instead of the bottom, making them look like hands holding something.; Penguin's expression is wide-eyed and alert rather than the req
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 15s
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 135s
-16:56:02 [shorts] keyframe k16 review 8.0: Penguin beak is entirely orange, violating the 'orange-tipped dark beak' canon design.; The white eye rings are slightly asymmetrical and warped in shape, looking more melted than intentionally expres
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 120s
-16:56:53 [shorts] keyframe k17 review 8.0: The penguin is still seated on the chair with its feet resting on the seat, rather than jumping up mid-air as requested.
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 15s
-16:58:02 [shorts] keyframe k18 review 5.0: The knocked-over chair has morphed significantly; it now has a strange 4-pronged base instead of the 5-wheel base seen in the previous frame.; The penguin's feet have lost their stitched details and a
-16:58:06 [shorts] keyframe k12 attempt 1: no image model worked: HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error": {
-    "code": 429,
-    "message": "Resource exhausted. Please try again lat
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 135s
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 15s
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 30s
-16:58:51 [shorts] keyframe k18 review 4.0: Penguin anatomy is broken: it is missing its white belly, and the orientation of the feet (tops facing the camera) contradicts a face-plant (which should show the back and soles of the feet).; The bas
-16:59:50 [shorts] keyframe k12 review 4.0: Continuity error: The penguin is missing the yellow hard hat it was wearing in the previous keyframe.; Continuity error: The penguin is no longer holding the broken wooden stick.; Prompt adherence: Th
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 15s
-17:00:36 [shorts] keyframe k14 attempt 1: no image model worked: HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error": {
-    "code": 429,
-    "message": "Resource exhausted. Please try again lat
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 15s
-17:01:03 [shorts] keyframe k12 review 5.0: The penguin is not looking up at the pipe in horror; it is looking straight ahead with a neutral expression.; Continuity error: the broken piece of wood inside the grey receptacle from the previous fr
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 15s
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 30s
-17:02:01 [shorts] keyframe k14 review 7.0: Penguin's beak is solid orange instead of dark with an orange tip.; The three-feather tuft looks like thin black wire rather than felt or yarn.; Pupils are slightly asymmetrical, giving a derpy rather
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 15s
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 30s
-17:02:42 [shorts] keyframe k13 review 8.0: The broken edge of the clear plastic pipe looks slightly melted or warped rather than sharply snapped or shattered.
-17:03:48 [shorts] keyframe k15 review 5.0: The penguin is completely free of the yarn pile, contradicting the prompt 'freed one flipper'.; The penguin is not actively winding the yarn; the spool is resting on the ground.; The cyan yarn does no
-[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
-  "error"), waiting 15s
-17:04:49 [shorts] keyframe k15 review 5.0: The cyan yarn is not being pulled from the orange pile as requested; it enters from off-screen left.; The penguin's beak is solid orange, violating the canon design of a dark beak with an orange tip.;
-17:04:57 [how-does-a-single-cloud-glitch-crash-mic] motion 60% Animating 14 shots
-[qc] reviewer error (passing): Expecting value: line 1 column 1 (char 0)
-17:06:40 [shorts] shot s03 review 10.0: 
-17:06:56 [shorts] shot s02 review 3.0: 00:00 - 00:02: Severe morphing of the entire scene during the camera move.; 00:01 - 00:02: The penguin in the background cubicle morphs into a window on the wall.; 00:00 - 00:02: The foreground pengui
-17:07:15 [shorts] shot s01 review 7.0: 00:00-00:03: Fine details like the stitched lines on the paper stack and the orange wire on the desk panel boil and jitter slightly across frames.; 00:00-00:03: The blue yarn loading icon morphs its s
-17:08:33 [shorts] shot s04 review 2.0: 00:00 - 00:02: The background abruptly changes from half dark blue and half light blue to entirely light blue.; 00:00 - 00:03: The central circular junction, the leather straps, and the arrangement of
-17:09:00 [shorts] shot s05 review 4.0: 00:00-00:01: The white yarn held by the penguin disappears abruptly.; 00:00-00:01: The red yarn circle pops into the frame instantly instead of animating in.; 00:01-00:02: The penguin slides out of fr
-17:09:45 [shorts] shot s06 review 3.0: 00:01 - 00:02: A messy web of thick red yarn abruptly appears over the central hub, completely breaking continuity.; 00:03: The red yarn web instantly disappears.; 00:03: Red stitched lines suddenly p
-17:10:37 [shorts] shot s07 review 4.0: 00:00 - 00:05: The camera remains completely static, failing to execute the requested 'drift back' motion.; 00:04: A penguin character abruptly pops into existence on the bottom left instead of enteri
-17:11:11 [shorts] shot s08 review 4.0: 00:01 - 00:02: The lever does not break cleanly; it appears to split into three pieces, with an extra piece materializing and falling.; 00:01 - 00:02: The grey felt base holding the lever morphs and c
-17:11:40 [shorts] shot s09 review 4.0: 00:01 - 00:03: The wooden mallet held by the penguin morphs unnaturally, with the handle bending and the head changing shape.; 00:01 - 00:03: The penguin's right arm holding the mallet morphs and lose
-17:12:53 [shorts] shot s10 review 3.0: 00:01: The glass bulb holding the yarn simply vanishes instead of shattering or breaking.; 00:01-00:05: The orange yarn morphs and generates out of nowhere rather than falling naturally.; 00:02-00:05:
-[qc] reviewer error (passing): 'list' object has no attribute 'get'
-17:13:09 [shorts] shot s11 review 10.0: 
-17:14:25 [shorts] shot s12 review 4.0: 00:00-00:03: The penguin's right flipper morphs and blends into the cyan yarn instead of firmly holding it.; 00:00-00:03: The winding action lacks physical logic; the wooden spool remains completely s
-17:15:39 [shorts] shot s13 review 4.0: 00:00 - 00:01: The yarn graphic on the monitor changes abruptly from orange/blue to just blue, rather than animating to completion.; 00:01 - 00:02: The penguin jumps up abruptly with no anticipation o
 [gai] pro: gemini-3.1-pro-preview busy (HTTP 429 gemini-3.1-pro-preview:generateContent: {
   "error"), waiting 15s
-17:16:05 [shorts] shot s14 review 4.0: 00:00 - 00:02: The neon icon on the computer screen morphs from an envelope to an arrow and back to an envelope.; 00:01 - 00:04: The penguin's motion is jerky and lacks in-between frames; it teleports
-17:16:39 [how-does-a-single-cloud-glitch-crash-mic] final_render 80% Rendering the Short
-17:26:19 rendered short.mp4 in 575s, 82.4 MB
-17:27:14 final review 4.0: While the felt aesthetic and the plumbing metaphor for an IT outage are charming concepts, the execution is ruined by severe AI generation artifacts. The constant morphing, inconsistent character desi
-17:27:16 [how-does-a-single-cloud-glitch-crash-mic] motion 78% Review scored 4.0/10. Re-shooting 2 weak shot(s)
-17:29:16 [shorts] shot s08 review 3.0: 00:02 - 00:03: Severe jump cut; the penguin falls backward and is instantly standing upright in the next frame.; 00:02 - 00:03: The broken lever piece in the penguin's hand morphs and changes shape si
-17:30:09 [shorts] shot s04 review 3.0: 00:01-00:02: Severe jump cut; the camera angle abruptly changes and the penguin teleports from the right side of the junction to the left.; 00:01-00:02: Complete loss of continuity; the background sti
-17:30:14 [how-does-a-single-cloud-glitch-crash-mic] final_render 80% Re-cutting with the fixed shots
-17:39:44 rendered short.mp4 in 569s, 83.4 MB
-17:41:07 [how-does-a-single-cloud-glitch-crash-mic] metadata 88% Writing the title and description
-17:42:51 [how-does-a-single-cloud-glitch-crash-mic] final_ready 90% Short ready (Woolen Wire Cloud, penguin as protagonist). Watch it and approve or send notes
-17:42:51 time budget used; the rest waits for the next run
-17:42:59 [how-do-qr-codes-work-even-when-partially] uploading 95% Uploading to YouTube as private
-17:43:26 [publish] uploaded main FjS10JeQni4
-17:43:28 [how-do-qr-codes-work-even-when-partially] scheduled 97% Uploaded private. YouTube makes it public Fri 13 Nov, 10:30 PM IST
-17:43:31 [what-happens-to-the-ai-revolution-if-jen] uploading 95% Uploading to YouTube as private
-17:44:13 [publish] uploaded main zEx6C97IIdA
-17:44:14 [what-happens-to-the-ai-revolution-if-jen] scheduled 97% Uploaded private. YouTube makes it public Fri 13 Nov, 10:30 PM IST
-17:44:17 [how-did-the-adult-entertainment-industry] uploading 95% Uploading to YouTube as private
-17:44:49 [publish] uploaded main i5UVOPOLHec
-17:44:51 [how-did-the-adult-entertainment-industry] scheduled 97% Uploaded private. YouTube makes it public Fri 13 Nov, 10:30 PM IST
-17:44:55 [youtube] 6 job(s) changed
-17:44:55 [youtube] analytics: {"views": 2547, "estimatedMinutesWatched": 652, "averageViewDuration": 26, "averageViewPercentage": 44.51, "likes": 65, "comments": 0, "shares": 0, "subscribersGained": 8} 
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 60s
+17:57:01 [shorts] keyframe k06 review 4.0: Severe continuity error: The four black drop targets with cyan patterns suddenly appear in this frame, having been completely absent from the same location in the previous frame.; The drop targets app
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+17:57:16 [shorts] keyframe k09 review 7.0: Penguin is off-model: it has two metal wire antennae on its head instead of a three-feather tuft.; Penguin is off-model: the beak is solid orange instead of dark with an orange tip.; Penguin's eyes ar
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 30s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 75s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 45s
+[qc] reviewer error (passing): 'list' object has no attribute 'get'
+17:58:12 [shorts] keyframe k10 review 10.0: 
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 60s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 90s
+17:59:15 [shorts] keyframe k11 review 6.0: Motion blur on the pinball looks like a smeared, semi-transparent blob rather than a solid fast-moving object.; Brass wireform loop structure melts and becomes illogical where it intersects with the p
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 75s
+[qc] reviewer error (passing): 'list' object has no attribute 'get'
+18:00:25 [shorts] keyframe k11 review 10.0: 
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 105s
+[qc] reviewer error (passing): 'list' object has no attribute 'get'
+18:01:20 [shorts] keyframe k12 review 10.0: 
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 90s
+[qc] reviewer error (passing): 'list' object has no attribute 'get'
+18:02:18 [shorts] keyframe k13 review 10.0: 
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 30s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 105s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 45s
+18:03:28 [shorts] keyframe k01 review 4.0: Pinballs in the cluster are melting and fusing together, losing their perfectly spherical shape.; Illogical mechanical physics: the plunger chute is four balls wide, but the plunger tip is too narrow 
+18:04:15 [shorts] keyframe k01 review 5.0: Nonsensical mechanics: Tiny yellow flippers are located inside the launch chute pointing backwards.; Plunger design: The plunger head is a wide, flat bar instead of a standard cylindrical tip.; AI Art
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 60s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 120s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 75s
+18:05:29 [shorts] keyframe k02 review 3.0: Severe continuity error: The wooden chute and plunger from the previous frame have completely disappeared in the current frame.; The environment around the pinballs has changed entirely from a wooden 
+18:06:26 [shorts] keyframe k02 review 3.0: Severe continuity failure: the physical structure of the machine has completely morphed. The narrow wooden chute with a plunger from the previous frame has disappeared, replaced by a wide, flat wooden
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 90s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 135s
+18:07:34 [shorts] keyframe k03 review 3.0: Severe continuity failure: The massive pile of pinballs in the center of the previous frame has completely vanished.; Severe continuity failure: A large glowing microchip bumper has popped into existe
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 105s
+18:08:29 [shorts] keyframe k03 review 3.0: Severe continuity error: The center of the pinball machine has completely changed. The massive pile of silver pinballs from the previous frame has vanished and been replaced by a glowing green microch
+18:09:15 [shorts] keyframe k06 attempt 1: no image model worked: HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error": {
+    "code": 429,
+    "message": "Resource exhausted. Please try again lat
+18:09:19 [shorts] keyframe k04 review 4.0: Major continuity error and failure of object permanence: the cluster of six pinballs in the foreground of the previous frame has vanished, leaving only two.; Prompt adherence: the prompt requested 'mu
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 30s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 120s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 45s
+18:10:33 [shorts] keyframe k06 review 3.0: Major continuity error: The glowing green bumper in the background of the previous frame has completely vanished and been replaced by three black drop-targets in the exact same location.; The camera f
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 60s
+18:11:28 [shorts] keyframe k07 review 4.0: Continuity and Physics: In the previous frame, the ball is rolling down the brass wireform ramp. In this frame, it has inexplicably jumped off the ramp and is hitting targets behind it, breaking physi
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 135s
+18:12:20 [shorts] keyframe k07 review 3.0: Severe physics failure: The pinball has impossibly phased through or jumped out of the enclosing brass wireform ramp to hit the drop targets.; Severe physics failure: The drop target is bending outwar
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 75s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[qc] reviewer error (passing): 'list' object has no attribute 'get'
+18:13:21 [shorts] keyframe k08 review 10.0: 
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 90s
+18:14:06 [shorts] keyframe k16 review 5.0: Penguin's orange feet are melted and fused directly into the brass rails.; Brass wireform rails have structural errors, with the middle rail disappearing into the foot and the foreground support brack
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+18:14:33 [shorts] keyframe k14 attempt 1: no image model worked: HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error": {
+    "code": 429,
+    "message": "Resource exhausted. Please try again lat
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 30s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 105s
+18:15:33 [shorts] keyframe k16 review 6.0: Physical logic error: The middle brass rail of the ramp abruptly disappears underneath or clips through the penguin's body.; Penguin off-model: The beak is entirely orange instead of dark with an oran
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 45s
+[qc] reviewer error (passing): 'list' object has no attribute 'get'
+18:16:26 [shorts] keyframe k17 review 10.0: 
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 30s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 120s
+18:17:19 [shorts] keyframe k14 review 5.0: AI-hallucinated drafting lines: dimension arrows point to empty space, and floating circles or crossed-square symbols lack technical meaning.; The internal mechanics in the bottom cross-section are ph
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 30s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 45s
+18:18:31 [shorts] keyframe k18 review 6.0: Camera framing is almost identical to the previous frame, failing to pull back wider as requested.; The massive cluster of pinballs on the playfield appears suddenly, lacking logical continuity from t
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 60s
+[qc] reviewer error (passing): 'list' object has no attribute 'get'
+18:19:16 [shorts] keyframe k18 review 10.0: 
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 135s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 75s
+18:20:25 [shorts] keyframe k19 review 4.0: The neon text spells 'LILT?' instead of the requested 'TILT?'.
+[qc] reviewer error (passing): 'list' object has no attribute 'get'
+18:21:13 [shorts] keyframe k19 review 10.0: 
+18:21:36 [shorts] keyframe k04 attempt 1: no image model worked: HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error": {
+    "code": 429,
+    "message": "Resource exhausted. Please try again lat
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 30s
+18:22:20 [shorts] keyframe k14 review 5.0: Severe AI text garbling in the title block at the bottom (e.g., 'SEAGBY & BIRNGETS', 'VARTINLIN', 'CEPMATEE'); Nonsense text on the left margin ('i24 UCT 6OES'); The title block grid makes the lower f
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 45s
+18:23:18 [shorts] keyframe k15 review 5.0: Major continuity error: The middle router drawing changes from a top-down orthographic projection in the previous frame to an isometric projection in the current frame.; Style inconsistency: The shatt
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 15s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 30s
+[gai] image: gemini-nano-banana-2.1 busy (HTTP 429 gemini-nano-banana-2.1:generateContent: {
+  "error"), waiting 45s
+[qc] reviewer error (passing): 'list' object has no attribute 'get'
+18:24:27 [shorts] keyframe k04 review 10.0: 
+18:25:43 [shorts] keyframe k15 review 7.0: The requested 'camera pushes in slightly' is missing; the scale and position of the objects relative to the grid are identical to the previous keyframe.
+18:25:50 [is-the-massive-artificial-intelligence-c] motion 60% Animating 14 shots
+18:27:53 [shorts] shot s03 review 4.0: 00:01-00:05: The silver balls slide and float instead of rolling with realistic weight and momentum.; 00:02-00:04: The green flashes look like a cheap 2D overlay effect rather than integrated lighting
+18:28:04 [shorts] shot s02 review 2.0: 00:00 - 00:02: The entire cluster of silver pinballs morphs into a glowing green computer chip, completely breaking object permanence.; 00:01 - 00:02: The yellow flippers at the bottom of the screen c
+18:28:13 [shorts] shot s01 review 3.0: 00:01-00:03: Pinballs lack rigid body physics; they slide, merge, and morph into each other instead of rolling and colliding.; 00:01-00:02: Abrupt and jarring transition where the plunger disappears a
+18:29:58 [shorts] shot s04 review 3.0: 00:01-00:03: Three rectangular targets with garbled cyan text morph and pop into existence on the left side of the playfield.; 00:04-00:05: A second pinball suddenly pops into existence on the lower p
+18:30:19 [shorts] shot s06 review 3.0: 00:00-00:05: Garbled, morphing text on the black pillars.; 00:01-00:05: Pinballs appear out of nowhere as a morphing, fluid-like cluster rather than solid individual spheres.; 00:02-00:05: Pinballs me
+18:30:24 [shorts] shot s05 review 3.0: 00:01-00:03: The pinball disappears from the wire ramp during the bright flash.; 00:02: The electrical flash effect is chaotic and obscures the action, looking like a cheap overlay rather than a physi
+18:32:11 [shorts] shot s07 review 4.0: 00:02 - 00:03: The mechanical score counter and its brass housing morph into existence during the camera pan, rather than being solid objects revealed by the move.; 00:03 - 00:05: The numbers on the s
+18:32:13 [shorts] shot s09 review 3.0: 00:02: A second pinball suddenly appears out of nowhere at the top right of the wireform.; 00:03: The original pinball completely disappears mid-roll.; 00:02-00:03: The brass wireform structure morphs
+18:32:42 [shorts] shot s08 review 2.0: 00:00 - 00:02: The score counter completely morphs into a rectangular hole instead of the camera panning away from it.; 00:01 - 00:03: The brass loop structure pops into existence out of thin air.; 00
+18:33:56 [shorts] shot s11 review 3.0: 00:00 - 00:05: The video completely ignores the requested visual style. It is a 2D blueprint animation instead of the requested macro photography of a 3D mechanical pinball machine.; 00:01 - 00:03: Th
+18:34:13 [shorts] shot s10 review 2.0: 00:02-00:04: The silver ball morphs into a stack of glowing green chips instead of hitting a bumper.; 00:02-00:04: The entire pinball machine structure, including the wireform ramps, the hole in the p
+18:34:48 [shorts] shot s12 review 3.0: 00:00 - 00:01: The penguin figure completely vanishes, failing object permanence.; 00:01 - 00:03: Severe morphing and structural collapse during the camera movement; the scene dissolves into a blurry 
+18:36:03 [shorts] shot s13 review 3.0: 00:00-00:03: The metal tracks, ramps, and structural supports continuously morph and change shape, lacking object permanence.; 00:01-00:02: Metal balls appear to spawn from nothing in the center chute
+18:36:05 [shorts] shot s14 review 2.0: 00:00 - 00:01: The large cluster of silver pinballs at the bottom completely disappears, morphing into a painted design on the playfield.; 00:00 - 00:03: The entire mechanical structure in the backgro
+18:36:39 [is-the-massive-artificial-intelligence-c] final_render 80% Rendering the Short
+18:43:08 rendered short.mp4 in 386s, 85.8 MB
+18:43:48 final review 4.0: The video suffers from severe AI hallucinations, most notably the morphing balls and the random appearances of a cartoon penguin. These artifacts completely destroy the premium feel and logical consis
+18:43:50 [is-the-massive-artificial-intelligence-c] motion 78% Review scored 4.0/10. Re-shooting 2 weak shot(s)
+18:46:14 [shorts] shot s07 review 3.0: 00:01-00:02: The penguin figurine completely vanishes as the camera begins to pan.; 00:01-00:05: The text 'CHIP A CHAT' warps and becomes garbled during the camera move.; 00:02-00:04: The mechanical s
+18:46:26 [shorts] shot s06 review 3.0: 00:00-00:01: The initial silver ball morphs into the background structure and disappears.; 00:00-00:05: Garbled, nonsensical text is visible on the black targets.; 00:02: A large cluster of silver bal
+18:46:31 [is-the-massive-artificial-intelligence-c] final_render 80% Re-cutting with the fixed shots
+18:52:14 rendered short.mp4 in 342s, 86.3 MB
+18:53:16 [is-the-massive-artificial-intelligence-c] metadata 88% Writing the title and description
+18:53:28 [is-the-massive-artificial-intelligence-c] final_ready 90% Short ready (Mechanical Pinball Metropolis, penguin as cameo). Watch it and approve or send notes
+18:53:28 time budget used; the rest waits for the next run
+18:53:34 [how-does-a-single-cloud-glitch-crash-mic] uploading 95% Uploading to YouTube as private
+18:54:08 [publish] uploaded main QazTayoSqw0
+18:54:10 [how-does-a-single-cloud-glitch-crash-mic] scheduled 97% Uploaded private. Flip it to Public in YouTube Studio
+18:54:11 [youtube] 6 job(s) changed
+18:54:12 [youtube] analytics: {"views": 2547, "estimatedMinutesWatched": 652, "averageViewDuration": 26, "averageViewPercentage": 44.51, "likes": 65, "comments": 0, "shares": 0, "subscribersGained": 8} 
