@@ -1,7 +1,7 @@
 {
  "id": "why-did-the-internet-fight-a-decade-over-xxx-domains-",
  "created": "2026-11-07T15:25:54+00:00",
- "pct": 97,
+ "pct": 100,
  "v": 3,
  "format": "short",
  "q": "Why did the internet fight a decade over .xxx domains?",
@@ -90,7 +90,7 @@
   }
  },
  "brew_at": "2026-11-07T15:07:55.474Z",
- "error": null,
+ "error": "Couldn't set the YouTube schedule: YouTube PUT videos -> HTTP 400: {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"The request metadata specifies an invalid scheduled publishing time.\",\n    \"errors\": [\n      {\n        \"message\": \"The r",
  "fails": 0,
  "preview": {
   "id": "1gr_b9AtWWFdvb70HsF34BLSscjGuTTBF",
@@ -136,8 +136,8 @@
   "pinned_comment": "Did the penguin actually think segregating the toy city would work, or does he just love causing bureaucratic mayhem?",
   "instagram_caption": "Ten years of global bureaucratic warfare over just three letters. Nobody won, universities paid up, and the toy city was ruined.\n\n#InternetHistory #TechTrivia #WebCulture #AnimationShorts #DomainNames"
  },
- "stage": "scheduled",
- "step": "Uploaded as private. Flip it to Public (or schedule it) in YouTube Studio",
+ "stage": "live",
+ "step": "Live on YouTube · 2 views · 0 likes · 0 comments",
  "cost": 14.153,
  "steps": [
   {
@@ -187,9 +187,13 @@
   {
    "stage": "scheduled",
    "at": "2026-11-12T19:40:42+00:00"
+  },
+  {
+   "stage": "live",
+   "at": "2026-11-13T17:44:55+00:00"
   }
  ],
- "updated": "2026-11-13T15:40:00+00:00",
+ "updated": "2026-11-13T17:44:55+00:00",
  "voice_style": "C",
  "voice_fit": 1.106,
  "duration": 58.5,
@@ -293,12 +297,12 @@
   }
  ],
  "schedule": {
-  "youtube": null,
+  "youtube": "2026-11-13T22:30:00+05:30",
   "instagram": null,
   "why": "07:30 IST is the Shorts morning scroll in India and 9 pm the night before on the US East Coast. 18:30 IST catches the India evening and US breakfast. Reels peak in the evening, so 19:30 IST for India, 07:30 IST for US night owls.",
   "window": "global"
  },
- "slot": null,
+ "slot": "2026-11-13T22:30:00+05:30",
  "youtube": {
   "videos": [
    {
@@ -307,18 +311,19 @@
     "url": "https://youtube.com/shorts/jmLo4wsLnI0",
     "studio": "https://studio.youtube.com/video/jmLo4wsLnI0/edit",
     "title": "The 10-Year War Over Three Letters: .xxx",
-    "privacy": "private",
+    "privacy": "public",
     "publish_at": null,
-    "published": "2026-11-12T19:40:19Z",
+    "published": "2026-11-13T16:29:39Z",
     "upload_status": "processed",
-    "views": 0,
+    "views": 2,
     "likes": 0,
     "comments": 0,
-    "checked": "2026-11-13T15:40:00+00:00"
+    "checked": "2026-11-13T17:44:55+00:00"
    }
   ],
   "audited": true,
   "note": "Scheduled.",
   "channel": "@curiouspenguincantfly"
- }
+ },
+ "instagram": {}
 }

@@ -1,7 +1,7 @@
 {
  "id": "how-did-the-adult-entertainment-industry-get-its-own-domain-extension-",
  "created": "2026-11-07T15:25:51+00:00",
- "pct": 90,
+ "pct": 97,
  "v": 3,
  "format": "short",
  "q": "How did the adult entertainment industry get its own domain extension?",
@@ -138,8 +138,8 @@
   "pinned_comment": "Does anyone want to break the news to the penguin that nobody is trying to break into its empty domain box?",
   "instagram_caption": "A decade of global drama just for universities to buy web addresses that lead to nowhere. Peak internet diplomacy.\n\n#InternetHistory #TechTrivia #DomainNames #WeirdHistory #TechHistory"
  },
- "stage": "final_ready",
- "step": "Short ready (Acrylic Alleyways, penguin as cameo). Watch it and approve or send notes",
+ "stage": "scheduled",
+ "step": "Uploaded as private. Flip it to Public (or schedule it) in YouTube Studio",
  "cost": 22.857,
  "steps": [
   {
@@ -173,9 +173,25 @@
   {
    "stage": "final_ready",
    "at": "2026-11-07T16:36:18+00:00"
+  },
+  {
+   "stage": "approved",
+   "at": "2026-11-13T16:37:25+00:00"
+  },
+  {
+   "stage": "uploading",
+   "at": "2026-11-13T17:44:14+00:00"
+  },
+  {
+   "stage": "scheduled",
+   "at": "2026-11-13T17:44:49+00:00"
+  },
+  {
+   "stage": "scheduled",
+   "at": "2026-11-13T17:44:55+00:00"
   }
  ],
- "updated": "2026-11-07T16:36:18+00:00",
+ "updated": "2026-11-13T17:44:55+00:00",
  "voice_style": "C",
  "voice_fit": 1.2,
  "duration": 61.3,
@@ -220,5 +236,42 @@
    "s07: There is a major continuity error: the bin is filled with random glass tubes and bulbs instead of the envelopes that were just shown falling into it.",
    "s12: The penguin is a completely static model that awkwardly slides into frame without any animation, and the padlock materializes out of thin air, morphing with the flipper."
   ]
+ },
+ "notes_in": [
+  {
+   "at": "2026-11-13T16:32:00.000Z",
+   "stage": "final",
+   "notes": ""
+  }
+ ],
+ "schedule": {
+  "youtube": "2026-11-13T22:30:00+05:30",
+  "instagram": null,
+  "why": "07:30 IST is the Shorts morning scroll in India and 9 pm the night before on the US East Coast. 18:30 IST catches the India evening and US breakfast. Reels peak in the evening, so 19:30 IST for India, 07:30 IST for US night owls.",
+  "window": "global"
+ },
+ "slot": "2026-11-13T22:30:00+05:30",
+ "instagram": {},
+ "youtube": {
+  "videos": [
+   {
+    "kind": "main",
+    "id": "i5UVOPOLHec",
+    "url": "https://youtube.com/shorts/i5UVOPOLHec",
+    "studio": "https://studio.youtube.com/video/i5UVOPOLHec/edit",
+    "title": "Why Universities Bought .XXX Domains",
+    "privacy": "private",
+    "publish_at": null,
+    "published": "2026-11-13T17:44:22Z",
+    "upload_status": "uploaded",
+    "views": 0,
+    "likes": 0,
+    "comments": 0,
+    "checked": "2026-11-13T17:44:55+00:00"
+   }
+  ],
+  "audited": true,
+  "note": "Scheduled.",
+  "channel": "@curiouspenguincantfly"
  }
 }

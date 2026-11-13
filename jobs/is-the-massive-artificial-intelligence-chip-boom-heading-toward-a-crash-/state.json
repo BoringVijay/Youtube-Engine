@@ -1,0 +1,111 @@
+{
+ "id": "is-the-massive-artificial-intelligence-chip-boom-heading-toward-a-crash-",
+ "created": "2026-11-13T16:37:06+00:00",
+ "pct": 2,
+ "v": 3,
+ "format": "short",
+ "q": "Is the massive artificial intelligence chip boom heading toward a crash?",
+ "series": "Curious Penguin",
+ "brew": {
+  "type": "brew",
+  "at": "2026-11-13T16:24:20.243Z",
+  "id": "is-the-massive-artificial-intelligence-chip-boom-heading-toward-a-crash-",
+  "q": "Is the massive artificial intelligence chip boom heading toward a crash?",
+  "series": "Curious Penguin",
+  "aud": "finance & crypto",
+  "format": {
+   "long": false,
+   "minutes": 1,
+   "shorts": 0
+  },
+  "angle": "",
+  "notes": [],
+  "refs": [
+   "https://www.reddit.com/r/OutOfTheLoop/comments/1xv4duj/whats_going_on_with_nvidia_and_the_ai_bubble_burst/",
+   "https://en.wikipedia.org/wiki/Colette_Kress"
+  ],
+  "penguin_role": "cameo",
+  "voice_style": "",
+  "script": {
+   "titles": [
+    "Is the AI Chip Boom About to Crash?",
+    "Trillions of Dollars, One Chipmaker, Big Questions",
+    "The AI Shovel Seller Has a Problem"
+   ],
+   "beats": [
+    {
+     "vo": "Trillions of dollars are chasing a chipmaker with questions.",
+     "visual": "Miniature gold rush diorama at night. Thousands of tiny clay dollar bills with legs stampede across a felt desert toward a glowing chip-shaped mine entrance. A single question mark floats above the mine like a neon sign."
+    },
+    {
+     "vo": "The chipmaker is Nvidia. Its GPUs do the math behind chatbots and image generators.",
+     "visual": "Macro shot inside the mine. A GPU the size of a cathedral hums green. Tiny clay workers feed it scrolls of numbers, and out the other side come little paper chat bubbles and painted pictures on conveyor belts."
+    },
+    {
+     "vo": "So the biggest tech companies buy them by the warehouse. Microsoft, Google, Amazon, Meta.",
+     "visual": "Four giant clay delivery trucks, each in a different color, back up to the mine and fill with stacked GPUs until their suspensions sag."
+    },
+    {
+     "vo": "Together they're spending hundreds of billions a year building data centers.",
+     "visual": "Time-lapse of a miniature city where cardboard data center blocks sprout like mushrooms, cables snaking between them, cooling fans spinning, power lines glowing orange."
+    },
+    {
+     "vo": "Nvidia sells most of those shovels. Data centers became most of its revenue.",
+     "visual": "A tiny general store labeled with a chip logo. Behind the counter, a clay shopkeeper stacks shovels made of GPUs. A pie chart rug on the floor is almost entirely one color."
+    },
+    {
+     "vo": "Here's the catch. You, the person typing into the chatbot, mostly use it for free.",
+     "visual": "Cut to a cozy diorama bedroom. The small curious penguin sits at a tiny desk typing into a glowing laptop, gets a chat bubble back, looks at its empty wallet, shrugs, and keeps typing. Its only appearance."
+    },
+    {
+     "vo": "The money going into chips is far bigger than the money coming out of AI apps, at least so far.",
+     "visual": "A huge clay pipe pours a waterfall of coins into a data center. Next to it, a thin straw labeled with an app icon drips single coins back out into a thimble."
+    },
+    {
+     "vo": "Twist: Nvidia has invested in AI companies that turn around and buy its chips.",
+     "visual": "The shopkeeper hands a bag of coins to a customer across the counter, the customer immediately hands the same bag back and picks up a shovel. Camera pulls back to reveal the coins moving in a perfect loop."
+    },
+    {
+     "vo": "In 2000, Cisco sold the internet's plumbing and briefly became the world's most valuable company. Then it crashed.",
+     "visual": "Sepia, paper-cutout flashback. A 2000-era clay router sits on a trophy podium under spotlights, then the podium cracks and drops through the floor like a trapdoor."
+    },
+    {
+     "vo": "The internet won anyway. Cisco's stock stayed below that peak for decades.",
+     "visual": "Back in sepia, the paper city above fills with glowing websites and phones, while the little router sits in the basement looking up at a chalk line on the wall marked as its old high."
+    },
+    {
+     "vo": "Crash or not? Nobody knows. The trillions of dollars have questions too.",
+     "visual": "Return to the opening desert. The stampede of dollar bills has stopped at the mine entrance. Each one now holds up a tiny question mark sign. The neon question mark above flickers."
+    }
+   ],
+   "vo": "Trillions of dollars are chasing a chipmaker with questions. The chipmaker is Nvidia. Its GPUs do the math behind chatbots and image generators. So the biggest tech companies buy them by the warehouse. Microsoft, Google, Amazon, Meta. Together they're spending hundreds of billions a year building data centers. Nvidia sells most of those shovels. Data centers became most of its revenue. Here's the catch. You, the person typing into the chatbot, mostly use it for free. The money going into chips is far bigger than the money coming out of AI apps, at least so far. Twist: Nvidia has invested in AI companies that turn around and buy its chips. In 2000, Cisco sold the internet's plumbing and briefly became the world's most valuable company. Then it crashed. The internet won anyway. Cisco's stock stayed below that peak for decades. Crash or not? Nobody knows. The trillions of dollars have questions too.",
+   "verify": [
+    "Microsoft, Google, Amazon and Meta combined capital spending on AI and data centers is in the hundreds of billions of dollars per year; confirm the latest annual figures.",
+    "Nvidia's data center segment makes up the majority of its total revenue; confirm with the latest quarterly report.",
+    "Most chatbot users use free tiers; confirm the share of paying users for major chatbots if mentioned in captions.",
+    "AI software and app revenue is currently much smaller than AI infrastructure spending; confirm with recent analyst estimates before citing any numbers.",
+    "Nvidia has announced investments in AI companies that are also customers for its chips, such as OpenAI and CoreWeave; confirm deal status and terms.",
+    "Cisco briefly became the world's most valuable company in March 2000, then its stock fell sharply in the dot-com crash.",
+    "Cisco's stock remained below its 2000 peak for decades; check whether it has surpassed that peak recently and adjust the wording if needed."
+   ]
+  }
+ },
+ "brew_at": "2026-11-13T16:24:20.243Z",
+ "error": null,
+ "fails": 0,
+ "preview": null,
+ "final": null,
+ "shorts": null,
+ "thumb": null,
+ "meta": null,
+ "stage": "queued",
+ "step": "Waiting for a render slot",
+ "cost": 0,
+ "steps": [
+  {
+   "stage": "queued",
+   "at": "2026-11-13T16:37:06+00:00"
+  }
+ ],
+ "updated": "2026-11-13T16:37:06+00:00"
+}

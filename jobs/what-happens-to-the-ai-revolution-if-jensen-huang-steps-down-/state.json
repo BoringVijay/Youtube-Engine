@@ -1,7 +1,7 @@
 {
  "id": "what-happens-to-the-ai-revolution-if-jensen-huang-steps-down-",
  "created": "2026-11-12T17:44:01+00:00",
- "pct": 90,
+ "pct": 97,
  "v": 3,
  "format": "short",
  "q": "What happens to the AI revolution if Jensen Huang steps down?",
@@ -136,8 +136,8 @@
   "pinned_comment": "Should we invoice the penguin for the ruined varnish, or award style points for that sawdust belly flop?",
   "instagram_caption": "Nvidia's real moat isn't just silicon—it's the software developers refuse to rewrite. Still, can anyone actually replace the leather jacket?\n\n#Nvidia #JensenHuang #TechNews #ArtificialIntelligence #Semiconductors"
  },
- "stage": "final_ready",
- "step": "Short ready (Precision Carved Wood Automata, penguin as cameo). Watch it and approve or send notes",
+ "stage": "scheduled",
+ "step": "Uploaded as private. Flip it to Public (or schedule it) in YouTube Studio",
  "cost": 13.499,
  "steps": [
   {
@@ -171,9 +171,25 @@
   {
    "stage": "final_ready",
    "at": "2026-11-12T18:38:28+00:00"
+  },
+  {
+   "stage": "approved",
+   "at": "2026-11-13T16:37:20+00:00"
+  },
+  {
+   "stage": "uploading",
+   "at": "2026-11-13T17:43:28+00:00"
+  },
+  {
+   "stage": "scheduled",
+   "at": "2026-11-13T17:44:13+00:00"
+  },
+  {
+   "stage": "scheduled",
+   "at": "2026-11-13T17:44:55+00:00"
   }
  ],
- "updated": "2026-11-12T18:38:28+00:00",
+ "updated": "2026-11-13T17:44:55+00:00",
  "voice_style": "C",
  "voice_fit": 1.092,
  "duration": 58.5,
@@ -212,5 +228,57 @@
    "s08: The hand drawing the blueprint has distorted, morphing fingers.",
    "s13: The penguin's jump defies gravity (too floaty), and its legs melt into the wood shavings upon landing."
   ]
+ },
+ "notes_in": [
+  {
+   "at": "2026-11-13T16:16:47.334Z",
+   "stage": "final",
+   "notes": ""
+  },
+  {
+   "at": "2026-11-13T16:16:47.743Z",
+   "stage": "final",
+   "notes": ""
+  },
+  {
+   "at": "2026-11-13T16:16:48.906Z",
+   "stage": "final",
+   "notes": ""
+  },
+  {
+   "at": "2026-11-13T16:32:00.000Z",
+   "stage": "final",
+   "notes": ""
+  }
+ ],
+ "schedule": {
+  "youtube": "2026-11-13T22:30:00+05:30",
+  "instagram": null,
+  "why": "07:30 IST is the Shorts morning scroll in India and 9 pm the night before on the US East Coast. 18:30 IST catches the India evening and US breakfast. Reels peak in the evening, so 19:30 IST for India, 07:30 IST for US night owls.",
+  "window": "global"
+ },
+ "slot": "2026-11-13T22:30:00+05:30",
+ "instagram": {},
+ "youtube": {
+  "videos": [
+   {
+    "kind": "main",
+    "id": "zEx6C97IIdA",
+    "url": "https://youtube.com/shorts/zEx6C97IIdA",
+    "studio": "https://studio.youtube.com/video/zEx6C97IIdA/edit",
+    "title": "What Happens to AI if Jensen Huang Steps Down?",
+    "privacy": "private",
+    "publish_at": null,
+    "published": "2026-11-13T17:43:35Z",
+    "upload_status": "processed",
+    "views": 0,
+    "likes": 0,
+    "comments": 0,
+    "checked": "2026-11-13T17:44:55+00:00"
+   }
+  ],
+  "audited": true,
+  "note": "Scheduled.",
+  "channel": "@curiouspenguincantfly"
  }
 }

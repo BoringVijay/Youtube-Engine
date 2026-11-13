@@ -1,7 +1,7 @@
 {
  "id": "how-do-qr-codes-work-even-when-partially-destroyed-",
  "created": "2026-11-12T17:44:04+00:00",
- "pct": 90,
+ "pct": 97,
  "v": 3,
  "format": "short",
  "q": "How do QR codes work even when partially destroyed?",
@@ -132,8 +132,8 @@
   "pinned_comment": "Did the penguin go too far, or would you have stomped those corners too?",
   "instagram_caption": "Up to 30% of a QR code can be completely wrecked and your phone will still read it. Just keep curious penguins away from the three corner squares.\n\n#TechExplained #HowItWorks #ComputerScience #MathTrivia #Engineering"
  },
- "stage": "final_ready",
- "step": "Short ready (Studio Lumina, penguin as villain). Watch it and approve or send notes",
+ "stage": "scheduled",
+ "step": "Uploaded as private. Flip it to Public (or schedule it) in YouTube Studio",
  "cost": 13.583,
  "steps": [
   {
@@ -167,9 +167,25 @@
   {
    "stage": "final_ready",
    "at": "2026-11-12T19:39:29+00:00"
+  },
+  {
+   "stage": "approved",
+   "at": "2026-11-13T16:37:22+00:00"
+  },
+  {
+   "stage": "uploading",
+   "at": "2026-11-13T17:42:54+00:00"
+  },
+  {
+   "stage": "scheduled",
+   "at": "2026-11-13T17:43:26+00:00"
+  },
+  {
+   "stage": "scheduled",
+   "at": "2026-11-13T17:44:55+00:00"
   }
  ],
- "updated": "2026-11-12T19:39:29+00:00",
+ "updated": "2026-11-13T17:44:55+00:00",
  "voice_style": "C",
  "duration": 58.6,
  "universe": "Studio Lumina · Light-Floor Grid",
@@ -246,5 +262,52 @@
    "s09: During the rapid smashing animation, the penguin's body morphs and the wooden mallet handle bends like rubber.",
    "s12: The mallet handle is visibly embedded inside the penguin's stomach."
   ]
+ },
+ "notes_in": [
+  {
+   "at": "2026-11-13T16:16:59.279Z",
+   "stage": "final",
+   "notes": ""
+  },
+  {
+   "at": "2026-11-13T16:17:09.385Z",
+   "stage": "final",
+   "notes": ""
+  },
+  {
+   "at": "2026-11-13T16:32:00.000Z",
+   "stage": "final",
+   "notes": ""
+  }
+ ],
+ "schedule": {
+  "youtube": "2026-11-13T22:30:00+05:30",
+  "instagram": null,
+  "why": "07:30 IST is the Shorts morning scroll in India and 9 pm the night before on the US East Coast. 18:30 IST catches the India evening and US breakfast. Reels peak in the evening, so 19:30 IST for India, 07:30 IST for US night owls.",
+  "window": "global"
+ },
+ "slot": "2026-11-13T22:30:00+05:30",
+ "instagram": {},
+ "youtube": {
+  "videos": [
+   {
+    "kind": "main",
+    "id": "FjS10JeQni4",
+    "url": "https://youtube.com/shorts/FjS10JeQni4",
+    "studio": "https://studio.youtube.com/video/FjS10JeQni4/edit",
+    "title": "Why Damaged QR Codes Still Work",
+    "privacy": "private",
+    "publish_at": null,
+    "published": "2026-11-13T17:43:04Z",
+    "upload_status": "processed",
+    "views": 0,
+    "likes": 0,
+    "comments": 0,
+    "checked": "2026-11-13T17:44:55+00:00"
+   }
+  ],
+  "audited": true,
+  "note": "Scheduled.",
+  "channel": "@curiouspenguincantfly"
  }
 }

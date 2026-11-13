@@ -1,7 +1,7 @@
 {
  "id": "how-did-a-tiny-republic-survive-inside-italy-for-centuries-",
  "created": "2026-11-07T15:25:57+00:00",
- "pct": 97,
+ "pct": 100,
  "v": 3,
  "format": "short",
  "q": "How did a tiny republic survive inside Italy for centuries?",
@@ -91,7 +91,7 @@
   }
  },
  "brew_at": "2026-11-07T15:11:48.942Z",
- "error": null,
+ "error": "Couldn't set the YouTube schedule: YouTube PUT videos -> HTTP 400: {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"The request metadata specifies an invalid scheduled publishing time.\",\n    \"errors\": [\n      {\n        \"message\": \"The r",
  "fails": 2,
  "preview": {
   "id": "1FBB0j7YqvA2TUaF8Drc7hq6vx4WTI_Rc",
@@ -137,8 +137,8 @@
   "pinned_comment": "On a scale of 1 to 10, how would you rate our basalt guard's flight attempt? (Gravity already gave it a solid 0.)",
   "instagram_caption": "Surviving 1,700 years of empires by politely turning down free real estate. San Marino truly cracked the code.\n\n#SanMarino #HistoryFacts #Microstate #EuropeanHistory #ChiseledHistory"
  },
- "stage": "scheduled",
- "step": "Uploaded as private. Flip it to Public (or schedule it) in YouTube Studio",
+ "stage": "live",
+ "step": "Live on YouTube · 112 views · 8 likes · 0 comments",
  "cost": 14.395,
  "steps": [
   {
@@ -188,9 +188,13 @@
   {
    "stage": "scheduled",
    "at": "2026-11-12T19:40:42+00:00"
+  },
+  {
+   "stage": "live",
+   "at": "2026-11-13T17:44:55+00:00"
   }
  ],
- "updated": "2026-11-13T15:40:00+00:00",
+ "updated": "2026-11-13T17:44:55+00:00",
  "voice_style": "B",
  "voice_fit": 1.2,
  "duration": 62.8,
@@ -239,12 +243,12 @@
   }
  ],
  "schedule": {
-  "youtube": null,
+  "youtube": "2026-11-13T22:30:00+05:30",
   "instagram": null,
   "why": "07:30 IST is the Shorts morning scroll in India and 9 pm the night before on the US East Coast. 18:30 IST catches the India evening and US breakfast. Reels peak in the evening, so 19:30 IST for India, 07:30 IST for US night owls.",
   "window": "global"
  },
- "slot": null,
+ "slot": "2026-11-13T22:30:00+05:30",
  "youtube": {
   "videos": [
    {
@@ -253,18 +257,19 @@
     "url": "https://youtube.com/shorts/YlvgvEeBUEs",
     "studio": "https://studio.youtube.com/video/YlvgvEeBUEs/edit",
     "title": "The Tiny Country That Simply Refused to Fall",
-    "privacy": "private",
+    "privacy": "public",
     "publish_at": null,
-    "published": "2026-11-12T19:39:42Z",
+    "published": "2026-11-13T16:29:59Z",
     "upload_status": "processed",
-    "views": 0,
-    "likes": 0,
+    "views": 112,
+    "likes": 8,
     "comments": 0,
-    "checked": "2026-11-13T15:40:00+00:00"
+    "checked": "2026-11-13T17:44:55+00:00"
    }
   ],
   "audited": true,
   "note": "Scheduled.",
   "channel": "@curiouspenguincantfly"
- }
+ },
+ "instagram": {}
 }

@@ -1,0 +1,104 @@
+{
+ "id": "why-do-advanced-ai-models-keep-crashing-under-peak-user-demand-",
+ "created": "2026-11-13T16:37:08+00:00",
+ "pct": 2,
+ "v": 3,
+ "format": "short",
+ "q": "Why do advanced AI models keep crashing under peak user demand?",
+ "series": "Curious Penguin",
+ "brew": {
+  "type": "brew",
+  "at": "2026-11-13T16:25:11.457Z",
+  "id": "why-do-advanced-ai-models-keep-crashing-under-peak-user-demand-",
+  "q": "Why do advanced AI models keep crashing under peak user demand?",
+  "series": "Curious Penguin",
+  "aud": "tech & AI",
+  "format": {
+   "long": false,
+   "minutes": 1,
+   "shorts": 0
+  },
+  "angle": "",
+  "notes": [],
+  "refs": [
+   "https://status.claude.com/incidents/nn11wk485zfn",
+   "https://status.claude.com/history"
+  ],
+  "penguin_role": "protagonist",
+  "voice_style": "C",
+  "script": {
+   "titles": [
+    "Why Your AI Chatbot Suddenly Stops Thinking",
+    "The Morning Rush That Breaks AI",
+    "When Claude.ai, Claude Code and the API All Tripped at Once"
+   ],
+   "beats": [
+    {
+     "vo": "Your favorite AI chatbot just stopped thinking. Mid-sentence.",
+     "visual": "Claymation miniature world. The penguin sits at a tiny desk in a clay apartment, typing on a little laptop. The chatbot's reply freezes halfway, the cursor blinking. The penguin leans in and tilts its head."
+    },
+    {
+     "vo": "Here's what's behind the chat box. Not one brain. Warehouses of chips, wired together, running the same model.",
+     "visual": "The penguin climbs into the laptop screen and drops into a vast clay data center. Endless rows of glowing server racks, cables like licorice ropes. The penguin looks tiny between them."
+    },
+    {
+     "vo": "Every question you type gets split across many of those chips. They pass numbers back and forth, fast, in perfect step.",
+     "visual": "The penguin's question appears as a clay paper airplane. It splits into dozens of tiny planes that zip between racks, handed off in sync like a relay team of little clay robots."
+    },
+    {
+     "vo": "Now picture the morning rush. Millions of people hit send at once.",
+     "visual": "Wide shot. Thousands of paper airplanes pour in through a clay doorway like a blizzard. The penguin gets swept off its feet and surfs on top of the crowd of planes."
+    },
+    {
+     "vo": "The system tries to spread the load. Spin up more machines. Shuffle traffic between them.",
+     "visual": "Clay robots scramble to switch on extra racks, which light up one by one. A conveyor belt sorts the planes into lanes. The penguin hops between lanes, trying to keep up."
+    },
+    {
+     "vo": "But these clusters are tightly coupled. One slow link, one bad update, and the whole line waits.",
+     "visual": "One clay robot fumbles a plane. Behind it, every robot freezes in a chain reaction, planes piling up like a traffic jam. The penguin stands at the front of the pile, arms out, unimpressed."
+    },
+    {
+     "vo": "Twist: it often isn't the chips. Many outages trace back to the plumbing around them. Routing, settings, the software deciding who goes where.",
+     "visual": "Camera pulls back. The racks are fine and humming. The penguin follows a pipe to a cramped clay control room, where a giant switchboard of tangled cables sparks and a single lever is stuck halfway."
+    },
+    {
+     "vo": "Claude.ai, Claude Code and the developer API can share a lot of that plumbing. So during one incident, all three threw errors at once.",
+     "visual": "Three clay doors labeled with simple icons (a chat bubble, a terminal, a plug) all connect to the same sparking switchboard. Red lights blink above all three doors at the same moment. The penguin looks from door to door."
+    },
+    {
+     "vo": "So engineers reroute, roll back, restart. The error rate drops. The status page turns green.",
+     "visual": "The penguin pulls the stuck lever with both flippers. Cables untangle, sparks stop, and a clay status board flips from red to green tile by tile. Planes start flowing again."
+    },
+    {
+     "vo": "And your chatbot finishes its sentence. Like nothing happened.",
+     "visual": "Back at the tiny apartment desk. The penguin climbs out of the laptop, sits down, and the frozen reply completes. The penguin stares at the camera, blinks once, and sips a tiny clay cup of tea."
+    }
+   ],
+   "vo": "Your favorite AI chatbot just stopped thinking. Mid-sentence. Here's what's behind the chat box. Not one brain. Warehouses of chips, wired together, running the same model. Every question you type gets split across many of those chips. They pass numbers back and forth, fast, in perfect step. Now picture the morning rush. Millions of people hit send at once. The system tries to spread the load. Spin up more machines. Shuffle traffic between them. But these clusters are tightly coupled. One slow link, one bad update, and the whole line waits. Twist: it often isn't the chips. Many outages trace back to the plumbing around them. Routing, settings, the software deciding who goes where. Claude.ai, Claude Code and the developer API can share a lot of that plumbing. So during one incident, all three threw errors at once. So engineers reroute, roll back, restart. The error rate drops. The status page turns green. And your chatbot finishes its sentence. Like nothing happened.",
+   "verify": [
+    "Claude.ai, Claude Code and the Claude API were all affected by elevated errors during the same incident (confirm on Anthropic's status page for the specific date)",
+    "Claude.ai, Claude Code and the API share underlying infrastructure (phrased as 'can share'; confirm how much is publicly documented)",
+    "Many large-scale cloud and AI outages trace back to configuration, routing or deployment issues rather than hardware failures (general industry pattern; avoid implying this was the specific cause of the Claude incident unless a postmortem says so)",
+    "Large language model inference is split across multiple accelerator chips that communicate during computation (true for large models; simplified for the Short)"
+   ]
+  }
+ },
+ "brew_at": "2026-11-13T16:25:11.457Z",
+ "error": null,
+ "fails": 0,
+ "preview": null,
+ "final": null,
+ "shorts": null,
+ "thumb": null,
+ "meta": null,
+ "stage": "queued",
+ "step": "Waiting for a render slot",
+ "cost": 0,
+ "steps": [
+  {
+   "stage": "queued",
+   "at": "2026-11-13T16:37:08+00:00"
+  }
+ ],
+ "updated": "2026-11-13T16:37:08+00:00"
+}

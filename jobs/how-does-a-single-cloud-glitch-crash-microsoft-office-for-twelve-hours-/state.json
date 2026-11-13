@@ -1,0 +1,263 @@
+{
+ "id": "how-does-a-single-cloud-glitch-crash-microsoft-office-for-twelve-hours-",
+ "created": "2026-11-13T16:37:02+00:00",
+ "pct": 90,
+ "v": 3,
+ "format": "short",
+ "q": "How does a single cloud glitch crash Microsoft Office for twelve hours?",
+ "series": "Curious Penguin",
+ "brew": {
+  "type": "brew",
+  "at": "2026-11-13T16:23:21.532Z",
+  "id": "how-does-a-single-cloud-glitch-crash-microsoft-office-for-twelve-hours-",
+  "q": "How does a single cloud glitch crash Microsoft Office for twelve hours?",
+  "series": "Curious Penguin",
+  "aud": "tech & AI",
+  "format": {
+   "long": false,
+   "minutes": 1,
+   "shorts": 0
+  },
+  "angle": "",
+  "notes": [],
+  "refs": [
+   "https://twitter.com/MSFT365Status/status/2121079061774491735",
+   "https://www.cnn.com/2026/11/12/business/live-news/microsoft-global-outage-intl-hnk"
+  ],
+  "penguin_role": "protagonist",
+  "voice_style": "B",
+  "script": {
+   "titles": [
+    "How One Cloud Glitch Froze Office for 12 Hours",
+    "Why Outlook Stayed Broken All Day",
+    "The Day Everyone's Email Lived in One Building"
+   ],
+   "beats": [
+    {
+     "vo": "Half the corporate world stopped working today.",
+     "visual": "Miniature claymation city of tiny office towers. Every window glows, then one by one the lights flicker to a frozen blue loading circle. Our penguin, in a tiny tie, sits at a clay desk staring at a spinning wheel."
+    },
+    {
+     "vo": "You open Outlook. It spins. Your coworker's spins too.",
+     "visual": "Close on the penguin's monitor: endless spinner. It waddles to the next cubicle where a clay coworker's screen spins identically. Down the row, every screen spins in perfect sync like synchronized swimmers."
+    },
+    {
+     "vo": "That's because your email isn't on your computer. It lives in Microsoft's data centers.",
+     "visual": "The penguin follows a glowing envelope as it zips out of the monitor, through a window, along a string across the sky, into a giant humming warehouse full of blinking server racks."
+    },
+    {
+     "vo": "So does your boss's. And their client's. Millions of offices, one shared plumbing system.",
+     "visual": "Pull back: thousands of strings from every tiny city converge into the same warehouse like a spiderweb. The penguin stands at the center, dwarfed, holding its little envelope."
+    },
+    {
+     "vo": "Outages like this often start small. One bad change, one overloaded piece of the system.",
+     "visual": "Inside the warehouse, a single clay gear wobbles and jams with a tiny squeak. The penguin tilts its head at it."
+    },
+    {
+     "vo": "But everything is connected, so one stuck piece backs up the pipes behind it.",
+     "visual": "Transparent clay pipes behind the gear fill with piled up envelopes, bulging and stretching. Pressure gauges climb into the red."
+    },
+    {
+     "vo": "Engineers find the problem. They roll it back. And it's still broken.",
+     "visual": "Clay engineers in hard hats twist the gear back into place. Everyone cheers. The pipes stay clogged. The penguin slowly lowers its tiny celebratory party horn."
+    },
+    {
+     "vo": "Here's the twist. Fixing it can be harder than breaking it. Every server, every app, every frustrated person hits refresh at once.",
+     "visual": "Smash cut back to the city: millions of tiny clay fingers jab refresh buttons simultaneously. A tidal wave of envelopes rushes toward the warehouse. The penguin braces against the door."
+    },
+    {
+     "vo": "That rush can knock the system right back over. So the fix crawls out slowly, region by region.",
+     "visual": "The wave slams the warehouse, lights dip. Then engineers open floodgates one at a time on a giant map. The penguin carefully lets envelopes through a tiny turnstile, one region lighting up at a time."
+    },
+    {
+     "vo": "Twelve hours later, some inboxes still sputter.",
+     "visual": "Night falls over the clay city. Most windows glow normally, but a few still show spinners. The penguin, exhausted, sits on a pile of envelopes as a clock tower strikes."
+    },
+    {
+     "vo": "Half the corporate world stopped working today. The other half finally had a good excuse.",
+     "visual": "Back at the penguin's office, coworkers in hammocks and playing ping pong under the frozen screens. The penguin's email finally loads with a ding. It looks at the screen, then quietly closes the laptop and grabs a paddle."
+    }
+   ],
+   "vo": "Half the corporate world stopped working today. You open Outlook. It spins. Your coworker's spins too. That's because your email isn't on your computer. It lives in Microsoft's data centers. So does your boss's. And their client's. Millions of offices, one shared plumbing system. Outages like this often start small. One bad change, one overloaded piece of the system. But everything is connected, so one stuck piece backs up the pipes behind it. Engineers find the problem. They roll it back. And it's still broken. Here's the twist. Fixing it can be harder than breaking it. Every server, every app, every frustrated person hits refresh at once. That rush can knock the system right back over. So the fix crawls out slowly, region by region. Twelve hours later, some inboxes still sputter. Half the corporate world stopped working today. The other half finally had a good excuse.",
+   "verify": [
+    "That the outage lasted more than twelve hours and was not fully resolved by then; confirm with Microsoft 365 status updates or major news coverage.",
+    "The exact root cause of this outage; the script deliberately stays general ('one bad change, one overloaded piece'), so check Microsoft's incident report before adding specifics.",
+    "Whether Microsoft rolled back a change and whether the fix was deployed gradually or region by region in this incident.",
+    "'Half the corporate world' is a stylized hook and should stay framed as hyperbole; avoid presenting it as a statistic.",
+    "That a surge of retries and reconnections can slow recovery after a fix; this is a well known pattern in large systems, but confirm Microsoft mentioned it for this incident before implying it happened here."
+   ]
+  }
+ },
+ "brew_at": "2026-11-13T16:23:21.532Z",
+ "error": null,
+ "fails": 0,
+ "preview": {
+  "id": "1wrxaBSPDpHLMtxibvKicS_BWRTeSTdOQ",
+  "view": "https://drive.google.com/file/d/1wrxaBSPDpHLMtxibvKicS_BWRTeSTdOQ/view",
+  "download": "https://drive.google.com/uc?id=1wrxaBSPDpHLMtxibvKicS_BWRTeSTdOQ&export=download",
+  "size_mb": 83.4,
+  "duration": 59.3,
+  "stills": [],
+  "poster": "1BZCFaZJMIgw2qd4P5kOuEB-bxqePR7rQ"
+ },
+ "final": {
+  "id": "1wrxaBSPDpHLMtxibvKicS_BWRTeSTdOQ",
+  "view": "https://drive.google.com/file/d/1wrxaBSPDpHLMtxibvKicS_BWRTeSTdOQ/view",
+  "download": "https://drive.google.com/uc?id=1wrxaBSPDpHLMtxibvKicS_BWRTeSTdOQ&export=download",
+  "size_mb": 83.4,
+  "duration": 59.3,
+  "stills": [],
+  "poster": "1BZCFaZJMIgw2qd4P5kOuEB-bxqePR7rQ"
+ },
+ "shorts": null,
+ "thumb": null,
+ "meta": {
+  "title": "Why One Tiny Glitch Broke Microsoft Office",
+  "alt_titles": [
+   "The Real Reason Cloud Outages Take Hours to Fix",
+   "How a Single Snag Freezes Global Inboxes"
+  ],
+  "description": "When one digital pipe clogs, millions of inboxes freeze—and fixing it is actually the hard part.\nHere is why rolling back a broken cloud update can take half a day.\n\n#Shorts #TechExplained #CloudComputing #Animation",
+  "tags": [
+   "cloud computing",
+   "microsoft 365 outage",
+   "tech explained",
+   "felt and spool studios",
+   "curious penguin",
+   "how the cloud works",
+   "outlook down",
+   "server crash",
+   "tech infrastructure",
+   "stop motion animation",
+   "software engineering",
+   "woolen wire cloud"
+  ],
+  "pinned_comment": "Be honest: did our penguin's scotch-tape fix save the day, or were you secretly hoping the servers stayed down?",
+  "instagram_caption": "Pull one loose yarn, and the whole office stops spinning. Turns out rebooting millions of inboxes at once is a lot trickier than freezing them.\n\n#TechExplained #CloudComputing #OfficeHumor #AnimationStudio #StopMotion"
+ },
+ "stage": "final_ready",
+ "step": "Short ready (Woolen Wire Cloud, penguin as protagonist). Watch it and approve or send notes",
+ "cost": 12.693,
+ "steps": [
+  {
+   "stage": "queued",
+   "at": "2026-11-13T16:37:02+00:00"
+  },
+  {
+   "stage": "voicing",
+   "at": "2026-11-13T16:37:56+00:00"
+  },
+  {
+   "stage": "directing",
+   "at": "2026-11-13T16:38:46+00:00"
+  },
+  {
+   "stage": "art",
+   "at": "2026-11-13T16:41:02+00:00"
+  },
+  {
+   "stage": "motion",
+   "at": "2026-11-13T17:27:14+00:00"
+  },
+  {
+   "stage": "final_render",
+   "at": "2026-11-13T17:30:12+00:00"
+  },
+  {
+   "stage": "metadata",
+   "at": "2026-11-13T17:41:05+00:00"
+  },
+  {
+   "stage": "final_ready",
+   "at": "2026-11-13T17:42:49+00:00"
+  }
+ ],
+ "updated": "2026-11-13T17:42:49+00:00",
+ "voice_style": "B",
+ "voice_fit": 1.113,
+ "duration": 58.5,
+ "universe": "Woolen Wire Cloud · Felt & Spool Studios",
+ "penguin_role": "protagonist",
+ "cameos": [
+  {
+   "shot": "k01",
+   "bit": "Sitting at the desk, looking deadpan at the monitor."
+  },
+  {
+   "shot": "k02",
+   "bit": "Sitting very still, staring at the spinning yarn wheel."
+  },
+  {
+   "shot": "k03",
+   "bit": "Visible in the lower edge of the frame, looking up at the cable."
+  },
+  {
+   "shot": "k05",
+   "bit": "Standing in profile, routing white lines into the central hub."
+  },
+  {
+   "shot": "k06",
+   "bit": "Visible on the left, observing the smooth flow."
+  },
+  {
+   "shot": "k09",
+   "bit": "Standing tiny in the corner, holding its flippers up in dismay."
+  },
+  {
+   "shot": "k10",
+   "bit": "Wearing a hard hat, grabbing the wooden lever with both flippers."
+  },
+  {
+   "shot": "k11",
+   "bit": "Holding the broken lever handle, looking deadpan at the camera."
+  },
+  {
+   "shot": "k12",
+   "bit": "Visible at the bottom, looking up in horror."
+  },
+  {
+   "shot": "k13",
+   "bit": "Getting completely buried under the falling orange yarn."
+  },
+  {
+   "shot": "k14",
+   "bit": "Buried up to its neck in orange yarn, looking deadpan."
+  },
+  {
+   "shot": "k15",
+   "bit": "Meticulously winding a single cyan yarn thread onto a spool."
+  },
+  {
+   "shot": "k16",
+   "bit": "Sitting at the desk, looking exhausted."
+  },
+  {
+   "shot": "k17",
+   "bit": "Jumping out of the chair, flippers raised in celebration."
+  },
+  {
+   "shot": "k18",
+   "bit": "Face-planted into the torn felt wall, legs kicking."
+  }
+ ],
+ "qc": {
+  "overall": 5.0,
+  "scores": {
+   "visuals": 6,
+   "transitions": 7,
+   "story": 8,
+   "logic": 4,
+   "sync": 9,
+   "accuracy": 5,
+   "premium": 3
+  },
+  "verdict": "While the felt aesthetic and educational metaphor are strong, the execution is marred by severe AI artifacts and ignored prompts. The final shots suffer from broken physics, missing actions, and heavy morphing that ruin the premium feel.",
+  "weak": [
+   "s04: The penguin is rendered in 3D felt instead of the requested linework style, and the string it holds melts into the background.",
+   "s08: The broken lever piece morphs and melts in the penguin's flipper after snapping off.",
+   "s09: The camera remains static instead of tilting up to the bulging pipe as requested.",
+   "s11: The penguin remains static in the yarn pile and never frees an arm to start winding.",
+   "s12: The blue yarn passes straight through the spool instead of wrapping around it, breaking physical logic."
+  ]
+ }
+}

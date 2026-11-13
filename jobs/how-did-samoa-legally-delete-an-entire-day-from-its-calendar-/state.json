@@ -1,0 +1,105 @@
+{
+ "id": "how-did-samoa-legally-delete-an-entire-day-from-its-calendar-",
+ "created": "2026-11-13T16:37:11+00:00",
+ "pct": 2,
+ "v": 3,
+ "format": "short",
+ "q": "How did Samoa legally delete an entire day from its calendar?",
+ "series": "Curious Penguin",
+ "brew": {
+  "type": "brew",
+  "at": "2026-11-13T16:26:05.062Z",
+  "id": "how-did-samoa-legally-delete-an-entire-day-from-its-calendar-",
+  "q": "How did Samoa legally delete an entire day from its calendar?",
+  "series": "Curious Penguin",
+  "aud": "general curious",
+  "format": {
+   "long": false,
+   "minutes": 1,
+   "shorts": 0
+  },
+  "angle": "",
+  "notes": [],
+  "refs": [
+   "https://www.theguardian.com/us-news/2026/nov/12/senate-investigation-rfk-jr-measles-samoa"
+  ],
+  "penguin_role": "npc",
+  "voice_style": "C",
+  "script": {
+   "titles": [
+    "The Country That Skipped Friday",
+    "Samoa Deleted a Day (Legally)",
+    "Where Did December 30, 2011 Go?"
+   ],
+   "beats": [
+    {
+     "vo": "An entire country went to sleep Thursday and woke up Saturday.",
+     "visual": "Paper diorama world. A cut-paper tropical island at night, folded palm trees swaying on a cardboard sea. Tiny paper houses switch off their lights one by one. In the corner a calendar peels from Thursday straight to Saturday, and the Friday page flutters off into the dark like a moth."
+    },
+    {
+     "vo": "This is Samoa, December 2011. Friday the 30th never happened here.",
+     "visual": "Camera pushes into a paper village square. A wall calendar shows a neat row of days with a clean rectangular hole where the 30th should be. The penguin, as an NPC paper shopkeeper behind a fruit stall, glances up at the hole, shrugs, and keeps stacking paper mangoes."
+    },
+    {
+     "vo": "No storm. No glitch. It was a law, passed on purpose.",
+     "visual": "A paper parliament building unfolds like a pop-up book. Tiny paper hands rise in a vote. A rubber stamp slams down on a document and the word FRIDAY gets snipped out by a giant pair of craft scissors."
+    },
+    {
+     "vo": "Samoa sat just east of the International Date Line, the invisible seam where each new day begins.",
+     "visual": "Zoom out to a paper map of the Pacific. A glowing stitched thread zigzags down the ocean like a seam on fabric. Samoa sits just to the right of it, a little paper island with a tiny flag."
+    },
+    {
+     "vo": "Its biggest trading partners, Australia and New Zealand, sat just across it, almost a full day ahead.",
+     "visual": "On the far side of the thread, paper Sydney and Auckland skylines glow in morning sunlight while Samoa is still in paper moonlight. A cardboard sun visibly sits on their side only."
+    },
+    {
+     "vo": "So your Friday was their Saturday. Your Sunday was their Monday. Two working days lost, every week.",
+     "visual": "Split screen. On Samoa's side, a paper office worker answers a phone on Friday. On Australia's side, the phone rings on a beach towel next to someone napping. Then reversed: Australia's office buzzes while Samoa's paper church bells ring on Sunday. The penguin NPC walks past in the background carrying a surfboard, unbothered."
+    },
+    {
+     "vo": "The fix was simple. At midnight on Thursday the 29th, Samoa moved to the other side of the line and landed on Saturday the 31st.",
+     "visual": "A paper clock tower strikes midnight. The stitched date line thread is pulled loose and re-sewn on the other side of the island by a giant needle. The whole island tilts and lands softly in daylight. Calendars everywhere snap from 29 to 31."
+    },
+    {
+     "vo": "Here's the twist. Samoa had already done this once, backwards.",
+     "visual": "The paper scene ages, turning sepia. Paper edges curl. A rewind effect sweeps the island back across the thread to the east side."
+    },
+    {
+     "vo": "In 1892, to match American traders, it lived through the same day twice. Two Fourth of Julys.",
+     "visual": "Sepia paper sailing ships dock at the island. Paper fireworks pop over the harbor, then the same fireworks pop again in an identical loop. The penguin NPC, in an old-timey paper dockworker cap, watches the second round of fireworks with a blank stare."
+    },
+    {
+     "vo": "So after 119 years, the country finally returned the extra day. Nobody noticed. Everyone was asleep.",
+     "visual": "Back to full color, the night island from the opening. The missing Friday page flutters down from the sky and lands on the penguin, now asleep in its paper hammock. It doesn't wake up. Lights stay off. Loop back to the first shot."
+    }
+   ],
+   "vo": "An entire country went to sleep Thursday and woke up Saturday. This is Samoa, December 2011. Friday the 30th never happened here. No storm. No glitch. It was a law, passed on purpose. Samoa sat just east of the International Date Line, the invisible seam where each new day begins. Its biggest trading partners, Australia and New Zealand, sat just across it, almost a full day ahead. So your Friday was their Saturday. Your Sunday was their Monday. Two working days lost, every week. The fix was simple. At midnight on Thursday the 29th, Samoa moved to the other side of the line and landed on Saturday the 31st. Here's the twist. Samoa had already done this once, backwards. In 1892, to match American traders, it lived through the same day twice. Two Fourth of Julys. So after 119 years, the country finally returned the extra day. Nobody noticed. Everyone was asleep.",
+   "verify": [
+    "Samoa skipped Friday, December 30, 2011, going from the end of Thursday December 29 directly to Saturday December 31 (local time).",
+    "The change was made by law passed in Samoa in 2011, to align the work week with Australia and New Zealand.",
+    "Before the change, Samoa's Friday overlapped with the weekend in Australia and New Zealand, and its Sunday overlapped with their Monday, leaving only a few shared business days per week.",
+    "In 1892 Samoa switched to the other side of the date line to align with American trading interests, repeating a day; widely reported as July 4 being lived twice. Confirm the exact date.",
+    "119 years between 1892 and 2011 is simple arithmetic, but confirm the 1892 year in sources.",
+    "Confirm wording that Samoa 'moved to the other side of the line' (technically it changed its time zone and the date line's position was adjusted to accommodate it)."
+   ]
+  }
+ },
+ "brew_at": "2026-11-13T16:26:05.062Z",
+ "error": null,
+ "fails": 0,
+ "preview": null,
+ "final": null,
+ "shorts": null,
+ "thumb": null,
+ "meta": null,
+ "stage": "queued",
+ "step": "Waiting for a render slot",
+ "cost": 0,
+ "steps": [
+  {
+   "stage": "queued",
+   "at": "2026-11-13T16:37:11+00:00"
+  }
+ ],
+ "updated": "2026-11-13T16:37:11+00:00"
+}

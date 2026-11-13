@@ -1,0 +1,338 @@
+{
+ "format": "short",
+ "universe": {
+  "name": "Woolen Wire Cloud",
+  "studio": "Felt & Spool Studios",
+  "why": "A physical, fragile, easily tangled medium (yarn and felt) perfectly represents the invisible fragility of cloud infrastructure and the frustration of a network snag.",
+  "pacing": "Orderly and rhythmic, exploding into a chaotic mess, then painstakingly slow untangling.",
+  "signature_shot": "The penguin buried up to its neck in a massive, tangled mountain of bright orange warning yarn.",
+  "medium_break": "The penguin trips and crashes into the felt office wall, ripping the fabric to expose the raw white cotton stuffing inside.",
+  "look_bible": "Tactile felt and yarn miniature diorama. Everything is made of stitched fabric, wool, and soft felt. Glowing data elements are bright neon-colored yarn. Soft, diffused studio lighting highlighting fuzzy textures and stitches. Macro lens feel with shallow depth of field. Stop-motion style aesthetic. Color palette: corporate navy, felt grey, bright neon cyan (data), and warning orange yarn.",
+  "penguin_render": "Rendered natively as a stitched felt and wool doll. Small round egg-shaped Adelie-type penguin, bottom-heavy. Black head and back, white belly. Big round white eye-rings. Small dark beak with an orange tip. Slightly oversized bright orange feet. Three thin stubborn feathers sticking up from the top of its head.",
+  "palette": {
+   "paper": "#1B2A47",
+   "ink": "#FFFFFF",
+   "accent": "#00FFFF",
+   "accent2": "#FF8C00"
+  },
+  "font": "mono",
+  "film": "clean",
+  "grain": 0.1,
+  "vignette": 0.3,
+  "music": "Plucky, rhythmic pizzicato strings and toy percussion that gradually devolves into a discordant, tangled rhythm before returning to a slow, careful pluck.",
+  "letterbox": false
+ },
+ "penguin": {
+  "role": "protagonist",
+  "arc": "Tries to fix a small snag in the yarn-data pipeline, accidentally unravels the whole system, and desperately tries to tape it back together."
+ },
+ "keyframes": {
+  "k01": {
+   "id": "k01",
+   "seq": 0,
+   "prompt": "Tactile felt and yarn miniature diorama. Wide shot of a corporate office made entirely of stitched felt. A stitched felt penguin sits at a felt desk, staring blankly at a felt computer monitor displaying a spinning wheel made of cyan yarn. Soft, diffused studio lighting highlighting fuzzy textures. Corporate navy and felt grey palette.",
+   "penguin": "Sitting at the desk, looking deadpan at the monitor.",
+   "prev": null
+  },
+  "k02": {
+   "id": "k02",
+   "seq": 0,
+   "prompt": "Tactile felt and yarn miniature diorama. Closer shot of the felt desk and monitor. The spinning wheel on the screen is a physical loop of neon cyan yarn going round and round. The stitched felt penguin sits frozen in front of it. Soft, diffused studio lighting.",
+   "penguin": "Sitting very still, staring at the spinning yarn wheel.",
+   "prev": "k01"
+  },
+  "k03": {
+   "id": "k03",
+   "seq": 0,
+   "prompt": "Tactile felt and yarn miniature diorama. Camera tilted up from the monitor to the felt wall behind the desk. A thick cable made of bundled neon cyan yarn runs out from the back of the computer and routes up the wall toward a felt window. Soft macro lighting.",
+   "penguin": "Visible in the lower edge of the frame, looking up at the cable.",
+   "prev": "k02"
+  },
+  "k04": {
+   "id": "k04",
+   "seq": 0,
+   "prompt": "Tactile felt and yarn miniature diorama. Outside the felt window. The thick cyan yarn cable runs up into a massive, looming 'Cloud' made of fluffy white cotton batting suspended by strings above felt buildings. Soft, diffused studio lighting.",
+   "penguin": null,
+   "prev": "k03"
+  },
+  "k05": {
+   "id": "k05",
+   "seq": 1,
+   "prompt": "Technical blueprint cutaway, cyan paper background with crisp white linework. Flat architectural lighting, precise technical aesthetic, grid paper texture. A complex network diagram of pipes. A linework penguin stands next to a massive central junction where hundreds of white lines converge.",
+   "penguin": "Standing in profile, routing white lines into the central hub.",
+   "prev": null
+  },
+  "k06": {
+   "id": "k06",
+   "seq": 1,
+   "prompt": "Technical blueprint cutaway, cyan paper background with crisp white linework. Flat architectural lighting, grid paper texture. Closer view of the central junction. The white lines pulse smoothly as they pass through tiny technical valves.",
+   "penguin": "Visible on the left, observing the smooth flow.",
+   "prev": "k05"
+  },
+  "k07": {
+   "id": "k07",
+   "seq": 1,
+   "prompt": "Technical blueprint cutaway, cyan paper background with crisp white linework. Flat architectural lighting, grid paper texture. Tight close-up on one single valve in the central hub. A bright red warning circle has appeared around it.",
+   "penguin": null,
+   "prev": "k06"
+  },
+  "k08": {
+   "id": "k08",
+   "seq": 1,
+   "prompt": "Technical blueprint cutaway, cyan paper background with crisp white linework. Flat architectural lighting. Slightly pulled back from the valve. Thick red color is now flooding backwards through the white lines, filling the pipes in a reverse cascade.",
+   "penguin": null,
+   "prev": "k07"
+  },
+  "k09": {
+   "id": "k09",
+   "seq": 1,
+   "prompt": "Technical blueprint cutaway, cyan paper background with crisp white linework. Flat architectural lighting. Wider view of the grid. The entire network of lines is now completely filled with red warning color, backed up and stalled.",
+   "penguin": "Standing tiny in the corner, holding its flippers up in dismay.",
+   "prev": "k08"
+  },
+  "k10": {
+   "id": "k10",
+   "seq": 2,
+   "prompt": "Tactile felt and yarn miniature diorama. Inside a felt data center. A massive clear plastic pipe is bulging with tangled bright orange warning yarn. A stitched felt penguin wearing a tiny yellow felt hard hat stands next to it, grabbing a large wooden lever.",
+   "penguin": "Wearing a hard hat, grabbing the wooden lever with both flippers.",
+   "prev": null
+  },
+  "k11": {
+   "id": "k11",
+   "seq": 2,
+   "prompt": "Tactile felt and yarn miniature diorama. Closer on the penguin and the lever. The penguin has pulled the lever down, but the wooden handle has snapped completely off and is held loosely in its flipper.",
+   "penguin": "Holding the broken lever handle, looking deadpan at the camera.",
+   "prev": "k10"
+  },
+  "k12": {
+   "id": "k12",
+   "seq": 2,
+   "prompt": "Tactile felt and yarn miniature diorama. Camera tilted up from the penguin to the clear plastic main pipe. The pipe is bulging dangerously, the seams of the plastic stretching as bright orange yarn presses against it.",
+   "penguin": "Visible at the bottom, looking up in horror.",
+   "prev": "k11"
+  },
+  "k13": {
+   "id": "k13",
+   "seq": 2,
+   "prompt": "Tactile felt and yarn miniature diorama. The plastic pipe has burst open. A massive, chaotic avalanche of tangled bright orange warning yarn is spilling downward, completely burying the area.",
+   "penguin": "Getting completely buried under the falling orange yarn.",
+   "prev": "k12"
+  },
+  "k14": {
+   "id": "k14",
+   "seq": 3,
+   "prompt": "Tactile felt and yarn miniature diorama. Down on the felt floor. The stitched felt penguin is buried up to its neck in a massive mountain of tangled bright orange warning yarn. Soft, diffused lighting highlighting the fuzzy textures.",
+   "penguin": "Buried up to its neck in orange yarn, looking deadpan.",
+   "prev": null
+  },
+  "k15": {
+   "id": "k15",
+   "seq": 3,
+   "prompt": "Tactile felt and yarn miniature diorama. Slightly wider angle. The penguin has freed one flipper and is meticulously pulling a single, thin thread of neon cyan yarn from the giant orange pile, slowly winding it onto a small wooden spool.",
+   "penguin": "Meticulously winding a single cyan yarn thread onto a spool.",
+   "prev": "k14"
+  },
+  "k16": {
+   "id": "k16",
+   "seq": 4,
+   "prompt": "Tactile felt and yarn miniature diorama. Back at the felt office desk. The stitched felt monitor shows an incomplete envelope made of stitched yarn, sputtering and glitching. The stitched felt penguin sits looking exhausted.",
+   "penguin": "Sitting at the desk, looking exhausted.",
+   "prev": null
+  },
+  "k17": {
+   "id": "k17",
+   "seq": 4,
+   "prompt": "Tactile felt and yarn miniature diorama. The monitor envelope fully stitches itself complete. The penguin jumps up from the chair in celebration, throwing its flippers in the air.",
+   "penguin": "Jumping out of the chair, flippers raised in celebration.",
+   "prev": "k16"
+  },
+  "k18": {
+   "id": "k18",
+   "seq": 4,
+   "prompt": "Tactile felt and yarn miniature diorama. The penguin has tripped and crashed headfirst into the felt wall. The felt fabric of the wall is ripped open, exposing raw white cotton stuffing spilling out. The penguin is stuck in the hole.",
+   "penguin": "Face-planted into the torn felt wall, legs kicking.",
+   "prev": "k17"
+  }
+ },
+ "shots": [
+  {
+   "id": "s01",
+   "seq": 0,
+   "from": "k01",
+   "to": "k02",
+   "cue": "Half the corporate world stopped",
+   "motion": "Push in modestly on the felt desk as the penguin sits staring at the stitched monitor.",
+   "overlay": null,
+   "transition": "cut",
+   "sfx": "soft felt shuffling and muffled office murmurs",
+   "serious": false
+  },
+  {
+   "id": "s02",
+   "seq": 0,
+   "from": "k02",
+   "to": "k03",
+   "cue": "You open Outlook. It spins.",
+   "motion": "Tilt up modestly from the spinning yarn wheel on the monitor to the wall behind it.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "mechanical winding sound",
+   "serious": false
+  },
+  {
+   "id": "s03",
+   "seq": 0,
+   "from": "k03",
+   "to": "k04",
+   "cue": "That's because your email isn't",
+   "motion": "Follow the thick cyan yarn cable out the felt window toward the giant fluffy cotton cloud.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "wind blowing softly",
+   "serious": false
+  },
+  {
+   "id": "s04",
+   "seq": 1,
+   "from": "k05",
+   "to": "k06",
+   "cue": "So does your boss's. And",
+   "motion": "Push in modestly on the central junction as the linework penguin routes white pipes.",
+   "overlay": null,
+   "transition": "match",
+   "sfx": "pencil scratching and technical hum",
+   "serious": false
+  },
+  {
+   "id": "s05",
+   "seq": 1,
+   "from": "k06",
+   "to": "k07",
+   "cue": "Millions of offices, one shared",
+   "motion": "Push in closer on a single valve as a red warning circle blinks around it.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "electronic warning beep",
+   "serious": false
+  },
+  {
+   "id": "s06",
+   "seq": 1,
+   "from": "k07",
+   "to": "k08",
+   "cue": "Outages like this often start",
+   "motion": "Pull back slightly as thick red color floods backwards through the white pipes.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "fluid backing up in a pipe",
+   "serious": false
+  },
+  {
+   "id": "s07",
+   "seq": 1,
+   "from": "k08",
+   "to": "k09",
+   "cue": "But everything is connected, so",
+   "motion": "Drift back to reveal the entire grid backing up and turning red.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "low rumbling hum",
+   "serious": false
+  },
+  {
+   "id": "s08",
+   "seq": 2,
+   "from": "k10",
+   "to": "k11",
+   "cue": "Engineers find the problem. They",
+   "motion": "Push in modestly as the penguin pulls the lever, causing it to snap off.",
+   "overlay": null,
+   "transition": "match",
+   "sfx": "wooden crack and soft thud",
+   "serious": false
+  },
+  {
+   "id": "s09",
+   "seq": 2,
+   "from": "k11",
+   "to": "k12",
+   "cue": "Here's the twist. Fixing it",
+   "motion": "Tilt up modestly to the dangerously bulging orange pipe.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "creaking plastic under pressure",
+   "serious": false
+  },
+  {
+   "id": "s10",
+   "seq": 2,
+   "from": "k12",
+   "to": "k13",
+   "cue": "Every server, every app, every",
+   "motion": "Pull back slightly as the pipe bursts, spilling a massive avalanche of tangled orange yarn.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "loud pop followed by rustling yarn avalanche",
+   "serious": false
+  },
+  {
+   "id": "s11",
+   "seq": 3,
+   "from": "k14",
+   "to": "k15",
+   "cue": "That rush can knock the",
+   "motion": "Push in slowly on the penguin buried in the yarn, then it frees an arm to start winding a single thread.",
+   "overlay": null,
+   "transition": "cut",
+   "sfx": "soft rustling of wool",
+   "serious": false
+  },
+  {
+   "id": "s12",
+   "seq": 3,
+   "from": "k15",
+   "to": null,
+   "cue": "So the fix crawls out",
+   "motion": "Drift right modestly as the penguin slowly winds the cyan yarn onto the wooden spool.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "slow winding sound",
+   "serious": false
+  },
+  {
+   "id": "s13",
+   "seq": 4,
+   "from": "k16",
+   "to": "k17",
+   "cue": "Twelve hours later, some inboxes",
+   "motion": "Push in modestly as the yarn envelope completes on the monitor and the penguin jumps up.",
+   "overlay": {
+    "type": "counter",
+    "value": 12,
+    "suffix": " hours",
+    "text": "later",
+    "pos": "top"
+   },
+   "transition": "cut",
+   "sfx": "digital chime played on a toy glockenspiel",
+   "serious": false
+  },
+  {
+   "id": "s14",
+   "seq": 4,
+   "from": "k17",
+   "to": "k18",
+   "cue": "Half the corporate world stopped",
+   "motion": "Pull back and track right as the penguin tries to fly, trips, and crashes into the felt wall, ripping it open.",
+   "overlay": null,
+   "transition": "chain",
+   "sfx": "fabric tearing and a soft thud",
+   "serious": false
+  }
+ ],
+ "cover": {
+  "prompt": "Tactile felt and yarn miniature diorama. The stitched felt penguin buried up to its neck in a massive, chaotic avalanche of tangled bright orange warning yarn. Soft, diffused lighting highlighting the fuzzy textures.",
+  "text": "THE CLOUD CRASHED"
+ },
+ "n_beats": 11
+}
