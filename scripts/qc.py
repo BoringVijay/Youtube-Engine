@@ -37,7 +37,12 @@ def _ask(prompt, media, job):
     budget.log(job, "text_call", 2, gai.LAST.get("backend", "vertex"))
     text = "".join(p.get("text", "") for p in out["candidates"][0]["content"]["parts"] if not p.get("thought")).strip()
     text = re.sub(r"^```(json)?|```$", "", text).strip()
-    return json.loads(text)
+    r = json.loads(text)
+    if isinstance(r, list):  # the reviewer sometimes wraps its verdict in a list; a list used to crash and wave the shot through
+        r = next((x for x in r if isinstance(x, dict)), {})
+    if not r:
+        raise ValueError("empty review")
+    return r
 
 
 def _small_video(src, width=540, crf=30):
