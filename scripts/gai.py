@@ -114,7 +114,8 @@ CANDIDATES = {
              "gemini-3-flash", "gemini-3-flash-preview", "gemini-2.5-flash"],
     "pro": ["gemini-3.8-pro", "gemini-3.7-pro", "gemini-3.5-pro", "gemini-3.1-pro", "gemini-3.1-pro-preview", "gemini-3-pro", "gemini-3-pro-preview",
             "gemini-2.5-pro", "gemini-3.8-flash", "gemini-3.5-flash", "gemini-3-flash-preview", "gemini-2.5-flash"],
-    "image": ["gemini-nano-banana-2.1", "gemini-3.1-flash-image", "gemini-3.1-flash-image-preview", "gemini-3-pro-image", "gemini-3-pro-image-preview",
+    "image": ["gemini-3-pro-image", "gemini-3-pro-image-preview",  # Nano Banana Pro first (Vijay, 2026-11-14)
+              "gemini-nano-banana-2.1", "gemini-3.1-flash-image", "gemini-3.1-flash-image-preview",
               "gemini-2.5-flash-image", "gemini-2.5-flash-image-preview"],
     "tts": ["gemini-3.1-flash-tts-preview", "gemini-3.1-flash-tts", "gemini-2.5-pro-tts", "gemini-2.5-flash-tts", "gemini-2.5-pro-preview-tts",
             "gemini-2.5-flash-preview-tts"],

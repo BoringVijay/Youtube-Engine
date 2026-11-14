@@ -1,8 +1,8 @@
 {
   "text": "google",
-  "image": "fal",
+  "image": "google",
   "image_model": "fal-ai/nano-banana-pro",
   "image_edit_model": "fal-ai/nano-banana-pro/edit",
   "video": "paused",
-  "note": "Vijay, 2026-11-14: the remaining Google credits are for Gemini text models only. Images and everything else go through fal (FAL_KEY secret). Video stays paused until a fal video model is chosen. When a new Google account with fresh credits is connected, image can go back to google for Nano Banana Pro."
+  "note": "Vijay, 2026-11-14: remaining Google credits (cap $290) pay for Nano Banana Pro images and Gemini text. No Veo: video is paused, penguin Shorts are on pause. fal (FAL_KEY, own $15 cap) is for voice, music, 3D and future video. Set image to fal to move images there when the Google credits are used up."
 }

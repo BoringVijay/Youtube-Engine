@@ -1,10 +1,10 @@
 {
-  "total_usd": 280,
+  "total_usd": 290,
   "window_ends": "2027-02-04",
   "per_video_usd": 22,
   "test_cut_usd": 5,
   "prices_usd": {
-    "image": 0.067,
+    "image": 0.134,
     "video_per_sec": 0.12,
     "tts_per_min": 0.03,
     "music_clip": 0.06,
@@ -15,7 +15,7 @@
     "fal_tts_1k_chars": 0.1,
     "fal_music_min": 0.8
   },
-  "note": "Shorts: about 10 keyframes + 55 s of Veo at 1080p. Fast about $7-8 per Short, Lite about $5. Real spend shows in Cloud Billing.",
+  "note": "Shorts: about 10 keyframes + 55 s of Veo at 1080p. Fast about $7-8 per Short, Lite about $5. Real spend shows in Cloud Billing. 2026-11-14: cap raised to $290 by Vijay; remaining Google credits for Nano Banana Pro images and Gemini text only, no Veo. Image price set to the Pro rate ($0.134).",
   "fal_total_usd": 15,
   "fal_per_video_usd": 6,
   "fal_note": "Vijay topped up $15 on fal (2026-11-14). fal spend is capped separately from the Google credits: fal_total_usd for everything on fal, fal_per_video_usd per Short."
