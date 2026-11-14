@@ -16,6 +16,7 @@ on:
 
 permissions:
   contents: write
+  actions: read
 
 concurrency:
   group: rick-render
@@ -27,6 +28,7 @@ jobs:
     outputs:
       project: ${{ steps.p.outputs.project }}
       chunks: ${{ steps.p.outputs.chunks }}
+      reuse: ${{ steps.p.outputs.reuse }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -40,10 +42,12 @@ jobs:
           [ -n "$proj" ] || { echo "no project"; exit 1; }
           n=$(python3 -c "import json;print(int(json.load(open('rick/projects/$proj/render.json')).get('chunks',16)))")
           echo "project=$proj" >> "$GITHUB_OUTPUT"
+          echo "reuse=$(python3 -c "import json;print(json.load(open('rick/projects/$proj/render.json')).get('reuse_run',''))")" >> "$GITHUB_OUTPUT"
           echo "chunks=$(python3 -c "import json;print(json.dumps(list(range($n))))")" >> "$GITHUB_OUTPUT"
 
   chunk:
     needs: plan
+    if: needs.plan.outputs.reuse == ''
     runs-on: ubuntu-latest
     timeout-minutes: 60
     strategy:
@@ -81,6 +85,7 @@ jobs:
 
   assemble:
     needs: [plan, chunk]
+    if: always() && needs.plan.result == 'success' && (needs.chunk.result == 'success' || needs.chunk.result == 'skipped')
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
@@ -92,6 +97,8 @@ jobs:
         with:
           path: parts
           merge-multiple: true
+          run-id: ${{ needs.plan.outputs.reuse || github.run_id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Stitch and mix
         env:
           PROJ: ${{ needs.plan.outputs.project }}
@@ -113,5 +120,6 @@ jobs:
           git config user.name "engine-bot"
           git config user.email "engine-bot@users.noreply.github.com"
           git add rick/projects
+          git add -f rick/projects/*/renders/*.mp4 2>/dev/null || true
           git diff --cached --quiet || git commit -m "Rick render"
           for i in 1 2 3; do git pull --rebase --autostash -q && git push -q && break; sleep 5; done
