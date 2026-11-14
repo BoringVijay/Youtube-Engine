@@ -2,15 +2,17 @@
 
 Decided by Vijay on 2026-11-14: from now on the channel makes one kind of video, Rick Shots. Flat 2D doodle characters in a sunlit, hand-painted 3D world, built in code, about 60 seconds, a true hidden-reason story or a strictly logical what-if. Everything made before this date was experimentation.
 
+**Craft rules now live in `rulebook.md` (2026-11-14, after the pilot scored 5/10). Where this file and the rulebook disagree, the rulebook wins.** This file keeps the channel identity: penguin universe, house palette, money, topics.
+
 Read with `rick/references/` (the measured style rules, prompt templates, scene format and stage) and `creative/references/rick/playbook.md` (Gemini's study of 28 reference Shorts, 9.3M median views).
 
 ## 1. The look (measured, frame by frame)
-- 1080x1920, 30 fps, 56 to 66 s. Median shot 1.17 s, about 30 view changes a minute, at most 1 hard cut. The camera always glides between setups (about 0.8 s, eased) and mostly pushes in.
-- Characters: big round off-white head about as wide as the body, dot eyes, thick brows, stick limbs, no feet. Flat cutouts that stand in real 3D light and cast real shadows, with a soft contact shadow under the feet so nobody floats.
+- 1080x1920, 30 fps, 40 to 50 s (rulebook). Something changes every 1.5 to 2 s. Glide within a location; cut on every location change and into close-ups (rulebook 7).
+- Characters: head max one third of body height, original design (the pilot's round-headed cast read as Cyanide & Happiness and is being redesigned). Flat cutouts that stand in real 3D light and cast real shadows, with a soft contact shadow under the feet so nobody floats.
 - Ink outline 10 px #271925 on everything. Shadows are tinted (red-brown, blue, violet), never pure black.
 - Every surface is a hand-painted texture. The sky and distance are one painted backdrop, blurred.
-- Captions: 1 to 2 words, white heavy sans with a dark outline, centred at y 1350, changing on the word.
-- The light flips once, on the "You see..." pivot: warm day into the world's second mood.
+- Captions: see rulebook 12 (2 to 3 words, yellow key words, pop-in).
+- Light follows a colour script per act (rulebook 9).
 
 ## 2. The story (from the hits vs misses)
 1. **Physical stakes on screen.** A crash, a flood, a riot, money burning. Abstract systems stall unless they become a physical object.
@@ -40,20 +42,20 @@ There is no penguin character. The penguin lives on as a hidden universe inside 
 ## 4b. House style and creative direction (Vijay, 2026-11-14)
 The bar: it should feel like a premium drama series or top creator content, almost too good to be free. Real places, relatable people, physical stakes, one unexpected creative element, a reason for every shot. Nothing flashy, nothing that looks AI-made.
 - **Colour:** natural, colourful, realistic palettes that fit the place and era (the wheat-field style frame is the reference). Blue is a rare accent: ice blue #8FD8F5 on one small thing per video at most (a ribbon, a sign, a light). Never a blue wash or a blue grade.
-- **Captions:** the measured Rick style: heavy modern sans, 1 to 2 words, white fill with a black outline, centred at y 1350, changing on the word. Occasionally one keyword in a colour that belongs to the story (warning red, sun yellow), or black text on a light plate when the shot is bright. Clean and simple; no gimmick animations.
+- **Captions:** rulebook 12. Heavy sans, 2 to 3 words, white with a black stroke, key words in yellow, pop-in.
 - **Line and light:** deep navy-plum outline #1F1A2E with rounded ends, flat colour with one cel-shadow tone and a soft warm rim light, a very fine paper grain. 2 or 3 meaningful costume details per character, all on the torso and head; limbs stay simple sticks for the rig.
 - **People:** natural skin tones (test 2026-11-14), dot eyes with a tiny highlight. The cast comes from wherever the story really happens, with authentic, respectful clothing.
 - **Every shot earns its place:** if a shot doesn't move the story, carry a fact or land a joke, it goes.
 
 ## 4c. Sound (Vijay, 2026-11-14)
-- **Voice: Chris (ElevenLabs v3) on every video.** Same voice, delivery shifts with the story through sparing v3 tags ([deadpan], [sighs], [mischievously], [laughs softly], [curious]): 3 or 4 per video, never theatrical. Calm and matter-of-fact by default.
+- **Voice:** narrators rotate by format (rulebook 11, Vijay 2026-11-14); Chris stays in the library. Delivery is directed per line with sparing v3 tags.
 - **Music bed:** quiet under the voice, lifted only in gaps.
 - **Scene cues:** a sneaky tiptoe cue for background gags, a pompous cue for overconfidence, silence right before a punchline.
-- **Stings on funny beats, 3 to 6 per video:** record scratch, crickets, sad trombone, a tiny kazoo fanfare, a bonk. They make the edit feel human-made. All original (generated or YouTube Audio Library), never ripped from TikTok or Instagram.
+- **Stings only on punchlines, under 1 s, never under tension or action (rulebook 10).** Battles get dead-serious drums and brass; the seriousness is the joke. All original (generated or YouTube Audio Library), never ripped from TikTok or Instagram.
 - The sound library lives in each project's sfx/ and is copied forward and reused.
 
 ## 5. Continuity (what stops the AI look)
-- Style test lessons (2026-11-14): characters are generated one per image with the approved master as reference. A multi-character sheet drifted into generic corporate vector art. Flat graphics (logos, signs, badges) can share one sheet and be cropped, and look just as good. The rig needs stick arms and a head about as wide as the torso; tailored coat sleeves break the puppet slicing, so styling goes on the torso, not the limbs.
+- Style test lessons (2026-11-14): characters are generated one per image with the approved master as reference. A multi-character sheet drifted into generic corporate vector art. Flat graphics (logos, signs, badges) can share one sheet and be cropped, and look just as good. The rig needs overlapping joints with the pivot at the joint (rulebook 6); tailored coat sleeves break the puppet slicing, so styling goes on the torso, not the limbs.
 - One master image job per character; every later image of it uses that job as the reference and starts with: "Exact same art style as the reference images (same character design language, same line weight, same shading)."
 - Shots start on spoken words ("say:"), so picture and voice can't drift apart.
 - Stop-frame check on every video before the full render, and a numbers comparison against a reference frame. Fix every flag.
