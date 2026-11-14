@@ -25,10 +25,10 @@
   "secs": 21.8
  },
  "_spent": {
-  "google_usd": 5.956,
-  "fal_usd": 0.067,
-  "google_room_usd": 27.88,
-  "fal_room_usd": 14.93
+  "google_usd": 6.076,
+  "fal_usd": 0.228,
+  "google_room_usd": 27.76,
+  "fal_room_usd": 14.77
  },
  "brand/brand-family-v2.png": {
   "status": "made",
@@ -228,7 +228,7 @@
  "tex/iron-v2.png": {
   "status": "failed",
   "why": "'parts'",
-  "secs": 44.6
+  "secs": 22.7
  },
  "rigs/major": {
   "status": "made",
@@ -309,5 +309,57 @@
  "audio/music-lyria.mp3": {
   "status": "made",
   "secs": 25.0
+ },
+ "audio/voice.mp3": {
+  "status": "made",
+  "secs": 26.7
+ },
+ "sfx/record-scratch.mp3": {
+  "status": "made",
+  "secs": 7.5
+ },
+ "sfx/bonk.mp3": {
+  "status": "made",
+  "secs": 4.2
+ },
+ "sfx/sad-trombone.mp3": {
+  "status": "made",
+  "secs": 4.0
+ },
+ "sfx/crickets.mp3": {
+  "status": "made",
+  "secs": 7.3
+ },
+ "sfx/whoosh.mp3": {
+  "status": "made",
+  "secs": 7.6
+ },
+ "sfx/kazoo-fanfare.mp3": {
+  "status": "made",
+  "secs": 7.2
+ },
+ "sfx/gun-burst.mp3": {
+  "status": "made",
+  "secs": 7.2
+ },
+ "sfx/typewriter-ding.mp3": {
+  "status": "made",
+  "secs": 7.4
+ },
+ "sfx/phone-ring.mp3": {
+  "status": "made",
+  "secs": 4.0
+ },
+ "sfx/paper-thud.mp3": {
+  "status": "made",
+  "secs": 4.0
+ },
+ "audio/cue-sneaky.mp3": {
+  "status": "made",
+  "secs": 25.2
+ },
+ "audio/cue-march.mp3": {
+  "status": "made",
+  "secs": 25.3
  }
 }

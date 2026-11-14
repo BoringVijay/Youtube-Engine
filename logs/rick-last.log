@@ -1,35 +1,15 @@
 [gai] image model: gemini-3-pro-image via vertex
-[rick] emu-war tex/iron.png: {'status': 'made', 'model': 'gemini-3-pro-image', 'secs': 24.9}
-[rick] emu-war puppets/farmer/source-v3.png: {'status': 'made', 'model': 'gemini-3-pro-image', 'secs': 22.9}
-[gai] image: gemini-3-pro-image busy (HTTP 429 gemini-3-pro-image:generateContent: {
-  "error": {
-), waiting 15s
-[rick] emu-war puppets/farmer/pose-point-v2.png: {'status': 'made', 'model': 'gemini-3-pro-image', 'secs': 44.6}
-[gai] image: gemini-3-pro-image busy (HTTP 429 gemini-3-pro-image:generateContent: {
-  "error": {
-), waiting 15s
-[gai] image: gemini-3-pro-image busy (HTTP 429 gemini-3-pro-image:generateContent: {
-  "error": {
-), waiting 30s
-[rick] emu-war tex/dirt-v2.png: {'status': 'made', 'model': 'gemini-3-pro-image', 'secs': 81.7}
-[gai] image: gemini-3-pro-image busy (HTTP 429 gemini-3-pro-image:generateContent: {
-  "error": {
-), waiting 15s
-[rick] emu-war tex/iron-v2.png: {'status': 'failed', 'why': "'parts'", 'secs': 44.6}
-[rick] emu-war rigs/major: {'status': 'made', 'log': 'added 6 faces to /home/runner/work/Youtube-Engine/Youtube-Engine/rick/projects/emu-war/rigs/major/rig.json: smug, shocked, shouting, exhausted, confused, neutral; preview /home/runner/work/Youtube-Engine/Youtube-Engine/rick/projects/emu-war/rigs/major/faces_preview.png\n', 'secs': 2.3}
-[rick] emu-war rigs/emu: {'status': 'made', 'log': 'added 6 faces to /home/runner/work/Youtube-Engine/Youtube-Engine/rick/projects/emu-war/rigs/emu/rig.json: smug, startled, scream, bored, sly, neutral; preview /home/runner/work/Youtube-Engine/Youtube-Engine/rick/projects/emu-war/rigs/emu/faces_preview.png\n', 'secs': 2.5}
-[rick] emu-war rigs/minister: {'status': 'made', 'log': 'added 6 faces to /home/runner/work/Youtube-Engine/Youtube-Engine/rick/projects/emu-war/rigs/minister/rig.json: delighted, shocked, confused, nervous, stern, neutral; preview /home/runner/work/Youtube-Engine/Youtube-Engine/rick/projects/emu-war/rigs/minister/faces_preview.png\n', 'secs': 2.5}
-[rick] emu-war rigs/farmer: {'status': 'made', 'log': 'added 6 faces to /home/runner/work/Youtube-Engine/Youtube-Engine/rick/projects/emu-war/rigs/farmer/rig.json: shouting, hopeful, shocked, laughing, deadpan, neutral; preview /home/runner/work/Youtube-Engine/Youtube-Engine/rick/projects/emu-war/rigs/farmer/faces_preview.png\n', 'secs': 2.5}
-[rick] emu-war rigs/gunner: {'status': 'made', 'log': 'utube-Engine/Youtube-Engine/rick/projects/emu-war/rigs/gunner/rig.json: 465x1000, layers legL, legR, armL, armR, body, head\nhead centre [228.0, 252.0], diameter 451.0; eyes not found (no blinking); preview /home/runner/work/Youtube-Engine/Youtube-Engine/rick/projects/emu-war/rigs/gunner/preview.png\n', 'secs': 1.3}
-[rick] emu-war rigs/driver: {'status': 'made', 'log': 'utube-Engine/Youtube-Engine/rick/projects/emu-war/rigs/driver/rig.json: 401x1000, layers legL, legR, armL, armR, body, head\nhead centre [208.5, 278.0], diameter 364.0; eyes not found (no blinking); preview /home/runner/work/Youtube-Engine/Youtube-Engine/rick/projects/emu-war/rigs/driver/preview.png\n', 'secs': 1.2}
-[rick] emu-war rigs/major-binoculars: {'status': 'made', 'log': 'rick/projects/emu-war/rigs/major-binoculars/rig.json: 440x1000, layers legL, legR, body, head; missing armL, armR\nhead centre [217.5, 269.0], diameter 402.0; eyes not found (no blinking); preview /home/runner/work/Youtube-Engine/Youtube-Engine/rick/projects/emu-war/rigs/major-binoculars/preview.png\n', 'secs': 1.1}
-[rick] emu-war rigs/major-salute: {'status': 'made', 'log': '-Engine/rick/projects/emu-war/rigs/major-salute/rig.json: 438x1000, layers legL, legR, armR, body, head; missing armL\nhead centre [212.5, 326.0], diameter 418.0; eyes not found (no blinking); preview /home/runner/work/Youtube-Engine/Youtube-Engine/rick/projects/emu-war/rigs/major-salute/preview.png\n', 'secs': 1.2}
-[rick] emu-war rigs/major-defeat: {'status': 'made', 'log': '-Engine/rick/projects/emu-war/rigs/major-defeat/rig.json: 537x1000, layers armL, armR, body, head; missing legL, legR\nhead centre [321.5, 191.0], diameter 408.0; eyes not found (no blinking); preview /home/runner/work/Youtube-Engine/Youtube-Engine/rick/projects/emu-war/rigs/major-defeat/preview.png\n', 'secs': 1.3}
-[rick] emu-war rigs/minister-phone: {'status': 'made', 'log': 'Engine/Youtube-Engine/rick/projects/emu-war/rigs/minister-phone/rig.json: 532x1000, layers legL, legR, body, head; missing armL, armR\nhead centre [268.0, 257.0], diameter 517.0; eyes found; preview /home/runner/work/Youtube-Engine/Youtube-Engine/rick/projects/emu-war/rigs/minister-phone/preview.png\n', 'secs': 1.2}
-[rick] emu-war rigs/emu-sprint: {'status': 'made', 'log': 'be-Engine/rick/projects/emu-war/rigs/emu-sprint/rig.json: 1886x1000, layers armL, body, head; missing legL, legR, armR\nhead centre [813.5, 326.0], diameter 1296.0; eyes not found (no blinking); preview /home/runner/work/Youtube-Engine/Youtube-Engine/rick/projects/emu-war/rigs/emu-sprint/preview.png\n', 'secs': 2.4}
-[rick] emu-war rigs/farmer-point: {'status': 'made', 'log': 'ube-Engine/Youtube-Engine/rick/projects/emu-war/rigs/farmer-point/rig.json: 625x1000, layers armL, body, head; missing legL, legR, armR\nhead centre [361.0, 182.0], diameter 477.0; eyes found; preview /home/runner/work/Youtube-Engine/Youtube-Engine/rick/projects/emu-war/rigs/farmer-point/preview.png\n', 'secs': 1.2}
-[rick] emu-war audio/audition-liam.mp3: {'status': 'made', 'secs': 7.6}
-[rick] emu-war audio/audition-chris.mp3: {'status': 'made', 'secs': 7.4}
-[rick] emu-war audio/audition-eric.mp3: {'status': 'made', 'secs': 10.1}
-[rick] emu-war audio/audition-brian.mp3: {'status': 'made', 'secs': 7.0}
-[rick] emu-war audio/music-lyria.mp3: {'status': 'made', 'secs': 25.0}
+[rick] emu-war tex/iron-v2.png: {'status': 'failed', 'why': "'parts'", 'secs': 22.7}
+[rick] emu-war audio/voice.mp3: {'status': 'made', 'secs': 26.7}
+[rick] emu-war sfx/record-scratch.mp3: {'status': 'made', 'secs': 7.5}
+[rick] emu-war sfx/bonk.mp3: {'status': 'made', 'secs': 4.2}
+[rick] emu-war sfx/sad-trombone.mp3: {'status': 'made', 'secs': 4.0}
+[rick] emu-war sfx/crickets.mp3: {'status': 'made', 'secs': 7.3}
+[rick] emu-war sfx/whoosh.mp3: {'status': 'made', 'secs': 7.6}
+[rick] emu-war sfx/kazoo-fanfare.mp3: {'status': 'made', 'secs': 7.2}
+[rick] emu-war sfx/gun-burst.mp3: {'status': 'made', 'secs': 7.2}
+[rick] emu-war sfx/typewriter-ding.mp3: {'status': 'made', 'secs': 7.4}
+[rick] emu-war sfx/phone-ring.mp3: {'status': 'made', 'secs': 4.0}
+[rick] emu-war sfx/paper-thud.mp3: {'status': 'made', 'secs': 4.0}
+[rick] emu-war audio/cue-sneaky.mp3: {'status': 'made', 'secs': 25.2}
+[rick] emu-war audio/cue-march.mp3: {'status': 'made', 'secs': 25.3}
