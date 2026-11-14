@@ -13,6 +13,7 @@ on:
     paths: ["creative/references/*/queue.json"]  # pushing a sub-folder queue (e.g. rick/) starts that study
 
 permissions:
+  id-token: write
   contents: write
 
 concurrency:

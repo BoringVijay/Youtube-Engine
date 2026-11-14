@@ -2,6 +2,10 @@ name: Check keys
 # Run from the Actions tab > Check keys > Run workflow. Confirms Gemini, fal, YouTube and Google Cloud (Vertex) access work (nothing is generated or billed).
 on: workflow_dispatch
 
+permissions:
+  contents: read
+  id-token: write
+
 jobs:
   check:
     runs-on: ubuntu-latest
@@ -41,15 +45,12 @@ jobs:
             "https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&mine=true" \
             | python3 -c 'import sys,json; c=json.load(sys.stdin)["items"][0]; s=c["statistics"]; print("Channel:", c["snippet"]["title"], "| subs:", s.get("subscriberCount"), "| videos:", s["videoCount"], "| views:", s["viewCount"])'
       - uses: actions/checkout@v4
-      - name: Google Cloud key (free check, nothing billed)
-        env:
-          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+      - name: Google Cloud (free check, nothing billed)
         run: |
-          if [ -z "$GCP_SA_KEY" ]; then echo "GCP_SA_KEY secret is missing."; exit 1; fi
           cd scripts && python3 - <<'PY'
-          import json, os, gai
-          sa = json.loads(os.environ["GCP_SA_KEY"])
-          print("Project:", sa.get("project_id"), "| service account:", sa.get("client_email", "").split("@")[0])
+          import gai
+          mode = "keyless (new project)" if gai._WIF else ("old JSON key" if gai._SA else "none")
+          print("Login:", mode, "| project:", gai.project())
           url = f"https://aiplatform.googleapis.com/v1/projects/{gai.project()}/locations/global/publishers/google/models/gemini-3.8-flash:countTokens"
           out = gai._req(url, {"contents": [{"role": "user", "parts": [{"text": "hello"}]}]},
                          {"Content-Type": "application/json", "Authorization": f"Bearer {gai._vertex_token()}"}, 30)

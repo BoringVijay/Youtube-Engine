@@ -1,19 +1,29 @@
 #!/usr/bin/env python3
 """One door to Google's models.
 
-If GCP_SA_KEY (a service-account JSON) is set, calls go through Vertex AI, which bills the Google Cloud credits.
+If keyless login (config/gcp.json + GitHub OIDC) or GCP_SA_KEY is available, calls go through Vertex AI, which bills the Google Cloud credits.
 Otherwise they go through the Gemini API key (AI Studio prepay wallet).
 generate(model, body) takes the same generateContent body either way.
 """
 import base64, json, os, re, time, urllib.error, urllib.parse, urllib.request
 
 _SA = os.environ.get("GCP_SA_KEY", "").strip()
+# Keyless login (Workload Identity Federation): used when the job can mint a GitHub OIDC token
+# (workflow has `id-token: write`) and config/gcp.json exists. Takes priority over the old JSON key.
+_WIF = {}
+try:
+    _cfg = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "config", "gcp.json")))
+    if os.environ.get("ACTIONS_ID_TOKEN_REQUEST_URL") and _cfg.get("provider"):
+        _WIF = _cfg
+except Exception:
+    pass
+_VERTEX = bool(_WIF or _SA)
 _LOC = os.environ.get("GCP_LOCATION", "global")
 _tok = {"v": None, "exp": 0}
 
 
 def backend():
-    return "vertex" if _SA else "studio"
+    return "vertex" if _VERTEX else "studio"
 
 
 def _mime64(b64s):
@@ -27,6 +37,8 @@ def _b64u(b):
 def _vertex_token():
     if _tok["v"] and time.time() < _tok["exp"] - 120:
         return _tok["v"]
+    if _WIF:
+        return _wif_token()
     sa = json.loads(_SA)
     from cryptography.hazmat.primitives import hashes, serialization
     from cryptography.hazmat.primitives.asymmetric import padding
@@ -42,7 +54,27 @@ def _vertex_token():
     return _tok["v"]
 
 
+def _wif_token():
+    """GitHub OIDC token -> Google STS federated token -> short-lived service account token."""
+    aud = "//iam.googleapis.com/" + _WIF["provider"]
+    r = urllib.request.Request(os.environ["ACTIONS_ID_TOKEN_REQUEST_URL"] + "&audience=" + urllib.parse.quote(aud, safe=""),
+                               headers={"Authorization": "bearer " + os.environ["ACTIONS_ID_TOKEN_REQUEST_TOKEN"]})
+    gh = json.load(urllib.request.urlopen(r, timeout=30))["value"]
+    sts = _req("https://sts.googleapis.com/v1/token", {
+        "grantType": "urn:ietf:params:oauth:grant-type:token-exchange", "audience": aud,
+        "scope": "https://www.googleapis.com/auth/cloud-platform",
+        "requestedTokenType": "urn:ietf:params:oauth:token-type:access_token",
+        "subjectToken": gh, "subjectTokenType": "urn:ietf:params:oauth:token-type:jwt"}, {"Content-Type": "application/json"}, 30)
+    out = _req(f"https://iamcredentials.googleapis.com/v1/projects/-/serviceAccounts/{_WIF['service_account']}:generateAccessToken",
+               {"scope": ["https://www.googleapis.com/auth/cloud-platform"], "lifetime": "3600s"},
+               {"Content-Type": "application/json", "Authorization": "Bearer " + sts["access_token"]}, 30)
+    _tok.update(v=out["accessToken"], exp=time.time() + 3500)
+    return _tok["v"]
+
+
 def project():
+    if _WIF:
+        return _WIF["project"]
     return json.loads(_SA)["project_id"] if _SA else None
 
 
@@ -61,7 +93,7 @@ SPEND = []  # (kind, model, units, backend) appended by callers for the ledger
 
 def generate(model, body, timeout=300):
     """Vertex when configured (bills the Cloud credits). Tries the global endpoint, then us-central1. No silent fallback to the wallet."""
-    if _SA:
+    if _VERTEX:
         last = None
         for loc in ([_LOC] + [l for l in ("global", "us-central1") if l != _LOC]):
             host = "aiplatform.googleapis.com" if loc == "global" else f"{loc}-aiplatform.googleapis.com"
@@ -260,7 +292,7 @@ def omni(prompt, image_b64, aspect="16:9", timeout=600):
 
 def lyria(prompt, negative="vocals, singing, speech", timeout=180):
     """Vertex Lyria instrumental clip (about 30 s WAV). Returns bytes or None if unavailable."""
-    if not _SA:
+    if not _VERTEX:
         return None
     url = f"https://us-central1-aiplatform.googleapis.com/v1/projects/{project()}/locations/us-central1/publishers/google/models/lyria-002:predict"
     try:

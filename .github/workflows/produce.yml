@@ -15,6 +15,7 @@ on:
     paths: ["scripts/**", "src/**", "config/*.json", "jobs/*/state.json", ".github/workflows/produce.yml"]
 
 permissions:
+  id-token: write
   contents: write
 
 concurrency:

@@ -9,6 +9,7 @@ on:
     paths: ["scripts/scout.py", "scripts/drive.py", ".github/workflows/scout.yml"]
 
 permissions:
+  id-token: write
   contents: write
 
 concurrency:

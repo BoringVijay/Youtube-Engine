@@ -8,6 +8,7 @@ on:
     paths: ["lab/request.json", "scripts/lab.py", ".github/workflows/lab.yml"]
 
 permissions:
+  id-token: write
   contents: write
 
 concurrency:

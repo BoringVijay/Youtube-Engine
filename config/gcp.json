@@ -1,0 +1,6 @@
+{
+  "note": "Keyless Google Cloud login for GitHub Actions (Workload Identity Federation). Not secrets: addresses only. Set up 2026-11-15 on the new $300 trial project.",
+  "project": "project-f621a351-ea74-4bab-87e",
+  "provider": "projects/1094619145471/locations/global/workloadIdentityPools/github/providers/youtube-engine",
+  "service_account": "engine-gh@project-f621a351-ea74-4bab-87e.iam.gserviceaccount.com"
+}
