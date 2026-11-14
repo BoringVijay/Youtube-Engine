@@ -1,0 +1,43 @@
+{
+ "step": "1: master characters and the penguin trademark (gate: Vijay approves before step 2)",
+ "tasks": [
+  {
+   "type": "image",
+   "out": "brand/penguin-mark-a.png",
+   "aspect": "1:1",
+   "size": "2K",
+   "prompt": "Flat vector brand emblem of an original company: a simple penguin seen from the front, egg-shaped body, two short flippers held slightly out, a white belly shape, and three thin stubborn feathers sticking up from the top of the head, slightly bent. The silhouette stands alone. One solid colour, deep plum-black #271925, on a plain white background. Bold, clean, geometric shapes that still read at the size of a fingernail, like a classic publisher's colophon or a vintage company badge. Centered, lots of empty space around it. No text, no letters, no words, no oval frame, no gradient, no shadow, no other objects."
+  },
+  {
+   "type": "image",
+   "out": "brand/penguin-mark-b.png",
+   "aspect": "1:1",
+   "size": "2K",
+   "prompt": "Flat vector brand emblem of an original company: a simple penguin seen from the front, egg-shaped body, two short flippers held slightly out, a white belly shape, and three thin stubborn feathers sticking up from the top of the head, slightly bent. The silhouette sits inside a thick plain circle, like a round badge or bottle cap. One solid colour, deep plum-black #271925, on a plain white background. Bold, clean, geometric shapes that still read at the size of a fingernail, like a classic publisher's colophon or a vintage company badge. Centered, lots of empty space around it. No text, no letters, no words, no oval frame, no gradient, no shadow, no other objects."
+  },
+  {
+   "type": "image",
+   "out": "puppets/major/source-a.png",
+   "aspect": "2:3",
+   "size": "2K",
+   "prompt": "2D cartoon doodle character: a big round off-white head about as wide as the body, with a soft grey cel-shadow on one side, tiny solid black dot eyes, thick expressive black eyebrows, tiny simple line mouth, no nose, no ears; thick uniform black outline. Body is a soft rounded bean-shaped torso covered by simple flat-colored clothing with one soft shadow tone; arms are thin solid black stick lines ending in small round black dot hands, hanging relaxed at the sides slightly away from the torso; legs are two thin solid black stick lines with no trousers, no feet and no shoes drawn, coming straight out of the bottom of the torso, slightly apart. Clean vector lines, flat colors, no texture. Character asset: ONE character, full body, standing, front view, centered, whole figure visible from the top of the head to the tips of the stick legs, on a solid uniform light warm-grey backdrop; sharp focus everywhere, no environment, no fog, no blur, no gradient, no shadow on the floor. Character: a 1932 Australian army artillery major: khaki wool service-dress tunic with four front pockets and brass buttons, a brown leather Sam Browne belt across the chest, a khaki peaked officer's cap with a small plain round badge, a neat short moustache, proud stiff default expression with one eyebrow slightly raised. No text, no labels, no captions, no extra characters, no color swatches."
+  },
+  {
+   "type": "image",
+   "out": "puppets/major/source-b.png",
+   "aspect": "2:3",
+   "size": "2K",
+   "prompt": "2D cartoon doodle character: a big round off-white head about as wide as the body, with a soft grey cel-shadow on one side, tiny solid black dot eyes, thick expressive black eyebrows, tiny simple line mouth, no nose, no ears; thick uniform black outline. Body is a soft rounded bean-shaped torso covered by simple flat-colored clothing with one soft shadow tone; arms are thin solid black stick lines ending in small round black dot hands, hanging relaxed at the sides slightly away from the torso; legs are two thin solid black stick lines with no trousers, no feet and no shoes drawn, coming straight out of the bottom of the torso, slightly apart. Clean vector lines, flat colors, no texture. Character asset: ONE character, full body, standing, front view, centered, whole figure visible from the top of the head to the tips of the stick legs, on a solid uniform light warm-grey backdrop; sharp focus everywhere, no environment, no fog, no blur, no gradient, no shadow on the floor. Character: a 1932 Australian army artillery major: khaki wool service-dress tunic with four front pockets and brass buttons, a brown leather Sam Browne belt across the chest, a khaki peaked officer's cap with a small plain round badge, a neat short moustache, confident proud default expression, chin slightly up. No text, no labels, no captions, no extra characters, no color swatches."
+  },
+  {
+   "type": "image",
+   "out": "puppets/emu/source.png",
+   "aspect": "2:3",
+   "size": "2K",
+   "refs": [
+    "puppets/major/source-a.png"
+   ],
+   "prompt": "Exact same art style as the reference images (same character design language, same line weight, same shading). ONE Australian emu, drawn as a 2D cartoon doodle with the same thick plum-black outline, flat colours and one soft cel-shadow tone, simple round shapes: a shaggy grey-brown feather body like a soft mop, a long thin blue-grey neck, a small head with tiny dot eyes and a short dark beak, two long thin stick legs with three-toed feet, a smug half-closed expression. Full body, side three-quarter view, standing, the head at about the same height as the major's head, on a solid uniform light warm-grey backdrop, no floor shadow, no environment, no text, no extra characters."
+  }
+ ]
+}

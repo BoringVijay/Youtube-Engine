@@ -40,6 +40,11 @@ def spent_fal(job=None):
     return round(sum(e["usd"] for e in d["entries"] if e.get("kind", "").startswith("fal_") and (job is None or e.get("job") == job)), 3)
 
 
+def spent_google(job=None):
+    """Everything that is not fal: what counts against the Google credit cap."""
+    return round(spent(job) - spent_fal(job), 3)
+
+
 def check(job, kind, units=1.0, cap=None):
     """Raise OverBudget if this call would cross the per-video or total cap. fal spend has its own caps."""
     cost = price(kind, units)
@@ -50,11 +55,11 @@ def check(job, kind, units=1.0, cap=None):
         if job and spent_fal(job) + cost > fcap:
             raise OverBudget(f"fal cap ${fcap} reached for {job} (spent ${spent_fal(job):.2f})")
         return cost
-    if spent() + cost > CFG["total_usd"]:
-        raise OverBudget(f"total budget of ${CFG['total_usd']} reached (spent ${spent():.2f})")
+    if spent_google() + cost > CFG["total_usd"]:
+        raise OverBudget(f"total budget of ${CFG['total_usd']} reached (spent ${spent_google():.2f})")
     cap = cap or CFG["per_video_usd"]
-    if job and spent(job) + cost > cap:
-        raise OverBudget(f"video cap ${cap} reached for {job} (spent ${spent(job):.2f})")
+    if job and spent_google(job) + cost > cap:
+        raise OverBudget(f"video cap ${cap} reached for {job} (spent ${spent_google(job):.2f})")
     return cost
 
 
