@@ -28,15 +28,26 @@ Read with `rick/references/` (the measured style rules, prompt templates, scene 
 - What-ifs follow real physics and believable motives (greed, pride, laziness, fear). No rule appears only to rescue the ending. Framed as a story, never as fact.
 - Real-world logic in every shot: objects keep their size, position and state between shots, light comes from one consistent sun, nothing teleports.
 
-## 4. The penguin trademark (Vijay, 2026-11-14)
-There is no penguin character any more. The penguin lives on as the world's brand: a small, simple penguin symbol that appears wherever a real logo would, the way Penguin Books' logo turns up on shelves everywhere.
-- One canonical mark: a flat, single-colour penguin silhouette (egg-shaped body, short flippers, three-feather tuft on the head), no text. Saved once at `rick/brand/penguin-mark.png` and reused, never redrawn per video.
-- Where it goes: the logo on a laptop, the badge on a truck grille, a newspaper masthead emblem, a cereal box, a bank's sign, a soldier's cap badge, a vending machine, a stamp on a crate. It replaces real brands (never an Apple, Ford or Coca-Cola logo).
-- 1 to 3 placements per video, small, never the subject of a shot, never on a serious or tragic beat. At least one is subtle enough that most people miss it first time.
-- Never write the word "Penguin" next to it. The symbol alone is ours; the name belongs to a real publisher.
-- Placed as a decal card in the stage, so it is pixel-identical in every video.
+## 4. The penguin universe (Vijay, 2026-11-14)
+There is no penguin character. The penguin lives on as a hidden universe inside every world, the way Pixar hides the Pizza Planet truck: the businesses, signs and products of each world quietly belong to a penguin and Antarctica brand family.
+- **Every video: one obvious, one subtle.** Obvious: a named place or product the story passes through ("South Pole Pizza", "Emperor Savings & Loan", "Adélie Air", "Gentoo Motors", "Krill Coffee Co.", "90°S"). Subtle: something most people miss first time (a cloud shaped like a penguin, "77°S" scratched on a crate, a tuxedo-black-and-white car, an iceberg on a calendar, a fridge magnet, a penguin-footprint degree symbol).
+- **Never the same reference twice in a row.** Rotate brands and invent new ones. They fit the world's era and place: a 1932 crate says "Emperor Munitions Co.", a 2091 ad says "Adélie Air".
+- **Premium design.** Every brand is a real-looking modern or period identity with good typography. Penguins in logos have eyes and character, never a plain blob silhouette.
+- **Never real penguin IP.** No Penguin Books, Pingu, Club Penguin, Tux (Linux), the Pittsburgh Penguins, Batman's Penguin or the Madagascar penguins.
+- **Never on a serious or tragic beat, never the subject of a shot.**
+- The brand family lives in `rick/brand/`. Signs are image cards placed in the stage, so a brand looks identical wherever it reappears.
+
+## 4b. House style: "Antarctic Modern" (proposed 2026-11-14, pending Vijay's approval of the style test)
+Our own signature on top of the measured Rick look, so the channel reads as a premium studio, not a clone.
+- **Signature accent:** ice blue #8FD8F5 on exactly one thing per video (a ribbon, a neon sign, a scarf, a car). Captions highlight one key word in ice blue.
+- **Line and shape:** deep navy-plum outline #1F1A2E with rounded ends; clean geometric silhouettes; 2 or 3 meaningful details per character, nothing fussy.
+- **Light:** flat colour with one cel-shadow tone plus a soft warm rim light; very fine paper grain.
+- **Dot eyes with a tiny highlight** for life.
+- **Global cast:** characters come from wherever the story really happens (Tokyo, Lagos, New York, Mumbai, São Paulo, the outback...), with authentic, respectful clothing and natural skin tones. No stereotypes.
+- **Captions:** heavy geometric sans, white with a navy outline.
 
 ## 5. Continuity (what stops the AI look)
+- Style test lessons (2026-11-14): characters are generated one per image with the approved master as reference. A multi-character sheet drifted into generic corporate vector art. Flat graphics (logos, signs, badges) can share one sheet and be cropped, and look just as good. The rig needs stick arms and a head about as wide as the torso; tailored coat sleeves break the puppet slicing, so styling goes on the torso, not the limbs.
 - One master image job per character; every later image of it uses that job as the reference and starts with: "Exact same art style as the reference images (same character design language, same line weight, same shading)."
 - Shots start on spoken words ("say:"), so picture and voice can't drift apart.
 - Stop-frame check on every video before the full render, and a numbers comparison against a reference frame. Fix every flag.
