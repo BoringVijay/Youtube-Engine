@@ -1,0 +1,117 @@
+name: Rick Shots render
+# Full-quality render of a Rick Shots project, split into time chunks that render in parallel
+# (each runner draws frames in software, about 4-6 s per 1080x1920 frame), then stitched with the sound mix.
+# Trigger: push rick/projects/<slug>/render.json, e.g.
+#   {"short": "short.json", "out": "renders/final-v2.mp4", "scale": 1, "chunks": 16}
+# Free: no API calls. Uses GitHub Actions minutes only.
+on:
+  workflow_dispatch:
+    inputs:
+      project:
+        description: "Project slug"
+        required: true
+  push:
+    branches: [main]
+    paths: ["rick/projects/*/render.json"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rick-render
+  cancel-in-progress: false
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      project: ${{ steps.p.outputs.project }}
+      chunks: ${{ steps.p.outputs.chunks }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - id: p
+        env:
+          INPUT_PROJECT: ${{ github.event.inputs.project }}
+        run: |
+          proj="$INPUT_PROJECT"
+          if [ -z "$proj" ]; then proj=$(git diff --name-only HEAD~1 HEAD | grep -m1 '^rick/projects/.*/render.json$' | cut -d/ -f3); fi
+          [ -n "$proj" ] || { echo "no project"; exit 1; }
+          n=$(python3 -c "import json;print(int(json.load(open('rick/projects/$proj/render.json')).get('chunks',16)))")
+          echo "project=$proj" >> "$GITHUB_OUTPUT"
+          echo "chunks=$(python3 -c "import json;print(json.dumps(list(range($n))))")" >> "$GITHUB_OUTPUT"
+
+  chunk:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        k: ${{ fromJSON(needs.plan.outputs.chunks) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Render chunk
+        env:
+          PROJ: ${{ needs.plan.outputs.project }}
+          K: ${{ matrix.k }}
+          N: ${{ strategy.job-total }}
+        run: |
+          sudo apt-get update -qq >/dev/null; sudo apt-get install -y -qq ffmpeg fonts-montserrat >/dev/null 2>&1 || true
+          (cd rick/stage && npm install --silent --no-audit --no-fund && npx playwright install --with-deps chromium >/dev/null)
+          d="rick/projects/$PROJ"
+          read SHORT SCALE <<< $(python3 -c "import json;r=json.load(open('$d/render.json'));print(r.get('short','short.json'), r.get('scale',1))")
+          dur=$(ffprobe -v error -show_entries format=duration -of csv=p=0 "$d/$(python3 -c "import json;print(json.load(open('$d/$SHORT'))['audio']['voice'])")")
+          read FROM TO <<< $(python3 -c "
+          import math;fps=30;tot=math.ceil(float('$dur')*fps)+fps;L=math.ceil(tot/$N);k=$K
+          print(k*L/fps, 99999 if k==$N-1 else (k+1)*L/fps)")
+          mkdir -p out
+          node rick/stage/render.mjs "$d/$SHORT" "out/chunk-$(printf %02d $K).mp4" --from "$FROM" --to "$TO" --no-audio --scale "$SCALE" 2>&1 | tail -n 4 || true
+          test -s "out/chunk-$(printf %02d $K).mp4" || { [ "$K" -eq $((N-1)) ] && echo "empty tail chunk" && exit 0; exit 1; }
+      - uses: actions/upload-artifact@v4
+        with:
+          name: chunk-${{ matrix.k }}
+          path: out/*.mp4
+          if-no-files-found: ignore
+          retention-days: 2
+
+  assemble:
+    needs: [plan, chunk]
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - uses: actions/download-artifact@v4
+        with:
+          path: parts
+          merge-multiple: true
+      - name: Stitch and mix
+        env:
+          PROJ: ${{ needs.plan.outputs.project }}
+        run: |
+          sudo apt-get update -qq >/dev/null; sudo apt-get install -y -qq ffmpeg >/dev/null 2>&1 || true
+          (cd rick/stage && npm install --silent --no-audit --no-fund && npx playwright install --with-deps chromium >/dev/null)
+          d="rick/projects/$PROJ"
+          read SHORT OUT <<< $(python3 -c "import json;r=json.load(open('$d/render.json'));print(r.get('short','short.json'), r['out'])")
+          (cd parts && ls chunk-*.mp4 | sort | sed "s/^/file '/;s/$/'/") > list.txt
+          sed -i 's#file .#&parts/#' list.txt; cat list.txt
+          ffmpeg -y -v error -f concat -safe 0 -i list.txt -c copy video.mp4
+          node rick/stage/render.mjs "$d/$SHORT" audio.mp4 --audio-only
+          mkdir -p "$(dirname "$d/$OUT")"
+          ffmpeg -y -v error -i video.mp4 -i audio.mp4 -map 0:v -map 1:a -c copy -shortest -movflags +faststart "$d/$OUT"
+          ffprobe -v error -show_entries format=duration:stream=width,height -of default=nw=1 "$d/$OUT" | tee "$d/$OUT.log"
+          du -h "$d/$OUT" | tee -a "$d/$OUT.log"
+      - name: Save
+        run: |
+          git config user.name "engine-bot"
+          git config user.email "engine-bot@users.noreply.github.com"
+          git add rick/projects
+          git diff --cached --quiet || git commit -m "Rick render"
+          for i in 1 2 3; do git pull --rebase --autostash -q && git push -q && break; sleep 5; done

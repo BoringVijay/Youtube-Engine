@@ -4,6 +4,7 @@
 //   node render.mjs short.json out.mp4 --stills     3 stills per shot + sanity checks, no video
 //   options: --scale 0.5   render smaller (fast preview)      --from 3 --to 9   only this time range (s)
 //            --no-audio    picture only                       --chrome          use the installed Chrome
+//            --audio-only  just the sound mix (in a 16x16 black video), for stitching chunks rendered in parallel
 //
 // The stage (stage.js) runs in headless Chromium; this script resolves the
 // timeline (say:/w: times, shot lengths, captions), serves the files, pulls the
@@ -20,14 +21,14 @@ const here = path.dirname(fileURLToPath(import.meta.url));
 const die = (msg) => { console.error('error: ' + msg); process.exit(1); };
 
 // ------------------------------------------------------------ arguments
-const argv = process.argv.slice(2), pos = [], opt = { scale: null, from: null, to: null, stills: false, audio: true, chrome: false };
+const argv = process.argv.slice(2), pos = [], opt = { scale: null, from: null, to: null, stills: false, audio: true, chrome: false, audioOnly: false };
 for (let i = 0; i < argv.length; i++) {
   const a = argv[i];
-  if (a === '--stills') opt.stills = true; else if (a === '--no-audio') opt.audio = false; else if (a === '--chrome') opt.chrome = true;
+  if (a === '--stills') opt.stills = true; else if (a === '--no-audio') opt.audio = false; else if (a === '--chrome') opt.chrome = true; else if (a === '--audio-only') opt.audioOnly = true;
   else if (a === '--scale' || a === '--from' || a === '--to') { const v = Number(argv[++i]); if (!Number.isFinite(v)) die(a + ' needs a number'); opt[a.slice(2)] = v; }
   else if (a.startsWith('--')) die('unknown option ' + a); else pos.push(a);
 }
-if (!pos[0]) { console.log('usage: node render.mjs short.json out.mp4 [--stills] [--scale 0.5] [--from s --to s] [--no-audio] [--chrome]'); process.exit(1); }
+if (!pos[0]) { console.log('usage: node render.mjs short.json out.mp4 [--stills] [--scale 0.5] [--from s --to s] [--no-audio] [--audio-only] [--chrome]'); process.exit(1); }
 const scenePath = path.resolve(pos[0]), outPath = path.resolve(pos[1] || 'out.mp4'), root = path.dirname(scenePath);
 if (!fs.existsSync(scenePath)) die('no such file: ' + scenePath);
 if (opt.scale !== null && !(opt.scale > 0.1 && opt.scale <= 1)) die('--scale must be between 0.1 and 1');
@@ -183,7 +184,7 @@ if (opt.stills) {
 // ------------------------------------------------------------ full render -> ffmpeg
 const f0 = opt.from !== null ? Math.max(0, Math.round(opt.from * fps)) : 0, f1 = opt.to !== null ? Math.min(frames, Math.round(opt.to * fps)) : frames;
 if (f1 <= f0) await fail('--from/--to select no frames');
-const dur = (f1 - f0) / fps, au = (opt.audio && spec.audio) || {}, ff = ['-y', '-v', 'error', '-f', 'image2pipe', '-framerate', String(fps), '-c:v', 'png', '-i', '-'];
+const dur = (f1 - f0) / fps, au = (opt.audio && spec.audio) || {}, ff = opt.audioOnly ? ['-y', '-v', 'error', '-f', 'lavfi', '-i', `color=c=black:s=16x16:r=${fps}`] : ['-y', '-v', 'error', '-f', 'image2pipe', '-framerate', String(fps), '-c:v', 'png', '-i', '-'];
 const ain = []; for (const k of ['voice', 'music']) if (au[k]) { if (k === 'music') ff.push('-stream_loop', '-1'); ff.push('-ss', String(f0 / fps), '-t', String(dur), '-i', inProject(au[k])); ain.push(k); }
 const vf = 'scale=trunc(iw/2)*2:trunc(ih/2)*2';
 const sfx = (spec._sfx || []).filter(x => x.t >= f0 / fps && x.t < f1 / fps);
@@ -212,7 +213,7 @@ const enc = spawn('ffmpeg', ff, { stdio: ['pipe', 'inherit', 'inherit'] });
 enc.on('error', () => fail('ffmpeg is not on PATH'));
 const done = new Promise(r => enc.on('close', r));
 const t0 = Date.now();
-for (let i = f0; i < f1; i++) {
+for (let i = f0; i < (opt.audioOnly ? f0 : f1); i++) {
   const url = await page.evaluate(n => window.renderFrame(n), i);
   if (!enc.stdin.write(Buffer.from(url.slice(url.indexOf(',') + 1), 'base64'))) await new Promise(r => enc.stdin.once('drain', r));
   const n = i - f0 + 1;
