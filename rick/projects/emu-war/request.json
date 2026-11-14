@@ -1,5 +1,5 @@
 {
- "step": "5b: stills check for scene v2 (cuts between locations, tighter framing, set fixes)",
+ "step": "5c: stills check for scene v3",
  "tasks": [
   {
    "type": "image",
@@ -660,6 +660,13 @@
   {
    "type": "render",
    "out": "renders/check-v2.mp4",
+   "short": "short.json",
+   "stills": true,
+   "scale": 0.5
+  },
+  {
+   "type": "render",
+   "out": "renders/check-v3.mp4",
    "short": "short.json",
    "stills": true,
    "scale": 0.5

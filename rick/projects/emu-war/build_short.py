@@ -24,7 +24,7 @@ def check(ph):
 
 
 # locations: farm, dam, office, second office (phone call), road, close-up board
-LOC = {"A": (0, 0, 0), "B": (70, 0, 0), "C": (0, 0, -70), "C2": (45, 0, -70), "R": (0, 0, 45), "I": (-70, 0, 0)}
+LOC = {"A": (0, 0, 0), "B": (70, 0, 0), "C": (0, 0, -70), "C2": (45, 0, -70), "R": (0, 0, 45), "R2": (30, 0, 45), "I": (-70, 0, 0)}
 P = lambda o, x, y, z: [LOC[o][0] + x, LOC[o][1] + y, LOC[o][2] + z]
 
 chars = [
@@ -36,13 +36,16 @@ chars = [
     {"id": "minister", "puppet": "rigs/minister", "pos": P("C", -0.6, 0, 0.4), "height": 1.75},
     {"id": "minister-phone", "puppet": "rigs/minister-phone", "pos": P("C2", -0.6, 0, 0.4), "height": 1.75},
     {"id": "major-salute", "puppet": "rigs/major-salute", "pos": P("R", 0, 0, 0), "height": 1.8},
-    {"id": "major-defeat", "puppet": "rigs/major-defeat", "pos": P("R", 30, 0, 0), "height": 1.8},
+    {"id": "major-defeat", "puppet": "rigs/major-defeat", "pos": P("R2", 0, 0, 0), "height": 1.8},
     {"id": "emu-sprint", "puppet": "rigs/emu-sprint", "pos": P("B", -9, 0, -2.5), "height": 1.7},
 ]
 # farm emus: in the field between the fence (z -4.6) and the wheat (front edge z -8), natural side heads
 for i in range(14):
     chars.append({"id": f"emu-a{i}", "puppet": "rigs/emu", "pos": P("A", -7 + i * 1.05 + random.uniform(-.3, .3), 0, -5.4 - random.uniform(0, 2.2)),
                   "height": 1.75 + random.uniform(-.1, .1), "flip": random.random() < .5})
+for c in chars:
+    if c["id"] in ("emu-a5", "emu-a7", "emu-a9", "emu-a6", "emu-a2"):
+        c["pos"][0] = {"emu-a2": -5.0, "emu-a5": -1.0, "emu-a6": -3.0, "emu-a7": 1.0, "emu-a9": 3.0}[c["id"]]
 # dam emus
 for i in range(10):
     chars.append({"id": f"emu-b{i}", "puppet": "rigs/emu", "pos": P("B", 1 + i * 0.9 + random.uniform(-.3, .3), 0, -3 - random.uniform(0, 4)),
@@ -59,18 +62,18 @@ office = lambda o: [
 
 props = [
     # farm
-    {"type": "wall", "pos": P("A", 0, 0, -14), "size": [40, 1.1, 12], "texture": "tex/wheat.png", "repeat": [10, 1]},
+    {"type": "wall", "pos": P("A", 0, 0, -8.3), "size": [40, 1.1, 0.4], "texture": "tex/wheat.png", "repeat": [10, 1]},
     {"type": "house", "pos": P("A", -14, 0, -2), "size": [5, 3, 4], "wall": "tex/wood.png", "roof": "#8d9298", "rotY": 25},
-    *[{"type": "post", "pos": P("A", x, 0, -4.6), "h": 1.3, "color": "#6b5a48"} for x in range(-12, 14, 2)],
-    {"type": "wall", "pos": P("A", 0, 0.95, -4.6), "size": [26, 0.03, 0.03], "color": "#4a4040"},
+    *[{"type": "post", "pos": P("A", x, 0, -4.6), "h": 0.95, "color": "#6b5a48"} for x in range(-12, 14, 2)],
+    {"type": "wall", "pos": P("A", 0, 0.62, -4.6), "size": [26, 0.03, 0.03], "color": "#4a4040"},
     *crate("A", 3.4, 1.4, 8),
     # dam: the gun in the dirt, wheat far behind
-    {"type": "wall", "pos": P("B", 4, 0, -16), "size": [40, 1.1, 8], "texture": "tex/wheat.png", "repeat": [10, 1]},
+    {"type": "wall", "pos": P("B", 4, 0, -12), "size": [40, 1.1, 0.4], "texture": "tex/wheat.png", "repeat": [10, 1]},
     {"type": "plane", "pos": P("B", 0.2, 0, 2.3), "size": [1.6, 1.2], "image": "cards-final/lewis-gun.png"},
     # road: truck, crates
     {"type": "plane", "pos": P("R", -3.4, 0, -1.2), "size": [4.4, 3.2], "image": "cards-final/truck.png"},
     *crate("R", 1.5, 0.3), *crate("R", 2.7, 0.1, -10),
-    {"type": "plane", "pos": P("R", 27.5, 0, -1.2), "size": [4.4, 3.2], "image": "cards-final/truck.png"},
+    {"type": "plane", "pos": P("R2", -2.5, 0, -1.2), "size": [4.4, 3.2], "image": "cards-final/truck.png"},
     # offices
     *office("C"), *office("C2"),
     # close-up board: papers on a wooden desk
@@ -95,23 +98,23 @@ def card(start, x, h, w, y0, fill=0.86, **k):
     """Square-on close-up of a paper on the board, sized so the whole sheet fits the 9:16 frame."""
     t = 0.36397  # tan(20 deg), default fov 40
     d = max(w / fill / (2 * t * 9 / 16), h / 0.96 / (2 * t))
-    shot(start, "I", anchor=[LOC["I"][0] + x, y0 + h / 2, LOC["I"][2]], distance=round(d, 2), yaw=0, pitch=0, frameY=0, **{"zoom": 2, **k})
+    shot(start, "I", anchor=[LOC["I"][0] + x, y0 + h / 2, LOC["I"][2]], distance=round(d, 2), yaw=0, pitch=0, **{"zoom": 2, "frameY": 0, **k})
 
 
 face = lambda who, f, at=0.0, **x: {"at": at, "who": who, "face": f, **x}
 
 shot(0, "A", target="major", headWidth=0.34, yaw=15, pan=[-14, 4], actions=[face("major", "smug", 0.2)])
-shot("fight birds", "A", target="emu-a6", headWidth=0.11, yaw=-8, pitch=9)
+shot("fight birds", "A", target="emu-a5", headWidth=0.2, yaw=-6, pitch=4)
 shot("And the birds won", "A", target="major", headWidth=0.3, yaw=25, zoom=-3, actions=[face("major", "confused", 0.5, pose={"head": 8})])
 card("Western Australia", -12, 6.0, 3.4, 0.3, fill=0.95, zoom=3)
-shot("Then about twenty thousand", "A", target="emu-a3", headWidth=0.09, yaw=10, pitch=12, pan=[24, 0])
+shot("Then about twenty thousand", "A", target="emu-a2", headWidth=0.16, yaw=58, pitch=5, pan=[18, 0])
 shot("start eating everything", "A", target="emu-a9", headWidth=0.42, yaw=-12, actions=[face("emu-a9", "bored")])
 shot("The farmers are", "A", target="farmer", headWidth=0.34, yaw=-10, actions=[face("farmer", "shouting", 0.3, shake=0.5)])
 card("machine guns", 0, 3.6, 2.4, 0.6)
 shot("And the government says", "C2", target="minister-phone", headWidth=0.3, yaw=12)
 shot("sure", "C", target="minister", headWidth=0.42, yaw=-6, zoom=6, actions=[face("minister", "delighted", 0.05)])
 shot("So Major Meredith", "R", target="major-salute", headWidth=0.28, yaw=22, pan=[-20, 0])
-shot("ten thousand rounds", "R", anchor=P("R", 1.5, 0.4, 0.66), distance=1.9, yaw=4, pitch=4, frameY=0.1)
+shot("ten thousand rounds", "R", anchor=P("R", 1.5, 0.42, 0.66), distance=1.6, yaw=4, pitch=4, frameY=0.1)
 shot("First battle", "B", target="emu-b4", distance=13, yaw=-4, pitch=10, frameY=0.05)
 shot("The emus walk into range", "B", target="emu-b2", headWidth=0.18, yaw=12,
      actions=[{"at": 0.2, "who": "emu-b2", "to": P("B", 2.4, 0, -1.4), "walk": True, "over": 1.6}])
@@ -119,9 +122,10 @@ shot("Fire", "B", target="major-b", headWidth=0.36, yaw=-20, zoom=8, actions=[fa
 shot("Twelve birds", "B", target="emu-b6", headWidth=0.4, yaw=14,
      actions=[face("emu-b6", "startled", hop=0.3), face("emu-b7", "startled", 0.1, hop=0.25)])
 shot("the gun jams", "B", anchor=P("B", 0.2, 0.6, 2.3), distance=2.1, yaw=18, pitch=6, frameY=0.05, zoom=-2)
-shot("Next a thousand emus", "B", anchor=P("B", 5, 0.8, -5), distance=15, yaw=0, pitch=30, frameY=0)
+shot("Next a thousand emus", "B", target="emu-b4", headWidth=0.12, yaw=0, pitch=3, zoom=4,
+     actions=[{"at": 0.0, "who": f"emu-b{i}", "to": [c["pos"][0], 0, c["pos"][2] + 2.2], "walk": True, "over": 2.4} for i, c in enumerate(c for c in chars if c["id"].startswith("emu-b"))])
 shot("Fire#2", "B", target="major-b", headWidth=0.3, yaw=18, zoom=8, actions=[face("major-b", "shouting")])
-shot("And they scatter", "B", anchor=P("B", 5, 0.5, -4), distance=17, yaw=-6, pitch=34, frameY=0, zoom=-4,
+shot("And they scatter", "B", anchor=P("B", 5, 0.5, -3), distance=12, yaw=-6, pitch=20, frameY=0.05, zoom=-4,
      actions=[{"at": 0.0, "who": f"emu-b{i}", "to": P("B", 1 + i * 0.9 + (i - 5) * 2.5, 0, -3 - (i % 3) * 3 + (i % 2) * 6), "walk": True, "over": 1.4}
               for i in range(10)])
 shot("Like they planned it", "B", target="emu-b8", headWidth=0.44, yaw=-14, zoom=4, actions=[face("emu-b8", "sly")])
@@ -129,15 +133,15 @@ shot("Six days in", "A", target="major", headWidth=0.32, yaw=-16, zoom=-2, actio
 shot("Nobody agrees", "A", anchor=P("A", 6.05, 1.55, 1.45), distance=3.6, yaw=0, pitch=4,
      actions=[{"at": 0.0, "who": "gunner", "shake": 0.4}, {"at": 0.1, "who": "driver", "shake": 0.4}])
 shot("You see", "B", target="emu-b1", headWidth=0.22, yaw=12)
-shot("fifty kilometres", "B", target="emu-sprint", headWidth=0.13, yaw=0, zoom=1,
-     actions=[{"at": 0.0, "who": "emu-sprint", "to": P("B", 12, 0, -2.5), "over": 2.2}])
-shot("tiny groups", "B", anchor=P("B", 5, 0.5, -5), distance=19, yaw=4, pitch=40, frameY=0, zoom=-4)
+shot("fifty kilometres", "B", anchor=P("B", 0, 0.9, -2.5), distance=6.5, yaw=0, pitch=3, zoom=1,
+     actions=[{"at": 0.25, "who": "emu-sprint", "to": P("B", 10, 0, -2.5), "over": 1.1}])
+shot("tiny groups", "B", anchor=P("B", 5, 0.5, -4), distance=15, yaw=4, pitch=26, frameY=0.05, zoom=-4)
 shot("nothing to aim at", "B", target="major-b", headWidth=0.34, yaw=-10, actions=[face("major-b", "confused", pose={"head": -8})])
-shot("So the army goes home", "R", target="major-defeat", headWidth=0.26, yaw=-16, zoom=-3)
+shot("So the army goes home", "R2", target="major-defeat", headWidth=0.26, yaw=-16, zoom=-3)
 shot("The army comes back", "R", target="major-salute", headWidth=0.3, yaw=-20)
 shot("Guns on trucks", "R", anchor=P("R", -3.4, 1.4, -1.2), distance=6.5, yaw=-12, pitch=4, frameY=0.05, zoom=4)
 shot("One more month", "R", target="major-salute", headWidth=0.22, yaw=8, zoom=-3)
-card("Final report", -24, 3.6, 2.8, 0.6, zoom=3)
+card("Final report", -24, 3.6, 2.8, 0.6, fill=0.74, frameY=0.17, zoom=3)
 shot("Exactly ten bullets", "C", target="minister", headWidth=0.42, yaw=10, zoom=8, actions=[face("minister", "shocked")])
 shot("The army lost no one", "A", target="major", headWidth=0.26, yaw=20, zoom=-3, actions=[face("major", "neutral")])
 shot("The emus kept the wheat", "A", target="emu-a7", headWidth=0.4, yaw=8,
@@ -187,7 +191,7 @@ short = {
     },
     "lighting": [{"t": 0, "mood": "day"}, {"t": "say:You see", "mood": "golden", "fade": 0.6}, {"t": "say:The army comes back", "mood": "day", "fade": 0.6}],
     "ground": {"texture": "tex/dirt-final.png", "repeat": [60, 60], "color": "#b9673d"},
-    "backdrop": {"image": "bg/day.png", "blur": 4},
+    "backdrop": {"image": "bg/day-seamless.png", "blur": 4, "repeat": 2},
     "ink": {"set": 4}, "contactShadow": 0.6,
     "characters": chars, "props": props, "shots": S, "end": "audio",
 }
