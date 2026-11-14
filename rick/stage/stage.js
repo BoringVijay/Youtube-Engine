@@ -351,7 +351,9 @@ window.setup = async (spec) => {
 
   if (spec.backdrop && spec.backdrop.image) {                // flat painting far behind the set, blurred, wrapped around the world
     const b = spec.backdrop, img = await loadImage(b.image), bw = 2048, bh = Math.round(2048 * img.height / img.width);
-    const cv = canvasOf(bw, bh), g = cv.getContext('2d'); g.filter = `blur(${b.blur ?? 5}px)`; g.drawImage(img, 0, 0, bw, bh); g.filter = 'none';
+    const cv = canvasOf(bw, bh), g = cv.getContext('2d'); g.filter = `blur(${b.blur ?? 5}px)`; g.drawImage(img, 0, 0, bw, bh);
+    // mirrored copies on both sides so the blur has real neighbours at the edges (no pale seam where the texture mirrors)
+    g.save(); g.scale(-1, 1); g.drawImage(img, 0, 0, bw, bh); g.restore(); g.save(); g.translate(2 * bw, 0); g.scale(-1, 1); g.drawImage(img, 0, 0, bw, bh); g.restore(); g.filter = 'none';
     g.globalCompositeOperation = 'destination-out'; const fade = g.createLinearGradient(0, 0, 0, bh * 0.22); fade.addColorStop(0, 'rgba(0,0,0,1)'); fade.addColorStop(1, 'rgba(0,0,0,0)'); g.fillStyle = fade; g.fillRect(0, 0, bw, bh * 0.22);
     const t = new THREE.CanvasTexture(cv); t.colorSpace = THREE.SRGBColorSpace; t.wrapS = THREE.MirroredRepeatWrapping; t.repeat.set(b.repeat || 4, 1);
     const R = b.distance || 170, hgt = b.height || (2 * Math.PI * R / (b.repeat || 4)) * (img.height / img.width);
