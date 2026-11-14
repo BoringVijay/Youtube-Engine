@@ -50,7 +50,7 @@ jobs:
           import json, os, gai
           sa = json.loads(os.environ["GCP_SA_KEY"])
           print("Project:", sa.get("project_id"), "| service account:", sa.get("client_email", "").split("@")[0])
-          url = f"https://us-central1-aiplatform.googleapis.com/v1/projects/{gai.project()}/locations/us-central1/publishers/google/models/gemini-2.5-flash:countTokens"
+          url = f"https://aiplatform.googleapis.com/v1/projects/{gai.project()}/locations/global/publishers/google/models/gemini-3.8-flash:countTokens"
           out = gai._req(url, {"contents": [{"role": "user", "parts": [{"text": "hello"}]}]},
                          {"Content-Type": "application/json", "Authorization": f"Bearer {gai._vertex_token()}"}, 30)
           print("Vertex AI reachable (countTokens is free):", out.get("totalTokens"), "tokens")
