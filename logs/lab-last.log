@@ -1,21 +1,21 @@
-08:30:06 models: ['gemini-2.5-flash-preview-tts', 'gemini-2.5-pro-preview-tts', 'gemini-2.5-flash-image', 'gemini-3-pro-image-preview', 'gemini-3-pro-image', 'nano-banana-pro-preview', 'gemini-3.1-flash-image-preview', 'gemini-3.1-flash-image', 'gemini-3.1-flash-lite-image', 'gemini-nano-banana-2.1', 'gemini-omni-flash-preview', 'gemini-omni-1.1-flash', 'gemini-omni-1.2-flash', 'lyria-3-clip-preview', 'lyria-3-pro-preview', 'lyria-3.5', 'gemini-3.1-flash-tts-preview', 'gemini-3.8-flash-tts', 'gemini-3.8-flash-lite-tts', 'lyria-realtime-exp']
-08:30:06 image model: gemini-nano-banana-2.1
-08:30:06 backend: vertex
-08:30:22 scene l4-k1 ok
-08:30:46 scene l4-k2 ok
-08:30:46 scene l4-k3 ok
-08:30:46 video model: gemini-omni-flash-preview
+23:25:41 models: ['gemini-2.5-flash-preview-tts', 'gemini-2.5-pro-preview-tts', 'gemini-2.5-flash-image', 'gemini-3-pro-image-preview', 'gemini-3-pro-image', 'nano-banana-pro-preview', 'gemini-3.1-flash-image-preview', 'gemini-3.1-flash-image', 'gemini-3.1-flash-lite-image', 'gemini-nano-banana-2.1', 'gemini-omni-flash-preview', 'gemini-omni-1.1-flash', 'gemini-omni-1.2-flash', 'lyria-3-clip-preview', 'lyria-3-pro-preview', 'lyria-3.5', 'gemini-3.1-flash-tts-preview', 'gemini-3.8-flash-tts', 'gemini-3.8-flash-lite-tts', 'lyria-realtime-exp']
+23:25:41 image model: gemini-nano-banana-2.1
+23:25:41 backend: vertex
+23:25:58 scene l4-k1 ok
+23:26:12 scene l4-k2 ok
+23:26:12 scene l4-k3 ok
+23:26:12 video model: gemini-omni-flash-preview
 [gai] pro: gemini-3.8-pro not available here
 [gai] pro: gemini-3.7-pro not available here
 [gai] pro: gemini-3.5-pro not available here
 [gai] pro: gemini-3.1-pro not available here
 [gai] pro model: gemini-3.1-pro-preview via vertex
-08:32:23 review A-first-only-push 3.0
-08:32:23 motion ok A-first-only-push veo-3.1-fast-generate-001 97s
-08:34:08 review B-first-last-small 3.0
-08:34:08 motion ok B-first-last-small veo-3.1-fast-generate-001 105s
-08:36:00 review C-first-last-big 3.0
-08:36:00 motion ok C-first-last-big veo-3.1-fast-generate-001 111s
-08:37:53 review D-first-only-orbit 2.0
-08:37:53 motion ok D-first-only-orbit veo-3.1-fast-generate-001 113s
-08:37:53 done: 3 images, 0 voices, 4 videos, 0 errors
+23:28:09 review A-first-only-push 3.0
+23:28:09 motion ok A-first-only-push veo-3.1-fast-generate-001 116s
+23:29:48 review B-first-last-small 3.0
+23:29:48 motion ok B-first-last-small veo-3.1-fast-generate-001 100s
+23:31:46 review C-first-last-big 3.0
+23:31:46 motion ok C-first-last-big veo-3.1-fast-generate-001 118s
+23:33:46 review D-first-only-orbit 3.0
+23:33:46 motion ok D-first-only-orbit veo-3.1-fast-generate-001 119s
+23:33:46 done: 3 images, 0 voices, 4 videos, 0 errors
