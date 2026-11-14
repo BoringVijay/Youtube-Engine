@@ -375,3 +375,10 @@ Source: `creative/references/winners/ricksclips3000/` (151 videos studied; 29 ex
 - Give the "you see" analogy its **own mini-scene**. End on a **physical spectacle on the final word**, cut mid-motion so it loops.
 - Illustrate figures of speech literally ("his face goes purple" → he turns purple).
 - Our edge over the reference: background chaos and second-watch gags (theirs are clean), plus our survival, apocalyptic and exploration lanes (they have almost none).
+
+## 21. Decisions locked by Vijay (2026-11-15)
+- **Picture:** code-built 3D world plus code-drawn 2D characters (the bridge engine in `creative/skills/cartoon-3d-short/`). AI video only for at most 2 effect shots, only when code can't do them.
+- **Captions:** reference style. One white bold word (two at most), black outline, about 65 % of the height. This replaces the "2-3 words with yellow keywords" rule.
+- **Music:** an original score synthesized in code. Lyria is the fallback.
+- **Voice:** ElevenLabs on fal, chosen by a measured similarity test against the reference narrator, then a blind pick.
+- **Order:** The City the Ice Ate (Camp Century), then the Emu War remake.
