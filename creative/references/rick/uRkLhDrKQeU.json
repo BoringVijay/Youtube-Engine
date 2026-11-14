@@ -1,0 +1,325 @@
+{
+ "title_guess": "Never Sit Under This Tree",
+ "channel_guess": "Zack D. Films",
+ "duration_s": 68,
+ "format": "explainer",
+ "premise": "A hypothetical survival scenario demonstrates the many ways the Manchineel tree can harm or kill a person.",
+ "hook": {
+  "first_2s_visual": "A cartoon man sits peacefully under a tree, then suddenly gets X's over his eyes, indicating death.",
+  "first_line_technique": "States a deadly consequence for a universally safe and common action.",
+  "text_on_screen": "If you ever sit under this tree, it can kill you."
+ },
+ "structure": [
+  {
+   "t": "0:00-0:14",
+   "beat": "setup",
+   "what_happens": "Introduces the premise of being stranded with the deadly Manchineel tree.",
+   "why_it_works": "Establishes the setting and identifies the specific threat immediately."
+  },
+  {
+   "t": "0:14-0:30",
+   "beat": "escalation",
+   "what_happens": "The character seeks shelter from rain, resulting in toxic sap causing severe skin blisters.",
+   "why_it_works": "Shows the first logical survival step failing disastrously due to the tree's hidden mechanics."
+  },
+  {
+   "t": "0:30-0:42",
+   "beat": "escalation",
+   "what_happens": "The starving character eats the tree's fruit, which burns his throat and stomach.",
+   "why_it_works": "Raises the stakes by attacking the character internally after external damage."
+  },
+  {
+   "t": "0:42-0:50",
+   "beat": "escalation",
+   "what_happens": "The character uses the leaves for toilet paper, causing blisters in a sensitive area.",
+   "why_it_works": "Adds a layer of dark humor while reinforcing the toxicity of every part of the plant."
+  },
+  {
+   "t": "0:50-1:04",
+   "beat": "escalation",
+   "what_happens": "The character burns the tree's wood for warmth, creating toxic smoke that blinds him and scorches his lungs.",
+   "why_it_works": "Provides the final, most severe consequence, showing that even dead parts of the tree are lethal."
+  },
+  {
+   "t": "1:04-1:08",
+   "beat": "loop",
+   "what_happens": "Advises the viewer to just sit in the sand instead.",
+   "why_it_works": "Resolves the scenario and visually contrasts with the opening shot of sitting under the tree."
+  }
+ ],
+ "shots": [
+  {
+   "t": "0:00",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "none",
+   "subject": "Character sitting under tree, dying"
+  },
+  {
+   "t": "0:03",
+   "framing": "aerial",
+   "camera": "orbit",
+   "transition": "cut",
+   "subject": "Island from above showing only one tree"
+  },
+  {
+   "t": "0:05",
+   "framing": "close",
+   "camera": "push-in",
+   "transition": "cut",
+   "subject": "Vintage botanical poster of the Manchineel tree"
+  },
+  {
+   "t": "0:07",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Character standing next to tree with a red X painted on it"
+  },
+  {
+   "t": "0:14",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Satellite weather map showing an incoming storm"
+  },
+  {
+   "t": "0:16",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Character running under the tree in the rain"
+  },
+  {
+   "t": "0:19",
+   "framing": "macro",
+   "camera": "push-in",
+   "transition": "cut",
+   "subject": "Animated diagram showing milky sap on a leaf"
+  },
+  {
+   "t": "0:24",
+   "framing": "macro",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Cross-section diagram of skin blistering"
+  },
+  {
+   "t": "0:26",
+   "framing": "close",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Character covered in painful blisters"
+  },
+  {
+   "t": "0:28",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Car with paint peeling off from sap drips"
+  },
+  {
+   "t": "0:30",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Character standing next to tree the next morning"
+  },
+  {
+   "t": "0:34",
+   "framing": "close",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Character eating a green apple"
+  },
+  {
+   "t": "0:40",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "X-ray view of character's throat and stomach burning"
+  },
+  {
+   "t": "0:42",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Character squatting behind a bush holding leaves"
+  },
+  {
+   "t": "0:48",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Character walking awkwardly into the ocean in pain"
+  },
+  {
+   "t": "0:50",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Character freezing at night next to a pile of wood"
+  },
+  {
+   "t": "0:56",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Character starting a campfire"
+  },
+  {
+   "t": "1:01",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Thermal view of character's lungs scorching from smoke"
+  },
+  {
+   "t": "1:04",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Character standing safely on an empty beach"
+  }
+ ],
+ "pacing": {
+  "avg_shot_s": 3.5,
+  "cuts_in_first_5s": 2,
+  "where_it_slows_down": "During the scientific inserts (leaf diagram, skin cross-section, x-ray) to allow the viewer to absorb the technical information.",
+  "where_it_speeds_up": "When transitioning between the different hazards and times of day to keep the narrative moving quickly."
+ },
+ "look": {
+  "style": "2D cartoon animation with 3D environments and motion graphics inserts",
+  "palette": "Bright tropical daytime colors contrasting with dark, moody blues for night and storm scenes.",
+  "lighting": "Flat cartoon shading for characters, with dramatic lighting shifts for weather and glowing effects for internal damage.",
+  "texture": "Clean vector graphics mixed with stylized UI elements like x-rays and thermal imaging.",
+  "character_design": "Simple, iconic stick-figure body with an oversized, highly expressive round head."
+ },
+ "voice": {
+  "present": true,
+  "gender_age_impression": "Male, 20s-30s",
+  "tone": "Informative, slightly cautionary, upbeat despite the grim subject matter.",
+  "pace_wpm": 165,
+  "energy_curve": "Starts strong with the hook, maintains a steady informative pace, and peaks slightly during the descriptions of intense pain.",
+  "delivery_tricks": "Emphasizes key danger words and uses slight pauses before revealing the next terrible consequence."
+ },
+ "music": {
+  "present": true,
+  "genre": "Quirky, rhythmic background track",
+  "bpm_estimate": 105,
+  "where_it_drops": "Subtle volume dips during the scientific explanations to let the sound effects and voiceover take focus.",
+  "how_it_supports_the_story": "Provides a lighthearted contrast to the gruesome events happening on screen, keeping the tone entertaining rather than purely horrifying."
+ },
+ "sfx": "Sizzling sounds for acid/burning, UI beeps for x-ray/thermal views, environmental sounds (rain, fire crackling) to establish the scene.",
+ "hero_moments": "The sequence of internal views (x-ray of the throat burning, thermal view of the lungs scorching) visually validate the extreme danger described in the voiceover.",
+ "captions": "One to three words at a time, large, bold, white font with a black outline, positioned center-bottom, popping in sync with the audio.",
+ "why_it_works": [
+  "Subverts expectations by turning a common, safe object into a multifaceted threat.",
+  "Uses a relatable hypothetical scenario (stranded on an island) to frame the facts.",
+  "Employs a clear 'Rule of Four' structure, escalating the stakes with each new attempt to survive.",
+  "Breaks up standard animation with visually distinct 'scientific' inserts (x-ray, thermal, diagrams) to maintain visual interest.",
+  "Balances gruesome facts with a cute, simple character design and lighthearted music."
+ ],
+ "rules_to_borrow": [
+  "Start with a deadly or extreme consequence for a mundane action to instantly hook the viewer.",
+  "Structure the narrative around a series of escalating failures or hazards.",
+  "Use cutaway diagrams or 'x-ray' views to explain invisible processes or internal damage visually.",
+  "Contrast dark or gruesome subject matter with bright, colorful visuals or upbeat music to keep the tone accessible.",
+  "Use clear, universally understood visual symbols (like a red X or glowing red for heat) to communicate danger quickly.",
+  "Keep character designs simple so the audience focuses on the situation and the educational content."
+ ],
+ "do_not_copy": [
+  "The specific round-headed stick figure character design.",
+  "The exact combination of 2D character in a 3D-looking beach environment."
+ ],
+ "title_formula": "If You Ever [Action] This [Object], It Can [Extreme Consequence]",
+ "topic_type": "science explainer",
+ "why_this_topic": "It triggers morbid curiosity by revealing hidden, extreme dangers in seemingly harmless natural objects.",
+ "hook_line": "If you ever sit under this tree, it can kill you.",
+ "script_shape": [
+  {
+   "t": "0:00-0:05",
+   "role": "paradox",
+   "technique": "States a deadly consequence for a universally safe action."
+  },
+  {
+   "t": "0:05-0:14",
+   "role": "explanation",
+   "technique": "Names the threat and sets up the hypothetical scenario."
+  },
+  {
+   "t": "0:14-0:30",
+   "role": "escalation",
+   "technique": "Shows the first hazard (sap) failing a survival attempt."
+  },
+  {
+   "t": "0:30-0:42",
+   "role": "escalation",
+   "technique": "Shows the second hazard (fruit) causing internal damage."
+  },
+  {
+   "t": "0:42-0:50",
+   "role": "escalation",
+   "technique": "Shows the third hazard (leaves) causing embarrassing pain."
+  },
+  {
+   "t": "0:50-1:04",
+   "role": "escalation",
+   "technique": "Shows the final hazard (smoke) causing severe internal damage."
+  },
+  {
+   "t": "1:04-1:08",
+   "role": "loop",
+   "technique": "Provides a concluding piece of advice that visually links back to the opening."
+  }
+ ],
+ "pivot": {
+  "present": true,
+  "t": "0:05",
+  "phrase_type": "Naming the specific threat ('It's called the...')",
+  "what_changes_on_screen": "Cuts from a 3D island environment to a flat, 2D vintage botanical poster."
+ },
+ "words_per_second_estimate": 1.6,
+ "world": {
+  "setting": "A deserted tropical island.",
+  "era": "Modern day (implied by satellite and medical imaging).",
+  "locations": [
+   "Beach under the tree",
+   "Ocean water",
+   "Behind a bush",
+   "By a campfire"
+  ],
+  "set_dressing": "Sand, ocean, the Manchineel tree, green apples, a red X painted on the trunk, a pile of wood, a campfire."
+ },
+ "cast": [
+  {
+   "role": "Protagonist/Victim",
+   "costume": "Orange floral shirt, blue shorts",
+   "screen_time": "main",
+   "expressions_used": [
+    "Happy/Peaceful",
+    "Dead (X eyes)",
+    "Scared/Sweating",
+    "Pained/Blistered",
+    "Crying",
+    "Angry"
+   ]
+  }
+ ],
+ "lighting_flip": "Shifts from bright daylight to dark, stormy night at 0:14, back to day at 0:30, and back to night at 0:50.",
+ "inserts": [
+  "Vintage botanical poster",
+  "Satellite weather map",
+  "Animated leaf sap diagram",
+  "Skin cross-section",
+  "X-ray of torso",
+  "Thermal view of lungs"
+ ],
+ "camera_moves": "Predominantly static shots with hard cuts; uses push-ins on diagrams and inserts to focus attention on the scientific details.",
+ "loop_device": "The final advice to 'just sit in the sand' visually and thematically contrasts with the opening warning about sitting under the tree, bringing the viewer back to the initial beach setting.",
+ "weak_spots": "The transitions between the different survival attempts (rain, food, fire) feel slightly episodic and rely entirely on the voiceover to bridge the gaps in time.",
+ "url": "https://www.youtube.com/shorts/uRkLhDrKQeU",
+ "id": "uRkLhDrKQeU",
+ "studied_at": "2026-11-14T08:19:43Z",
+ "model": "gemini-3.1-pro-preview"
+}

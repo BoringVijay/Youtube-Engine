@@ -1,0 +1,294 @@
+{
+ "title_guess": "How Lottery Stings Catch Corrupt Clerks",
+ "channel_guess": "Zack D. Films",
+ "duration_s": 58,
+ "format": "explainer",
+ "premise": "A corrupt store clerk tries to steal a winning lottery ticket but falls into an elaborate undercover sting operation.",
+ "hook": {
+  "first_2s_visual": "A 3D animated store clerk scans a lottery ticket, his eyes widen, and a bead of sweat appears as the register displays '$1,000,000'.",
+  "first_line_technique": "Starts in media res with a high-stakes betrayal, immediately establishing a clear villain and a relatable fear (being scammed out of a win).",
+  "text_on_screen": "He scanned a customer's lottery ticket,"
+ },
+ "structure": [
+  {
+   "t": "0:00-0:16",
+   "beat": "setup",
+   "what_happens": "The clerk lies to the customer about a winning ticket, waits for him to leave, and retrieves it from the trash.",
+   "why_it_works": "Establishes the crime clearly and makes the viewer hate the antagonist, creating a desire for justice."
+  },
+  {
+   "t": "0:16-0:32",
+   "beat": "escalation",
+   "what_happens": "The clerk fantasizes about his new wealth and goes to the lottery office to claim the prize, where he is told to wait.",
+   "why_it_works": "Builds anticipation. The viewer knows something is wrong because the clerk's success feels unearned, creating tension."
+  },
+  {
+   "t": "0:32-0:43",
+   "beat": "twist",
+   "what_happens": "The 'customer' walks in wearing a suit and badge, accompanied by police, revealing it was a setup.",
+   "why_it_works": "Delivers the satisfying payoff of justice while introducing a surprising element (the customer was a cop)."
+  },
+  {
+   "t": "0:43-0:54",
+   "beat": "explanation",
+   "what_happens": "The narrator breaks the fourth wall to explain the real-world statistics of clerk fraud and how these sting operations work.",
+   "why_it_works": "Transitions from a fictional narrative to a factual explainer, satisfying the viewer's curiosity about how the trick was pulled off."
+  },
+  {
+   "t": "0:54-0:58",
+   "beat": "loop",
+   "what_happens": "An undercover agent walks into another store to repeat the process, visually connecting back to the start.",
+   "why_it_works": "Creates a seamless, infinite loop that encourages rewatching."
+  }
+ ],
+ "shots": [
+  {
+   "t": "0:00",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "none",
+   "subject": "Clerk behind counter scanning ticket"
+  },
+  {
+   "t": "0:01",
+   "framing": "close",
+   "camera": "push-in",
+   "transition": "cut",
+   "subject": "Lottery ticket on counter"
+  },
+  {
+   "t": "0:02",
+   "framing": "close",
+   "camera": "push-in",
+   "transition": "cut",
+   "subject": "Clerk sweating, register showing $1,000,000"
+  },
+  {
+   "t": "0:06",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Customer shrugging"
+  },
+  {
+   "t": "0:10",
+   "framing": "close",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Clerk digging in trash can"
+  },
+  {
+   "t": "0:12",
+   "framing": "POV",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Looking up at clerk from inside the trash can"
+  },
+  {
+   "t": "0:17",
+   "framing": "wide",
+   "camera": "tracking",
+   "transition": "cut",
+   "subject": "Clerk on a yacht at night"
+  },
+  {
+   "t": "0:23",
+   "framing": "medium",
+   "camera": "tracking",
+   "transition": "cut",
+   "subject": "Clerk driving to lottery office"
+  },
+  {
+   "t": "0:28",
+   "framing": "close",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Lottery official smiling at counter"
+  },
+  {
+   "t": "0:36",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Undercover agent entering waiting room"
+  },
+  {
+   "t": "0:43",
+   "framing": "close",
+   "camera": "panning",
+   "transition": "cut",
+   "subject": "Evidence board showing statistics of winning clerks"
+  },
+  {
+   "t": "0:52",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Safe opening to reveal bait tickets"
+  },
+  {
+   "t": "0:54",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Agent walking into a new gas station"
+  }
+ ],
+ "pacing": {
+  "avg_shot_s": 2.2,
+  "cuts_in_first_5s": 4,
+  "where_it_slows_down": "0:32-0:36, during the waiting room scene to build tension before the reveal.",
+  "where_it_speeds_up": "0:43-0:54, during the rapid-fire explanation of the real-world mechanics."
+ },
+ "look": {
+  "style": "3D animation",
+  "palette": "Bright, saturated primary colors (reds, blues, yellows) with distinct lighting changes for mood (e.g., purple night sky for the dream sequence).",
+  "lighting": "Flat, even lighting for daytime scenes; dramatic, colorful lighting for the fantasy sequence.",
+  "texture": "Smooth, untextured surfaces typical of fast-turnaround 3D explainer animations.",
+  "character_design": "Simple, pill-shaped bodies with floating limbs, distinct hairstyles, and expressive, oversized facial features."
+ },
+ "voice": {
+  "present": true,
+  "gender_age_impression": "Male, 20s-30s",
+  "tone": "Energetic, conversational, slightly dramatic storyteller",
+  "pace_wpm": 185,
+  "energy_curve": "Starts high with the inciting incident, maintains steady narrative pace, drops slightly during the waiting scene, then peaks at the twist and maintains high energy through the explanation.",
+  "delivery_tricks": "Emphasizes key words ('million dollars', 'elbow deep', 'real life') and uses slight pauses before reveals."
+ },
+ "music": {
+  "present": true,
+  "genre": "Sneaky, upbeat instrumental",
+  "bpm_estimate": 110,
+  "where_it_drops": "0:36, the music pauses briefly as the door opens, highlighting the twist.",
+  "how_it_supports_the_story": "The playful, slightly mischievous tone fits the 'heist/sting' narrative without making it too dark or serious."
+ },
+ "sfx": "Scanner beep, cash register ding, trash rustling, boat horn, fireworks, car engine, bell ding, door opening, faint police siren, paper printing, safe opening.",
+ "hero_moments": "The buildup from 0:32 to 0:39. The clerk sits smugly, the clock ticks (implied by the narrator), the door opens, and the camera cuts to the 'customer' now in a suit, revealing his badge as police flank him. The visual transformation of the character delivers the punchline.",
+ "captions": "Dynamic, word-by-word highlighting in the center of the screen, using a bold, sans-serif font with a black outline for readability.",
+ "why_it_works": [
+  "It taps into a universal fear/suspicion (getting scammed by a cashier).",
+  "It uses a narrative structure (story first, facts second) rather than just listing facts.",
+  "The villain is immediately established and punished, providing satisfying emotional closure.",
+  "The 'You see...' pivot at 0:43 rewards the viewer with insider knowledge about how the world works.",
+  "The visual storytelling is highly efficient, using props (wallet, trash can, evidence board) to convey information quickly.",
+  "The seamless loop forces a rewatch before the viewer realizes the video has ended."
+ ],
+ "rules_to_borrow": [
+  "Start with a high-stakes action or betrayal in the first 3 seconds.",
+  "Tell a specific, fictionalized story to illustrate a broader, factual concept.",
+  "Use a 'You see...' pivot at the 75% mark to transition from narrative to explanation.",
+  "Visually transform a character to reveal a plot twist (e.g., changing clothes to reveal identity).",
+  "Use a unique POV shot (like from inside a trash can) to break visual monotony.",
+  "Design the final shot to visually and narratively lead directly into the first shot for a perfect loop."
+ ],
+ "do_not_copy": [
+  "The specific pill-shaped character designs with floating limbs.",
+  "The exact 'Reel Big Cash' lottery ticket design.",
+  "The specific voiceover cadence if it mimics Zack D. Films too closely."
+ ],
+ "title_formula": "How [Authority] Catches [Type of Criminal]",
+ "topic_type": "clever loophole",
+ "why_this_topic": "It reveals a secret system designed to catch people who try to cheat everyday citizens, satisfying both curiosity and a sense of justice.",
+ "hook_line": "He scanned a customer's lottery ticket, saw it had won a million dollars, and said, 'Sorry man, not a winner.'",
+ "script_shape": [
+  {
+   "t": "0:00-0:16",
+   "role": "escalation",
+   "technique": "Describes the crime and the immediate cover-up."
+  },
+  {
+   "t": "0:16-0:32",
+   "role": "escalation",
+   "technique": "Shows the criminal's false sense of security and greed."
+  },
+  {
+   "t": "0:32-0:43",
+   "role": "twist",
+   "technique": "Reveals the trap springing shut."
+  },
+  {
+   "t": "0:43-0:54",
+   "role": "explanation",
+   "technique": "Explains the systemic reason behind the specific story."
+  },
+  {
+   "t": "0:54-0:58",
+   "role": "loop",
+   "technique": "Sets up the next iteration of the sting."
+  }
+ ],
+ "pivot": {
+  "present": true,
+  "t": "0:43",
+  "phrase_type": "You see, in real life...",
+  "what_changes_on_screen": "The scene cuts from the narrative waiting room to an abstract 'evidence board' explaining statistics, shifting from story mode to documentary mode."
+ },
+ "words_per_second_estimate": 3.1,
+ "world": {
+  "setting": "A stylized, generic American town.",
+  "era": "Modern day.",
+  "locations": [
+   "Convenience store interior",
+   "Yacht on the ocean",
+   "Clerk's bedroom",
+   "Roadway",
+   "Lottery claim office",
+   "Abstract evidence board",
+   "Undercover staging area"
+  ],
+  "set_dressing": "Lottery signs, scratch-off dispensers, trash cans, neon signs, waiting room chairs, fish tank, evidence pins and string."
+ },
+ "cast": [
+  {
+   "role": "Corrupt Clerk (Kyle)",
+   "costume": "Red polo shirt, name tag, later a brown suit",
+   "screen_time": "main",
+   "expressions_used": [
+    "sweating",
+    "smug smile",
+    "sleeping",
+    "excited",
+    "shocked/terrified"
+   ]
+  },
+  {
+   "role": "Undercover Agent",
+   "costume": "Fishing hat, yellow jacket, later a blue suit with a badge",
+   "screen_time": "main",
+   "expressions_used": [
+    "bored/shrugging",
+    "stern/authoritative"
+   ]
+  },
+  {
+   "role": "Lottery Official",
+   "costume": "Teal blazer, glasses, pearl necklace",
+   "screen_time": "support",
+   "expressions_used": [
+    "fake smiling"
+   ]
+  },
+  {
+   "role": "Police Officers",
+   "costume": "Standard blue uniforms",
+   "screen_time": "support",
+   "expressions_used": [
+    "stern"
+   ]
+  }
+ ],
+ "lighting_flip": "At 0:16, the lighting flips from bright, flat convenience store lighting to a dark, purple-hued night scene for the fantasy sequence, then back to bright daylight at 0:23.",
+ "inserts": [
+  "Close-up of the winning lottery ticket.",
+  "Close-up of the register showing $1,000,000.",
+  "Close-up of the clerk's wallet with ID.",
+  "Close-up of the evidence board showing 'Clerks' vs 'Everyone Else'."
+ ],
+ "camera_moves": "The camera frequently uses quick push-ins on important details (the ticket, the register, the clerk's face) to emphasize stakes, while using static wide or medium shots for dialogue and action to keep the animation simple and readable.",
+ "loop_device": "The video ends with the undercover agent walking into a new store and approaching the counter, which perfectly matches the context of the opening line 'He scanned a customer's lottery ticket...'",
+ "weak_spots": "The transition from the fantasy sequence back to reality (driving the car) is slightly abrupt, though it keeps the pacing fast.",
+ "url": "https://www.youtube.com/shorts/VKsamN3Fk4U",
+ "id": "VKsamN3Fk4U",
+ "studied_at": "2026-11-14T08:04:05Z",
+ "model": "gemini-3.1-pro-preview"
+}

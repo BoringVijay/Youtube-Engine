@@ -1,0 +1,226 @@
+{
+ "title_guess": "How Do Painkillers Know Where It Hurts?",
+ "channel_guess": "Zack D. Films",
+ "duration_s": 35,
+ "format": "explainer",
+ "premise": "Explains the biological mechanism of painkillers using a simple, relatable analogy of a house with smoke alarms.",
+ "hook": {
+  "first_2s_visual": "A cartoon man with a throbbing red headache swallows a pill with a glass of water.",
+  "first_line_technique": "Asks a universal 'shower thought' question that everyone has experienced but few can answer.",
+  "text_on_screen": "How do painkillers know where the pain is?"
+ },
+ "structure": [
+  {
+   "t": "0:00-0:03",
+   "beat": "setup",
+   "what_happens": "The core question is asked while showing a man taking a pill for a headache.",
+   "why_it_works": "Immediately establishes the topic and the mystery in a relatable scenario."
+  },
+  {
+   "t": "0:04-0:14",
+   "beat": "escalation",
+   "what_happens": "The video shows the pill's literal journey, highlighting that it has no brain or map to find the pain.",
+   "why_it_works": "Deepens the mystery by showing that the obvious biological path doesn't explain the targeting mechanism."
+  },
+  {
+   "t": "0:15-0:24",
+   "beat": "twist",
+   "what_happens": "The visual shifts entirely to a metaphorical house with thousands of rooms and smoke alarms.",
+   "why_it_works": "Breaks the pattern of the literal explanation and introduces a highly visual, easy-to-grasp analogy."
+  },
+  {
+   "t": "0:25-0:35",
+   "beat": "payoff",
+   "what_happens": "The pills act like a SWAT team, disabling every single alarm in the house, explaining why the pain goes away.",
+   "why_it_works": "Provides a satisfying 'aha!' moment by revealing that painkillers don't target pain at all; they just mute the whole system."
+  }
+ ],
+ "shots": [
+  {
+   "t": "0:00",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "none",
+   "subject": "Man with a headache in his kitchen."
+  },
+  {
+   "t": "0:04",
+   "framing": "close",
+   "camera": "push-in",
+   "transition": "cut",
+   "subject": "Pill landing in the stomach acid."
+  },
+  {
+   "t": "0:08",
+   "framing": "wide",
+   "camera": "push-in",
+   "transition": "cut",
+   "subject": "Pills traveling down a blood vessel tunnel."
+  },
+  {
+   "t": "0:11",
+   "framing": "close",
+   "camera": "push-in",
+   "transition": "cut",
+   "subject": "Pill looking at a complex map of the body."
+  },
+  {
+   "t": "0:15",
+   "framing": "wide",
+   "camera": "push-in",
+   "transition": "cut",
+   "subject": "Exterior of the metaphorical house at night."
+  },
+  {
+   "t": "0:22",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "House hallway flashing red with a blaring alarm."
+  },
+  {
+   "t": "0:26",
+   "framing": "POV",
+   "camera": "push-in",
+   "transition": "cut",
+   "subject": "Moving rapidly down the hallway as pills kick in doors."
+  },
+  {
+   "t": "0:33",
+   "framing": "close",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "A pill ripping the battery out of a smoke alarm."
+  }
+ ],
+ "pacing": {
+  "avg_shot_s": 2.5,
+  "cuts_in_first_5s": 3,
+  "where_it_slows_down": "During the introduction of the house analogy (0:15-0:20) to let the new concept settle.",
+  "where_it_speeds_up": "When the pills breach the house and start disabling alarms (0:25 onwards)."
+ },
+ "look": {
+  "style": "3D animation mimicking a simple, flat 2D cartoon style",
+  "palette": "Starts with muted kitchen colors, shifts to fleshy pinks/reds, then to a stylized blue exterior and warm interior for the house.",
+  "lighting": "Flat and bright, except for dramatic red flashing lights used to signify pain.",
+  "texture": "Smooth, plastic-like 3D surfaces with no complex textures.",
+  "character_design": "Extremely simplified: round heads, dot eyes, straight line mouths, floating limbs on the pills."
+ },
+ "voice": {
+  "present": true,
+  "gender_age_impression": "Male, 20s-30s",
+  "tone": "Informative, upbeat, slightly playful",
+  "pace_wpm": 180,
+  "energy_curve": "Starts high with the question, maintains a steady explanatory energy, and peaks during the 'SWAT team' pill invasion.",
+  "delivery_tricks": "Emphasizes key words ('every single one', 'screaming') and uses a conversational 'Well, picture...' to transition into the analogy."
+ },
+ "music": {
+  "present": true,
+  "genre": "Quirky, upbeat instrumental",
+  "bpm_estimate": 110,
+  "where_it_drops": "The music shifts slightly in tone when the house analogy begins, becoming slightly more tense during the alarm sequence.",
+  "how_it_supports_the_story": "Keeps the momentum going without distracting from the dense voiceover."
+ },
+ "sfx": "Gulping sound, liquid splashes, paper rustling, loud jarring alarm bell, door kicking, electrical snapping sound when the battery is removed.",
+ "hero_moments": "The sequence from 0:25 to 0:30 where the pills swarm the house, kicking open doors in rapid succession, turning a biological process into an action movie scene.",
+ "captions": "One to three words at a time, center screen, bold white font with a black outline, popping in dynamically with the speech.",
+ "why_it_works": [
+  "It answers a very common 'shower thought' that most people don't know the answer to.",
+  "It uses a brilliant, physical analogy (house alarms) to explain a complex, invisible chemical process.",
+  "The pacing is relentless; there is no dead air or wasted frames.",
+  "It uses environmental text (signs, maps) to add humor and context without needing extra voiceover.",
+  "The visual of cute pills acting like a SWAT team is inherently funny and engaging."
+ ],
+ "rules_to_borrow": [
+  "Start with a universal, seemingly simple question about everyday life.",
+  "Translate invisible or microscopic processes into macro, physical analogies (like a house, a factory, a highway).",
+  "Use constant, slow camera push-ins to subconsciously pull the viewer forward through the narrative.",
+  "Embed jokes or extra information in background signage to reward re-watching.",
+  "If explaining a misconception, show the logical flaw of the misconception first before revealing the truth.",
+  "Use stark lighting changes (like the red flashing alarm) to visually represent a change in state (like pain)."
+ ],
+ "do_not_copy": [
+  "The specific character face design (dot eyes, straight line mouth).",
+  "The exact design of the anthropomorphic pills."
+ ],
+ "title_formula": "How [Everyday Object] Actually [Does Seemingly Impossible Thing]",
+ "topic_type": "science explainer",
+ "why_this_topic": "It solves a relatable, everyday mystery about our own bodies that feels like magic until explained.",
+ "hook_line": "How do painkillers know where the pain is?",
+ "script_shape": [
+  {
+   "t": "0:00-0:03",
+   "role": "paradox",
+   "technique": "Poses the central question that seems to defy logic."
+  },
+  {
+   "t": "0:04-0:14",
+   "role": "escalation",
+   "technique": "Shows the literal process to prove that the obvious answer is insufficient."
+  },
+  {
+   "t": "0:15-0:24",
+   "role": "pivot",
+   "technique": "Introduces a completely new metaphorical setting to reframe the problem."
+  },
+  {
+   "t": "0:25-0:35",
+   "role": "explanation",
+   "technique": "Resolves the paradox using the rules of the new metaphor."
+  }
+ ],
+ "pivot": {
+  "present": true,
+  "t": "0:15",
+  "phrase_type": "'Well, picture your body as...'",
+  "what_changes_on_screen": "The setting completely changes from the fleshy, pink interior of a body to the stylized, blue exterior of a suburban house."
+ },
+ "words_per_second_estimate": 4,
+ "world": {
+  "setting": "Abstract biological and metaphorical spaces",
+  "era": "Modern",
+  "locations": [
+   "Kitchen",
+   "Stomach (Acid Spa)",
+   "Blood Vessel Tunnel",
+   "Metaphorical House Exterior",
+   "Metaphorical House Hallway"
+  ],
+  "set_dressing": "Humorous signs ('Acid Spa', 'Headache 20 Min'), body maps, smoke alarms, doors with body part labels."
+ },
+ "cast": [
+  {
+   "role": "Human",
+   "costume": "Purple shirt",
+   "screen_time": "main",
+   "expressions_used": [
+    "pained",
+    "relieved"
+   ]
+  },
+  {
+   "role": "Pills",
+   "costume": "Half blue, half clear with green beads",
+   "screen_time": "support",
+   "expressions_used": [
+    "happy",
+    "determined",
+    "confused"
+   ]
+  }
+ ],
+ "lighting_flip": "At 0:22, the warm, calm lighting of the house hallway abruptly switches to harsh, flashing red to visually represent the onset of pain.",
+ "inserts": [
+  "'Acid Spa' sign in the stomach",
+  "'Human Body Official Road Map'",
+  "'Headache 20 Min' highway sign",
+  "'Head' door sign in the house"
+ ],
+ "camera_moves": "Almost every shot features a slow, steady push-in to draw the viewer forward, connected by hard cuts. There are no complex camera sweeps or pans.",
+ "loop_device": "There is no seamless visual loop, but the final spoken word 'head' conceptually links back to the opening visual of the man with a headache.",
+ "weak_spots": "The sudden transition from the literal body to the metaphorical house at 0:15 might momentarily confuse a viewer watching without sound.",
+ "url": "https://www.youtube.com/shorts/_sUAXTvJquk",
+ "id": "_sUAXTvJquk",
+ "studied_at": "2026-11-14T08:12:56Z",
+ "model": "gemini-3.1-pro-preview"
+}

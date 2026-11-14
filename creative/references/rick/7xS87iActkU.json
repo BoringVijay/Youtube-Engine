@@ -1,0 +1,234 @@
+{
+ "title_guess": "Why Railroads Have Gaps",
+ "channel_guess": "Generic 3D Explainer",
+ "duration_s": 65,
+ "format": "explainer",
+ "premise": "An engineer is mocked for leaving gaps in his railroad tracks, but his design prevents a catastrophic derailment when summer heat causes thermal expansion.",
+ "hook": {
+  "first_2s_visual": "A cartoon engineer uses a tool to measure a gap he just created between two sections of railroad track.",
+  "first_line_technique": "States a highly specific, counter-intuitive action that demands an explanation.",
+  "text_on_screen": "He sawed gaps"
+ },
+ "structure": [
+  {
+   "t": "0:00-0:11",
+   "beat": "setup",
+   "what_happens": "Introduces the premise of two companies racing to build a railroad across a canyon.",
+   "why_it_works": "Establishes clear stakes and a competition."
+  },
+  {
+   "t": "0:11-0:35",
+   "beat": "escalation",
+   "what_happens": "One engineer leaves gaps and is yelled at; the rival builds a seamless track, wins the contract, and gets all the business.",
+   "why_it_works": "Creates an underdog dynamic and sets up a false victory for the rival."
+  },
+  {
+   "t": "0:35-0:58",
+   "beat": "twist",
+   "what_happens": "Summer arrives. The heat causes the metal tracks to expand, closing the gaps on the first track, while the seamless track begins to groan under the pressure.",
+   "why_it_works": "Introduces the scientific principle (thermal expansion) as the turning point of the story."
+  },
+  {
+   "t": "0:58-1:05",
+   "beat": "payoff",
+   "what_happens": "The seamless track buckles violently under the heat just as a train crosses, causing a massive crash.",
+   "why_it_works": "Delivers a dramatic, visual consequence that proves the underdog engineer was right all along."
+  }
+ ],
+ "shots": [
+  {
+   "t": "0:00",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "none",
+   "subject": "Engineer measuring a gap in the tracks."
+  },
+  {
+   "t": "0:04",
+   "framing": "wide",
+   "camera": "push-in",
+   "transition": "cut",
+   "subject": "Two unfinished bridges spanning a massive canyon."
+  },
+  {
+   "t": "0:13",
+   "framing": "medium",
+   "camera": "push-in",
+   "transition": "cut",
+   "subject": "Boss looking down at the gap, getting angry."
+  },
+  {
+   "t": "0:24",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Rival company finishing their seamless track."
+  },
+  {
+   "t": "0:38",
+   "framing": "macro",
+   "camera": "push-in",
+   "transition": "cut",
+   "subject": "Close-up of the gap shrinking as the metal expands."
+  },
+  {
+   "t": "0:50",
+   "framing": "close",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Seamless rails glowing pink and purple from heat stress."
+  },
+  {
+   "t": "1:01",
+   "framing": "wide",
+   "camera": "aerial",
+   "transition": "cut",
+   "subject": "The seamless track buckling sideways like a snake."
+  }
+ ],
+ "pacing": {
+  "avg_shot_s": 2.1,
+  "cuts_in_first_5s": 3,
+  "where_it_slows_down": "0:36-0:47, during the explanation of the gaps shrinking over the summer months.",
+  "where_it_speeds_up": "0:58-1:05, the climax where the track buckles and the train crashes."
+ },
+ "look": {
+  "style": "3D animation with 2D facial features",
+  "palette": "Warm, saturated colors; lots of desert oranges, reds, and bright blue skies.",
+  "lighting": "Bright, flat daylight that becomes intensely harsh and warm during the 'summer' sequence.",
+  "texture": "Smooth, slightly plasticky 3D models with simple textures.",
+  "character_design": "Pill-shaped bodies with floating limbs and flat, expressive 2D faces."
+ },
+ "voice": {
+  "present": true,
+  "gender_age_impression": "Male, 20s-30s",
+  "tone": "Energetic, narrative, slightly dramatic",
+  "pace_wpm": 160,
+  "energy_curve": "Starts high to hook, dips slightly for exposition, builds steadily during the summer sequence, peaks at the explosion.",
+  "delivery_tricks": "Emphasizes key words ('finger-wide gap', 'perfectly smooth', 'hottest day') to guide the listener's attention."
+ },
+ "music": {
+  "present": true,
+  "genre": "Orchestral / Ragtime hybrid",
+  "bpm_estimate": 110,
+  "where_it_drops": "0:35, transitions to a more tense, ticking sound as summer approaches.",
+  "how_it_supports_the_story": "Provides a jaunty, old-timey feel during the setup, then shifts to build tension before the disaster."
+ },
+ "sfx": "Metal clanking, train whistles, the rhythmic 'clickety-clack' of the train, metal groaning under stress, and a loud explosion at the end.",
+ "hero_moments": "The sequence from 0:58 to 1:05. It builds tension by showing the rails glowing, then cuts to a wide aerial shot of the train approaching, followed by the sudden, violent buckling of the track and the resulting explosion.",
+ "captions": "Large, bold, white text with a black outline. One to three words appear at a time, popping in dynamically in the center of the lower third.",
+ "why_it_works": [
+  "Uses a clear 'A vs B' narrative structure to compare two methods.",
+  "Turns a dry physics concept (thermal expansion) into a high-stakes story.",
+  "Creates an underdog character the audience wants to see vindicated.",
+  "Uses visual metaphors (coin, paper) to explain the shrinking gaps simply.",
+  "Delivers a highly visual and dramatic payoff."
+ ],
+ "rules_to_borrow": [
+  "Start with a counter-intuitive action that begs for an explanation.",
+  "Personify abstract concepts (like engineering methods) through competing characters.",
+  "Show, don't just tell, the passage of time and changing conditions.",
+  "Use extreme visual cues (like glowing metal) to signal impending danger.",
+  "Let physics or nature be the ultimate judge in a conflict.",
+  "End with a dramatic consequence that proves the initial premise."
+ ],
+ "do_not_copy": [
+  "The specific pill-shaped character designs with 2D faces.",
+  "The exact canyon racing scenario."
+ ],
+ "title_formula": "Why [Profession] [Does Counter-intuitive Thing]",
+ "topic_type": "science explainer",
+ "why_this_topic": "It explains the hidden engineering behind a common phenomenon (the sound of trains) using a dramatic, disastrous scenario.",
+ "hook_line": "He sawed gaps into a railroad every 39 feet.",
+ "script_shape": [
+  {
+   "t": "0:00-0:03",
+   "role": "paradox",
+   "technique": "States an action that seems destructive to the goal."
+  },
+  {
+   "t": "0:03-0:11",
+   "role": "escalation",
+   "technique": "Introduces a competition to raise the stakes."
+  },
+  {
+   "t": "0:11-0:35",
+   "role": "pivot",
+   "technique": "Shows the 'wrong' method winning, creating a sense of injustice."
+  },
+  {
+   "t": "0:35-0:58",
+   "role": "explanation",
+   "technique": "Introduces the scientific variable that will change the outcome."
+  },
+  {
+   "t": "0:58-1:05",
+   "role": "twist",
+   "technique": "Delivers the disastrous consequence of ignoring the science."
+  }
+ ],
+ "pivot": {
+  "present": true,
+  "t": "0:35",
+  "phrase_type": "Time jump ('Then, summer comes...')",
+  "what_changes_on_screen": "The lighting becomes intensely warm and bright, a calendar is shown, and the music shifts to build tension."
+ },
+ "words_per_second_estimate": 2.6,
+ "world": {
+  "setting": "19th-century American West",
+  "era": "Late 1800s",
+  "locations": [
+   "Railroad track",
+   "Massive canyon",
+   "Train station",
+   "Desert landscape"
+  ],
+  "set_dressing": "Steam trains, top hats, bowler hats, pocket watches, old-fashioned measuring tools, newspapers."
+ },
+ "cast": [
+  {
+   "role": "Underdog Engineer",
+   "costume": "Striped conductor hat, green vest, red bandana",
+   "screen_time": "main",
+   "expressions_used": [
+    "neutral",
+    "smug",
+    "smiling"
+   ]
+  },
+  {
+   "role": "Angry Boss",
+   "costume": "Bowler hat, yellow vest, monocle",
+   "screen_time": "main",
+   "expressions_used": [
+    "angry",
+    "purple with rage",
+    "sweating",
+    "mocking"
+   ]
+  },
+  {
+   "role": "Rival Boss",
+   "costume": "Top hat, grey suit",
+   "screen_time": "support",
+   "expressions_used": [
+    "smug",
+    "relaxing"
+   ]
+  }
+ ],
+ "lighting_flip": "At 0:35, the lighting shifts from standard daylight to a harsh, saturated orange/yellow to visually represent the intense summer heat.",
+ "inserts": [
+  "A newspaper headline reading 'The Clickety Clack Line!'",
+  "A calendar flipping from May to July.",
+  "Calipers measuring the shrinking gap.",
+  "A coin and a piece of paper inserted into the gap to show scale."
+ ],
+ "camera_moves": "Frequent quick cuts between wide establishing shots and medium character shots. Uses slow push-ins during moments of realization or tension (like the boss getting angry or the gap shrinking). Aerial tracking shots are used to follow the trains.",
+ "loop_device": "The video ends abruptly on a massive explosion, and the first frame is the engineer calmly sawing, creating a jarring but engaging contrast that encourages rewatching.",
+ "weak_spots": "The visual of the track buckling sideways like a slithering snake is highly exaggerated and cartoonish, which might break immersion for viewers looking for a strictly accurate physics explanation.",
+ "url": "https://www.youtube.com/shorts/7xS87iActkU",
+ "id": "7xS87iActkU",
+ "studied_at": "2026-11-14T07:54:50Z",
+ "model": "gemini-3.1-pro-preview"
+}

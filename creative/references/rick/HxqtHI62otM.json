@@ -1,0 +1,217 @@
+{
+ "title_guess": "Why They Painted Jail Cells Pink",
+ "channel_guess": "Zack D. Films",
+ "duration_s": 65,
+ "format": "explainer",
+ "premise": "A specific shade of pink was used in prisons to calm inmates, but leaving them in too long had the exact opposite effect.",
+ "hook": {
+  "first_2s_visual": "A prison guard painting a drab grey brick wall with a bright pink roller.",
+  "first_line_technique": "States a bizarre, counter-intuitive action that immediately raises a 'why?' question.",
+  "text_on_screen": "painted"
+ },
+ "structure": [
+  {
+   "t": "0:00-0:14",
+   "beat": "setup",
+   "what_happens": "Introduces the specific pink color, the exact recipe, and the guards painting the prison.",
+   "why_it_works": "Establishes the premise quickly with strong visual contrast and specific details (the recipe) that make it feel factual."
+  },
+  {
+   "t": "0:14-0:37",
+   "beat": "escalation",
+   "what_happens": "A scientist introduces a 15-minute rule and tests it by putting a massive, aggressive inmate in the cell, then having a skinny guard arm wrestle him.",
+   "why_it_works": "Creates a high-stakes scenario and visually demonstrates the effect rather than just explaining it."
+  },
+  {
+   "t": "0:37-0:56",
+   "beat": "explanation",
+   "what_happens": "Reveals the pink drains the fight out of inmates, leading to nationwide adoption, but then shows an inmate going crazy after 20 minutes.",
+   "why_it_works": "Answers the core mystery but immediately introduces a new problem to keep the viewer hooked."
+  },
+  {
+   "t": "0:56-1:05",
+   "beat": "twist",
+   "what_happens": "Explains that the calming effect only lasts 15 minutes; any longer and it makes them hyper-aggressive.",
+   "why_it_works": "Provides a satisfying, ironic conclusion that flips the initial premise on its head."
+  }
+ ],
+ "shots": [
+  {
+   "t": "0:00",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "none",
+   "subject": "Guard painting wall pink"
+  },
+  {
+   "t": "0:02",
+   "framing": "close",
+   "camera": "push-in",
+   "transition": "cut",
+   "subject": "Recipe card on the wall"
+  },
+  {
+   "t": "0:03",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Scientist at desk with paint"
+  },
+  {
+   "t": "0:05",
+   "framing": "macro",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Pouring red paint into white paint on a scale"
+  },
+  {
+   "t": "0:07",
+   "framing": "wide",
+   "camera": "push-in",
+   "transition": "cut",
+   "subject": "Three guards painting a hallway pink"
+  }
+ ],
+ "pacing": {
+  "avg_shot_s": 2.5,
+  "cuts_in_first_5s": 4,
+  "where_it_slows_down": "0:14-0:22 during the explanation of the 15-minute rule.",
+  "where_it_speeds_up": "0:37-0:43 during the montage of jails across the country adopting the color."
+ },
+ "look": {
+  "style": "3D animation",
+  "palette": "Cool greys and blues contrasting sharply with vibrant Baker-Miller Pink.",
+  "lighting": "Flat, bright, cartoonish lighting with occasional dramatic shadows.",
+  "texture": "Smooth, minimal textures, flat shading on characters.",
+  "character_design": "Stick-figure limbs with 3D pill-shaped bodies and 2D facial features."
+ },
+ "voice": {
+  "present": true,
+  "gender_age_impression": "Male, 20s-30s",
+  "tone": "Enthusiastic, storytelling, slightly dramatic",
+  "pace_wpm": 185,
+  "energy_curve": "Starts high, maintains a steady narrative pace, drops slightly for the explanation, and peaks during the final twist.",
+  "delivery_tricks": "Emphasizes key words like 'exactly', 'thrilled', and 'two seconds' to highlight the extremes of the story."
+ },
+ "music": {
+  "present": true,
+  "genre": "Quirky, suspenseful background score",
+  "bpm_estimate": 110,
+  "where_it_drops": "Briefly pauses before the arm wrestling slam for comedic effect.",
+  "how_it_supports_the_story": "Adds a sense of mystery and lightheartedness, keeping the tone fun despite the prison setting."
+ },
+ "sfx": "Paint roller squelches, liquid pouring, stopwatch ticking, heavy footsteps, arm slam, metal ripping, knitting needles.",
+ "hero_moments": "The arm wrestling scene builds tension by showing the massive inmate with red dramatic lighting, then subverts expectations when the skinny guard wins easily, visually proving the concept.",
+ "captions": "Dynamic, one or two words at a time, center-screen, white text with black outline, pops in with slight scale animation.",
+ "why_it_works": [
+  "Bizarre premise that demands an explanation.",
+  "Clear visual contrast between the drab prison and the bright pink.",
+  "Shows rather than tells (the arm wrestling scene).",
+  "Uses specific details (15 minutes, exact paint recipe) to build credibility.",
+  "Unexpected twist at the end that recontextualizes the whole video."
+ ],
+ "rules_to_borrow": [
+  "Start with a visually striking anomaly.",
+  "Use a specific, odd detail to create curiosity.",
+  "Demonstrate abstract concepts with physical actions.",
+  "End with a twist that flips the initial premise.",
+  "Use color to signify a change in state or mood.",
+  "Keep character designs simple so the action is the focus."
+ ],
+ "do_not_copy": [
+  "The specific 3D stick-figure character models.",
+  "The exact voice cadence and tone of this specific creator."
+ ],
+ "title_formula": "Why [Institution] Did [Bizarre Thing]",
+ "topic_type": "psychology quirk",
+ "why_this_topic": "It combines true crime/prison aesthetics with a weird, counter-intuitive psychological phenomenon.",
+ "hook_line": "They painted the jail cell pink, and not just any pink.",
+ "script_shape": [
+  {
+   "t": "0:00-0:14",
+   "role": "setup",
+   "technique": "Introduces the core anomaly and the specific details surrounding it."
+  },
+  {
+   "t": "0:14-0:37",
+   "role": "escalation",
+   "technique": "Sets up a test with high stakes to prove the anomaly's effect."
+  },
+  {
+   "t": "0:37-0:56",
+   "role": "explanation",
+   "technique": "Explains the science behind the effect and shows its widespread adoption."
+  },
+  {
+   "t": "0:56-1:05",
+   "role": "twist",
+   "technique": "Reveals the fatal flaw in the plan, ending on a high-energy reversal."
+  }
+ ],
+ "pivot": {
+  "present": true,
+  "t": "0:52",
+  "phrase_type": "'You see...'",
+  "what_changes_on_screen": "The camera pushes in on the scientist explaining the phenomenon while the inmate goes crazy in the background."
+ },
+ "words_per_second_estimate": 3.1,
+ "world": {
+  "setting": "A stylized prison",
+  "era": "Modern/Timeless",
+  "locations": [
+   "Jail cell",
+   "Paint shop",
+   "Prison hallway",
+   "Cafeteria",
+   "Exterior map",
+   "Guard desk"
+  ],
+  "set_dressing": "Metal bars, concrete walls, paint cans, cafeteria tables, stopwatch, recipe card."
+ },
+ "cast": [
+  {
+   "role": "Scientist",
+   "costume": "White shirt, brown tie",
+   "screen_time": "main",
+   "expressions_used": [
+    "smug",
+    "explaining",
+    "confident"
+   ]
+  },
+  {
+   "role": "Guards",
+   "costume": "Blue uniform, black hat",
+   "screen_time": "support",
+   "expressions_used": [
+    "angry",
+    "happy",
+    "struggling",
+    "surprised"
+   ]
+  },
+  {
+   "role": "Inmates",
+   "costume": "Grey/Blue jumpsuits",
+   "screen_time": "support",
+   "expressions_used": [
+    "aggressive",
+    "weak",
+    "crazy",
+    "calm"
+   ]
+  }
+ ],
+ "lighting_flip": "The lighting turns red and dramatic when the big inmate is introduced at 0:25, then back to bright and flat when he is shown to be weak at 0:33.",
+ "inserts": [
+  "The P-618 Baker-Miller Pink recipe card",
+  "The stopwatch"
+ ],
+ "camera_moves": "Lots of fast push-ins, whip pans between characters, and seamless match cuts to keep the energy high.",
+ "loop_device": "The final shot shows the inmate getting aggressive again, visually tying back to the need to calm them down in the first place.",
+ "weak_spots": "The transition from the arm wrestling scene to the nationwide map feels a bit abrupt and breaks the spatial continuity.",
+ "url": "https://www.youtube.com/shorts/HxqtHI62otM",
+ "id": "HxqtHI62otM",
+ "studied_at": "2026-11-14T07:53:29Z",
+ "model": "gemini-3.1-pro-preview"
+}

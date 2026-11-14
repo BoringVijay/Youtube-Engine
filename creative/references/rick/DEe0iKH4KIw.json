@@ -1,0 +1,221 @@
+{
+ "title_guess": "How a Guy Cracked the Scratchcard Lottery",
+ "channel_guess": "Brew",
+ "duration_s": 63,
+ "format": "explainer",
+ "premise": "A man discovers a hidden pattern in the exposed numbers on scratchcards that allows him to identify winners without scratching them.",
+ "hook": {
+  "first_2s_visual": "A character sits at a desk holding two identical scratchcards; one glows with a golden aura, the other is covered in green trash.",
+  "first_line_technique": "Direct command combined with a visual paradox (one winner, one loser, but they look identical).",
+  "text_on_screen": "Look at these two scratchcards."
+ },
+ "structure": [
+  {
+   "t": "0:00-0:06",
+   "beat": "setup",
+   "what_happens": "Introduces the premise of identifying winning scratchcards without scratching them.",
+   "why_it_works": "Creates immediate curiosity by presenting an impossible scenario."
+  },
+  {
+   "t": "0:06-0:17",
+   "beat": "escalation",
+   "what_happens": "Tells the backstory of the protagonist getting fired, buying tickets, and winning his money back.",
+   "why_it_works": "Establishes an underdog character and a relatable motivation."
+  },
+  {
+   "t": "0:17-0:44",
+   "beat": "twist",
+   "what_happens": "He realizes the lottery machine must know the winners, buys a massive stack of tickets, and finds the visual pattern in the exposed numbers.",
+   "why_it_works": "Satisfies the initial curiosity with a clear, visual explanation of the loophole."
+  },
+  {
+   "t": "0:44-0:52",
+   "beat": "escalation",
+   "what_happens": "He maps out gas stations to exploit the trick, but instead calls the lottery to report it.",
+   "why_it_works": "Subverts expectations; instead of getting rich, he takes the moral (and unexpected) high ground."
+  },
+  {
+   "t": "0:52-1:03",
+   "beat": "payoff",
+   "what_happens": "He proves his theory to the lottery officials, resulting in the game being pulled from stores.",
+   "why_it_works": "Provides a satisfying conclusion where the underdog beats the system and forces a change."
+  }
+ ],
+ "shots": [
+  {
+   "t": "0:00",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Character sitting at a desk with two scratchcards."
+  },
+  {
+   "t": "0:01",
+   "framing": "close",
+   "camera": "push-in",
+   "transition": "cut",
+   "subject": "The two scratchcards, one glowing and one covered in trash."
+  },
+  {
+   "t": "0:05",
+   "framing": "macro",
+   "camera": "push-in",
+   "transition": "cut",
+   "subject": "Close-up of the exposed numbers on the front of a scratchcard."
+  },
+  {
+   "t": "0:06",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Character being thrown out of an office building with a box of his belongings."
+  },
+  {
+   "t": "0:19",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Inside a bright, colorful lottery ticket printing factory."
+  }
+ ],
+ "pacing": {
+  "avg_shot_s": 2.5,
+  "cuts_in_first_5s": 3,
+  "where_it_slows_down": "0:32-0:40 during the technical explanation of the number grids.",
+  "where_it_speeds_up": "0:22-0:28 during the montage of buying and spreading tickets on the floor."
+ },
+ "look": {
+  "style": "2D vector animation",
+  "palette": "Warm yellows, oranges, and deep blues",
+  "lighting": "Flat digital lighting with localized glows on important objects",
+  "texture": "Clean, smooth, digital",
+  "character_design": "Simple stick-like limbs, large round heads, minimal facial features"
+ },
+ "voice": {
+  "present": true,
+  "gender_age_impression": "Male, 20s-30s",
+  "tone": "Energetic, intriguing, narrative",
+  "pace_wpm": 160,
+  "energy_curve": "Starts high with a hook, maintains a steady storytelling pace, peaks during the realization of the pattern.",
+  "delivery_tricks": "Emphasizes key words ('garbage', 'exactly', 'impossible') to drive the narrative."
+ },
+ "music": {
+  "present": true,
+  "genre": "Upbeat, slightly sneaky/investigative background track",
+  "bpm_estimate": 110,
+  "where_it_drops": "No major drops, but shifts slightly at 0:17 when the perspective changes to the lottery factory.",
+  "how_it_supports_the_story": "Maintains momentum and adds a playful, heist-like vibe to the investigation."
+ },
+ "sfx": "Whooshes for transitions, magical chimes for the winning ticket, cash register dings, scratching sounds, phone ringing, popping sounds for numbers lighting up.",
+ "hero_moments": "0:32-0:40: The visual breakdown of the number grids. The camera pushes in on the tickets, and specific numbers light up in different colors to visually demonstrate the pattern, culminating in a pencil circling the winning sequence.",
+ "captions": "Center screen, 1-3 words at a time, bold white font with a thick black outline, dynamic scaling on impact words.",
+ "why_it_works": [
+  "The premise promises a secret to something everyone wants (winning the lottery).",
+  "The visual explanation of the loophole is clear and easy to follow.",
+  "The protagonist is an underdog (just fired), making the audience root for him.",
+  "The twist of him reporting it instead of exploiting it adds an unexpected narrative turn."
+ ],
+ "rules_to_borrow": [
+  "Start with a bold, seemingly impossible claim.",
+  "Use visual paradoxes in the first 3 seconds to stop the scroll.",
+  "When explaining complex data, use color-coding and simple animations to guide the eye.",
+  "Keep the story moving by changing locations frequently.",
+  "Give your protagonist a relatable motivation (e.g., losing a job).",
+  "Use a 'what if' scenario to escalate the stakes before the resolution."
+ ],
+ "do_not_copy": [
+  "The specific Brew-style character designs with floating limbs and large round heads."
+ ],
+ "title_formula": "How [Underdog] Beat The [System]",
+ "topic_type": "clever loophole",
+ "why_this_topic": "It reveals a hidden flaw in a system designed to take people's money, offering a fantasy of beating the house.",
+ "hook_line": "Look at these two scratchcards.",
+ "script_shape": [
+  {
+   "t": "0:00-0:06",
+   "role": "paradox",
+   "technique": "Presents a visual and verbal contradiction to hook the viewer."
+  },
+  {
+   "t": "0:06-0:17",
+   "role": "setup",
+   "technique": "Establishes the character's situation and introduces the inciting incident."
+  },
+  {
+   "t": "0:17-0:22",
+   "role": "pivot",
+   "technique": "Shifts from a personal story to a systemic question."
+  },
+  {
+   "t": "0:22-0:44",
+   "role": "explanation",
+   "technique": "Visually breaks down the hidden mechanism."
+  },
+  {
+   "t": "0:44-0:52",
+   "role": "twist",
+   "technique": "Subverts the expected outcome of exploiting the loophole."
+  },
+  {
+   "t": "0:52-1:03",
+   "role": "payoff",
+   "technique": "Resolves the story with a satisfying conclusion."
+  }
+ ],
+ "pivot": {
+  "present": true,
+  "t": "0:17",
+  "phrase_type": "But instead of celebrating...",
+  "what_changes_on_screen": "The scene cuts from a dark apartment to a bright, colorful lottery printing factory."
+ },
+ "words_per_second_estimate": 2.8,
+ "world": {
+  "setting": "Modern urban environment",
+  "era": "Contemporary",
+  "locations": [
+   "Desk",
+   "Office lobby",
+   "Convenience store",
+   "Apartment",
+   "Lottery factory",
+   "Lottery HQ"
+  ],
+  "set_dressing": "Scratchcards, severance box, lottery ticket machine, map of gas stations"
+ },
+ "cast": [
+  {
+   "role": "Protagonist",
+   "costume": "Orange shirt, blue tie, ID lanyard",
+   "screen_time": "main",
+   "expressions_used": [
+    "neutral",
+    "sad",
+    "suspicious",
+    "happy",
+    "determined"
+   ]
+  },
+  {
+   "role": "Lottery Official",
+   "costume": "Blue suit, headset",
+   "screen_time": "support",
+   "expressions_used": [
+    "skeptical",
+    "surprised"
+   ]
+  }
+ ],
+ "lighting_flip": "Shifts from the dim, blue-lit apartment (0:14) to the bright, colorful factory (0:19) to emphasize the shift from personal experience to systemic realization.",
+ "inserts": [
+  "Scratchcards",
+  "Severance check",
+  "Map of gas stations"
+ ],
+ "camera_moves": "Mostly static shots with hard cuts. Occasional slow push-ins on important details like the scratchcards to focus attention.",
+ "loop_device": "The video ends with the game being pulled from stores, which naturally leads back to the beginning where he introduces the game.",
+ "weak_spots": "The explanation of the number frequency (0:32-0:40) happens very quickly and might require a re-watch to fully understand the logic.",
+ "url": "https://www.youtube.com/shorts/DEe0iKH4KIw",
+ "id": "DEe0iKH4KIw",
+ "studied_at": "2026-11-14T08:01:50Z",
+ "model": "gemini-3.1-pro-preview"
+}

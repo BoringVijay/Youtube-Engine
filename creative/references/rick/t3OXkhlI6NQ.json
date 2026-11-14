@@ -1,0 +1,234 @@
+{
+ "title_guess": "He Sold His Memories To Save His Brother",
+ "channel_guess": "Story Animation Channel",
+ "duration_s": 78,
+ "format": "bizarre",
+ "premise": "In a dystopian world where memories are currency, a man sells all his happy years to pay for his sick brother's medical treatment, ultimately forgetting the brother he saved.",
+ "hook": {
+  "first_2s_visual": "A close-up of a glowing SD card displaying a happy memory of a stick figure, being handed across a counter.",
+  "first_line_technique": "Introduces a surreal, high-stakes transaction immediately to spark curiosity.",
+  "text_on_screen": "He sold his happiest memory"
+ },
+ "structure": [
+  {
+   "t": "0:00-0:13",
+   "beat": "setup",
+   "what_happens": "Establishes the rules of the world: memories are used as money to pay for rent and groceries.",
+   "why_it_works": "Quickly grounds a sci-fi concept in relatable, everyday struggles."
+  },
+  {
+   "t": "0:13-0:31",
+   "beat": "escalation",
+   "what_happens": "Shows the societal divide: the rich hoard happy memories while the poor stare blankly at photos they don't remember.",
+   "why_it_works": "Expands the world-building and shows the bleak consequences of this economy."
+  },
+  {
+   "t": "0:31-0:54",
+   "beat": "escalation",
+   "what_happens": "Jerry's brother gets sick, forcing Jerry to sell progressively larger chunks of his happy memories to afford medicine.",
+   "why_it_works": "Introduces personal stakes and a ticking clock, making the abstract concept deeply emotional."
+  },
+  {
+   "t": "0:54-1:05",
+   "beat": "climax",
+   "what_happens": "Jerry sells his final good year, despite a warning from the shopkeeper.",
+   "why_it_works": "The ultimate sacrifice is made, creating tension about the aftermath."
+  },
+  {
+   "t": "1:05-1:18",
+   "beat": "twist",
+   "what_happens": "The brother is cured and asks about a shared memory, but Jerry has completely forgotten him.",
+   "why_it_works": "Delivers a tragic, monkey's-paw style ending that perfectly aligns with the established rules."
+  }
+ ],
+ "shots": [
+  {
+   "t": "0:00",
+   "framing": "close",
+   "camera": "push-in",
+   "transition": "none",
+   "subject": "SD card containing a memory"
+  },
+  {
+   "t": "0:05",
+   "framing": "wide",
+   "camera": "pan",
+   "transition": "cut",
+   "subject": "Rainy city street with a memory shop"
+  },
+  {
+   "t": "0:16",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Rich man relaxing by a bright pool"
+  },
+  {
+   "t": "0:36",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Jerry sitting by his sick brother in the hospital"
+  },
+  {
+   "t": "0:56",
+   "framing": "macro",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Ledger book showing years stamped 'SOLD'"
+  }
+ ],
+ "pacing": {
+  "avg_shot_s": 2.5,
+  "cuts_in_first_5s": 3,
+  "where_it_slows_down": "0:54, when Jerry is warned about selling his last good year.",
+  "where_it_speeds_up": "0:45, during the montage of Jerry selling memories for surgery."
+ },
+ "look": {
+  "style": "2D characters in 3D environments",
+  "palette": "Moody blues and purples for the real world, bright yellows and cyans for memories and the rich area.",
+  "lighting": "High contrast, neon-lit cityscapes mixed with sterile hospital lights.",
+  "texture": "Smooth 3D backgrounds with flat, cartoonish character shading.",
+  "character_design": "Simple, expressive stick-figure-like bodies with detailed hair and clothing."
+ },
+ "voice": {
+  "present": true,
+  "gender_age_impression": "Male, 20s-30s",
+  "tone": "Somber, storytelling, slightly detached",
+  "pace_wpm": 215,
+  "energy_curve": "Starts informative, becomes increasingly urgent during the illness, and drops to a quiet, melancholic tone at the end.",
+  "delivery_tricks": "Pauses before the final twist to let the realization sink in."
+ },
+ "music": {
+  "present": true,
+  "genre": "Melancholic synth/piano",
+  "bpm_estimate": 90,
+  "where_it_drops": "1:11, when the brother asks about the frog story.",
+  "how_it_supports_the_story": "Maintains a slightly dystopian, sad atmosphere that underscores the tragedy of the premise."
+ },
+ "sfx": "Cash register dings, rain ambience, heart monitor beeps, heavy stamp sounds on the ledger.",
+ "hero_moments": "The sequence from 0:56 to 1:05 builds the climax by showing the ledger of sold years, pushing in on the shopkeeper's concerned face, and ending with the final transaction.",
+ "captions": "Single words, center screen, dynamic sizing, white text with a slight drop shadow.",
+ "why_it_works": [
+  "The premise is immediately understandable but highly original.",
+  "It grounds a sci-fi concept in the relatable struggle of paying for healthcare.",
+  "The visual contrast between the rich and poor areas clearly explains the world's economy without heavy exposition.",
+  "The use of physical props (SD cards, ledgers, polaroids) makes the abstract concept of memories tangible.",
+  "The ending is tragic but inevitable based on the rules established, leaving a lasting emotional impact."
+ ],
+ "rules_to_borrow": [
+  "Start with a bizarre transaction to hook the viewer immediately.",
+  "Explain complex world-building through visual contrasts (e.g., sunny pool vs. rainy street).",
+  "Make abstract concepts physical (e.g., memories as SD cards or polaroids).",
+  "Raise the stakes by introducing a vulnerable character who needs saving.",
+  "Use a visual tracker (like a ledger) to show dwindling resources and build tension.",
+  "Deliver a 'monkey's paw' ending where the protagonist gets what they want but loses something more important."
+ ],
+ "do_not_copy": [
+  "The specific 'Memory Shop' visual of extracting memories via a salon hairdryer helmet.",
+  "The exact character designs of 2D faces on cylindrical bodies.",
+  "The specific anchor memory of catching a giant frog."
+ ],
+ "title_formula": "He [Extreme Action] To [Noble Goal]",
+ "topic_type": "hypothetical what-if",
+ "why_this_topic": "It explores the universal fear of losing one's identity and loved ones, wrapped in an engaging sci-fi concept.",
+ "hook_line": "He sold his happiest memory to a stranger behind a counter.",
+ "script_shape": [
+  {
+   "t": "0:00-0:04",
+   "role": "paradox",
+   "technique": "Introduces the impossible action of selling a memory."
+  },
+  {
+   "t": "0:04-0:13",
+   "role": "explanation",
+   "technique": "Explains the rules of the memory economy."
+  },
+  {
+   "t": "0:13-0:31",
+   "role": "expansion",
+   "technique": "Shows the macro societal effects of this economy."
+  },
+  {
+   "t": "0:31-0:54",
+   "role": "escalation",
+   "technique": "Introduces the personal crisis that forces the protagonist to participate."
+  },
+  {
+   "t": "0:54-1:05",
+   "role": "pivot",
+   "technique": "The final, irreversible decision is made."
+  },
+  {
+   "t": "1:05-1:18",
+   "role": "twist",
+   "technique": "Reveals the tragic consequence of the decision."
+  }
+ ],
+ "pivot": {
+  "present": true,
+  "t": "0:04",
+  "phrase_type": "'You see...'",
+  "what_changes_on_screen": "Cuts from the intimate shop counter to a wide shot of the rainy city street to begin world-building."
+ },
+ "words_per_second_estimate": 3.6,
+ "world": {
+  "setting": "A dystopian, neon-lit city where memories are commodified.",
+  "era": "Alternate present / near future",
+  "locations": [
+   "Memory shop interior",
+   "Rainy city street",
+   "Rich pool area",
+   "Poor bench area",
+   "Hospital room",
+   "Lake (in memory)"
+  ],
+  "set_dressing": "Neon signs, memory extraction helmets, rain, hospital IV drips, polaroid photos, ledger books."
+ },
+ "cast": [
+  {
+   "role": "main",
+   "costume": "Yellow jacket, white shirt, orange hair",
+   "screen_time": "main",
+   "expressions_used": [
+    "sad",
+    "determined",
+    "blank",
+    "confused"
+   ]
+  },
+  {
+   "role": "brother",
+   "costume": "Blue shirt",
+   "screen_time": "support",
+   "expressions_used": [
+    "sick",
+    "happy"
+   ]
+  },
+  {
+   "role": "shopkeeper",
+   "costume": "Dark hood, gold chain",
+   "screen_time": "support",
+   "expressions_used": [
+    "creepy smile",
+    "concerned"
+   ]
+  }
+ ],
+ "lighting_flip": "The lighting flips from dark, rainy blues in the poor areas to bright, sunny yellows in the rich areas and inside the happy memories, visually separating joy from reality.",
+ "inserts": [
+  "SD card with memory picture",
+  "Old photos held by poor people",
+  "Happiness meter dial",
+  "Polaroid of the frog memory",
+  "Ledger book showing sold years"
+ ],
+ "camera_moves": "Relies heavily on static shots with hard cuts to deliver information quickly, using slow push-ins only during emotional peaks (like the hospital bed or the final warning).",
+ "loop_device": "The video ends on a narrative resolution (the tragic realization) rather than a seamless visual or audio loop.",
+ "weak_spots": "The pacing is extremely fast during the montage of selling years, which might make it hard for viewers to fully absorb the emotional weight before the twist hits.",
+ "url": "https://www.youtube.com/shorts/t3OXkhlI6NQ",
+ "id": "t3OXkhlI6NQ",
+ "studied_at": "2026-11-14T08:00:39Z",
+ "model": "gemini-3.1-pro-preview"
+}

@@ -1,0 +1,218 @@
+{
+ "title_guess": "The Steel Ball Sleep Hack",
+ "channel_guess": "Zack D. Films",
+ "duration_s": 40,
+ "format": "explainer",
+ "premise": "Explains a bizarre sleep technique used by Thomas Edison to capture creative ideas from the hypnagogic state.",
+ "hook": {
+  "first_2s_visual": "A cartoon man sits on a chair in a dark room, holding two steel balls over metal plates, looking very sleepy.",
+  "first_line_technique": "Presents a highly unusual action and promises a highly desirable, counter-intuitive result (waking up a genius).",
+  "text_on_screen": "fall asleep"
+ },
+ "structure": [
+  {
+   "t": "0:00-0:11",
+   "beat": "setup",
+   "what_happens": "The physical setup of the trick is explained: sitting with steel balls over metal plates.",
+   "why_it_works": "It establishes the bizarre premise clearly and visually, making the viewer wonder why anyone would do this."
+  },
+  {
+   "t": "0:11-0:20",
+   "beat": "escalation",
+   "what_happens": "Shows the immediate, unpleasant consequence: falling asleep causes the balls to drop, creating a loud noise that jolts the person awake.",
+   "why_it_works": "It highlights the apparent stupidity of the action, building tension before the reveal."
+  },
+  {
+   "t": "0:20-0:31",
+   "beat": "twist",
+   "what_happens": "Reveals that Thomas Edison did this intentionally to access 'hypnagogia', a creative state right before deep sleep.",
+   "why_it_works": "It pivots from a seemingly dumb prank to a genius life hack validated by a historical figure."
+  },
+  {
+   "t": "0:31-0:40",
+   "beat": "payoff",
+   "what_happens": "Uses an elevator metaphor to show how the noise interrupts the descent into deep sleep, allowing the person to wake up and remember their ideas.",
+   "why_it_works": "It provides a satisfying, easy-to-understand visual explanation of a complex psychological concept."
+  }
+ ],
+ "shots": [
+  {
+   "t": "0:00",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "none",
+   "subject": "Man sitting on a chair holding steel balls."
+  },
+  {
+   "t": "0:11",
+   "framing": "POV",
+   "camera": "push-in",
+   "transition": "cut",
+   "subject": "Looking down at the hands holding the balls over the plates."
+  },
+  {
+   "t": "0:13",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "X-ray view of the man's brain as he falls asleep."
+  },
+  {
+   "t": "0:21",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Thomas Edison sitting in his laboratory."
+  },
+  {
+   "t": "0:24",
+   "framing": "wide",
+   "camera": "crane",
+   "transition": "cut",
+   "subject": "An underwater chart showing the stages of sleep."
+  },
+  {
+   "t": "0:29",
+   "framing": "macro",
+   "camera": "pan",
+   "transition": "cut",
+   "subject": "A corkboard with ideas connected by red string."
+  },
+  {
+   "t": "0:31",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "The man sitting in an elevator representing the descent into sleep."
+  }
+ ],
+ "pacing": {
+  "avg_shot_s": 3.5,
+  "cuts_in_first_5s": 1,
+  "where_it_slows_down": "During the explanation of hypnagogia (0:24-0:30) to allow the viewer to absorb the new concept.",
+  "where_it_speeds_up": "During the crash and the sudden waking up (0:15-0:19) to match the jarring action."
+ },
+ "look": {
+  "style": "2D/3D hybrid animation with simple, rounded character designs.",
+  "palette": "Dark and moody (blues, browns, blacks) to simulate a sleep environment, with bright pops of color for emphasis (the brain, the idea board).",
+  "lighting": "Spotlight effect in the main room, creating a theatrical, focused feel.",
+  "texture": "Smooth, digital finish with some subtle shading to give depth to the 2D characters.",
+  "character_design": "Minimalist, pill-shaped bodies with simple facial features, allowing for exaggerated expressions."
+ },
+ "voice": {
+  "present": true,
+  "gender_age_impression": "Male, 20s-30s",
+  "tone": "Energetic, informative, slightly conversational.",
+  "pace_wpm": 180,
+  "energy_curve": "Starts high to hook, dips slightly during the setup, spikes during the crash, and maintains a steady, engaging pace through the explanation.",
+  "delivery_tricks": "Emphasizes key words ('genius', 'smash', 'Edison') and uses pauses effectively before reveals."
+ },
+ "music": {
+  "present": true,
+  "genre": "Quirky, slightly mysterious instrumental.",
+  "bpm_estimate": 110,
+  "where_it_drops": "The music dips slightly right before the loud crash of the balls.",
+  "how_it_supports_the_story": "It maintains a lighthearted but intriguing atmosphere, fitting the 'weird science' vibe of the topic."
+ },
+ "sfx": "The loud, jarring crash of the steel balls hitting the plates is the most crucial SFX, acting as an auditory jump scare that mirrors the character's experience. Also uses subtle whooshes for transitions and a 'ding' for the elevator.",
+ "hero_moments": "The sequence from 0:24 to 0:31 is the hero moment. It transitions from the physical world to an abstract 'underwater' sleep chart, then to a visual representation of the brain connecting ideas (the corkboard), perfectly illustrating the invisible concept of hypnagogia.",
+ "captions": "One to three words at a time, center screen, bold white font with a thick black outline, popping in sync with the voiceover.",
+ "why_it_works": [
+  "It opens with a highly visual, bizarre premise that demands an explanation.",
+  "It uses a famous historical figure (Edison) to validate a seemingly crazy idea.",
+  "It employs strong visual metaphors (underwater chart, elevator) to explain abstract psychological concepts simply.",
+  "The pacing is relentless, with constant visual changes keeping the eye engaged.",
+  "The sound design (the crash) provides a visceral payoff to the setup."
+ ],
+ "rules_to_borrow": [
+  "Start with the most bizarre or counter-intuitive aspect of your topic.",
+  "If explaining a complex or invisible process, invent a clear visual metaphor (like an elevator for sleep stages).",
+  "Anchor weird life hacks or obscure facts to well-known historical figures to instantly build credibility.",
+  "Use a 'bait and switch' structure: present an action as foolish, then reveal the hidden genius behind it.",
+  "Ensure your sound design matches the physical impact of the actions on screen.",
+  "Keep captions punchy; display only the words currently being spoken to force the viewer to read along."
+ ],
+ "do_not_copy": [
+  "The specific pill-shaped, blue-bodied character design.",
+  "The exact voiceover cadence and inflection, which is highly recognizable to this specific creator.",
+  "The specific 'spotlight in a dark room' visual motif."
+ ],
+ "title_formula": "The [Object] [Action] Hack",
+ "topic_type": "historical trick",
+ "why_this_topic": "It offers a seemingly effortless shortcut to genius using a bizarre, counter-intuitive method validated by history.",
+ "hook_line": "If you fall asleep holding two steel balls, you might wake up a genius.",
+ "script_shape": [
+  {
+   "t": "0:00-0:11",
+   "role": "paradox",
+   "technique": "Presents a weird action with a promised genius result."
+  },
+  {
+   "t": "0:11-0:20",
+   "role": "escalation",
+   "technique": "Shows the painful reality of the action."
+  },
+  {
+   "t": "0:20-0:31",
+   "role": "explanation",
+   "technique": "Introduces the historical figure and the scientific concept."
+  },
+  {
+   "t": "0:31-0:40",
+   "role": "payoff",
+   "technique": "Explains exactly how the mechanism works to achieve the promised result."
+  }
+ ],
+ "pivot": {
+  "present": true,
+  "t": "0:20",
+  "phrase_type": "But [Famous Person] was rumored to do it on purpose.",
+  "what_changes_on_screen": "The setting changes from a generic dark room to Thomas Edison's laboratory, and the character changes to Edison."
+ },
+ "words_per_second_estimate": 3,
+ "world": {
+  "setting": "Abstract, theatrical spaces used to illustrate concepts.",
+  "era": "Ambiguous, blending modern elements with historical references (Edison).",
+  "locations": [
+   "Dark room with spotlight",
+   "Edison's laboratory",
+   "Underwater sleep chart",
+   "Abstract elevator shaft"
+  ],
+  "set_dressing": "Minimalist. Chairs, small tables, metal plates, a corkboard with string, an elevator door."
+ },
+ "cast": [
+  {
+   "role": "Main subject",
+   "costume": "Blue shirt, dark pants",
+   "screen_time": "main",
+   "expressions_used": [
+    "sleepy",
+    "smug",
+    "shocked",
+    "happy"
+   ]
+  },
+  {
+   "role": "Historical figure",
+   "costume": "Suit and bow tie (Edison)",
+   "screen_time": "support",
+   "expressions_used": [
+    "winking",
+    "knowing"
+   ]
+  }
+ ],
+ "lighting_flip": "The lighting shifts from a moody, focused spotlight in the real world to brighter, more uniform lighting when explaining the abstract concepts (the idea board).",
+ "inserts": [
+  "The underwater sleep depth chart.",
+  "The corkboard showing ideas connecting (magnet + car = magnet car)."
+ ],
+ "camera_moves": "Mostly static shots relying on hard cuts for pacing, with occasional slow push-ins to emphasize a detail or a character's realization.",
+ "loop_device": "The final sentence ends with the word 'balls', which flows seamlessly into the first sentence of the video: 'If you fall asleep holding two steel balls...'",
+ "weak_spots": "The transition from the corkboard idea back to the elevator metaphor at 0:31 is slightly abrupt visually, though the voiceover carries it through.",
+ "url": "https://www.youtube.com/shorts/PL-Yro2meY4",
+ "id": "PL-Yro2meY4",
+ "studied_at": "2026-11-14T08:18:09Z",
+ "model": "gemini-3.1-pro-preview"
+}

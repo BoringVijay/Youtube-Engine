@@ -1,0 +1,371 @@
+{
+ "title_guess": "Why Cannonballs Were Actually Terrifying",
+ "channel_guess": "Zack D. Films",
+ "duration_s": 64,
+ "format": "explainer",
+ "premise": "An escalating history of naval warfare tactics, showing how cannonballs evolved from simple projectiles to devastating incendiary and explosive weapons.",
+ "hook": {
+  "first_2s_visual": "A cannonball flies towards the camera and hits a wooden ship, but the crew inside is unharmed and cheering.",
+  "first_line_technique": "Subverts a common assumption by stating that getting hit by a deadly weapon makes you 'lucky', forcing the viewer to ask 'why?'.",
+  "text_on_screen": "If your ship got hit by a cannonball, you'd actually be one of the lucky ones."
+ },
+ "structure": [
+  {
+   "t": "0:00-0:11",
+   "beat": "setup",
+   "what_happens": "Explains that standard round shot was deadly not because of direct hits, but because it created a storm of wooden splinters.",
+   "why_it_works": "Establishes the baseline of naval warfare and introduces the first surprising fact (splinters kill, not the ball)."
+  },
+  {
+   "t": "0:11-0:18",
+   "beat": "escalation",
+   "what_happens": "Pirates, lacking ammo, fire 'langrage' (literal garbage) at enemy ships.",
+   "why_it_works": "Introduces a makeshift, gritty tactic that contrasts with the organized Navy."
+  },
+  {
+   "t": "0:18-0:36",
+   "beat": "twist",
+   "what_happens": "The Navy retaliates with 'Hot Shot', heating cannonballs in a furnace to burn pirate ships from the inside out.",
+   "why_it_works": "Significantly raises the stakes with a complex, dangerous, and visually striking incendiary weapon."
+  },
+  {
+   "t": "0:36-0:49",
+   "beat": "escalation",
+   "what_happens": "Pirates respond with the 'Carcass', a hollow ball filled with burning tar that acts like a flamethrower.",
+   "why_it_works": "Continues the arms race, showing an even more chaotic and destructive fire weapon."
+  },
+  {
+   "t": "0:49-1:04",
+   "beat": "payoff",
+   "what_happens": "Ships upgrade to iron to stop fire, so America builds the massive Rodman gun to simply punch through the iron and sink them in one shot.",
+   "why_it_works": "Provides a satisfying, explosive conclusion to the arms race, ending on the biggest weapon yet."
+  }
+ ],
+ "shots": [
+  {
+   "t": "0:00",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "none",
+   "subject": "Cannonball hitting a wooden ship."
+  },
+  {
+   "t": "0:01",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Pirate crew cheering inside the ship."
+  },
+  {
+   "t": "0:04",
+   "framing": "wide",
+   "camera": "push-in",
+   "transition": "cut",
+   "subject": "Navy ship firing a broadside."
+  },
+  {
+   "t": "0:06",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Pirates being hit by a storm of wooden splinters."
+  },
+  {
+   "t": "0:11",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Pirate looking into an empty ammo box."
+  },
+  {
+   "t": "0:14",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Pirate firing a cannon."
+  },
+  {
+   "t": "0:15",
+   "framing": "close",
+   "camera": "push-in",
+   "transition": "cut",
+   "subject": "Barrels labeled 'LANGRAGE' and 'GARBAGE'."
+  },
+  {
+   "t": "0:17",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Garbage hitting a Navy ship."
+  },
+  {
+   "t": "0:18",
+   "framing": "aerial",
+   "camera": "push-in",
+   "transition": "cut",
+   "subject": "Navy fort on a cliff."
+  },
+  {
+   "t": "0:20",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Sailors loading cannonballs into a 'HOT SHOT' furnace."
+  },
+  {
+   "t": "0:22",
+   "framing": "POV",
+   "camera": "push-in",
+   "transition": "cut",
+   "subject": "Inside the furnace, balls glowing red hot."
+  },
+  {
+   "t": "0:24",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Sailors carrying a hot shot with giant tongs."
+  },
+  {
+   "t": "0:26",
+   "framing": "close",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Hot shot loaded into a cannon with a wet plug and gunpowder."
+  },
+  {
+   "t": "0:30",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Hot shot hitting and burying into a pirate ship hull."
+  },
+  {
+   "t": "0:32",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Pirate ship glowing and burning from the inside at sunset."
+  },
+  {
+   "t": "0:37",
+   "framing": "close",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Crate labeled 'CARCASS'."
+  },
+  {
+   "t": "0:38",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Pirates preparing the Carcass cannonball."
+  },
+  {
+   "t": "0:43",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Pirates firing the Carcass."
+  },
+  {
+   "t": "0:46",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Navy ship engulfed in flames from the Carcass."
+  },
+  {
+   "t": "0:49",
+   "framing": "close",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Wooden hull transitioning to iron."
+  },
+  {
+   "t": "0:51",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Cannonballs bouncing off the ironclad ship."
+  },
+  {
+   "t": "0:54",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "The massive Rodman gun."
+  },
+  {
+   "t": "0:57",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Loading the giant 1000 lb ball."
+  },
+  {
+   "t": "0:59",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Rodman gun firing."
+  },
+  {
+   "t": "1:00",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Massive explosion destroying the ironclad ship."
+  },
+  {
+   "t": "1:02",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Surviving pirates floating in a barrel."
+  }
+ ],
+ "pacing": {
+  "avg_shot_s": 2.4,
+  "cuts_in_first_5s": 2,
+  "where_it_slows_down": "The Hot Shot explanation (0:20-0:30) takes more time to detail the specific mechanics of loading the weapon.",
+  "where_it_speeds_up": "The final sequence (0:49-1:04) moves quickly through the transition to ironclads and the introduction of the Rodman gun to reach the climax."
+ },
+ "look": {
+  "style": "3D animation",
+  "palette": "Bright, saturated colors (blues, reds, oranges) with high contrast.",
+  "lighting": "Flat, bright daylight for most scenes, switching to dramatic sunset/night lighting to emphasize fire effects.",
+  "texture": "Smooth, cartoonish textures with simple shading.",
+  "character_design": "Stick figure bodies with large, round, expressive heads and simple facial features."
+ },
+ "voice": {
+  "present": true,
+  "gender_age_impression": "Male, 20s-30s",
+  "tone": "Energetic, informative, slightly sensationalized.",
+  "pace_wpm": 175,
+  "energy_curve": "Starts high with the hook, maintains a steady, engaging pace, and peaks during the descriptions of the most destructive weapons (Carcass, Rodman gun).",
+  "delivery_tricks": "Emphasizes key terms ('langrage', 'hot shot', 'carcass') and uses a conversational, storytelling cadence."
+ },
+ "music": {
+  "present": true,
+  "genre": "Orchestral / Sea Shanty instrumental",
+  "bpm_estimate": 110,
+  "where_it_drops": "No major drops, but the intensity swells slightly during the final explosion.",
+  "how_it_supports_the_story": "Provides a thematic, adventurous backdrop that fits the pirate/naval warfare setting without overpowering the voiceover."
+ },
+ "sfx": "Heavy use of impact sounds (wood splintering, cannon booms), sizzling and crackling for fire, and a massive explosion sound for the finale. The sound design grounds the cartoonish visuals with realistic, visceral audio.",
+ "hero_moments": "The 'Hot Shot' sequence (0:20-0:36) is a hero moment, meticulously showing the process of heating the ball, loading it with a wet plug, and the resulting internal fire, changing the lighting to make the glowing ship pop.",
+ "captions": "Center screen, displaying one or two words at a time, using a bold white font with a thick black outline for maximum readability.",
+ "why_it_works": [
+  "The hook immediately challenges a common assumption, creating curiosity.",
+  "The narrative is structured as an escalating arms race, keeping the viewer engaged to see what crazy weapon comes next.",
+  "Complex historical tactics are simplified into clear, highly visual 3D animations.",
+  "Props with clear text labels ('LANGRAGE', 'HOT SHOT') do the heavy lifting for exposition.",
+  "The sound design adds weight and consequence to the otherwise cartoonish violence."
+ ],
+ "rules_to_borrow": [
+  "Start with a counter-intuitive statement that makes the viewer question what they know.",
+  "Structure your script as an escalating series of events or stakes (A leads to B, which leads to C).",
+  "Use in-world text on props or signs to introduce new terms, saving voiceover time.",
+  "Change the environmental lighting (e.g., day to night) to emphasize specific visual effects like fire or glowing objects.",
+  "Use visceral sound effects to make animated or abstract concepts feel impactful and real.",
+  "End with a massive, exaggerated payoff that resolves the escalating conflict.",
+  "Keep character designs simple if the focus of the video is on the mechanics of objects or historical events."
+ ],
+ "do_not_copy": [
+  "The specific stick-figure-with-round-head character design.",
+  "The exact sequence of naval weapons presented."
+ ],
+ "title_formula": "Why [Historical Event/Object] Was Actually [Counter-intuitive Adjective]",
+ "topic_type": "historical trick",
+ "why_this_topic": "It takes a familiar pop-culture trope (pirate ship battles) and reveals the gruesome, inventive, and lesser-known historical reality.",
+ "hook_line": "If your ship got hit by a cannonball, you'd actually be one of the lucky ones.",
+ "script_shape": [
+  {
+   "t": "0:00-0:03",
+   "role": "paradox",
+   "technique": "States that getting hit by a deadly weapon is lucky."
+  },
+  {
+   "t": "0:04-0:11",
+   "role": "explanation",
+   "technique": "Explains the paradox (splinters are the real killer)."
+  },
+  {
+   "t": "0:11-0:18",
+   "role": "escalation",
+   "technique": "Introduces a new, dirtier tactic (langrage)."
+  },
+  {
+   "t": "0:18-0:36",
+   "role": "pivot",
+   "technique": "Shifts to the Navy's advanced, incendiary response (Hot Shot)."
+  },
+  {
+   "t": "0:36-0:49",
+   "role": "escalation",
+   "technique": "Shows the pirates' even more chaotic counter-weapon (Carcass)."
+  },
+  {
+   "t": "0:49-1:04",
+   "role": "twist",
+   "technique": "Introduces a defensive upgrade (ironclads) and the ultimate offensive solution (Rodman gun)."
+  }
+ ],
+ "pivot": {
+  "present": true,
+  "t": "0:18",
+  "phrase_type": "But the Navy had a nastier idea...",
+  "what_changes_on_screen": "Cuts from the chaotic pirate ship to a clean, organized Navy fort, introducing a completely new location and tactic."
+ },
+ "words_per_second_estimate": 2.8,
+ "world": {
+  "setting": "Naval warfare environment",
+  "era": "1700s to mid-1800s",
+  "locations": [
+   "Inside a wooden pirate ship",
+   "Deck of a pirate ship",
+   "Navy fort on a cliff",
+   "Ocean surface",
+   "Deck of an ironclad ship"
+  ],
+  "set_dressing": "Cannons, wooden barrels, ammo boxes, brick furnaces, giant tongs, flags."
+ },
+ "cast": [
+  {
+   "role": "Pirates",
+   "costume": "Striped shirts, bandanas, pirate hats, eye patches.",
+   "screen_time": "main",
+   "expressions_used": [
+    "cheering",
+    "pained",
+    "confused",
+    "smug",
+    "terrified"
+   ]
+  },
+  {
+   "role": "Navy Sailors",
+   "costume": "Blue uniforms, military caps.",
+   "screen_time": "support",
+   "expressions_used": [
+    "determined",
+    "focused",
+    "smug"
+   ]
+  }
+ ],
+ "lighting_flip": "At 0:32, the lighting flips from bright daylight to a dusky sunset/night sky. This is done specifically to make the glowing, burning pirate ship stand out visually. It stays dark for the Carcass scene, then flips back to daylight for the ironclad scene.",
+ "inserts": [
+  "Barrels labeled 'LANGRAGE' and 'GARBAGE'",
+  "Furnace labeled 'HOT SHOT'",
+  "Crate labeled 'CARCASS - KEEP FROM FLAME'"
+ ],
+ "camera_moves": "The camera relies heavily on static shots with frequent cuts to maintain a fast pace. When it does move, it uses slow, deliberate push-ins to emphasize specific props (like the Langrage barrel or the inside of the furnace).",
+ "loop_device": "The video ends with the pirates floating in the water after their ship is destroyed, which thematically links back to the opening premise of surviving a naval battle, though it lacks a strict verbal loop.",
+ "weak_spots": "The transition from 1700s wooden ships to ironclads (mid-1800s) happens very abruptly in a single sentence, compressing a lot of history, which might jar history buffs.",
+ "url": "https://www.youtube.com/shorts/lnYLIWP2l-I",
+ "id": "lnYLIWP2l-I",
+ "studied_at": "2026-11-14T08:09:39Z",
+ "model": "gemini-3.1-pro-preview"
+}

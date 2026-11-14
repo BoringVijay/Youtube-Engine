@@ -1,0 +1,386 @@
+{
+ "title_guess": "The Greatest Gold Mine Scam Backfired",
+ "channel_guess": "Brew",
+ "duration_s": 61,
+ "format": "explainer",
+ "premise": "A desperate miner fakes a gold discovery to sell his worthless mine, only for the gullible buyer to accidentally uncover a massive real gold vein right behind the fake one.",
+ "hook": {
+  "first_2s_visual": "A 2D animated miner loads a shotgun with gold dust and fires it directly into the rock wall of a 3D mine.",
+  "first_line_technique": "Presents a highly counter-intuitive and paradoxical action that demands an immediate explanation to satisfy curiosity.",
+  "text_on_screen": "He loaded the shotgun with gold"
+ },
+ "structure": [
+  {
+   "t": "0:00-0:09",
+   "beat": "setup",
+   "what_happens": "A miner shoots gold dust into a wall while his buddy watches in confusion.",
+   "why_it_works": "It creates an immediate mystery. Why waste gold by shooting it into a rock?"
+  },
+  {
+   "t": "0:09-0:18",
+   "beat": "explanation",
+   "what_happens": "The narrator explains 'salting'—faking a gold vein to scam a rich buyer after 10 years of digging up nothing.",
+   "why_it_works": "It answers the initial hook while setting up the stakes and the impending scam."
+  },
+  {
+   "t": "0:18-0:35",
+   "beat": "escalation",
+   "what_happens": "The rich buyer arrives with an expert who quickly discovers the gold flakes are flat, proving they were shot into the wall.",
+   "why_it_works": "It introduces conflict. The scam is immediately uncovered, making the viewer wonder how the miners will get away with it."
+  },
+  {
+   "t": "0:35-0:43",
+   "beat": "twist",
+   "what_happens": "The rich buyer laughs off the expert's warning, believing the idea of shooting gold into a wall is too absurd to be true.",
+   "why_it_works": "It subverts expectations. The buyer's arrogance overrides the expert's logic, allowing the scam to proceed."
+  },
+  {
+   "t": "0:43-0:54",
+   "beat": "escalation",
+   "what_happens": "The buyer pays, the original miners flee, and the buyer carelessly tosses a stick of dynamite into the mine.",
+   "why_it_works": "It builds tension for a final punchline, showing the buyer's complete lack of mining knowledge."
+  },
+  {
+   "t": "0:54-1:01",
+   "beat": "payoff",
+   "what_happens": "The explosion clears to reveal a massive, real gold vein just 10 feet past where the original miner gave up.",
+   "why_it_works": "It delivers a highly satisfying, ironic conclusion where the scammer loses out on a fortune and the fool gets lucky."
+  }
+ ],
+ "shots": [
+  {
+   "t": "0:00",
+   "framing": "close",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Shotgun action being loaded with gold dust"
+  },
+  {
+   "t": "0:01",
+   "framing": "wide",
+   "camera": "push-in",
+   "transition": "cut",
+   "subject": "Miner firing the shotgun into the mine wall"
+  },
+  {
+   "t": "0:03",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Buddy sitting on a barrel, watching"
+  },
+  {
+   "t": "0:09",
+   "framing": "wide",
+   "camera": "push-in",
+   "transition": "cut",
+   "subject": "Miner standing on tracks in an empty tunnel"
+  },
+  {
+   "t": "0:11",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Miner pushing a cart outside the mine"
+  },
+  {
+   "t": "0:13",
+   "framing": "close",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Newspaper headline about a millionaire arriving"
+  },
+  {
+   "t": "0:16",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Miner at a saloon bar"
+  },
+  {
+   "t": "0:18",
+   "framing": "macro",
+   "camera": "push-in",
+   "transition": "cut",
+   "subject": "Pile of gold dust on a plate"
+  },
+  {
+   "t": "0:19",
+   "framing": "wide",
+   "camera": "tracking",
+   "transition": "cut",
+   "subject": "Rich guy arriving in an old-fashioned car"
+  },
+  {
+   "t": "0:21",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Rich guy and expert entering the mine"
+  },
+  {
+   "t": "0:24",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Expert examining the wall with a pickaxe"
+  },
+  {
+   "t": "0:26",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Expert swirling water in a gold pan"
+  },
+  {
+   "t": "0:29",
+   "framing": "macro",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Gold flakes settling in the pan"
+  },
+  {
+   "t": "0:31",
+   "framing": "macro",
+   "camera": "pan",
+   "transition": "cut",
+   "subject": "Magnified view of flat gold flakes embedded in rock"
+  },
+  {
+   "t": "0:34",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Expert explaining his findings"
+  },
+  {
+   "t": "0:36",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Rich guy laughing dismissively"
+  },
+  {
+   "t": "0:40",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Original miners looking confused but relieved"
+  },
+  {
+   "t": "0:43",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Rich guy handing over a briefcase of cash"
+  },
+  {
+   "t": "0:45",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Original miners running out of the mine"
+  },
+  {
+   "t": "0:47",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Rich guy pulling dynamite from his coat"
+  },
+  {
+   "t": "0:51",
+   "framing": "close",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Lighting the dynamite fuse with a cigar"
+  },
+  {
+   "t": "0:52",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Tossing the dynamite down the tunnel"
+  },
+  {
+   "t": "0:54",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Rich guy running out of the mine entrance"
+  },
+  {
+   "t": "0:55",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Dust blowing out of the mine entrance from the explosion"
+  },
+  {
+   "t": "0:56",
+   "framing": "wide",
+   "camera": "push-in",
+   "transition": "cut",
+   "subject": "Rich guy standing in front of a massive, glowing gold vein"
+  }
+ ],
+ "pacing": {
+  "avg_shot_s": 2.4,
+  "cuts_in_first_5s": 3,
+  "where_it_slows_down": "During the expert's investigation (0:24-0:35) to clearly explain the mechanics of the scam.",
+  "where_it_speeds_up": "During the climax (0:47-0:55) as the dynamite is lit, thrown, and explodes in rapid succession."
+ },
+ "look": {
+  "style": "2D characters in 3D environments",
+  "palette": "Warm, earthy tones. Lots of browns, golds, oranges, and dim yellows to simulate lantern light.",
+  "lighting": "High contrast inside the mine with bright pools of light from lanterns and deep shadows. Bright, flat daylight for exterior shots.",
+  "texture": "The 3D environments have realistic rock and wood textures, contrasting sharply with the flat, untextured 2D characters.",
+  "character_design": "Simple, pill-shaped bodies with stick limbs and expressive, oversized facial features."
+ },
+ "voice": {
+  "present": true,
+  "gender_age_impression": "Male, 20s-30s",
+  "tone": "Energetic, engaging, slightly humorous storytelling",
+  "pace_wpm": 165,
+  "energy_curve": "Starts high with the hook, maintains a steady narrative pace, and peaks during the final explosion and reveal.",
+  "delivery_tricks": "Emphasizes key words ('salting', 'flat', 'insane') and uses slight pauses before punchlines to let the irony land."
+ },
+ "music": {
+  "present": true,
+  "genre": "Quirky orchestral/ragtime",
+  "bpm_estimate": 110,
+  "where_it_drops": "Slightly dips when the expert is explaining the flat gold flakes to ensure the technical explanation is heard.",
+  "how_it_supports_the_story": "The upbeat, slightly comedic tone frames the story as an entertaining fable rather than a serious historical documentary."
+ },
+ "sfx": "Loud, realistic shotgun blast at the start. Clinking of the pickaxe and sloshing of water during the panning scene. The distinct hiss of the dynamite fuse builds tension before the muffled boom of the explosion.",
+ "hero_moments": "The final sequence builds perfectly: the casual lighting of the dynamite, the careless toss, the frantic run outside, the dust clearing, and finally, the slow push-in on the impossibly large gold vein, accompanied by a musical swell.",
+ "captions": "Single words or short phrases popping up dynamically in the center of the screen. White text with a thick black outline for maximum readability against the dark mine backgrounds.",
+ "why_it_works": [
+  "The opening visual is completely paradoxical, forcing the viewer to stay to find out why.",
+  "The story has a clear setup, conflict, and a highly satisfying, ironic twist.",
+  "The mix of 2D characters in 3D spaces is visually distinct and holds attention.",
+  "The pacing is relentless, with no dead air or unnecessary exposition.",
+  "The sound design heavily reinforces the physical actions, making the stylized animation feel grounded."
+ ],
+ "rules_to_borrow": [
+  "Start with an action that makes zero sense until the narrator explains it.",
+  "Use irony to deliver a satisfying punchline (the scammer loses, the fool wins).",
+  "Contrast simple character designs with highly detailed backgrounds to create a unique visual signature.",
+  "Keep captions to 1-3 words at a time to maintain visual momentum.",
+  "Use a 'smart' character (the expert) to explain technical details quickly without slowing down the plot.",
+  "Build tension with sound (like a hissing fuse) right before the final visual payoff."
+ ],
+ "do_not_copy": [
+  "The specific pill-shaped character designs and their distinct facial expressions.",
+  "The exact 'Brew'-style 2D-on-3D aesthetic, which is heavily associated with specific channels."
+ ],
+ "title_formula": "The [Adjective] [Noun] That [Unexpected Action]",
+ "topic_type": "historical trick",
+ "why_this_topic": "It combines a clever, real-world scam with a highly ironic and satisfying twist of fate that feels like a fable.",
+ "hook_line": "He loaded the shotgun with gold and fired it into the walls of the mine.",
+ "script_shape": [
+  {
+   "t": "0:00-0:09",
+   "role": "paradox",
+   "technique": "Shows an action that contradicts common sense to hook the viewer."
+  },
+  {
+   "t": "0:09-0:18",
+   "role": "explanation",
+   "technique": "Defines the scam and sets up the motivation."
+  },
+  {
+   "t": "0:18-0:35",
+   "role": "escalation",
+   "technique": "Introduces an obstacle (the expert) that threatens the scam."
+  },
+  {
+   "t": "0:35-0:43",
+   "role": "pivot",
+   "technique": "The obstacle is bypassed through character flaw (arrogance)."
+  },
+  {
+   "t": "0:43-0:54",
+   "role": "escalation",
+   "technique": "The transaction is completed, and a dangerous action (dynamite) is initiated."
+  },
+  {
+   "t": "0:54-1:01",
+   "role": "twist",
+   "technique": "Delivers the final ironic payoff."
+  }
+ ],
+ "pivot": {
+  "present": true,
+  "t": "0:09",
+  "phrase_type": "'You see, it's called...'",
+  "what_changes_on_screen": "Cuts from the close-up action of the scam to a wide shot establishing the history of the mine."
+ },
+ "words_per_second_estimate": 2.8,
+ "world": {
+  "setting": "A stylized early 1900s mining operation.",
+  "era": "Early 20th Century (implied by the car, clothing, and dynamite).",
+  "locations": [
+   "Inside the mine tunnel",
+   "Outside the mine entrance",
+   "A saloon bar"
+  ],
+  "set_dressing": "Lanterns, wooden support beams, mine carts, pickaxes, barrels, gold pans."
+ },
+ "cast": [
+  {
+   "role": "Miner",
+   "costume": "Flannel shirt, suspenders, miner's hat",
+   "screen_time": "main",
+   "expressions_used": [
+    "determined",
+    "desperate",
+    "nervous",
+    "relieved"
+   ]
+  },
+  {
+   "role": "Buddy",
+   "costume": "Teal shirt, yellow beanie",
+   "screen_time": "support",
+   "expressions_used": [
+    "confused",
+    "shocked"
+   ]
+  },
+  {
+   "role": "Rich Guy",
+   "costume": "White suit, top hat, monocle, mustache",
+   "screen_time": "main",
+   "expressions_used": [
+    "arrogant",
+    "amused",
+    "oblivious",
+    "amazed"
+   ]
+  },
+  {
+   "role": "Expert",
+   "costume": "Purple suit, bowler hat, glasses",
+   "screen_time": "support",
+   "expressions_used": [
+    "analytical",
+    "suspicious",
+    "annoyed"
+   ]
+  }
+ ],
+ "lighting_flip": "The video frequently cuts between the dark, moody, lantern-lit interior of the mine and the bright, flat, sunny exterior to show the passage of time and change of location.",
+ "inserts": [
+  "A newspaper clipping showing the rich guy's arrival.",
+  "A macro shot of gold dust on a plate.",
+  "A macro shot through a magnifying glass showing the flattened gold flakes."
+ ],
+ "camera_moves": "The camera relies heavily on static shots for dialogue and reactions, using slow push-ins to emphasize scale (like the empty tunnel) or importance (the final gold vein).",
+ "loop_device": "The video does not have a seamless visual loop; it ends definitively on the reveal of the gold vein, relying on the satisfaction of the story to drive rewatches.",
+ "weak_spots": "The transition where the rich guy dismisses the expert's solid evidence happens very quickly; a slightly longer beat of him rationalizing it might have made his foolishness feel more earned.",
+ "url": "https://www.youtube.com/shorts/TRUkQ1wbV2E",
+ "id": "TRUkQ1wbV2E",
+ "studied_at": "2026-11-14T07:48:14Z",
+ "model": "gemini-3.1-pro-preview"
+}

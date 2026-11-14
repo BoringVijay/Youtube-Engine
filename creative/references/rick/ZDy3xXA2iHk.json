@@ -1,0 +1,312 @@
+{
+ "title_guess": "The Forbidden Button",
+ "channel_guess": "Mystery Animation Channel",
+ "duration_s": 65,
+ "format": "mystery",
+ "premise": "A boy presses a forbidden button in the center of his highly controlled town, only to discover it resets their entire reality.",
+ "hook": {
+  "first_2s_visual": "Two characters, one sweating nervously, staring intensely at a glowing red button under a glass dome.",
+  "first_line_technique": "Introduces a forbidden object and a strict rule immediately, sparking intense curiosity about what happens if the rule is broken.",
+  "text_on_screen": "a button, of town, allowed"
+ },
+ "structure": [
+  {
+   "t": "0:00-0:20",
+   "beat": "setup",
+   "what_happens": "Introduces the button, the circular town layout, the massive wall, and the dimming glow in the sky.",
+   "why_it_works": "Establishes a highly controlled, mysterious world with clear rules and physical boundaries."
+  },
+  {
+   "t": "0:20-0:34",
+   "beat": "escalation",
+   "what_happens": "Gary notices clues like scratches and a statue resembling his mom, then gets dared to press the button.",
+   "why_it_works": "Gives the protagonist a personal connection to the mystery and a clear motivation to break the ultimate rule."
+  },
+  {
+   "t": "0:34-0:48",
+   "beat": "twist",
+   "what_happens": "He sneaks out, presses the button, but nothing explodes; instead, a scratch appears and the sky glows brighter.",
+   "why_it_works": "Subverts the immediate expectation of destruction, replacing it with a subtle, eerie change that deepens the mystery."
+  },
+  {
+   "t": "0:48-1:00",
+   "beat": "payoff",
+   "what_happens": "He wakes up in an empty field with the town gone, the crowd confused, and the scratch counter at 48.",
+   "why_it_works": "Reveals the true nature of the button: it resets their reality, explaining the scratches as previous resets."
+  },
+  {
+   "t": "1:00-1:05",
+   "beat": "loop",
+   "what_happens": "His mom declares they will build their town right there around the button.",
+   "why_it_works": "Perfectly sets up the beginning of the video, explaining the town's origin and creating a seamless narrative loop."
+  }
+ ],
+ "shots": [
+  {
+   "t": "0:00",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "none",
+   "subject": "Cop and Gary looking at the button"
+  },
+  {
+   "t": "0:03",
+   "framing": "aerial",
+   "camera": "orbit",
+   "transition": "cut",
+   "subject": "Circular layout of the town"
+  },
+  {
+   "t": "0:08",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Guards drinking coffee near the button"
+  },
+  {
+   "t": "0:12",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Gary climbing a massive ladder on the wall"
+  },
+  {
+   "t": "0:15",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Glowing ring in the night sky"
+  },
+  {
+   "t": "0:18",
+   "framing": "POV",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Chart showing the glow dimming over years"
+  },
+  {
+   "t": "0:20",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Gary in his room thinking"
+  },
+  {
+   "t": "0:23",
+   "framing": "close",
+   "camera": "push-in",
+   "transition": "cut",
+   "subject": "Scratches and counter under the glass"
+  },
+  {
+   "t": "0:26",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Statue of the town founders"
+  },
+  {
+   "t": "0:29",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Gary standing next to his mom"
+  },
+  {
+   "t": "0:31",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Friends betting Gary money"
+  },
+  {
+   "t": "0:34",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Guards swapping shifts at night"
+  },
+  {
+   "t": "0:38",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Gary lifting the glass and pressing the button"
+  },
+  {
+   "t": "0:42",
+   "framing": "macro",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "A new scratch appearing on the metal"
+  },
+  {
+   "t": "0:44",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Gary walking home under a bright glowing sky"
+  },
+  {
+   "t": "0:48",
+   "framing": "wide",
+   "camera": "crane",
+   "transition": "cut",
+   "subject": "Gary waking up, camera pulls back to show the town is gone"
+  },
+  {
+   "t": "0:57",
+   "framing": "close",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Counter changing from 47 to 48"
+  },
+  {
+   "t": "1:00",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Mom stepping out of the crowd to speak"
+  }
+ ],
+ "pacing": {
+  "avg_shot_s": 3.6,
+  "cuts_in_first_5s": 1,
+  "where_it_slows_down": "0:38 during the stealth sequence when he is about to press the button.",
+  "where_it_speeds_up": "0:20 when rapidly listing the weird clues Gary has noticed."
+ },
+ "look": {
+  "style": "2D characters in 3D environments",
+  "palette": "Vibrant, slightly muted blues and greens, contrasting heavily with the bright red button and orange sky glow.",
+  "lighting": "Flat lighting on characters, dynamic environmental lighting (day/night cycles, glowing sky).",
+  "texture": "Smooth 3D surfaces for the environment, simple vector-like flat textures for characters.",
+  "character_design": "Stick figure bodies with disproportionately large, expressive, detailed heads."
+ },
+ "voice": {
+  "present": true,
+  "gender_age_impression": "male, young adult",
+  "tone": "mysterious, narrative, engaging",
+  "pace_wpm": 160,
+  "energy_curve": "Starts intriguing, builds tension during the stealth scene, peaks at the reality reset reveal, ends with a dramatic, definitive statement.",
+  "delivery_tricks": "Pauses slightly before key reveals and emphasizes numbers (47, 48) to highlight their importance."
+ },
+ "music": {
+  "present": true,
+  "genre": "ambient mystery / synth",
+  "bpm_estimate": 90,
+  "where_it_drops": "0:48 when Gary wakes up in the empty field, shifting the tone from tense to awe-struck.",
+  "how_it_supports_the_story": "Builds underlying tension and creates an eerie, sci-fi atmosphere that fits the mind-bending premise."
+ },
+ "sfx": "The scratching sound under the glass, the mechanical click of the button, and the ticking of the counter.",
+ "hero_moments": "The crane shot at 0:48 that pulls back from Gary waking up to reveal the entire town has vanished, leaving only the people and the button in an empty field.",
+ "captions": "One or two words at a time, dynamic placement near the center, bold white font with a black stroke.",
+ "why_it_works": [
+  "The perfect narrative loop encourages immediate rewatching.",
+  "It taps into the universal human urge to press a forbidden button.",
+  "Visual clues (the scratches, the statue) are planted early and pay off satisfyingly.",
+  "The 2D/3D hybrid art style is visually distinct and holds attention.",
+  "Fast-paced storytelling with zero fluff; every sentence advances the plot."
+ ],
+ "rules_to_borrow": [
+  "Start your video by introducing a strict rule or forbidden object.",
+  "Use a perfect narrative loop where the final line re-contextualizes the first line.",
+  "Plant visual clues early that seem like throwaway details but are crucial to the twist.",
+  "Subvert immediate expectations (e.g., the button doesn't cause an explosion, it causes a subtle scratch).",
+  "Keep character designs simple so the viewer focuses entirely on the plot and mystery.",
+  "Use a dramatic camera pull-back to reveal a massive change in the environment."
+ ],
+ "do_not_copy": [
+  "The specific stick-figure-with-detailed-head art style.",
+  "The exact premise of a button in the center of a circular town."
+ ],
+ "title_formula": "The [Object] That [Does Impossible Thing]",
+ "topic_type": "hypothetical what-if",
+ "why_this_topic": "It explores a mind-bending sci-fi concept (reality reset/time loop) triggered by a simple, relatable action.",
+ "hook_line": "There's a button in the middle of town and nobody's allowed to press it.",
+ "script_shape": [
+  {
+   "t": "0:00-0:20",
+   "role": "setup",
+   "technique": "Establishes the rules and the physical boundaries of the world."
+  },
+  {
+   "t": "0:20-0:34",
+   "role": "escalation",
+   "technique": "Introduces anomalies and provides the protagonist with motivation."
+  },
+  {
+   "t": "0:34-0:48",
+   "role": "twist",
+   "technique": "The forbidden action is taken, resulting in an unexpected immediate outcome."
+  },
+  {
+   "t": "0:48-1:05",
+   "role": "loop",
+   "technique": "The true consequence is revealed, seamlessly setting up the beginning of the story."
+  }
+ ],
+ "pivot": {
+  "present": true,
+  "t": "0:48",
+  "phrase_type": "The next morning...",
+  "what_changes_on_screen": "Location changes drastically from a built town to an empty field, lighting shifts to bright daylight."
+ },
+ "words_per_second_estimate": 2.6,
+ "world": {
+  "setting": "A mysterious, isolated, highly controlled town.",
+  "era": "modern/timeless",
+  "locations": [
+   "town center",
+   "aerial view",
+   "boundary wall",
+   "Gary's room",
+   "street",
+   "empty field"
+  ],
+  "set_dressing": "Glass dome, red button, tall ladder, dimming chart, bronze founder statue."
+ },
+ "cast": [
+  {
+   "role": "Gary",
+   "costume": "Red shirt",
+   "screen_time": "main",
+   "expressions_used": [
+    "nervous sweating",
+    "curious",
+    "determined",
+    "confused"
+   ]
+  },
+  {
+   "role": "Mom",
+   "costume": "Green shirt, glasses",
+   "screen_time": "support",
+   "expressions_used": [
+    "strict",
+    "authoritative"
+   ]
+  },
+  {
+   "role": "Guards",
+   "costume": "Blue police uniforms",
+   "screen_time": "support",
+   "expressions_used": [
+    "vigilant",
+    "bored"
+   ]
+  }
+ ],
+ "lighting_flip": "Changes from bright day to dark night at 0:15 to show the glow, then flips back to bright daylight at 0:48 for the dramatic reveal.",
+ "inserts": [
+  "The hand-drawn chart showing the dimming glow.",
+  "The close-up of the scratches under the glass.",
+  "The mechanical counter changing to 48."
+ ],
+ "camera_moves": "Mostly static shots with hard cuts to keep pacing fast, utilizing a dramatic crane/zoom out for the climax.",
+ "loop_device": "The final line 'We'll build our town right here' explains the origin of the town described in the very first sentence, allowing the video to replay seamlessly.",
+ "weak_spots": "The transition from pressing the button to walking home feels slightly abrupt; it skips over how he escaped the guards after breaking the ultimate rule.",
+ "url": "https://www.youtube.com/shorts/ZDy3xXA2iHk",
+ "id": "ZDy3xXA2iHk",
+ "studied_at": "2026-11-14T07:58:26Z",
+ "model": "gemini-3.1-pro-preview"
+}

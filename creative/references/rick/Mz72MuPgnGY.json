@@ -1,0 +1,266 @@
+{
+ "title_guess": "How Cooking Oil Saved Ships From Storms",
+ "channel_guess": "Generic 3D Explainer Channel",
+ "duration_s": 64,
+ "format": "explainer",
+ "premise": "A ship's chef uses a counterintuitive historical trick—pouring oil into the sea—to save his crew from pirates and a deadly storm.",
+ "hook": {
+  "first_2s_visual": "A chef calmly pours a pot of yellow cooking oil over the side of a ship into the ocean.",
+  "first_line_technique": "Starts in media res with a bizarre, seemingly irrational action during a high-stakes situation.",
+  "text_on_screen": "He poured cooking oil"
+ },
+ "structure": [
+  {
+   "t": "0:00-0:18",
+   "beat": "setup",
+   "what_happens": "A chef pours oil into the sea while being chased by pirates. The captain panics, but the chef tells him to steer into a storm.",
+   "why_it_works": "Establishes immediate conflict (pirates) and introduces a mystery (why is he pouring oil?)."
+  },
+  {
+   "t": "0:18-0:27",
+   "beat": "escalation",
+   "what_happens": "Pirates grapple the ship. The captain steers into the storm, and the pirates gloat, thinking the storm will destroy their prey.",
+   "why_it_works": "Raises the stakes by trapping the heroes between two deadly threats."
+  },
+  {
+   "t": "0:27-0:43",
+   "beat": "twist",
+   "what_happens": "The storm hits, the sky turns dark, and a massive wave approaches, but the chef just keeps pouring oil.",
+   "why_it_works": "Builds maximum tension right before pausing the narrative for the explanation."
+  },
+  {
+   "t": "0:43-0:52",
+   "beat": "explanation",
+   "what_happens": "The narrator pauses the story to explain the historical use of 'storm oil', using a bowl of soup as a visual metaphor for fluid dynamics.",
+   "why_it_works": "Delivers the educational value in a simple, relatable way while the viewer is hooked waiting for the climax."
+  },
+  {
+   "t": "0:52-1:04",
+   "beat": "payoff",
+   "what_happens": "The oil slick prevents the wind from grabbing the water, allowing the hero ship to glide over the wave, while the pirate ship is crushed.",
+   "why_it_works": "Resolves both conflicts (the storm and the pirates) using the science fact just explained."
+  }
+ ],
+ "shots": [
+  {
+   "t": "0:00",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "none",
+   "subject": "Chef pouring oil from a pot."
+  },
+  {
+   "t": "0:01",
+   "framing": "wide",
+   "camera": "push-in",
+   "transition": "cut",
+   "subject": "Pirate ship approaching from behind."
+  },
+  {
+   "t": "0:05",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Captain grabbing the chef by the collar."
+  },
+  {
+   "t": "0:11",
+   "framing": "POV",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Chef pointing at dark storm clouds ahead."
+  },
+  {
+   "t": "0:18",
+   "framing": "close",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Grappling hook clanging onto the ship's railing."
+  },
+  {
+   "t": "0:27",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "The ship entering the dark, violent storm."
+  },
+  {
+   "t": "0:35",
+   "framing": "aerial",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "A yellow trail of oil forming on the water behind the ship."
+  },
+  {
+   "t": "0:43",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Chef standing calmly in a warm, lit kitchen (the pivot)."
+  },
+  {
+   "t": "0:49",
+   "framing": "macro",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Top-down view of a bowl of soup with oil spots."
+  },
+  {
+   "t": "0:56",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "The hero ship riding smoothly over the massive wave."
+  },
+  {
+   "t": "1:00",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "The massive wave crashing down onto the pirate ship."
+  }
+ ],
+ "pacing": {
+  "avg_shot_s": 2.1,
+  "cuts_in_first_5s": 4,
+  "where_it_slows_down": "At 0:43 during the 'You see...' pivot, the pacing and music calm down for the explanation.",
+  "where_it_speeds_up": "At 0:27 when the storm hits, the cuts become faster to match the rising tension."
+ },
+ "look": {
+  "style": "3D animation with cel-shading",
+  "palette": "Bright primary colors (red, blue, yellow) that shift to moody, dark purples and blues during the storm.",
+  "lighting": "Flat, toon-shaded lighting that flips dramatically from bright daylight to dark storm.",
+  "texture": "Smooth, untextured, vector-like surfaces.",
+  "character_design": "Stick-figure bodies with detailed, expressive 3D heads and floating hands."
+ },
+ "voice": {
+  "present": true,
+  "gender_age_impression": "Male, 20s-30s",
+  "tone": "Energetic, urgent, and educational",
+  "pace_wpm": 225,
+  "energy_curve": "Starts high with the chase, builds tension during the storm, drops to a calm, conversational tone for the pivot, then rises for an epic finale.",
+  "delivery_tricks": "Uses dramatic pauses before key reveals ('Trust the oil') and shifts to a softer, inquisitive tone for the educational analogy ('Ever blown on a bowl of soup?')."
+ },
+ "music": {
+  "present": true,
+  "genre": "Orchestral adventure / Sea shanty",
+  "bpm_estimate": 110,
+  "where_it_drops": "At 0:43, the intense storm music cuts out entirely, replaced by a calm, quiet track for the soup explanation.",
+  "how_it_supports_the_story": "Drives the urgency of the chase, heightens the danger of the storm, and creates a distinct auditory space for the educational pivot."
+ },
+ "sfx": "Liquid pouring, pirate laughter, thunder crashes, wind howling, metal clanging, and a massive water crash at the end.",
+ "hero_moments": "The climax at 1:00 is built by showing the hero ship safely gliding over the wave, followed by a wide shot of the wave curling over and obliterating the pirate ship, accompanied by a loud crash SFX.",
+ "captions": "Center screen, 1-2 words at a time, bold sans-serif font, white with a black outline, using yellow text to highlight key words.",
+ "why_it_works": [
+  "It opens with an action that makes zero sense to the viewer, forcing them to watch to find out why.",
+  "It layers two distinct threats (pirates and a storm) to maximize tension.",
+  "It uses a drastic visual shift (day to night) to signal an escalation in stakes.",
+  "It explains complex fluid dynamics using a universally understood object (a bowl of soup).",
+  "The educational fact is the exact mechanism that resolves the narrative conflict."
+ ],
+ "rules_to_borrow": [
+  "Start with a character doing something seemingly irrational in a high-stakes situation.",
+  "Use a ticking clock (like approaching enemies) to force characters into making risky decisions.",
+  "Change the environment's lighting or color palette drastically to signal a shift in the story's tone or stakes.",
+  "Pause the action right before the climax to deliver the core educational payload (the 'You see...' pivot).",
+  "Use relatable, everyday analogies to explain complex scientific or historical concepts.",
+  "Ensure the educational fact you are teaching is the key to solving the story's main problem.",
+  "Give the antagonist a moment of false victory before their downfall to make the payoff more satisfying."
+ ],
+ "do_not_copy": [
+  "The specific stick-figure character designs with floating hands.",
+  "The exact pirate ship models and skull sail designs."
+ ],
+ "title_formula": "How [Everyday Object] Saved [Group] From [Disaster]",
+ "topic_type": "historical trick",
+ "why_this_topic": "It reveals a mind-blowing, counterintuitive survival tactic used in history, wrapped in an engaging, high-stakes narrative.",
+ "hook_line": "He poured cooking oil into the sea with a pirate ship so close behind them he could hear the pirates laughing.",
+ "script_shape": [
+  {
+   "t": "0:00-0:18",
+   "role": "escalation",
+   "technique": "Introduces a bizarre action during a chase, escalating to steering into a storm."
+  },
+  {
+   "t": "0:18-0:27",
+   "role": "twist",
+   "technique": "The enemy thinks they have won because the heroes chose a deadly path."
+  },
+  {
+   "t": "0:27-0:43",
+   "role": "escalation",
+   "technique": "The environment becomes the primary threat, building to a seemingly inescapable climax."
+  },
+  {
+   "t": "0:43-0:52",
+   "role": "explanation",
+   "technique": "Pauses the narrative to explain the science behind the bizarre opening action."
+  },
+  {
+   "t": "0:52-1:04",
+   "role": "payoff",
+   "technique": "Applies the explained science to resolve the conflict and defeat the enemy."
+  }
+ ],
+ "pivot": {
+  "present": true,
+  "t": "0:43",
+  "phrase_type": "'You see...' style turn into the explanation",
+  "what_changes_on_screen": "The scene cuts from a dark, chaotic storm to a bright, calm, warm-toned kitchen. The intense music stops."
+ },
+ "words_per_second_estimate": 3.75,
+ "world": {
+  "setting": "A ship at sea",
+  "era": "Age of Sail / Pirate Era",
+  "locations": [
+   "Hero ship deck (day)",
+   "Hero ship deck (storm)",
+   "Ship's kitchen",
+   "Open ocean (storm)"
+  ],
+  "set_dressing": "Cooking pots, grappling hooks, ship wheels, cannons, bowls of soup."
+ },
+ "cast": [
+  {
+   "role": "Chef",
+   "costume": "White chef's hat and apron",
+   "screen_time": "main",
+   "expressions_used": [
+    "calm",
+    "unbothered",
+    "smug"
+   ]
+  },
+  {
+   "role": "Captain",
+   "costume": "Blue naval coat and captain's hat",
+   "screen_time": "support",
+   "expressions_used": [
+    "angry",
+    "panicked",
+    "shocked"
+   ]
+  },
+  {
+   "role": "Pirates",
+   "costume": "Bandanas, eye patches, pirate hats",
+   "screen_time": "support",
+   "expressions_used": [
+    "laughing",
+    "gloating",
+    "aggressive"
+   ]
+  }
+ ],
+ "lighting_flip": "At 0:27, the lighting flips from bright, sunny daylight to a dark, moody, purple-hued storm, instantly changing the tone from an adventure chase to a survival thriller.",
+ "inserts": [
+  "A top-down macro shot of a bowl of soup to demonstrate how oil reacts to wind."
+ ],
+ "camera_moves": "Frequent cuts between static mediums and wides, with occasional slow push-ins during dialogue to emphasize character reactions.",
+ "loop_device": "The video ends with the wave dropping onto the pirate's deck, which softly resets the narrative context but does not form a perfect seamless visual or audio loop.",
+ "weak_spots": "The transition from the pirate chase directly into the massive storm feels slightly abrupt, compressing the timeline of how quickly a storm of that magnitude would appear.",
+ "url": "https://www.youtube.com/shorts/Mz72MuPgnGY",
+ "id": "Mz72MuPgnGY",
+ "studied_at": "2026-11-14T07:56:01Z",
+ "model": "gemini-3.1-pro-preview"
+}

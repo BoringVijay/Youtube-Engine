@@ -1,0 +1,363 @@
+{
+ "title_guess": "The Genius Weapon That Destroyed An Army",
+ "channel_guess": "History Explainer Animation",
+ "duration_s": 66,
+ "format": "explainer",
+ "premise": "A lone soldier builds a bizarre, multi-tubed contraption that turns out to be a devastating early rocket launcher to wipe out an invading army.",
+ "hook": {
+  "first_2s_visual": "A soldier rapidly drilling holes into a wooden board while a number '82' pops up on screen.",
+  "first_line_technique": "Starts mid-action with a highly specific number to create immediate curiosity before introducing the high-stakes threat.",
+  "text_on_screen": "Dynamic, center-screen captions popping in one or two words at a time, colored white and yellow."
+ },
+ "structure": [
+  {
+   "t": "0:00-0:13",
+   "beat": "setup",
+   "what_happens": "The protagonist drills holes while others prepare for an impending attack, drawing confusion from his commander.",
+   "why_it_works": "Establishes the threat and highlights the protagonist's unusual behavior, creating a mystery."
+  },
+  {
+   "t": "0:13-0:28",
+   "beat": "escalation",
+   "what_happens": "He builds a complex device with tubes and strings, fiercely protecting it from being touched.",
+   "why_it_works": "Deepens the mystery of what the device is and shows how important it is to him."
+  },
+  {
+   "t": "0:28-0:36",
+   "beat": "twist",
+   "what_happens": "It rains, threatening the device. He uses his coat to protect it, resulting in a soldier's death.",
+   "why_it_works": "Introduces a sudden environmental setback that raises the stakes and shows his absolute commitment to the weapon."
+  },
+  {
+   "t": "0:36-0:48",
+   "beat": "escalation",
+   "what_happens": "The enemy attacks the next morning. He waits patiently while his allies panic.",
+   "why_it_works": "Builds extreme tension by delaying the payoff until the enemy is perfectly positioned."
+  },
+  {
+   "t": "0:48-1:06",
+   "beat": "payoff",
+   "what_happens": "He lights the fuse, revealing the device is a massive rocket launcher (Hwacha) that obliterates the enemy army.",
+   "why_it_works": "Delivers a visually spectacular and highly satisfying resolution to the mystery built up over the minute."
+  }
+ ],
+ "shots": [
+  {
+   "t": "0:00",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Soldier drilling holes in a wooden board."
+  },
+  {
+   "t": "0:02",
+   "framing": "wide",
+   "camera": "push-in",
+   "transition": "cut",
+   "subject": "Enemy army marching towards the fort."
+  },
+  {
+   "t": "0:05",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Two soldiers sharpening a sword on a grindstone."
+  },
+  {
+   "t": "0:07",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Soldier still drilling in the corner."
+  },
+  {
+   "t": "0:09",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Commander yelling at the drilling soldier."
+  },
+  {
+   "t": "0:13",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Soldier bolting the wooden board to a cart."
+  },
+  {
+   "t": "0:15",
+   "framing": "macro",
+   "camera": "push-in",
+   "transition": "cut",
+   "subject": "Paper tubes being inserted into the drilled holes."
+  },
+  {
+   "t": "0:18",
+   "framing": "macro",
+   "camera": "tilt up",
+   "transition": "cut",
+   "subject": "Strings hanging down from the paper tubes."
+  },
+  {
+   "t": "0:20",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Soldier twisting all the strings into one thick rope."
+  },
+  {
+   "t": "0:24",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Soldier slaps another soldier's hand away from the rope."
+  },
+  {
+   "t": "0:28",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Night time, rain pouring on the soldier."
+  },
+  {
+   "t": "0:30",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Soldier throws his coat over the cart and lies on it."
+  },
+  {
+   "t": "0:34",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Soldiers huddled under the cart in the rain."
+  },
+  {
+   "t": "0:36",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Morning, ladders hitting the fort walls."
+  },
+  {
+   "t": "0:39",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Enemy army charging the fort."
+  },
+  {
+   "t": "0:40",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Allied soldiers yelling at the protagonist."
+  },
+  {
+   "t": "0:42",
+   "framing": "wide",
+   "camera": "push-in",
+   "transition": "cut",
+   "subject": "Enemy army getting closer, packing tightly together."
+  },
+  {
+   "t": "0:48",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Soldier rips off the coat and lights the main rope."
+  },
+  {
+   "t": "0:50",
+   "framing": "macro",
+   "camera": "push-in",
+   "transition": "cut",
+   "subject": "Spark racing down the main rope."
+  },
+  {
+   "t": "0:52",
+   "framing": "macro",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Spark splitting into 82 tiny flames."
+  },
+  {
+   "t": "0:54",
+   "framing": "macro",
+   "camera": "push-in",
+   "transition": "cut",
+   "subject": "Inside the tube, flame igniting gunpowder."
+  },
+  {
+   "t": "0:58",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Rockets firing out of the cart."
+  },
+  {
+   "t": "1:00",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Rockets flying through the air towards the army."
+  },
+  {
+   "t": "1:03",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Massive explosion engulfing the enemy army."
+  },
+  {
+   "t": "1:05",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Protagonist smiling with the mushroom cloud behind him."
+  }
+ ],
+ "pacing": {
+  "avg_shot_s": 2.6,
+  "cuts_in_first_5s": 2,
+  "where_it_slows_down": "During the night rain scene (0:28-0:36) to build atmospheric tension and show hardship.",
+  "where_it_speeds_up": "From 0:48 onwards, rapid cuts between macro shots of the fuse and wide shots of the launch to amplify the action."
+ },
+ "look": {
+  "style": "3D environments and bodies with 2D animated faces",
+  "palette": "Bright, saturated daylight colors, shifting to dark blues for the night scene, and ending with bright orange/yellow for the explosion.",
+  "lighting": "Flat 3D lighting that changes dynamically to reflect time of day and weather, culminating in a massive bright flash.",
+  "texture": "Low-poly, smooth 3D textures contrasted with flat, simple 2D facial features.",
+  "character_design": "Stick figure limbs, cylindrical bodies with historical armor textures, and flat circular heads with expressive 2D faces."
+ },
+ "voice": {
+  "present": true,
+  "gender_age_impression": "Male, young adult",
+  "tone": "Energetic, storytelling, slightly dramatic",
+  "pace_wpm": 160,
+  "energy_curve": "Starts intriguing, builds mystery, drops to a somber tone during the rain, ramps up rapidly during the attack, and peaks at the explosion.",
+  "delivery_tricks": "Emphasizes specific numbers ('82'), uses pauses for dramatic effect ('we're all dead'), and accelerates during the climax."
+ },
+ "music": {
+  "present": true,
+  "genre": "Orchestral / Epic Cinematic",
+  "bpm_estimate": 100,
+  "where_it_drops": "When the rain starts at 0:28 to shift the mood, and right before the massive explosion at 1:03.",
+  "how_it_supports_the_story": "Builds tension during the construction phase, creates a somber mood during the rain setback, and drives the high-energy action during the final battle."
+ },
+ "sfx": "Drilling sounds, marching footsteps, sword sharpening, a sharp slap, rain and thunder, sizzling fuses, rocket swooshes, and a massive bass-heavy explosion.",
+ "hero_moments": "The sequence from 0:50 to 0:57 uses rapid macro push-ins to show the intricate mechanics of the spark splitting and igniting the gunpowder, making the final launch feel earned and complex.",
+ "captions": "Dynamic, center-screen, one or two words at a time, colored white with yellow highlights for emphasis, popping in sync with the voiceover.",
+ "why_it_works": [
+  "Starts with a highly specific, unusual action (drilling 82 holes) that demands an explanation.",
+  "Creates a compelling mystery by showing the construction of a complex device without explaining what it is.",
+  "Contrasts the protagonist's calm, focused behavior with the panic of everyone else, making him look like a hidden genius.",
+  "Introduces a weather setback (rain) to raise the stakes and show the protagonist's dedication.",
+  "Delays the gratification of using the weapon until the absolute last second for maximum tension.",
+  "Delivers a visually spectacular and loud payoff that completely resolves the initial threat."
+ ],
+ "rules_to_borrow": [
+  "Start your video with a highly specific number or action to instantly hook the viewer's curiosity.",
+  "Show, don't tell, the construction of a complex mechanism using macro shots to make it feel intricate.",
+  "Introduce an environmental or external setback right before the climax to make the success feel harder earned.",
+  "Contrast your main subject's behavior with the background characters to highlight their uniqueness.",
+  "Delay the final payoff until the tension is at its absolute peak.",
+  "Use sound design (like sizzling fuses or heavy impacts) to make visual elements feel more powerful."
+ ],
+ "do_not_copy": [
+  "The specific hybrid art style of 2D faces on 3D cylindrical bodies.",
+  "The exact character designs and armor textures."
+ ],
+ "title_formula": "How [Person] Invented the [Weapon]",
+ "topic_type": "historical trick",
+ "why_this_topic": "It combines history, clever engineering, and a massive explosion, satisfying curiosity and the desire for spectacle.",
+ "hook_line": "He drilled 82 holes into the wood, because down the hill, an army is marching straight for his fort.",
+ "script_shape": [
+  {
+   "t": "0:00-0:13",
+   "role": "setup",
+   "technique": "Establishes the threat and the protagonist's unusual response to it."
+  },
+  {
+   "t": "0:13-0:28",
+   "role": "escalation",
+   "technique": "Describes the intricate building process to deepen the mystery."
+  },
+  {
+   "t": "0:28-0:36",
+   "role": "pivot",
+   "technique": "Introduces a sudden complication that threatens the plan."
+  },
+  {
+   "t": "0:36-0:48",
+   "role": "escalation",
+   "technique": "Brings the threat to the doorstep, maximizing tension before the release."
+  },
+  {
+   "t": "0:48-1:06",
+   "role": "explanation",
+   "technique": "Reveals the purpose of the device and resolves the conflict with a spectacle."
+  }
+ ],
+ "pivot": {
+  "present": true,
+  "t": "0:28",
+  "phrase_type": "That night, it pours.",
+  "what_changes_on_screen": "Lighting shifts from bright day to dark night, rain effects appear, and the music turns somber."
+ },
+ "words_per_second_estimate": 2.5,
+ "world": {
+  "setting": "A medieval/historical fort under siege.",
+  "era": "Feudal/Medieval (inspired by 15th century Joseon dynasty).",
+  "locations": [
+   "Fort courtyard",
+   "Fort walls",
+   "Battlefield outside the fort"
+  ],
+  "set_dressing": "Wooden carts, swords, grindstones, banners, ladders, and a complex wooden rocket launcher."
+ },
+ "cast": [
+  {
+   "role": "Protagonist",
+   "costume": "Red historical armor with a headband",
+   "screen_time": "main",
+   "expressions_used": [
+    "determined",
+    "angry",
+    "smug smile"
+   ]
+  },
+  {
+   "role": "Commander",
+   "costume": "Blue armor with a red plumed helmet",
+   "screen_time": "support",
+   "expressions_used": [
+    "confused",
+    "angry",
+    "panicked"
+   ]
+  },
+  {
+   "role": "Enemy Army",
+   "costume": "Yellow armor with shields",
+   "screen_time": "crowd",
+   "expressions_used": [
+    "angry",
+    "aggressive"
+   ]
+  }
+ ],
+ "lighting_flip": "The scene abruptly changes from bright daylight to dark, rainy night at 0:28, then back to a bright sunrise at 0:36, ending with an overwhelming bright flash from the explosion at 1:03.",
+ "inserts": [
+  "Macro shots of paper tubes being inserted into holes.",
+  "Macro shots of the spark traveling down the fuse and igniting the gunpowder."
+ ],
+ "camera_moves": "Mostly static shots with frequent hard cuts to keep the pace fast. Uses slow push-ins during macro shots to emphasize intricate details and during the enemy charge to build tension.",
+ "loop_device": "The video ends abruptly on a massive explosion and a smug smile, providing a definitive conclusion rather than a seamless loop, but the suddenness encourages a rewatch.",
+ "weak_spots": "The transition from the somber rain scene to the morning attack feels slightly abrupt and could have used a brief establishing shot of the dawn to smooth the pacing.",
+ "url": "https://www.youtube.com/shorts/i4hYq1oSXTg",
+ "id": "i4hYq1oSXTg",
+ "studied_at": "2026-11-14T07:49:25Z",
+ "model": "gemini-3.1-pro-preview"
+}

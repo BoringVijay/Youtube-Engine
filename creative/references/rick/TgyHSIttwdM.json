@@ -1,0 +1,248 @@
+{
+ "title_guess": "How Math Catches Fraud",
+ "channel_guess": "Zack D. Films",
+ "duration_s": 48,
+ "format": "explainer",
+ "premise": "Explains how Benford's Law and human psychological biases make it impossible to successfully fake random numbers.",
+ "hook": {
+  "first_2s_visual": "A close-up of a pen writing a large amount on a check, followed immediately by an auditor inspecting the numbers with a magnifying glass.",
+  "first_line_technique": "It challenges the viewer directly with a hypothetical illicit action ('If you ever fake a number...') and promises a secret method of detection.",
+  "text_on_screen": "87,439.11"
+ },
+ "structure": [
+  {
+   "t": "0:00-0:03",
+   "beat": "setup",
+   "what_happens": "Introduces the premise that faked numbers can be detected.",
+   "why_it_works": "Creates immediate curiosity about the 'tell' that gives away a lie."
+  },
+  {
+   "t": "0:03-0:10",
+   "beat": "escalation",
+   "what_happens": "Tells a micro-story about a man who stole $2 million with fake checks but was caught despite making the numbers look random.",
+   "why_it_works": "Raises the stakes by showing a real-world, high-value consequence of the phenomenon."
+  },
+  {
+   "t": "0:10-0:28",
+   "beat": "twist",
+   "what_happens": "Explains Benford's Law using a 19-story building and elevator buttons to show that the number '1' appears much more frequently as a leading digit than others.",
+   "why_it_works": "Translates a complex statistical law into a highly visual, easily understandable physical analogy."
+  },
+  {
+   "t": "0:28-0:42",
+   "beat": "payoff",
+   "what_happens": "Explains a second tell: humans avoid streaks and doubles when faking randomness, whereas true randomness is 'streaky'.",
+   "why_it_works": "Provides a secondary, psychological explanation that complements the mathematical one, making the argument bulletproof."
+  },
+  {
+   "t": "0:42-0:48",
+   "beat": "loop",
+   "what_happens": "The fraudster is shown in jail, and the auditor looks through the magnifying glass again, concluding you can't hide fake numbers.",
+   "why_it_works": "Brings the narrative full circle, visually and thematically linking back to the opening shot."
+  }
+ ],
+ "shots": [
+  {
+   "t": "0:00",
+   "framing": "close",
+   "camera": "static",
+   "transition": "none",
+   "subject": "Pen writing on a check"
+  },
+  {
+   "t": "0:01",
+   "framing": "medium",
+   "camera": "push-in",
+   "transition": "cut",
+   "subject": "Auditor looking through a magnifying glass"
+  },
+  {
+   "t": "0:03",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Bank drive-through with fraudster"
+  },
+  {
+   "t": "0:11",
+   "framing": "wide",
+   "camera": "tilt-up",
+   "transition": "cut",
+   "subject": "A 19-story building"
+  },
+  {
+   "t": "0:14",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Fraudster and cop inside an elevator looking at buttons"
+  },
+  {
+   "t": "0:25",
+   "framing": "wide",
+   "camera": "pull-out",
+   "transition": "cut",
+   "subject": "City skyline where buildings are shaped like numbers"
+  },
+  {
+   "t": "0:32",
+   "framing": "macro",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Grid of 100 coin flips being marked with a pencil"
+  },
+  {
+   "t": "0:43",
+   "framing": "medium",
+   "camera": "push-in",
+   "transition": "cut",
+   "subject": "Auditor outside a jail cell holding the fraudster"
+  }
+ ],
+ "pacing": {
+  "avg_shot_s": 2.5,
+  "cuts_in_first_5s": 4,
+  "where_it_slows_down": "During the elevator button explanation (0:14-0:24) to allow the viewer to process the math.",
+  "where_it_speeds_up": "During the coin flip and bar chart sequence (0:32-0:40) to quickly deliver the second point."
+ },
+ "look": {
+  "style": "2D animation",
+  "palette": "Warm, saturated colors (oranges, yellows, teals) giving a slightly retro or desert vibe.",
+  "lighting": "Flat shading with soft gradients and distinct drop shadows to create depth.",
+  "texture": "Clean vector style with no gritty textures.",
+  "character_design": "Simple, iconic figures with round heads, dot eyes, and floating limbs, wearing specific outfits to denote roles."
+ },
+ "voice": {
+  "present": true,
+  "gender_age_impression": "Male, 20s-30s",
+  "tone": "Enthusiastic, authoritative, fast-paced, and slightly conversational.",
+  "pace_wpm": 210,
+  "energy_curve": "Starts high to hook, maintains a steady, engaging instructional pace, and peaks slightly at the final conclusion.",
+  "delivery_tricks": "Emphasizes key words ('human', 'two million', 'half') and uses a slight upward inflection before transitions to keep momentum."
+ },
+ "music": {
+  "present": true,
+  "genre": "Upbeat, quirky instrumental (marimba/pizzicato strings)",
+  "bpm_estimate": 110,
+  "where_it_drops": "It remains relatively constant, acting as a rhythmic bed rather than driving emotional shifts.",
+  "how_it_supports_the_story": "Provides a lighthearted, 'sneaky' investigative feel that matches the topic of fraud without being overly serious."
+ },
+ "sfx": "Constant use of literal sound effects for every on-screen action: pen scratching, magnifying glass whoosh, cash register dings, pneumatic tube suction, elevator dings, pencil scribbling, and jail cell clangs. These anchor the animation in reality.",
+ "hero_moments": "The reveal of the city skyline shaped like numbers (0:25) visually cements the abstract concept of Benford's Law in a single, striking image.",
+ "captions": "One to three words at a time, center screen, bold white text with a black outline, popping in sync with the voiceover.",
+ "why_it_works": [
+  "It takes a dry mathematical concept (Benford's Law) and frames it as a true-crime/heist secret.",
+  "The visual analogies (elevator, number city) perfectly explain the math without requiring the viewer to do any calculations.",
+  "The pacing is relentless; there is never a static frame for more than a second.",
+  "It flatters the viewer by teaching them a 'secret' way to spot liars.",
+  "The animation style is distinct, colorful, and highly readable on small screens."
+ ],
+ "rules_to_borrow": [
+  "Frame abstract concepts as solutions to relatable human problems (e.g., catching a liar).",
+  "Use a high-stakes micro-anecdote in the first 10 seconds to prove why the topic matters.",
+  "Invent physical analogies for invisible forces (like using an elevator to explain statistical distribution).",
+  "If explaining a rule, also explain the human psychological flaw that makes the rule necessary (e.g., humans are bad at randomness).",
+  "Sound design should be literal and frequent in animation to give weight to 2D objects.",
+  "Use visual metaphors (like a bar chart turning into a skyline) to make data beautiful."
+ ],
+ "do_not_copy": [
+  "The specific round-headed, floating-limb character design.",
+  "The exact voiceover cadence and tone, which is highly recognizable.",
+  "The specific elevator analogy for Benford's Law."
+ ],
+ "title_formula": "How [System] Catches [Bad Behavior]",
+ "topic_type": "hidden mechanism",
+ "why_this_topic": "It reveals a secret mathematical rule that governs everyday life and exposes human deception.",
+ "hook_line": "If you ever fake a number, there's a way to tell a human made it up.",
+ "script_shape": [
+  {
+   "t": "0:00-0:03",
+   "role": "paradox",
+   "technique": "States a counterintuitive fact (humans can't fake numbers well)."
+  },
+  {
+   "t": "0:03-0:10",
+   "role": "escalation",
+   "technique": "Provides a high-stakes example to validate the opening claim."
+  },
+  {
+   "t": "0:10-0:28",
+   "role": "explanation",
+   "technique": "Uses a physical analogy to explain a statistical law."
+  },
+  {
+   "t": "0:28-0:42",
+   "role": "pivot",
+   "technique": "Introduces a second, psychological reason to compound the first explanation."
+  },
+  {
+   "t": "0:42-0:48",
+   "role": "loop",
+   "technique": "Concludes with a warning that ties back to the opening premise."
+  }
+ ],
+ "pivot": {
+  "present": true,
+  "t": "0:10",
+  "phrase_type": "Question and answer ('But how? Well, picture...')",
+  "what_changes_on_screen": "Transitions from the narrative example (the bank) to the theoretical explanation (the tall building)."
+ },
+ "words_per_second_estimate": 3.5,
+ "world": {
+  "setting": "A stylized, slightly retro corporate/desert town environment.",
+  "era": "Ambiguous modern/retro mix.",
+  "locations": [
+   "Auditor's desk",
+   "Bank drive-through",
+   "Exterior of a tall building",
+   "Inside an elevator",
+   "Abstract number city",
+   "Jail cell"
+  ],
+  "set_dressing": "Checks, magnifying glasses, stacks of cash, pneumatic tubes, elevator panels, coin grids, bar charts."
+ },
+ "cast": [
+  {
+   "role": "Auditor",
+   "costume": "Purple suit, glasses, hair bun",
+   "screen_time": "main",
+   "expressions_used": [
+    "smug",
+    "observant"
+   ]
+  },
+  {
+   "role": "Fraudster",
+   "costume": "Yellow shirt, brown tie",
+   "screen_time": "main",
+   "expressions_used": [
+    "nervous",
+    "sweating",
+    "confident",
+    "shocked"
+   ]
+  },
+  {
+   "role": "Police Officer",
+   "costume": "Blue uniform, cap",
+   "screen_time": "support",
+   "expressions_used": [
+    "stern"
+   ]
+  }
+ ],
+ "lighting_flip": "The lighting shifts from bright, flat daylight during the bank scene to a warm, golden-hour sunset palette during the 'number city' and bar chart explanations, adding visual interest to the data visualization.",
+ "inserts": [
+  "A forged check",
+  "An elevator button panel highlighting numbers 1-19",
+  "A 10x10 grid of coin flips",
+  "A bar chart showing digit frequency"
+ ],
+ "camera_moves": "The camera frequently pushes in on subjects to emphasize realization or tension, and uses hard cuts to move between distinct locations or analogies. It rarely pans, preferring to re-frame entirely.",
+ "loop_device": "The video ends with the auditor looking through a magnifying glass at the fraudster in jail, visually mirroring the opening shot of the auditor looking through a magnifying glass at the fake check.",
+ "weak_spots": "The transition between Benford's Law (the elevator) and the coin flip analogy is slightly abrupt; a viewer might confuse the two concepts as being the exact same mathematical rule rather than two separate tells.",
+ "url": "https://www.youtube.com/shorts/TgyHSIttwdM",
+ "id": "TgyHSIttwdM",
+ "studied_at": "2026-11-14T08:16:44Z",
+ "model": "gemini-3.1-pro-preview"
+}

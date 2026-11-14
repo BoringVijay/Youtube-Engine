@@ -1,0 +1,276 @@
+{
+ "title_guess": "The World's First Earthquake Detector",
+ "channel_guess": "Zack D. Films",
+ "duration_s": 65,
+ "format": "explainer",
+ "premise": "An ancient inventor creates a seemingly useless jar that is actually a highly sensitive earthquake detector, but his warnings are ignored until disaster strikes.",
+ "hook": {
+  "first_2s_visual": "A character places a bronze ball into the mouth of a golden dragon head attached to a large jar.",
+  "first_line_technique": "Creates immediate intrigue and high stakes by pairing a mundane action with a dire warning.",
+  "text_on_screen": "bronze"
+ },
+ "structure": [
+  {
+   "t": "0:00-0:07",
+   "beat": "setup",
+   "what_happens": "The inventor presents his device and issues a dire warning to the emperor.",
+   "why_it_works": "Establishes the core mystery and the conflict between the smart inventor and the arrogant court."
+  },
+  {
+   "t": "0:07-0:17",
+   "beat": "setup",
+   "what_happens": "The narrator explains what the device is and contrasts it with the emperor's military might.",
+   "why_it_works": "Provides necessary context while reinforcing the emperor's hubris."
+  },
+  {
+   "t": "0:17-0:28",
+   "beat": "twist",
+   "what_happens": "The device triggers, but nothing happens. The inventor is mocked and banished.",
+   "why_it_works": "A false failure that lowers expectations and isolates the protagonist, building sympathy."
+  },
+  {
+   "t": "0:28-0:45",
+   "beat": "escalation",
+   "what_happens": "Living in exile, the inventor sees the device trigger massively. He tries to warn the city but is ignored.",
+   "why_it_works": "Builds immense tension as the audience knows disaster is coming but the characters do not."
+  },
+  {
+   "t": "0:45-1:05",
+   "beat": "payoff",
+   "what_happens": "The city is destroyed. The video then explains the internal mechanism of the jar and reveals the earthquake was directly underneath them.",
+   "why_it_works": "Delivers the promised disaster, satisfies curiosity about how the device works, and ends on a massive scale."
+  }
+ ],
+ "shots": [
+  {
+   "t": "0:00",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "none",
+   "subject": "Inventor placing ball in dragon mouth"
+  },
+  {
+   "t": "0:04",
+   "framing": "wide",
+   "camera": "push-in",
+   "transition": "cut",
+   "subject": "Court laughing"
+  },
+  {
+   "t": "0:07",
+   "framing": "wide",
+   "camera": "orbit",
+   "transition": "dissolve",
+   "subject": "Full view of the bronze jar with 8 dragons"
+  },
+  {
+   "t": "0:13",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Massive army outside the castle"
+  },
+  {
+   "t": "0:17",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Ball falls from the dragon's mouth"
+  },
+  {
+   "t": "0:19",
+   "framing": "close",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Emperor's wine glass with still liquid"
+  },
+  {
+   "t": "0:26",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Inventor being thrown out of the city gates"
+  },
+  {
+   "t": "0:32",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Inventor sleeping against the jar as balls drop"
+  },
+  {
+   "t": "0:36",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Inventor screaming at the city gates"
+  },
+  {
+   "t": "0:45",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Ruined palace the next morning"
+  },
+  {
+   "t": "0:48",
+   "framing": "POV",
+   "camera": "push-in",
+   "transition": "cut",
+   "subject": "Inside the jar, showing the pendulum mechanism"
+  },
+  {
+   "t": "1:01",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Cross-section of the earth showing the earthquake fault line"
+  }
+ ],
+ "pacing": {
+  "avg_shot_s": 2.5,
+  "cuts_in_first_5s": 3,
+  "where_it_slows_down": "During the explanation of the internal pendulum mechanism (0:48-0:56).",
+  "where_it_speeds_up": "When all eight balls drop and the inventor runs to the gates (0:34-0:40)."
+ },
+ "look": {
+  "style": "3D environments with 2D character faces",
+  "palette": "Vibrant, contrasting colors (gold, blue, purple) against stone backgrounds.",
+  "lighting": "Dynamic lighting that changes with the time of day (bright day, orange sunset, dark night).",
+  "texture": "Smooth 3D models with metallic reflections on the jar and dragons.",
+  "character_design": "Stick-figure-like bodies with highly expressive, meme-inspired 2D faces."
+ },
+ "voice": {
+  "present": true,
+  "gender_age_impression": "Male, 20s-30s",
+  "tone": "Energetic, narrative, slightly dramatic",
+  "pace_wpm": 212,
+  "energy_curve": "Starts high with the hook, dips during the false failure, builds rapidly during the night scene, and peaks at the final reveal.",
+  "delivery_tricks": "Emphasizes key words ('run', 'biggest', 'rubble') and uses pauses effectively before reveals."
+ },
+ "music": {
+  "present": true,
+  "genre": "Orchestral/Cinematic",
+  "bpm_estimate": 110,
+  "where_it_drops": "The music swells significantly at 0:45 when the ruined palace is shown.",
+  "how_it_supports_the_story": "Builds tension during the night scene and provides a grand, dramatic feel during the explanation of the mechanism."
+ },
+ "sfx": "Clinking of the bronze balls, heavy thuds of the balls dropping, crowd laughter, rumbling of the earthquake, mechanical snapping of the internal rods.",
+ "hero_moments": "The sequence starting at 0:48 where the camera dives inside the jar to reveal the hidden pendulum mechanism, explaining the mystery, followed by the final wide shot showing the massive earthquake fault line directly under the city.",
+ "captions": "Dynamic, centered, one or two words at a time, color-coded for emphasis.",
+ "why_it_works": [
+  "High stakes established immediately in the first sentence.",
+  "Clear conflict between a smart underdog and an arrogant authority figure.",
+  "Uses a 'false failure' to subvert expectations and build sympathy.",
+  "Visualizes a complex historical invention in a simple, engaging way.",
+  "Delivers a satisfying, massive-scale payoff."
+ ],
+ "rules_to_borrow": [
+  "Start with a bold claim or dire warning to hook the viewer.",
+  "Use a 'You see...' pivot early to explain the core concept.",
+  "Create a false failure to lower the audience's guard before the real climax.",
+  "Isolate the protagonist to build sympathy and tension.",
+  "Use a montage of escalating events to build to a climax.",
+  "Reveal the 'how it works' secret only after showing the devastating consequences.",
+  "Use cross-section or internal views to explain complex mechanics simply.",
+  "End on a massive scale reveal to leave a lasting impression."
+ ],
+ "do_not_copy": [
+  "The specific 2D meme-face design on 3D bodies, which is a signature of this creator."
+ ],
+ "title_formula": "The [Adjective] [Object] That [Surprising Action]",
+ "topic_type": "historical trick",
+ "why_this_topic": "It turns a dry historical invention into a high-stakes narrative of hubris and disaster.",
+ "hook_line": "He put a bronze ball in a dragon's mouth and told the emperor, if this ever falls out, run.",
+ "script_shape": [
+  {
+   "t": "0:00-0:07",
+   "role": "hook",
+   "technique": "Sets up the mystery and stakes."
+  },
+  {
+   "t": "0:07-0:17",
+   "role": "explanation",
+   "technique": "Provides context and introduces the device."
+  },
+  {
+   "t": "0:17-0:28",
+   "role": "pivot",
+   "technique": "A false failure that changes the direction of the story."
+  },
+  {
+   "t": "0:28-0:45",
+   "role": "escalation",
+   "technique": "Builds tension as the real disaster approaches."
+  },
+  {
+   "t": "0:45-1:05",
+   "role": "twist",
+   "technique": "Reveals the destruction and explains the hidden mechanism."
+  }
+ ],
+ "pivot": {
+  "present": true,
+  "t": "0:07",
+  "phrase_type": "You see...",
+  "what_changes_on_screen": "Cuts from the characters to a full, rotating view of the mysterious jar."
+ },
+ "words_per_second_estimate": 3.5,
+ "world": {
+  "setting": "Ancient Chinese-inspired kingdom",
+  "era": "Antiquity",
+  "locations": [
+   "Throne room",
+   "City square",
+   "Hillside outside city",
+   "City gates",
+   "Inside the jar",
+   "Underground"
+  ],
+  "set_dressing": "Thrones, banners, guards with spears, stone walls, campfire."
+ },
+ "cast": [
+  {
+   "role": "Inventor",
+   "costume": "Blue robes, traditional hat",
+   "screen_time": "main",
+   "expressions_used": [
+    "serious",
+    "shocked",
+    "panicked",
+    "dejected"
+   ]
+  },
+  {
+   "role": "Emperor",
+   "costume": "Purple robes, elaborate crown",
+   "screen_time": "support",
+   "expressions_used": [
+    "smug",
+    "annoyed",
+    "angry"
+   ]
+  },
+  {
+   "role": "Guards",
+   "costume": "Armor, helmets",
+   "screen_time": "support",
+   "expressions_used": [
+    "laughing",
+    "mocking"
+   ]
+  }
+ ],
+ "lighting_flip": "Changes from bright daytime to sunset, then night, then morning to show the passage of time and build tension.",
+ "inserts": [
+  "Close-up of the wine glass",
+  "Macro view of the internal pendulum mechanism"
+ ],
+ "camera_moves": "Frequent cuts with slow push-ins or orbits to keep the frame dynamic.",
+ "loop_device": "The final shot of the earthquake underground cuts abruptly back to the first shot of the ball being placed, creating a cycle of setup and disaster.",
+ "weak_spots": "The transition from the ruined city back to the explanation of the jar feels slightly disjointed chronologically, though it works for pacing.",
+ "url": "https://www.youtube.com/shorts/VS1Z_Q-Klt8",
+ "id": "VS1Z_Q-Klt8",
+ "studied_at": "2026-11-14T08:07:51Z",
+ "model": "gemini-3.1-pro-preview"
+}

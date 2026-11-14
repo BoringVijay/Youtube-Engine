@@ -1,0 +1,255 @@
+{
+ "title_guess": "Why Roller Coaster Loops Aren't Circles",
+ "channel_guess": "Zack D. Films",
+ "duration_s": 63,
+ "format": "explainer",
+ "premise": "A roller coaster designer alters his loop's shape to survive, revealing the physics of why real roller coaster loops are teardrop-shaped, not perfect circles.",
+ "hook": {
+  "first_2s_visual": "A cartoon character enthusiastically swinging a hammer to bend a roller coaster track out of shape.",
+  "first_line_technique": "States a counter-intuitive and destructive action that immediately raises a 'why would he do that?' question.",
+  "text_on_screen": "He bent the roller coaster's loop out of shape."
+ },
+ "structure": [
+  {
+   "t": "0:00-0:10",
+   "beat": "setup",
+   "what_happens": "The protagonist builds a loop, goes broke, and a rival copies his design exactly.",
+   "why_it_works": "Establishes the characters, the stakes (he spent everything), and the conflict (the rival)."
+  },
+  {
+   "t": "0:10-0:28",
+   "beat": "escalation",
+   "what_happens": "A test dummy is crushed. The protagonist hammers his loop into a weird shape, while the rival makes his loop tall and skinny.",
+   "why_it_works": "Shows the danger of the original design and sets up two competing, flawed-looking solutions."
+  },
+  {
+   "t": "0:28-0:40",
+   "beat": "twist",
+   "what_happens": "Opening day arrives. Both characters ride their respective coasters, heading towards their loops.",
+   "why_it_works": "Builds tension as the viewer waits to see which design will fail and which will succeed."
+  },
+  {
+   "t": "0:40-0:59",
+   "beat": "payoff",
+   "what_happens": "The video pauses the narrative to explain the physics of G-forces using a car analogy, revealing why the protagonist's teardrop shape is safe.",
+   "why_it_works": "Delivers the educational core of the video right at the moment of highest suspense."
+  },
+  {
+   "t": "0:59-1:03",
+   "beat": "loop",
+   "what_happens": "The protagonist survives smoothly, while the rival's cart hits the bottom of his perfect circle and explodes.",
+   "why_it_works": "Provides a satisfying, explosive conclusion to the rivalry, proving the physics lesson correct."
+  }
+ ],
+ "shots": [
+  {
+   "t": "0:00",
+   "framing": "wide",
+   "camera": "push-in",
+   "transition": "none",
+   "subject": "Protagonist hammering the track"
+  },
+  {
+   "t": "0:04",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Protagonist smiling, then looking sad at empty wallet"
+  },
+  {
+   "t": "0:07",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Rival standing next to a chalkboard blueprint"
+  },
+  {
+   "t": "0:12",
+   "framing": "medium",
+   "camera": "tracking",
+   "transition": "cut",
+   "subject": "Test cart returning with a crushed dummy"
+  },
+  {
+   "t": "0:16",
+   "framing": "wide",
+   "camera": "tracking",
+   "transition": "cut",
+   "subject": "Protagonist hammering the loop at night"
+  },
+  {
+   "t": "0:23",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Rival cranking his loop to be tall and skinny"
+  },
+  {
+   "t": "0:35",
+   "framing": "POV",
+   "camera": "tracking",
+   "transition": "cut",
+   "subject": "Looking down the roller coaster drop"
+  },
+  {
+   "t": "0:41",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "A car navigating a hairpin turn slowly"
+  },
+  {
+   "t": "0:44",
+   "framing": "wide",
+   "camera": "tracking",
+   "transition": "cut",
+   "subject": "A car flipping while taking a turn too fast"
+  },
+  {
+   "t": "0:52",
+   "framing": "wide",
+   "camera": "tracking",
+   "transition": "cut",
+   "subject": "Protagonist's cart smoothly entering the teardrop loop"
+  },
+  {
+   "t": "1:00",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Rival's cart exploding at the bottom of the loop"
+  }
+ ],
+ "pacing": {
+  "avg_shot_s": 2.1,
+  "cuts_in_first_5s": 4,
+  "where_it_slows_down": "0:40, during the car analogy to ensure the physics explanation is understood.",
+  "where_it_speeds_up": "0:10-0:28, during the montage of fixing and altering the loops."
+ },
+ "look": {
+  "style": "3D animation with 2D facial features",
+  "palette": "Bright, saturated primary colors (blues, greens, reds) with distinct day/night contrasts.",
+  "lighting": "Flat, cartoonish lighting with clear directional shadows to ground the 3D objects.",
+  "texture": "Smooth, plastic-like textures typical of stylized 3D animation.",
+  "character_design": "Pill-shaped bodies with stick-figure limbs and expressive 2D animated faces."
+ },
+ "voice": {
+  "present": true,
+  "gender_age_impression": "Male, 20s-30s",
+  "tone": "Energetic, informative, slightly dramatic",
+  "pace_wpm": 180,
+  "energy_curve": "Starts high, maintains a steady fast pace, slows slightly for the educational pivot, then peaks at the final explosion.",
+  "delivery_tricks": "Emphasizes key verbs and adjectives ('crushed', 'lazy', 'perfect') to drive the narrative forward."
+ },
+ "music": {
+  "present": true,
+  "genre": "Quirky, upbeat orchestral/synth hybrid",
+  "bpm_estimate": 120,
+  "where_it_drops": "0:40, the music shifts or lowers in volume to make room for the educational explanation.",
+  "how_it_supports_the_story": "Provides a lighthearted, bouncy undertone that contrasts with the 'life or death' stakes of the roller coaster designs."
+ },
+ "sfx": "Heavy use of cartoonish foley: metallic clangs for hammering, cartoon zips and whooshes for movement, a dramatic crunch for the dummy, and a loud boom for the final explosion.",
+ "hero_moments": "The sequence from 0:40 to 0:51 builds the core realization. It uses a relatable analogy (driving a car) to explain a complex concept (G-forces in a loop), making the viewer feel smart before showing the final result.",
+ "captions": "Dynamic, word-by-word or short phrase captions, center screen, using a bold, readable font with a slight drop shadow for contrast.",
+ "why_it_works": [
+  "It disguises a physics lesson inside a character-driven rivalry.",
+  "The visual of the crushed dummy immediately establishes high stakes.",
+  "It uses a highly relatable analogy (a car taking a sharp turn) to explain abstract physics.",
+  "The pacing is relentless, with constant visual changes keeping the eye engaged.",
+  "The character designs are simple but highly expressive, making it easy to track who is who."
+ ],
+ "rules_to_borrow": [
+  "Gamify education: Turn facts into a competition between characters.",
+  "Show, don't just tell, the consequences of failure (e.g., the crushed dummy).",
+  "Use everyday analogies to explain complex scientific or engineering concepts.",
+  "Keep the camera moving or cut frequently; avoid static shots longer than 3 seconds.",
+  "Use distinct, contrasting character archetypes (the hardworking underdog vs. the slick copycat).",
+  "Ensure the visual payoff directly proves the educational point made earlier."
+ ],
+ "do_not_copy": [
+  "The specific pill-shaped character models with 2D faces, as this is a signature style of specific creators in this niche."
+ ],
+ "title_formula": "Why [Object]s Are Actually [Surprising Shape/Fact]",
+ "topic_type": "science explainer",
+ "why_this_topic": "It takes a thrilling, universally recognized object (a roller coaster) and reveals a hidden, counter-intuitive design secret that everyone has seen but few understand.",
+ "hook_line": "He bent the roller coaster's loop out of shape.",
+ "script_shape": [
+  {
+   "t": "0:00-0:09",
+   "role": "paradox",
+   "technique": "Introduces a bizarre action and a conflict."
+  },
+  {
+   "t": "0:10-0:27",
+   "role": "escalation",
+   "technique": "Shows the failure of the norm and the creation of two competing solutions."
+  },
+  {
+   "t": "0:28-0:40",
+   "role": "pivot",
+   "technique": "Moves from the setup to the execution, building suspense."
+  },
+  {
+   "t": "0:41-0:58",
+   "role": "explanation",
+   "technique": "Breaks down the science using an analogy."
+  },
+  {
+   "t": "0:59-1:03",
+   "role": "twist",
+   "technique": "Delivers the final visual proof of the explanation via an explosion."
+  }
+ ],
+ "pivot": {
+  "present": true,
+  "t": "0:41",
+  "phrase_type": "You see...",
+  "what_changes_on_screen": "The scene completely cuts away from the roller coaster to a car driving on a road, signaling a shift from narrative to explanation."
+ },
+ "words_per_second_estimate": 3,
+ "world": {
+  "setting": "A stylized, cartoonish theme park and surrounding countryside.",
+  "era": "Modern/Timeless",
+  "locations": [
+   "Roller coaster construction site",
+   "Theme park entrance",
+   "Country road (for the analogy)"
+  ],
+  "set_dressing": "Ferris wheels, carnival tents, blueprints, tools, and balloons."
+ },
+ "cast": [
+  {
+   "role": "Protagonist (Builder)",
+   "costume": "Overalls, red baseball cap",
+   "screen_time": "main",
+   "expressions_used": [
+    "determined",
+    "happy",
+    "sad",
+    "panicked"
+   ]
+  },
+  {
+   "role": "Antagonist (Rival)",
+   "costume": "White suit, slicked-back black hair",
+   "screen_time": "main",
+   "expressions_used": [
+    "smug",
+    "laughing",
+    "confident"
+   ]
+  }
+ ],
+ "lighting_flip": "The video uses a clear day-to-night transition at 0:10 to signify the passage of time and the secrecy of the test, then flips back to bright daylight at 0:28 for the grand opening.",
+ "inserts": [
+  "The empty wallet at 0:05 to show he spent everything.",
+  "The chalkboard blueprint at 0:07 to show the rival copying the design."
+ ],
+ "camera_moves": "Frequent use of tracking shots following the roller coaster carts to create a sense of speed, combined with quick cuts between wide establishing shots and medium character reactions.",
+ "loop_device": "The video ends with a massive explosion, acting as a hard visual reset that conceptually leads back to the beginning where the builder is hammering the track, implying he is fixing the aftermath.",
+ "weak_spots": "The transition at 0:40 from the roller coaster drop to the car analogy is slightly abrupt visually, though it serves the script well.",
+ "url": "https://www.youtube.com/shorts/QlDPMzGmYac",
+ "id": "QlDPMzGmYac",
+ "studied_at": "2026-11-14T07:52:11Z",
+ "model": "gemini-3.1-pro-preview"
+}

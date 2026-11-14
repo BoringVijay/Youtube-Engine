@@ -1,0 +1,231 @@
+{
+ "title_guess": "The Man Who Faked His Death (And Regretted It)",
+ "channel_guess": "Brew",
+ "duration_s": 60,
+ "format": "mystery",
+ "premise": "A man fakes his death using a safety coffin to escape debt, but his wife ignores his rescue signal so she can inherit his property debt-free.",
+ "hook": {
+  "first_2s_visual": "A cross-section view of a man buried underground in a coffin, pulling a string that rings a bell above ground.",
+  "first_line_technique": "Presents a shocking, morbid scenario as a factual statement to instantly grab attention.",
+  "text_on_screen": "They buried a man alive with a bell tied to his finger."
+ },
+ "structure": [
+  {
+   "t": "0:00-0:10",
+   "beat": "setup",
+   "what_happens": "Introduces the historical concept of safety coffins with a bell for people afraid of being buried alive.",
+   "why_it_works": "Establishes the rules of the world and the core mechanism quickly and visually."
+  },
+  {
+   "t": "0:10-0:27",
+   "beat": "escalation",
+   "what_happens": "The bell rings at night, causing the town to panic and the doctor to dismiss it as post-mortem twitching.",
+   "why_it_works": "Builds tension, injects humor through the town's incompetence, and isolates the buried man."
+  },
+  {
+   "t": "0:27-0:37",
+   "beat": "twist",
+   "what_happens": "Reveals the wife sitting calmly in the dark, recognizing a specific coded ring from the bell.",
+   "why_it_works": "Subverts the expectation that the ringing is a ghost or a mistake; it reveals intentionality and a conspiracy."
+  },
+  {
+   "t": "0:37-0:53",
+   "beat": "payoff",
+   "what_happens": "Explains the man faked his death to escape debt, but the wife decides to sit and listen until he dies for real.",
+   "why_it_works": "Delivers a dark, satisfying karma moment where the trickster gets outsmarted by his accomplice."
+  },
+  {
+   "t": "0:53-1:00",
+   "beat": "loop",
+   "what_happens": "The wife fills the grave, inheriting the house debt-free.",
+   "why_it_works": "Provides grim closure to the narrative arc with a final punchline."
+  }
+ ],
+ "shots": [
+  {
+   "t": "0:00",
+   "framing": "wide",
+   "camera": "push-in",
+   "transition": "none",
+   "subject": "Cross-section of a man in a coffin pulling a rope connected to a bell above."
+  },
+  {
+   "t": "0:03",
+   "framing": "close",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "The bell ringing on the wooden post."
+  },
+  {
+   "t": "0:04",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Full cross-section of the grave showing the entire mechanism."
+  },
+  {
+   "t": "0:08",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Man in the coffin smiling as he pulls the rope."
+  },
+  {
+   "t": "0:10",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "The bell post in the snow at night."
+  }
+ ],
+ "pacing": {
+  "avg_shot_s": 2.4,
+  "cuts_in_first_5s": 3,
+  "where_it_slows_down": "0:28, when revealing the wife sitting silently in the dark room.",
+  "where_it_speeds_up": "0:17, during the rapid cuts of the townspeople arguing on their porches."
+ },
+ "look": {
+  "style": "2D digital animation",
+  "palette": "High contrast; warm oranges and browns for underground/interiors, cold blues and purples for night exteriors.",
+  "lighting": "Flat shading with gradient overlays to simulate depth and specific light sources like candlelight or moonlight.",
+  "texture": "Clean vector lines with a very subtle paper or noise overlay.",
+  "character_design": "Simple round heads, stick-figure limbs, highly expressive facial features with distinct mustaches and eyes."
+ },
+ "voice": {
+  "present": true,
+  "gender_age_impression": "Male, 20s-30s",
+  "tone": "Energetic, slightly cynical, engaging storyteller",
+  "pace_wpm": 180,
+  "energy_curve": "Starts high to hook the viewer, maintains a frantic pace during the town's panic, drops to a slow, creepy cadence for the wife's reveal, then delivers the punchline with dark satisfaction.",
+  "delivery_tricks": "Emphasizes key morbid words ('alive', 'scared', 'dead') and uses deliberate pauses for comedic timing ('Wait... practiced?')."
+ },
+ "music": {
+  "present": true,
+  "genre": "Quirky orchestral / pizzicato strings",
+  "bpm_estimate": 110,
+  "where_it_drops": "0:27, when the focus shifts to the wife in the dark, the music cuts out to emphasize the silence and the bell.",
+  "how_it_supports_the_story": "Adds a playful, slightly macabre tone that keeps the dark subject matter feeling light, entertaining, and fable-like."
+ },
+ "sfx": "The constant ringing of the bell acts as a narrative motif. Wind howling, shovel digging, paper rustling, and crowd murmuring add texture to the scenes.",
+ "hero_moments": "The cross-section shot at 0:04 establishing the mechanics; the reveal of the wife sitting in the dark at 0:29; the flashback showing the man owing money to the angry mob at 0:38.",
+ "captions": "Dynamic, displaying 1-3 words at a time in the center of the screen. Bold white font with a thick black outline, popping in with a slight scale animation.",
+ "why_it_works": [
+  "Combines a fascinating, creepy historical fact with a fictional narrative twist.",
+  "Dark humor makes a morbid topic highly entertaining.",
+  "The twist ending is satisfying and unexpected, rewarding the viewer for watching to the end.",
+  "Fast-paced animation and frequent scene changes keep visual retention high.",
+  "The sound design, specifically the bell, acts as a continuous narrative thread."
+ ],
+ "rules_to_borrow": [
+  "Start with a bizarre but true historical premise to ground the story.",
+  "Use a 'You see...' pivot early to explain the hook's mechanism.",
+  "Subvert expectations with a dark, character-driven twist.",
+  "Use cross-section visuals to explain hidden mechanics clearly without needing extra words.",
+  "Give characters distinct, simple motivations (greed, fear, laziness) to drive the plot quickly.",
+  "Use lighting changes (day to night, warm to cold) to instantly signal shifts in tone."
+ ],
+ "do_not_copy": [
+  "The specific stick-figure/round-head character designs.",
+  "The exact voiceover cadence and inflection unique to this creator."
+ ],
+ "title_formula": "The [Adjective] History of [Object] or Why [Group] Did [Bizarre Action]",
+ "topic_type": "historical trick",
+ "why_this_topic": "It taps into the primal fear of being buried alive while delivering a satisfying tale of karma and betrayal.",
+ "hook_line": "They buried a man alive with a bell tied to his finger.",
+ "script_shape": [
+  {
+   "t": "0:00-0:03",
+   "role": "paradox",
+   "technique": "States a shocking, contradictory scenario (buried alive but active)."
+  },
+  {
+   "t": "0:03-0:10",
+   "role": "explanation",
+   "technique": "Provides the historical context that makes the paradox possible."
+  },
+  {
+   "t": "0:10-0:27",
+   "role": "escalation",
+   "technique": "Shows the mechanism failing due to human error and fear."
+  },
+  {
+   "t": "0:27-0:37",
+   "role": "twist",
+   "technique": "Shifts perspective to a character who knows the truth and changes the context of the ringing."
+  },
+  {
+   "t": "0:37-0:53",
+   "role": "explanation",
+   "technique": "Fills in the backstory of why the trick was played in the first place."
+  },
+  {
+   "t": "0:53-1:00",
+   "role": "pivot",
+   "technique": "Delivers the final dark punchline and resolves the conflict."
+  }
+ ],
+ "pivot": {
+  "present": true,
+  "t": "0:03",
+  "phrase_type": "You see...",
+  "what_changes_on_screen": "Cuts from the specific man pulling the bell to a general cross-section diagram of how safety coffins work."
+ },
+ "words_per_second_estimate": 3.0,
+ "world": {
+  "setting": "A snowy, 19th-century-esque town.",
+  "era": "Late 1800s (Death certificate is dated 1894).",
+  "locations": [
+   "Graveyard",
+   "Neighbor's bedroom",
+   "Town street",
+   "Doctor's porch",
+   "Wife's living room",
+   "Flashback town square"
+  ],
+  "set_dressing": "Wooden grave markers, old-fashioned nightgowns, oil lanterns, wood-burning stove, vintage death certificate."
+ },
+ "cast": [
+  {
+   "role": "Husband",
+   "costume": "Black suit",
+   "screen_time": "main",
+   "expressions_used": [
+    "smug",
+    "panicked",
+    "sweating"
+   ]
+  },
+  {
+   "role": "Wife",
+   "costume": "Purple dress, hair in a bun",
+   "screen_time": "main",
+   "expressions_used": [
+    "stoic",
+    "annoyed",
+    "smug"
+   ]
+  },
+  {
+   "role": "Doctor",
+   "costume": "Striped pajamas, glasses",
+   "screen_time": "support",
+   "expressions_used": [
+    "tired",
+    "annoyed"
+   ]
+  }
+ ],
+ "lighting_flip": "At 0:10, the scene shifts from a bright, warm sunset to a cold, snowy night to signal the passage of time and the start of the creepy events. At 0:28, the wife's room is dark and moody, contrasting with the bright, colorful flashback at 0:38.",
+ "inserts": [
+  "Grave nameplate (S. Holt)",
+  "Death certificate",
+  "Note on the wall with the bell ringing code (Morse code style)"
+ ],
+ "camera_moves": "Frequent vertical pans to connect the surface world with the underground coffin. Quick cuts between characters during dialogue. Slow push-ins during tense moments, like the wife sitting in the dark.",
+ "loop_device": "None, the video ends on a final narrative punchline rather than looping back to the beginning.",
+ "weak_spots": "The transition from the general historical fact of safety coffins to the specific fictional story of S. Holt is slightly blurred, which might confuse viewers initially about whether this is a true story or a parable.",
+ "url": "https://www.youtube.com/shorts/GM9UKnZ6JFw",
+ "id": "GM9UKnZ6JFw",
+ "studied_at": "2026-11-14T08:03:09Z",
+ "model": "gemini-3.1-pro-preview"
+}

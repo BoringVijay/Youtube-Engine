@@ -1,0 +1,214 @@
+{
+ "title_guess": "The Man Who Moved Furniture 1 Inch",
+ "channel_guess": "Zack D. Films",
+ "duration_s": 58,
+ "format": "bizarre",
+ "premise": "A man secretly moves a family's furniture one inch every night to drive them crazy so they sell the house back to him cheaply.",
+ "hook": {
+  "first_2s_visual": "A man in a black ski mask sneaks through a house window at night.",
+  "first_line_technique": "States a highly specific, bizarre action without explaining the motive, creating an immediate curiosity gap.",
+  "text_on_screen": "A man snuck"
+ },
+ "structure": [
+  {
+   "t": "0:00-0:08",
+   "beat": "setup",
+   "what_happens": "A man sneaks into a house and moves everything one inch to the left.",
+   "why_it_works": "The extreme specificity of the action makes the viewer wonder 'why?' immediately."
+  },
+  {
+   "t": "0:08-0:47",
+   "beat": "escalation",
+   "what_happens": "The family notices, the police laugh it off, and the dad goes crazy trying to catch the culprit.",
+   "why_it_works": "Builds tension and comedy by showing the psychological toll of a seemingly harmless prank."
+  },
+  {
+   "t": "0:47-0:51",
+   "beat": "twist",
+   "what_happens": "The family sells the house, and the buyer is revealed to be the man in the ski mask.",
+   "why_it_works": "Provides an unexpected resolution to the conflict."
+  },
+  {
+   "t": "0:51-0:58",
+   "beat": "payoff",
+   "what_happens": "It is explained that he previously owned the house, kept a key, and did this to buy it back at half price.",
+   "why_it_works": "Delivers a satisfying, logical (though unethical) motive that recontextualizes the entire video."
+  }
+ ],
+ "shots": [
+  {
+   "t": "0:00",
+   "framing": "wide",
+   "camera": "push-in",
+   "transition": "none",
+   "subject": "Man in ski mask sneaking into a window"
+  },
+  {
+   "t": "0:03",
+   "framing": "close",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Measuring tape next to a couch leg"
+  },
+  {
+   "t": "0:09",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Dad looking confused at a fridge blocking the back door"
+  },
+  {
+   "t": "0:22",
+   "framing": "POV",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Police officer laughing, seen through a door peephole"
+  },
+  {
+   "t": "0:44",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Exhausted dad sitting on a couch that is now in the middle of the living room"
+  }
+ ],
+ "pacing": {
+  "avg_shot_s": 2.5,
+  "cuts_in_first_5s": 3,
+  "where_it_slows_down": "0:35 when the dad camps out on the couch to catch the intruder.",
+  "where_it_speeds_up": "0:23 during the montage of locking doors and the bed creeping across the room."
+ },
+ "look": {
+  "style": "2D animation",
+  "palette": "High contrast between dark blue/purple night scenes and bright yellow/orange day scenes.",
+  "lighting": "Flat shading with soft gradient overlays for light sources like flashlights and lamps.",
+  "texture": "Clean, smooth vector graphics with no grit or noise.",
+  "character_design": "Pill-shaped bodies, stick-figure limbs, simple dot eyes, distinct hair and accessories."
+ },
+ "voice": {
+  "present": true,
+  "gender_age_impression": "Male, 20s-30s",
+  "tone": "Casual, slightly amused storyteller",
+  "pace_wpm": 160,
+  "energy_curve": "Starts steady, builds slightly during the family's paranoia, drops for the casual reveal of the twist.",
+  "delivery_tricks": "Emphasizes specific measurements and timeframes like 'one inch', 'every night', and 'halfway'."
+ },
+ "music": {
+  "present": true,
+  "genre": "Quirky pizzicato orchestral",
+  "bpm_estimate": 110,
+  "where_it_drops": "Plays continuously without major drops.",
+  "how_it_supports_the_story": "Maintains a lighthearted, mischievous tone despite the creepy home invasion premise."
+ },
+ "sfx": "Subtle whooshes on cuts, measuring tape clicks, door locking clicks, sliding friction sounds, baseball bat taps.",
+ "hero_moments": "0:44 the wide shot showing the couch moved halfway across the room, visually proving the absurdity and scale of the prank.",
+ "captions": "One word at a time, center screen, bold white sans-serif font with a thick black outline, dynamic scaling on emphasis.",
+ "why_it_works": [
+  "The hook presents a highly specific, bizarre action that demands an explanation.",
+  "The escalation is logical within the absurd premise, showing the psychological toll.",
+  "The visual contrast between night (action) and day (reaction) clearly marks the passage of time.",
+  "The twist ending provides a satisfying, albeit unethical, motive for the initial bizarre action.",
+  "The pacing is fast, with visual gags (like the fridge blocking the door) keeping the viewer engaged."
+ ],
+ "rules_to_borrow": [
+  "Start with an unexplained, highly specific action to create an immediate curiosity gap.",
+  "Use a 'night/day' visual toggle to quickly show the passage of time and the consequences of actions.",
+  "Escalate a small annoyance into a major psychological crisis for comedic or dramatic effect.",
+  "Ensure the twist ending recontextualizes the entire story, making a second watch rewarding.",
+  "Use a perfect audio loop to seamlessly restart the video and boost retention.",
+  "Keep character designs simple so the focus remains on the action and the story."
+ ],
+ "do_not_copy": [
+  "The specific pill-shaped body and stick-limb character design.",
+  "The exact voiceover cadence and tone if it mimics a specific well-known creator."
+ ],
+ "title_formula": "The Man Who [Did Bizarre Action] To [Achieve Surprising Result]",
+ "topic_type": "clever loophole",
+ "why_this_topic": "It turns a common fear (home invasion) into a bizarre, psychological prank with a surprising financial motive.",
+ "hook_line": "A man snuck into a family's house every night and moved every single thing one inch to the left.",
+ "script_shape": [
+  {
+   "t": "0:00-0:08",
+   "role": "paradox",
+   "technique": "establishes a bizarre, unexplained behavior"
+  },
+  {
+   "t": "0:08-0:47",
+   "role": "escalation",
+   "technique": "shows the psychological toll of the behavior over time"
+  },
+  {
+   "t": "0:47-0:51",
+   "role": "twist",
+   "technique": "reveals the perpetrator is the beneficiary"
+  },
+  {
+   "t": "0:51-0:58",
+   "role": "explanation",
+   "technique": "explains the motive and method, ending on a loop"
+  }
+ ],
+ "pivot": {
+  "present": true,
+  "t": "0:47",
+  "phrase_type": "You see...",
+  "what_changes_on_screen": "Cuts from the dark interior to a bright exterior daytime shot with a 'For Sale' sign."
+ },
+ "words_per_second_estimate": 2.8,
+ "world": {
+  "setting": "Suburban family home",
+  "era": "Modern day",
+  "locations": [
+   "House exterior",
+   "Living room",
+   "Kitchen",
+   "Parents' bedroom",
+   "Daughter's bedroom"
+  ],
+  "set_dressing": "Couch, TV, fridge with sticky notes, beds, lamps, measuring tape, baseball bat, 'For Sale' sign"
+ },
+ "cast": [
+  {
+   "role": "The Sneaker",
+   "costume": "Black outfit, ski mask, utility belt",
+   "screen_time": "main",
+   "expressions_used": [
+    "smug smile",
+    "determined focus"
+   ]
+  },
+  {
+   "role": "Dad",
+   "costume": "Teal shirt, glasses, later wears a headlamp and sleeping bag",
+   "screen_time": "main",
+   "expressions_used": [
+    "confused",
+    "paranoid",
+    "exhausted",
+    "defeated"
+   ]
+  },
+  {
+   "role": "Police Officer",
+   "costume": "Blue uniform, police hat",
+   "screen_time": "support",
+   "expressions_used": [
+    "skeptical",
+    "laughing"
+   ]
+  }
+ ],
+ "lighting_flip": "Alternates between dark blue/purple hues for the nighttime sneaking scenes and bright, warm colors for the daytime reaction scenes.",
+ "inserts": [
+  "Measuring tape on the floor",
+  "Sticky notes on the fridge saying 'DON'T MOVE!'",
+  "'For Sale' sign in the yard"
+ ],
+ "camera_moves": "Mostly static shots with hard cuts; occasional slow push-ins to emphasize tension or a character's realization.",
+ "loop_device": "The final sentence ends with 'A man...', which flows perfectly into the first sentence 'A man snuck into...', creating a seamless audio loop.",
+ "weak_spots": "The logic of moving a couch with a grown man sleeping on it without waking him up requires significant suspension of disbelief.",
+ "url": "https://www.youtube.com/shorts/nzbkkEZFM8g",
+ "id": "nzbkkEZFM8g",
+ "studied_at": "2026-11-14T08:06:15Z",
+ "model": "gemini-3.1-pro-preview"
+}

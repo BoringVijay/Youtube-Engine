@@ -1,0 +1,234 @@
+{
+ "title_guess": "How Slot Machines Trick You",
+ "channel_guess": "Zack D. Films",
+ "duration_s": 32,
+ "format": "explainer",
+ "premise": "Slot machines are programmed to show near-misses frequently to trick players into thinking they are close to winning.",
+ "hook": {
+  "first_2s_visual": "A close-up of a slot machine spinning, landing on two 7s, and the third reel stopping just one space away from the jackpot.",
+  "first_line_technique": "Directly addresses the viewer while describing a highly relatable and frustrating scenario.",
+  "text_on_screen": "watched"
+ },
+ "structure": [
+  {
+   "t": "0:00-0:04",
+   "beat": "setup",
+   "what_happens": "Shows the near-miss on the slot machine and the character's disappointment.",
+   "why_it_works": "Instantly hooks anyone who has ever played a slot machine by showing the exact moment of frustration."
+  },
+  {
+   "t": "0:04-0:16",
+   "beat": "escalation",
+   "what_happens": "The character changes machines, gets bad advice from a friend, puts in more money, and feels teased by the machine.",
+   "why_it_works": "Builds the narrative and validates the common feeling that the machine is actively messing with the player."
+  },
+  {
+   "t": "0:16-0:26",
+   "beat": "twist",
+   "what_happens": "The video cuts to the inside of the machine, revealing a physical list showing that 'one click short' is programmed to happen much more often than the jackpot.",
+   "why_it_works": "Provides a clear, visual 'aha!' moment that explains the trick using a tangible metaphor."
+  },
+  {
+   "t": "0:26-0:32",
+   "beat": "loop",
+   "what_happens": "A 3D wireframe shows a probability wheel, summarizing the concept, and the script leads perfectly back into the opening line.",
+   "why_it_works": "Summarizes the learning cleanly and creates a seamless viewing loop that encourages rewatching."
+  }
+ ],
+ "shots": [
+  {
+   "t": "0:00",
+   "framing": "close",
+   "camera": "static",
+   "transition": "none",
+   "subject": "Slot machine reels spinning and stopping on a near miss."
+  },
+  {
+   "t": "0:01",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Character sitting at the slot machine looking disappointed."
+  },
+  {
+   "t": "0:04",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Character moves to the adjacent slot machine."
+  },
+  {
+   "t": "0:08",
+   "framing": "close",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Friend leans into frame to give advice."
+  },
+  {
+   "t": "0:10",
+   "framing": "close",
+   "camera": "push-in",
+   "transition": "cut",
+   "subject": "Inserting a hundred dollar bill into the machine."
+  },
+  {
+   "t": "0:13",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Character looking annoyed at the machine."
+  },
+  {
+   "t": "0:16",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Character turns to look directly at the camera."
+  },
+  {
+   "t": "0:17",
+   "framing": "close",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Inside the machine, showing the printed list of reel stops."
+  },
+  {
+   "t": "0:25",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Wireframe view of the machine with a probability wheel overlay."
+  },
+  {
+   "t": "0:30",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Character sitting at the machine, looping back to the start."
+  }
+ ],
+ "pacing": {
+  "avg_shot_s": 3.2,
+  "cuts_in_first_5s": 2,
+  "where_it_slows_down": "0:17 during the explanation of the reel strip.",
+  "where_it_speeds_up": "0:04-0:16 during the narrative escalation."
+ },
+ "look": {
+  "style": "3D animation with a 2D aesthetic",
+  "palette": "Warm casino colors: reds, golds, neon lights.",
+  "lighting": "Flat, bright lighting in the casino; slightly dimmer, more focused lighting inside the machine.",
+  "texture": "Smooth, simple textures typical of this animation style.",
+  "character_design": "Simple, rounded characters with dot eyes and distinct clothing (Hawaiian shirt, backwards cap)."
+ },
+ "voice": {
+  "present": true,
+  "gender_age_impression": "Male, 20s-30s",
+  "tone": "Informative, slightly conversational, knowing.",
+  "pace_wpm": 180,
+  "energy_curve": "Starts engaging, builds slight frustration during the narrative, becomes authoritative during the explanation, and smooths out for the loop.",
+  "delivery_tricks": "Emphasizes key words like 'one click short' and 'teasing'."
+ },
+ "music": {
+  "present": true,
+  "genre": "Upbeat, slightly tense background track",
+  "bpm_estimate": 110,
+  "where_it_drops": "No major drops, maintains a steady rhythm.",
+  "how_it_supports_the_story": "Provides a subtle casino atmosphere without overpowering the voiceover."
+ },
+ "sfx": "Slot machine spinning, dinging sounds, mechanical clunks when the reels stop, bill acceptor whirring.",
+ "hero_moments": "The cut at 0:17 to the inside of the machine, revealing the physical 'list' of stops, making an abstract concept visual.",
+ "captions": "Single-word, large, bold white text with a black outline, popping up in the center of the screen synced to the voice.",
+ "why_it_works": [
+  "Validates a common paranoia that the system is rigged against the user.",
+  "Uses a brilliant physical metaphor (the paper list) to explain a complex digital algorithm (RNG weighting).",
+  "Fast-paced editing keeps the viewer engaged through the narrative setup.",
+  "The script is tightly written to create a perfect conceptual and audio loop."
+ ],
+ "rules_to_borrow": [
+  "Start by describing a specific, frustrating user experience that many people share.",
+  "Validate the viewer's suspicion that a system is actively working against them.",
+  "Use a 'let's look inside' pivot to transition smoothly from narrative to explanation.",
+  "Invent physical, tangible metaphors or diagrams to explain invisible digital or psychological processes.",
+  "Write the script so the final thought naturally triggers the first thought to create a loop.",
+  "Use dynamic, single-word captions to anchor the viewer's eye to the center of the screen."
+ ],
+ "do_not_copy": [
+  "The specific character designs (round heads, dot eyes) which are heavily associated with Zack D. Films."
+ ],
+ "title_formula": "How [System/Object] Tricks You",
+ "topic_type": "hidden mechanism",
+ "why_this_topic": "People hate feeling cheated and are naturally curious about how systems are rigged against them.",
+ "hook_line": "You just watched two jackpot symbols land, and the third one stopped one click short.",
+ "script_shape": [
+  {
+   "t": "0:00-0:04",
+   "role": "setup",
+   "technique": "Describes the frustrating event directly to the viewer."
+  },
+  {
+   "t": "0:04-0:16",
+   "role": "escalation",
+   "technique": "Shows the behavioral response and articulates the feeling of being teased."
+  },
+  {
+   "t": "0:16-0:26",
+   "role": "explanation",
+   "technique": "Reveals the hidden mechanism using a visual aid."
+  },
+  {
+   "t": "0:26-0:32",
+   "role": "loop",
+   "technique": "Summarizes the effect and connects the end of the sentence to the beginning of the video."
+  }
+ ],
+ "pivot": {
+  "present": true,
+  "t": "0:16",
+  "phrase_type": "So let's crack it open.",
+  "what_changes_on_screen": "Cuts from the bright casino floor to the mechanical interior of the slot machine."
+ },
+ "words_per_second_estimate": 3,
+ "world": {
+  "setting": "A casino floor.",
+  "era": "Modern.",
+  "locations": [
+   "Casino floor at a slot machine",
+   "Inside the mechanical workings of a slot machine",
+   "Abstract wireframe space"
+  ],
+  "set_dressing": "Rows of slot machines in the background, neon signs, red stools."
+ },
+ "cast": [
+  {
+   "role": "Main character/Player",
+   "costume": "Teal Hawaiian shirt with yellow pattern, red tie, red pants.",
+   "screen_time": "main",
+   "expressions_used": [
+    "disappointed",
+    "annoyed",
+    "determined"
+   ]
+  },
+  {
+   "role": "Friend",
+   "costume": "White tank top, backwards red cap, gold chain, sunglasses.",
+   "screen_time": "support",
+   "expressions_used": [
+    "confident",
+    "smirking"
+   ]
+  }
+ ],
+ "lighting_flip": "Changes from the bright, colorful casino environment to a slightly dimmer, more clinical lighting when showing the inside of the machine at 0:17.",
+ "inserts": [
+  "The printed list of reel stops showing the ratio of 'one click short' to 'jackpot' (0:18).",
+  "The probability wheel overlay on the wireframe machine (0:26)."
+ ],
+ "camera_moves": "Mostly static shots with hard cuts to keep the pace fast. A slight push-in is used when inserting the money to emphasize the action.",
+ "loop_device": "The final sentence ends with '...than on the jackpot.' which leads perfectly into the opening 'You just watched...'. The visual also cuts back to the character sitting at the machine in the exact same pose.",
+ "weak_spots": "The transition from the physical paper list inside the machine to the abstract wireframe view is slightly abrupt, though it serves the explanation well.",
+ "url": "https://www.youtube.com/shorts/CJwgTrfrHL0",
+ "id": "CJwgTrfrHL0",
+ "studied_at": "2026-11-14T08:14:42Z",
+ "model": "gemini-3.1-pro-preview"
+}

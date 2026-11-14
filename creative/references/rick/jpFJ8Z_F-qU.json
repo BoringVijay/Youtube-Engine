@@ -1,0 +1,329 @@
+{
+ "title_guess": "The Knight Who Outsmarted the Church",
+ "channel_guess": "MinuteVideos",
+ "duration_s": 41,
+ "format": "explainer",
+ "premise": "A clever knight exploits a corrupt priest's system of selling pardons by purchasing forgiveness in advance for the crime of robbing the priest himself.",
+ "hook": {
+  "first_2s_visual": "A knight in full armor hands a bag of coins to a smug priest at a market stall labeled 'Pardons'.",
+  "first_line_technique": "Presents a logical paradox (forgiving a future crime) that demands an immediate explanation.",
+  "text_on_screen": "paid a"
+ },
+ "structure": [
+  {
+   "t": "0:00-0:03",
+   "beat": "setup",
+   "what_happens": "The narrator states the premise of a knight buying a pardon for a future crime.",
+   "why_it_works": "It creates an immediate curiosity gap."
+  },
+  {
+   "t": "0:03-0:15",
+   "beat": "escalation",
+   "what_happens": "The video flashes back to explain the priest's corrupt business model of selling forgiveness for various sins.",
+   "why_it_works": "Establishes the priest as a greedy antagonist who deserves comeuppance."
+  },
+  {
+   "t": "0:15-0:23",
+   "beat": "twist",
+   "what_happens": "The knight negotiates the unusual pardon, and the greedy priest accepts the extra money.",
+   "why_it_works": "Shows the trap being set, building anticipation for the execution."
+  },
+  {
+   "t": "0:24-0:32",
+   "beat": "payoff",
+   "what_happens": "The priest travels through the forest and is ambushed and robbed by the knight.",
+   "why_it_works": "Delivers the action the audience was waiting for."
+  },
+  {
+   "t": "0:32-0:41",
+   "beat": "loop",
+   "what_happens": "The knight reveals the pardon covers the robbery, leaving the priest defeated and walking away.",
+   "why_it_works": "Provides a satisfying, ironic conclusion to the story."
+  }
+ ],
+ "shots": [
+  {
+   "t": "0:00",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "none",
+   "subject": "Knight and Priest at stall"
+  },
+  {
+   "t": "0:02",
+   "framing": "close",
+   "camera": "push-in",
+   "transition": "cut",
+   "subject": "Pardon document"
+  },
+  {
+   "t": "0:03",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Priest on moving cart"
+  },
+  {
+   "t": "0:06",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Priest on cart at night"
+  },
+  {
+   "t": "0:08",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Priest pointing at sin prices"
+  },
+  {
+   "t": "0:10",
+   "framing": "wide",
+   "camera": "tilt up",
+   "transition": "cut",
+   "subject": "Tall sin price board"
+  },
+  {
+   "t": "0:12",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Crowd lined up"
+  },
+  {
+   "t": "0:14",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Priest next to full chest"
+  },
+  {
+   "t": "0:16",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Knight at stall again"
+  },
+  {
+   "t": "0:18",
+   "framing": "macro",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Pen writing 'Next Week'"
+  },
+  {
+   "t": "0:20",
+   "framing": "close",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Priest sweating"
+  },
+  {
+   "t": "0:21",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Priest stamping document"
+  },
+  {
+   "t": "0:24",
+   "framing": "aerial",
+   "camera": "push-in",
+   "transition": "dissolve",
+   "subject": "Town to forest transition"
+  },
+  {
+   "t": "0:26",
+   "framing": "medium",
+   "camera": "pan right",
+   "transition": "cut",
+   "subject": "Men carrying chest"
+  },
+  {
+   "t": "0:29",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Knight waiting in forest"
+  },
+  {
+   "t": "0:31",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Knight with stolen coins"
+  },
+  {
+   "t": "0:33",
+   "framing": "medium",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Priest screaming"
+  },
+  {
+   "t": "0:34",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Knight holding pardon, demons appear"
+  },
+  {
+   "t": "0:36",
+   "framing": "close",
+   "camera": "push-in",
+   "transition": "cut",
+   "subject": "Stamped pardon document"
+  },
+  {
+   "t": "0:38",
+   "framing": "wide",
+   "camera": "static",
+   "transition": "cut",
+   "subject": "Priest walking away at sunset"
+  }
+ ],
+ "pacing": {
+  "avg_shot_s": 2.05,
+  "cuts_in_first_5s": 3,
+  "where_it_slows_down": "During the explanation of the sin prices and the crowd lining up.",
+  "where_it_speeds_up": "During the climax in the forest when the robbery is revealed."
+ },
+ "look": {
+  "style": "2D vector animation",
+  "palette": "Bright, saturated primary colors with distinct day/night/forest lighting shifts.",
+  "lighting": "Flat shading with simple drop shadows and environmental color overlays.",
+  "texture": "Clean, smooth vector lines with no gritty textures.",
+  "character_design": "Stick-figure-like simple white heads with highly detailed, colorful bodies and costumes."
+ },
+ "voice": {
+  "present": true,
+  "gender_age_impression": "Young male",
+  "tone": "Energetic, storytelling, slightly mischievous",
+  "pace_wpm": 168,
+  "energy_curve": "Starts high with the hook, levels out for the explanation, rises during the forest ambush, and peaks at the final punchline.",
+  "delivery_tricks": "Emphasizes key words like 'forgive', 'price', and 'screamed' to guide the listener's attention."
+ },
+ "music": {
+  "present": true,
+  "genre": "Upbeat medieval folk (lute and flute)",
+  "bpm_estimate": 110,
+  "where_it_drops": "Briefly dips when the priest screams in the forest.",
+  "how_it_supports_the_story": "The jaunty, slightly comedic tone keeps the story feeling like a lighthearted fable rather than a serious historical account."
+ },
+ "sfx": "Coin jingles emphasize greed, a heavy thud for the stamp finalizes the deal, cartoonish swooshes for transitions, and fire/demon sounds for the hell threat.",
+ "hero_moments": "The macro shot of the pen writing 'Next Week' builds anticipation. The final close-up of the stamped 'Forgiven' document serves as the ultimate visual punchline.",
+ "captions": "Dynamic, word-by-word pop-ins, centered, white with black stroke, occasional color highlights (yellow for coins, red for forgiven).",
+ "why_it_works": [
+  "Immediate paradox in the hook demands attention.",
+  "Satisfying 'karmic justice' narrative where a scammer gets scammed.",
+  "Clear, visual explanation of abstract concepts (the tall price board for sins).",
+  "Fast-paced, expressive character animation keeps the eye moving.",
+  "Strong use of visual inserts (the document) to anchor the plot."
+ ],
+ "rules_to_borrow": [
+  "Start with a paradox that breaks normal rules to hook the viewer.",
+  "Use literal, physical UI elements (like a tall signboard) to explain complex systems quickly.",
+  "Give characters distinct, exaggerated facial expressions to convey emotion without dialogue.",
+  "Use macro inserts of documents or objects to emphasize crucial plot points.",
+  "Ensure the antagonist gets a satisfying, ironic comeuppance.",
+  "Use sound design (like a heavy stamp) to punctuate major story beats."
+ ],
+ "do_not_copy": [
+  "The specific art style of simple white heads on detailed bodies.",
+  "The exact character designs of the knight and priest."
+ ],
+ "title_formula": "How a [Underdog/Clever Person] Outsmarted a [Corrupt System/Person]",
+ "topic_type": "clever loophole",
+ "why_this_topic": "It combines historical curiosity with the universal satisfaction of seeing a scammer get outsmarted by their own rules.",
+ "hook_line": "A knight paid a priest to forgive a crime he hadn't committed yet.",
+ "script_shape": [
+  {
+   "t": "0:00-0:03",
+   "role": "paradox",
+   "technique": "States an impossible scenario to hook the viewer."
+  },
+  {
+   "t": "0:03-0:15",
+   "role": "explanation",
+   "technique": "Provides the necessary context to understand the rules of the world."
+  },
+  {
+   "t": "0:15-0:23",
+   "role": "escalation",
+   "technique": "Shows the protagonist setting the trap."
+  },
+  {
+   "t": "0:24-0:32",
+   "role": "twist",
+   "technique": "Reveals the protagonist's true intention."
+  },
+  {
+   "t": "0:32-0:41",
+   "role": "payoff",
+   "technique": "Delivers the punchline and resolves the story."
+  }
+ ],
+ "pivot": {
+  "present": true,
+  "t": "0:03",
+  "phrase_type": "You see...",
+  "what_changes_on_screen": "Cuts from the static stall to a moving cart, introducing the broader context of the priest's travels."
+ },
+ "words_per_second_estimate": 2.8,
+ "world": {
+  "setting": "Medieval fantasy",
+  "era": "Middle Ages",
+  "locations": [
+   "Town square",
+   "Country road",
+   "Forest path"
+  ],
+  "set_dressing": "Market stalls, wooden carts, treasure chests, tall wooden signboards, medieval architecture."
+ },
+ "cast": [
+  {
+   "role": "Knight",
+   "costume": "Full plate armor with blue tabard",
+   "screen_time": "main",
+   "expressions_used": [
+    "smug",
+    "confident"
+   ]
+  },
+  {
+   "role": "Priest",
+   "costume": "Red and gold clerical robes",
+   "screen_time": "main",
+   "expressions_used": [
+    "smug",
+    "greedy",
+    "sweating",
+    "shocked",
+    "angry"
+   ]
+  },
+  {
+   "role": "Crowd/Henchmen",
+   "costume": "Simple peasant tunics",
+   "screen_time": "support",
+   "expressions_used": [
+    "neutral",
+    "straining"
+   ]
+  }
+ ],
+ "lighting_flip": "Changes from bright daylight in town to a darker, dappled light in the forest to signal danger and the impending ambush.",
+ "inserts": [
+  "The Pardon document showing 'One Crime Next Week'",
+  "The tall wooden signboard listing sins and prices",
+  "The final stamped Pardon document"
+ ],
+ "camera_moves": "Mostly static wide shots with hard cuts, punctuated by smooth push-ins on important details (the document) and one aerial transition.",
+ "loop_device": "The final shot fades out; it does not seamlessly loop visually or audibly.",
+ "weak_spots": "The transition at 0:24 using a map-like aerial view feels slightly disconnected from the ground-level perspective of the rest of the video.",
+ "url": "https://www.youtube.com/shorts/jpFJ8Z_F-qU",
+ "id": "jpFJ8Z_F-qU",
+ "studied_at": "2026-11-14T08:10:50Z",
+ "model": "gemini-3.1-pro-preview"
+}
