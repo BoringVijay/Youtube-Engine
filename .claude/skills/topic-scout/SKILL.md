@@ -39,6 +39,8 @@ For each candidate, write: the question a normal person would type, the surprise
 
 Total ≥ 3.6 → recommend. Below → park in the Evergreen Bank with a note.
 
+Gate (creative/bible.md, Grounded storytelling): before recommending, write one line answering "what physical thing fails on screen in the first 20 seconds?" and one line naming the obvious approach that fails. No answer, no recommendation. Tag ideas that fit the Rick Shots lane (a true hidden-reason or loophole story with two sides and a karma ending) with `"lane": "rick"`.
+
 ## 4. Safety screen
 Skip or flag: active tragedies with victims still being counted, medical advice, specific trading calls, defamation risk about private people, anything needing copyrighted footage.
 

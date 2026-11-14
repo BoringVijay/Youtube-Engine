@@ -68,7 +68,7 @@ Starting palette (not a limit, invent new ones):
 Write a look bible for the chosen universe before any frame: medium, materials, palette (3 to 5 colours), lighting, lens, texture, camera language, typography for on-screen text. Every image prompt repeats the look bible so frames stay coherent.
 
 ## Cinematography
-- Every shot has one idea and one focal point. Leave calm space in the lower fifth for captions.
+- Every shot has one idea and one focal point. Keep the focal point and a calm caption band inside the safe zone (see Words on screen). The bottom third and right edge belong to the Shorts UI: nothing important goes there.
 - Vary shot size like a film: wide to establish, medium for action, close or macro for the detail that pays off.
 - Camera language per moment: fast push-in for revelation, crane down for scale, a sudden stop after a big move for deadpan comedy, snap zoom or whip-pan for punchlines, handheld drift for tension. The camera never just sits there.
 - Rhythm: about 4 seconds a shot. In the hook, something new every 2 to 3 seconds.
@@ -109,6 +109,21 @@ Casting and cameos:
 
 ## Words on screen
 AI clips and images must not carry numbers or important text. Numbers, charts and labels are designed overlays drawn in the universe's style (clay numbers, paper cut-out digits, chalk, typewriter, blueprint labels). Keep on-screen text to a few words.
+
+Safe zone (1080x1920): the Shorts title, channel name and buttons cover the bottom ~670 px and the right ~190 px, the top bar covers ~290 px. Captions, numbers and labels live inside that box, with captions in a band around y 1100-1250. Never in the lower fifth. (The Rick Shots lane follows its own measured caption height, y 1350.)
+
+## Grounded storytelling (all lanes, from the Rick study, Nov 2026)
+Learned from 28 Shorts with a 9.3M median and the gap between their hits and misses. These keep every video relatable, grounded and real, whatever the lane or look.
+1. **Physical stakes on screen.** Something you can see is at risk: a crash, a flood, a riot, money burning. Abstract systems (an algorithm, a policy) stall unless they are turned into a physical object.
+2. **Show the obvious approach failing first.** Before the clever answer, the normal way visibly fails. The viewer should think "I'd have done that too".
+3. **Open on an action, not a statement.** A character does something that looks stupid, wrong or impossible. Never "look at this" or "did you know".
+4. **Two sides.** A vs B (people vs birds, a city vs a river, a gambler vs the casino), colour-coded so no setup is needed.
+5. **The smart prop.** An ordinary object shown early turns out to be the key. Plant it, pay it off.
+6. **Explain with something from home.** The mechanism lands through a household analogy (soup, a lift, braking hard in a car) in under 15 seconds.
+7. **Real-world logic, even in fiction.** Sci-fi and what-if stories follow strict rules, real physics and believable human motives (greed, pride, laziness, fear). No magic, no rule that appears only to rescue the ending.
+8. **Ironic karma ending.** The weakness becomes the strength, or the arrogant side undoes itself, then the last line loops to the first.
+9. **Small cast, few places.** 2 or 3 characters, 3 or 4 locations, 1 or 2 macro inserts that carry the facts.
+10. **The topic test.** Before any script: what physical thing fails on screen in the first 20 seconds? No answer, no script.
 
 ## Sound
 - Voice: the pacing of the best viral explainer Shorts. Cool, nonchalant, matter-of-fact, quietly amused; it lets the facts be wild so it doesn't have to be. A small punch on reveals, a dry beat before the twist, slower for eerie or serious bits. Never hype, never shouting. Recorded in one take. Emulate the style, never clone a real person's voice.

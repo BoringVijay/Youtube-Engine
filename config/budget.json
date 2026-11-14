@@ -11,7 +11,12 @@
     "text_call": 0.01,
     "video_lite_per_sec": 0.08,
     "fal_image": 0.15,
-    "fal_image_4k": 0.3
+    "fal_image_4k": 0.3,
+    "fal_tts_1k_chars": 0.1,
+    "fal_music_min": 0.8
   },
-  "note": "Shorts: about 10 keyframes + 55 s of Veo at 1080p. Fast about $7-8 per Short, Lite about $5. Real spend shows in Cloud Billing."
+  "note": "Shorts: about 10 keyframes + 55 s of Veo at 1080p. Fast about $7-8 per Short, Lite about $5. Real spend shows in Cloud Billing.",
+  "fal_total_usd": 15,
+  "fal_per_video_usd": 6,
+  "fal_note": "Vijay topped up $15 on fal (2026-11-14). fal spend is capped separately from the Google credits: fal_total_usd for everything on fal, fal_per_video_usd per Short."
 }

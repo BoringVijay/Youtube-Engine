@@ -35,9 +35,21 @@ def spent(job=None):
     return round(sum(e["usd"] for e in d["entries"] if job is None or e.get("job") == job), 3)
 
 
+def spent_fal(job=None):
+    d = _load()
+    return round(sum(e["usd"] for e in d["entries"] if e.get("kind", "").startswith("fal_") and (job is None or e.get("job") == job)), 3)
+
+
 def check(job, kind, units=1.0, cap=None):
-    """Raise OverBudget if this call would cross the per-video or total cap."""
+    """Raise OverBudget if this call would cross the per-video or total cap. fal spend has its own caps."""
     cost = price(kind, units)
+    if kind.startswith("fal_"):
+        if spent_fal() + cost > CFG.get("fal_total_usd", 15):
+            raise OverBudget(f"fal budget of ${CFG.get('fal_total_usd', 15)} reached (spent ${spent_fal():.2f}); top up and raise fal_total_usd")
+        fcap = cap or CFG.get("fal_per_video_usd", 6)
+        if job and spent_fal(job) + cost > fcap:
+            raise OverBudget(f"fal cap ${fcap} reached for {job} (spent ${spent_fal(job):.2f})")
+        return cost
     if spent() + cost > CFG["total_usd"]:
         raise OverBudget(f"total budget of ${CFG['total_usd']} reached (spent ${spent():.2f})")
     cap = cap or CFG["per_video_usd"]
