@@ -25,9 +25,9 @@
   "secs": 21.8
  },
  "_spent": {
-  "google_usd": 1.206,
+  "google_usd": 1.742,
   "fal_usd": 0,
-  "google_room_usd": 32.63,
+  "google_room_usd": 32.09,
   "fal_room_usd": 15
  },
  "brand/brand-family-v2.png": {
@@ -49,5 +49,25 @@
   "status": "made",
   "model": "gemini-3-pro-image",
   "secs": 23.4
+ },
+ "puppets/major/source-v3.png": {
+  "status": "made",
+  "model": "gemini-3-pro-image",
+  "secs": 22.4
+ },
+ "puppets/emu/source-v2.png": {
+  "status": "made",
+  "model": "gemini-3-pro-image",
+  "secs": 22.6
+ },
+ "puppets/farmer/source.png": {
+  "status": "made",
+  "model": "gemini-3-pro-image",
+  "secs": 23.6
+ },
+ "puppets/minister/source.png": {
+  "status": "made",
+  "model": "gemini-3-pro-image",
+  "secs": 23.3
  }
 }
