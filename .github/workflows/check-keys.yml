@@ -1,5 +1,5 @@
 name: Check keys
-# Run from the Actions tab > Check keys > Run workflow. Confirms Gemini, fal and YouTube access work (nothing is generated or billed).
+# Run from the Actions tab > Check keys > Run workflow. Confirms Gemini, fal, YouTube and Google Cloud (Vertex) access work (nothing is generated or billed).
 on: workflow_dispatch
 
 jobs:
@@ -40,3 +40,17 @@ jobs:
           curl -s -H "Authorization: Bearer $at" \
             "https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&mine=true" \
             | python3 -c 'import sys,json; c=json.load(sys.stdin)["items"][0]; s=c["statistics"]; print("Channel:", c["snippet"]["title"], "| subs:", s.get("subscriberCount"), "| videos:", s["videoCount"], "| views:", s["viewCount"])'
+      - name: Google Cloud key (free check, nothing billed)
+        env:
+          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+        run: |
+          if [ -z "$GCP_SA_KEY" ]; then echo "GCP_SA_KEY secret is missing."; exit 1; fi
+          cd scripts && python3 - <<'PY'
+          import json, os, gai
+          sa = json.loads(os.environ["GCP_SA_KEY"])
+          print("Project:", sa.get("project_id"), "| service account:", sa.get("client_email", "").split("@")[0])
+          url = f"https://us-central1-aiplatform.googleapis.com/v1/projects/{gai.project()}/locations/us-central1/publishers/google/models/gemini-2.5-flash:countTokens"
+          out = gai._req(url, {"contents": [{"role": "user", "parts": [{"text": "hello"}]}]},
+                         {"Content-Type": "application/json", "Authorization": f"Bearer {gai._vertex_token()}"}, 30)
+          print("Vertex AI reachable (countTokens is free):", out.get("totalTokens"), "tokens")
+          PY
