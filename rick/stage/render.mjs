@@ -105,6 +105,8 @@ function resolveTimeline(s) {
   s.shots.forEach((sh, k) => (sh.actions || []).forEach(a => s._actions.push({ ...a, t: starts[k] + (a.at || 0) })));
   (s.actions || []).forEach((a, i) => s._actions.push({ ...a, t: timeOf(a.t ?? 0, `actions[${i}].t`) }));
   s._lighting = (s.lighting || []).map((k, i) => ({ ...k, t: timeOf(k.t, `lighting[${i}].t`) })).sort((a, b) => a.t - b.t);
+  // engine addition: sound effects and music cues placed on words ("at": "say:..." | seconds), with an optional offset in s
+  s._sfx = ((s.audio && s.audio.sfx) || []).map((x, i) => ({ ...x, t: Math.max(0, timeOf(x.at, `audio.sfx[${i}].at`) + (x.offset || 0)) }));
   if (s._lighting.length && s._lighting[0].t > 0) s._lighting.unshift({ t: 0, mood: s._lighting[0].mood });
   // captions: 1-2 words, changing on the word
   const cap = s.captions; s._captions = [];
@@ -182,9 +184,25 @@ if (opt.stills) {
 const f0 = opt.from !== null ? Math.max(0, Math.round(opt.from * fps)) : 0, f1 = opt.to !== null ? Math.min(frames, Math.round(opt.to * fps)) : frames;
 if (f1 <= f0) await fail('--from/--to select no frames');
 const dur = (f1 - f0) / fps, au = (opt.audio && spec.audio) || {}, ff = ['-y', '-v', 'error', '-f', 'image2pipe', '-framerate', String(fps), '-c:v', 'png', '-i', '-'];
-const ain = []; for (const k of ['voice', 'music']) if (au[k]) { ff.push('-ss', String(f0 / fps), '-t', String(dur), '-i', inProject(au[k])); ain.push(k); }
+const ain = []; for (const k of ['voice', 'music']) if (au[k]) { if (k === 'music') ff.push('-stream_loop', '-1'); ff.push('-ss', String(f0 / fps), '-t', String(dur), '-i', inProject(au[k])); ain.push(k); }
 const vf = 'scale=trunc(iw/2)*2:trunc(ih/2)*2';
-if (ain.length) {
+const sfx = (spec._sfx || []).filter(x => x.t >= f0 / fps && x.t < f1 / fps);
+if (sfx.length && au.voice) {
+  // engine mix: music looped under the voice and ducked while he speaks, plus each effect at its word
+  for (const x of sfx) ff.push('-i', inProject(x.file));
+  const mdb = Number.isFinite(au.musicDb) ? au.musicDb : -18, fade = `afade=t=out:st=${Math.max(0, dur - 1.5).toFixed(2)}:d=1.5`;
+  const vi = ain.indexOf('voice') + 1, mi = ain.indexOf('music') + 1, base = ain.length + 1;
+  let fc = `[${vi}:a]asplit=2[vo][vk];`;
+  const mix = ['[vo]'];
+  if (mi) { fc += `[${mi}:a]volume=${mdb}dB,${fade}[mraw];[mraw][vk]sidechaincompress=threshold=0.03:ratio=6:attack=20:release=350[m];`; mix.push('[m]'); }
+  sfx.forEach((x, j) => {
+    const d = Math.round((x.t - f0 / fps) * 1000), db = Number.isFinite(x.db) ? x.db : -6;
+    const trim = Number.isFinite(x.len) ? `atrim=0:${x.len},afade=t=out:st=${Math.max(0, x.len - 0.4)}:d=0.4,` : '';
+    fc += `[${base + j}:a]${trim}volume=${db}dB,adelay=${d}|${d}[s${j}];`; mix.push(`[s${j}]`);
+  });
+  fc += `${mix.join('')}amix=inputs=${mix.length}:duration=first:normalize=0,alimiter=limit=0.95[a]`;
+  ff.push('-filter_complex', `[0:v]${vf}[v];${fc}`, '-map', '[v]', '-map', '[a]', '-c:a', 'aac', '-b:a', '192k');
+} else if (ain.length) {
   const mdb = Number.isFinite(au.musicDb) ? au.musicDb : -18, fade = `afade=t=out:st=${Math.max(0, dur - 1.5).toFixed(2)}:d=1.5`, mi = ain.indexOf('music') + 1, vi = ain.indexOf('voice') + 1;
   const fc = mi && vi ? `[${mi}:a]volume=${mdb}dB,${fade}[m];[${vi}:a][m]amix=inputs=2:duration=longest:normalize=0[a]` : mi ? `[${mi}:a]volume=${mdb}dB,${fade}[a]` : `[${vi}:a]anull[a]`;
   ff.push('-filter_complex', `[0:v]${vf}[v];${fc}`, '-map', '[v]', '-map', '[a]', '-c:a', 'aac', '-b:a', '192k');

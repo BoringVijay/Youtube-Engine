@@ -1,5 +1,5 @@
 {
- "step": "4: full voice (Chris, delivery tags), sound-effect library, music cues",
+ "step": "5: stop-frame check (3 stills per shot) and a half-resolution preview render",
  "tasks": [
   {
    "type": "image",
@@ -643,6 +643,19 @@
    "type": "music",
    "out": "audio/cue-march.mp3",
    "prompt": "Short pompous comic military march for an overconfident army rolling out: snare rolls, a slightly too proud brass melody and a tuba, 1930s parade band feel but light and funny, no vocals."
+  },
+  {
+   "type": "render",
+   "out": "renders/check.mp4",
+   "short": "short.json",
+   "stills": true,
+   "scale": 0.5
+  },
+  {
+   "type": "render",
+   "out": "renders/preview-v1.mp4",
+   "short": "short.json",
+   "scale": 0.5
   }
  ]
 }

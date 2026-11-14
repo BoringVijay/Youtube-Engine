@@ -1,0 +1,1529 @@
+{
+ "fps": 30,
+ "audio": {
+  "voice": "audio/voice-edit.mp3",
+  "music": "audio/music-lyria.mp3",
+  "musicDb": -21,
+  "sfx": [
+   {
+    "file": "sfx/kazoo-fanfare.mp3",
+    "at": "say:won",
+    "offset": 0.35,
+    "db": -12,
+    "len": 1.6
+   },
+   {
+    "file": "sfx/paper-thud.mp3",
+    "at": "say:machine guns",
+    "offset": 0.05,
+    "db": -8
+   },
+   {
+    "file": "sfx/phone-ring.mp3",
+    "at": "say:And the government says",
+    "offset": -0.6,
+    "db": -14,
+    "len": 1.0
+   },
+   {
+    "file": "audio/cue-march.mp3",
+    "at": "say:So Major Meredith",
+    "db": -16,
+    "len": 5.5
+   },
+   {
+    "file": "sfx/gun-burst.mp3",
+    "at": "say:Fire",
+    "offset": 0.15,
+    "db": -10,
+    "len": 1.2
+   },
+   {
+    "file": "sfx/bonk.mp3",
+    "at": "say:jams",
+    "offset": 0.05,
+    "db": -8
+   },
+   {
+    "file": "sfx/sad-trombone.mp3",
+    "at": "say:jams",
+    "offset": 0.45,
+    "db": -12,
+    "len": 2.0
+   },
+   {
+    "file": "sfx/gun-burst.mp3",
+    "at": "say:Fire#2",
+    "offset": 0.15,
+    "db": -10,
+    "len": 1.0
+   },
+   {
+    "file": "audio/cue-sneaky.mp3",
+    "at": "say:Every direction",
+    "db": -15,
+    "len": 4.0
+   },
+   {
+    "file": "sfx/crickets.mp3",
+    "at": "say:Nobody agrees",
+    "offset": 0.7,
+    "db": -13,
+    "len": 1.4
+   },
+   {
+    "file": "sfx/whoosh.mp3",
+    "at": "say:fifty kilometres",
+    "db": -12
+   },
+   {
+    "file": "sfx/typewriter-ding.mp3",
+    "at": "say:Final report",
+    "db": -12
+   },
+   {
+    "file": "sfx/record-scratch.mp3",
+    "at": "say:Exactly ten",
+    "offset": -0.25,
+    "db": -12,
+    "len": 0.8
+   }
+  ]
+ },
+ "words": "audio/words.json",
+ "captions": {
+  "wordsPer": 1
+ },
+ "font": "fonts/Montserrat-ExtraBold.ttf",
+ "moods": {
+  "day": {
+   "sun": {
+    "azimuth": 35,
+    "elevation": 34,
+    "color": "#ffd9a8",
+    "intensity": 2.5
+   },
+   "sky": {
+    "top": "#6f95d6",
+    "horizon": "#f4c08a"
+   },
+   "fill": {
+    "sky": "#9fb0ff",
+    "ground": "#6a3b6e",
+    "intensity": 1.1
+   }
+  },
+  "dusk": {
+   "sun": {
+    "azimuth": -40,
+    "elevation": 16,
+    "color": "#ffb48c",
+    "intensity": 1.1
+   },
+   "sky": {
+    "top": "#1d2a6e",
+    "horizon": "#6a68b4"
+   },
+   "fill": {
+    "sky": "#5464c8",
+    "ground": "#3a2f6a",
+    "intensity": 0.95
+   },
+   "exposure": 1.1,
+   "cutoutTint": "#b4b2dc"
+  }
+ },
+ "lighting": [
+  {
+   "t": 0,
+   "mood": "day"
+  },
+  {
+   "t": "say:You see",
+   "mood": "dusk",
+   "fade": 0.8
+  },
+  {
+   "t": "say:The army comes back",
+   "mood": "day",
+   "fade": 1.0
+  }
+ ],
+ "ground": {
+  "texture": "tex/dirt-final.png",
+  "repeat": [
+   60,
+   60
+  ],
+  "color": "#b9673d"
+ },
+ "backdrop": {
+  "image": "bg/day.png",
+  "blur": 4
+ },
+ "ink": {
+  "set": 4
+ },
+ "contactShadow": 0.6,
+ "characters": [
+  {
+   "id": "major",
+   "puppet": "rigs/major",
+   "pos": [
+    0,
+    0,
+    0
+   ],
+   "height": 1.8,
+   "face": "neutral"
+  },
+  {
+   "id": "farmer",
+   "puppet": "rigs/farmer",
+   "pos": [
+    -4.5,
+    0,
+    1.5
+   ],
+   "height": 1.8,
+   "face": "neutral"
+  },
+  {
+   "id": "gunner",
+   "puppet": "rigs/gunner",
+   "pos": [
+    5.5,
+    0,
+    1.5
+   ],
+   "height": 1.75
+  },
+  {
+   "id": "driver",
+   "puppet": "rigs/driver",
+   "pos": [
+    6.6,
+    0,
+    1.4
+   ],
+   "height": 1.75,
+   "flip": true
+  },
+  {
+   "id": "major-b",
+   "puppet": "rigs/major",
+   "pos": [
+    68.8,
+    0,
+    2
+   ],
+   "height": 1.8,
+   "face": "neutral"
+  },
+  {
+   "id": "minister",
+   "puppet": "rigs/minister",
+   "pos": [
+    0,
+    0,
+    -70
+   ],
+   "height": 1.75,
+   "face": "neutral"
+  },
+  {
+   "id": "minister-phone",
+   "puppet": "rigs/minister-phone",
+   "pos": [
+    6,
+    0,
+    -70
+   ],
+   "height": 1.75
+  },
+  {
+   "id": "major-salute",
+   "puppet": "rigs/major-salute",
+   "pos": [
+    0,
+    0,
+    45
+   ],
+   "height": 1.8
+  },
+  {
+   "id": "major-defeat",
+   "puppet": "rigs/major-defeat",
+   "pos": [
+    30,
+    0,
+    45
+   ],
+   "height": 1.8
+  },
+  {
+   "id": "emu-sprint",
+   "puppet": "rigs/emu-sprint",
+   "pos": [
+    62,
+    0,
+    -2
+   ],
+   "height": 1.6
+  },
+  {
+   "id": "emu-a0",
+   "puppet": "rigs/emu",
+   "pos": [
+    -7.1057003411001025,
+    0,
+    -6.4050950435470115
+   ],
+   "height": 1.7301868946079706,
+   "flip": true,
+   "face": "bored"
+  },
+  {
+   "id": "emu-a1",
+   "puppet": "rigs/emu",
+   "pos": [
+    -6.193521974836191,
+    0,
+    -8.99672803542013
+   ],
+   "height": 1.7819408126286205,
+   "flip": true,
+   "face": "neutral"
+  },
+  {
+   "id": "emu-a2",
+   "puppet": "rigs/emu",
+   "pos": [
+    -4.939812589802568,
+    0,
+    -5.919132541447714
+   ],
+   "height": 1.6181426026687729,
+   "flip": true,
+   "face": "bored"
+  },
+  {
+   "id": "emu-a3",
+   "puppet": "rigs/emu",
+   "pos": [
+    -4.075718823310212,
+    0,
+    -6.839433787642087
+   ],
+   "height": 1.7254866444811179,
+   "flip": false,
+   "face": "bored"
+  },
+  {
+   "id": "emu-a4",
+   "puppet": "rigs/emu",
+   "pos": [
+    -2.748675146415768,
+    0,
+    -5.7975358803386285
+   ],
+   "height": 1.6442163646915295,
+   "flip": false,
+   "face": "neutral"
+  },
+  {
+   "id": "emu-a5",
+   "puppet": "rigs/emu",
+   "pos": [
+    -1.8762344282009942,
+    0,
+    -6.365530500144625
+   ],
+   "height": 1.6235584476156737,
+   "flip": true,
+   "face": "bored"
+  },
+  {
+   "id": "emu-a6",
+   "puppet": "rigs/emu",
+   "pos": [
+    -0.8915641720456369,
+    0,
+    -8.989600981974798
+   ],
+   "height": 1.7277826937852367,
+   "flip": true,
+   "face": "bored"
+  },
+  {
+   "id": "emu-a7",
+   "puppet": "rigs/emu",
+   "pos": [
+    0.4772664594476927,
+    0,
+    -8.88620975880032
+   ],
+   "height": 1.7238019186347107,
+   "flip": true,
+   "face": "bored"
+  },
+  {
+   "id": "emu-a8",
+   "puppet": "rigs/emu",
+   "pos": [
+    1.3565553834016422,
+    0,
+    -7.384883022260749
+   ],
+   "height": 1.7171123727015276,
+   "flip": true,
+   "face": "smug"
+  },
+  {
+   "id": "emu-a9",
+   "puppet": "rigs/emu",
+   "pos": [
+    2.2990559509145307,
+    0,
+    -6.57860049749886
+   ],
+   "height": 1.7559659261168488,
+   "flip": true,
+   "face": "smug"
+  },
+  {
+   "id": "emu-a10",
+   "puppet": "rigs/emu",
+   "pos": [
+    3.515117902286871,
+    0,
+    -10.750824973440572
+   ],
+   "height": 1.7458890578878434,
+   "flip": true,
+   "face": "neutral"
+  },
+  {
+   "id": "emu-a11",
+   "puppet": "rigs/emu",
+   "pos": [
+    4.320839466952978,
+    0,
+    -8.008736930711363
+   ],
+   "height": 1.7514281859130498,
+   "flip": true,
+   "face": "smug"
+  },
+  {
+   "id": "emu-a12",
+   "puppet": "rigs/emu",
+   "pos": [
+    5.553019012686048,
+    0,
+    -11.272114500472657
+   ],
+   "height": 1.615524096436159,
+   "flip": false,
+   "face": "smug"
+  },
+  {
+   "id": "emu-a13",
+   "puppet": "rigs/emu",
+   "pos": [
+    6.554073417314718,
+    0,
+    -7.60107032631501
+   ],
+   "height": 1.6993349590597975,
+   "flip": false,
+   "face": "neutral"
+  },
+  {
+   "id": "emu-b0",
+   "puppet": "rigs/emu",
+   "pos": [
+    71.20398066830752,
+    0,
+    -6.77872438043175
+   ],
+   "height": 1.6948196674839289,
+   "flip": false,
+   "face": "neutral"
+  },
+  {
+   "id": "emu-b1",
+   "puppet": "rigs/emu",
+   "pos": [
+    71.63640165655833,
+    0,
+    -5.805968085217696
+   ],
+   "height": 1.7294257709055336,
+   "flip": false,
+   "face": "neutral"
+  },
+  {
+   "id": "emu-b2",
+   "puppet": "rigs/emu",
+   "pos": [
+    72.99315487196583,
+    0,
+    -4.1383821283765965
+   ],
+   "height": 1.6771582884893421,
+   "flip": false,
+   "face": "neutral"
+  },
+  {
+   "id": "emu-b3",
+   "puppet": "rigs/emu",
+   "pos": [
+    73.41353775683335,
+    0,
+    -4.8467811451990634
+   ],
+   "height": 1.6336096757813088,
+   "flip": true,
+   "face": "neutral"
+  },
+  {
+   "id": "emu-b4",
+   "puppet": "rigs/emu",
+   "pos": [
+    74.33537265159879,
+    0,
+    -6.072931953890083
+   ],
+   "height": 1.6258680444037368,
+   "flip": true,
+   "face": "neutral"
+  },
+  {
+   "id": "emu-b5",
+   "puppet": "rigs/emu",
+   "pos": [
+    75.43456982187993,
+    0,
+    -6.485687896505198
+   ],
+   "height": 1.6161162602400276,
+   "flip": true,
+   "face": "neutral"
+  },
+  {
+   "id": "emu-b6",
+   "puppet": "rigs/emu",
+   "pos": [
+    76.42966394548642,
+    0,
+    -6.5335353057660495
+   ],
+   "height": 1.7638559675671481,
+   "flip": false,
+   "face": "neutral"
+  },
+  {
+   "id": "emu-b7",
+   "puppet": "rigs/emu",
+   "pos": [
+    77.16705263870834,
+    0,
+    -4.661186068846794
+   ],
+   "height": 1.6717542330663249,
+   "flip": false,
+   "face": "neutral"
+  },
+  {
+   "id": "emu-b8",
+   "puppet": "rigs/emu",
+   "pos": [
+    78.47463872237839,
+    0,
+    -3.603683623164436
+   ],
+   "height": 1.635243545698074,
+   "flip": true,
+   "face": "neutral"
+  },
+  {
+   "id": "emu-b9",
+   "puppet": "rigs/emu",
+   "pos": [
+    78.94000165020852,
+    0,
+    -4.9398509213654265
+   ],
+   "height": 1.717824700746451,
+   "flip": true,
+   "face": "neutral"
+  }
+ ],
+ "props": [
+  {
+   "type": "wall",
+   "pos": [
+    0,
+    0,
+    -11
+   ],
+   "size": [
+    30,
+    0.95,
+    12
+   ],
+   "texture": "tex/wheat.png",
+   "repeat": [
+    8,
+    1
+   ]
+  },
+  {
+   "type": "house",
+   "pos": [
+    -9,
+    0,
+    -3
+   ],
+   "size": [
+    5,
+    3,
+    4
+   ],
+   "wall": "tex/wood.png",
+   "roof": "#8d9298",
+   "rotY": 15
+  },
+  {
+   "type": "post",
+   "pos": [
+    -10,
+    0,
+    -4.6
+   ],
+   "h": 1.3,
+   "color": "#6b5a48"
+  },
+  {
+   "type": "post",
+   "pos": [
+    -8,
+    0,
+    -4.6
+   ],
+   "h": 1.3,
+   "color": "#6b5a48"
+  },
+  {
+   "type": "post",
+   "pos": [
+    -6,
+    0,
+    -4.6
+   ],
+   "h": 1.3,
+   "color": "#6b5a48"
+  },
+  {
+   "type": "post",
+   "pos": [
+    -4,
+    0,
+    -4.6
+   ],
+   "h": 1.3,
+   "color": "#6b5a48"
+  },
+  {
+   "type": "post",
+   "pos": [
+    -2,
+    0,
+    -4.6
+   ],
+   "h": 1.3,
+   "color": "#6b5a48"
+  },
+  {
+   "type": "post",
+   "pos": [
+    0,
+    0,
+    -4.6
+   ],
+   "h": 1.3,
+   "color": "#6b5a48"
+  },
+  {
+   "type": "post",
+   "pos": [
+    2,
+    0,
+    -4.6
+   ],
+   "h": 1.3,
+   "color": "#6b5a48"
+  },
+  {
+   "type": "post",
+   "pos": [
+    4,
+    0,
+    -4.6
+   ],
+   "h": 1.3,
+   "color": "#6b5a48"
+  },
+  {
+   "type": "post",
+   "pos": [
+    6,
+    0,
+    -4.6
+   ],
+   "h": 1.3,
+   "color": "#6b5a48"
+  },
+  {
+   "type": "post",
+   "pos": [
+    8,
+    0,
+    -4.6
+   ],
+   "h": 1.3,
+   "color": "#6b5a48"
+  },
+  {
+   "type": "post",
+   "pos": [
+    10,
+    0,
+    -4.6
+   ],
+   "h": 1.3,
+   "color": "#6b5a48"
+  },
+  {
+   "type": "wall",
+   "pos": [
+    0,
+    0.9,
+    -4.6
+   ],
+   "size": [
+    22,
+    0.03,
+    0.03
+   ],
+   "color": "#4a4040"
+  },
+  {
+   "type": "crate",
+   "pos": [
+    1.4,
+    0,
+    45.4
+   ],
+   "size": [
+    1.1,
+    0.7,
+    0.7
+   ],
+   "texture": "cards/crate.png"
+  },
+  {
+   "type": "crate",
+   "pos": [
+    2.5,
+    0,
+    45.2
+   ],
+   "size": [
+    1.1,
+    0.7,
+    0.7
+   ],
+   "texture": "cards/crate.png",
+   "rotY": -12
+  },
+  {
+   "type": "plane",
+   "pos": [
+    -3.2,
+    0,
+    44
+   ],
+   "size": [
+    4.4,
+    3.2
+   ],
+   "image": "cards-final/truck.png"
+  },
+  {
+   "type": "plane",
+   "pos": [
+    27,
+    0,
+    44
+   ],
+   "size": [
+    4.4,
+    3.2
+   ],
+   "image": "cards-final/truck.png"
+  },
+  {
+   "type": "crate",
+   "pos": [
+    3.6,
+    0,
+    1.2
+   ],
+   "size": [
+    1.1,
+    0.7,
+    0.7
+   ],
+   "texture": "cards/crate.png",
+   "rotY": 8
+  },
+  {
+   "type": "plane",
+   "pos": [
+    70.3,
+    0,
+    2.2
+   ],
+   "size": [
+    1.6,
+    1.2
+   ],
+   "image": "cards-final/lewis-gun.png"
+  },
+  {
+   "type": "box",
+   "pos": [
+    74,
+    0.005,
+    -4
+   ],
+   "size": [
+    16,
+    0.02,
+    12
+   ],
+   "texture": "tex/mud.png",
+   "repeat": [
+    4,
+    3
+   ]
+  },
+  {
+   "type": "box",
+   "pos": [
+    75,
+    0.02,
+    -6
+   ],
+   "size": [
+    9,
+    0.03,
+    4
+   ],
+   "color": "#7f9ea8"
+  },
+  {
+   "type": "tree",
+   "pos": [
+    64,
+    0,
+    -12
+   ],
+   "scale": 2.2,
+   "color": "#6f8f5a"
+  },
+  {
+   "type": "tree",
+   "pos": [
+    84,
+    0,
+    -10
+   ],
+   "scale": 2.6,
+   "color": "#6f8f5a"
+  },
+  {
+   "type": "box",
+   "pos": [
+    0,
+    0.01,
+    -70
+   ],
+   "size": [
+    9,
+    0.02,
+    8
+   ],
+   "color": "#5a3a28"
+  },
+  {
+   "type": "wall",
+   "pos": [
+    0,
+    0,
+    -72.5
+   ],
+   "size": [
+    9,
+    3.4,
+    0.2
+   ],
+   "texture": "tex/panelling.png",
+   "repeat": [
+    3,
+    1
+   ]
+  },
+  {
+   "type": "plane",
+   "pos": [
+    1.4,
+    0,
+    -69.4
+   ],
+   "size": [
+    2.2,
+    2.1
+   ],
+   "image": "cards-final/desk.png"
+  },
+  {
+   "type": "wall",
+   "pos": [
+    6,
+    0,
+    -72.5
+   ],
+   "size": [
+    5,
+    3.4,
+    0.2
+   ],
+   "texture": "tex/panelling.png",
+   "repeat": [
+    2,
+    1
+   ]
+  },
+  {
+   "type": "plane",
+   "pos": [
+    -70,
+    0,
+    0
+   ],
+   "size": [
+    2.4,
+    3.6
+   ],
+   "image": "cards/newspaper.png"
+  },
+  {
+   "type": "plane",
+   "pos": [
+    -82,
+    0,
+    0
+   ],
+   "size": [
+    3.4,
+    6.0
+   ],
+   "image": "bg/aerial.png"
+  },
+  {
+   "type": "plane",
+   "pos": [
+    -94,
+    0,
+    0
+   ],
+   "size": [
+    2.8,
+    3.6
+   ],
+   "image": "cards-final/report.png"
+  },
+  {
+   "type": "plane",
+   "pos": [
+    -106,
+    0,
+    0
+   ],
+   "size": [
+    3.0,
+    2.3
+   ],
+   "image": "cards-final/lewis-gun.png"
+  }
+ ],
+ "shots": [
+  {
+   "target": "major",
+   "headWidth": 0.22,
+   "yaw": 15,
+   "zoom": 6,
+   "pan": [
+    -20,
+    8
+   ],
+   "actions": [
+    {
+     "at": 0.2,
+     "who": "major",
+     "face": "smug"
+    }
+   ],
+   "start": 0
+  },
+  {
+   "target": "emu-a6",
+   "headWidth": 0.22,
+   "yaw": -18,
+   "zoom": 5,
+   "start": "say:fight birds"
+  },
+  {
+   "target": "major",
+   "headWidth": 0.1,
+   "yaw": 28,
+   "zoom": -4,
+   "actions": [
+    {
+     "at": 0.5,
+     "who": "major",
+     "face": "confused",
+     "pose": {
+      "head": 8
+     }
+    }
+   ],
+   "start": "say:And the birds won"
+  },
+  {
+   "anchor": [
+    -82,
+    3.0,
+    0
+   ],
+   "distance": 6.2,
+   "zoom": 8,
+   "start": "say:Western Australia"
+  },
+  {
+   "target": "emu-a3",
+   "headWidth": 0.09,
+   "yaw": 10,
+   "pitch": 8,
+   "zoom": 3,
+   "pan": [
+    30,
+    0
+   ],
+   "start": "say:Then about twenty thousand"
+  },
+  {
+   "target": "emu-a9",
+   "headWidth": 0.28,
+   "yaw": -12,
+   "zoom": 7,
+   "actions": [
+    {
+     "at": 0.1,
+     "who": "emu-a9",
+     "face": "bored"
+    }
+   ],
+   "start": "say:start eating everything"
+  },
+  {
+   "target": "farmer",
+   "headWidth": 0.2,
+   "yaw": -10,
+   "zoom": 5,
+   "actions": [
+    {
+     "at": 0.3,
+     "who": "farmer",
+     "face": "shouting",
+     "shake": 0.5
+    }
+   ],
+   "start": "say:The farmers are"
+  },
+  {
+   "anchor": [
+    -70,
+    1.8,
+    0
+   ],
+   "distance": 3.6,
+   "zoom": 10,
+   "start": "say:machine guns"
+  },
+  {
+   "target": "minister-phone",
+   "headWidth": 0.2,
+   "yaw": 12,
+   "zoom": 4,
+   "start": "say:And the government says"
+  },
+  {
+   "target": "minister",
+   "headWidth": 0.3,
+   "yaw": -6,
+   "zoom": 12,
+   "actions": [
+    {
+     "at": 0.05,
+     "who": "minister",
+     "face": "delighted"
+    }
+   ],
+   "start": "say:sure"
+  },
+  {
+   "target": "major-salute",
+   "headWidth": 0.16,
+   "yaw": 25,
+   "zoom": 4,
+   "pan": [
+    -30,
+    0
+   ],
+   "start": "say:So Major Meredith"
+  },
+  {
+   "anchor": [
+    1.9,
+    0.45,
+    45.6
+   ],
+   "distance": 2.4,
+   "yaw": 6,
+   "zoom": 7,
+   "start": "say:ten thousand rounds"
+  },
+  {
+   "target": "emu-b4",
+   "headWidth": 0.09,
+   "yaw": -14,
+   "pitch": 6,
+   "zoom": 3,
+   "start": "say:First battle"
+  },
+  {
+   "target": "emu-b2",
+   "headWidth": 0.16,
+   "yaw": 10,
+   "zoom": 4,
+   "actions": [
+    {
+     "at": 0.2,
+     "who": "emu-b2",
+     "to": [
+      72.6,
+      0,
+      -1.6
+     ],
+     "walk": true,
+     "over": 1.6
+    }
+   ],
+   "start": "say:The emus walk into range"
+  },
+  {
+   "target": "major-b",
+   "headWidth": 0.22,
+   "yaw": -20,
+   "zoom": 10,
+   "actions": [
+    {
+     "at": 0.0,
+     "who": "major-b",
+     "face": "shouting",
+     "shake": 0.6
+    }
+   ],
+   "start": "say:Fire"
+  },
+  {
+   "target": "emu-b6",
+   "headWidth": 0.14,
+   "yaw": 14,
+   "zoom": 5,
+   "actions": [
+    {
+     "at": 0.0,
+     "who": "emu-b6",
+     "face": "startled",
+     "hop": 0.3
+    },
+    {
+     "at": 0.1,
+     "who": "emu-b7",
+     "face": "startled",
+     "hop": 0.25
+    }
+   ],
+   "start": "say:Twelve birds"
+  },
+  {
+   "anchor": [
+    -106,
+    1.15,
+    0
+   ],
+   "distance": 3.0,
+   "zoom": 9,
+   "start": "say:the gun jams"
+  },
+  {
+   "target": "emu-b5",
+   "headWidth": 0.07,
+   "yaw": 0,
+   "pitch": 35,
+   "zoom": 3,
+   "start": "say:Next a thousand emus"
+  },
+  {
+   "target": "major-b",
+   "headWidth": 0.2,
+   "yaw": 18,
+   "zoom": 8,
+   "actions": [
+    {
+     "at": 0.0,
+     "who": "major-b",
+     "face": "shouting"
+    }
+   ],
+   "start": "say:Fire#2"
+  },
+  {
+   "target": "emu-b3",
+   "headWidth": 0.1,
+   "yaw": -6,
+   "pitch": 20,
+   "zoom": -5,
+   "actions": [
+    {
+     "at": 0.0,
+     "who": "emu-b0",
+     "to": [
+      58.5,
+      0,
+      -3
+     ],
+     "walk": true,
+     "over": 1.4
+    },
+    {
+     "at": 0.0,
+     "who": "emu-b1",
+     "to": [
+      61.9,
+      0,
+      0
+     ],
+     "walk": true,
+     "over": 1.4
+    },
+    {
+     "at": 0.0,
+     "who": "emu-b2",
+     "to": [
+      65.3,
+      0,
+      -9
+     ],
+     "walk": true,
+     "over": 1.4
+    },
+    {
+     "at": 0.0,
+     "who": "emu-b3",
+     "to": [
+      68.7,
+      0,
+      3
+     ],
+     "walk": true,
+     "over": 1.4
+    },
+    {
+     "at": 0.0,
+     "who": "emu-b4",
+     "to": [
+      72.1,
+      0,
+      -6
+     ],
+     "walk": true,
+     "over": 1.4
+    },
+    {
+     "at": 0.0,
+     "who": "emu-b5",
+     "to": [
+      75.5,
+      0,
+      -3
+     ],
+     "walk": true,
+     "over": 1.4
+    },
+    {
+     "at": 0.0,
+     "who": "emu-b6",
+     "to": [
+      78.9,
+      0,
+      -3
+     ],
+     "walk": true,
+     "over": 1.4
+    },
+    {
+     "at": 0.0,
+     "who": "emu-b7",
+     "to": [
+      82.3,
+      0,
+      0
+     ],
+     "walk": true,
+     "over": 1.4
+    },
+    {
+     "at": 0.0,
+     "who": "emu-b8",
+     "to": [
+      85.7,
+      0,
+      -9
+     ],
+     "walk": true,
+     "over": 1.4
+    },
+    {
+     "at": 0.0,
+     "who": "emu-b9",
+     "to": [
+      89.1,
+      0,
+      3
+     ],
+     "walk": true,
+     "over": 1.4
+    }
+   ],
+   "start": "say:And they scatter"
+  },
+  {
+   "target": "emu-b8",
+   "headWidth": 0.3,
+   "yaw": -14,
+   "zoom": 6,
+   "actions": [
+    {
+     "at": 0.0,
+     "who": "emu-b8",
+     "face": "sly"
+    }
+   ],
+   "start": "say:Like they planned it"
+  },
+  {
+   "target": "major",
+   "headWidth": 0.2,
+   "yaw": -22,
+   "zoom": -3,
+   "actions": [
+    {
+     "at": 0.0,
+     "who": "major",
+     "face": "exhausted"
+    }
+   ],
+   "start": "say:Six days in"
+  },
+  {
+   "target": "gunner",
+   "headWidth": 0.16,
+   "yaw": 8,
+   "zoom": 4,
+   "actions": [
+    {
+     "at": 0.0,
+     "who": "gunner",
+     "shake": 0.4
+    },
+    {
+     "at": 0.0,
+     "who": "driver",
+     "shake": 0.4
+    }
+   ],
+   "start": "say:Nobody agrees"
+  },
+  {
+   "target": "emu-b1",
+   "headWidth": 0.22,
+   "yaw": 12,
+   "zoom": 3,
+   "start": "say:You see"
+  },
+  {
+   "target": "emu-sprint",
+   "headWidth": 0.12,
+   "yaw": 0,
+   "zoom": 2,
+   "pan": [
+    -120,
+    0
+   ],
+   "actions": [
+    {
+     "at": 0.0,
+     "who": "emu-sprint",
+     "to": [
+      80,
+      0,
+      -2
+     ],
+     "over": 2.0
+    }
+   ],
+   "start": "say:fifty kilometres"
+  },
+  {
+   "target": "emu-b5",
+   "headWidth": 0.06,
+   "yaw": 4,
+   "pitch": 40,
+   "zoom": -6,
+   "start": "say:tiny groups"
+  },
+  {
+   "target": "major-b",
+   "headWidth": 0.22,
+   "yaw": -10,
+   "zoom": 5,
+   "actions": [
+    {
+     "at": 0.0,
+     "who": "major-b",
+     "face": "confused",
+     "pose": {
+      "head": -8
+     }
+    }
+   ],
+   "start": "say:nothing to aim at"
+  },
+  {
+   "target": "major-defeat",
+   "headWidth": 0.14,
+   "yaw": -18,
+   "zoom": -3,
+   "start": "say:So the army goes home"
+  },
+  {
+   "target": "major-salute",
+   "headWidth": 0.16,
+   "yaw": -20,
+   "zoom": 5,
+   "start": "say:The army comes back"
+  },
+  {
+   "anchor": [
+    -94,
+    1.8,
+    0
+   ],
+   "distance": 3.8,
+   "zoom": 8,
+   "start": "say:Final report"
+  },
+  {
+   "target": "minister",
+   "headWidth": 0.26,
+   "yaw": 10,
+   "zoom": 9,
+   "actions": [
+    {
+     "at": 0.0,
+     "who": "minister",
+     "face": "shocked"
+    }
+   ],
+   "start": "say:Exactly ten bullets"
+  },
+  {
+   "target": "major",
+   "headWidth": 0.12,
+   "yaw": -30,
+   "zoom": -3,
+   "actions": [
+    {
+     "at": 0.0,
+     "who": "major",
+     "face": "neutral"
+    }
+   ],
+   "start": "say:The army lost no one"
+  },
+  {
+   "target": "emu-a7",
+   "headWidth": 0.12,
+   "yaw": 8,
+   "zoom": 3,
+   "actions": [
+    {
+     "at": 0.0,
+     "who": "emu-a7",
+     "face": "smug"
+    },
+    {
+     "at": 0.0,
+     "who": "emu-a5",
+     "face": "smug"
+    }
+   ],
+   "start": "say:The emus kept the wheat"
+  },
+  {
+   "target": "major",
+   "headWidth": 0.22,
+   "yaw": 15,
+   "zoom": 6,
+   "pan": [
+    -20,
+    8
+   ],
+   "actions": [
+    {
+     "at": 0.2,
+     "who": "major",
+     "face": "smug"
+    }
+   ],
+   "start": "say:And that's how"
+  }
+ ],
+ "end": "audio"
+}
