@@ -1,5 +1,5 @@
 {
- "at": "2026-11-07T13:53:19Z",
+ "at": "2026-11-14T08:30:06Z",
  "images": [
   {
    "scene": "l4-k1",
@@ -19,62 +19,61 @@
   {
    "id": "A-first-only-push",
    "model": "veo-3.1-fast-generate-001",
-   "secs": 105,
+   "secs": 84,
    "file": "lab/out/vid-A-first-only-push-small.mp4",
    "review": {
     "score": 3.0,
     "issues": [
-     "00:00 - 00:03: The penguin remains completely static and fails to pull the lever down.",
-     "00:00 - 00:03: The red LED eyes do not glow brighter as requested.",
-     "00:00 - 00:03: The penguin only has one stick-like appendage on the lever, not both flippers."
+     "00:00-00:02: The lever abruptly snaps from pointing down to pointing up, then back down, instead of a smooth pull.",
+     "00:01: The penguin's right flipper stretches and morphs unnaturally to stay attached to the jumping lever.",
+     "00:00-00:03: The penguin only uses one flipper, failing the prompt's instruction to use both."
     ],
-    "fix": "Ensure the penguin actively pulls the lever downwards using both flippers, and make the red LED eyes visibly increase in brightness as the lever moves."
+    "fix": "Maintain rigid object permanence for the lever and penguin; ensure the lever moves in a smooth, continuous downward arc without snapping, and the penguin uses both flippers without stretching or morphing."
    }
   },
   {
    "id": "B-first-last-small",
    "model": "veo-3.1-fast-generate-001",
-   "secs": 107,
+   "secs": 95,
    "file": "lab/out/vid-B-first-last-small-small.mp4",
    "review": {
-    "score": 5.0,
+    "score": 3.0,
     "issues": [
-     "00:00 - 00:03: The penguin's right flipper melts into the lever handle instead of gripping it.",
-     "00:00 - 00:03: The lever bends and morphs unnaturally as it is pulled down.",
-     "00:00 - 00:03: The penguin's left flipper changes shape and size."
+     "00:01 - 00:02: The cardboard lever completely detaches from the machine, floats in mid-air, and morphs in shape.",
+     "00:01 - 00:02: The penguin's flipper morphs and loses its connection to the lever."
     ],
-    "fix": "Ensure solid object permanence: the lever must remain rigid and not bend, and the penguin's flipper must clearly grip the handle without melting into it."
+    "fix": "Maintain rigid physical connection between the lever and the machine slot; keep the lever's shape and the penguin's flipper solid and consistent throughout the pull."
    }
   },
   {
    "id": "C-first-last-big",
    "model": "veo-3.1-fast-generate-001",
-   "secs": 118,
+   "secs": 96,
    "file": "lab/out/vid-C-first-last-big-small.mp4",
    "review": {
     "score": 3.0,
     "issues": [
-     "00:01-00:03: The penguin's flipper melts and merges into the lever.",
-     "00:01-00:03: The lever loses its solid shape and morphs.",
-     "00:02-00:03: Severe morphing and shifting of the cardboard structures, wires, and circuit boards as the camera cranes up.",
-     "00:02-00:03: The red LED lights lose their defined shape and become blurry blobs."
+     "00:00-00:03: The penguin figure morphs severely during the camera move, losing its beak and facial details, eventually looking like a blob.",
+     "00:00-00:03: The penguin's arm holding the lever melts and merges into the cardboard.",
+     "00:01-00:02: A large, distracting black object (resembling a camera arm or stand) sweeps across the foreground, completely obscuring the subject and breaking the illusion.",
+     "00:00-00:03: Background elements, such as the tools and cardboard scraps, shift and morph unnaturally as the camera perspective changes."
     ],
-    "fix": "Maintain strict object permanence and structural consistency of the penguin, lever, and cardboard set during the camera move; prevent any melting, morphing, or shifting of elements."
+    "fix": "Maintain strict object permanence for the penguin character, ensuring facial features and limbs remain distinct and do not melt into props; keep the foreground completely clear of any intrusive objects or equipment during the camera move."
    }
   },
   {
    "id": "D-first-only-orbit",
    "model": "veo-3.1-fast-generate-001",
-   "secs": 107,
+   "secs": 105,
    "file": "lab/out/vid-D-first-only-orbit-small.mp4",
    "review": {
-    "score": 4.0,
+    "score": 2.0,
     "issues": [
-     "00:00-00:05: The camera remains completely static, failing to execute the requested 60-degree orbit.",
-     "00:00-00:05: The red LED eyes maintain a constant brightness rather than flaring as requested.",
-     "00:00-00:05: The cardboard structure around the lever slot warps and changes shape slightly as the lever is pulled down."
+     "00:00-00:05: The intended camera orbit does not occur; the camera remains completely static.",
+     "00:00-00:05: The penguin does not pull the lever; the character and prop remain completely static.",
+     "00:00-00:05: The only animation is the red LED turning on and off, making the video essentially a still image with a light effect."
     ],
-    "fix": "Force a continuous 60-degree camera orbit, ensure the red LED flares significantly when the lever is pulled, and maintain strict rigidity of all cardboard elements to prevent warping."
+    "fix": "Ensure dynamic camera movement by specifying 'camera orbits 60 degrees around the subject' and explicitly animate the character with 'penguin pulls the lever down'."
    }
   }
  ],
