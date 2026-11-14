@@ -1,0 +1,77 @@
+{
+ "version": 2,
+ "name": "major-binoculars",
+ "size": [
+  440,
+  1000
+ ],
+ "feetY": 996,
+ "head": {
+  "center": [
+   217.5,
+   269.0
+  ],
+  "diameter": 402.0
+ },
+ "skin": "#e3b69b",
+ "layers": {
+  "legL": {
+   "file": "legL.png",
+   "box": [
+    95,
+    743,
+    57,
+    254
+   ],
+   "pivot": [
+    144.0,
+    749.7
+   ]
+  },
+  "legR": {
+   "file": "legR.png",
+   "box": [
+    260,
+    737,
+    71,
+    246
+   ],
+   "pivot": [
+    267.4,
+    744.1
+   ]
+  },
+  "body": {
+   "file": "body.png",
+   "box": [
+    45,
+    439,
+    355,
+    315
+   ],
+   "pivot": [
+    205.7,
+    746.9
+   ]
+  },
+  "head": {
+   "file": "head.png",
+   "box": [
+    3,
+    3,
+    434,
+    465
+   ],
+   "pivot": [
+    180.5,
+    468.0
+   ]
+  }
+ },
+ "order": [
+  "legL",
+  "legR",
+  "body",
+  "head"
+ ]
+}

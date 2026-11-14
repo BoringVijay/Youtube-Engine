@@ -1,0 +1,77 @@
+{
+ "version": 2,
+ "name": "major-defeat",
+ "size": [
+  537,
+  1000
+ ],
+ "feetY": 995,
+ "head": {
+  "center": [
+   321.5,
+   191.0
+  ],
+  "diameter": 408.0
+ },
+ "skin": "#e3b69b",
+ "layers": {
+  "armL": {
+   "file": "armL.png",
+   "box": [
+    101,
+    410,
+    168,
+    587
+   ],
+   "pivot": [
+    157.6,
+    596.9
+   ]
+  },
+  "armR": {
+   "file": "armR.png",
+   "box": [
+    391,
+    403,
+    143,
+    579
+   ],
+   "pivot": [
+    438.1,
+    523.5
+   ]
+  },
+  "body": {
+   "file": "body.png",
+   "box": [
+    3,
+    321,
+    491,
+    623
+   ],
+   "pivot": [
+    259.4,
+    942.0
+   ]
+  },
+  "head": {
+   "file": "head.png",
+   "box": [
+    117,
+    3,
+    410,
+    348
+   ],
+   "pivot": [
+    312.0,
+    350.0
+   ]
+  }
+ },
+ "order": [
+  "armL",
+  "armR",
+  "body",
+  "head"
+ ]
+}

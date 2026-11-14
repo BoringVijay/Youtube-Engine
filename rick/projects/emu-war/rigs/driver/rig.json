@@ -1,0 +1,105 @@
+{
+ "version": 2,
+ "name": "driver",
+ "size": [
+  401,
+  1000
+ ],
+ "feetY": 996,
+ "head": {
+  "center": [
+   208.5,
+   278.0
+  ],
+  "diameter": 364.0
+ },
+ "skin": "#f8d3cb",
+ "layers": {
+  "legL": {
+   "file": "legL.png",
+   "box": [
+    105,
+    744,
+    58,
+    253
+   ],
+   "pivot": [
+    154.5,
+    750.6
+   ]
+  },
+  "legR": {
+   "file": "legR.png",
+   "box": [
+    271,
+    738,
+    71,
+    246
+   ],
+   "pivot": [
+    278.1,
+    744.7
+   ]
+  },
+  "armL": {
+   "file": "armL.png",
+   "box": [
+    12,
+    582,
+    36,
+    141
+   ],
+   "pivot": [
+    28.9,
+    597.8
+   ]
+  },
+  "armR": {
+   "file": "armR.png",
+   "box": [
+    350,
+    568,
+    48,
+    126
+   ],
+   "pivot": [
+    365.2,
+    583.7
+   ]
+  },
+  "body": {
+   "file": "body.png",
+   "box": [
+    3,
+    390,
+    384,
+    364
+   ],
+   "pivot": [
+    216.3,
+    747.7
+   ]
+  },
+  "head": {
+   "file": "head.png",
+   "box": [
+    13,
+    3,
+    379,
+    417
+   ],
+   "pivot": [
+    202.0,
+    419.0
+   ]
+  }
+ },
+ "order": [
+  "legL",
+  "legR",
+  "armL",
+  "armR",
+  "body",
+  "head"
+ ]
+}

@@ -1,0 +1,191 @@
+{
+ "version": 2,
+ "name": "farmer",
+ "size": [
+  546,
+  1000
+ ],
+ "feetY": 996,
+ "head": {
+  "center": [
+   251.5,
+   203.0
+  ],
+  "diameter": 476.0
+ },
+ "skin": "#f0b58e",
+ "layers": {
+  "armL": {
+   "file": "armL.png",
+   "box": [
+    83,
+    566,
+    37,
+    154
+   ],
+   "pivot": [
+    101.7,
+    581.4
+   ]
+  },
+  "armR": {
+   "file": "armR.png",
+   "box": [
+    420,
+    549,
+    53,
+    142
+   ],
+   "pivot": [
+    436.1,
+    564.8
+   ]
+  },
+  "body": {
+   "file": "body.png",
+   "box": [
+    72,
+    384,
+    386,
+    613
+   ],
+   "pivot": [
+    274.3,
+    956.0
+   ]
+  },
+  "head": {
+   "file": "head.png",
+   "box": [
+    3,
+    3,
+    540,
+    410
+   ],
+   "pivot": [
+    273.0,
+    413.0
+   ]
+  }
+ },
+ "order": [
+  "armL",
+  "armR",
+  "body",
+  "head"
+ ],
+ "eyes": [
+  {
+   "c": [
+    245.5,
+    269.5
+   ],
+   "r": 16.5
+  },
+  {
+   "c": [
+    389.0,
+    262.0
+   ],
+   "r": 17.0
+  }
+ ],
+ "faces": {
+  "shouting": {
+   "file": "faces/shouting.png",
+   "size": [
+    514,
+    420
+   ],
+   "pivot": [
+    236.5,
+    390.6
+   ],
+   "center": [
+    236.5,
+    193.0
+   ],
+   "diameter": 448.0
+  },
+  "hopeful": {
+   "file": "faces/hopeful.png",
+   "size": [
+    514,
+    420
+   ],
+   "pivot": [
+    236.5,
+    389.6
+   ],
+   "center": [
+    236.5,
+    192.0
+   ],
+   "diameter": 448.0
+  },
+  "shocked": {
+   "file": "faces/shocked.png",
+   "size": [
+    515,
+    420
+   ],
+   "pivot": [
+    238.0,
+    390.1
+   ],
+   "center": [
+    238.0,
+    192.0
+   ],
+   "diameter": 449.0
+  },
+  "laughing": {
+   "file": "faces/laughing.png",
+   "size": [
+    513,
+    420
+   ],
+   "pivot": [
+    236.0,
+    390.2
+   ],
+   "center": [
+    236.0,
+    193.0
+   ],
+   "diameter": 447.0
+  },
+  "deadpan": {
+   "file": "faces/deadpan.png",
+   "size": [
+    513,
+    420
+   ],
+   "pivot": [
+    235.5,
+    390.6
+   ],
+   "center": [
+    235.5,
+    193.0
+   ],
+   "diameter": 448.0
+  },
+  "neutral": {
+   "file": "faces/neutral.png",
+   "size": [
+    514,
+    420
+   ],
+   "pivot": [
+    236.5,
+    390.6
+   ],
+   "center": [
+    236.5,
+    193.0
+   ],
+   "diameter": 448.0
+  }
+ }
+}

@@ -1,0 +1,175 @@
+{
+ "version": 2,
+ "name": "emu",
+ "size": [
+  643,
+  1000
+ ],
+ "feetY": 995,
+ "head": {
+  "center": [
+   309.0,
+   455.0
+  ],
+  "diameter": 571.0
+ },
+ "skin": "#c8d3d9",
+ "layers": {
+  "armL": {
+   "file": "armL.png",
+   "box": [
+    212,
+    736,
+    63,
+    261
+   ],
+   "pivot": [
+    231.6,
+    755.3
+   ]
+  },
+  "armR": {
+   "file": "armR.png",
+   "box": [
+    318,
+    733,
+    53,
+    177
+   ],
+   "pivot": [
+    344.0,
+    816.0
+   ]
+  },
+  "body": {
+   "file": "body.png",
+   "box": [
+    206,
+    662,
+    241,
+    298
+   ],
+   "pivot": [
+    314.6,
+    957.0
+   ]
+  },
+  "head": {
+   "file": "head.png",
+   "box": [
+    3,
+    3,
+    637,
+    690
+   ],
+   "pivot": [
+    288.5,
+    691.0
+   ]
+  }
+ },
+ "order": [
+  "armL",
+  "armR",
+  "body",
+  "head"
+ ],
+ "faces": {
+  "smug": {
+   "file": "faces/smug.png",
+   "size": [
+    296,
+    420
+   ],
+   "pivot": [
+    147.5,
+    306.9
+   ],
+   "center": [
+    147.5,
+    187.0
+   ],
+   "diameter": 290.0
+  },
+  "startled": {
+   "file": "faces/startled.png",
+   "size": [
+    251,
+    420
+   ],
+   "pivot": [
+    125.5,
+    329.8
+   ],
+   "center": [
+    125.5,
+    229.0
+   ],
+   "diameter": 244.0
+  },
+  "scream": {
+   "file": "faces/scream.png",
+   "size": [
+    282,
+    419
+   ],
+   "pivot": [
+    124.0,
+    293.1
+   ],
+   "center": [
+    124.0,
+    196.0
+   ],
+   "diameter": 235.0
+  },
+  "bored": {
+   "file": "faces/bored.png",
+   "size": [
+    340,
+    420
+   ],
+   "pivot": [
+    150.0,
+    308.9
+   ],
+   "center": [
+    150.0,
+    187.0
+   ],
+   "diameter": 295.0
+  },
+  "sly": {
+   "file": "faces/sly.png",
+   "size": [
+    302,
+    420
+   ],
+   "pivot": [
+    150.5,
+    309.3
+   ],
+   "center": [
+    150.5,
+    187.0
+   ],
+   "diameter": 296.0
+  },
+  "neutral": {
+   "file": "faces/neutral.png",
+   "size": [
+    302,
+    420
+   ],
+   "pivot": [
+    150.5,
+    309.3
+   ],
+   "center": [
+    150.5,
+    187.0
+   ],
+   "diameter": 296.0
+  }
+ }
+}

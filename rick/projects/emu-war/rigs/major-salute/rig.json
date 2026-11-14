@@ -1,0 +1,91 @@
+{
+ "version": 2,
+ "name": "major-salute",
+ "size": [
+  438,
+  1000
+ ],
+ "feetY": 996,
+ "head": {
+  "center": [
+   212.5,
+   326.0
+  ],
+  "diameter": 418.0
+ },
+ "skin": "#e5b89c",
+ "layers": {
+  "legL": {
+   "file": "legL.png",
+   "box": [
+    143,
+    743,
+    57,
+    254
+   ],
+   "pivot": [
+    192.1,
+    749.7
+   ]
+  },
+  "legR": {
+   "file": "legR.png",
+   "box": [
+    309,
+    737,
+    70,
+    246
+   ],
+   "pivot": [
+    315.5,
+    744.1
+   ]
+  },
+  "armR": {
+   "file": "armR.png",
+   "box": [
+    330,
+    433,
+    106,
+    261
+   ],
+   "pivot": [
+    345.4,
+    450.9
+   ]
+  },
+  "body": {
+   "file": "body.png",
+   "box": [
+    94,
+    421,
+    296,
+    333
+   ],
+   "pivot": [
+    253.8,
+    746.9
+   ]
+  },
+  "head": {
+   "file": "head.png",
+   "box": [
+    3,
+    3,
+    427,
+    447
+   ],
+   "pivot": [
+    232.0,
+    450.0
+   ]
+  }
+ },
+ "order": [
+  "legL",
+  "legR",
+  "armR",
+  "body",
+  "head"
+ ]
+}

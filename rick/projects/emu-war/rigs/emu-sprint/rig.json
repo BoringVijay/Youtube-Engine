@@ -1,0 +1,63 @@
+{
+ "version": 2,
+ "name": "emu-sprint",
+ "size": [
+  1886,
+  1000
+ ],
+ "feetY": 992,
+ "head": {
+  "center": [
+   813.5,
+   326.0
+  ],
+  "diameter": 1296.0
+ },
+ "skin": "#cdd5dd",
+ "layers": {
+  "armL": {
+   "file": "armL.png",
+   "box": [
+    62,
+    86,
+    415,
+    470
+   ],
+   "pivot": [
+    235.0,
+    502.0
+   ]
+  },
+  "body": {
+   "file": "body.png",
+   "box": [
+    5,
+    677,
+    1349,
+    318
+   ],
+   "pivot": [
+    711.7,
+    975.0
+   ]
+  },
+  "head": {
+   "file": "head.png",
+   "box": [
+    84,
+    5,
+    1797,
+    702
+   ],
+   "pivot": [
+    616.5,
+    706.0
+   ]
+  }
+ },
+ "order": [
+  "armL",
+  "body",
+  "head"
+ ]
+}

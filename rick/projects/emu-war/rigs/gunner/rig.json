@@ -1,0 +1,105 @@
+{
+ "version": 2,
+ "name": "gunner",
+ "size": [
+  465,
+  1000
+ ],
+ "feetY": 996,
+ "head": {
+  "center": [
+   228.0,
+   252.0
+  ],
+  "diameter": 451.0
+ },
+ "skin": "#d7b289",
+ "layers": {
+  "legL": {
+   "file": "legL.png",
+   "box": [
+    165,
+    741,
+    58,
+    257
+   ],
+   "pivot": [
+    214.9,
+    747.7
+   ]
+  },
+  "legR": {
+   "file": "legR.png",
+   "box": [
+    333,
+    734,
+    71,
+    250
+   ],
+   "pivot": [
+    340.1,
+    741.7
+   ]
+  },
+  "armL": {
+   "file": "armL.png",
+   "box": [
+    70,
+    447,
+    74,
+    272
+   ],
+   "pivot": [
+    127.1,
+    463.2
+   ]
+  },
+  "armR": {
+   "file": "armR.png",
+   "box": [
+    368,
+    427,
+    95,
+    263
+   ],
+   "pivot": [
+    384.3,
+    469.0
+   ]
+  },
+  "body": {
+   "file": "body.png",
+   "box": [
+    115,
+    384,
+    304,
+    367
+   ],
+   "pivot": [
+    277.5,
+    744.7
+   ]
+  },
+  "head": {
+   "file": "head.png",
+   "box": [
+    2,
+    3,
+    453,
+    410
+   ],
+   "pivot": [
+    260.5,
+    413.0
+   ]
+  }
+ },
+ "order": [
+  "legL",
+  "legR",
+  "armL",
+  "armR",
+  "body",
+  "head"
+ ]
+}

@@ -1,0 +1,219 @@
+{
+ "version": 2,
+ "name": "minister",
+ "size": [
+  422,
+  1000
+ ],
+ "feetY": 996,
+ "head": {
+  "center": [
+   215.0,
+   223.0
+  ],
+  "diameter": 393.0
+ },
+ "skin": "#e4b49c",
+ "layers": {
+  "legL": {
+   "file": "legL.png",
+   "box": [
+    103,
+    723,
+    62,
+    274
+   ],
+   "pivot": [
+    156.1,
+    730.7
+   ]
+  },
+  "legR": {
+   "file": "legR.png",
+   "box": [
+    282,
+    717,
+    76,
+    265
+   ],
+   "pivot": [
+    289.5,
+    724.5
+   ]
+  },
+  "armL": {
+   "file": "armL.png",
+   "box": [
+    3,
+    413,
+    77,
+    288
+   ],
+   "pivot": [
+    62.0,
+    430.0
+   ]
+  },
+  "armR": {
+   "file": "armR.png",
+   "box": [
+    307,
+    383,
+    112,
+    287
+   ],
+   "pivot": [
+    324.2,
+    400.2
+   ]
+  },
+  "body": {
+   "file": "body.png",
+   "box": [
+    49,
+    346,
+    320,
+    389
+   ],
+   "pivot": [
+    222.8,
+    727.6
+   ]
+  },
+  "head": {
+   "file": "head.png",
+   "box": [
+    14,
+    3,
+    399,
+    372
+   ],
+   "pivot": [
+    204.5,
+    375.0
+   ]
+  }
+ },
+ "order": [
+  "legL",
+  "legR",
+  "armL",
+  "armR",
+  "body",
+  "head"
+ ],
+ "eyes": [
+  {
+   "c": [
+    176.0,
+    219.5
+   ],
+   "r": 17.5
+  },
+  {
+   "c": [
+    329.5,
+    211.5
+   ],
+   "r": 17.5
+  }
+ ],
+ "faces": {
+  "delighted": {
+   "file": "faces/delighted.png",
+   "size": [
+    423,
+    420
+   ],
+   "pivot": [
+    213.5,
+    384.3
+   ],
+   "center": [
+    213.5,
+    225.0
+   ],
+   "diameter": 412.0
+  },
+  "shocked": {
+   "file": "faces/shocked.png",
+   "size": [
+    423,
+    420
+   ],
+   "pivot": [
+    213.5,
+    387.3
+   ],
+   "center": [
+    213.5,
+    228.0
+   ],
+   "diameter": 412.0
+  },
+  "confused": {
+   "file": "faces/confused.png",
+   "size": [
+    423,
+    420
+   ],
+   "pivot": [
+    213.0,
+    391.7
+   ],
+   "center": [
+    213.0,
+    232.0
+   ],
+   "diameter": 413.0
+  },
+  "nervous": {
+   "file": "faces/nervous.png",
+   "size": [
+    421,
+    420
+   ],
+   "pivot": [
+    212.5,
+    387.6
+   ],
+   "center": [
+    212.5,
+    229.0
+   ],
+   "diameter": 410.0
+  },
+  "stern": {
+   "file": "faces/stern.png",
+   "size": [
+    420,
+    420
+   ],
+   "pivot": [
+    212.0,
+    385.2
+   ],
+   "center": [
+    212.0,
+    227.0
+   ],
+   "diameter": 409.0
+  },
+  "neutral": {
+   "file": "faces/neutral.png",
+   "size": [
+    420,
+    420
+   ],
+   "pivot": [
+    212.0,
+    385.2
+   ],
+   "center": [
+    212.0,
+    227.0
+   ],
+   "diameter": 409.0
+  }
+ }
+}
