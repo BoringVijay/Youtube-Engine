@@ -1,5 +1,5 @@
 {
- "step": "1c: v3 masters (major v3, emu v2, farmer, minister) in the house style",
+ "step": "2: fixes, emotion sheets, poses, soldiers, textures, backdrops, aerial, cards, props",
  "tasks": [
   {
    "type": "image",
@@ -106,6 +106,289 @@
     "puppets/major/source-v3.png"
    ],
    "prompt": "Exact same art style as the reference images (same character design language, same line weight, same shading). Character asset: ONE character, full body, standing, front view, centered, the whole figure visible from the top of the head to the tips of the legs, on a solid uniform light warm-grey backdrop, sharp focus, no environment, no floor shadow, no text. Proportions exactly like reference image 1: a big round head about as wide as the torso, tiny dot eyes with a small white highlight, thick expressive brows, a small simple line mouth, no nose, no ears; arms are thin solid navy stick lines ending in small round dot hands, held slightly away from the torso; legs are two thin solid navy stick lines with no feet, slightly apart, coming straight out of the bottom of a rounded torso. Premium finish: confident deep navy-plum outline #1F1A2E with rounded ends, flat natural colours with one soft cel-shadow tone, a soft warm rim light on one edge, a very fine paper grain, every detail deliberate. The character: a 1932 Australian federal minister in a government office, an older man with a natural light skin tone and neat grey side-parted hair, round wire spectacles, a dark charcoal three-piece suit with a white wing collar and a dark tie, a gold watch chain across the waistcoat, a composed bureaucrat's half smile."
+  },
+  {
+   "type": "image",
+   "out": "puppets/farmer/source-v2.png",
+   "aspect": "2:3",
+   "size": "2K",
+   "refs": [
+    "puppets/farmer/source.png",
+    "puppets/major/source-v3.png"
+   ],
+   "prompt": "Exact same art style as the reference images (same character design language, same line weight, same shading). The exact same farmer as reference image 1 (same hat, face, stubble, shirt, braces, tobacco tin, skin tone and expression), but drawn with the body proportions of reference image 2: a rounded torso that ends at the waist, thin solid navy stick arms ending in small round dot hands held slightly away from the body, and two thin solid navy stick legs with no trousers and no feet, slightly apart, coming straight out of the bottom of the torso. Full body, front view, centered, on a solid uniform light warm-grey backdrop, no floor shadow, no environment, no text, no extra characters."
+  },
+  {
+   "type": "image",
+   "out": "puppets/minister/source-v2.png",
+   "aspect": "2:3",
+   "size": "2K",
+   "refs": [
+    "puppets/minister/source.png",
+    "puppets/major/source-v3.png"
+   ],
+   "prompt": "Exact same art style as the reference images (same character design language, same line weight, same shading). The exact same minister as reference image 1 (same grey hair, round wire spectacles, suit, wing collar, watch chain, skin tone and half smile), but with NO nose: the face is only dot eyes behind the spectacles, brows, a few soft age lines and a small line mouth, like reference image 2. Stick arms and stick legs with no feet. Full body, front view, centered, on a solid uniform light warm-grey backdrop, no floor shadow, no environment, no text, no extra characters."
+  },
+  {
+   "type": "image",
+   "out": "puppets/major/emotions.png",
+   "aspect": "3:2",
+   "size": "2K",
+   "refs": [
+    "puppets/major/source-v3.png"
+   ],
+   "prompt": "Emotion sheet for the exact same character as the reference image: SIX separate heads of this character (head with its hat only, cut off at the neck, no body, no shoulders), arranged in a clean grid of 3 columns and 2 rows with wide empty gaps between the heads so no two heads touch. Exact same art style, same line weight, same colours, same skin tone, same head size and hat in every cell, front view. Expressions, left to right, top row then bottom row: 1) proud smug grin, brows raised; 2) shocked, huge round eyes, mouth a small O; 3) shouting an order, angry slanted brows, wide open mouth; 4) exhausted, droopy half-closed eyes, a sweat drop; 5) confused, one eyebrow up, mouth pulled to one side; 6) neutral proud composed look. Solid uniform light warm-grey backdrop, no shadows on the backdrop, no text, no labels, no numbers, no frames, no grid lines."
+  },
+  {
+   "type": "image",
+   "out": "puppets/emu/emotions.png",
+   "aspect": "3:2",
+   "size": "2K",
+   "refs": [
+    "puppets/emu/source-v2.png"
+   ],
+   "prompt": "Emotion sheet for the exact same character as the reference image: SIX separate heads of this character (head and the top of the neck only, no body), arranged in a clean grid of 3 columns and 2 rows with wide empty gaps between the heads so no two heads touch. Exact same art style, same line weight, same colours, same skin tone, same head size and hat in every cell, front view. Expressions, left to right, top row then bottom row: 1) smug, half-closed eyes, tiny smirk; 2) startled, eyes wide, head feathers standing up; 3) running scream, beak wide open; 4) bored, chewing a stalk of wheat; 5) mischievous squint, one eye narrowed; 6) neutral unbothered look. Solid uniform light warm-grey backdrop, no shadows on the backdrop, no text, no labels, no numbers, no frames, no grid lines."
+  },
+  {
+   "type": "image",
+   "out": "puppets/farmer/emotions.png",
+   "aspect": "3:2",
+   "size": "2K",
+   "refs": [
+    "puppets/farmer/source-v2.png"
+   ],
+   "prompt": "Emotion sheet for the exact same character as the reference image: SIX separate heads of this character (head with its hat only, cut off at the neck, no body, no shoulders), arranged in a clean grid of 3 columns and 2 rows with wide empty gaps between the heads so no two heads touch. Exact same art style, same line weight, same colours, same skin tone, same head size and hat in every cell, front view. Expressions, left to right, top row then bottom row: 1) furious shouting, fist-shaking anger in the brows; 2) hopeful, brows lifted, small smile; 3) shocked, huge round eyes; 4) laughing, eyes squeezed shut; 5) deadpan, flat unimpressed stare; 6) neutral fed-up frown. Solid uniform light warm-grey backdrop, no shadows on the backdrop, no text, no labels, no numbers, no frames, no grid lines."
+  },
+  {
+   "type": "image",
+   "out": "puppets/minister/emotions.png",
+   "aspect": "3:2",
+   "size": "2K",
+   "refs": [
+    "puppets/minister/source-v2.png"
+   ],
+   "prompt": "Emotion sheet for the exact same character as the reference image: SIX separate heads of this character (head only with its hair and spectacles, cut off at the neck, no body), arranged in a clean grid of 3 columns and 2 rows with wide empty gaps between the heads so no two heads touch. Exact same art style, same line weight, same colours, same skin tone, same head size and hat in every cell, front view. Expressions, left to right, top row then bottom row: 1) delighted, big pleased smile; 2) shocked, eyes wide behind the spectacles, mouth an O; 3) confused, one brow up, peering over the spectacles; 4) nervous, tight smile, a sweat drop; 5) stern, flat mouth, brows down; 6) neutral composed bureaucrat half smile. Solid uniform light warm-grey backdrop, no shadows on the backdrop, no text, no labels, no numbers, no frames, no grid lines."
+  },
+  {
+   "type": "image",
+   "out": "puppets/major/pose-binoculars.png",
+   "aspect": "2:3",
+   "size": "2K",
+   "refs": [
+    "puppets/major/source-v3.png"
+   ],
+   "prompt": "Exact same art style as the reference images (same character design language, same line weight, same shading). The exact same character as the reference image, full body, front or three-quarter view, standing proudly, holding a pair of brown field binoculars up to his eyes with both stick arms. Every other detail identical to the reference: head size, skin tone, costume, colours, outline, stick arms and stick legs with no feet. on a solid uniform light warm-grey backdrop, no floor shadow, no environment, no text, no extra characters."
+  },
+  {
+   "type": "image",
+   "out": "puppets/major/pose-salute.png",
+   "aspect": "2:3",
+   "size": "2K",
+   "refs": [
+    "puppets/major/source-v3.png"
+   ],
+   "prompt": "Exact same art style as the reference images (same character design language, same line weight, same shading). The exact same character as the reference image, full body, front or three-quarter view, standing to attention and saluting crisply with the right stick arm, the other arm straight at his side. Every other detail identical to the reference: head size, skin tone, costume, colours, outline, stick arms and stick legs with no feet. on a solid uniform light warm-grey backdrop, no floor shadow, no environment, no text, no extra characters."
+  },
+  {
+   "type": "image",
+   "out": "puppets/major/pose-defeat.png",
+   "aspect": "2:3",
+   "size": "2K",
+   "refs": [
+    "puppets/major/source-v3.png"
+   ],
+   "prompt": "Exact same art style as the reference images (same character design language, same line weight, same shading). The exact same character as the reference image, full body, front or three-quarter view, slumped and defeated, shoulders down, holding his peaked cap in one hand at his side, bare round head, exhausted droopy eyes. Every other detail identical to the reference: head size, skin tone, costume, colours, outline, stick arms and stick legs with no feet. on a solid uniform light warm-grey backdrop, no floor shadow, no environment, no text, no extra characters."
+  },
+  {
+   "type": "image",
+   "out": "puppets/emu/pose-sprint.png",
+   "aspect": "3:2",
+   "size": "2K",
+   "refs": [
+    "puppets/emu/source-v2.png"
+   ],
+   "prompt": "Exact same art style as the reference images (same character design language, same line weight, same shading). The exact same emu as the reference image, side view, sprinting at full speed to the right: neck stretched forward, both long legs in a wide running stride, feathers streaming back, eyes wide with glee. Every other detail identical to the reference. on a solid uniform light warm-grey backdrop, no floor shadow, no environment, no text, no extra characters."
+  },
+  {
+   "type": "image",
+   "out": "puppets/minister/pose-phone.png",
+   "aspect": "2:3",
+   "size": "2K",
+   "refs": [
+    "puppets/minister/source-v2.png"
+   ],
+   "prompt": "Exact same art style as the reference images (same character design language, same line weight, same shading). The exact same character as the reference image, full body, front or three-quarter view, holding a black 1930s candlestick telephone: the base in one hand and the earpiece held to his head with the other stick arm, listening. Every other detail identical to the reference: head size, skin tone, costume, colours, outline, stick arms and stick legs with no feet. on a solid uniform light warm-grey backdrop, no floor shadow, no environment, no text, no extra characters."
+  },
+  {
+   "type": "image",
+   "out": "puppets/farmer/pose-point.png",
+   "aspect": "2:3",
+   "size": "2K",
+   "refs": [
+    "puppets/farmer/source-v2.png"
+   ],
+   "prompt": "Exact same art style as the reference images (same character design language, same line weight, same shading). The exact same character as the reference image, full body, front or three-quarter view, angrily pointing off to the side with one straight stick arm, the other hand on his hip. Every other detail identical to the reference: head size, skin tone, costume, colours, outline, stick arms and stick legs with no feet. on a solid uniform light warm-grey backdrop, no floor shadow, no environment, no text, no extra characters."
+  },
+  {
+   "type": "image",
+   "out": "puppets/gunner/source.png",
+   "aspect": "2:3",
+   "size": "2K",
+   "refs": [
+    "puppets/major/source-v3.png"
+   ],
+   "prompt": "Exact same art style as the reference images (same character design language, same line weight, same shading). Same body proportions and design language as the reference image: a young 1932 Australian artillery gunner, private, natural light-olive skin tone, a khaki slouch hat with the left brim pinned up, a plain khaki tunic and webbing belt, eager nervous expression. Full body, front view, centered, stick arms and stick legs with no feet, on a solid uniform light warm-grey backdrop, no floor shadow, no environment, no text, no extra characters."
+  },
+  {
+   "type": "image",
+   "out": "puppets/driver/source.png",
+   "aspect": "2:3",
+   "size": "2K",
+   "refs": [
+    "puppets/major/source-v3.png"
+   ],
+   "prompt": "Exact same art style as the reference images (same character design language, same line weight, same shading). Same body proportions and design language as the reference image: a 1932 Australian army truck driver, corporal, natural medium-brown skin tone, a khaki forage cap, khaki tunic with sleeves rolled, driving goggles pushed up on the cap, bored unimpressed expression. Full body, front view, centered, stick arms and stick legs with no feet, on a solid uniform light warm-grey backdrop, no floor shadow, no environment, no text, no extra characters."
+  },
+  {
+   "type": "image",
+   "out": "tex/dirt.png",
+   "aspect": "1:1",
+   "size": "2K",
+   "refs": [
+    "/rick/projects/emu-war/style/style-frame-v2.png"
+   ],
+   "prompt": "Match the painting style, palette and light of the reference film still exactly: hand-painted comic illustration, natural warm colours, soft late-afternoon sun. Seamless tileable texture, flat straight-on view, hand-painted comic style: dry cracked red-brown Western Australian dirt with small pebbles and a few sparse dry straw tufts, flat even lighting, no perspective, no cast shadows, no vignette, no objects, the pattern fills the whole frame edge to edge."
+  },
+  {
+   "type": "image",
+   "out": "tex/iron.png",
+   "aspect": "1:1",
+   "size": "2K",
+   "refs": [
+    "/rick/projects/emu-war/style/style-frame-v2.png"
+   ],
+   "prompt": "Match the painting style, palette and light of the reference film still exactly: hand-painted comic illustration, natural warm colours, soft late-afternoon sun. Seamless tileable texture, flat straight-on view, hand-painted comic style: weathered grey corrugated iron sheets with soft rust streaks running down, flat even lighting, no perspective, no cast shadows, no vignette, no objects, the pattern fills the whole frame edge to edge."
+  },
+  {
+   "type": "image",
+   "out": "tex/wood.png",
+   "aspect": "1:1",
+   "size": "2K",
+   "refs": [
+    "/rick/projects/emu-war/style/style-frame-v2.png"
+   ],
+   "prompt": "Match the painting style, palette and light of the reference film still exactly: hand-painted comic illustration, natural warm colours, soft late-afternoon sun. Seamless tileable texture, flat straight-on view, hand-painted comic style: sun-bleached grey weathered timber planks with cracks and nail heads, flat even lighting, no perspective, no cast shadows, no vignette, no objects, the pattern fills the whole frame edge to edge."
+  },
+  {
+   "type": "image",
+   "out": "tex/wheat.png",
+   "aspect": "1:1",
+   "size": "2K",
+   "refs": [
+    "/rick/projects/emu-war/style/style-frame-v2.png"
+   ],
+   "prompt": "Match the painting style, palette and light of the reference film still exactly: hand-painted comic illustration, natural warm colours, soft late-afternoon sun. Seamless tileable texture, flat straight-on view, hand-painted comic style: dense golden ripe wheat stalks seen from above, painted in soft strokes, flat even lighting, no perspective, no cast shadows, no vignette, no objects, the pattern fills the whole frame edge to edge."
+  },
+  {
+   "type": "image",
+   "out": "tex/mud.png",
+   "aspect": "1:1",
+   "size": "2K",
+   "refs": [
+    "/rick/projects/emu-war/style/style-frame-v2.png"
+   ],
+   "prompt": "Match the painting style, palette and light of the reference film still exactly: hand-painted comic illustration, natural warm colours, soft late-afternoon sun. Seamless tileable texture, flat straight-on view, hand-painted comic style: dried muddy clay at the edge of a farm dam, pale ochre with fine cracks and hoof prints, flat even lighting, no perspective, no cast shadows, no vignette, no objects, the pattern fills the whole frame edge to edge."
+  },
+  {
+   "type": "image",
+   "out": "tex/panelling.png",
+   "aspect": "1:1",
+   "size": "2K",
+   "refs": [
+    "/rick/projects/emu-war/style/style-frame-v2.png"
+   ],
+   "prompt": "Match the painting style, palette and light of the reference film still exactly: hand-painted comic illustration, natural warm colours, soft late-afternoon sun. Seamless tileable texture, flat straight-on view, hand-painted comic style: dark polished 1930s government office wood panelling with vertical boards and a subtle grain, flat even lighting, no perspective, no cast shadows, no vignette, no objects, the pattern fills the whole frame edge to edge."
+  },
+  {
+   "type": "image",
+   "out": "bg/day.png",
+   "aspect": "21:9",
+   "size": "2K",
+   "refs": [
+    "/rick/projects/emu-war/style/style-frame-v2.png"
+   ],
+   "prompt": "Match the painting style, palette and light of the reference film still exactly: hand-painted comic illustration, natural warm colours, soft late-afternoon sun. Flat 2D painted backdrop for a cartoon, wide panorama: a warm late-afternoon sky with soft high clouds, one small cloud on the right faintly shaped like a penguin seen from the side, and along a low horizon in the bottom quarter golden wheat fields, a distant windpump and a line of dusty gum trees, simple flat shapes, gentle atmospheric haze, no people, no animals, no text, nothing in the foreground."
+  },
+  {
+   "type": "image",
+   "out": "bg/dusk.png",
+   "aspect": "21:9",
+   "size": "2K",
+   "refs": [
+    "bg/day.png"
+   ],
+   "prompt": "The exact same painted panorama as the reference image, same composition, horizon, trees, windpump and clouds, but at deep dusk: the sky a deep blue fading to dusty violet near the horizon, the last thin line of orange light behind the gum trees, the land dark and cool. No people, no text."
+  },
+  {
+   "type": "image",
+   "out": "bg/aerial.png",
+   "aspect": "9:16",
+   "size": "2K",
+   "refs": [
+    "/rick/projects/emu-war/style/style-frame-v2.png"
+   ],
+   "prompt": "Match the painting style, palette and light of the reference film still exactly: hand-painted comic illustration, natural warm colours, soft late-afternoon sun. Flat 2D painted aerial view looking straight down from high above the Western Australian wheat belt in 1932: golden wheat paddocks in a patchwork with dirt tracks and fence lines, a small farmhouse with a corrugated roof, and a long winding line of tiny emus crossing the paddocks, soft wisps of cloud in two corners, warm sunlight with cool tinted shadows, no text."
+  },
+  {
+   "type": "image",
+   "out": "cards/newspaper.png",
+   "aspect": "2:3",
+   "size": "2K",
+   "refs": [
+    "/rick/projects/emu-war/style/style-frame-v2.png"
+   ],
+   "prompt": "Match the painting style, palette and light of the reference film still exactly: hand-painted comic illustration, natural warm colours, soft late-afternoon sun. Flat front view of the front page of a 1932 Western Australian newspaper, slightly yellowed paper, period typography, a bold headline that reads exactly: \"FARMERS DEMAND MACHINE GUNS\", a smaller line below that reads exactly: \"EMUS ATTACK WHEAT CROPS\", a small woodcut-style illustration of emus in a wheat field, the rest filled with unreadable small grey column lines. The page fills the frame, flat even lighting, no perspective, no people."
+  },
+  {
+   "type": "image",
+   "out": "cards/crate.png",
+   "aspect": "3:2",
+   "size": "2K",
+   "refs": [
+    "/rick/projects/emu-war/style/style-frame-v2.png",
+    "/rick/projects/emu-war/brand/brand-family-v2.png"
+   ],
+   "prompt": "Match the painting style, palette and light of the reference film still exactly: hand-painted comic illustration, natural warm colours, soft late-afternoon sun. Flat front view of the side of a 1930s wooden army ammunition crate, rough pine boards with rope handles, faded black stencil lettering that reads exactly: \"EMPEROR MUNITIONS CO.\" above a small stencilled emblem of an elegant emperor penguin in profile like the crest in the second reference image, and below it a smaller stencil line: \".303 BALL\". Weathered, dusty, flat even lighting, the crate side fills the frame, no perspective."
+  },
+  {
+   "type": "image",
+   "out": "props/lewis-gun.png",
+   "aspect": "1:1",
+   "size": "2K",
+   "refs": [
+    "/rick/projects/emu-war/style/style-frame-v2.png"
+   ],
+   "prompt": "One stylized cartoon prop for a 3D animated film, in the same hand-painted comic style as the reference film still: a 1930s Lewis light machine gun on a low field tripod, with its distinctive thick ribbed cylindrical cooling shroud around the barrel, a flat round drum magazine on top and a wooden stock, dark gunmetal and worn wood. Clean smooth shapes with a deep navy-plum outline, soft even studio lighting, three-quarter view from slightly above, the whole object visible and centered with empty space around it, on a plain uniform light grey backdrop. No ground shadow, no people, no text, no other objects."
+  },
+  {
+   "type": "image",
+   "out": "props/truck.png",
+   "aspect": "1:1",
+   "size": "2K",
+   "refs": [
+    "/rick/projects/emu-war/style/style-frame-v2.png"
+   ],
+   "prompt": "One stylized cartoon prop for a 3D animated film, in the same hand-painted comic style as the reference film still: a 1930s Australian army light truck, khaki paint, rounded fenders, open cab with a canvas roof, a canvas-covered cargo bed, spoked wheels, dusty, with a small round penguin-crest badge on the radiator grille. Clean smooth shapes with a deep navy-plum outline, soft even studio lighting, three-quarter view from slightly above, the whole object visible and centered with empty space around it, on a plain uniform light grey backdrop. No ground shadow, no people, no text, no other objects."
+  },
+  {
+   "type": "image",
+   "out": "props/desk.png",
+   "aspect": "1:1",
+   "size": "2K",
+   "refs": [
+    "/rick/projects/emu-war/style/style-frame-v2.png"
+   ],
+   "prompt": "One stylized cartoon prop for a 3D animated film, in the same hand-painted comic style as the reference film still: a 1930s government office desk in dark polished wood with a green glass banker's lamp, a black candlestick telephone, a leather blotter and two neat stacks of papers. Clean smooth shapes with a deep navy-plum outline, soft even studio lighting, three-quarter view from slightly above, the whole object visible and centered with empty space around it, on a plain uniform light grey backdrop. No ground shadow, no people, no text, no other objects."
   }
  ]
 }
