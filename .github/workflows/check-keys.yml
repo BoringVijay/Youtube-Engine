@@ -40,6 +40,7 @@ jobs:
           curl -s -H "Authorization: Bearer $at" \
             "https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&mine=true" \
             | python3 -c 'import sys,json; c=json.load(sys.stdin)["items"][0]; s=c["statistics"]; print("Channel:", c["snippet"]["title"], "| subs:", s.get("subscriberCount"), "| videos:", s["videoCount"], "| views:", s["viewCount"])'
+      - uses: actions/checkout@v4
       - name: Google Cloud key (free check, nothing billed)
         env:
           GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
