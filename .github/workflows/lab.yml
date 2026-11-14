@@ -23,6 +23,7 @@ jobs:
       - name: Run lab
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          FAL_KEY: ${{ secrets.FAL_KEY }}
           GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
         run: |
           pip install -q cryptography 2>/dev/null || true

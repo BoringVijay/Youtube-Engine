@@ -190,6 +190,9 @@ def first_inline(out):
 
 
 def veo_any(prompt, image_b64=None, aspect="16:9", seconds=8, audio=True):
+    _prov = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "config", "providers.json")
+    if os.path.exists(_prov) and json.load(open(_prov)).get("video") == "paused":
+        raise RuntimeError("video generation is paused in config/providers.json (Google credits are kept for Gemini text)")
     order = CANDIDATES["veo"]
     if "veo" in _chosen:
         order = [_chosen["veo"]] + [m for m in order if m != _chosen["veo"]]

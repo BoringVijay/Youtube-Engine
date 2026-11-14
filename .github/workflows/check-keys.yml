@@ -1,5 +1,5 @@
 name: Check keys
-# Run from the Actions tab > Check keys > Run workflow. Confirms Gemini and YouTube access work.
+# Run from the Actions tab > Check keys > Run workflow. Confirms Gemini, fal and YouTube access work (nothing is generated or billed).
 on: workflow_dispatch
 
 jobs:
@@ -15,6 +15,17 @@ jobs:
           echo "HTTP $code"
           if [ "$code" != "200" ]; then head -c 400 models.json; exit 1; fi
           echo "TTS models available:"; grep -o '"name": "models/[^"]*tts[^"]*"' models.json || echo "(none listed)"
+
+      - name: fal key
+        env:
+          FAL_KEY: ${{ secrets.FAL_KEY }}
+        run: |
+          if [ -z "$FAL_KEY" ]; then echo "FAL_KEY secret is missing. Create one at https://fal.ai/dashboard/keys"; exit 1; fi
+          code=$(curl -s -o fal.json -w '%{http_code}' -H "Authorization: Key $FAL_KEY" \
+            "https://api.fal.ai/v1/models/pricing?endpoint_id=fal-ai/nano-banana-pro")
+          echo "HTTP $code"
+          if [ "$code" != "200" ]; then head -c 400 fal.json; exit 1; fi
+          echo "Nano Banana Pro price:"; head -c 400 fal.json; echo
 
       - name: YouTube login
         env:

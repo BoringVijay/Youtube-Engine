@@ -33,7 +33,34 @@ def mime_of(path):
     return "image/jpeg" if head[:2] == b"\xff\xd8" else "image/png"
 
 
+PROVIDERS = json.load(open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "config", "providers.json")))
+
+
+def _image_fal(prompt, out_png, refs, aspect, job, size):
+    """Same contract as image(), through fal (Nano Banana Pro by default; /edit when there are references)."""
+    import fal
+    kind = "fal_image_4k" if size == "4K" else "fal_image"
+    if job:
+        budget.check(job, kind)
+    refs = [r for r in refs if r and os.path.exists(r)]
+    args = {"prompt": prompt, "aspect_ratio": aspect, "resolution": size, "num_images": 1, "output_format": "png"}
+    endpoint = PROVIDERS["image_model"]
+    if refs:
+        endpoint = PROVIDERS["image_edit_model"]
+        args["image_urls"] = [fal.data_uri(r) for r in refs]
+    out = fal.run(endpoint, args, timeout=300, tag=f"{job}:{os.path.basename(out_png)}" if job else None)
+    tmp = out_png + ".raw"
+    fal.download(out["images"][0]["url"], tmp)
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", tmp, out_png], check=True)
+    os.remove(tmp)
+    budget.log(job, kind, 1, "fal")
+    image.last_model = endpoint
+    return out_png
+
+
 def image(prompt, out_png, refs=(), aspect="16:9", job=None, size="2K"):
+    if PROVIDERS.get("image") == "fal":
+        return _image_fal(prompt, out_png, refs, aspect, job, size)
     parts = [{"inlineData": {"mimeType": mime_of(r), "data": b64(r)}} for r in refs if r and os.path.exists(r)]
     parts.append({"text": prompt})
     cfg = {"responseModalities": ["IMAGE"], "imageConfig": {"aspectRatio": aspect, "imageSize": size}}

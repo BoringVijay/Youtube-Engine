@@ -752,6 +752,11 @@ def advance_short(st):
             raise Cancelled()
     if st["stage"] not in ("queued", "directing", "voicing", "art", "motion", "final_render", "metadata"):
         return False
+    if artmod.PROVIDERS.get("video") == "paused" and st["stage"] != "final_render" and st["stage"] != "metadata":
+        msg = "Waiting: video generation is paused (Google credits kept for Gemini). Set video in config/providers.json to resume."
+        if st.get("step") != msg:
+            set_stage(st, st["stage"], msg)
+        return False
     words, total = stage_voice(st)  # voice first, so the director plans to the real length
     check()
     p = jfile(jid, "direction.json")
