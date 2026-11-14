@@ -1679,12 +1679,13 @@
   {
    "anchor": [
     70,
-    0.9,
+    1.0,
     -8
    ],
-   "distance": 6.5,
+   "distance": 8,
    "yaw": 0,
    "pitch": 3,
+   "frameY": -0.12,
    "zoom": 1,
    "actions": [
     {
@@ -1698,7 +1699,6 @@
      "over": 1.5
     }
    ],
-   "frameY": 0.14,
    "start": "say:fifty kilometres"
   },
   {

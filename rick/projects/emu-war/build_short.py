@@ -130,7 +130,7 @@ shot("Six days in", "A", target="major", headWidth=0.32, yaw=-16, zoom=-2, actio
 shot("Nobody agrees", "A", anchor=P("A", 6.05, 1.55, 1.45), distance=3.6, yaw=0, pitch=4,
      actions=[{"at": 0.0, "who": "gunner", "shake": 0.4}, {"at": 0.1, "who": "driver", "shake": 0.4}])
 shot("You see", "B", target="emu-b1", headWidth=0.22, yaw=12)
-shot("fifty kilometres", "B", anchor=P("B", 0, 0.9, -8), distance=6.5, yaw=0, pitch=3, zoom=1,
+shot("fifty kilometres", "B", anchor=P("B", 0, 1.0, -8), distance=8, yaw=0, pitch=3, frameY=-0.12, zoom=1,
      actions=[{"at": 0.15, "who": "emu-sprint", "to": P("B", 9, 0, -8), "over": 1.5}])
 shot("And when one gets hit", "B", target="emu-b3", headWidth=0.4, yaw=-10, zoom=5,
      actions=[face("emu-b3", "scream", hop=0.35, shake=0.4)])
