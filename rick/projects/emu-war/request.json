@@ -1,5 +1,5 @@
 {
- "step": "5: stop-frame check (3 stills per shot) and a half-resolution preview render",
+ "step": "5b: stills check for scene v2 (cuts between locations, tighter framing, set fixes)",
  "tasks": [
   {
    "type": "image",
@@ -655,6 +655,13 @@
    "type": "render",
    "out": "renders/preview-v1.mp4",
    "short": "short.json",
+   "scale": 0.5
+  },
+  {
+   "type": "render",
+   "out": "renders/check-v2.mp4",
+   "short": "short.json",
+   "stills": true,
    "scale": 0.5
   }
  ]
