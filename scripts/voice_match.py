@@ -1,0 +1,89 @@
+#!/usr/bin/env python3
+"""Find the ElevenLabs voice closest to the reference narrator (study only; reference audio never leaves the runner).
+
+1. yt-dlp pulls the audio of a few reference Shorts; we cut clean 15 s windows.
+2. Each candidate voice reads the same original line on fal (v3 and multilingual v2).
+3. Score = speaker-embedding similarity (resemblyzer) + pitch match (librosa pyin) + pace.
+Writes rick/voice-match/results.json and the candidate mp3s (ours, not the reference's).
+"""
+import json, os, subprocess, sys, glob
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import fal, budget
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+OUT = os.path.join(ROOT, "rick", "voice-match")
+TMP = "/tmp/vm"
+os.makedirs(OUT, exist_ok=True); os.makedirs(TMP, exist_ok=True)
+REFS = ["7xS87iActkU", "Mz72MuPgnGY", "VS1Z_Q-Klt8", "0m6G8pDtzNs"]
+TEXT = ("He shaved the walls of his bedroom every morning, because the walls were trying to eat him. "
+        "You see, it's 1960, and Hank lives thirty feet under the ice in Greenland.")
+VOICES = ["Brian", "Chris", "Eric", "Roger", "George", "Callum", "Liam", "Will", "Daniel", "Bill", "Charlie", "River"]
+MODELS = {"v3": "fal-ai/elevenlabs/tts/eleven-v3", "v2": "fal-ai/elevenlabs/tts/multilingual-v2"}
+JOB = "voice-match"
+
+def sh(*a):
+    subprocess.run(a, check=True)
+
+def refs():
+    clips = []
+    for vid in REFS:
+        dst = f"{TMP}/ref_{vid}.m4a"
+        try:
+            if not os.path.exists(dst):
+                sh("yt-dlp", "-q", "-f", "bestaudio[ext=m4a]/bestaudio", "-o", dst, f"https://www.youtube.com/shorts/{vid}")
+            for i, start in enumerate((3, 20, 38)):
+                c = f"{TMP}/ref_{vid}_{i}.wav"
+                sh("ffmpeg", "-y", "-loglevel", "error", "-ss", str(start), "-t", "14", "-i", dst, "-ac", "1", "-ar", "16000", c)
+                clips.append(c)
+        except Exception as e:
+            print("ref failed", vid, e)
+    return clips
+
+def candidates():
+    made = []
+    for v in VOICES:
+        for mk, ep in MODELS.items():
+            out = f"{OUT}/{v}_{mk}.mp3"
+            if not os.path.exists(out):
+                budget.check(JOB, "fal_tts_1k_chars", len(TEXT) / 1000)
+                try:
+                    res = fal.run(ep, {"text": TEXT, "voice": v}, timeout=300, tag=f"{JOB}:{v}_{mk}")
+                    fal.download(res["audio"]["url"], out)
+                    budget.log(JOB, "fal_tts_1k_chars", len(TEXT) / 1000, "fal")
+                except Exception as e:
+                    print("tts failed", v, mk, e); continue
+            made.append((v, mk, out))
+    return made
+
+def main():
+    import numpy as np, librosa
+    from resemblyzer import VoiceEncoder, preprocess_wav
+    enc = VoiceEncoder()
+    rc = refs()
+    if not rc:
+        sys.exit("no reference audio (yt-dlp blocked?)")
+    ref_embs = np.array([enc.embed_utterance(preprocess_wav(c)) for c in rc])
+    ref_emb = ref_embs.mean(0); ref_emb /= np.linalg.norm(ref_emb)
+    def f0(path):
+        y, sr = librosa.load(path, sr=16000)
+        f, vflag, _ = librosa.pyin(y, fmin=60, fmax=300, sr=sr)
+        f = f[~np.isnan(f)]
+        return float(np.median(f)) if len(f) else 0.0
+    ref_f0 = float(np.median([f0(c) for c in rc]))
+    rows = []
+    for v, mk, path in candidates():
+        e = enc.embed_utterance(preprocess_wav(path))
+        sim = float(np.dot(e, ref_emb) / np.linalg.norm(e))
+        dur = librosa.get_duration(path=path)
+        wps = len(TEXT.split()) / dur
+        p = f0(path)
+        score = sim * 100 - abs(p - ref_f0) * 0.15 - abs(wps - 3.7) * 8
+        rows.append({"voice": v, "model": mk, "similarity": round(sim, 4), "f0_hz": round(p, 1), "wps": round(wps, 2), "score": round(score, 2), "file": os.path.relpath(path, ROOT)})
+        print(rows[-1])
+    rows.sort(key=lambda r: -r["score"])
+    json.dump({"reference": {"videos": REFS, "f0_hz": round(ref_f0, 1), "wps_target": 3.7, "clips": len(rc)}, "text": TEXT, "ranked": rows},
+              open(f"{OUT}/results.json", "w"), indent=1)
+    print("TOP:", rows[:5])
+
+if __name__ == "__main__":
+    main()
