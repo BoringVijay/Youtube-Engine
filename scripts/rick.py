@@ -64,10 +64,11 @@ def run_task(t, proj, job):
         import fal
         chars = len(t["text"])
         budget.check(job, "fal_tts_1k_chars", chars / 1000)
-        args = {"text": t["text"], "voice": t.get("voice", "Brian")}
+        args = {"text": t["text"], "voice": t.get("voice", "Brian"), "timestamps": True}
         args.update(t.get("args", {}))
         res = fal.run(t.get("model", "fal-ai/elevenlabs/tts/eleven-v3"), args, timeout=300, tag=f"{job}:{t['out']}")
         fal.download(res["audio"]["url"], out)
+        json.dump({k: v for k, v in res.items() if k != "audio"}, open(out + ".json", "w"))  # word timestamps
         budget.log(job, "fal_tts_1k_chars", chars / 1000, "fal")
         return {"status": "made"}
     if kind == "rig":  # free: slice a cutout into a puppet, then add its emotion-sheet faces

@@ -1,5 +1,5 @@
 {
- "step": "2: fixes, emotion sheets, poses, soldiers, textures, backdrops, aerial, cards, props",
+ "step": "3: fixes, rigs, voice audition, music test",
  "tasks": [
   {
    "type": "image",
@@ -389,6 +389,184 @@
     "/rick/projects/emu-war/style/style-frame-v2.png"
    ],
    "prompt": "One stylized cartoon prop for a 3D animated film, in the same hand-painted comic style as the reference film still: a 1930s government office desk in dark polished wood with a green glass banker's lamp, a black candlestick telephone, a leather blotter and two neat stacks of papers. Clean smooth shapes with a deep navy-plum outline, soft even studio lighting, three-quarter view from slightly above, the whole object visible and centered with empty space around it, on a plain uniform light grey backdrop. No ground shadow, no people, no text, no other objects."
+  },
+  {
+   "type": "image",
+   "out": "puppets/farmer/source-v3.png",
+   "aspect": "2:3",
+   "size": "2K",
+   "refs": [
+    "puppets/farmer/source-v2.png",
+    "puppets/major/source-v3.png"
+   ],
+   "prompt": "Exact same art style as the reference images (same character design language, same line weight, same shading). The exact same farmer as reference image 1 (same hat, face, stubble, skin tone, shirt with rolled sleeves, leather braces and tobacco tin). Fix the lower body: the shirt is tucked into high-waisted brown canvas work trousers that cover the whole lower half of the rounded torso down to its rounded bottom, so no skin shows anywhere on the torso, exactly like the uniform covers the torso of reference image 2. Two thin solid navy stick legs with no feet come straight out of the rounded bottom, slightly apart; thin stick arms with round dot hands held slightly away from the body. Full body, front view, centered, on a solid uniform light warm-grey backdrop, no floor shadow, no environment, no text, no extra characters."
+  },
+  {
+   "type": "image",
+   "out": "puppets/farmer/pose-point-v2.png",
+   "aspect": "2:3",
+   "size": "2K",
+   "refs": [
+    "puppets/farmer/source-v3.png"
+   ],
+   "prompt": "Exact same art style as the reference images (same character design language, same line weight, same shading). The exact same farmer as the reference image, full body, three-quarter view, angrily pointing off to the side with one straight stick arm, the other dot hand on his hip, fed-up frown. Every other detail identical to the reference, including the trousers covering the lower torso and the thin stick legs with no feet. on a solid uniform light warm-grey backdrop, no floor shadow, no environment, no text, no extra characters."
+  },
+  {
+   "type": "image",
+   "out": "tex/dirt-v2.png",
+   "aspect": "1:1",
+   "size": "2K",
+   "refs": [
+    "/rick/projects/emu-war/style/style-frame-v2.png"
+   ],
+   "prompt": "Match the painting style, palette and light of the reference film still exactly: hand-painted comic illustration, natural warm colours. Seamless tileable texture, flat straight-on view, hand-painted comic style: dry cracked red-brown Western Australian dirt with small pebbles and a few sparse dry straw tufts, flat even lighting, no perspective, no cast shadows, no vignette, no objects, no border, no blank areas: the pattern fills the whole square frame edge to edge on all four sides."
+  },
+  {
+   "type": "image",
+   "out": "tex/iron-v2.png",
+   "aspect": "1:1",
+   "size": "2K",
+   "refs": [
+    "/rick/projects/emu-war/style/style-frame-v2.png"
+   ],
+   "prompt": "Match the painting style, palette and light of the reference film still exactly: hand-painted comic illustration, natural warm colours. Seamless tileable texture, flat straight-on view, hand-painted comic style: old grey galvanised corrugated metal roofing sheet with vertical ridges and soft orange weathering streaks, flat even lighting, no perspective, no cast shadows, no vignette, no objects, no border, no blank areas: the pattern fills the whole square frame edge to edge on all four sides."
+  },
+  {
+   "type": "rig",
+   "out": "rigs/major",
+   "image": "puppets/major/source-v3.png",
+   "name": "major",
+   "faces": "puppets/major/emotions.png",
+   "face_names": [
+    "smug",
+    "shocked",
+    "shouting",
+    "exhausted",
+    "confused",
+    "neutral"
+   ]
+  },
+  {
+   "type": "rig",
+   "out": "rigs/emu",
+   "image": "puppets/emu/source-v2.png",
+   "name": "emu",
+   "faces": "puppets/emu/emotions.png",
+   "face_names": [
+    "smug",
+    "startled",
+    "scream",
+    "bored",
+    "sly",
+    "neutral"
+   ]
+  },
+  {
+   "type": "rig",
+   "out": "rigs/minister",
+   "image": "puppets/minister/source-v2.png",
+   "name": "minister",
+   "faces": "puppets/minister/emotions.png",
+   "face_names": [
+    "delighted",
+    "shocked",
+    "confused",
+    "nervous",
+    "stern",
+    "neutral"
+   ]
+  },
+  {
+   "type": "rig",
+   "out": "rigs/farmer",
+   "image": "puppets/farmer/source-v3.png",
+   "name": "farmer",
+   "faces": "puppets/farmer/emotions.png",
+   "face_names": [
+    "shouting",
+    "hopeful",
+    "shocked",
+    "laughing",
+    "deadpan",
+    "neutral"
+   ]
+  },
+  {
+   "type": "rig",
+   "out": "rigs/gunner",
+   "image": "puppets/gunner/source.png",
+   "name": "gunner"
+  },
+  {
+   "type": "rig",
+   "out": "rigs/driver",
+   "image": "puppets/driver/source.png",
+   "name": "driver"
+  },
+  {
+   "type": "rig",
+   "out": "rigs/major-binoculars",
+   "image": "puppets/major/pose-binoculars.png",
+   "name": "major-binoculars"
+  },
+  {
+   "type": "rig",
+   "out": "rigs/major-salute",
+   "image": "puppets/major/pose-salute.png",
+   "name": "major-salute"
+  },
+  {
+   "type": "rig",
+   "out": "rigs/major-defeat",
+   "image": "puppets/major/pose-defeat.png",
+   "name": "major-defeat"
+  },
+  {
+   "type": "rig",
+   "out": "rigs/minister-phone",
+   "image": "puppets/minister/pose-phone.png",
+   "name": "minister-phone"
+  },
+  {
+   "type": "rig",
+   "out": "rigs/emu-sprint",
+   "image": "puppets/emu/pose-sprint.png",
+   "name": "emu-sprint"
+  },
+  {
+   "type": "rig",
+   "out": "rigs/farmer-point",
+   "image": "puppets/farmer/pose-point-v2.png",
+   "name": "farmer-point"
+  },
+  {
+   "type": "voice",
+   "out": "audio/audition-liam.mp3",
+   "voice": "Liam",
+   "text": "In 1932, Australia sent the army to fight birds. And the birds won. Western Australia. Wheat farms. Then about twenty thousand emus walk in and start eating everything."
+  },
+  {
+   "type": "voice",
+   "out": "audio/audition-chris.mp3",
+   "voice": "Chris",
+   "text": "In 1932, Australia sent the army to fight birds. And the birds won. Western Australia. Wheat farms. Then about twenty thousand emus walk in and start eating everything."
+  },
+  {
+   "type": "voice",
+   "out": "audio/audition-eric.mp3",
+   "voice": "Eric",
+   "text": "In 1932, Australia sent the army to fight birds. And the birds won. Western Australia. Wheat farms. Then about twenty thousand emus walk in and start eating everything."
+  },
+  {
+   "type": "voice",
+   "out": "audio/audition-brian.mp3",
+   "voice": "Brian",
+   "text": "In 1932, Australia sent the army to fight birds. And the birds won. Western Australia. Wheat farms. Then about twenty thousand emus walk in and start eating everything."
+  },
+  {
+   "type": "music",
+   "out": "audio/music-lyria.mp3",
+   "prompt": "Minimal playful cartoon underscore for a comedy history short: pizzicato strings, plucked double bass, light woodblock ticks and a soft distant didgeridoo drone, sneaky and curious, steady medium tempo around 112 BPM, builds a little tension, no drums, no vocals, leaves room for a narrator."
   }
  ]
 }
