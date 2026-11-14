@@ -368,8 +368,12 @@
   "secs": 218.5
  },
  "renders/preview-v1.mp4": {
-  "status": "failed",
-  "why": "Command '['node', '/home/runner/work/Youtube-Engine/Youtube-Engine/rick/stage/render.mjs', '/home/runner/work/Youtube-Engine/Youtube-Engine/rick/projects/emu-war/short.json', '/home/runner/work/Youtube-Engine/Youtube-Engine/rick/projects/emu-war/renders/preview-v1.mp4', '--scale', '0.5']' timed out after 3000 seconds",
-  "secs": 3000.0
+  "status": "exists",
+  "secs": 0.0
+ },
+ "renders/check-v2.mp4": {
+  "status": "made",
+  "log": "t 41.8  ok\nshot 34 b  t= 56.50s  luma 106.9  contrast 42.6  TARGET_HIDDEN_BEHIND_SET\nshot 34 c  t= 56.83s  luma 106.7  contrast 42.7  ok\nshot 35 a  t= 57.50s  luma 105.2  contrast 41.9  ok\nshot 35 b  t= 58.83s  luma 105.7  contrast 43.1  ok\nshot 35 c  t= 60.17s  luma 105.7  contrast 43.4  ok\n108 stills -> /home/runner/work/Youtube-Engine/Youtube-Engine/rick/projects/emu-war/renders/check-v2_stills/sheet.jpg\n3 still(s) flagged: fix them in short.json and run --stills again before the full render\n",
+  "secs": 248.1
  }
 }
