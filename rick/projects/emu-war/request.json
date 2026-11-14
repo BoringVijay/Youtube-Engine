@@ -1,5 +1,5 @@
 {
- "step": "1: master characters and the penguin trademark (gate: Vijay approves before step 2)",
+ "step": "1b: house-style test (penguin brand family, major v2, global cast, style frame)",
  "tasks": [
   {
    "type": "image",
@@ -38,6 +38,34 @@
     "puppets/major/source-a.png"
    ],
    "prompt": "Exact same art style as the reference images (same character design language, same line weight, same shading). ONE Australian emu, drawn as a 2D cartoon doodle with the same thick plum-black outline, flat colours and one soft cel-shadow tone, simple round shapes: a shaggy grey-brown feather body like a soft mop, a long thin blue-grey neck, a small head with tiny dot eyes and a short dark beak, two long thin stick legs with three-toed feet, a smug half-closed expression. Full body, side three-quarter view, standing, the head at about the same height as the major's head, on a solid uniform light warm-grey backdrop, no floor shadow, no environment, no text, no extra characters."
+  },
+  {
+   "type": "image",
+   "out": "brand/brand-family-v2.png",
+   "aspect": "3:2",
+   "size": "2K",
+   "prompt": "A clean brand identity board for six fictional companies that all live in the same playful universe and are all quietly inspired by penguins or Antarctica. Premium modern flat vector logos with tasteful bold typography, each a different style, arranged in a 3x2 grid with generous spacing on a warm off-white page. Every penguin drawn has small friendly dot eyes with a tiny highlight; nothing is a plain silhouette. 1) 'SOUTH POLE PIZZA': a round penguin chef whose belly is a pizza slice, warm red and cream, retro diner lettering. 2) 'EMPEROR SAVINGS & LOAN': an elegant tall emperor penguin in profile inside a crest, navy and gold, serif lettering, old-money bank. 3) 'AD\u00c9LIE AIR': a minimal penguin head forming a paper plane, ice blue #8FD8F5 and white, clean sans-serif airline wordmark. 4) 'KRILL COFFEE CO.': a tiny penguin peeking over a coffee cup rim, earthy brown and ice blue, hand-lettered script. 5) 'GENTOO MOTORS': a sleek penguin-beak shaped chevron badge, chrome grey and black, wide geometric sans, car brand. 6) '90\u00b0S': a streetwear mark, just the coordinate in heavy type with a tiny penguin footprint as the degree symbol, black on ice blue. Each logo crisp and readable, spelled exactly as written, no other text, no mockups, no people."
+  },
+  {
+   "type": "image",
+   "out": "puppets/major/source-v2.png",
+   "aspect": "2:3",
+   "size": "2K",
+   "prompt": "House style 'Antarctic Modern': premium modern 2D character design, clean geometric shapes, confident consistent outline in deep navy-plum #1F1A2E with rounded ends, flat colour with one soft cel-shadow tone and a subtle warm rim light, a very fine paper grain, restrained curated palette, generous negative space, every detail deliberate, feels like a high-end studio's design system rather than clip art. Character asset: ONE character, full body, standing, front view, centered, the whole figure visible, on a solid uniform light warm-grey backdrop, no floor shadow, no environment. A big round off-white head about as wide as the body, tiny dot eyes with a small white highlight, thick expressive brows, a small line mouth, no nose, no ears; thin solid navy stick arms ending in small round dot hands, held slightly away from the body; two thin stick legs, no feet, slightly apart. The character: a 1932 Australian artillery major, a beautifully tailored khaki wool service-dress tunic with four pockets and brass buttons, a brown leather Sam Browne belt, a khaki peaked officer's cap, a neat short moustache, proud composed expression. One small accent: a thin ice-blue #8FD8F5 ribbon bar on the chest. No text, no labels."
+  },
+  {
+   "type": "image",
+   "out": "style/global-cast-v2.png",
+   "aspect": "3:2",
+   "size": "2K",
+   "prompt": "House style 'Antarctic Modern': premium modern 2D character design, clean geometric shapes, confident consistent outline in deep navy-plum #1F1A2E with rounded ends, flat colour with one soft cel-shadow tone and a subtle warm rim light, a very fine paper grain, restrained curated palette, generous negative space, every detail deliberate, feels like a high-end studio's design system rather than clip art. A character line-up sheet: FIVE different people from around the world standing in a row with wide gaps, full body, front view, all in the same design language: big round heads about as wide as the body (skin tones varied and natural: light, olive, brown, deep brown, east Asian), tiny dot eyes with a highlight, expressive brows, stick arms and legs, no feet. 1) a Tokyo salaryman in a slim charcoal suit with a lanyard and a paper coffee cup; 2) a Lagos market trader in a vivid ankara print dress and headwrap carrying a woven basket; 3) a New York trading-floor broker in a striped shirt, loosened tie and headset; 4) a Mumbai delivery rider in a red jacket with a tiffin bag; 5) a S\u00e3o Paulo street musician in a denim jacket with a small guitar. Authentic, respectful, stylish clothing details, no stereotypes. Solid uniform light warm-grey backdrop, no floor shadows, no text."
+  },
+  {
+   "type": "image",
+   "out": "style/style-frame-v2.png",
+   "aspect": "9:16",
+   "size": "2K",
+   "prompt": "House style 'Antarctic Modern': premium modern 2D character design, clean geometric shapes, confident consistent outline in deep navy-plum #1F1A2E with rounded ends, flat colour with one soft cel-shadow tone and a subtle warm rim light, a very fine paper grain, restrained curated palette, generous negative space, every detail deliberate, feels like a high-end studio's design system rather than clip art. A finished vertical 9:16 film still in this style, as if from a premium animated Short: the Western Australian wheat belt in 1932, golden late-afternoon sun, long soft shadows. In the foreground a proud army major (doodle character as described: big round head, dot eyes, stick limbs, tailored khaki uniform) stands beside a mounted Lewis gun on a tripod; behind him, across a wire fence, dozens of smug emus stroll through the wheat. Hand-painted textures on the dirt, fence posts and a corrugated-iron shed, painted sky with a soft blurred horizon of gum trees and a windpump. Two penguin easter eggs: an obvious one, the ammunition crate stencilled 'EMPEROR MUNITIONS CO.' with a small penguin emblem; a subtle one, a wind-shaped cloud on the horizon faintly shaped like a penguin. One ice-blue #8FD8F5 accent only: the ribbon on the major's chest. Cinematic composition, calm space at the bottom third, no captions, no other text."
   }
  ]
 }
