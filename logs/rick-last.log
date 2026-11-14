@@ -1,5 +1,59 @@
 [gai] image model: gemini-3-pro-image via vertex
-[rick] emu-war puppets/major/source-v3.png: {'status': 'made', 'model': 'gemini-3-pro-image', 'secs': 22.4}
-[rick] emu-war puppets/emu/source-v2.png: {'status': 'made', 'model': 'gemini-3-pro-image', 'secs': 22.6}
-[rick] emu-war puppets/farmer/source.png: {'status': 'made', 'model': 'gemini-3-pro-image', 'secs': 23.6}
-[rick] emu-war puppets/minister/source.png: {'status': 'made', 'model': 'gemini-3-pro-image', 'secs': 23.3}
+[rick] emu-war puppets/farmer/source-v2.png: {'status': 'made', 'model': 'gemini-3-pro-image', 'secs': 25.2}
+[rick] emu-war puppets/minister/source-v2.png: {'status': 'made', 'model': 'gemini-3-pro-image', 'secs': 21.9}
+[rick] emu-war puppets/major/emotions.png: {'status': 'made', 'model': 'gemini-3-pro-image', 'secs': 23.3}
+[rick] emu-war puppets/emu/emotions.png: {'status': 'made', 'model': 'gemini-3-pro-image', 'secs': 24.3}
+[rick] emu-war puppets/farmer/emotions.png: {'status': 'made', 'model': 'gemini-3-pro-image', 'secs': 23.9}
+[rick] emu-war puppets/minister/emotions.png: {'status': 'made', 'model': 'gemini-3-pro-image', 'secs': 26.7}
+[rick] emu-war puppets/major/pose-binoculars.png: {'status': 'made', 'model': 'gemini-3-pro-image', 'secs': 23.4}
+[rick] emu-war puppets/major/pose-salute.png: {'status': 'made', 'model': 'gemini-3-pro-image', 'secs': 22.0}
+[rick] emu-war puppets/major/pose-defeat.png: {'status': 'made', 'model': 'gemini-3-pro-image', 'secs': 22.5}
+[rick] emu-war puppets/emu/pose-sprint.png: {'status': 'made', 'model': 'gemini-3-pro-image', 'secs': 21.7}
+[rick] emu-war puppets/minister/pose-phone.png: {'status': 'made', 'model': 'gemini-3-pro-image', 'secs': 22.1}
+[rick] emu-war puppets/farmer/pose-point.png: {'status': 'made', 'model': 'gemini-3-pro-image', 'secs': 22.9}
+[rick] emu-war puppets/gunner/source.png: {'status': 'made', 'model': 'gemini-3-pro-image', 'secs': 22.2}
+[rick] emu-war puppets/driver/source.png: {'status': 'made', 'model': 'gemini-3-pro-image', 'secs': 23.9}
+[rick] emu-war tex/dirt.png: {'status': 'made', 'model': 'gemini-3-pro-image', 'secs': 21.1}
+[rick] emu-war tex/iron.png: {'status': 'failed', 'why': "'parts'", 'secs': 19.9}
+[gai] image: gemini-3-pro-image busy (HTTP 429 gemini-3-pro-image:generateContent: {
+  "error": {
+), waiting 15s
+[rick] emu-war tex/wood.png: {'status': 'made', 'model': 'gemini-3-pro-image', 'secs': 46.3}
+[rick] emu-war tex/wheat.png: {'status': 'made', 'model': 'gemini-3-pro-image', 'secs': 29.4}
+[rick] emu-war tex/mud.png: {'status': 'made', 'model': 'gemini-3-pro-image', 'secs': 21.6}
+[rick] emu-war tex/panelling.png: {'status': 'made', 'model': 'gemini-3-pro-image', 'secs': 22.5}
+[gai] image: gemini-3-pro-image busy (HTTP 429 gemini-3-pro-image:generateContent: {
+  "error": {
+), waiting 15s
+[rick] emu-war bg/day.png: {'status': 'made', 'model': 'gemini-3-pro-image', 'secs': 46.6}
+[gai] image: gemini-3-pro-image busy (HTTP 429 gemini-3-pro-image:generateContent: {
+  "error": {
+), waiting 15s
+[rick] emu-war bg/dusk.png: {'status': 'made', 'model': 'gemini-3-pro-image', 'secs': 46.2}
+[rick] emu-war bg/aerial.png: {'status': 'made', 'model': 'gemini-3-pro-image', 'secs': 24.1}
+[gai] image: gemini-3-pro-image busy (HTTP 429 gemini-3-pro-image:generateContent: {
+  "error": {
+), waiting 15s
+[rick] emu-war cards/newspaper.png: {'status': 'made', 'model': 'gemini-3-pro-image', 'secs': 44.8}
+[gai] image: gemini-3-pro-image busy (HTTP 429 gemini-3-pro-image:generateContent: {
+  "error": {
+), waiting 15s
+[gai] image: gemini-3-pro-image busy (HTTP 429 gemini-3-pro-image:generateContent: {
+  "error": {
+), waiting 30s
+[rick] emu-war cards/crate.png: {'status': 'made', 'model': 'gemini-3-pro-image', 'secs': 81.9}
+[gai] image: gemini-3-pro-image busy (HTTP 429 gemini-3-pro-image:generateContent: {
+  "error": {
+), waiting 15s
+[rick] emu-war props/lewis-gun.png: {'status': 'made', 'model': 'gemini-3-pro-image', 'secs': 44.5}
+[gai] image: gemini-3-pro-image busy (HTTP 429 gemini-3-pro-image:generateContent: {
+  "error": {
+), waiting 15s
+[gai] image: gemini-3-pro-image busy (HTTP 429 gemini-3-pro-image:generateContent: {
+  "error": {
+), waiting 30s
+[rick] emu-war props/truck.png: {'status': 'made', 'model': 'gemini-3-pro-image', 'secs': 80.1}
+[gai] image: gemini-3-pro-image busy (HTTP 429 gemini-3-pro-image:generateContent: {
+  "error": {
+), waiting 15s
+[rick] emu-war props/desk.png: {'status': 'made', 'model': 'gemini-3-pro-image', 'secs': 44.8}

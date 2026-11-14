@@ -25,9 +25,9 @@
   "secs": 21.8
  },
  "_spent": {
-  "google_usd": 1.742,
+  "google_usd": 5.36,
   "fal_usd": 0,
-  "google_room_usd": 32.09,
+  "google_room_usd": 28.47,
   "fal_room_usd": 15
  },
  "brand/brand-family-v2.png": {
@@ -69,5 +69,145 @@
   "status": "made",
   "model": "gemini-3-pro-image",
   "secs": 23.3
+ },
+ "puppets/farmer/source-v2.png": {
+  "status": "made",
+  "model": "gemini-3-pro-image",
+  "secs": 25.2
+ },
+ "puppets/minister/source-v2.png": {
+  "status": "made",
+  "model": "gemini-3-pro-image",
+  "secs": 21.9
+ },
+ "puppets/major/emotions.png": {
+  "status": "made",
+  "model": "gemini-3-pro-image",
+  "secs": 23.3
+ },
+ "puppets/emu/emotions.png": {
+  "status": "made",
+  "model": "gemini-3-pro-image",
+  "secs": 24.3
+ },
+ "puppets/farmer/emotions.png": {
+  "status": "made",
+  "model": "gemini-3-pro-image",
+  "secs": 23.9
+ },
+ "puppets/minister/emotions.png": {
+  "status": "made",
+  "model": "gemini-3-pro-image",
+  "secs": 26.7
+ },
+ "puppets/major/pose-binoculars.png": {
+  "status": "made",
+  "model": "gemini-3-pro-image",
+  "secs": 23.4
+ },
+ "puppets/major/pose-salute.png": {
+  "status": "made",
+  "model": "gemini-3-pro-image",
+  "secs": 22.0
+ },
+ "puppets/major/pose-defeat.png": {
+  "status": "made",
+  "model": "gemini-3-pro-image",
+  "secs": 22.5
+ },
+ "puppets/emu/pose-sprint.png": {
+  "status": "made",
+  "model": "gemini-3-pro-image",
+  "secs": 21.7
+ },
+ "puppets/minister/pose-phone.png": {
+  "status": "made",
+  "model": "gemini-3-pro-image",
+  "secs": 22.1
+ },
+ "puppets/farmer/pose-point.png": {
+  "status": "made",
+  "model": "gemini-3-pro-image",
+  "secs": 22.9
+ },
+ "puppets/gunner/source.png": {
+  "status": "made",
+  "model": "gemini-3-pro-image",
+  "secs": 22.2
+ },
+ "puppets/driver/source.png": {
+  "status": "made",
+  "model": "gemini-3-pro-image",
+  "secs": 23.9
+ },
+ "tex/dirt.png": {
+  "status": "made",
+  "model": "gemini-3-pro-image",
+  "secs": 21.1
+ },
+ "tex/iron.png": {
+  "status": "failed",
+  "why": "'parts'",
+  "secs": 19.9
+ },
+ "tex/wood.png": {
+  "status": "made",
+  "model": "gemini-3-pro-image",
+  "secs": 46.3
+ },
+ "tex/wheat.png": {
+  "status": "made",
+  "model": "gemini-3-pro-image",
+  "secs": 29.4
+ },
+ "tex/mud.png": {
+  "status": "made",
+  "model": "gemini-3-pro-image",
+  "secs": 21.6
+ },
+ "tex/panelling.png": {
+  "status": "made",
+  "model": "gemini-3-pro-image",
+  "secs": 22.5
+ },
+ "bg/day.png": {
+  "status": "made",
+  "model": "gemini-3-pro-image",
+  "secs": 46.6
+ },
+ "bg/dusk.png": {
+  "status": "made",
+  "model": "gemini-3-pro-image",
+  "secs": 46.2
+ },
+ "bg/aerial.png": {
+  "status": "made",
+  "model": "gemini-3-pro-image",
+  "secs": 24.1
+ },
+ "cards/newspaper.png": {
+  "status": "made",
+  "model": "gemini-3-pro-image",
+  "secs": 44.8
+ },
+ "cards/crate.png": {
+  "status": "made",
+  "model": "gemini-3-pro-image",
+  "secs": 81.9
+ },
+ "props/lewis-gun.png": {
+  "status": "made",
+  "model": "gemini-3-pro-image",
+  "secs": 44.5
+ },
+ "props/truck.png": {
+  "status": "made",
+  "model": "gemini-3-pro-image",
+  "secs": 80.1
+ },
+ "props/desk.png": {
+  "status": "made",
+  "model": "gemini-3-pro-image",
+  "secs": 44.8
  }
 }
