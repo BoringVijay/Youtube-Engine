@@ -71,6 +71,17 @@ def run_task(t, proj, job):
         json.dump({k: v for k, v in res.items() if k != "audio"}, open(out + ".json", "w"))  # word timestamps
         budget.log(job, "fal_tts_1k_chars", chars / 1000, "fal")
         return {"status": "made"}
+    if kind == "sfx":  # short original sound effect on fal (ElevenLabs SFX v2), reused across videos
+        import fal
+        secs = float(t.get("seconds", 2))
+        budget.check(job, "fal_sfx_sec", secs)
+        res = fal.run("fal-ai/elevenlabs/sound-effects/v2", {"text": t["prompt"], "duration_seconds": secs}, timeout=180, tag=f"{job}:{t['out']}")
+        url = (res.get("audio") or {}).get("url")
+        if not url:
+            return {"status": "failed", "why": "no audio in result: " + str(list(res))[:200]}
+        fal.download(url, out)
+        budget.log(job, "fal_sfx_sec", secs, "fal")
+        return {"status": "made"}
     if kind == "rig":  # free: slice a cutout into a puppet, then add its emotion-sheet faces
         stage = os.path.join(ROOT, "rick", "stage")
         src = path_in(proj, t["image"])

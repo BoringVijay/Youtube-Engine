@@ -45,6 +45,13 @@ The bar: it should feel like a premium drama series or top creator content, almo
 - **People:** natural skin tones (test 2026-11-14), dot eyes with a tiny highlight. The cast comes from wherever the story really happens, with authentic, respectful clothing.
 - **Every shot earns its place:** if a shot doesn't move the story, carry a fact or land a joke, it goes.
 
+## 4c. Sound (Vijay, 2026-11-14)
+- **Voice: Chris (ElevenLabs v3) on every video.** Same voice, delivery shifts with the story through sparing v3 tags ([deadpan], [sighs], [mischievously], [laughs softly], [curious]): 3 or 4 per video, never theatrical. Calm and matter-of-fact by default.
+- **Music bed:** quiet under the voice, lifted only in gaps.
+- **Scene cues:** a sneaky tiptoe cue for background gags, a pompous cue for overconfidence, silence right before a punchline.
+- **Stings on funny beats, 3 to 6 per video:** record scratch, crickets, sad trombone, a tiny kazoo fanfare, a bonk. They make the edit feel human-made. All original (generated or YouTube Audio Library), never ripped from TikTok or Instagram.
+- The sound library lives in each project's sfx/ and is copied forward and reused.
+
 ## 5. Continuity (what stops the AI look)
 - Style test lessons (2026-11-14): characters are generated one per image with the approved master as reference. A multi-character sheet drifted into generic corporate vector art. Flat graphics (logos, signs, badges) can share one sheet and be cropped, and look just as good. The rig needs stick arms and a head about as wide as the torso; tailored coat sleeves break the puppet slicing, so styling goes on the torso, not the limbs.
 - One master image job per character; every later image of it uses that job as the reference and starts with: "Exact same art style as the reference images (same character design language, same line weight, same shading)."

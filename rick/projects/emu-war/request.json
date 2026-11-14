@@ -1,5 +1,5 @@
 {
- "step": "3: fixes, rigs, voice audition, music test",
+ "step": "4: full voice (Chris, delivery tags), sound-effect library, music cues",
  "tasks": [
   {
    "type": "image",
@@ -567,6 +567,82 @@
    "type": "music",
    "out": "audio/music-lyria.mp3",
    "prompt": "Minimal playful cartoon underscore for a comedy history short: pizzicato strings, plucked double bass, light woodblock ticks and a soft distant didgeridoo drone, sneaky and curious, steady medium tempo around 112 BPM, builds a little tension, no drums, no vocals, leaves room for a narrator."
+  },
+  {
+   "type": "voice",
+   "out": "audio/voice.mp3",
+   "voice": "Chris",
+   "text": "In 1932, Australia sent the army to fight birds. And the birds won. [matter-of-fact] Western Australia. Wheat farms. Then about twenty thousand emus walk in, and start eating everything. The farmers are ex-soldiers, so they ask for machine guns. And the government says... [deadpan] sure. So Major Meredith rolls out with two soldiers, two Lewis guns, and ten thousand rounds. First battle. The emus walk into range. Fire! Twelve birds go down. Then... the gun jams. Next, a thousand emus head straight for a dam. Perfect ambush. Fire! And they scatter. Every direction. [mischievously] Like they planned it. Six days in, two and a half thousand rounds are gone. Fifty dead emus. Maybe two hundred. [sighs] Nobody agrees. [curious] You see, an emu can sprint at about fifty kilometres an hour. And when one gets hit, the rest don't bunch up. They split into tiny groups. There's nothing to aim at. So the army goes home. The farmers complain. The army comes back. Guns on trucks. Ambushes at every dam. One more month. Final report: nine thousand eight hundred and sixty bullets. Nine hundred and eighty-six emus. [deadpan] Exactly ten bullets per bird. The army lost no one. [laughs softly] The emus kept the wheat. And that's how, in 1932, Australia sent the army to fight birds."
+  },
+  {
+   "type": "sfx",
+   "out": "sfx/record-scratch.mp3",
+   "seconds": 1.2,
+   "prompt": "a quick vinyl record scratch that stops the music, comedic, clean, no music after it"
+  },
+  {
+   "type": "sfx",
+   "out": "sfx/bonk.mp3",
+   "seconds": 1.0,
+   "prompt": "a short hollow cartoon clunk and a sprung metal boing, like a machine gun jamming in a comedy"
+  },
+  {
+   "type": "sfx",
+   "out": "sfx/sad-trombone.mp3",
+   "seconds": 2.5,
+   "prompt": "a muted trombone playing a short descending wah wah wah waaah, comedic failure sting"
+  },
+  {
+   "type": "sfx",
+   "out": "sfx/crickets.mp3",
+   "seconds": 3.0,
+   "prompt": "crickets chirping in an awkward silent pause at dusk, sparse and quiet"
+  },
+  {
+   "type": "sfx",
+   "out": "sfx/whoosh.mp3",
+   "seconds": 0.8,
+   "prompt": "a soft fast airy whoosh for a camera move, clean, subtle"
+  },
+  {
+   "type": "sfx",
+   "out": "sfx/kazoo-fanfare.mp3",
+   "seconds": 2.5,
+   "prompt": "a tiny triumphant kazoo fanfare, cheeky and silly, like a small victory"
+  },
+  {
+   "type": "sfx",
+   "out": "sfx/gun-burst.mp3",
+   "seconds": 1.5,
+   "prompt": "a short distant rattle of an old 1930s machine gun burst, dry and cartoonish, not violent, no screams"
+  },
+  {
+   "type": "sfx",
+   "out": "sfx/typewriter-ding.mp3",
+   "seconds": 1.2,
+   "prompt": "a few fast old typewriter keystrokes ending with a bright carriage-return bell ding"
+  },
+  {
+   "type": "sfx",
+   "out": "sfx/phone-ring.mp3",
+   "seconds": 2.0,
+   "prompt": "an old 1930s candlestick telephone bell ringing twice"
+  },
+  {
+   "type": "sfx",
+   "out": "sfx/paper-thud.mp3",
+   "seconds": 0.8,
+   "prompt": "a folded newspaper landing on a wooden desk with a soft paper slap"
+  },
+  {
+   "type": "music",
+   "out": "audio/cue-sneaky.mp3",
+   "prompt": "Short sneaky comedic tiptoe cue: pizzicato strings and a bassoon creeping on the off-beats, a soft woodblock, mischievous and quiet, medium-slow tempo, no drums, no vocals."
+  },
+  {
+   "type": "music",
+   "out": "audio/cue-march.mp3",
+   "prompt": "Short pompous comic military march for an overconfident army rolling out: snare rolls, a slightly too proud brass melody and a tuba, 1930s parade band feel but light and funny, no vocals."
   }
  ]
 }
