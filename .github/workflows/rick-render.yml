@@ -112,7 +112,7 @@ jobs:
           ffmpeg -y -v error -f concat -safe 0 -i list.txt -c copy video.mp4
           node rick/stage/render.mjs "$d/$SHORT" audio.mp4 --audio-only
           mkdir -p "$(dirname "$d/$OUT")"
-          ffmpeg -y -v error -i video.mp4 -i audio.mp4 -map 0:v -map 1:a -c copy -shortest -movflags +faststart "$d/$OUT"
+          ffmpeg -y -v error -i video.mp4 -i audio.mp4 -map 0:v -map 1:a -c:v copy -af loudnorm=I=-14:TP=-1.5:LRA=7 -ar 48000 -c:a aac -b:a 192k -shortest -movflags +faststart "$d/$OUT"
           ffprobe -v error -show_entries format=duration:stream=width,height -of default=nw=1 "$d/$OUT" | tee "$d/$OUT.log"
           du -h "$d/$OUT" | tee -a "$d/$OUT.log"
       - name: Save

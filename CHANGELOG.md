@@ -34,3 +34,4 @@
 - 2026-11-14: rick-render.yml renders a Rick project at full quality in parallel time chunks (16 runners, software GL) and stitches them with the sound mix; render.mjs gains --audio-only for that. Trigger by pushing rick/projects/<slug>/render.json. Expect: $0 (Actions minutes only).
 - 2026-11-14: stage.js backdrop: mirrored copies drawn beside the painting before the blur, so the wrapped backdrop no longer shows a pale vertical seam in the sky. Expect: $0.
 - 2026-11-14: rick-render.yml: the final video is force-added (mp4 is gitignored), and render.json can set reuse_run to stitch an earlier run's chunks without re-rendering. Expect: $0.
+- 2026-11-14: Pilot 1 (Why Australia Lost a War to Birds) rendered: 60.6 s, 1080x1920, -14 LUFS, renders/emu-war-final.mp4. Assemble step now normalises loudness to -14 LUFS. Spend for the whole pilot: Google about $6.08, fal about $0.23. Expect: $0.
