@@ -11,8 +11,7 @@ jobs:
       - name: Install
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null
-          pip install -q torch --index-url https://download.pytorch.org/whl/cpu
-          pip install -q yt-dlp librosa resemblyzer
+          pip install -q librosa
       - name: Match
         env:
           FAL_KEY: ${{ secrets.FAL_KEY }}

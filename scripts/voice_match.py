@@ -55,34 +55,34 @@ def candidates():
             made.append((v, mk, out))
     return made
 
-def main():
+# Reference narrator, measured in a real browser (YouTube blocks datacenter downloads), 2 videos x 25 s,
+# with the same 40 ms autocorrelation pitch tracker used below: median 181-201 Hz, IQR ~150-250 Hz.
+REF = {"f0_med": 191.0, "f0_iqr": 77.0, "wps": 3.7}
+
+def pitch(path):
     import numpy as np, librosa
-    from resemblyzer import VoiceEncoder, preprocess_wav
-    enc = VoiceEncoder()
-    rc = refs()
-    if not rc:
-        sys.exit("no reference audio (yt-dlp blocked?)")
-    ref_embs = np.array([enc.embed_utterance(preprocess_wav(c)) for c in rc])
-    ref_emb = ref_embs.mean(0); ref_emb /= np.linalg.norm(ref_emb)
-    def f0(path):
-        y, sr = librosa.load(path, sr=16000)
-        f, vflag, _ = librosa.pyin(y, fmin=60, fmax=300, sr=sr)
-        f = f[~np.isnan(f)]
-        return float(np.median(f)) if len(f) else 0.0
-    ref_f0 = float(np.median([f0(c) for c in rc]))
+    x, sr = librosa.load(path, sr=48000, mono=True)
+    W, H = int(0.04 * sr), int(0.02 * sr); lo, hi = sr // 300, sr // 65; f = []
+    for i in range(0, len(x) - W, H):
+        fr = x[i:i + W]; e = float((fr ** 2).sum())
+        if (e / W) ** 0.5 < 0.02 * max(1e-6, float(np.abs(x).max())) / 0.6: continue
+        ac = np.correlate(fr, fr, "full")[W - 1:]
+        L = lo + int(np.argmax(ac[lo:hi])); 
+        if ac[L] / (e + 1e-9) > 0.35: f.append(sr / L)
+    f = np.sort(np.array(f)); q = lambda p: float(f[int(p * (len(f) - 1))]) if len(f) else 0.0
+    return q(.5), q(.75) - q(.25)
+
+def main():
+    import librosa
     rows = []
     for v, mk, path in candidates():
-        e = enc.embed_utterance(preprocess_wav(path))
-        sim = float(np.dot(e, ref_emb) / np.linalg.norm(e))
-        dur = librosa.get_duration(path=path)
-        wps = len(TEXT.split()) / dur
-        p = f0(path)
-        score = sim * 100 - abs(p - ref_f0) * 0.15 - abs(wps - 3.7) * 8
-        rows.append({"voice": v, "model": mk, "similarity": round(sim, 4), "f0_hz": round(p, 1), "wps": round(wps, 2), "score": round(score, 2), "file": os.path.relpath(path, ROOT)})
+        med, iqr = pitch(path)
+        dur = librosa.get_duration(path=path); wps = len(TEXT.split()) / dur
+        score = 100 - abs(med - REF["f0_med"]) * 0.6 - abs(iqr - REF["f0_iqr"]) * 0.3 - abs(wps - REF["wps"]) * 12
+        rows.append({"voice": v, "model": mk, "f0_med": round(med, 1), "f0_iqr": round(iqr, 1), "wps": round(wps, 2), "score": round(score, 1), "file": os.path.relpath(path, ROOT)})
         print(rows[-1])
     rows.sort(key=lambda r: -r["score"])
-    json.dump({"reference": {"videos": REFS, "f0_hz": round(ref_f0, 1), "wps_target": 3.7, "clips": len(rc)}, "text": TEXT, "ranked": rows},
-              open(f"{OUT}/results.json", "w"), indent=1)
+    json.dump({"reference": REF, "text": TEXT, "ranked": rows}, open(f"{OUT}/results.json", "w"), indent=1)
     print("TOP:", rows[:5])
 
 if __name__ == "__main__":
