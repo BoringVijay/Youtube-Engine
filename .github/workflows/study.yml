@@ -8,6 +8,9 @@ on:
         description: "YouTube links, separated by spaces or commas"
         required: false
         default: ""
+  push:
+    branches: [main]
+    paths: ["creative/references/*/queue.json"]  # pushing a sub-folder queue (e.g. rick/) starts that study
 
 permissions:
   contents: write
@@ -19,7 +22,7 @@ concurrency:
 jobs:
   study:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
       - name: Study
@@ -30,6 +33,12 @@ jobs:
         run: |
           pip install -q cryptography
           python3 -u scripts/study.py
+          for q in creative/references/*/queue.json; do
+            [ -f "$q" ] || continue
+            d=$(dirname "$q")
+            echo "study set: $d"
+            STUDY_DIR="$PWD/$d" STUDY_URLS="" python3 -u scripts/study.py || true
+          done
       - name: Save
         if: always()
         run: |

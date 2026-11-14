@@ -15,7 +15,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import gai  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-REFS = os.path.join(ROOT, "creative", "references")
+REFS = os.environ.get("STUDY_DIR") or os.path.join(ROOT, "creative", "references")  # a sub-folder keeps a separate study set (e.g. rick/)
 CAT = json.load(open(os.path.join(ROOT, "config", "creative.json")))
 QUEUE = os.path.join(REFS, "queue.json")
 
@@ -79,6 +79,9 @@ def analyse(url):
     vid = yt_id(url)
     watch = f"https://www.youtube.com/watch?v={vid}"
     prompt = PROMPT.replace("FORMATS", ", ".join(CAT["formats"].keys()))
+    extra = os.path.join(REFS, "prompt_extra.md")  # optional per-set questions, added to the base prompt
+    if os.path.exists(extra):
+        prompt += "\n\nAlso add these keys to the JSON:\n" + open(extra).read()
     body = {"contents": [{"role": "user", "parts": [{"fileData": {"fileUri": watch, "mimeType": "video/mp4"}}, {"text": prompt}]}],
             "generationConfig": {"responseMimeType": "application/json", "temperature": 0.3}}
     try:
@@ -94,7 +97,7 @@ def analyse(url):
 def synthesize():
     items = []
     for f in sorted(os.listdir(REFS)):
-        if f.endswith(".json") and f != "queue.json":
+        if f.endswith(".json") and f not in ("queue.json", "views.json"):
             try:
                 items.append(json.load(open(os.path.join(REFS, f))))
             except Exception:
@@ -103,6 +106,16 @@ def synthesize():
         return
     slim = [{k: x.get(k) for k in ("format", "premise", "hook", "structure", "pacing", "look", "voice", "music", "sfx", "hero_moments", "captions",
                                     "why_it_works", "rules_to_borrow")} for x in items]
+    meta_f = os.path.join(REFS, "views.json")  # optional {video id: {"title", "views"}} so the playbook can weigh hits against misses
+    if os.path.exists(meta_f):
+        meta = json.load(open(meta_f))
+        for x, sl in zip(items, slim):
+            sl.update(meta.get(x.get("id"), {}))
+            for k in ("script_shape", "topic_type", "title_formula", "hook_line", "world", "cast", "lighting_flip", "inserts", "loop_device", "why_this_topic"):
+                if k in x:
+                    sl[k] = x[k]
+    synth_f = os.path.join(REFS, "synth_extra.md")  # optional per-set instructions for the playbook
+    extra_synth = (open(synth_f).read().strip() + "\n") if os.path.exists(synth_f) else ""
     fmts = "\n".join(f"- {k}: {v['name']}" for k, v in CAT["formats"].items())
     prompt = f"""You are the creative director of an original animated Shorts channel. Below are breakdowns of {len(items)} reference Shorts the creator loves.
 Write a practical playbook in Markdown that our script writer and shot director will follow. Learn the craft; never copy any creator's scenes,
@@ -113,7 +126,7 @@ Sections, in this order, each 6 to 12 tight bullet points of concrete, testable 
 then one section per story format below that the references inform, titled exactly with the format name:
 {fmts}
 Skip a format only if nothing in the references applies to it.
-Breakdowns: {json.dumps(slim, ensure_ascii=False)[:60000]}
+{extra_synth}Breakdowns: {json.dumps(slim, ensure_ascii=False)[:90000]}
 Return only the Markdown."""
     body = {"contents": [{"role": "user", "parts": [{"text": prompt}]}], "generationConfig": {"temperature": 0.4}}
     out, _ = gai.generate_any("pro", body, timeout=400)
