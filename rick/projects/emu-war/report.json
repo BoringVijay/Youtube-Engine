@@ -25,9 +25,9 @@
   "secs": 21.8
  },
  "_spent": {
-  "google_usd": 6.076,
+  "google_usd": 6.21,
   "fal_usd": 0.228,
-  "google_room_usd": 27.76,
+  "google_room_usd": 27.62,
   "fal_room_usd": 14.77
  },
  "brand/brand-family-v2.png": {
@@ -226,9 +226,9 @@
   "secs": 81.7
  },
  "tex/iron-v2.png": {
-  "status": "failed",
-  "why": "'parts'",
-  "secs": 22.7
+  "status": "made",
+  "model": "gemini-3-pro-image",
+  "secs": 23.3
  },
  "rigs/major": {
   "status": "made",
@@ -361,5 +361,15 @@
  "audio/cue-march.mp3": {
   "status": "made",
   "secs": 25.3
+ },
+ "renders/check.mp4": {
+  "status": "made",
+  "log": "ast 39.6  ok\nshot 32 b  t= 56.50s  luma  98.4  contrast   39  TARGET_HIDDEN_BEHIND_SET\nshot 32 c  t= 56.83s  luma  98.9  contrast 39.2  ok\nshot 33 a  t= 57.50s  luma 101.4  contrast 40.5  ok\nshot 33 b  t= 58.83s  luma 103.2  contrast 42.1  ok\nshot 33 c  t= 60.17s  luma 100.6  contrast 41.2  ok\n102 stills -> /home/runner/work/Youtube-Engine/Youtube-Engine/rick/projects/emu-war/renders/check_stills/sheet.jpg\n23 still(s) flagged: fix them in short.json and run --stills again before the full render\n",
+  "secs": 218.5
+ },
+ "renders/preview-v1.mp4": {
+  "status": "failed",
+  "why": "Command '['node', '/home/runner/work/Youtube-Engine/Youtube-Engine/rick/stage/render.mjs', '/home/runner/work/Youtube-Engine/Youtube-Engine/rick/projects/emu-war/short.json', '/home/runner/work/Youtube-Engine/Youtube-Engine/rick/projects/emu-war/renders/preview-v1.mp4', '--scale', '0.5']' timed out after 3000 seconds",
+  "secs": 3000.0
  }
 }
