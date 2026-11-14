@@ -212,7 +212,7 @@ def pick_model():
 
 
 def gemini(prompt, temperature=0.9):
-    if os.environ.get("GCP_SA_KEY"):
+    if os.environ.get("GCP_SA_KEY") or os.environ.get("ACTIONS_ID_TOKEN_REQUEST_URL"):
         sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
         import gai
         return gai.ask_json(prompt, kind="text", temperature=temperature)
