@@ -1,0 +1,80 @@
+{
+ "archetypes": [
+  {
+   "name": "Insane-looking act, real mechanism",
+   "n": 21,
+   "median_views": 9600000.0,
+   "person": "he/they",
+   "tone": "deadpan narrator, mocking side characters",
+   "humour_devices": [
+    "doubters' one-line quip",
+    "literal visual of figures of speech",
+    "exaggeration simile ('lost a race to the milk cart')",
+    "ironic reversal"
+   ],
+   "emotional_curve": [
+    "confusion",
+    "amusement at the doubters",
+    "rising tension",
+    "aha",
+    "schadenfreude"
+   ]
+  },
+  {
+   "name": "Second-person what-if with a moral choice",
+   "n": 2,
+   "median_views": 5550000.0,
+   "person": "you",
+   "tone": "calm, then creepy",
+   "humour_devices": [
+    "dry asides ('unless someone trips over the power cable')"
+   ],
+   "emotional_curve": [
+    "wonder",
+    "unease",
+    "dread",
+    "the choice is handed to the viewer"
+   ]
+  },
+  {
+   "name": "Escalating levels list",
+   "n": 1,
+   "median_views": 9800000.0,
+   "person": "you/they",
+   "tone": "hype",
+   "humour_devices": [
+    "one-upmanship"
+   ],
+   "emotional_curve": [
+    "each level tops the last"
+   ]
+  },
+  {
+   "name": "Fiction-world parable",
+   "n": 2,
+   "median_views": 2200000.0,
+   "person": "he",
+   "tone": "melancholy twist",
+   "humour_devices": [
+    "dark irony"
+   ],
+   "emotional_curve": [
+    "setup",
+    "sacrifice",
+    "gut punch"
+   ]
+  },
+  {
+   "name": "Faceless explainer",
+   "n": 2,
+   "median_views": 230000.0,
+   "person": "you",
+   "tone": "teacher",
+   "humour_devices": [],
+   "emotional_curve": [
+    "flat"
+   ]
+  }
+ ],
+ "why_it_works": "The viewer is shown an act that looks stupid, watches everyone mock it, and gets proved wrong with a real mechanism they can repeat to a friend. Surprise, plus schadenfreude, plus a fact you can retell."
+}

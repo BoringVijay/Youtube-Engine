@@ -365,3 +365,13 @@ Never the same format three times in a row.
 | Not funny | Facts read deadpan aren't jokes | Comedy section; universal test; gag density |
 | Same template every video | One format | Rotate formats |
 | Comedy on a sad topic | Jokes at victims | Punch up only |
+
+## 20. Proven by the reference channel teardown (2026-11-15)
+Source: `creative/references/winners/ricksclips3000/` (151 videos studied; 29 explainers with a 9.3M median views).
+- Every video needs a **protagonist doing something that looks stupid or insane, with stakes**. A faceless explainer of the same fact gets 2-3 % of the views.
+- True or "this really happened" mechanisms beat invented worlds. A what-if must end by handing the viewer a moral choice ("would you?").
+- Write in a **doubters' beat** with one meme-able quip. That is our main comedy slot, and the doubter gets the ironic payoff at the end.
+- Escalate with **numbers that grow or shrink**, and show time passing with light (day → golden → night-blue → warm interior).
+- Give the "you see" analogy its **own mini-scene**. End on a **physical spectacle on the final word**, cut mid-motion so it loops.
+- Illustrate figures of speech literally ("his face goes purple" → he turns purple).
+- Our edge over the reference: background chaos and second-watch gags (theirs are clean), plus our survival, apocalyptic and exploration lanes (they have almost none).

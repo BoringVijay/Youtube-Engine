@@ -38,3 +38,8 @@
 - 2026-11-14: creative/rick/rulebook.md: the craft rulebook after the pilot scored 5/10 (outside critic's rulebook + Vijay's remake notes + post-mortem). Gates: two-column script, storyboard and animatic approved by Vijay; independent Gemini critic; hybrid animation (code stage plus up to 3 AI-video hero shots); narrators rotate by format; comedy section (relatable, universal test, gag density); 2 to 3 Shorts a week. bible.md now defers to it on craft. Expect: $0.
 - 2026-11-14: creative/references/genres/: Gemini study set of 18 Shorts across survival/what-if, micro-horror, Zack D.-style facts and exploration, chosen as hit/flop pairs, to reverse engineer the three genres Vijay wants to explore. Expect: about $1-3 of Google credit.
 - 2026-11-14: creative/research/genres-2026-11-14.md: measured genre research (creators, hit/flop pairs, whitespace for 25 premises). Exploding Whale dropped (43M Short exists); Bat Bombs promoted. Expect: $0.
+
+## 2026-11-15
+- Added `creative/references/winners/ricksclips3000/` (README, blueprint, theme, videospec): reverse-engineered all 151 RicksClips3000 Shorts.
+- Rulebook section 20: protagonist rule, doubters' beat, light-as-time, analogy mini-scene, spectacle ending, our edge.
+- Added the uploaded skills under `creative/skills/` (cartoon-3d-short bundle, reverse-engineer-winner spec).

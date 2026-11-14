@@ -1,0 +1,105 @@
+{
+ "version": 1,
+ "source": "RicksClips3000 era C (29 explainers, 6 Oct - 13 Nov 2026), studied 2026-11-15",
+ "hook_formula": [
+  "Third-person absurd action with an object and stakes, past tense, 8-16 words: 'He [did insane thing] [while/because stakes]'",
+  "Second-person rule: 'If you X, you'd Y' / 'Imagine you're...' (use for what-ifs and how-things-work)",
+  "Paradox: 'X is illegal/impossible, yet Y'"
+ ],
+ "beat_template": [
+  {
+   "beat": "hook",
+   "share_of_runtime": 0.06,
+   "purpose": "the moment that only makes sense at the end; first frame shows the act"
+  },
+  {
+   "beat": "setting",
+   "share_of_runtime": 0.12,
+   "purpose": "present tense, place, stakes, an everyman with a name or a job; often opened by 'You see,'"
+  },
+  {
+   "beat": "doubters",
+   "share_of_runtime": 0.12,
+   "purpose": "someone mocks the hero with a meme-able one-line quip (main comedy slot)"
+  },
+  {
+   "beat": "escalation",
+   "share_of_runtime": 0.25,
+   "purpose": "3-5 steps with numbers that grow or shrink; time passing shown by light"
+  },
+  {
+   "beat": "wait_what",
+   "share_of_runtime": 0.05,
+   "purpose": "narrator or a character asks the viewer's question out loud"
+  },
+  {
+   "beat": "mechanism",
+   "share_of_runtime": 0.25,
+   "purpose": "'You see,' + an everyday analogy with its own mini-scene; the real fact"
+  },
+  {
+   "beat": "payoff",
+   "share_of_runtime": 0.15,
+   "purpose": "ironic reversal, ideally the doubter destroyed by their own choice; spectacle; end mid-motion on the last word so it loops"
+  }
+ ],
+ "pacing_targets": {
+  "duration_s": [
+   45,
+   67
+  ],
+  "words_per_s": [
+   3.4,
+   4.0
+  ],
+  "voice": "no speed-up, no pause trimming; write short sentences instead",
+  "camera_moving_pct": [
+   65,
+   97
+  ],
+  "hard_cuts_per_60s": [
+   0,
+   15
+  ],
+  "glide_frames": [
+   18,
+   30
+  ],
+  "impact_kick_frames": [
+   6,
+   8
+  ],
+  "no_static_hold_frames": 4
+ },
+ "visual_rules": [
+  "illustrate every line literally, especially figures of speech",
+  "light tracks time and mood: day, golden, night-blue for danger, warm interior for the reveal",
+  "1-2 epic scale wides per video, everything else CU/MS",
+  "analogy gets its own mini-set (top-down insert, diagram, other location)",
+  "props with readable text carry jokes and callbacks (counters, signs, tins, newspapers)",
+  "ending is a physical spectacle on the final word",
+  "OUR ADD: background chaos and second-watch gags nobody acknowledges"
+ ],
+ "caption_rules": [
+  "1 word per card (2-3 max), white bold, black outline, at 60-74 % of the height, hard swap on each word",
+  "OUR RULE: 2-3 words with yellow keywords is allowed (rulebook)"
+ ],
+ "sound_rules": [
+  "voice from frame 1, no intro or outro",
+  "music and SFX bed about 5-10 dB under the voice, heavily compressed, -14 LUFS",
+  "SFX on every physical event; a music sting on the reversal"
+ ],
+ "reusable_for": [
+  "weird true mechanism",
+  "survival",
+  "exploration and discovery",
+  "what-if second person with a closing choice",
+  "apocalyptic one-rule stories",
+  "loophole and con stories"
+ ],
+ "anti_patterns": [
+  "pure explainer with no protagonist (0.14-0.32M vs a 9.6M median)",
+  "pure invented fiction-world parables (0.55-3.8M)",
+  "sci-fi what-if premise recaps without a trick (20-40K in era A)"
+ ]
+}
