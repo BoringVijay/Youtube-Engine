@@ -375,5 +375,10 @@
   "status": "made",
   "log": "t 41.8  ok\nshot 34 b  t= 56.50s  luma 106.9  contrast 42.6  TARGET_HIDDEN_BEHIND_SET\nshot 34 c  t= 56.83s  luma 106.7  contrast 42.7  ok\nshot 35 a  t= 57.50s  luma 105.2  contrast 41.9  ok\nshot 35 b  t= 58.83s  luma 105.7  contrast 43.1  ok\nshot 35 c  t= 60.17s  luma 105.7  contrast 43.4  ok\n108 stills -> /home/runner/work/Youtube-Engine/Youtube-Engine/rick/projects/emu-war/renders/check-v2_stills/sheet.jpg\n3 still(s) flagged: fix them in short.json and run --stills again before the full render\n",
   "secs": 248.1
+ },
+ "renders/check-v3.mp4": {
+  "status": "made",
+  "log": "s  luma 106.5  contrast 39.6  ok\nshot 34 b  t= 56.50s  luma 105.6  contrast 40.8  ok\nshot 34 c  t= 56.83s  luma 105.9  contrast 40.3  ok\nshot 35 a  t= 57.50s  luma 105.3  contrast 41.6  ok\nshot 35 b  t= 58.83s  luma   106  contrast   43  ok\nshot 35 c  t= 60.17s  luma   106  contrast 43.3  ok\n108 stills -> /home/runner/work/Youtube-Engine/Youtube-Engine/rick/projects/emu-war/renders/check-v3_stills/sheet.jpg\n5 still(s) flagged: fix them in short.json and run --stills again before the full render\n",
+  "secs": 179.9
  }
 }
