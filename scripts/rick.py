@@ -35,7 +35,8 @@ def preview(src, proj, out_rel):
 
 def run_task(t, proj, job):
     out = path_in(proj, t["out"])
-    if os.path.exists(out):
+    done = os.path.join(out, "rig.json") if t["type"] == "rig" else out
+    if os.path.exists(done) and not t.get("redo"):
         return {"status": "exists"}
     os.makedirs(os.path.dirname(out), exist_ok=True)
     kind = t["type"]
@@ -69,6 +70,44 @@ def run_task(t, proj, job):
         fal.download(res["audio"]["url"], out)
         budget.log(job, "fal_tts_1k_chars", chars / 1000, "fal")
         return {"status": "made"}
+    if kind == "rig":  # free: slice a cutout into a puppet, then add its emotion-sheet faces
+        stage = os.path.join(ROOT, "rick", "stage")
+        src = path_in(proj, t["image"])
+        cmd = ["python3", os.path.join(stage, "puppet.py"), "slice", src, out, "--name", t.get("name", os.path.basename(out))]
+        r = subprocess.run(cmd, capture_output=True, text=True)
+        if r.returncode:
+            return {"status": "failed", "why": (r.stderr or r.stdout)[-400:]}
+        if t.get("faces"):
+            r = subprocess.run(["python3", os.path.join(stage, "puppet.py"), "faces", path_in(proj, t["faces"]), out,
+                                "--names", ",".join(t["face_names"])], capture_output=True, text=True)
+            if r.returncode:
+                return {"status": "failed", "why": "faces: " + (r.stderr or r.stdout)[-400:]}
+        if os.path.exists(os.path.join(out, "preview.png")):
+            preview(os.path.join(out, "preview.png"), proj, t["out"] + "/preview.png")
+        return {"status": "made", "log": r.stdout[-300:]}
+    if kind == "render":  # free: three.js stage in headless Chromium; stills first, then the full video
+        stage = os.path.join(ROOT, "rick", "stage")
+        cmd = ["node", os.path.join(stage, "render.mjs"), path_in(proj, t["short"]), out]
+        if t.get("stills"):
+            cmd.append("--stills")
+        if t.get("scale"):
+            cmd += ["--scale", str(t["scale"])]
+        r = subprocess.run(cmd, capture_output=True, text=True, cwd=stage, timeout=3000)
+        log_f = out + ".log"
+        open(log_f, "w").write((r.stdout or "") + (r.stderr or ""))
+        if r.returncode:
+            return {"status": "failed", "why": ((r.stderr or "") + (r.stdout or ""))[-500:]}
+        if t.get("stills"):
+            os.makedirs(os.path.dirname(out), exist_ok=True)
+            open(out, "w").write("stills done\n")
+        return {"status": "made", "log": (r.stdout or "")[-500:]}
+    if kind == "words":  # free: word timings of the voice track
+        stage = os.path.join(ROOT, "rick", "stage")
+        r = subprocess.run(["python3", os.path.join(stage, "shortkit.py"), "words", path_in(proj, t["voice"]), path_in(proj, t["script"]), "-o", out],
+                           capture_output=True, text=True)
+        if r.returncode:
+            return {"status": "failed", "why": (r.stderr or r.stdout)[-400:]}
+        return {"status": "made"}
     return {"status": "skipped", "why": f"unknown task type {kind}"}
 
 
@@ -83,7 +122,7 @@ def run_project(proj):
     report = json.load(open(rep_f)) if os.path.exists(rep_f) else {}
     for t in req.get("tasks", []):
         key = t["out"]
-        if report.get(key, {}).get("status") in ("made", "exists") and os.path.exists(path_in(proj, key)):
+        if report.get(key, {}).get("status") in ("made", "exists") and os.path.exists(path_in(proj, key)) and not t.get("redo"):
             continue
         t0 = time.time()
         try:
