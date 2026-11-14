@@ -1,7 +1,7 @@
 {
  "id": "how-does-india-send-cash-straight-to-millions-of-bank-accounts-",
  "created": "2026-11-13T16:37:14+00:00",
- "pct": 90,
+ "pct": 97,
  "v": 3,
  "format": "short",
  "q": "How does India send cash straight to millions of bank accounts?",
@@ -137,8 +137,8 @@
   "pinned_comment": "Should we issue him an official flipper-print, or is our penguin locked out of the pneumatic vault forever?",
   "instagram_caption": "When your biometrics become your bank address, middleman leaks vanish into thin air. Flippers, however, still cause system errors.\n\n#Fintech #Animation #IndiaStack #BrassAndBellows #CuriousPenguin"
  },
- "stage": "final_ready",
- "step": "Short ready (Art Deco Pneumatic Tube Network, penguin as protagonist). Watch it and approve or send notes",
+ "stage": "scheduled",
+ "step": "Uploaded as private. Flip it to Public (or schedule it) in YouTube Studio",
  "cost": 12.796,
  "steps": [
   {
@@ -172,9 +172,25 @@
   {
    "stage": "final_ready",
    "at": "2026-11-13T22:46:35+00:00"
+  },
+  {
+   "stage": "approved",
+   "at": "2026-11-14T00:47:48+00:00"
+  },
+  {
+   "stage": "uploading",
+   "at": "2026-11-14T00:47:58+00:00"
+  },
+  {
+   "stage": "scheduled",
+   "at": "2026-11-14T00:48:28+00:00"
+  },
+  {
+   "stage": "scheduled",
+   "at": "2026-11-14T00:49:23+00:00"
   }
  ],
- "updated": "2026-11-13T22:46:35+00:00",
+ "updated": "2026-11-14T00:49:23+00:00",
  "voice_style": "C",
  "duration": 57.1,
  "universe": "Art Deco Pneumatic Tube Network · Brass & Bellows Animation Co.",
@@ -232,5 +248,41 @@
    "s14: The penguin's flipper melts into the scanner plate as it presses down. The red spark effect is messy and unstructured.",
    "s15: The penguin's eyes are asymmetrical, distorted, and off-model compared to earlier shots."
   ]
+ },
+ "notes_in": [
+  {
+   "at": "2026-11-13T23:31:00.000Z",
+   "stage": "final",
+   "notes": ""
+  }
+ ],
+ "schedule": {
+  "youtube": null,
+  "instagram": null,
+  "why": "India-first: Shorts do best on the morning commute (08:00) and after work (19:00). Reels peak 7 to 11 pm local.",
+  "window": "india"
+ },
+ "slot": null,
+ "youtube": {
+  "videos": [
+   {
+    "kind": "main",
+    "id": "IQzXhr-RFBY",
+    "url": "https://youtube.com/shorts/IQzXhr-RFBY",
+    "studio": "https://studio.youtube.com/video/IQzXhr-RFBY/edit",
+    "title": "How India Sends Cash Straight to Your Body",
+    "privacy": "private",
+    "publish_at": null,
+    "published": "2026-11-14T00:48:04Z",
+    "upload_status": "processed",
+    "views": 0,
+    "likes": 0,
+    "comments": 0,
+    "checked": "2026-11-14T00:49:23+00:00"
+   }
+  ],
+  "audited": true,
+  "note": "Scheduled.",
+  "channel": "@curiouspenguincantfly"
  }
 }

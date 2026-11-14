@@ -1,7 +1,7 @@
 {
  "id": "who-was-the-first-former-slave-to-sign-us-currency-",
  "created": "2026-11-13T16:37:17+00:00",
- "pct": 90,
+ "pct": 97,
  "v": 3,
  "format": "short",
  "q": "Who was the first former slave to sign US currency?",
@@ -137,8 +137,8 @@
   "pinned_comment": "Should we invest in non-slip boots for the penguin, or was that ink-slide 10/10 historic form?",
   "instagram_caption": "The country once counted him as property. Then it needed his name to make its paper money count.\n\n#BlackHistory #AmericanHistory #HistoryBuff #Banknotes #HistoricFigures"
  },
- "stage": "final_ready",
- "step": "Short ready (Layered Banknote Engraving Diorama, penguin as protagonist). Watch it and approve or send notes",
+ "stage": "scheduled",
+ "step": "Uploaded as private. Flip it to Public (or schedule it) in YouTube Studio",
  "cost": 13.762,
  "steps": [
   {
@@ -172,9 +172,25 @@
   {
    "stage": "final_ready",
    "at": "2026-11-13T23:49:21+00:00"
+  },
+  {
+   "stage": "approved",
+   "at": "2026-11-14T00:47:50+00:00"
+  },
+  {
+   "stage": "uploading",
+   "at": "2026-11-14T00:48:29+00:00"
+  },
+  {
+   "stage": "scheduled",
+   "at": "2026-11-14T00:49:20+00:00"
+  },
+  {
+   "stage": "scheduled",
+   "at": "2026-11-14T00:49:23+00:00"
   }
  ],
- "updated": "2026-11-13T23:49:21+00:00",
+ "updated": "2026-11-14T00:49:23+00:00",
  "voice_style": "A",
  "voice_fit": 1.173,
  "duration": 58.5,
@@ -249,5 +265,41 @@
    "s09: The blueprint features garbled text, gears that do not interlock correctly, and a second penguin that morphs into existence on the roller.",
    "s11: The pen dispenses a massive, unnatural puddle of green liquid instead of writing a signature."
   ]
+ },
+ "notes_in": [
+  {
+   "at": "2026-11-14T00:47:00.000Z",
+   "stage": "final",
+   "notes": ""
+  }
+ ],
+ "schedule": {
+  "youtube": null,
+  "instagram": null,
+  "why": "07:30 IST is the Shorts morning scroll in India and 9 pm the night before on the US East Coast. 18:30 IST catches the India evening and US breakfast. Reels peak in the evening, so 19:30 IST for India, 07:30 IST for US night owls.",
+  "window": "global"
+ },
+ "slot": null,
+ "youtube": {
+  "videos": [
+   {
+    "kind": "main",
+    "id": "sZVnu1aOMd0",
+    "url": "https://youtube.com/shorts/sZVnu1aOMd0",
+    "studio": "https://studio.youtube.com/video/sZVnu1aOMd0/edit",
+    "title": "Born Enslaved. Later, He Signed America's Money.",
+    "privacy": "private",
+    "publish_at": null,
+    "published": "2026-11-14T00:48:35Z",
+    "upload_status": "uploaded",
+    "views": 0,
+    "likes": 0,
+    "comments": 0,
+    "checked": "2026-11-14T00:49:23+00:00"
+   }
+  ],
+  "audited": true,
+  "note": "Scheduled.",
+  "channel": "@curiouspenguincantfly"
  }
 }
