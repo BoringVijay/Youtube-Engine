@@ -37,14 +37,13 @@ There is no penguin character. The penguin lives on as a hidden universe inside 
 - **Never on a serious or tragic beat, never the subject of a shot.**
 - The brand family lives in `rick/brand/`. Signs are image cards placed in the stage, so a brand looks identical wherever it reappears.
 
-## 4b. House style: "Antarctic Modern" (proposed 2026-11-14, pending Vijay's approval of the style test)
-Our own signature on top of the measured Rick look, so the channel reads as a premium studio, not a clone.
-- **Signature accent:** ice blue #8FD8F5 on exactly one thing per video (a ribbon, a neon sign, a scarf, a car). Captions highlight one key word in ice blue.
-- **Line and shape:** deep navy-plum outline #1F1A2E with rounded ends; clean geometric silhouettes; 2 or 3 meaningful details per character, nothing fussy.
-- **Light:** flat colour with one cel-shadow tone plus a soft warm rim light; very fine paper grain.
-- **Dot eyes with a tiny highlight** for life.
-- **Global cast:** characters come from wherever the story really happens (Tokyo, Lagos, New York, Mumbai, São Paulo, the outback...), with authentic, respectful clothing and natural skin tones. No stereotypes.
-- **Captions:** heavy geometric sans, white with a navy outline.
+## 4b. House style and creative direction (Vijay, 2026-11-14)
+The bar: it should feel like a premium drama series or top creator content, almost too good to be free. Real places, relatable people, physical stakes, one unexpected creative element, a reason for every shot. Nothing flashy, nothing that looks AI-made.
+- **Colour:** natural, colourful, realistic palettes that fit the place and era (the wheat-field style frame is the reference). Blue is a rare accent: ice blue #8FD8F5 on one small thing per video at most (a ribbon, a sign, a light). Never a blue wash or a blue grade.
+- **Captions:** the measured Rick style: heavy modern sans, 1 to 2 words, white fill with a black outline, centred at y 1350, changing on the word. Occasionally one keyword in a colour that belongs to the story (warning red, sun yellow), or black text on a light plate when the shot is bright. Clean and simple; no gimmick animations.
+- **Line and light:** deep navy-plum outline #1F1A2E with rounded ends, flat colour with one cel-shadow tone and a soft warm rim light, a very fine paper grain. 2 or 3 meaningful costume details per character, all on the torso and head; limbs stay simple sticks for the rig.
+- **People:** natural skin tones (test 2026-11-14), dot eyes with a tiny highlight. The cast comes from wherever the story really happens, with authentic, respectful clothing.
+- **Every shot earns its place:** if a shot doesn't move the story, carry a fact or land a joke, it goes.
 
 ## 5. Continuity (what stops the AI look)
 - Style test lessons (2026-11-14): characters are generated one per image with the approved master as reference. A multi-character sheet drifted into generic corporate vector art. Flat graphics (logos, signs, badges) can share one sheet and be cropped, and look just as good. The rig needs stick arms and a head about as wide as the torso; tailored coat sleeves break the puppet slicing, so styling goes on the torso, not the limbs.

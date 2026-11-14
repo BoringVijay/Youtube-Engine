@@ -1,5 +1,5 @@
 {
- "step": "1b: house-style test (penguin brand family, major v2, global cast, style frame)",
+ "step": "1c: v3 masters (major v3, emu v2, farmer, minister) in the house style",
  "tasks": [
   {
    "type": "image",
@@ -66,6 +66,46 @@
    "aspect": "9:16",
    "size": "2K",
    "prompt": "House style 'Antarctic Modern': premium modern 2D character design, clean geometric shapes, confident consistent outline in deep navy-plum #1F1A2E with rounded ends, flat colour with one soft cel-shadow tone and a subtle warm rim light, a very fine paper grain, restrained curated palette, generous negative space, every detail deliberate, feels like a high-end studio's design system rather than clip art. A finished vertical 9:16 film still in this style, as if from a premium animated Short: the Western Australian wheat belt in 1932, golden late-afternoon sun, long soft shadows. In the foreground a proud army major (doodle character as described: big round head, dot eyes, stick limbs, tailored khaki uniform) stands beside a mounted Lewis gun on a tripod; behind him, across a wire fence, dozens of smug emus stroll through the wheat. Hand-painted textures on the dirt, fence posts and a corrugated-iron shed, painted sky with a soft blurred horizon of gum trees and a windpump. Two penguin easter eggs: an obvious one, the ammunition crate stencilled 'EMPEROR MUNITIONS CO.' with a small penguin emblem; a subtle one, a wind-shaped cloud on the horizon faintly shaped like a penguin. One ice-blue #8FD8F5 accent only: the ribbon on the major's chest. Cinematic composition, calm space at the bottom third, no captions, no other text."
+  },
+  {
+   "type": "image",
+   "out": "puppets/major/source-v3.png",
+   "aspect": "2:3",
+   "size": "2K",
+   "refs": [
+    "puppets/major/source-a.png"
+   ],
+   "prompt": "Exact same art style as the reference images (same character design language, same line weight, same shading). Character asset: ONE character, full body, standing, front view, centered, the whole figure visible from the top of the head to the tips of the legs, on a solid uniform light warm-grey backdrop, sharp focus, no environment, no floor shadow, no text. Proportions exactly like reference image 1: a big round head about as wide as the torso, tiny dot eyes with a small white highlight, thick expressive brows, a small simple line mouth, no nose, no ears; arms are thin solid navy stick lines ending in small round dot hands, held slightly away from the torso; legs are two thin solid navy stick lines with no feet, slightly apart, coming straight out of the bottom of a rounded torso. Premium finish: confident deep navy-plum outline #1F1A2E with rounded ends, flat natural colours with one soft cel-shadow tone, a soft warm rim light on one edge, a very fine paper grain, every detail deliberate. The character: the same 1932 Australian artillery major as reference image 1, now with a natural light-tan skin tone on the head, the same khaki wool service-dress tunic with four pockets and brass buttons, brown leather Sam Browne belt and khaki peaked officer's cap, a neat short moustache, proud composed expression. One tiny accent: a thin ribbon bar on the chest with a single small ice-blue stripe."
+  },
+  {
+   "type": "image",
+   "out": "puppets/emu/source-v2.png",
+   "aspect": "2:3",
+   "size": "2K",
+   "refs": [
+    "puppets/major/source-v3.png"
+   ],
+   "prompt": "Exact same art style as the reference images (same character design language, same line weight, same shading). ONE Australian emu in exactly the design language of reference image 1: the same navy-plum outline, flat natural colours with one cel-shadow tone, soft warm rim light, fine paper grain. Natural emu colours: a shaggy brown-grey feather body shaped like a soft rounded mop, a long gently curved neck with pale blue-grey skin showing through sparse dark feathers, a small head with tiny dot eyes with a highlight and a short dark beak, two long thin simple legs with small three-toed feet. A smug, half-closed, unbothered expression. Full body, side three-quarter view, standing, on a solid uniform light warm-grey backdrop, no floor shadow, no text."
+  },
+  {
+   "type": "image",
+   "out": "puppets/farmer/source.png",
+   "aspect": "2:3",
+   "size": "2K",
+   "refs": [
+    "puppets/major/source-v3.png"
+   ],
+   "prompt": "Exact same art style as the reference images (same character design language, same line weight, same shading). Character asset: ONE character, full body, standing, front view, centered, the whole figure visible from the top of the head to the tips of the legs, on a solid uniform light warm-grey backdrop, sharp focus, no environment, no floor shadow, no text. Proportions exactly like reference image 1: a big round head about as wide as the torso, tiny dot eyes with a small white highlight, thick expressive brows, a small simple line mouth, no nose, no ears; arms are thin solid navy stick lines ending in small round dot hands, held slightly away from the torso; legs are two thin solid navy stick lines with no feet, slightly apart, coming straight out of the bottom of a rounded torso. Premium finish: confident deep navy-plum outline #1F1A2E with rounded ends, flat natural colours with one soft cel-shadow tone, a soft warm rim light on one edge, a very fine paper grain, every detail deliberate. The character: a 1932 Western Australian wheat farmer and Great War veteran, natural sun-browned skin tone, a weathered wide-brim brown felt hat, a faded collarless cotton work shirt with rolled sleeves and leather braces, a small tobacco tin in the shirt pocket, a stubbly jaw, a fed-up frown."
+  },
+  {
+   "type": "image",
+   "out": "puppets/minister/source.png",
+   "aspect": "2:3",
+   "size": "2K",
+   "refs": [
+    "puppets/major/source-v3.png"
+   ],
+   "prompt": "Exact same art style as the reference images (same character design language, same line weight, same shading). Character asset: ONE character, full body, standing, front view, centered, the whole figure visible from the top of the head to the tips of the legs, on a solid uniform light warm-grey backdrop, sharp focus, no environment, no floor shadow, no text. Proportions exactly like reference image 1: a big round head about as wide as the torso, tiny dot eyes with a small white highlight, thick expressive brows, a small simple line mouth, no nose, no ears; arms are thin solid navy stick lines ending in small round dot hands, held slightly away from the torso; legs are two thin solid navy stick lines with no feet, slightly apart, coming straight out of the bottom of a rounded torso. Premium finish: confident deep navy-plum outline #1F1A2E with rounded ends, flat natural colours with one soft cel-shadow tone, a soft warm rim light on one edge, a very fine paper grain, every detail deliberate. The character: a 1932 Australian federal minister in a government office, an older man with a natural light skin tone and neat grey side-parted hair, round wire spectacles, a dark charcoal three-piece suit with a white wing collar and a dark tie, a gold watch chain across the waistcoat, a composed bureaucrat's half smile."
   }
  ]
 }
