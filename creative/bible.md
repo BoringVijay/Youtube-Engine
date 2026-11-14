@@ -1,3 +1,5 @@
+> **SUPERSEDED (2026-11-14/15).** The channel now makes Rick Shots only. Canonical rules: `creative/rick/rulebook.md`; current plan: `creative/rick/plan-2026-11-15.md`; teardown: `creative/references/winners/ricksclips3000/`. This file is kept for history (penguin-anthology era).
+
 # Curious Penguin: creative bible
 
 > Every Curious Penguin video should feel like a completely different creative experience, with the penguin quietly becoming the character people recognise, look for and genuinely look forward to spotting.

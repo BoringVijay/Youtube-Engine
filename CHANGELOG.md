@@ -43,3 +43,4 @@
 - Added `creative/references/winners/ricksclips3000/` (README, blueprint, theme, videospec): reverse-engineered all 151 RicksClips3000 Shorts.
 - Rulebook section 20: protagonist rule, doubters' beat, light-as-time, analogy mini-scene, spectacle ending, our edge.
 - Added the uploaded skills under `creative/skills/` (cartoon-3d-short bundle, reverse-engineer-winner spec).
+- 2026-11-15: Master plan for Rick Shots (`creative/rick/plan-2026-11-15.md`): code-built 3D (bridge engine) as the main picture, measured voice match, 6 gated phases. Penguin-era `creative/bible.md` marked superseded. Google login is now keyless (config/gcp.json, new $300 project); produce cron every 6 h.
