@@ -215,6 +215,8 @@ def handle_inbox():
                           "why": sug["why"], "window": sug["window"]}
                     if m.get("instagram") is False:
                         sc["instagram"] = None
+                        if yat != "none":  # Vijay unticked "Post to Instagram too": keep it out of YouTube-follow as well
+                            st["instagram"] = {"status": "off", "at": now()}
                     st["schedule"], st["slot"] = sc, sc["youtube"]
                     if sc.get("instagram"):
                         st["instagram"] = {"status": "scheduled", "at": sc["instagram"]}

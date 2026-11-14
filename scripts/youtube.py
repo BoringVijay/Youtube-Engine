@@ -116,6 +116,13 @@ def match(st, vids, taken):
     return best if score >= 0.72 else None
 
 
+def _ig_follows():
+    try:
+        return json.load(open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "config", "publish.json"))).get("instagram_follows_youtube", True)
+    except Exception:
+        return True
+
+
 def sync(states, save):
     """Find posted Shorts on the channel and refresh their numbers. Returns how many jobs changed."""
     todo = [s for s in states if s.get("stage") in TRACK and s.get("final")]
@@ -151,6 +158,10 @@ def sync(states, save):
             stage, step = "scheduled", "Scheduled on YouTube for " + d["publish_at"]
         else:
             stage, step = "scheduled", f"Uploaded as {d['privacy']}. Flip it to Public (or schedule it) in YouTube Studio"
+        if stage == "live" and not st.get("instagram") and _ig_follows():
+            # Instagram follows YouTube: once a Short is public there, it goes to Instagram too (unless switched off)
+            st["instagram"] = {"status": "queued", "at": now(), "by": "auto: went public on YouTube"}
+            changed += 1
         if stage != st.get("stage") or step != st.get("step"):
             st["stage"], st["step"] = stage, step
             st["pct"] = 100 if stage == "live" else 97
