@@ -75,7 +75,7 @@ def make(which, voice, model):
         if not os.path.exists(raw):
             tts(text, voice, model, raw)
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", raw, "-af",
-                        "silenceremove=start_periods=1:start_threshold=-45dB:stop_periods=1:stop_threshold=-45dB:stop_silence=0.12,aresample=44100", "-ac", "1", clean], check=True)
+                        "silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.04,areverse,silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.1,areverse,aresample=44100", "-ac", "1", clean], check=True)
         gap = next((g for k, g in GAPS.items() if text.startswith(k)), DEFAULT_GAP) if i else 0.0
         d = dur(clean)
         t += gap; starts.append(round(t, 3)); t += d; ends.append(round(t, 3))
