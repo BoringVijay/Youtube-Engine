@@ -17,7 +17,7 @@ export type Cam = { pos: V3; look: V3; fov: number; roll: number };
 export type Key = { f: number; dur?: number; pos: V3; look: V3; fov?: number; roll?: number };
 export type Spot = {
   who: Outfit; key: string; x: number; y: number; z: number; expr?: Expr; mode?: "stand" | "stroll" | "sit" | "march";
-  phase?: number; facing?: -1 | 0 | 1; prop?: Prop; talk?: 0 | 1 | 2; look?: number; seed?: number; scale?: number; headTilt?: number; tilt?: number;
+  phase?: number; facing?: -1 | 0 | 1; prop?: Prop; talk?: 0 | 1 | 2; /** raised pointing/waving arm, 0..1 */ wave?: number; look?: number; seed?: number; scale?: number; headTilt?: number; tilt?: number;
 };
 export type ShotDef = {
   id: number; a: number; b: number; light: Light; set: SetName; cams: Key[]; cInf: number;

@@ -82,7 +82,9 @@ const Inner: React.FC<{ id: number; kit: IceKit }> = ({ id, kit }) => {
   fpt.copy(target);
   fx.lens.focus = Math.max(0.3, fpt.sub(cam.position).dot(fwd));
   fx.lens.cInf = SHOTS[id - 1].cInf;
-  gradeFor(fx.grade, SHOTS[id - 1].light === "day" ? "day" : "golden");
+  const lt = SHOTS[id - 1].light;
+  gradeFor(fx.grade, lt === "day" || lt === "arctic" || lt === "lab" ? "day" : "golden");
+  if (lt === "lab") fx.grade.amount = 0.5; // fluorescent rooms: half-strength day grade keeps them neutral
   fx.grain.seed = f; // deterministic per frame
   return (
     <>

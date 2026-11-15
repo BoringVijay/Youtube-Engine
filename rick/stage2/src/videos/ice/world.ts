@@ -358,7 +358,7 @@ export class World {
       const d = cam.position.distanceTo(V(p.x, p.y + 1.2, p.z)) / (p.scale ?? 1);
       const [w, h, k]: [number, number, number] = d < 3.2 ? [1800, 3000, 3.0] : d < 6.5 ? [1080, 1800, 1.8] : d < 16 ? [480, 800, 0.8] : [240, 400, 0.4];
       const fo: FrontOpts = { mode: p.mode ?? "stand", expr: p.expr ?? "neutral", phase: p.phase ?? 0, facing: p.facing ?? 0, look: p.look ?? 0,
-        light, seed: p.seed ?? 1, blink: blink(p.seed ?? 1), headTilt: p.headTilt ?? 0, tilt: p.tilt ?? 0, prop: p.prop ?? null, talk: p.talk ?? 0 };
+        light, seed: p.seed ?? 1, blink: blink(p.seed ?? 1), headTilt: p.headTilt ?? 0, tilt: p.tilt ?? 0, prop: p.prop ?? null, talk: p.talk ?? 0, ...(p.wave !== undefined ? { wave: p.wave } : {}) };
       const key = `F|${p.key}|${JSON.stringify(fo)}`;
       const a = this.actor(ai++);
       a.r = this.pool.req(key, w, h, k, (pen: Pen) => bodyFront(pen, p.who, fo));

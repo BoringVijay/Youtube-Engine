@@ -30,9 +30,14 @@ const CORE: ShotPart[] = [
     } },
   // 7. The pencil mark (22.2-30.5 s). Night: Hank marks his height. Morning: the mark is lower (the ceiling is coming
   //    down, not Hank). The sergeant laughs, then delivers "Son... you're just growing." with his own lips.
-  { a: sec(22.2), b: sec(30.48), light: "inside", set: "room", cInf: 12,
+  // night half: blue moonlit room so the time jump reads (same cameras/cast functions as the morning half)
+  { a: sec(22.2), b: sec(24.6), light: "night", set: "room", cInf: 12, marks: (f) => (f < sec(23.7) ? 1 : 2),
+    cams: [{ f: sec(22.2), pos: [-0.35, 1.55, 1.6], look: [-0.55, 1.6, -1.8], fov: 50 }, { f: sec(24.6), dur: sec(2.4), pos: [-0.38, 1.6, 1.25], look: [-0.58, 1.66, -1.8], fov: 49 }],
+    cast: (f) => [{ who: CAST.HANK, key: "hank", x: -0.25, y: 0, z: -1.25, mode: "stand", facing: -1, seed: 3, expr: "stern",
+      prop: S(f) < 24.0 ? ["pencil", S(f) * 0.8] : null, look: -0.6 }] },
+  { a: sec(24.6), b: sec(30.48), light: "inside", set: "room", cInf: 12,
     marks: (f) => (f < sec(23.7) ? 1 : f < sec(24.6) ? 2 : 3),
-    cams: [{ f: sec(22.2), pos: [-0.35, 1.55, 1.6], look: [-0.55, 1.6, -1.8], fov: 50 },
+    cams: [{ f: sec(24.6), pos: [-0.38, 1.6, 1.25], look: [-0.58, 1.66, -1.8], fov: 49 },
            { f: sec(25.7), dur: sec(1.1), pos: [-0.45, 1.75, 0.55], look: [-0.62, 1.78, -1.8], fov: 44 }, // morning: push to the marks
            { f: sec(26.9), dur: 14, pos: [0.15, 1.5, 2.6], look: [0.15, 1.35, -0.8], fov: 52 }],           // sergeant laughs: pull out to the two-shot
     cast: (f) => {
