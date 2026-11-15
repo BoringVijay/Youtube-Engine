@@ -18,6 +18,8 @@ REFS = ["7xS87iActkU", "Mz72MuPgnGY", "VS1Z_Q-Klt8", "0m6G8pDtzNs"]
 TEXT = ("He shaved the walls of his bedroom every morning, because the walls were trying to eat him. "
         "You see, it's 1960, and Hank lives thirty feet under the ice in Greenland.")
 VOICES = ["Brian", "Chris", "Eric", "Roger", "George", "Callum", "Liam", "Will", "Daniel", "Bill", "Charlie", "River"]
+# round 2 (Vijay: none of the first three, look wider): legacy/default names fal may accept, v2 only
+WIDE = ["Adam", "Antoni", "Josh", "Sam", "Arnold", "Clyde", "Dave", "Fin", "Harry", "James", "Jeremy", "Joseph", "Michael", "Patrick", "Thomas", "Ethan", "Drew", "Paul"]
 MODELS = {"v3": "fal-ai/elevenlabs/tts/eleven-v3", "v2": "fal-ai/elevenlabs/tts/multilingual-v2"}
 JOB = "voice-match"
 
@@ -41,8 +43,9 @@ def refs():
 
 def candidates():
     made = []
-    for v in VOICES:
+    for v in VOICES + WIDE:
         for mk, ep in MODELS.items():
+            if v in WIDE and mk != "v2": continue
             out = f"{OUT}/{v}_{mk}.mp3"
             if not os.path.exists(out):
                 budget.check(JOB, "fal_tts_1k_chars", len(TEXT) / 1000)
