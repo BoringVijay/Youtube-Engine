@@ -135,7 +135,7 @@ const Caption: React.FC<{ f: number }> = ({ f }) => {
   const w = WORDS[i];
   if (t > w[2] + 0.35) return null; // clear in longer pauses
   const age = t - w[1], pop = age < 0.08 ? 0.86 + (age / 0.08) * 0.14 : 1;
-  const text = w[0].replace(/[".,?!]/g, "").toUpperCase(), num = /\d/.test(text) || ["SIX", "HUNDRED", "TWENTY", "TONS", "SIXTY"].includes(text);
+  const text = w[0].replace(/[".,?!]/g, "").toUpperCase(), num = /\d/.test(text) || ["ONE","TWO","THREE","FOUR","FIVE","SIX","SEVEN","TEN","TWENTY","THIRTY","HUNDRED","THOUSAND","MILLION","BILLION","TRILLION","1993","2012","2024","2026"].includes(text) || /^\$/.test(text);
   return (
     <AbsoluteFill style={{ justifyContent: "flex-start", alignItems: "center", top: "62%" }}>
       <div style={{ fontFamily: "Arial Black, Arial, sans-serif", fontWeight: 900, fontSize: num ? 124 : 104, color: num ? "#ffd23a" : "#fff", transform: `scale(${pop})`,
