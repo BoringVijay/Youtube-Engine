@@ -61,7 +61,7 @@ def voice():
     if not os.path.exists(mp3):
         budget.check(JOB, "fal_tts_1k_chars", len(tts) / 1000)
         res = fal.run("fal-ai/elevenlabs/tts/multilingual-v2", {"text": tts, "voice": "River", "stability": 0.45, "similarity_boost": 0.8,
-                                                              "style": 0.25, "speed": 1.1}, timeout=600, tag=f"{JOB}:voice")
+                                                              "style": 0.25, "speed": 1.15}, timeout=600, tag=f"{JOB}:voice")
         raw = mp3 + ".raw.mp3"
         fal.download(res["audio"]["url"], raw)
         budget.log(JOB, "fal_tts_1k_chars", len(text) / 1000, "fal")
