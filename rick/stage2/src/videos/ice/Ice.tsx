@@ -121,7 +121,7 @@ export const IceShort: React.FC = () => {
       {kit && <ShotView key="base" id={shotAt(f).id} alpha={1} kit={kit} />}
       {flash > 0 && <AbsoluteFill style={{ background: "#ffffff", opacity: flash }} />}
       <Caption f={f} />
-      <Audio src={staticFile("ice/voice.mp3")} />
+      <Audio src={staticFile("ice/mix.mp3")} />
     </AbsoluteFill>
   );
 };
@@ -135,10 +135,10 @@ const Caption: React.FC<{ f: number }> = ({ f }) => {
   const w = WORDS[i];
   if (t > w[2] + 0.35) return null; // clear in longer pauses
   const age = t - w[1], pop = age < 0.08 ? 0.86 + (age / 0.08) * 0.14 : 1;
-  const text = w[0].replace(/[".,?!]/g, "").toUpperCase();
+  const text = w[0].replace(/[".,?!]/g, "").toUpperCase(), num = /\d/.test(text) || ["SIX", "HUNDRED", "TWENTY", "TONS", "SIXTY"].includes(text);
   return (
     <AbsoluteFill style={{ justifyContent: "flex-start", alignItems: "center", top: "62%" }}>
-      <div style={{ fontFamily: "Arial Black, Arial, sans-serif", fontWeight: 900, fontSize: 104, color: "#fff", transform: `scale(${pop})`,
+      <div style={{ fontFamily: "Arial Black, Arial, sans-serif", fontWeight: 900, fontSize: num ? 124 : 104, color: num ? "#ffd23a" : "#fff", transform: `scale(${pop})`,
         WebkitTextStroke: "14px #000", paintOrder: "stroke fill", letterSpacing: 1, textShadow: "0 6px 0 rgba(0,0,0,0.35)" }}>{text}</div>
     </AbsoluteFill>
   );

@@ -63,5 +63,8 @@ const CORE: ShotPart[] = [
 // all sections, sorted by start frame; ids are 1-based positions
 export const SHOTS: ShotDef[] = [...CORE, ...SHOTS_A, ...SHOTS_B, ...SHOTS_C].sort((x, y) => x.a - y.a).map((s, i) => ({ ...s, id: i + 1 }));
 export const TOTAL = VO_END;
+/** shot boundaries (frames) that play as portal fly-throughs instead of hard cuts (Afterhour flow study: <= 3 hard cuts a minute) */
+const PORTAL_T = [12.4, 14.3, 19.6, 22.2, 30.48, 34.4, 42.5, 48.8, 51.1, 54.7, 60.2, 62.2, 66.7];
+export const PORTALS = new Set(SHOTS.map((x) => x.a).filter((a) => PORTAL_T.some((t) => Math.abs(a - t * FPS) <= 3)));
 export const shotAt = (f: number) => SHOTS.find((s) => f >= s.a && f < s.b) ?? SHOTS[SHOTS.length - 1];
 

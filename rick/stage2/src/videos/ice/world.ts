@@ -13,7 +13,7 @@ import { LIGHTS, LightPreset } from "../bridge/lights";
 import { NOINK } from "../bridge/ink";
 import { Pool, Actor, Fx } from "../bridge/cast";
 import { Pen, bodyFront, fxContact, FrontOpts } from "../bridge/toon";
-import { SHOTS, FPS, camAt, ShotDef, Light, Spot } from "./story";
+import { SHOTS, FPS, camAt, ShotDef, Light, Spot, glide, PORTALS } from "./story";
 import { buildA } from "./sets/a";
 import { buildB } from "./sets/b";
 import { buildC } from "./sets/c";
@@ -328,6 +328,12 @@ export class World {
   update(id: number, f: number, cam: THREE.PerspectiveCamera, scene: THREE.Scene) {
     const s: ShotDef = SHOTS[id - 1], P = L[s.light];
     const c = camAt(s, f);
+    // never a dead-still frame: slow creep toward the look point (2 % of the distance per second, max 12 %)
+    const creep = Math.min(0.12, ((f - s.a) / FPS) * 0.02);
+    // portal transitions: dive into the look point over the last frames of a shot, emerge from inside the next one
+    const PF = 11, dIn = PORTALS.has(s.b) && s.b - f <= PF ? 1 - (s.b - f) / PF : 0, dOut = PORTALS.has(s.a) && f - s.a < PF ? 1 - (f - s.a) / PF : 0;
+    const dv = Math.max(glide(dIn), glide(dOut)), k = creep + (1 - creep) * 0.86 * dv;
+    c.pos = c.pos.map((v, i) => v + (c.look[i] - v) * k) as typeof c.pos; c.fov *= 1 - 0.3 * dv;
     cam.position.set(...c.pos); cam.up.set(0, 1, 0); cam.lookAt(...c.look); cam.rotateZ(c.roll);
     cam.fov = c.fov; cam.near = 0.05; cam.far = 1500; cam.updateProjectionMatrix(); cam.updateMatrixWorld();
     cam.layers.enable(NOINK);
