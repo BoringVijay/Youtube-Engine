@@ -1,384 +1,243 @@
-# Rick Shots: the craft rulebook
+# Rick Shots: the craft rulebook (v2)
 
-Agreed with Vijay on 2026-11-14, after the Emu War pilot scored 5/10. Built from an outside critic's rulebook, Vijay's remake notes and my own post-mortem.
+Rewritten 2026-11-15. Version 1 had grown by appending, and its sections contradicted each other (length, pace, captions, critic, animation method). This version is one consistent set of rules. The old text is in git history.
 
-**Where this sits.** This file holds the craft rules for every video and wins over anything older. `bible.md` holds the channel identity (penguin universe, house palette, money, topic lanes). `rick/references/` is the stage manual. When two files disagree, this one wins.
+Evidence behind it:
+- The teardown of the reference channel: 151 videos, `creative/references/winners/ricksclips3000/`.
+- The measured look reports: 32,337 frames, `creative/skills/cartoon-3d-short/references/reports/`.
+- Vijay's notes on the Emu War pilot (rated 5/10) and his decisions of 14-15 Nov.
 
-**The one-line diagnosis of the pilot:** it illustrated sentences instead of staging scenes. Every rule below pushes from "picture of the sentence" to "something happens, someone reacts, the camera moves".
+When this file and any other disagree, this file wins.
 
-Three layers:
+## 0. North star
 
-| Layer | What it holds | Changes |
-|---|---|---|
-| Craft rules | This file | Rarely, from evidence |
-| Channel identity | `bible.md` | Per series |
-| Per-video brief | `rick/projects/<slug>/brief.md` (template in section 16) | Every video |
+**Premium execution, unhinged creativity.** The reactions we design for:
+- "this is too premium for YouTube"
+- "wait, I didn't know this"
+- "who does that?"
+- "WTF is happening"
+- "oh my god 😂"
 
----
+**The look:** flat 2D doodle characters living in a painted 3D world, as close to the reference grammar as we can get.
 
-## 0. How a video gets made (gates)
+**What makes it ours** (the reference doesn't do these):
+1. **Background chaos.** Things happen behind the story that nobody on screen acknowledges.
+2. **The penguin hunt.** Every video hides two penguin details, one obvious and one subtle. The pinned comment asks who found both. It gives people a reason to rewatch and to comment.
+3. **Five lanes**, not one: what-if, apocalyptic and survival, how-it-really-works, exploration, weird true stories.
+4. **A recurring face.** Mukluk-style running characters that cross videos (a dog, a smug bird, the same unlucky everyman) so regular viewers get rewarded.
 
-Problems are cheapest on paper. The pilot found them at the final render, which is the most expensive place.
+## 1. How a video gets made
 
-1. **Brief + facts list** (section 16), with 5 to 8 sourced weird true facts. I write it.
-2. **Two-column script** (section 3). **Gate 1: Vijay approves.**
-3. **Storyboard:** one stage still per beat, rendered from the real sets and cast. Costs $0. **Gate 2: Vijay approves.**
-4. **Rough animatic:** half resolution, real timing, scratch voice, blocking and camera, no polish. Costs $0. **Gate 3: Vijay approves.**
-5. **Final voice, hero shots, full render.**
-6. **Self QA** (section 15): automatic technical checks, then the independent critic (Gemini watches the render and scores it against section 15). At most 2 automatic fix-and-re-render loops, then a human looks.
-7. **Vijay sees the final.** Then upload.
+Problems are cheapest on paper, so every stage has a gate.
 
-Posting pace: **2 to 3 Shorts a week.** That is the budget the rules are sized for.
-
----
-
-## 1. Hard rules (auto-reject)
-
-The render fails on any of these. No "good enough".
-
-1. A shot held over 2 s with nothing moving (character, camera or effect).
-2. A character in frame that isn't moving at all (no breathing, blinking or weight shift).
-3. A gap, seam or halo at any joint: shoulder, elbow, wrist, hip, knee, neck.
-4. A malformed person or creature: missing or extra limbs, broken legs, torn textures, half-drawn features.
-5. The same character in two different designs in one video.
-6. The camera showing the edge of the set: backdrop edges, floating strips, empty void floor.
-7. A prop in a different style from the characters, or with a white cutout halo.
-8. Goofy or comic music under a tense or action moment.
-9. A crowd, army or swarm under 100 visible bodies in its wide shot.
-10. One character doing what the story says a group did.
-11. Heads over one third of body height, or the main subject dead centre in more than 1 in 4 shots.
-12. A big action with no reaction shot within 2 s.
-13. A first frame with no motion and no conflict.
-14. Any fact on screen that contradicts the facts list.
-15. Runtime outside 40 to 50 s unless the brief allows it.
-16. A joke that only works if you already know a niche reference.
-
----
-
-## 2. Story structure
-
-Every video runs **hook, setup, escalation, twist, punchline, loop.** Story first, visuals second.
-
-| Time | Beat | Job |
-|---|---|---|
-| 0 to 2 s | Hook | Open on the most extreme moment. The line states the absurd claim. |
-| 2 to 8 s | Setup | Who, where, what's at stake. Max 3 lines. |
-| 8 to 30 s | Escalation | 3 events, each bigger than the last, each ending in a failure, surprise or reversal. |
-| 30 to 38 s | Twist | A true fact nobody sees coming that changes how the story reads. |
-| 38 to 45 s | Punchline | One number or quote that lands the joke. Hit-stop plus a sting. |
-| 45 to 48 s | Loop | The last line flows into the first. |
-
-- The hook visual is the climax, not the intro. Never open on a character standing and smiling.
-- The hook line is under 12 words and holds a contradiction ("Australia declared war on birds. The birds won.").
-- Stakes: show what's lost if the hero fails. Viewers need someone to root for.
-- Rule of three for escalation: more enemies, higher stakes, worse failure each time.
-- A new "wait, what?" every 5 to 7 s: new info, new place, a reversal or a gag.
-- Show, don't tell. If the voice says it happens, the screen shows it happening. Never a character standing next to the idea.
-- The twist is true and specific: an absurd official reaction, what happened after, a cost, a quote. Never "and that's history".
-- End on the strongest image, never a recap.
-
----
-
-## 3. Script and voice
-
-**The two-column script is the core document of every video.**
-
-| VO line (with emotion, pace, stressed word) | On screen: action + camera + SFX + music cue |
-|---|---|
-
-A line with nothing happening on the right is cut or rewritten.
-
-- About 120 words for 45 s (2.5 to 3 words a second).
-- One idea per line. The punch word goes last.
-- Kill filler connectors ("Then", "Next", "You see"). Max one per three lines.
-- Specific numbers beat adjectives: "20,000 emus", not "lots of emus".
-- Deadpan narrator. Plays the absurd dead serious and lets the visuals carry the joke.
-- 2 to 3 gaps with no voice: silence before the big moment, a sting, a reaction beat.
-- Characters get 1 to 3 short lines ("Fire!", "Sure.") in voices clearly different from the narrator.
-- Write 2 to 3 hook options per video and log which one ran.
-
----
-
-## 4. Comedy (Vijay: "relatable, meme funny, most people laugh")
-
-The pilot wasn't funny. Facts read in a deadpan voice are not jokes on their own.
-
-- **Relatable beats clever.** The best gags are things everyone has done or seen: ignoring a ringing phone, pretending to work when the boss walks in, the group project where one person does everything, confidently doing the wrong thing, the "it's fine" face while everything burns.
-- **The universal test:** would a 15-year-old in India and a 45-year-old in the US both laugh without explanation? If it needs context, cut it (hard rule 16).
-- **Every gag earns its place.** It lightens the mood, shows a character's personality or makes a fact land harder. A joke that only decorates the shot gets cut.
-- **Characters behave like real people on a bad day.** The official scratching his butt, picking his ear or asleep under a newspaper while the phone rings. The soldier sweating, then a slow facepalm. The smug animal chewing and staring into the camera.
-- **Meme formats as staging, never as copied memes:** expectation vs reality, the silent reaction stare, "nobody: / the emus:", the slow zoom on a guilty face, the freeze frame record-scratch. Original art and audio only, no ripped meme clips or sounds.
-- **Gag toolkit:** background gags, 1 to 2 s cutaway gags, expectation vs reality, rule of three with a twist on the third, a deadpan narrator over chaos, a callback at the end, a recurring smug side character.
-- **Gag density:** at least one laugh beat every 8 to 10 s, never on a tragic beat.
-- **Punch up, never at victims.** Tragedies get a respectful tone or a different topic.
-
-**Weird true facts first.** Before writing, dig up 5 to 8 weird true facts and use the best 2 or 3. They hide in: absurd official reactions (parliament jokes, memos, rubber-stamp approvals), expectation vs reality, ridiculous numbers (cost per result, ratios), real quotes, animals acting with human-like intent, what happened after (repeats, refusals, sequels), a link to today.
-
----
-
-## 5. Animation and motion
-
-The pilot's biggest gap. When in doubt, add motion.
-
-- Something visibly changes every 1.5 to 2 s: a cut, a camera move, a new action or an effect.
-- Every character in frame idles: breathing, a blink every 2 to 4 s, small weight shifts, head turns.
-- Every action has anticipation, action and follow-through. A salute winds up, snaps and settles.
-- Real walk and run cycles for anything that crosses the frame. Never slide a static sprite or tilt it to fake running.
-- Secondary motion: feathers, hats, clothes, dust, grass sway.
-- Expressions change on the beat, with squash and stretch on big reactions (jaw drop, eyes pop, hat flies off).
-- Mouth flaps whenever a character talks, timed from the voice's word timings.
-- Action needs effects: muzzle flash, smoke, dust puffs, shell casings, speed lines, impact sparks.
-- Impact frames: freeze 2 to 3 frames on the biggest hits, one white flash frame on gunfire or explosions.
-- Camera shake on every impact, scaled to size: light for one shot, heavy for volleys and stampedes.
-- One slow-motion hero moment per video, with a speed ramp in and out.
-- Crowds: offset each member's timing and vary their speed so nothing moves in sync.
-- Transitions: cuts, whip pans, match cuts, smash cuts. No plain crossfades.
-
-**Hybrid animation (Vijay, 2026-11-14).** Most shots are built in the code stage. The 2 to 3 biggest moments per video (the hook, the hero action beat, maybe the punchline) can be AI video. Hero-shot rules:
-- Stage the shot in our engine first and render its key frame, then animate that frame with an image-to-video model. The characters and set stay identical to the rest of the video.
-- Max 3 hero shots, each 3 to 5 s, about $1 to $3 a video on fal. Check the per-video fal cap before submitting.
-- A hero shot that drifts off-model (faces, proportions, colours) is rejected like any malformed asset.
-
----
-
-## 6. Characters and rigs
-
-- Head max one third of body height. Bodies must read at phone size.
-- Original designs only. The pilot's round-headed cast read as Cyanide & Happiness; the recurring cast gets redesigned. No imitating any known style.
-- **Character pack before any scene:** front, 3/4 and side views, an emotion sheet (6 to 8 expressions), a mouth sheet (closed, open, wide, O). One image per sheet, one character per image, generated from the master design. No back view unless a story needs it.
-- One design per character for the whole video. Close-ups and wides match.
-- **Rig rules:** layers overlap at every joint by 10 to 15% of the limb width, the pivot sits at the joint centre, sleeves or cuffs cover the seam. Test the full rotation range for gaps and halos before animating. Cut parts out against a key colour far from any colour in the character, never grey.
-- Props held in a hand are attached to the hand, never floating near it.
-- **Animals:** start from a real-animal reference, then stylise. Check anatomy: leg count, which way joints bend (emu knees bend backwards), neck length. Expressions are drawn for the view the animal is shown in. No front-facing heads on side-view bodies.
-- Silhouette test: every character is recognisable as a solid black shape.
-- One personality trait per character, shown through motion: the cocky major, the lazy official, the smug emu.
-- The "enemy" side gets a lead character with a face viewers remember.
-
----
-
-## 7. Scale, staging and camera
-
-- Battles, crowds, armies and swarms show real scale: hundreds to thousands of bodies in the wides, layered in foreground, midground and background, with dust or haze behind.
-- Opposing sides get at least one shot facing off in the same frame.
-- Groups act as groups: several shooters, several reactions, overlapping action.
-- In every 10 s: at least one wide, one medium and one close-up. Plus specials: a low angle for power, a high angle for defeat, POV, over-the-shoulder, inserts (finger on trigger, ringing phone).
-- Composition: rule of thirds, leading lines, foreground framing. Dead centre in at most 1 in 4 shots.
-- The camera is always alive: a slow push-in on tension, a pull-out on reveals, handheld wobble in action. It locks off only for a deadpan beat, 1.5 s max.
-- Foreground elements (grass, fence posts, a gun barrel) pass the camera to sell depth.
-- 9:16 safe zones: key action in the middle 60% of the height, the bottom 20% kept for captions and UI, the top 10% clear.
-- Cut on every location change and into every close-up card. Glide only within one location. (Pilot lesson: glides between locations fly over empty ground.)
-
----
-
-## 8. Sets, world and props
-
-- Build every set wider than the camera ever sees. Check the first and last frame of every camera move for edges, void or seams.
-- At least 3 depth layers per set, with parallax on camera moves.
-- At least 3 clearly different locations per video.
-- Props match the character style and are period-accurate. One design per prop per video.
-- **Text on props is a separate overlay drawn in code,** never generated inside an image. Legible, spelled right, period-fitting font.
-- World details tell the story: crushed wheat, footprints, shell casings piling up.
-- Walls and hedges are thin, never deep slabs that show their top from above.
-
----
-
-## 9. Colour and lighting
-
-Every video gets a colour script: each act has its own palette and time of day, matched to the emotion.
-
-| Story moment | Light and palette |
-|---|---|
-| Setup, confidence | Bright midday, saturated |
-| Tension, ambush | Golden dusk, long shadows, rim light |
-| Defeat | Desaturated, cool blue-grey |
-| Office and comedy gags | Warm interior light |
-| Reveal and punchline | High contrast, clean |
-
-- Characters always separate from the background: rim light, or clearly darker or lighter values.
-- No one-hue videos. Add a complementary accent (blue sky against orange earth).
-- Shadows fall the same way in every shot of a scene.
-- Effects light the scene: a muzzle flash lights the shooter's face.
-
----
-
-## 10. Music and sound
-
-- **Mock-epic rule:** absurd stories land harder when the music is dead serious. War drums and brass under battles, played completely straight.
-- A cue sheet per video, by beat: tension (low drums, strings), action (percussion, brass), defeat (slow, sparse), comedy (stings only).
-- Comic stings only on punchlines, under 1 s each. Never under tension or action.
-- 0.5 to 1 s of total silence before a big reveal or "Fire!".
-- Every visible action has a sound: footsteps, gunfire, squawks, a phone, a stamp, paper, wind.
-- An ambient bed per location (outback wind, an office clock).
-- A whoosh or bass hit on every hard cut.
-- Music ducks 8 to 12 dB under the voice.
-- Loudness -14 LUFS, peaks under -1 dB. The voice is clear on a phone speaker.
-- Original or licensed audio only. Never ripped trending or meme audio.
-
----
-
-## 11. Voice and performance
-
-- **Narrators rotate by format (Vijay, 2026-11-14).** A voice library of 5 to 8 narrators: deep and serious for mock-epic, calm and eerie for bizarre true stories, warm for what-ifs, fast and hyped for gaming. Chris stays in the library. Each format's voice is chosen by audition and stored in `rick/voices.json`.
-- Direct every line: emotion, pace and the stressed word are marked in the script.
-- Vary pace: faster through action, slow right down before the punchline, then a beat of silence.
-- Natural rhythm: breaths, short pauses after big numbers, contractions.
-- A pronunciation dictionary in the repo for places, foreign words, numbers and era terms.
-- Character voices clearly differ from the narrator. One voice ID per recurring character, stored with the character.
-- Listening check before render: play the voice alone. Any robotic, mis-stressed or rushed line is regenerated.
-
----
-
-## 12. Captions and on-screen text
-
-- 2 to 3 words per chunk, timed to the speech.
-- Bold heavy font, white with a black stroke, slightly bigger than the pilot.
-- Key words in **yellow** (numbers, names, action words like "FIRE!", "JAMS").
-- About 65 to 70% down the frame, above the YouTube UI. Never over faces or the key action.
-- Pop-in (scale 90 to 100%), no fades.
-- Big numbers get their own full-screen graphic with a rolling counter.
-- Dates and places appear as a stamp or typewriter label ("WESTERN AUSTRALIA, 1932").
-- One spelling standard per video (kilometres for an Australian story).
-
----
-
-## 13. Facts and accuracy
-
-- Every factual claim comes from a source, listed in the brief with links.
-- The order of events matches the sources. (Pilot error: the gun jammed at the dam ambush, not the first battle.)
-- When sources disagree, make it a beat ("50 dead. Maybe 500. Nobody agrees.").
-- Period accuracy for uniforms, weapons, vehicles and signage.
-- Dramatise, never invent. Obvious comedy gags are fine. Fake numbers or fake quotes are not.
-- No gore. Violence stays cartoony or off-screen (advertiser-friendly).
-
----
-
-## 14. Asset library
-
-Everything reusable lives in `rick/library/`. One bad asset ruins every video it appears in, so the library holds only assets that pass QA.
-
-- Nothing enters until it passes asset QA: correct anatomy, no joint gaps or halos across the full rotation range, matches the style guide.
-- Fix at the source: when an asset fails, fix it in the library, bump its version, and future videos use the fix. Never patch inside one video only.
-- Retire broken assets. The pilot's emu (torn chest, mismatched front heads) is fixed or deleted before reuse.
-- Each asset stores: ID, version, the pack (views, emotions, mouths), rig with joint limits, personality note, style tags, voice ID if it speaks, and the videos it was used in. Animals also store a run cycle, an idle cycle and the real-animal reference.
-- **Reuse the rig, not the look:** new costume, prop or colour for a new story.
-- **Recurring cast on purpose:** 3 to 5 characters viewers learn to recognise (the cocky officer, the lazy bureaucrat, the smug animal).
-- Variety caps: the same background at most once every 5 videos without a new time of day or angle. The same unchanged hero character at most 2 videos in a row. Every video adds at least one new asset.
-- YouTube can limit monetisation for mass-produced, repetitive content. Real variety in story, format and visuals protects the channel.
-
----
-
-## 15. QA before Vijay sees it
-
-**Automatic technical checks** on the render (frame sampling at 2 fps): static shots over 2 s, joint gaps and halos, set edges and void, captions out of the safe zone, runtime, loudness and peaks, caption timing vs voice.
-
-**Independent critic:** Gemini watches the full render and scores it against this checklist. I don't grade my own work.
-
-- [ ] First frame has motion and conflict
-- [ ] No shot static over 2 s; every character idles or acts in every frame
-- [ ] No joint gaps, seams or halos; anatomy correct and consistent
-- [ ] No set edges, void or floating pieces at any camera position
-- [ ] Props match the style; all text legible and spelled right
-- [ ] Crowds at full scale; group actions done by groups
-- [ ] Wide, medium and close shots in every 10 s; centre framing at most 1 in 4
-- [ ] Camera shake and effects on every impact; a reaction within 2 s of every big action
-- [ ] Colour shifts between acts
-- [ ] Music matches each beat; no comic music under tension; SFX on every visible action
-- [ ] Captions 2 to 3 words, readable, never over faces
-- [ ] Every fact matches the facts list
-- [ ] At least one laugh every 8 to 10 s, all passing the universal test
-- [ ] Twist present; the ending loops to the start
-- [ ] Runtime 40 to 50 s
-- [ ] Sound-off test: the story still makes sense with no audio
-- [ ] Swipe test: watched on a phone at 1x, no moment where you'd swipe
-
-Max 2 automatic fix-and-re-render loops, then a human decides.
-
----
-
-## 16. Per-video brief template
-
-```
-TITLE:
-FORMAT: mock-epic / what-if / bizarre true story / hero hype / gaming fact / music-only
-LENGTH: 40-50 s
-HOOK LINE (under 12 words, with a contradiction), 2-3 options:
-HOOK VISUAL (the most extreme moment):
-STAKES (what's lost if they fail):
-CAST FROM LIBRARY (asset IDs as they are):
-CAST TO RESKIN (library ID + new costume, prop or colour):
-NEW ASSETS (name, real reference, design note, personality in motion):
-LOCATIONS (min 3; library ID or new; time of day + palette):
-VOICES (narrator by format + emotion; character voice IDs):
-BEATS (VO line | on-screen action | camera | SFX | music cue):
-ESCALATION (3 events, each bigger):
-TWIST (true, specific):
-PUNCHLINE (number or quote):
-LOOP LINE:
-WEIRD TRUE FACTS (5-8 with sources; mark the 2-3 to use):
-GAGS (relatable background gags, cutaways, expectation vs reality):
-HERO SHOTS (max 3, what each is, est. cost):
-PENGUIN (the visible egg + optional subtle one):
-FACTS LIST (numbers, dates, names, sources):
-COST ESTIMATE (Google + fal):
-```
-
----
-
-## 17. Formats (rotate so the channel never feels like one template)
-
-| Format | Feel | Narrator | Example |
+| # | Stage | Output | Gate |
 |---|---|---|---|
-| Mock-epic war doc | A serious trailer for a silly event | Deep, serious | The Emu War |
-| What-if | Survival, apocalypse, time travel | Warm | You wake up in 1500 AD |
-| Bizarre true story | Deadpan, weird visuals | Calm, eerie | The town that banned dying |
-| Hero hype | Anime-style build to one big moment | Hyped | The underdog's last stand |
-| Gaming fact | Fast, punchy, meme energy | Fast | The bug that became a feature |
-| Music-only | No voice, pure visual storytelling | None | A 30 s wordless chase |
+| 1 | Topic | Anti-obvious test; Demand and Whitespace measured on YouTube | Vijay picks |
+| 2 | Paper | 10 hooks scored; 3 script directions; one two-column script with facts and sources | Vijay approves the script |
+| 3 | Voice | Final narration recorded, word timings fixed by hand | Listening check |
+| 4 | Storyboard | One engine still per beat, real cast, sets and light | Vijay approves the frames |
+| 5 | Animatic | Half-resolution full motion with the real voice | Vijay approves pace and gags |
+| 6 | Final | Full render, sound, captions, QA | Vijay approves, then scheduled upload |
 
-Never the same format three times in a row.
+**The critic is Claude.** At every stage Claude scores the work against section 13, looks at every still and at frame strips of the whole cut, compares against reference frames with numbers (not taste), and keeps fixing until every area scores 8 or more. The scores and what changed go to Vijay with the work. A second opinion from Gemini is optional, never the judge.
 
----
+**Voice comes before picture.** Everything on screen is timed to the spoken words, so the voice is locked first.
 
-## 18. Running it as a channel
+## 2. Hard rules (any one fails the render)
 
-**48 hours after every post:** pull viewed vs swiped away, average percentage viewed and the retention graph. Mark every big drop and log which beat was on screen. Log what kept people. One drop is noise; the same drop in 3 videos becomes a rule here. Fix asset problems in the library, not the video.
+1. No protagonist. Every video has a person (or animal) doing something that looks stupid or insane, with stakes.
+2. A fact on screen or in the voice that isn't in the sourced facts list.
+3. A frame held with nothing moving: every hold creeps (push-in), every character blinks and breathes.
+4. A broken character: gaps at joints, torn shapes, two designs for one person, a head over one third of body height.
+5. One actor doing what the story says a group did. Crowds show real scale (100+ in the wide).
+6. The camera showing a set edge, a void, or a blank wall filling the frame.
+7. A sparse frame: fewer than 5 readable things in a medium or wide shot (see the density budget in section 7).
+8. The main subject dead centre in more than 1 shot in 4.
+9. A big action with no reaction within 2 seconds.
+10. Comic music under a tense beat, or music that never stops.
+11. The voice sped up, or its pauses cut, to hit a length. Rewrite the script instead.
+12. Text inside a generated image. All readable text is drawn in code.
+13. A joke that needs niche knowledge. Test: would a 15-year-old in India and a 45-year-old in the US both get it?
+14. Anything copied from the reference channel: stories, lines, characters, shots. Never name it in a video.
+15. Real penguin IP, ripped trending or meme audio, an API key in chat.
 
-**Release rules:** title and first frame tell the same story as the hook line. Keep `rick/used-topics.md` so no story or fact repeats. Every 10 videos, review the 3 best and 3 worst side by side and update this rulebook.
+## 3. Story template
 
----
+Every script fits these beats. Score each 1-10 before writing.
 
-## 19. Known failure modes on new topics
-
-| Likely failure | Why | Prevention |
+| Beat | Share | Job |
 |---|---|---|
-| Characters standing in an empty scene while the narrator talks | Illustrating sentences | Two-column script |
-| One background reused for every beat | One set, recycled | Min 3 locations, vary time of day |
-| Malformed machines, vehicles, hands, animals | Image models break on anatomy | Real reference first, anatomy check per asset |
-| Cloned-looking crowds | Duplicate sprites, same timing | Vary scale, tint, pose and timing |
-| Stiff talking close-ups | No mouth shapes | Mouth sheet in every pack |
-| Music fighting the mood | Picked by topic, not beat | Cue sheet per beat |
-| Facts in the wrong order | Written from memory | Sourced facts list |
-| Recap endings | Model defaults to summaries | Twist, punchline and loop are required |
-| Style drift between shots | Shots generated separately | Locked pack + style reference on every generation |
-| Garbled text on signs | Image models can't spell | Text overlays in code |
-| Abstract topics with nothing to show | No physical action | Personify it; metaphor scenes, not diagrams |
-| Not funny | Facts read deadpan aren't jokes | Comedy section; universal test; gag density |
-| Same template every video | One format | Rotate formats |
-| Comedy on a sad topic | Jokes at victims | Punch up only |
+| Hook | ~6 % | Line 1, 8-16 words: someone does something that looks insane, with stakes. Frame 1 shows the act. Alternatives: "If you X, you'd Y", or "X is illegal, yet Y" |
+| Setting | ~12 % | Present tense, place, year, stakes. "You see," can open it |
+| Doubters | ~12 % | Someone mocks the hero with one meme-able line. This is the main comedy slot |
+| Escalation | ~25 % | 3-5 steps, each bigger, with numbers that grow or shrink. Light shows time passing |
+| Wait-what | ~5 % | The viewer's question, said out loud |
+| Mechanism | ~25 % | The real explanation through an everyday analogy that gets its own mini-scene |
+| Payoff | ~15 % | Ironic reversal, ideally the doubter undone by their own choice. A physical spectacle on the last word, cut mid-motion so it loops |
 
-## 20. Proven by the reference channel teardown (2026-11-15)
-Source: `creative/references/winners/ricksclips3000/` (151 videos studied; 29 explainers with a 9.3M median views).
-- Every video needs a **protagonist doing something that looks stupid or insane, with stakes**. A faceless explainer of the same fact gets 2-3 % of the views.
-- True or "this really happened" mechanisms beat invented worlds. A what-if must end by handing the viewer a moral choice ("would you?").
-- Write in a **doubters' beat** with one meme-able quip. That is our main comedy slot, and the doubter gets the ironic payoff at the end.
-- Escalate with **numbers that grow or shrink**, and show time passing with light (day → golden → night-blue → warm interior).
-- Give the "you see" analogy its **own mini-scene**. End on a **physical spectacle on the final word**, cut mid-motion so it loops.
-- Illustrate figures of speech literally ("his face goes purple" → he turns purple).
-- Our edge over the reference: background chaos and second-watch gags (theirs are clean), plus our survival, apocalyptic and exploration lanes (they have almost none).
+- **The hero should be vindicated.** The strongest reference videos have a hero who looks wrong and turns out right.
+- **What-ifs** run in second person and end by handing the viewer a moral choice ("would you?").
+- **True beats invented.** The mechanism must be real. Characters may be composites; say so in the description.
+- A new "wait, what?" every 5-7 seconds: new information, a new place, a reversal or a gag.
 
-## 21. Decisions locked by Vijay (2026-11-15)
-- **Picture:** code-built 3D world plus code-drawn 2D characters (the bridge engine in `creative/skills/cartoon-3d-short/`). AI video only for at most 2 effect shots, only when code can't do them.
-- **Captions:** reference style. One white bold word (two at most), black outline, about 65 % of the height. This replaces the "2-3 words with yellow keywords" rule.
-- **Music:** an original score synthesized in code. Lyria is the fallback.
-- **Voice:** ElevenLabs on fal, chosen by a measured similarity test against the reference narrator, then a blind pick.
-- **Order:** The City the Ice Ate (Camp Century), then the Emu War remake.
+## 4. Script and voice
+
+- **Length:** 55-65 s. **Pace:** 3.5-3.9 words a second, so about 205-240 words. No dead air, no intro, no outro, no call to action. The voice starts on frame 1.
+- **Sentences:** short, plain spoken English, contractions, one idea each, punch word last. About 13 words on average.
+- **"You see,"** is the house pivot. Use it once or twice.
+- **Specific numbers** beat adjectives.
+- **Quips** from characters are read by the narrator in a slightly different tone, as the reference does. No separate character voices unless a gag needs one.
+- **The two-column script** is the core document: voice-over | picture | background gag. A line with nothing happening on the right is cut.
+- **Narrator:** one bright, expressive male voice, matched to the reference by measurement (median pitch about 190 Hz, wide range, deadpan delivery). ElevenLabs, chosen by test and a blind pick. Multilingual v2 for steady narration, v3 only for acted lines.
+- **Listening check** before any picture work: a robotic, mis-stressed or rushed line is regenerated.
+
+## 5. Comedy
+
+- **Relatable beats clever.** The best gags are things everyone has done: ignoring a ringing phone, pretending to work, "it's fine" while everything burns.
+- **Three slots per video:**
+  - the doubter's quip
+  - one literal illustration of a figure of speech ("his face goes purple" → he turns purple)
+  - one callback at the end
+- **Background gags** in at least half the shots. They never get a close-up and nobody reacts to them.
+- **Deadpan narrator.** He plays the absurd dead serious.
+- **Punch up, never at victims.** Tragedy gets respect or a different topic.
+
+## 6. Picture: how it's built
+
+**The world and the characters are built in code**, the way the reference is built. This is what keeps characters identical in every shot and stops the "AI look".
+
+- **Engine:** `rick/stage2/` (three.js inside Remotion): two-tone shading, painted textures, ink pass, lens blur, bloom, grade.
+- **Characters:** drawn in code (section 8).
+- **Painted art:** Nano Banana Pro makes textures, sky and far-background paintings, posters and labels (text added in code).
+- **Hero props:** the 3-6 objects a story turns on are real 3D models, generated image-to-3D and then inked and shaded by the engine. Small props are code primitives and CC0 kit pieces.
+- **AI video:** at most 2 effect shots per video, and only when code can't do the shot. Start frame rendered by the engine.
+
+## 7. Picture: what a frame needs
+
+**Density budget.** The reference's frames are full. Ours must be too.
+- A medium or wide shot has at least: 5 readable props, 1 foreground element passing the lens, 1 readable sign or label, 1 light source in frame, and 3 depth layers.
+- A close-up has a designed background (not a blank wall) and one prop that tells you where we are.
+
+**Light is the storyteller.**
+- Day for normal, golden for change, night-blue for danger or scheming, warm interior for the reveal.
+- Warm key against cool shadow in every frame. Shadows are coloured and lifted, never black or grey.
+- Interiors get pools of warm light from visible lamps, with cool ice or night beyond them.
+- Day median brightness about 0.57; saturated colour; no crushed blacks.
+
+**Camera (measured from the reference).**
+- It almost never stops: about 65 % of frames move, and holds keep pushing in.
+- Moves glide in and out over about 23 frames. No snaps. No hand-held wobble.
+- Impacts get a 6-8 frame kick that flips direction every frame.
+- Within one place the camera travels: follow an object, whip pan, fly through. Between places, cut or use a 6-8 frame dissolve.
+- Per 10 seconds: at least one wide, one medium and one close shot. 1-2 epic scale wides per video.
+- Depth of field on close and medium shots (about a third of screen time), focused on the eyes. Wides stay sharp.
+
+**Motion.**
+- Something visibly changes every 1.5-2 seconds.
+- Acting lands 0-3 frames before the word.
+- Walks are bouncy with planted feet. Blinks every 0.5-2.3 seconds.
+- Every action has effects: dust, sparks, speed lines, splashes, as flat 2D sprites in the 3D scene.
+- The ending is a physical spectacle.
+
+## 8. Characters
+
+- **Drawn in code** with the toon kit: bean heads, stick limbs, ink-dot hands, one continuous plum outline. About 3.5 heads tall. No gaps are possible because nothing is cut into layers.
+- **Identity comes from costume:** hats, hoods, moustaches, colours. Every character passes the silhouette test.
+- **Cast sheet first** for each video: every character, front view, three expressions. No two characters may be confused at phone size.
+- **Acting range:** 14 expressions, props in hand, sit, walk, fall, wave. New poses are added to the kit, never faked by tilting a card.
+- **One trait per character,** shown in motion: the cocky sergeant, the tired barber.
+- **A global cast:** varied skin tones, places and eras.
+- **Animals** get the same care: real anatomy first, then stylise.
+
+## 9. Sets and props
+
+- **Build a set kit, not one-off sets.** Rooms, tunnels, streets and landscapes come from reusable parts (walls, floors, ceilings, doors, windows, lamps, furniture), so each new video adds to a library.
+- Build wider than the camera sees. Check the first and last frame of every move.
+- At least 3 clearly different places per video, plus the analogy mini-set.
+- Period-accurate props. One design per prop.
+- **Penguin details:** one obvious, one subtle, premium-looking, with eyes, different every video (a brand, a sticker, a calendar, a constellation).
+- Colours: natural and varied. Blue only as a hint, never the theme.
+
+## 10. Sound
+
+- **Score:** original, synthesized in code, mock-epic and played straight. It follows the beats and leaves gaps. Lyria is the fallback.
+- **Effects:** every visible action has a sound. A whoosh on big camera moves. Half a second of silence before the biggest moment.
+- **Mix:** music and effects 5-10 dB under the voice, the whole mix at -14 LUFS, voice clear on a phone speaker.
+- Original audio only.
+
+## 11. Captions
+
+- Reference style: one word at a time (two at most), white, bold and heavy, black outline, at about 65 % of the height.
+- Hard swap on each word, timed to the voice. Never over a face.
+- Dates and places appear as a prop in the scene (a sign, a calendar, a newspaper), not as an overlay.
+
+## 12. Facts
+
+- Every claim has a source in the brief.
+- When sources disagree, use the cautious wording ("as early as").
+- Dramatise, never invent: composites and obvious gags are fine, fake numbers and fake quotes are not.
+- Politically live topics are told with dates and facts only.
+- No gore.
+
+## 13. The critic's scorecard
+
+Score each 1-10. Ship at 8 or more on every line.
+
+| Area | What a 10 looks like |
+|---|---|
+| Hook | Frame 1 shows the insane act; line 1 makes you need the answer |
+| Story | Every beat of the template lands; the hero is vindicated; the payoff is ironic |
+| Comedy | A laugh beat every 8-10 s; all pass the universal test |
+| Voice | Sounds human, right pace, no robotic line |
+| Characters | Consistent, expressive, acting on the word; no glitches |
+| Density | Every frame meets the budget; background gags present |
+| Light and colour | Warm against cool; light changes with the story; matches reference numbers |
+| Camera | Always alive, glides, right shot sizes; no dead holds |
+| Sound | Every action heard; music lands and leaves |
+| Continuity | Props, costumes, positions and light direction hold across cuts |
+| Second watch | Both penguins, at least 3 hidden gags, a loop that works |
+| Phone test | At phone size, sound off, the story still reads |
+
+Method: stills of every shot, frame strips of the full cut, side-by-sides with reference frames, and measured comparisons (brightness, saturation, ink density, camera speed).
+
+## 14. Lanes and formats
+
+| Lane | Shape |
+|---|---|
+| Weird true mechanism | He did X that looks insane; the real reason |
+| Survival | The obvious move kills you; the weird one saves you |
+| Apocalyptic | A true story that turns into "and today it would be worse" |
+| Exploration | A place with one impossible rule |
+| What-if | Second person, ends on "would you?" |
+
+Never the same lane three times in a row.
+
+## 15. Topics
+
+- **Anti-obvious test:** list what any chatbot suggests first, and ban it. Dig in court filings, old newspapers, manuals, patents, niche forums.
+- **Measure, don't guess.** Demand is the biggest Short on a sibling topic. Whitespace is the biggest Short on the exact premise, plus the count of 1M+ Shorts in the top 25 results. Keep them as separate scores. A topic needs 6 or more on both.
+- A topic with no protagonist and no real mechanism is rejected.
+
+## 16. Running the channel
+
+- **Title and first frame tell the same story as the hook.** Title patterns that work: "Why X...", "How X...", "The X That Y".
+- **Cadence:** 2-3 a week. Consistency beats bursts.
+- **Pinned comment:** the penguin hunt question.
+- **Description:** sources, and a note when a character is a composite.
+- **After 48 hours:** viewed-vs-swiped, average percentage viewed, where the drops are and which beat was on screen. One drop is noise; the same drop in 3 videos becomes a rule here.
+- **Every 10 videos:** the 3 best and 3 worst side by side, then update this file.
+- Variety protects monetisation: rotate lanes, casts, places and palettes.
+
+## 17. Money
+
+- Check `config/budget.json` before any paid step, and say the cost first.
+- Google credit: painted art, the occasional effect shot. fal: voice, hero 3D props.
+- Keys live in GitHub secrets. Google login is keyless.
+- GitHub Actions: renders run in parallel chunks; avoid wasteful reruns.
+
+## 18. Lessons that built these rules
+
+- **Emu War (5/10):** it illustrated sentences instead of staging scenes. Sliced AI characters tore at the joints. One shooter, no scale, music everywhere.
+- **Voice:** compressing pauses and speeding up 8 % made it robotic.
+- **First Camp Century stills:** correct style, but empty and flat. That's where the density budget and the light rules in section 7 came from.
+- **GitHub minutes:** an hourly job on a private repo burned the free tier.

@@ -438,7 +438,7 @@ const hatOn = (p: Pen, o: Outfit, hp: P2[], H: Blob, cx: number, hc: number, lig
 // ---------------- bodies ----------------
 export type Arms = [P2[], P2[]];
 /** held prop; for the hammer the number is the strike 0 (raised) .. 1 (struck) */
-export type Prop = null | "icecream" | "shako" | ["hammer", number];
+export type Prop = null | "icecream" | "shako" | ["hammer", number] | ["razor", number];
 
 const BUILD: Record<Build, { a: number; torso: number; legs: number; tw: number }> = {
   adult: { a: 118, torso: 1.1, legs: 1.4, tw: 0.8 },
@@ -537,6 +537,9 @@ export const bodyFront = (p: Pen, o: Outfit, opts: FrontOpts) => {
     } else if (prop === "icecream") {
       const S = sh(1);
       arms.push({ pts: [S, [tcx + 1.05 * T.a + 4 * u, S[1] + 0.45 * HH], [tcx + 0.5 * T.a, S[1] + 0.4 * HH]], front: true });
+    } else if (Array.isArray(prop) && prop[0] === "razor") { // arm up at head height, stroking up and down
+      const S = sh(1), k = prop[1], dy = 0.09 * HH * Math.sin(k * two);
+      arms.push({ pts: [S, [tcx + 1.2 * T.a + 14 * u, S[1] - 0.05 * HH], [tcx + 1.22 * T.a + 18 * u, S[1] - 0.62 * HH + dy]], front: true });
     } else if (Array.isArray(prop)) {
       const S = sh(1), k = clamp(prop[1], 0, 1);
       const E = lerp2([tcx + 1.1 * T.a + 10 * u, S[1] - 0.15 * HH], [tcx + 1.2 * T.a + 10 * u, S[1] + 0.3 * HH], k);
@@ -590,6 +593,11 @@ export const bodyFront = (p: Pen, o: Outfit, opts: FrontOpts) => {
     if (prop === "icecream") {
       p.poly([[hx - 8 * u, hy - 12 * u], [hx + 8 * u, hy - 12 * u], [hx, hy + 7 * u]], "#e0a35a", 1.8 * u);
       p.ell(hx, hy - 19 * u, 11 * u, 10 * u, "#f7c6d9", 2.2 * u);
+      p.dot(hx, hy, 5.5 * u);
+    } else if (Array.isArray(prop) && prop[0] === "razor") {
+      const Rh = (pts: P2[]) => rotPts(pts, rad(-20), hx, hy);
+      p.band(Rh([[hx, hy + 6 * u], [hx, hy - 20 * u]]), "#2a2420", 4.2 * u, 1.4 * u, "round");
+      p.poly(Rh([[hx - 3 * u, hy - 20 * u], [hx + 13 * u, hy - 26 * u], [hx + 13 * u, hy - 18 * u], [hx - 3 * u, hy - 14 * u]]), "#d8dee6", 1.8 * u);
       p.dot(hx, hy, 5.5 * u);
     } else if (Array.isArray(prop)) {
       const ang = rad(-70 + 105 * clamp(prop[1], 0, 1));
