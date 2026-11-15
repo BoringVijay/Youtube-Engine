@@ -2,6 +2,8 @@
 // Look kit is the bridge engine's (two-tone shading, painted Canvas2D textures with dark seams, ink pass, lens blur,
 // grade, lit character cards with contact blobs); only the sets, light presets and cast are new.
 import * as THREE from "three";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import { staticFile } from "remotion";
 import { lam, Batch, boxGeo, quad, V } from "../bridge/build";
 import { ctex, rep, planksHD, beamHD } from "../bridge/paint";
 import { TONE, CHAR, twoTone, untone } from "../bridge/shade";
@@ -15,14 +17,14 @@ import { SHOTS, FPS, camAt, ShotDef, Light, Spot } from "./story";
 const L: Record<Light, LightPreset> = {
   day: LIGHTS.day,
   golden: LIGHTS.golden,
-  inside: { ...LIGHTS.day, az: 35, el: 50, lit: [1.55, 1.2, 0.8], shade: [0.2, 0.25, 0.46], lift: [0.04, 0.06, 0.13],
-    charTint: [1.0, 0.92, 0.82], blob: [0.55, 0.55, 0.62], fog: "#5b6f96", fogNear: 12, fogFar: 90 },
+  inside: { ...LIGHTS.day, az: 35, el: 50, lit: [1.85, 1.38, 0.88], shade: [0.46, 0.33, 0.36], lift: [0.07, 0.045, 0.04],
+    charTint: [1.05, 0.93, 0.8], blob: [0.55, 0.5, 0.5], fog: "#3a2a2e", fogNear: 10, fogFar: 75 },
   night: { ...LIGHTS.day, az: 30, el: 35, lit: [0.75, 0.85, 1.25], shade: [0.12, 0.14, 0.3], lift: [0.03, 0.04, 0.12],
     charTint: [0.7, 0.78, 1.0], fog: "#1c2a4a", fogNear: 20, fogFar: 160 },
 };
 const SKY: Record<Light, string[]> = {
   day: ["#cfe2f4", "#a9cbee", "#79abe3", "#5592da", "#3a77cc"], golden: ["#ffc47c", "#f7ae78", "#e8967c", "#c4848e", "#8a6f8a"],
-  inside: ["#5b6f96", "#5b6f96", "#5b6f96", "#5b6f96", "#5b6f96"], night: ["#2a3d66", "#22355c", "#1b2b4f", "#152242", "#0f1a36"],
+  inside: ["#3a2a2e", "#3a2a2e", "#3a2a2e", "#3a2a2e", "#3a2a2e"], night: ["#2a3d66", "#22355c", "#1b2b4f", "#152242", "#0f1a36"],
 };
 
 // ---------------- painted textures (dark seams, a few flat colour fields, no photo noise) ----------------
@@ -71,6 +73,37 @@ const glowTex = () => ctex("glowT", 256, 256, (g) => {
   g.fillStyle = gr; g.fillRect(0, 0, 256, 256);
 });
 type Mats = Record<string, THREE.Material>;
+
+// ---------------- generated assets (rick/stage2/public/ice): painted textures + hero props ----------------
+const TEX = ["wall_planks", "floor_boards", "ice_wall", "snow_floor", "barber_tiles", "mess_wall", "crate_wood", "ice_sheet_day", "ice_sheet_golden"] as const;
+const PROPS = ["barber_chair_tex", "bunk_bed_tex", "reactor_console_tex", "mess_table", "steel_desk", "snow_miller"] as const;
+export type IceKit = { tex: Record<string, THREE.Texture>; props: Record<string, THREE.Object3D> };
+let kitP: Promise<IceKit> | null = null;
+export const loadIceKit = () => {
+  if (!kitP) {
+    const tl = new THREE.TextureLoader(), gl = new GLTFLoader();
+    kitP = Promise.all([
+      Promise.all(TEX.map((n) => tl.loadAsync(staticFile(`ice/tex/${n}.png`)).then((t) => { t.colorSpace = THREE.SRGBColorSpace; t.wrapS = t.wrapT = THREE.RepeatWrapping; t.anisotropy = 8; return [n, t] as const; }))),
+      Promise.all(PROPS.map((n) => gl.loadAsync(staticFile(`ice/lod/${n}.glb`)).then((g) => [n, g.scene] as const))),
+    ]).then(([t, p]) => ({ tex: Object.fromEntries(t), props: Object.fromEntries(p) }));
+  }
+  return kitP;
+};
+/** a hero prop: toon-shaded (two-tone Lambert), feet on the floor, scaled to a real height in metres, yaw in radians */
+const SOLID: Record<string, string> = { mess_table: "#b07a45", steel_desk: "#8d949c", snow_miller: "#e8b43a" };
+const placeProp = (kit: IceKit, name: string, parent: THREE.Object3D, x: number, y: number, z: number, height: number, yaw = 0) => {
+  const src = kit.props[name]; if (!src) return;
+  const c = src.clone(true);
+  c.traverse((o) => {
+    const m = o as THREE.Mesh; if (!m.isMesh) return;
+    const sm = m.material as THREE.MeshStandardMaterial;
+    m.material = twoTone(new THREE.MeshLambertMaterial({ map: sm.map ?? null, color: sm.map ? "#ffffff" : SOLID[name] ?? "#cccccc" }));
+    m.castShadow = true; m.receiveShadow = true;
+  });
+  const box = new THREE.Box3().setFromObject(c), s = height / (box.max.y - box.min.y);
+  const g = new THREE.Group(); c.scale.setScalar(s); c.position.set(-(box.min.x + box.max.x) / 2 * s, -box.min.y * s, -(box.min.z + box.max.z) / 2 * s);
+  g.add(c); g.position.set(x, y, z); g.rotation.y = yaw; parent.add(g); return g;
+};
 const SETS = { room: [0, 0, 0], main: [100, 0, 0], barber: [200, 0, 0], surface: [300, 0, 0] } as const;
 
 export class World {
@@ -88,9 +121,9 @@ export class World {
   private lamp(x: number, y: number, z: number, r = 1.6, floorY = 0, col: [number, number, number] = [1.0, 0.62, 0.28]) {
     const mk = (k: number) => new THREE.MeshBasicMaterial({ map: glowTex(), color: new THREE.Color(col[0] * k, col[1] * k, col[2] * k), transparent: true,
       blending: THREE.AdditiveBlending, depthWrite: false, fog: false });
-    const halo = new THREE.Mesh(new THREE.PlaneGeometry(r, r), mk(0.9)); halo.position.set(x, y, z); halo.layers.set(NOINK); halo.renderOrder = 5;
+    const halo = new THREE.Mesh(new THREE.PlaneGeometry(r, r), mk(1.1)); halo.position.set(x, y, z); halo.layers.set(NOINK); halo.renderOrder = 5;
     this.root.add(halo); this.halos.push(halo);
-    const pool = new THREE.Mesh(new THREE.PlaneGeometry(r * 3.2, r * 3.2), mk(0.55)); pool.rotation.x = -Math.PI / 2; pool.position.set(x, floorY + 0.015, z);
+    const pool = new THREE.Mesh(new THREE.PlaneGeometry(r * 3.2, r * 3.2), mk(0.75)); pool.rotation.x = -Math.PI / 2; pool.position.set(x, floorY + 0.015, z);
     pool.layers.set(NOINK); pool.renderOrder = 4; this.root.add(pool);
   }
   private wash(x: number, y: number, z: number, w: number, h: number, ry = 0, k = 0.5) {
@@ -99,7 +132,7 @@ export class World {
     m.position.set(x, y, z); m.rotation.y = ry; m.layers.set(NOINK); m.renderOrder = 4; this.root.add(m);
   }
 
-  constructor() {
+  constructor(kit: IceKit) {
     const R = this.root, M: Mats = {};
     this.skyMat = new THREE.ShaderMaterial({
       uniforms: { c0: { value: new THREE.Color() }, c1: { value: new THREE.Color() }, c2: { value: new THREE.Color() }, c3: { value: new THREE.Color() }, c4: { value: new THREE.Color() } },
@@ -115,11 +148,14 @@ export class World {
     this.sun.castShadow = true; this.sun.shadow.mapSize.set(4096, 4096);
     R.add(this.sun, this.sun.target, new THREE.HemisphereLight("#dcecff", "#8a7a9a", 0.55));
 
-    M.ice = lam("iceHD", () => ({ map: rep(iceHD(), 1, 1) }));
-    M.snow = lam("snowHD", () => ({ map: rep(snowHD(), 1, 1) }));
+    M.ice = lam("iceP", () => ({ map: rep(kit.tex.ice_wall, 1, 1) }));
+    M.snow = lam("snowP", () => ({ map: rep(kit.tex.snow_floor, 1, 1), color: "#fbf3ea" }));
     M.steel = lam("steelHD", () => ({ map: rep(steelHD(), 1, 1) }));
-    M.planks = lam("planksHD", () => ({ map: planksHD() }));
-    M.wood = lam("beamHD", () => ({ map: beamHD() }));
+    M.planks = lam("floorP", () => ({ map: rep(kit.tex.floor_boards, 1, 1) }));
+    M.wallP = lam("wallP", () => ({ map: rep(kit.tex.wall_planks, 1, 1) }));
+    M.tiles = lam("tilesP", () => ({ map: rep(kit.tex.barber_tiles, 1, 1) }));
+    M.crate = lam("crateP", () => ({ map: rep(kit.tex.crate_wood, 1, 1) }));
+    M.wood = lam("wallP2", () => ({ map: rep(kit.tex.wall_planks, 1, 1) }));
     M.cream = lam("cream", () => ({ color: "#efe3c8" }));
     M.olive = lam("olive", () => ({ color: "#6f7448" }));
     M.blanket = lam("blanket", () => ({ color: "#5c6a8a" }));
@@ -134,21 +170,12 @@ export class World {
       const [ox, , oz] = SETS.room;
       b.add(quad(V(ox - 2.2, 0, oz - 1.8), V(ox + 2.2, 0, oz - 1.8), V(ox + 2.2, 3.2, oz - 1.8), V(ox - 2.2, 3.2, oz - 1.8), 1.4, 1), M.ice); // ice wall (the one he shaves)
       b.add(quad(V(ox - 2.2, 0, oz + 3), V(ox + 2.2, 0, oz + 3), V(ox + 2.2, 0, oz - 1.8), V(ox - 2.2, 0, oz - 1.8), 2, 2.2), M.planks); // floor
-      b.add(quad(V(ox - 2.2, 0, oz + 3), V(ox - 2.2, 0, oz - 1.8), V(ox - 2.2, 3.2, oz - 1.8), V(ox - 2.2, 3.2, oz + 3), 2.2, 1.4), M.planks); // left wall
-      b.add(quad(V(ox + 2.2, 0, oz - 1.8), V(ox + 2.2, 0, oz + 3), V(ox + 2.2, 3.2, oz + 3), V(ox + 2.2, 3.2, oz - 1.8), 2.2, 1.4), M.planks); // right wall
+      b.add(quad(V(ox - 2.2, 0, oz + 3), V(ox - 2.2, 0, oz - 1.8), V(ox - 2.2, 3.2, oz - 1.8), V(ox - 2.2, 3.2, oz + 3), 2.2, 1.4), M.wallP); // left wall
+      b.add(quad(V(ox + 2.2, 0, oz - 1.8), V(ox + 2.2, 0, oz + 3), V(ox + 2.2, 3.2, oz + 3), V(ox + 2.2, 3.2, oz - 1.8), 2.2, 1.4), M.wallP); // right wall
       b.add(quad(V(ox - 2.2, 2.55, oz - 1.8), V(ox + 2.2, 2.55, oz - 1.8), V(ox + 2.2, 2.55, oz + 3), V(ox - 2.2, 2.55, oz + 3), 1.2, 1.2), M.ice); // ceiling (low: the ice is winning)
-      // bunk bed at the right, top bunk almost touching the ceiling
-      for (const [x, z] of [[1.0, -1.6], [2.0, -1.6], [1.0, 0.2], [2.0, 0.2]]) b.add(boxGeo(V(ox + x - 0.05, 0, oz + z - 0.05), V(ox + x + 0.05, 2.25, oz + z + 0.05)), M.olive);
-      for (const y of [0.45, 1.9]) {
-        b.add(boxGeo(V(ox + 0.95, y, oz - 1.65), V(ox + 2.05, y + 0.08, oz + 0.25)), M.olive);
-        b.add(boxGeo(V(ox + 1.0, y + 0.08, oz - 1.6), V(ox + 2.0, y + 0.22, oz + 0.2)), M.blanket);
-      }
-      b.add(boxGeo(V(ox - 2.0, 0, oz - 1.0), V(ox - 1.3, 0.75, oz - 0.3)), M.wood); // footlocker
+      placeProp(kit, "bunk_bed_tex", R, ox + 1.45, 0, oz - 0.55, 2.2, 0); // top bunk almost touching the ice ceiling
+      b.add(boxGeo(V(ox - 2.0, 0, oz - 1.0), V(ox - 1.3, 0.75, oz - 0.3)), M.crate); // footlocker
       b.add(boxGeo(V(ox - 1.55, 1.3, oz - 1.78), V(ox - 1.05, 1.75, oz - 1.74)), M.chrome); // shaving mirror screwed to the ice
-      const foam = lam("foam", () => ({ color: "#ffffff" }));
-      for (const [fx2, fy, fr] of [[0.02, 1.62, 0.17], [0.22, 1.4, 0.12], [-0.1, 1.33, 0.09], [0.25, 1.78, 0.08]] as [number, number, number][]) {
-        const blobG = new THREE.SphereGeometry(fr, 14, 10); blobG.scale(1, 0.75, 0.35); blobG.translate(ox + fx2, fy, oz - 1.78); b.add(blobG, foam);
-      }
       const bulbR = new THREE.Mesh(new THREE.SphereGeometry(0.09, 12, 8), new THREE.MeshBasicMaterial({ color: new THREE.Color(3.2, 2.6, 1.6) }));
       bulbR.position.set(ox + 0.3, 2.3, oz - 0.6); bulbR.layers.set(NOINK); R.add(bulbR);
       this.lamp(ox + 0.3, 2.3, oz - 0.6, 1.5); this.wash(ox + 0.2, 1.6, oz - 1.77, 4.2, 3.4, 0, 0.6);
@@ -214,7 +241,7 @@ export class World {
       const rr = (k: number) => { const v = Math.sin(k * 91.7) * 43758.5; return v - Math.floor(v); };
       for (let i = 0; i < 14; i++) {
         const s2 = i % 2 ? 1 : -1, z = 4 - i * 4.6 - rr(i) * 2, x = ox + s2 * (w - 1.6 - rr(i + 9) * 0.5);
-        if (rr(i + 3) < 0.5) b.add(boxGeo(V(x - 0.4, 0, z - 0.4), V(x + 0.4, 0.75, z + 0.4), 1), M.wood);
+        if (rr(i + 3) < 0.5) b.add(boxGeo(V(x - 0.4, 0, z - 0.4), V(x + 0.4, 0.75, z + 0.4), 1), M.crate);
         else { const bar = new THREE.CylinderGeometry(0.3, 0.3, 0.9, 16); bar.translate(x, 0.45, z); b.add(bar, rr(i + 5) < 0.5 ? M.red : M.olive); }
       }
       // hanging bulbs down the street (emissive: the only things that bloom)
@@ -228,15 +255,13 @@ export class World {
     // ===== BARBER SHOP (x=200): the ceiling has come down to 1.55 m =====
     {
       const [ox] = SETS.barber;
-      b.add(quad(V(ox - 2.5, 0, 3), V(ox + 2.5, 0, 3), V(ox + 2.5, 0, -1.6), V(ox - 2.5, 0, -1.6), 2, 2), M.planks);
-      b.add(quad(V(ox - 2.5, 0, -1.6), V(ox + 2.5, 0, -1.6), V(ox + 2.5, 3, -1.6), V(ox - 2.5, 3, -1.6), 2, 1.2), M.planks);
+      b.add(quad(V(ox - 2.5, 0, 3), V(ox + 2.5, 0, 3), V(ox + 2.5, 0, -1.6), V(ox - 2.5, 0, -1.6), 3, 3), M.tiles);
+      b.add(quad(V(ox - 2.5, 0, -1.6), V(ox + 2.5, 0, -1.6), V(ox + 2.5, 3, -1.6), V(ox - 2.5, 3, -1.6), 2, 1.2), M.wallP);
       b.add(quad(V(ox - 2.5, 0, 3), V(ox - 2.5, 0, -1.6), V(ox - 2.5, 3, -1.6), V(ox - 2.5, 3, 3), 2, 1.2), M.ice);
       b.add(quad(V(ox + 2.5, 0, -1.6), V(ox + 2.5, 0, 3), V(ox + 2.5, 3, 3), V(ox + 2.5, 3, -1.6), 2, 1.2), M.ice);
       b.add(boxGeo(V(ox - 0.9, 0.95, -1.58), V(ox + 0.9, 1.5, -1.52)), M.chrome); // mirror
       b.add(boxGeo(V(ox - 1.0, 0.75, -1.58), V(ox + 1.0, 0.82, -1.25)), M.wood); // counter
-      b.add(boxGeo(V(ox - 0.33, 0, -0.85), V(ox - 0.17, 0.32, -0.6)), M.chrome); // chair column
-      b.add(boxGeo(V(ox - 0.55, 0.32, -0.98), V(ox + 0.05, 0.44, -0.45)), M.red); // seat
-      b.add(boxGeo(V(ox - 0.55, 0.44, -1.0), V(ox + 0.05, 0.95, -0.9)), M.red); // backrest
+      placeProp(kit, "barber_chair_tex", R, ox - 0.3, 0, -0.75, 1.15, 0);
       b.add(boxGeo(V(ox + 0.3, 0, -0.5), V(ox + 0.6, 0.12, -0.2)), M.wood); // barber's low stool
     }
     this.ceiling = new THREE.Mesh(new THREE.PlaneGeometry(5, 4.6), M.ice);

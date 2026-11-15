@@ -13,7 +13,7 @@ import { ThreeCanvas } from "@remotion/three";
 import { useThree } from "@react-three/fiber";
 import { EffectComposer } from "@react-three/postprocessing";
 import { BlendFunction, BloomEffect, ToneMappingEffect, ToneMappingMode } from "postprocessing";
-import { World } from "./world";
+import { World, loadIceKit, IceKit } from "./world";
 import { InkPass, noInkFallback } from "../bridge/ink";
 import { LensBlur, GrainEffect } from "../bridge/lensblur";
 import { GradeEffect, GRADES, GRADE_STRENGTH, gradeFor } from "../bridge/grade";
@@ -41,10 +41,17 @@ const makeBloom = () => {
 const fwd = new THREE.Vector3(), fpt = new THREE.Vector3();
 
 
-const Inner: React.FC<{ id: number }> = ({ id }) => {
+const useIceKit = () => {
+  const [kit, setKit] = useState<IceKit | null>(null);
+  const [handle] = useState(() => delayRender("ice kit"));
+  useEffect(() => { loadIceKit().then((k) => { setKit(k); continueRender(handle); }); }, [handle]);
+  return kit;
+};
+
+const Inner: React.FC<{ id: number; kit: IceKit }> = ({ id, kit }) => {
   const f = useCurrentFrame();
   const { camera, scene } = useThree();
-  const world = useMemo(() => new World(), []);
+  const world = useMemo(() => new World(kit), [kit]);
   const target = useMemo(() => new THREE.Vector3(), []);
   const on = useMemo(toggles, []);
   const fx = useMemo(() => ({
@@ -75,7 +82,7 @@ const Inner: React.FC<{ id: number }> = ({ id }) => {
   fpt.copy(target);
   fx.lens.focus = Math.max(0.3, fpt.sub(cam.position).dot(fwd));
   fx.lens.cInf = SHOTS[id - 1].cInf;
-  gradeFor(fx.grade, SHOTS[id - 1].light === "golden" ? "golden" : "day");
+  gradeFor(fx.grade, SHOTS[id - 1].light === "day" ? "day" : "golden");
   fx.grain.seed = f; // deterministic per frame
   return (
     <>
@@ -87,21 +94,22 @@ const Inner: React.FC<{ id: number }> = ({ id }) => {
 
 /** test stills only: inputProps `{ post: { dpr: 0.5 } }` forces the WebGL buffer size (R3F clamps dpr to >= 1 by default) */
 const dprOverride = () => (getInputProps() as { post?: { dpr?: number } }).post?.dpr;
-const ShotView: React.FC<{ id: number; alpha: number }> = ({ id, alpha }) => (
+const ShotView: React.FC<{ id: number; alpha: number; kit: IceKit }> = ({ id, alpha, kit }) => (
   <AbsoluteFill style={{ opacity: alpha }}>
     <ThreeCanvas width={1080} height={1920} {...(dprOverride() ? { dpr: dprOverride() } : {})} shadows gl={{ antialias: false, stencil: false, powerPreference: "high-performance", toneMappingExposure: 1.0 }}
       camera={{ fov: 40, near: 0.2, far: 1500 }}>
-      <Inner id={id} />
+      <Inner id={id} kit={kit} />
     </ThreeCanvas>
   </AbsoluteFill>
 );
 
 export const IceShort: React.FC = () => {
   const f = useCurrentFrame();
+  const kit = useIceKit();
   const flash = f >= FLASH_AT && f < FLASH_AT + 4 ? [1, 0.75, 0.45, 0.2][f - FLASH_AT] : 0;
   return (
     <AbsoluteFill style={{ background: "#9fb4cc" }}>
-      <ShotView key="base" id={shotAt(f).id} alpha={1} />
+      {kit && <ShotView key="base" id={shotAt(f).id} alpha={1} kit={kit} />}
       {flash > 0 && <AbsoluteFill style={{ background: "#ffffff", opacity: flash }} />}
     </AbsoluteFill>
   );

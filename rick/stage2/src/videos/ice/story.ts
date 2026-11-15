@@ -31,7 +31,7 @@ export const SHOTS: ShotDef[] = [
   { id: 1, a: 0, b: 150, light: "inside", set: "room", cInf: 13,
     cams: [{ f: 0, pos: [0.3, 1.3, 2.9], look: [0.4, 1.3, -1.4], fov: 58 }, { f: 150, dur: 150, pos: [0.25, 1.3, 2.4], look: [0.35, 1.32, -1.4], fov: 58 }],
     cast: (f) => [
-      { who: CAST.HANK, key: "hank", x: -0.55, y: 0, z: -1.05, expr: "stern", mode: "stand", facing: 1, seed: 3, prop: ["razor", (f / FPS) * 1.6] },
+      { who: CAST.HANK, key: "hank", x: -0.15, y: 0, z: -1.1, expr: "stern", mode: "stand", facing: 1, seed: 3, prop: ["razor", (f / FPS) * 1.6] },
       { who: soldierIce(1), key: "roomie", x: 1.5, y: 2.12, z: -0.7, expr: "pained", mode: "sit", facing: 1, seed: 5, scale: 0.78, headTilt: 0.25 },
     ] },
   // 3. Main Street glide: theater, barber pole, chapel, reactor door
@@ -52,8 +52,8 @@ export const SHOTS: ShotDef[] = [
     cams: [{ f: 330, pos: [200.15, 0.95, 3.4], look: [200.05, 0.72, -0.6], fov: 46 }, { f: 450, dur: 120, pos: [200.12, 0.95, 2.9], look: [200.05, 0.74, -0.6], fov: 46 }],
     ceil: () => 1.55,
     cast: () => [
-      { who: CAST.BARBER, key: "barber", x: 200.45, y: 0.12, z: -0.35, expr: "stern", mode: "sit", facing: -1, seed: 4, prop: ["razor", 0.25] },
-      { who: soldierIce(3), key: "cust", x: 199.75, y: 0.42, z: -0.7, expr: "dazed", mode: "sit", facing: 1, seed: 7 },
+      { who: CAST.BARBER, key: "barber", x: 200.4, y: 0.0, z: -0.45, expr: "stern", mode: "sit", facing: -1, seed: 4, prop: ["razor", 0.25] },
+      { who: soldierIce(3), key: "cust", x: 199.7, y: 0.28, z: -0.62, expr: "dazed", mode: "sit", facing: 1, seed: 7 },
     ] },
 ];
 export const TOTAL = SHOTS[SHOTS.length - 1].b;
