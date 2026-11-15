@@ -14,7 +14,8 @@
     "fal_image_4k": 0.3,
     "fal_tts_1k_chars": 0.1,
     "fal_music_min": 0.8,
-    "fal_sfx_sec": 0.002
+    "fal_sfx_sec": 0.002,
+    "fal_3d": 0.16
   },
   "note": "2026-11-15: switched to the NEW Google Cloud trial project (keyless login, config/gcp.json). $300 credit, 90 days, capped at $280 to leave a buffer. Video generation on Google (Veo) is back on: Vijay chose Google credits over fal for clips. Pilot cap $50 per video (hero shots on Veo 3.1 Standard, rest on Fast). Old project's ledger archived in ledger/ledger-old-project-2026-11.json ($262.60 spent).",
   "fal_total_usd": 15,
