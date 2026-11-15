@@ -245,3 +245,9 @@ Never the same lane three times in a row.
 ## 19. Voice pacing (15 Nov)
 - The reference narrator barely pauses. Get there with punctuation: write the TTS text with commas and run-ons where the reference would keep going, and keep full stops only for real beats. The words stay identical to the approved script.
 - ElevenLabs' own speed setting (up to 1.15) is allowed: it's the model pacing itself. Post-processing is not: no time-stretch, no cutting pauses out of the audio.
+
+## 20. Single vs two-part (Vijay, 15 Nov 2026)
+- Default: one self-contained Short that pays off its own hook. Serve the reward in the same video.
+- Two parts only when the story is naturally too long for one. Each part 60-100 s; part 1 ends on a real cliffhanger, part 2 opens with a 3 s recap and pays it off.
+- Claude proposes two parts at the script gate with the reason; Vijay decides.
+- A/B test now: one story as a single Short vs the same story as two parts; compare views, retention and subs gained per part.
