@@ -117,6 +117,17 @@ def props():
             fal.download(res["model_mesh"]["url"], glb); budget.log(JOB, "fal_3d", 1, "fal"); print("[3d]", k)
 
 
+def props_tex():
+    """Hero props seen up close: textured mesh (UVs + painted texture from the reference)."""
+    for k in ("barber_chair", "bunk_bed", "reactor_console"):
+        ref, glb = os.path.join(OUT, "props", "ref", k + ".png"), os.path.join(OUT, "props", k + "_tex.glb")
+        if os.path.exists(glb): continue
+        budget.check(JOB, "fal_3d_tex")
+        res = fal.run("fal-ai/hunyuan3d/v2", {"input_image_url": fal.data_uri(ref), "textured_mesh": True, "octree_resolution": 256,
+                                             "num_inference_steps": 50, "guidance_scale": 7.5}, timeout=900, tag=f"{JOB}:3dtex:{k}")
+        fal.download(res["model_mesh"]["url"], glb); budget.log(JOB, "fal_3d_tex", 1, "fal"); print("[3d tex]", k)
+
+
 if __name__ == "__main__":
     steps = sys.argv[1:] or ["voice", "textures", "props"]
     for s in steps:
