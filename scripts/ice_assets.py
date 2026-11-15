@@ -55,11 +55,13 @@ def vo_lines():
 
 def voice():
     mp3, words = os.path.join(OUT, "voice.mp3"), os.path.join(OUT, "words.json")
-    text = " ".join(vo_lines())
+    text = " ".join(vo_lines())  # the script's words: captions and timings use these
+    flow = os.path.join(ROOT, "rick", "projects", "camp-century", "vo_tts.txt")  # same words, run-on punctuation (reference delivery)
+    tts = open(flow).read().strip() if os.path.exists(flow) else text
     if not os.path.exists(mp3):
-        budget.check(JOB, "fal_tts_1k_chars", len(text) / 1000)
-        res = fal.run("fal-ai/elevenlabs/tts/multilingual-v2", {"text": text, "voice": "River", "stability": 0.45, "similarity_boost": 0.8,
-                                                              "style": 0.25, "speed": 1.0}, timeout=600, tag=f"{JOB}:voice")
+        budget.check(JOB, "fal_tts_1k_chars", len(tts) / 1000)
+        res = fal.run("fal-ai/elevenlabs/tts/multilingual-v2", {"text": tts, "voice": "River", "stability": 0.45, "similarity_boost": 0.8,
+                                                              "style": 0.25, "speed": 1.1}, timeout=600, tag=f"{JOB}:voice")
         raw = mp3 + ".raw.mp3"
         fal.download(res["audio"]["url"], raw)
         budget.log(JOB, "fal_tts_1k_chars", len(text) / 1000, "fal")

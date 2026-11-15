@@ -241,3 +241,7 @@ Never the same lane three times in a row.
 - **Voice:** compressing pauses and speeding up 8 % made it robotic.
 - **First Camp Century stills:** correct style, but empty and flat. That's where the density budget and the light rules in section 7 came from.
 - **GitHub minutes:** an hourly job on a private repo burned the free tier.
+
+## 19. Voice pacing (15 Nov)
+- The reference narrator barely pauses. Get there with punctuation: write the TTS text with commas and run-ons where the reference would keep going, and keep full stops only for real beats. The words stay identical to the approved script.
+- ElevenLabs' own speed setting (up to 1.1) is allowed: it's the model pacing itself. Post-processing is not: no time-stretch, no cutting pauses out of the audio.
