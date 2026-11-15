@@ -142,6 +142,36 @@ def voice_v3():
     voice()  # timings only (voice.mp3 exists)
 
 
+def voice_mix():
+    """Directed VO edit: one clip per beat (v2 narration, v3 acted lines), edges trimmed, inner pauses capped, designed gaps. -> voice.mp3"""
+    cfg = json.load(open(os.path.join(ROOT, "rick", "projects", "camp-century", "vo_mix.json")))
+    seg_dir = os.path.join(ROOT, "rick", "projects", "camp-century", "takes", "mix"); os.makedirs(seg_dir, exist_ok=True)
+    cap, parts = cfg["cap"], []
+    for i, sg in enumerate(cfg["segments"]):
+        raw = os.path.join(seg_dir, f"{i:02d}_{sg['m']}.mp3")
+        if not os.path.exists(raw):
+            budget.check(JOB, "fal_tts_1k_chars", len(sg["t"]) / 1000)
+            if sg["m"] == "v3":
+                res = fal.run("fal-ai/elevenlabs/tts/eleven-v3", {"text": sg["t"], "voice": "River", "stability": 0.5}, timeout=300, tag=f"{JOB}:mix{i}")
+            else:
+                res = fal.run("fal-ai/elevenlabs/tts/multilingual-v2", {"text": sg["t"], "voice": "River", "stability": 0.4, "similarity_boost": 0.8,
+                                                                      "style": 0.4, "speed": 1.12}, timeout=300, tag=f"{JOB}:mix{i}")
+            fal.download(res["audio"]["url"], raw); budget.log(JOB, "fal_tts_1k_chars", len(sg["t"]) / 1000, "fal")
+        clean = raw.replace(".mp3", ".wav")
+        trim = "silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.03"
+        inner = f"silenceremove=stop_periods=-1:stop_duration={cap}:stop_threshold=-45dB:stop_silence={cap - 0.06}"
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", raw, "-af", f"{trim},areverse,{trim},areverse,{inner}", "-ar", "44100", "-ac", "1", clean], check=True)
+        gap = os.path.join(seg_dir, f"gap_{i:02d}.wav")
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "lavfi", "-i", "anullsrc=r=44100:cl=mono", "-t", str(max(0.01, sg["gap"])), gap], check=True)
+        parts += [gap, clean]
+    lst = os.path.join(seg_dir, "list.txt"); open(lst, "w").write("".join(f"file '{p}'\n" for p in parts))
+    mp3 = os.path.join(OUT, "voice.mp3")
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", lst, "-af", "loudnorm=I=-15:TP=-1.5:LRA=11", "-ar", "44100", "-b:a", "160k", mp3], check=True)
+    w = os.path.join(OUT, "words.json")
+    if os.path.exists(w): os.remove(w)
+    voice()
+
+
 def props_tex():
     """Hero props seen up close: textured mesh (UVs + painted texture from the reference)."""
     for k in ("barber_chair", "bunk_bed", "reactor_console"):
