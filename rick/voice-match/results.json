@@ -1,0 +1,226 @@
+{
+ "reference": {
+  "f0_med": 191.0,
+  "f0_iqr": 77.0,
+  "wps": 3.7
+ },
+ "text": "He shaved the walls of his bedroom every morning, because the walls were trying to eat him. You see, it's 1960, and Hank lives thirty feet under the ice in Greenland.",
+ "ranked": [
+  {
+   "voice": "River",
+   "model": "v2",
+   "f0_med": 179.8,
+   "f0_iqr": 49.9,
+   "wps": 3.45,
+   "score": 82.1,
+   "file": "rick/voice-match/River_v2.mp3"
+  },
+  {
+   "voice": "River",
+   "model": "v3",
+   "f0_med": 180.5,
+   "f0_iqr": 74.8,
+   "wps": 2.75,
+   "score": 81.6,
+   "file": "rick/voice-match/River_v3.mp3"
+  },
+  {
+   "voice": "Eric",
+   "model": "v2",
+   "f0_med": 149.5,
+   "f0_iqr": 63.7,
+   "wps": 3.25,
+   "score": 65.8,
+   "file": "rick/voice-match/Eric_v2.mp3"
+  },
+  {
+   "voice": "Bill",
+   "model": "v3",
+   "f0_med": 149.5,
+   "f0_iqr": 60.5,
+   "wps": 2.73,
+   "score": 58.6,
+   "file": "rick/voice-match/Bill_v3.mp3"
+  },
+  {
+   "voice": "Eric",
+   "model": "v3",
+   "f0_med": 151.4,
+   "f0_iqr": 49.6,
+   "wps": 2.89,
+   "score": 58.4,
+   "file": "rick/voice-match/Eric_v3.mp3"
+  },
+  {
+   "voice": "Daniel",
+   "model": "v2",
+   "f0_med": 142.9,
+   "f0_iqr": 29.9,
+   "wps": 2.68,
+   "score": 44.8,
+   "file": "rick/voice-match/Daniel_v2.mp3"
+  },
+  {
+   "voice": "Liam",
+   "model": "v3",
+   "f0_med": 129.7,
+   "f0_iqr": 58.3,
+   "wps": 2.58,
+   "score": 44.2,
+   "file": "rick/voice-match/Liam_v3.mp3"
+  },
+  {
+   "voice": "Bill",
+   "model": "v2",
+   "f0_med": 135.6,
+   "f0_iqr": 40.6,
+   "wps": 2.62,
+   "score": 42.9,
+   "file": "rick/voice-match/Bill_v2.mp3"
+  },
+  {
+   "voice": "Liam",
+   "model": "v2",
+   "f0_med": 126.0,
+   "f0_iqr": 38.0,
+   "wps": 3.13,
+   "score": 42.5,
+   "file": "rick/voice-match/Liam_v2.mp3"
+  },
+  {
+   "voice": "Callum",
+   "model": "v3",
+   "f0_med": 130.8,
+   "f0_iqr": 95.8,
+   "wps": 2.38,
+   "score": 42.4,
+   "file": "rick/voice-match/Callum_v3.mp3"
+  },
+  {
+   "voice": "Daniel",
+   "model": "v3",
+   "f0_med": 140.8,
+   "f0_iqr": 36.3,
+   "wps": 2.41,
+   "score": 42.2,
+   "file": "rick/voice-match/Daniel_v3.mp3"
+  },
+  {
+   "voice": "Charlie",
+   "model": "v3",
+   "f0_med": 131.1,
+   "f0_iqr": 40.3,
+   "wps": 2.68,
+   "score": 40.8,
+   "file": "rick/voice-match/Charlie_v3.mp3"
+  },
+  {
+   "voice": "George",
+   "model": "v2",
+   "f0_med": 124.7,
+   "f0_iqr": 30.2,
+   "wps": 3.23,
+   "score": 40.6,
+   "file": "rick/voice-match/George_v2.mp3"
+  },
+  {
+   "voice": "Brian",
+   "model": "v2",
+   "f0_med": 113.7,
+   "f0_iqr": 39.4,
+   "wps": 3.38,
+   "score": 38.5,
+   "file": "rick/voice-match/Brian_v2.mp3"
+  },
+  {
+   "voice": "George",
+   "model": "v3",
+   "f0_med": 122.8,
+   "f0_iqr": 38.6,
+   "wps": 2.89,
+   "score": 37.9,
+   "file": "rick/voice-match/George_v3.mp3"
+  },
+  {
+   "voice": "Roger",
+   "model": "v3",
+   "f0_med": 118.8,
+   "f0_iqr": 48.2,
+   "wps": 2.75,
+   "score": 36.7,
+   "file": "rick/voice-match/Roger_v3.mp3"
+  },
+  {
+   "voice": "Chris",
+   "model": "v3",
+   "f0_med": 114.6,
+   "f0_iqr": 39.7,
+   "wps": 3.11,
+   "score": 35.8,
+   "file": "rick/voice-match/Chris_v3.mp3"
+  },
+  {
+   "voice": "Will",
+   "model": "v2",
+   "f0_med": 107.6,
+   "f0_iqr": 28.2,
+   "wps": 3.33,
+   "score": 31.0,
+   "file": "rick/voice-match/Will_v2.mp3"
+  },
+  {
+   "voice": "Will",
+   "model": "v3",
+   "f0_med": 118.5,
+   "f0_iqr": 27.9,
+   "wps": 2.79,
+   "score": 30.9,
+   "file": "rick/voice-match/Will_v3.mp3"
+  },
+  {
+   "voice": "Chris",
+   "model": "v2",
+   "f0_med": 107.9,
+   "f0_iqr": 25.2,
+   "wps": 3.36,
+   "score": 30.5,
+   "file": "rick/voice-match/Chris_v2.mp3"
+  },
+  {
+   "voice": "Roger",
+   "model": "v2",
+   "f0_med": 104.3,
+   "f0_iqr": 32.8,
+   "wps": 3.3,
+   "score": 29.9,
+   "file": "rick/voice-match/Roger_v2.mp3"
+  },
+  {
+   "voice": "Callum",
+   "model": "v2",
+   "f0_med": 106.0,
+   "f0_iqr": 30.0,
+   "wps": 2.87,
+   "score": 24.9,
+   "file": "rick/voice-match/Callum_v2.mp3"
+  },
+  {
+   "voice": "Brian",
+   "model": "v3",
+   "f0_med": 98.8,
+   "f0_iqr": 34.1,
+   "wps": 3.11,
+   "score": 24.7,
+   "file": "rick/voice-match/Brian_v3.mp3"
+  },
+  {
+   "voice": "Charlie",
+   "model": "v2",
+   "f0_med": 101.9,
+   "f0_iqr": 25.7,
+   "wps": 3.08,
+   "score": 23.7,
+   "file": "rick/voice-match/Charlie_v2.mp3"
+  }
+ ]
+}
