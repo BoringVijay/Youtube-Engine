@@ -1,0 +1,28 @@
+name: Nvidia voice
+on:
+  workflow_dispatch:
+    inputs:
+      cmd: { description: "audition  |  make A Eric v2  |  make B Eric v2", default: "audition" }
+permissions:
+  contents: write
+jobs:
+  voice:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null
+          pip install -q librosa faster-whisper
+      - name: Run
+        env:
+          FAL_KEY: ${{ secrets.FAL_KEY }}
+        run: python3 scripts/nv_voice.py ${{ github.event.inputs.cmd }}
+      - name: Save
+        if: always()
+        run: |
+          git config user.name "engine"; git config user.email "engine@users.noreply.github.com"
+          git add -f rick/projects/nvidia rick/stage2/public/nva rick/stage2/public/nvb ledger || true
+          git commit -qm "Nvidia voice: ${{ github.event.inputs.cmd }}" || true
+          git pull -q --rebase && git push -q || true
