@@ -1,56 +1,22 @@
-// The City the Ice Ate: shot timeline, cameras, light per shot, lens blur and who stands where.
-// Timing is the gate-1 script at 3.7 words/s until the real voice + words.json lands; then every
-// shot start snaps to its first word (reactions land 0-3 frames before the word, as in the reference).
-import { Outfit, Expr, Prop } from "../bridge/toon";
+// The City the Ice Ate: shot timeline. Core shots live here; sections A/B/C live in shots/a.ts, b.ts, c.ts.
+import { Expr } from "../bridge/toon";
 import { CAST, soldierIce } from "./cast";
-import VO from "../../../public/ice/words.json";
-const WORDS = (VO as unknown as { words: [string, number, number][] }).words;
+import { FPS, S, sec, talkAt, VO_END, ShotDef, ShotPart } from "./timeline";
+import { SHOTS_A } from "./shots/a";
+import { SHOTS_B } from "./shots/b";
+import { SHOTS_C } from "./shots/c";
+export * from "./timeline";
 
-export const FPS = 30;
-export type V3 = [number, number, number];
-export const clamp01 = (x: number) => Math.max(0, Math.min(1, x));
-/** reference camera ease: symmetric smootherstep (~10 f in / 10 f out on a 23 f move) */
-export const glide = (u: number) => { const x = clamp01(u); return x * x * x * (x * (6 * x - 15) + 10); };
-
-export type Light = "day" | "golden" | "inside" | "night";
-export type SetName = "room" | "main" | "barber" | "surface";
-export type Cam = { pos: V3; look: V3; fov: number; roll: number };
-export type Key = { f: number; dur?: number; pos: V3; look: V3; fov?: number; roll?: number };
-export type Spot = {
-  who: Outfit; key: string; x: number; y: number; z: number; expr?: Expr; mode?: "stand" | "stroll" | "sit" | "march";
-  phase?: number; facing?: -1 | 0 | 1; prop?: Prop; talk?: 0 | 1 | 2; look?: number; seed?: number; scale?: number; headTilt?: number; tilt?: number;
-};
-export type ShotDef = {
-  id: number; a: number; b: number; light: Light; set: SetName; cams: Key[]; cInf: number;
-  cast?: (t: number) => Spot[]; marks?: (f: number) => number; ceil?: (t: number) => number; // barber shop ceiling height over time
-};
-
-// local time inside a shot in seconds
-const S = (f: number) => f / FPS;
-
-// shot boundaries snap to the first word of each beat (words.json, voice take "directed edit", 72.5 s)
-const sec = (t: number) => Math.round(t * FPS);
-export const VO_END = sec(72.6);
-
-/** lip flap for a line the narrator voices "as" a character: flaps once per ~0.15 s inside each word, closed in the gaps */
-export const talkAt = (t: number, from: number, to: number): 0 | 1 | 2 => {
-  if (t < from || t > to) return 0;
-  const w = WORDS.find((x) => t >= x[1] && t < x[2]);
-  if (!w) return 0;
-  const n = Math.max(1, Math.round((w[2] - w[1]) / 0.15)), ph = (((t - w[1]) / Math.max(0.05, w[2] - w[1])) * n) % 1;
-  return ph < 0.18 ? 1 : ph < 0.72 ? 2 : 1;
-};
-
-export const SHOTS: ShotDef[] = [
+const CORE: ShotPart[] = [
   // 1. Hook (0-3.9 s): Hank shaving his ice wall, roommate pressed to the ceiling in the top bunk
-  { id: 1, a: 0, b: sec(3.86), light: "inside", set: "room", cInf: 13, marks: () => 4,
+  { a: 0, b: sec(3.86), light: "inside", set: "room", cInf: 13, marks: () => 4,
     cams: [{ f: 0, pos: [0.3, 1.3, 2.9], look: [0.4, 1.3, -1.4], fov: 58 }, { f: sec(3.86), dur: sec(3.86), pos: [0.25, 1.3, 2.4], look: [0.35, 1.32, -1.4], fov: 58 }],
     cast: (f) => [
       { who: CAST.HANK, key: "hank", x: -0.15, y: 0, z: -1.1, expr: "stern", mode: "stand", facing: 1, seed: 3, prop: ["razor", (f / FPS) * 1.6] },
       { who: soldierIce(1), key: "roomie", x: 1.5, y: 2.12, z: -0.7, expr: "pained", mode: "sit", facing: 1, seed: 5, scale: 0.78, headTilt: 0.25 },
     ] },
   // 2. Main Street glide (3.9-12.4 s): theater, barber pole, chapel, reactor door
-  { id: 2, a: sec(3.86), b: sec(12.4), light: "inside", set: "main", cInf: 7,
+  { a: sec(3.86), b: sec(12.4), light: "inside", set: "main", cInf: 7,
     cams: [{ f: sec(3.86), pos: [100.4, 1.7, 9], look: [99.6, 2.3, -14], fov: 48 },
            { f: sec(12.4), dur: sec(12.4 - 3.86), pos: [100.5, 1.75, -12], look: [99.4, 2.2, -38], fov: 48 }],
     cast: (f) => {
@@ -64,7 +30,7 @@ export const SHOTS: ShotDef[] = [
     } },
   // 7. The pencil mark (22.2-30.5 s). Night: Hank marks his height. Morning: the mark is lower (the ceiling is coming
   //    down, not Hank). The sergeant laughs, then delivers "Son... you're just growing." with his own lips.
-  { id: 3, a: sec(22.2), b: sec(30.48), light: "inside", set: "room", cInf: 12,
+  { a: sec(22.2), b: sec(30.48), light: "inside", set: "room", cInf: 12,
     marks: (f) => (f < sec(23.7) ? 1 : f < sec(24.6) ? 2 : 3),
     cams: [{ f: sec(22.2), pos: [-0.35, 1.55, 1.6], look: [-0.55, 1.6, -1.8], fov: 50 },
            { f: sec(25.7), dur: sec(1.1), pos: [-0.45, 1.75, 0.55], look: [-0.62, 1.78, -1.8], fov: 44 }, // morning: push to the marks
@@ -81,7 +47,7 @@ export const SHOTS: ShotDef[] = [
       ];
     } },
   // 8. Barber shop (30.5-34.4 s): ceiling so low the barber kneels to cut hair
-  { id: 4, a: sec(30.48), b: sec(34.4), light: "inside", set: "barber", cInf: 11,
+  { a: sec(30.48), b: sec(34.4), light: "inside", set: "barber", cInf: 11,
     cams: [{ f: sec(30.48), pos: [200.15, 0.95, 3.4], look: [200.05, 0.72, -0.6], fov: 46 }, { f: sec(34.4), dur: sec(3.92), pos: [200.12, 0.95, 2.9], look: [200.05, 0.74, -0.6], fov: 46 }],
     ceil: () => 1.55,
     cast: () => [
@@ -89,21 +55,8 @@ export const SHOTS: ShotDef[] = [
       { who: soldierIce(3), key: "cust", x: 199.7, y: 0.28, z: -0.62, expr: "dazed", mode: "sit", facing: 1, seed: 7 },
     ] },
 ];
+// all sections, sorted by start frame; ids are 1-based positions
+export const SHOTS: ShotDef[] = [...CORE, ...SHOTS_A, ...SHOTS_B, ...SHOTS_C].sort((x, y) => x.a - y.a).map((s, i) => ({ ...s, id: i + 1 }));
 export const TOTAL = VO_END;
 export const shotAt = (f: number) => SHOTS.find((s) => f >= s.a && f < s.b) ?? SHOTS[SHOTS.length - 1];
 
-const full = (k: Key): Cam => ({ pos: k.pos, look: k.look, fov: k.fov ?? 40, roll: k.roll ?? 0 });
-const lerp = (a: Cam, b: Cam, k: number): Cam => ({
-  pos: a.pos.map((v, i) => v + (b.pos[i] - v) * k) as V3, look: a.look.map((v, i) => v + (b.look[i] - v) * k) as V3,
-  fov: a.fov + (b.fov - a.fov) * k, roll: a.roll + (b.roll - a.roll) * k,
-});
-/** camera at frame f: keys glide with the reference ease; a key's dur is the move length ending at key.f */
-export const camAt = (s: ShotDef, f: number): Cam => {
-  let cur = full(s.cams[0]);
-  for (let i = 1; i < s.cams.length; i++) {
-    const k = s.cams[i], d = k.dur ?? 24, start = k.f - d;
-    if (f < start) break;
-    cur = lerp(cur, full(k), d >= 90 ? (f - start) / d : glide((f - start) / d)); // long holds creep linearly (push-in)
-  }
-  return cur;
-};

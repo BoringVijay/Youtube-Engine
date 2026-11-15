@@ -12,6 +12,9 @@ import { NOINK } from "../bridge/ink";
 import { Pool, Actor, Fx } from "../bridge/cast";
 import { Pen, bodyFront, fxContact, FrontOpts } from "../bridge/toon";
 import { SHOTS, FPS, camAt, ShotDef, Light, Spot } from "./story";
+import { buildA } from "./sets/a";
+import { buildB } from "./sets/b";
+import { buildC } from "./sets/c";
 
 // ---------------- light presets: day/golden from the bridge, plus warm-bulb interiors and night-blue ----------------
 const L: Record<Light, LightPreset> = {
@@ -21,10 +24,17 @@ const L: Record<Light, LightPreset> = {
     charTint: [1.05, 0.93, 0.8], blob: [0.55, 0.5, 0.5], fog: "#3a2a2e", fogNear: 10, fogFar: 75 },
   night: { ...LIGHTS.day, az: 30, el: 35, lit: [0.75, 0.85, 1.25], shade: [0.12, 0.14, 0.3], lift: [0.03, 0.04, 0.12],
     charTint: [0.7, 0.78, 1.0], fog: "#1c2a4a", fogNear: 20, fogFar: 160 },
+  // open ice sheet under a high pale sun: bright snow, blue shadows, long fog to a white horizon
+  arctic: { ...LIGHTS.day, az: 140, el: 22, lit: [1.75, 1.68, 1.55], shade: [0.42, 0.55, 0.85], lift: [0.05, 0.07, 0.12],
+    charTint: [1.0, 1.0, 1.02], fog: "#dfe9f3", fogNear: 40, fogFar: 260 },
+  // cool lab / office fluorescent: neutral-green lit, grey-violet shade
+  lab: { ...LIGHTS.day, az: 20, el: 60, lit: [1.6, 1.68, 1.55], shade: [0.36, 0.38, 0.46], lift: [0.05, 0.05, 0.06],
+    charTint: [1.0, 1.02, 0.98], fog: "#2c3238", fogNear: 10, fogFar: 70 },
 };
 const SKY: Record<Light, string[]> = {
   day: ["#cfe2f4", "#a9cbee", "#79abe3", "#5592da", "#3a77cc"], golden: ["#ffc47c", "#f7ae78", "#e8967c", "#c4848e", "#8a6f8a"],
   inside: ["#3a2a2e", "#3a2a2e", "#3a2a2e", "#3a2a2e", "#3a2a2e"], night: ["#2a3d66", "#22355c", "#1b2b4f", "#152242", "#0f1a36"],
+  arctic: ["#f2f5f8", "#e3ecf4", "#c9dcee", "#a9c7e6", "#86b0dc"], lab: ["#2c3238", "#2c3238", "#2c3238", "#2c3238", "#2c3238"],
 };
 
 // ---------------- painted textures (dark seams, a few flat colour fields, no photo noise) ----------------
@@ -50,13 +60,13 @@ const steelHD = () => ctex("steelHD", 512, 512, (g) => {
   g.fillStyle = "#4b525c"; for (let x = 0; x < 512; x += 32) g.fillRect(x + 15, 0, 2, 512);
   g.fillRect(0, 0, 512, 3);
 });
-const signTex = (key: string, w: number, h: number, bg: string, fg: string, text: string, font = "bold 72px sans-serif") =>
+export const signTex = (key: string, w: number, h: number, bg: string, fg: string, text: string, font = "bold 72px sans-serif") =>
   ctex(key, w, h, (g) => {
     g.fillStyle = bg; g.fillRect(0, 0, w, h); g.strokeStyle = "#241726"; g.lineWidth = 10; g.strokeRect(5, 5, w - 10, h - 10);
     g.fillStyle = fg; g.font = font; g.textAlign = "center"; g.textBaseline = "middle"; g.fillText(text, w / 2, h / 2 + 4);
   });
 /** premium penguin sticker for the reactor door (our egg: "WRONG POLE"), drawn with eyes */
-const penguinSticker = () => ctex("penguinSticker", 512, 512, (g) => {
+export const penguinSticker = () => ctex("penguinSticker", 512, 512, (g) => {
   g.fillStyle = "#f6f1e6"; g.beginPath(); g.arc(256, 256, 240, 0, Math.PI * 2); g.fill();
   g.lineWidth = 14; g.strokeStyle = "#241726"; g.stroke();
   g.fillStyle = "#1d2433"; g.beginPath(); g.ellipse(256, 270, 110, 150, 0, 0, Math.PI * 2); g.fill();
@@ -67,12 +77,23 @@ const penguinSticker = () => ctex("penguinSticker", 512, 512, (g) => {
   g.fillStyle = "#241726"; g.font = "bold 54px sans-serif"; g.textAlign = "center"; g.fillText("WRONG POLE", 256, 470);
 });
 
-const glowTex = () => ctex("glowT", 256, 256, (g) => {
+export const glowTex = () => ctex("glowT", 256, 256, (g) => {
   const gr = g.createRadialGradient(128, 128, 0, 128, 128, 128);
   gr.addColorStop(0, "rgba(255,255,255,1)"); gr.addColorStop(0.35, "rgba(255,255,255,0.45)"); gr.addColorStop(1, "rgba(255,255,255,0)");
   g.fillStyle = gr; g.fillRect(0, 0, 256, 256);
 });
-type Mats = Record<string, THREE.Material>;
+export type Mats = Record<string, THREE.Material>;
+/** what a section's set builder gets (sets/a.ts, b.ts, c.ts). Each section owns its x-range of the world (see SECTION_X). */
+export type SetCtx = {
+  R: THREE.Group; b: Batch; M: Mats; kit: IceKit;
+  lamp: (x: number, y: number, z: number, r?: number, floorY?: number, col?: [number, number, number]) => void;
+  wash: (x: number, y: number, z: number, w: number, h: number, ry?: number, k?: number) => void;
+  signTex: typeof signTex; placeProp: typeof placeProp; glowTex: typeof glowTex; penguinSticker: typeof penguinSticker;
+  /** register a per-frame updater for an animated set piece; it is called every frame with (global frame, current shot set name) */
+  onFrame: (fn: (f: number, set: string) => void) => void;
+};
+/** world x origins: core 0-300; section A 400-600; B 700-900; C 1000-1300 */
+export const SECTION_X = { A: [400, 500, 600], B: [700, 800, 900], C: [1000, 1100, 1200, 1300] } as const;
 
 // ---------------- generated assets (rick/stage2/public/ice): painted textures + hero props ----------------
 const TEX = ["wall_planks", "floor_boards", "ice_wall", "snow_floor", "barber_tiles", "mess_wall", "crate_wood", "ice_sheet_day", "ice_sheet_golden"] as const;
@@ -91,7 +112,7 @@ export const loadIceKit = () => {
 };
 /** a hero prop: toon-shaded (two-tone Lambert), feet on the floor, scaled to a real height in metres, yaw in radians */
 const SOLID: Record<string, string> = { mess_table: "#b07a45", steel_desk: "#8d949c", snow_miller: "#e8b43a" };
-const placeProp = (kit: IceKit, name: string, parent: THREE.Object3D, x: number, y: number, z: number, height: number, yaw = 0) => {
+export const placeProp = (kit: IceKit, name: string, parent: THREE.Object3D, x: number, y: number, z: number, height: number, yaw = 0) => {
   const src = kit.props[name]; if (!src) return;
   const c = src.clone(true);
   c.traverse((o) => {
@@ -116,7 +137,8 @@ export class World {
   private fog = new THREE.Fog("#9fb4cc", 30, 140);
   private ceiling: THREE.Mesh; // barber ceiling (moves down)
   private bulbs: THREE.Mesh[] = [];
-  private marks: THREE.Mesh[] = []; // Hank's nightly pencil marks on the ice wall (each one lower)
+  private marks: THREE.Mesh[] = [];
+  private frameFns: ((f: number, set: string) => void)[] = []; // Hank's nightly pencil marks on the ice wall (each one lower)
   private halos: THREE.Mesh[] = [];
   /** warm lamp: additive halo that faces the lens + a pool of light on the floor (and optionally on a wall) */
   private lamp(x: number, y: number, z: number, r = 1.6, floorY = 0, col: [number, number, number] = [1.0, 0.62, 0.28]) {
@@ -283,6 +305,9 @@ export class World {
     bulbB.position.set(200.1, 1.42, -0.2); bulbB.layers.set(NOINK); R.add(bulbB);
     signLow.position.set(201.4, 1.25, -1.55); signLow.rotation.z = Math.PI; R.add(signLow); // hung upside down (the gag)
 
+    const ctx: SetCtx = { R, b, M, kit, lamp: (x, y, z, r, fy, col) => this.lamp(x, y, z, r, fy, col), wash: (x, y, z, ww, h, ry, k) => this.wash(x, y, z, ww, h, ry, k), signTex, placeProp, glowTex, penguinSticker,
+      onFrame: (fn) => this.frameFns.push(fn) };
+    buildA(ctx); buildB(ctx); buildC(ctx);
     for (const m of Object.values(M)) m.side = THREE.DoubleSide; // hand-wound quads: draw both faces
     b.build(R);
     R.traverse((o) => { if ((o as THREE.Mesh).isMesh && o.layers.mask !== (1 << NOINK)) { o.castShadow = true; o.receiveShadow = true; } });
@@ -319,6 +344,8 @@ export class World {
     for (const h of this.halos) h.quaternion.copy(cam.quaternion);
     untone(P.fog, this.fog.color); this.fog.near = P.fogNear; this.fog.far = P.fogFar; scene.fog = this.fog; scene.background = null;
     if (s.ceil) this.ceiling.position.y = s.ceil(f / FPS);
+    for (const fn of this.frameFns) fn(f, s.set);
+    if (s.anim) s.anim(f);
     const nm = s.marks ? s.marks(f) : 0; this.marks.forEach((m, i) => (m.visible = i < nm));
 
     // ---- cast: lit cards sized by distance + contact blobs ----
