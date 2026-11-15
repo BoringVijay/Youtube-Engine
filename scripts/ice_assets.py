@@ -117,6 +117,31 @@ def props():
             fal.download(res["model_mesh"]["url"], glb); budget.log(JOB, "fal_3d", 1, "fal"); print("[3d]", k)
 
 
+def voice_v3():
+    """Expressive takes (ElevenLabs v3 audio tags + written pauses), two stabilities. Picks the take nearest 64 s as voice.mp3."""
+    tts = open(os.path.join(ROOT, "rick", "projects", "camp-century", "vo_v3.txt")).read().strip()
+    takes = os.path.join(ROOT, "rick", "projects", "camp-century", "takes")
+    os.makedirs(takes, exist_ok=True)
+    made = []
+    for stab in (0.0, 0.5):
+        out = os.path.join(takes, f"river_v3_stab{int(stab * 10)}.mp3")
+        if not os.path.exists(out):
+            budget.check(JOB, "fal_tts_1k_chars", len(tts) / 1000)
+            res = fal.run("fal-ai/elevenlabs/tts/eleven-v3", {"text": tts, "voice": "River", "stability": stab}, timeout=600, tag=f"{JOB}:v3:{stab}")
+            raw = out + ".raw.mp3"; fal.download(res["audio"]["url"], raw); budget.log(JOB, "fal_tts_1k_chars", len(tts) / 1000, "fal")
+            subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", raw, "-af", "loudnorm=I=-15:TP=-1.5:LRA=11", "-ar", "44100", "-b:a", "160k", out], check=True)
+            os.remove(raw)
+        d = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", out], capture_output=True, text=True).stdout)
+        print(f"[v3] stability {stab}: {d:.1f}s"); made.append((abs(d - 64), out))
+    best = sorted(made)[0][1]
+    mp3 = os.path.join(OUT, "voice.mp3")
+    if os.path.exists(mp3): os.replace(mp3, os.path.join(takes, "river_v2_take3_62s.mp3"))
+    w = os.path.join(OUT, "words.json")
+    if os.path.exists(w): os.remove(w)
+    import shutil; shutil.copy(best, mp3); print("[v3] picked", os.path.basename(best))
+    voice()  # timings only (voice.mp3 exists)
+
+
 def props_tex():
     """Hero props seen up close: textured mesh (UVs + painted texture from the reference)."""
     for k in ("barber_chair", "bunk_bed", "reactor_console"):
