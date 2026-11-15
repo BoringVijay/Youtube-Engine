@@ -8,7 +8,9 @@
 // Place changes crossfade by stacking a second canvas for the fade frames; the hook ends on a 4-frame white flash.
 import React, { useEffect, useMemo, useState } from "react";
 import * as THREE from "three";
-import { AbsoluteFill, continueRender, delayRender, getInputProps, useCurrentFrame } from "remotion";
+import { AbsoluteFill, Audio, continueRender, delayRender, getInputProps, staticFile, useCurrentFrame } from "remotion";
+import VO from "../../../public/ice/words.json";
+const WORDS = (VO as unknown as { words: [string, number, number][] }).words;
 import { ThreeCanvas } from "@remotion/three";
 import { useThree } from "@react-three/fiber";
 import { EffectComposer } from "@react-three/postprocessing";
@@ -113,6 +115,26 @@ export const IceShort: React.FC = () => {
     <AbsoluteFill style={{ background: "#9fb4cc" }}>
       {kit && <ShotView key="base" id={shotAt(f).id} alpha={1} kit={kit} />}
       {flash > 0 && <AbsoluteFill style={{ background: "#ffffff", opacity: flash }} />}
+      <Caption f={f} />
+      <Audio src={staticFile("ice/voice.mp3")} />
+    </AbsoluteFill>
+  );
+};
+
+/** one white bold word with a black outline at ~65 % height, held through short gaps, popping in on each word */
+const Caption: React.FC<{ f: number }> = ({ f }) => {
+  const t = f / 30;
+  let i = -1;
+  for (let k = 0; k < WORDS.length; k++) if (WORDS[k][1] <= t) i = k; else break;
+  if (i < 0) return null;
+  const w = WORDS[i];
+  if (t > w[2] + 0.35) return null; // clear in longer pauses
+  const age = t - w[1], pop = age < 0.08 ? 0.86 + (age / 0.08) * 0.14 : 1;
+  const text = w[0].replace(/[".,?!]/g, "").toUpperCase();
+  return (
+    <AbsoluteFill style={{ justifyContent: "flex-start", alignItems: "center", top: "62%" }}>
+      <div style={{ fontFamily: "Arial Black, Arial, sans-serif", fontWeight: 900, fontSize: 104, color: "#fff", transform: `scale(${pop})`,
+        WebkitTextStroke: "14px #000", paintOrder: "stroke fill", letterSpacing: 1, textShadow: "0 6px 0 rgba(0,0,0,0.35)" }}>{text}</div>
     </AbsoluteFill>
   );
 };
