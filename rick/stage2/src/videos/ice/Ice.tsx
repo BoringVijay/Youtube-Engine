@@ -46,7 +46,12 @@ const fwd = new THREE.Vector3(), fpt = new THREE.Vector3();
 const useIceKit = () => {
   const [kit, setKit] = useState<IceKit | null>(null);
   const [handle] = useState(() => delayRender("ice kit"));
-  useEffect(() => { loadIceKit().then((k) => { setKit(k); continueRender(handle); }); }, [handle]);
+  useEffect(() => {
+    // asset loads occasionally stall on CI runners: retry up to 3 times with a 60 s cap each
+    const tryLoad = (n: number): Promise<IceKit> => Promise.race([loadIceKit(true), new Promise<never>((_, rej) => setTimeout(() => rej(new Error("kit timeout")), 60000))])
+      .catch((e) => (n > 1 ? tryLoad(n - 1) : Promise.reject(e)));
+    tryLoad(3).then((k) => { setKit(k); continueRender(handle); });
+  }, [handle]);
   return kit;
 };
 

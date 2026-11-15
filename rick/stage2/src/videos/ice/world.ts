@@ -102,8 +102,8 @@ const TEX = ["wall_planks", "floor_boards", "ice_wall", "snow_floor", "barber_ti
 const PROPS = ["barber_chair_tex", "bunk_bed_tex", "reactor_console_tex", "mess_table", "steel_desk", "snow_miller"] as const;
 export type IceKit = { tex: Record<string, THREE.Texture>; props: Record<string, THREE.Object3D> };
 let kitP: Promise<IceKit> | null = null;
-export const loadIceKit = () => {
-  if (!kitP) {
+export const loadIceKit = (fresh = false) => {
+  if (!kitP || fresh) {
     const tl = new THREE.TextureLoader(), gl = new GLTFLoader();
     kitP = Promise.all([
       Promise.all(TEX.map((n) => tl.loadAsync(staticFile(`ice/tex/${n}.png`)).then((t) => { t.colorSpace = THREE.SRGBColorSpace; t.wrapS = t.wrapT = THREE.RepeatWrapping; t.anisotropy = 8; return [n, t] as const; }))),
