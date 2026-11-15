@@ -15,14 +15,14 @@ import { SHOTS, FPS, camAt, ShotDef, Light, Spot } from "./story";
 const L: Record<Light, LightPreset> = {
   day: LIGHTS.day,
   golden: LIGHTS.golden,
-  inside: { ...LIGHTS.day, az: 35, el: 50, lit: [1.75, 1.42, 0.98], shade: [0.42, 0.44, 0.58], lift: [0.06, 0.07, 0.12],
-    charTint: [1.0, 0.92, 0.82], blob: [0.55, 0.55, 0.62], fog: "#c9c3b8", fogNear: 25, fogFar: 120 },
+  inside: { ...LIGHTS.day, az: 35, el: 50, lit: [1.55, 1.2, 0.8], shade: [0.2, 0.25, 0.46], lift: [0.04, 0.06, 0.13],
+    charTint: [1.0, 0.92, 0.82], blob: [0.55, 0.55, 0.62], fog: "#5b6f96", fogNear: 12, fogFar: 90 },
   night: { ...LIGHTS.day, az: 30, el: 35, lit: [0.75, 0.85, 1.25], shade: [0.12, 0.14, 0.3], lift: [0.03, 0.04, 0.12],
     charTint: [0.7, 0.78, 1.0], fog: "#1c2a4a", fogNear: 20, fogFar: 160 },
 };
 const SKY: Record<Light, string[]> = {
   day: ["#cfe2f4", "#a9cbee", "#79abe3", "#5592da", "#3a77cc"], golden: ["#ffc47c", "#f7ae78", "#e8967c", "#c4848e", "#8a6f8a"],
-  inside: ["#c9c3b8", "#c9c3b8", "#c9c3b8", "#c9c3b8", "#c9c3b8"], night: ["#2a3d66", "#22355c", "#1b2b4f", "#152242", "#0f1a36"],
+  inside: ["#5b6f96", "#5b6f96", "#5b6f96", "#5b6f96", "#5b6f96"], night: ["#2a3d66", "#22355c", "#1b2b4f", "#152242", "#0f1a36"],
 };
 
 // ---------------- painted textures (dark seams, a few flat colour fields, no photo noise) ----------------
@@ -65,6 +65,11 @@ const penguinSticker = () => ctex("penguinSticker", 512, 512, (g) => {
   g.fillStyle = "#241726"; g.font = "bold 54px sans-serif"; g.textAlign = "center"; g.fillText("WRONG POLE", 256, 470);
 });
 
+const glowTex = () => ctex("glowT", 256, 256, (g) => {
+  const gr = g.createRadialGradient(128, 128, 0, 128, 128, 128);
+  gr.addColorStop(0, "rgba(255,255,255,1)"); gr.addColorStop(0.35, "rgba(255,255,255,0.45)"); gr.addColorStop(1, "rgba(255,255,255,0)");
+  g.fillStyle = gr; g.fillRect(0, 0, 256, 256);
+});
 type Mats = Record<string, THREE.Material>;
 const SETS = { room: [0, 0, 0], main: [100, 0, 0], barber: [200, 0, 0], surface: [300, 0, 0] } as const;
 
@@ -78,6 +83,21 @@ export class World {
   private fog = new THREE.Fog("#9fb4cc", 30, 140);
   private ceiling: THREE.Mesh; // barber ceiling (moves down)
   private bulbs: THREE.Mesh[] = [];
+  private halos: THREE.Mesh[] = [];
+  /** warm lamp: additive halo that faces the lens + a pool of light on the floor (and optionally on a wall) */
+  private lamp(x: number, y: number, z: number, r = 1.6, floorY = 0, col: [number, number, number] = [1.0, 0.62, 0.28]) {
+    const mk = (k: number) => new THREE.MeshBasicMaterial({ map: glowTex(), color: new THREE.Color(col[0] * k, col[1] * k, col[2] * k), transparent: true,
+      blending: THREE.AdditiveBlending, depthWrite: false, fog: false });
+    const halo = new THREE.Mesh(new THREE.PlaneGeometry(r, r), mk(0.9)); halo.position.set(x, y, z); halo.layers.set(NOINK); halo.renderOrder = 5;
+    this.root.add(halo); this.halos.push(halo);
+    const pool = new THREE.Mesh(new THREE.PlaneGeometry(r * 3.2, r * 3.2), mk(0.55)); pool.rotation.x = -Math.PI / 2; pool.position.set(x, floorY + 0.015, z);
+    pool.layers.set(NOINK); pool.renderOrder = 4; this.root.add(pool);
+  }
+  private wash(x: number, y: number, z: number, w: number, h: number, ry = 0, k = 0.5) {
+    const m = new THREE.Mesh(new THREE.PlaneGeometry(w, h), new THREE.MeshBasicMaterial({ map: glowTex(), color: new THREE.Color(1.0 * k, 0.6 * k, 0.26 * k),
+      transparent: true, blending: THREE.AdditiveBlending, depthWrite: false, fog: false }));
+    m.position.set(x, y, z); m.rotation.y = ry; m.layers.set(NOINK); m.renderOrder = 4; this.root.add(m);
+  }
 
   constructor() {
     const R = this.root, M: Mats = {};
@@ -116,7 +136,7 @@ export class World {
       b.add(quad(V(ox - 2.2, 0, oz + 3), V(ox + 2.2, 0, oz + 3), V(ox + 2.2, 0, oz - 1.8), V(ox - 2.2, 0, oz - 1.8), 2, 2.2), M.planks); // floor
       b.add(quad(V(ox - 2.2, 0, oz + 3), V(ox - 2.2, 0, oz - 1.8), V(ox - 2.2, 3.2, oz - 1.8), V(ox - 2.2, 3.2, oz + 3), 2.2, 1.4), M.planks); // left wall
       b.add(quad(V(ox + 2.2, 0, oz - 1.8), V(ox + 2.2, 0, oz + 3), V(ox + 2.2, 3.2, oz + 3), V(ox + 2.2, 3.2, oz - 1.8), 2.2, 1.4), M.planks); // right wall
-      b.add(quad(V(ox - 2.2, 2.55, oz - 1.8), V(ox + 2.2, 2.55, oz - 1.8), V(ox + 2.2, 2.55, oz + 3), V(ox - 2.2, 2.55, oz + 3), 2, 2), M.cream); // ceiling (low: the ice is winning)
+      b.add(quad(V(ox - 2.2, 2.55, oz - 1.8), V(ox + 2.2, 2.55, oz - 1.8), V(ox + 2.2, 2.55, oz + 3), V(ox - 2.2, 2.55, oz + 3), 1.2, 1.2), M.ice); // ceiling (low: the ice is winning)
       // bunk bed at the right, top bunk almost touching the ceiling
       for (const [x, z] of [[1.0, -1.6], [2.0, -1.6], [1.0, 0.2], [2.0, 0.2]]) b.add(boxGeo(V(ox + x - 0.05, 0, oz + z - 0.05), V(ox + x + 0.05, 2.25, oz + z + 0.05)), M.olive);
       for (const y of [0.45, 1.9]) {
@@ -126,11 +146,19 @@ export class World {
       b.add(boxGeo(V(ox - 2.0, 0, oz - 1.0), V(ox - 1.3, 0.75, oz - 0.3)), M.wood); // footlocker
       b.add(boxGeo(V(ox - 1.55, 1.3, oz - 1.78), V(ox - 1.05, 1.75, oz - 1.74)), M.chrome); // shaving mirror screwed to the ice
       const foam = lam("foam", () => ({ color: "#ffffff" }));
-      for (const [fx2, fy, fr] of [[-0.85, 1.55, 0.16], [-0.62, 1.32, 0.11], [-0.98, 1.2, 0.09], [-0.7, 1.75, 0.08]] as [number, number, number][]) {
+      for (const [fx2, fy, fr] of [[0.02, 1.62, 0.17], [0.22, 1.4, 0.12], [-0.1, 1.33, 0.09], [0.25, 1.78, 0.08]] as [number, number, number][]) {
         const blobG = new THREE.SphereGeometry(fr, 14, 10); blobG.scale(1, 0.75, 0.35); blobG.translate(ox + fx2, fy, oz - 1.78); b.add(blobG, foam);
       }
       const bulbR = new THREE.Mesh(new THREE.SphereGeometry(0.09, 12, 8), new THREE.MeshBasicMaterial({ color: new THREE.Color(3.2, 2.6, 1.6) }));
-      bulbR.position.set(ox, 2.3, oz + 0.6); bulbR.layers.set(NOINK); R.add(bulbR);
+      bulbR.position.set(ox + 0.3, 2.3, oz - 0.6); bulbR.layers.set(NOINK); R.add(bulbR);
+      this.lamp(ox + 0.3, 2.3, oz - 0.6, 1.5); this.wash(ox + 0.2, 1.6, oz - 1.77, 4.2, 3.4, 0, 0.6);
+      // lived-in clutter: boots, mug, pin-up calendar, pipe, towel on a nail
+      b.add(boxGeo(V(ox - 1.2, 0, oz - 1.6), V(ox - 1.0, 0.28, oz - 1.3)), M.leather); b.add(boxGeo(V(ox - 0.95, 0, oz - 1.6), V(ox - 0.75, 0.28, oz - 1.3)), M.leather);
+      b.add(boxGeo(V(ox - 1.75, 0.75, oz - 0.8), V(ox - 1.62, 0.9, oz - 0.67)), M.cream);
+      b.add(boxGeo(V(ox + 0.55, 1.2, oz - 1.78), V(ox + 0.85, 1.75, oz - 1.76)), M.red);
+      b.add(boxGeo(V(ox - 2.18, 0.2, oz - 1.2), V(ox - 2.1, 2.4, oz - 1.05)), M.iron);
+      const cal = new THREE.Mesh(new THREE.PlaneGeometry(0.42, 0.56), new THREE.MeshBasicMaterial({ map: signTex("cal60", 384, 512, "#f6f1e6", "#b8403a", "1960", "bold 120px sans-serif") }));
+      cal.position.set(ox - 1.3, 2.0, oz - 1.77); R.add(cal);
     }
 
     // ===== MAIN STREET (x=100): trench 8 m wide, steel arches, ice walls, wooden fronts =====
@@ -192,7 +220,7 @@ export class World {
       // hanging bulbs down the street (emissive: the only things that bloom)
       for (let z = 6; z > -len; z -= 6) {
         const bulb = new THREE.Mesh(new THREE.SphereGeometry(0.13, 12, 8), new THREE.MeshBasicMaterial({ color: new THREE.Color(3.2, 2.6, 1.6) }));
-        bulb.position.set(ox, hTop - 2.0, z); bulb.layers.set(NOINK); R.add(bulb); this.bulbs.push(bulb);
+        bulb.position.set(ox, hTop - 2.0, z); bulb.layers.set(NOINK); R.add(bulb); this.bulbs.push(bulb); this.lamp(ox, hTop - 2.0, z, 2.6);
         b.add(boxGeo(V(ox - 0.01, hTop - 1.95, z - 0.01), V(ox + 0.01, hTop - 0.6, z + 0.01)), M.iron);
       }
     }
@@ -211,9 +239,12 @@ export class World {
       b.add(boxGeo(V(ox - 0.55, 0.44, -1.0), V(ox + 0.05, 0.95, -0.9)), M.red); // backrest
       b.add(boxGeo(V(ox + 0.3, 0, -0.5), V(ox + 0.6, 0.12, -0.2)), M.wood); // barber's low stool
     }
-    this.ceiling = new THREE.Mesh(new THREE.PlaneGeometry(5, 4.6), M.cream);
+    this.ceiling = new THREE.Mesh(new THREE.PlaneGeometry(5, 4.6), M.ice);
     this.ceiling.rotation.x = Math.PI / 2; this.ceiling.position.set(200, 1.55, 0.7); R.add(this.ceiling);
     const signLow = new THREE.Mesh(new THREE.PlaneGeometry(1.1, 0.32), new THREE.MeshBasicMaterial({ map: signTex("mindHead", 768, 224, "#f2d23a", "#241726", "MIND YOUR HEAD", "bold 80px sans-serif") }));
+    this.lamp(200.1, 1.42, -0.2, 1.3); this.wash(200, 0.9, -1.57, 4.6, 2.6, 0, 0.6);
+    const bulbB = new THREE.Mesh(new THREE.SphereGeometry(0.08, 12, 8), new THREE.MeshBasicMaterial({ color: new THREE.Color(3.2, 2.6, 1.6) }));
+    bulbB.position.set(200.1, 1.42, -0.2); bulbB.layers.set(NOINK); R.add(bulbB);
     signLow.position.set(201.4, 1.25, -1.55); signLow.rotation.z = Math.PI; R.add(signLow); // hung upside down (the gag)
 
     for (const m of Object.values(M)) m.side = THREE.DoubleSide; // hand-wound quads: draw both faces
@@ -249,6 +280,7 @@ export class World {
     CHAR.uBodyGrad.value = P.bodyGrad; CHAR.uSideTint.value.set(...P.sideTint);
     SKY[s.light].forEach((h, i) => untone(h, this.skyMat.uniforms["c" + i].value));
     this.sky.position.copy(cam.position);
+    for (const h of this.halos) h.quaternion.copy(cam.quaternion);
     untone(P.fog, this.fog.color); this.fog.near = P.fogNear; this.fog.far = P.fogFar; scene.fog = this.fog; scene.background = null;
     if (s.ceil) this.ceiling.position.y = s.ceil(f / FPS);
 
