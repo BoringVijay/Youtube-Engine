@@ -1,0 +1,18 @@
+name: Camp Century fetch render
+# Copies a finished render artifact from another run into the repo (so it can be pulled without artifact downloads).
+on:
+  workflow_dispatch:
+    inputs:
+      run_id: { required: true }
+      name: { required: true }
+permissions: { contents: write, actions: read }
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: { name: "${{ inputs.name }}", run-id: "${{ inputs.run_id }}", github-token: "${{ github.token }}", path: rick/projects/camp-century/renders }
+      - run: |
+          git config user.name "engine-bot"; git config user.email "engine-bot@users.noreply.github.com"
+          git add -f rick/projects/camp-century/renders && git commit -m "Camp Century render: ${{ inputs.name }}" && git pull --rebase && git push
