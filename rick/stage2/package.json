@@ -15,5 +15,14 @@
     "remotion": "4.0.290",
     "three": "0.175.0"
   },
-  "devDependencies": { "@types/react": "19.0.0", "@types/three": "0.175.0", "typescript": "5.8.3" }
+  "devDependencies": {
+    "@types/react": "19.0.0",
+    "@types/three": "0.175.0",
+    "typescript": "5.8.3"
+  },
+  "scripts": {
+    "qa": "./qa/run_qa.sh",
+    "render:local": "./render-local.sh",
+    "sbs": "python3 qa/sbs_beats.py"
+  }
 }

@@ -101,6 +101,6 @@ for _, a, b in words: env[ns(max(0, a - 0.05)):ns(b + 0.1)] = 10 ** (-3 / 20)
 env = np.convolve(env, np.ones(ns(0.08)) / ns(0.08), mode="same")
 mixd = vo + mus * env + sfx
 write_wav("/tmp/ice_mix.wav", mixd / max(1.0, np.abs(mixd).max()))
-subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", "/tmp/ice_mix.wav", "-af", "loudnorm=I=-15:TP=-1.2:LRA=7",
+subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", "/tmp/ice_mix.wav", "-af", "loudnorm=I=-14:TP=-1.2:LRA=7",
                 "-ar", "48000", "-b:a", "192k", f"{ICE}/mix.mp3"], check=True)
 print("mix.mp3 written")

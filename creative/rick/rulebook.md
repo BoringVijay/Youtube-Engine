@@ -251,3 +251,9 @@ Never the same lane three times in a row.
 - Two parts only when the story is naturally too long for one. Each part 60-100 s; part 1 ends on a real cliffhanger, part 2 opens with a 3 s recap and pays it off.
 - Claude proposes two parts at the script gate with the reason; Vijay decides.
 - A/B test now: one story as a single Short vs the same story as two parts; compare views, retention and subs gained per part.
+
+## 21. Local QA gate (15 Nov 2026)
+- Every render ends with `./render-local.sh <Comp> <story.ts> <out.mp4>` (or `npm run qa -- <mp4> <story.ts>` on an existing file). It writes `<out dir>/qa/report.txt` + 2 s contact sheets and fails on any unplanned black, white, frozen or pop frame, or loudness outside -15..-14 LUFS. Portal dives and listed flashes count as planned.
+- Mix target is **-14 LUFS** (YouTube playback level). The critic reads the report before Vijay sees the cut.
+- Storyboard gate: `python3 qa/sbs_beats.py <stills dir>` makes one side-by-side per beat against the nearest reference frame; scores are given against those sheets.
+- Mac renders run `--concurrency=1`: 50% concurrency on the GPU produced tiled frames (Camp Century, 15 Nov).
