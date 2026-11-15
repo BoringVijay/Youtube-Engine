@@ -3,7 +3,9 @@
 // grade, lit character cards with contact blobs); only the sets, light presets and cast are new.
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
-import { staticFile } from "remotion";
+import { getInputProps, staticFile } from "remotion";
+/** fast preview render (inputProps {preview:true}): half-size character cards, smaller shadow map */
+export const PREVIEW = !!(getInputProps() as { preview?: boolean }).preview;
 import { lam, Batch, boxGeo, quad, V } from "../bridge/build";
 import { ctex, rep, planksHD, beamHD } from "../bridge/paint";
 import { TONE, CHAR, twoTone, untone } from "../bridge/shade";
@@ -168,7 +170,7 @@ export class World {
     });
     this.sky = new THREE.Mesh(new THREE.SphereGeometry(1100, 48, 24), this.skyMat);
     this.sky.renderOrder = -1; this.sky.frustumCulled = false; this.sky.layers.set(NOINK); R.add(this.sky);
-    this.sun.castShadow = true; this.sun.shadow.mapSize.set(4096, 4096);
+    this.sun.castShadow = true; this.sun.shadow.mapSize.set(PREVIEW ? 1536 : 4096, PREVIEW ? 1536 : 4096);
     R.add(this.sun, this.sun.target, new THREE.HemisphereLight("#dcecff", "#8a7a9a", 0.55));
 
     M.ice = lam("iceP", () => ({ map: rep(kit.tex.ice_wall, 1, 1) }));
@@ -309,7 +311,14 @@ export class World {
       onFrame: (fn) => this.frameFns.push(fn) };
     buildA(ctx); buildB(ctx); buildC(ctx);
     for (const m of Object.values(M)) m.side = THREE.DoubleSide; // hand-wound quads: draw both faces
-    b.build(R);
+    b.build(R, true, 100);
+    // tag every other set object with its 100 m region so update() can hide the sets the camera isn't in
+    const bb = new THREE.Box3();
+    for (const o of R.children) {
+      if (o === this.sky || o.userData.region !== undefined || (o as THREE.Light).isLight) continue;
+      bb.setFromObject(o); if (bb.isEmpty()) continue;
+      o.userData.region = Math.round((bb.min.x + bb.max.x) / 2 / 100);
+    }
     R.traverse((o) => { if ((o as THREE.Mesh).isMesh && o.layers.mask !== (1 << NOINK)) { o.castShadow = true; o.receiveShadow = true; } });
   }
 
@@ -344,6 +353,8 @@ export class World {
     for (const h of this.halos) h.quaternion.copy(cam.quaternion);
     untone(P.fog, this.fog.color); this.fog.near = P.fogNear; this.fog.far = P.fogFar; scene.fog = this.fog; scene.background = null;
     if (s.ceil) this.ceiling.position.y = s.ceil(f / FPS);
+    const reg = Math.round(c.pos[0] / 100);
+    for (const o of this.root.children) if (o.userData.region !== undefined) o.visible = o.userData.region === reg;
     for (const fn of this.frameFns) fn(f, s.set);
     if (s.anim) s.anim(f);
     const nm = s.marks ? s.marks(f) : 0; this.marks.forEach((m, i) => (m.visible = i < nm));
@@ -356,7 +367,8 @@ export class World {
     const blink = (seed: number) => { const per = 1.4 + (seed % 5) * 0.2, ph = ((f / FPS + seed * 0.37) % per) / per; return ph < 0.045 ? (ph < 0.0225 ? 1 : 0.5) : false; };
     for (const p of spots) {
       const d = cam.position.distanceTo(V(p.x, p.y + 1.2, p.z)) / (p.scale ?? 1);
-      const [w, h, k]: [number, number, number] = d < 3.2 ? [1800, 3000, 3.0] : d < 6.5 ? [1080, 1800, 1.8] : d < 16 ? [480, 800, 0.8] : [240, 400, 0.4];
+      const [w0, h0, k0]: [number, number, number] = d < 3.2 ? [1800, 3000, 3.0] : d < 6.5 ? [1080, 1800, 1.8] : d < 16 ? [480, 800, 0.8] : [240, 400, 0.4];
+      const q = PREVIEW ? 0.5 : 1, w = Math.round(w0 * q), h = Math.round(h0 * q), k = k0 * q;
       const fo: FrontOpts = { mode: p.mode ?? "stand", expr: p.expr ?? "neutral", phase: p.phase ?? 0, facing: p.facing ?? 0, look: p.look ?? 0,
         light, seed: p.seed ?? 1, blink: blink(p.seed ?? 1), headTilt: p.headTilt ?? 0, tilt: p.tilt ?? 0, prop: p.prop ?? null, talk: p.talk ?? 0, ...(p.wave !== undefined ? { wave: p.wave } : {}) };
       const key = `F|${p.key}|${JSON.stringify(fo)}`;

@@ -7,6 +7,7 @@ on:
       chunks: { description: "parallel chunks", default: "20" }
       scale: { description: "1 = 1080x1920, 0.5 = 540x960", default: "1" }
       out: { description: "output name", default: "roughcut" }
+      props: { description: "composition inputProps JSON", default: "{}" }
       only: { description: "speed test: render just this frame range (e.g. 0-29) in one job, no stitch", default: "" }
 permissions:
   contents: write
@@ -35,7 +36,7 @@ jobs:
           if [ -n "${{ inputs.only }}" ]; then [ "$K" = 0 ] || exit 0; A=${{ inputs.only }}; A=${A%-*}; B=${{ inputs.only }}; B=${B#*-}; fi
           T0=$(date +%s)
           npx remotion render src/index.tsx IceShort out/c$(printf %02d $K).mp4 --frames=$A-$B --scale=${{ inputs.scale }} \
-            --gl=swangle --muted --concurrency=2 --crf=16 --timeout=300000 --log=error
+            --gl=swangle --props='${{ inputs.props }}' --muted --concurrency=2 --crf=16 --timeout=300000 --log=error
           echo "SPEED: $(( B - A + 1 )) frames in $(( $(date +%s) - T0 )) s"
       - uses: actions/upload-artifact@v4
         with: { name: "c${{ matrix.k }}", path: rick/stage2/out/*.mp4, retention-days: 3 }

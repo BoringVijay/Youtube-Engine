@@ -105,11 +105,22 @@ export class Batch {
       this.add(mesh.geometry, toLambert(Array.isArray(mesh.material) ? mesh.material[0] : mesh.material), new THREE.Matrix4().multiplyMatrices(m, mesh.matrixWorld));
     });
   }
-  build(parent: THREE.Object3D, cast = true) {
+  /** regionSize > 0: split each material's merge by world-x region (round(cx / regionSize)), tagging mesh.userData.region,
+   *  so a world with many sets side by side can hide the sets the camera isn't in */
+  build(parent: THREE.Object3D, cast = true, regionSize = 0) {
     for (const [mat, list] of this.g) {
-      const mesh = new THREE.Mesh(mergeGeometries(list, false), mat);
-      mesh.castShadow = cast; mesh.receiveShadow = true; mesh.matrixAutoUpdate = false;
-      parent.add(mesh);
+      const groups = new Map<number | undefined, THREE.BufferGeometry[]>();
+      for (const g of list) {
+        let r: number | undefined;
+        if (regionSize) { g.computeBoundingBox(); const bb = g.boundingBox!; r = Math.round((bb.min.x + bb.max.x) / 2 / regionSize); }
+        const l = groups.get(r); if (l) l.push(g); else groups.set(r, [g]);
+      }
+      for (const [r, gl] of groups) {
+        const mesh = new THREE.Mesh(mergeGeometries(gl, false), mat);
+        mesh.castShadow = cast; mesh.receiveShadow = true; mesh.matrixAutoUpdate = false;
+        if (r !== undefined) mesh.userData.region = r;
+        parent.add(mesh);
+      }
     }
     this.g.clear();
   }
