@@ -21,7 +21,7 @@ import { GradeEffect, GRADES, GRADE_STRENGTH, gradeFor } from "../bridge/grade";
 import { TOTAL, SHOTS, shotAt } from "./story";
 
 export const ICE_FRAMES = TOTAL;
-const FLASH_AT = 150;
+const FLASH_AT = SHOTS[1].a;
 
 /** A/B switches for test stills only (Remotion inputProps `{ post: { ink: false, ... } }`); everything is on by default. */
 type PostToggles = { ink: boolean; lens: boolean; pre: boolean; bloom: boolean; grade: boolean; grain: boolean };

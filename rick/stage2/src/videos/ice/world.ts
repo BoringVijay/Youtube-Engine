@@ -116,6 +116,7 @@ export class World {
   private fog = new THREE.Fog("#9fb4cc", 30, 140);
   private ceiling: THREE.Mesh; // barber ceiling (moves down)
   private bulbs: THREE.Mesh[] = [];
+  private marks: THREE.Mesh[] = []; // Hank's nightly pencil marks on the ice wall (each one lower)
   private halos: THREE.Mesh[] = [];
   /** warm lamp: additive halo that faces the lens + a pool of light on the floor (and optionally on a wall) */
   private lamp(x: number, y: number, z: number, r = 1.6, floorY = 0, col: [number, number, number] = [1.0, 0.62, 0.28]) {
@@ -186,6 +187,16 @@ export class World {
       b.add(boxGeo(V(ox - 2.18, 0.2, oz - 1.2), V(ox - 2.1, 2.4, oz - 1.05)), M.iron);
       const cal = new THREE.Mesh(new THREE.PlaneGeometry(0.42, 0.56), new THREE.MeshBasicMaterial({ map: signTex("cal60", 384, 512, "#f6f1e6", "#b8403a", "1960", "bold 120px sans-serif") }));
       cal.position.set(ox - 1.3, 2.0, oz - 1.77); R.add(cal);
+      // pencil height marks + day labels, revealed one per night by the shot (ShotDef.marks)
+      const days = ["MON", "TUE", "WED", "THU", "FRI"];
+      days.forEach((d, i) => {
+        const y = 1.86 - i * 0.075;
+        const m = new THREE.Mesh(new THREE.PlaneGeometry(0.34, 0.11), new THREE.MeshBasicMaterial({ map: ctex("mk" + d, 384, 124, (g) => {
+          g.clearRect(0, 0, 384, 124); g.strokeStyle = "#2b2b3c"; g.lineWidth = 9; g.lineCap = "round";
+          g.beginPath(); g.moveTo(14, 64 + i * 2); g.lineTo(170, 60 - i); g.stroke();
+          g.fillStyle = "#2b2b3c"; g.font = "bold 66px sans-serif"; g.textBaseline = "middle"; g.fillText(d, 190, 64); }), transparent: true }));
+        m.position.set(ox - 0.62, y, oz - 1.775); m.layers.set(NOINK); m.visible = false; R.add(m); this.marks.push(m);
+      });
     }
 
     // ===== MAIN STREET (x=100): trench 8 m wide, steel arches, ice walls, wooden fronts =====
@@ -308,6 +319,7 @@ export class World {
     for (const h of this.halos) h.quaternion.copy(cam.quaternion);
     untone(P.fog, this.fog.color); this.fog.near = P.fogNear; this.fog.far = P.fogFar; scene.fog = this.fog; scene.background = null;
     if (s.ceil) this.ceiling.position.y = s.ceil(f / FPS);
+    const nm = s.marks ? s.marks(f) : 0; this.marks.forEach((m, i) => (m.visible = i < nm));
 
     // ---- cast: lit cards sized by distance + contact blobs ----
     const spots: Spot[] = s.cast ? s.cast(f) : [];
@@ -319,7 +331,7 @@ export class World {
       const d = cam.position.distanceTo(V(p.x, p.y + 1.2, p.z)) / (p.scale ?? 1);
       const [w, h, k]: [number, number, number] = d < 3.2 ? [1800, 3000, 3.0] : d < 6.5 ? [1080, 1800, 1.8] : d < 16 ? [480, 800, 0.8] : [240, 400, 0.4];
       const fo: FrontOpts = { mode: p.mode ?? "stand", expr: p.expr ?? "neutral", phase: p.phase ?? 0, facing: p.facing ?? 0, look: p.look ?? 0,
-        light, seed: p.seed ?? 1, blink: blink(p.seed ?? 1), headTilt: p.headTilt ?? 0, tilt: p.tilt ?? 0 };
+        light, seed: p.seed ?? 1, blink: blink(p.seed ?? 1), headTilt: p.headTilt ?? 0, tilt: p.tilt ?? 0, prop: p.prop ?? null, talk: p.talk ?? 0 };
       const key = `F|${p.key}|${JSON.stringify(fo)}`;
       const a = this.actor(ai++);
       a.r = this.pool.req(key, w, h, k, (pen: Pen) => bodyFront(pen, p.who, fo));

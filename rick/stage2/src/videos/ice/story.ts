@@ -3,6 +3,8 @@
 // shot start snaps to its first word (reactions land 0-3 frames before the word, as in the reference).
 import { Outfit, Expr, Prop } from "../bridge/toon";
 import { CAST, soldierIce } from "./cast";
+import VO from "../../../public/ice/words.json";
+const WORDS = (VO as unknown as { words: [string, number, number][] }).words;
 
 export const FPS = 30;
 export type V3 = [number, number, number];
@@ -16,30 +18,43 @@ export type Cam = { pos: V3; look: V3; fov: number; roll: number };
 export type Key = { f: number; dur?: number; pos: V3; look: V3; fov?: number; roll?: number };
 export type Spot = {
   who: Outfit; key: string; x: number; y: number; z: number; expr?: Expr; mode?: "stand" | "stroll" | "sit" | "march";
-  phase?: number; facing?: -1 | 0 | 1; prop?: Prop; look?: number; seed?: number; scale?: number; headTilt?: number; tilt?: number;
+  phase?: number; facing?: -1 | 0 | 1; prop?: Prop; talk?: 0 | 1 | 2; look?: number; seed?: number; scale?: number; headTilt?: number; tilt?: number;
 };
 export type ShotDef = {
   id: number; a: number; b: number; light: Light; set: SetName; cams: Key[]; cInf: number;
-  cast?: (t: number) => Spot[]; ceil?: (t: number) => number; // barber shop ceiling height over time
+  cast?: (t: number) => Spot[]; marks?: (f: number) => number; ceil?: (t: number) => number; // barber shop ceiling height over time
 };
 
 // local time inside a shot in seconds
 const S = (f: number) => f / FPS;
 
+// shot boundaries snap to the first word of each beat (words.json, voice take "directed edit", 72.5 s)
+const sec = (t: number) => Math.round(t * FPS);
+export const VO_END = sec(72.6);
+
+/** lip flap for a line the narrator voices "as" a character: flaps once per ~0.15 s inside each word, closed in the gaps */
+export const talkAt = (t: number, from: number, to: number): 0 | 1 | 2 => {
+  if (t < from || t > to) return 0;
+  const w = WORDS.find((x) => t >= x[1] && t < x[2]);
+  if (!w) return 0;
+  const n = Math.max(1, Math.round((w[2] - w[1]) / 0.15)), ph = (((t - w[1]) / Math.max(0.05, w[2] - w[1])) * n) % 1;
+  return ph < 0.18 ? 1 : ph < 0.72 ? 2 : 1;
+};
+
 export const SHOTS: ShotDef[] = [
-  // 1. Hook: Hank shaving his ice wall, roommate pressed to the ceiling in the top bunk
-  { id: 1, a: 0, b: 150, light: "inside", set: "room", cInf: 13,
-    cams: [{ f: 0, pos: [0.3, 1.3, 2.9], look: [0.4, 1.3, -1.4], fov: 58 }, { f: 150, dur: 150, pos: [0.25, 1.3, 2.4], look: [0.35, 1.32, -1.4], fov: 58 }],
+  // 1. Hook (0-3.9 s): Hank shaving his ice wall, roommate pressed to the ceiling in the top bunk
+  { id: 1, a: 0, b: sec(3.86), light: "inside", set: "room", cInf: 13, marks: () => 4,
+    cams: [{ f: 0, pos: [0.3, 1.3, 2.9], look: [0.4, 1.3, -1.4], fov: 58 }, { f: sec(3.86), dur: sec(3.86), pos: [0.25, 1.3, 2.4], look: [0.35, 1.32, -1.4], fov: 58 }],
     cast: (f) => [
       { who: CAST.HANK, key: "hank", x: -0.15, y: 0, z: -1.1, expr: "stern", mode: "stand", facing: 1, seed: 3, prop: ["razor", (f / FPS) * 1.6] },
       { who: soldierIce(1), key: "roomie", x: 1.5, y: 2.12, z: -0.7, expr: "pained", mode: "sit", facing: 1, seed: 5, scale: 0.78, headTilt: 0.25 },
     ] },
-  // 3. Main Street glide: theater, barber pole, chapel, reactor door
-  { id: 2, a: 150, b: 330, light: "inside", set: "main", cInf: 7,
-    cams: [{ f: 150, pos: [100.4, 1.7, 9], look: [99.6, 2.3, -14], fov: 48 },
-           { f: 330, dur: 180, pos: [100.5, 1.75, -9], look: [99.4, 2.2, -36], fov: 48 }],
+  // 2. Main Street glide (3.9-12.4 s): theater, barber pole, chapel, reactor door
+  { id: 2, a: sec(3.86), b: sec(12.4), light: "inside", set: "main", cInf: 7,
+    cams: [{ f: sec(3.86), pos: [100.4, 1.7, 9], look: [99.6, 2.3, -14], fov: 48 },
+           { f: sec(12.4), dur: sec(12.4 - 3.86), pos: [100.5, 1.75, -12], look: [99.4, 2.2, -38], fov: 48 }],
     cast: (f) => {
-      const t = S(f - 150);
+      const t = S(f - sec(3.86));
       return [
         { who: soldierIce(1), key: "s1", x: 98.4, y: 0, z: 1.5 - t * 1.4, mode: "stroll", phase: t * 0.9, facing: 0, seed: 2 },
         { who: CAST.COOK, key: "cook", x: 102.2, y: 0, z: -4, expr: "whistle", mode: "stand", facing: -1, seed: 8 },
@@ -47,16 +62,34 @@ export const SHOTS: ShotDef[] = [
         { who: soldierIce(0), key: "s0", x: 98.6, y: 0, z: -27, expr: "neutral", mode: "stand", facing: 1, seed: 6 },
       ];
     } },
-  // 8. Barber shop: ceiling so low the barber kneels to cut hair
-  { id: 3, a: 330, b: 450, light: "inside", set: "barber", cInf: 11,
-    cams: [{ f: 330, pos: [200.15, 0.95, 3.4], look: [200.05, 0.72, -0.6], fov: 46 }, { f: 450, dur: 120, pos: [200.12, 0.95, 2.9], look: [200.05, 0.74, -0.6], fov: 46 }],
+  // 7. The pencil mark (22.2-30.5 s). Night: Hank marks his height. Morning: the mark is lower (the ceiling is coming
+  //    down, not Hank). The sergeant laughs, then delivers "Son... you're just growing." with his own lips.
+  { id: 3, a: sec(22.2), b: sec(30.48), light: "inside", set: "room", cInf: 12,
+    marks: (f) => (f < sec(23.7) ? 1 : f < sec(24.6) ? 2 : 3),
+    cams: [{ f: sec(22.2), pos: [-0.35, 1.55, 1.6], look: [-0.55, 1.6, -1.8], fov: 50 },
+           { f: sec(25.7), dur: sec(1.1), pos: [-0.45, 1.75, 0.55], look: [-0.62, 1.78, -1.8], fov: 44 }, // morning: push to the marks
+           { f: sec(26.9), dur: 14, pos: [0.15, 1.5, 2.6], look: [0.15, 1.35, -0.8], fov: 52 }],           // sergeant laughs: pull out to the two-shot
+    cast: (f) => {
+      const t = S(f);
+      const night = t < 24.6;
+      return [
+        { who: CAST.HANK, key: "hank", x: -0.25, y: 0, z: -1.25, mode: "stand", facing: -1, seed: 3,
+          expr: night ? "stern" : t < 26.4 ? "shock" : "nervous",
+          prop: t < 24.0 ? ["pencil", t * 0.8] : null, look: night ? -0.6 : t < 26.4 ? -0.4 : 0.7 },
+        ...(t >= 26.0 ? [{ who: CAST.SERGEANT, key: "sarge", x: 0.5, y: 0, z: -0.35, mode: "stand" as const, facing: -1 as const, seed: 9,
+          expr: (t < 27.7 ? "laugh" : "smile") as Expr, talk: talkAt(t, 27.7, 30.45), look: -0.6 }] : []),
+      ];
+    } },
+  // 8. Barber shop (30.5-34.4 s): ceiling so low the barber kneels to cut hair
+  { id: 4, a: sec(30.48), b: sec(34.4), light: "inside", set: "barber", cInf: 11,
+    cams: [{ f: sec(30.48), pos: [200.15, 0.95, 3.4], look: [200.05, 0.72, -0.6], fov: 46 }, { f: sec(34.4), dur: sec(3.92), pos: [200.12, 0.95, 2.9], look: [200.05, 0.74, -0.6], fov: 46 }],
     ceil: () => 1.55,
     cast: () => [
       { who: CAST.BARBER, key: "barber", x: 200.4, y: 0.0, z: -0.45, expr: "stern", mode: "sit", facing: -1, seed: 4, prop: ["razor", 0.25] },
       { who: soldierIce(3), key: "cust", x: 199.7, y: 0.28, z: -0.62, expr: "dazed", mode: "sit", facing: 1, seed: 7 },
     ] },
 ];
-export const TOTAL = SHOTS[SHOTS.length - 1].b;
+export const TOTAL = VO_END;
 export const shotAt = (f: number) => SHOTS.find((s) => f >= s.a && f < s.b) ?? SHOTS[SHOTS.length - 1];
 
 const full = (k: Key): Cam => ({ pos: k.pos, look: k.look, fov: k.fov ?? 40, roll: k.roll ?? 0 });

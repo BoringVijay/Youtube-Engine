@@ -306,7 +306,7 @@ const mouth = (p: Pen, kind: MouthK, mx: number, my: number, u: number, k = 1) =
 /** face v2 (front / 3-4). u = 1 % of the head path width W. Eyes 26u apart on the centre line, brows 20u up, mouth 20u
  *  down, everything slid toward the facing side. No blush, no catchlights. */
 const faceFront = (p: Pen, cx: number, cy: number, W: number, expr: Expr, facing: number, look: number, lid: number, brim: boolean,
-  skin: string, moustache?: string, stout = false) => {
+  skin: string, moustache?: string, stout = false, talk: 0 | 1 | 2 = 0) => {
   const u = W / 100, F = FACE[expr], fx = cx + 7 * u * facing;
   const ex = (F.eye[0] === "shock" ? 12 : 13) * u, ey = cy;
   for (const side of [-1, 1]) {
@@ -318,7 +318,7 @@ const faceFront = (p: Pen, cx: number, cy: number, W: number, expr: Expr, facing
     else taper(p, [x - side * 8.5 * u, by + dI * u], [x + side * 8.5 * u, by + dO * u], 5 * u, 2.5 * u);
   }
   const mx = cx + 8 * u * facing, my = cy + 20 * u;
-  mouth(p, F.mouth, mx, my, u);
+  mouth(p, talk === 2 ? "laugh" : talk === 1 ? "o" : F.mouth, mx, my + (talk && moustache ? 3 * u : 0), u, talk ? 1.15 : 1);
   if (moustache) for (const s of [-1, 1])
     taper(p, [mx + s * 1.5 * u, cy + 12.5 * u], [mx + s * (stout ? 19 : 15) * u, cy + (stout ? 10.5 : 15) * u], stout ? 5.5 * u : 4.5 * u, 1.6 * u, moustache);
   if (expr === "nervous") p.ell(cx + 40 * u * (facing || 1), cy - 22 * u, 3 * u, 5 * u, "#9fd4ff", 2 * u);
@@ -438,7 +438,7 @@ const hatOn = (p: Pen, o: Outfit, hp: P2[], H: Blob, cx: number, hc: number, lig
 // ---------------- bodies ----------------
 export type Arms = [P2[], P2[]];
 /** held prop; for the hammer the number is the strike 0 (raised) .. 1 (struck) */
-export type Prop = null | "icecream" | "shako" | ["hammer", number] | ["razor", number];
+export type Prop = null | "icecream" | "shako" | ["hammer", number] | ["razor", number] | ["pencil", number];
 
 const BUILD: Record<Build, { a: number; torso: number; legs: number; tw: number }> = {
   adult: { a: 118, torso: 1.1, legs: 1.4, tw: 0.8 },
@@ -449,6 +449,8 @@ const BUILD: Record<Build, { a: number; torso: number; legs: number; tw: number 
 export type FrontOpts = {
   phase?: number; expr?: Expr; mode?: "march" | "stroll" | "stand" | "sit" | "fall"; look?: number; blink?: boolean | number; lift?: number;
   prop?: Prop; tilt?: number; headTilt?: number; wave?: number;
+  /** lip flap while a line is spoken: 0 = expression mouth, 1 = half open, 2 = wide open */
+  talk?: 0 | 1 | 2;
   /** canvas angle the key light comes FROM (painted crescent + thick outline side) */
   light?: number; facing?: -1 | 0 | 1; seed?: number;
 };
@@ -460,7 +462,7 @@ const footStroke = (p: Pen, a: P2, b: P2, w: number, col: string) => {
 
 export const bodyFront = (p: Pen, o: Outfit, opts: FrontOpts) => {
   const { phase = 0, expr = "neutral", mode = "march", look = 0, blink = false, lift = 60, prop = null, tilt = 0, headTilt = 0, wave,
-    light = DEF_LIGHT, facing = 0, seed = 1 } = opts;
+    light = DEF_LIGHT, facing = 0, seed = 1, talk = 0 } = opts;
   const Bd = BUILD[o.build ?? "adult"], skin = o.skin ?? SKIN, two = Math.PI * 2, lid = lidOf(blink);
   const H = headBlob(seed, Bd.a, facing), W = 2 * H.a, HH = 2 * H.b, u = W / 100;
   const tall = (1 + Bd.torso + Bd.legs) * HH, sole = 975;
@@ -537,7 +539,7 @@ export const bodyFront = (p: Pen, o: Outfit, opts: FrontOpts) => {
     } else if (prop === "icecream") {
       const S = sh(1);
       arms.push({ pts: [S, [tcx + 1.05 * T.a + 4 * u, S[1] + 0.45 * HH], [tcx + 0.5 * T.a, S[1] + 0.4 * HH]], front: true });
-    } else if (Array.isArray(prop) && prop[0] === "razor") { // arm up at head height, stroking up and down
+    } else if (Array.isArray(prop) && (prop[0] === "razor" || prop[0] === "pencil")) { // arm up at head height, stroking up and down
       const S = sh(1), k = prop[1], dy = 0.09 * HH * Math.sin(k * two);
       arms.push({ pts: [S, [tcx + 1.2 * T.a + 14 * u, S[1] - 0.05 * HH], [tcx + 1.22 * T.a + 18 * u, S[1] - 0.62 * HH + dy]], front: true });
     } else if (Array.isArray(prop)) {
@@ -599,6 +601,12 @@ export const bodyFront = (p: Pen, o: Outfit, opts: FrontOpts) => {
       p.band(Rh([[hx, hy + 6 * u], [hx, hy - 20 * u]]), "#2a2420", 4.2 * u, 1.4 * u, "round");
       p.poly(Rh([[hx - 3 * u, hy - 20 * u], [hx + 13 * u, hy - 26 * u], [hx + 13 * u, hy - 18 * u], [hx - 3 * u, hy - 14 * u]]), "#d8dee6", 1.8 * u);
       p.dot(hx, hy, 5.5 * u);
+    } else if (Array.isArray(prop) && prop[0] === "pencil") { // yellow pencil, tip toward the wall
+      const Rh = (pts: P2[]) => rotPts(pts, rad(-60), hx, hy);
+      p.band(Rh([[hx, hy + 8 * u], [hx, hy - 20 * u]]), "#f2c23a", 4.4 * u, 1.4 * u, "butt");
+      p.band(Rh([[hx, hy + 8 * u], [hx, hy + 12 * u]]), "#e98aa0", 4.4 * u, 1.4 * u, "butt");
+      p.poly(Rh([[hx - 2.2 * u, hy - 20 * u], [hx + 2.2 * u, hy - 20 * u], [hx, hy - 27 * u]]), "#e7c9a0", 1.4 * u);
+      p.dot(hx, hy, 5.5 * u);
     } else if (Array.isArray(prop)) {
       const ang = rad(-70 + 105 * clamp(prop[1], 0, 1));
       const Rh = (pts: P2[]) => rotPts(pts, ang, hx, hy);
@@ -622,7 +630,7 @@ export const bodyFront = (p: Pen, o: Outfit, opts: FrontOpts) => {
   p.inkRing(hp, ow, thick);
   hatOn(p, o, hp, H, 300, hc, light, seed, facing, false);
   const brim = !!o.hat && o.hat !== "hair" && o.hat !== "bonnet" && o.hat !== "cap";
-  faceFront(p, 300, hc, W, expr, facing, look, lid, brim, skin, o.moustache, o.build === "stout");
+  faceFront(p, 300, hc, W, expr, facing, look, lid, brim, skin, o.moustache, o.build === "stout", talk);
   p.rot = null;
 };
 
