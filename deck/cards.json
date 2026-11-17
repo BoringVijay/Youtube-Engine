@@ -1,5 +1,2735 @@
 [
  {
+  "id": "318d22a36a6b",
+  "key": "what-happens-if-a-nuclear-weapon-explodes-in-low-earth-orbit-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "hot",
+  "question": "What happens if a nuclear weapon explodes in low Earth orbit?",
+  "hook": "Detonating a nuclear weapon in space breaks everything.",
+  "about": "A high-altitude nuclear blast lacks air, meaning it creates no shockwave or mushroom cloud like standard explosions on Earth. Instead, the detonation generates a catastrophic electromagnetic pulse and radiation belt that can disable orbiting satellites and ground grids.",
+  "surprise": "In the vacuum of space, nuclear blasts produce silent light shows and artificial radiation belts rather than fireballs.",
+  "series": "What If? (stickman)",
+  "audience": "general curious",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    5,
+    "Space explosions trigger massive global curiosity."
+   ],
+   "explainability": [
+    5,
+    "Simple stickman animations explain blast physics."
+   ],
+   "shelf_life": [
+    5,
+    "Orbital physics remain relevant for decades."
+   ],
+   "money": [
+    3,
+    "Broad science attracts general brand advertisers."
+   ]
+  },
+  "risk": "",
+  "search_query": "nuke in space orbit effects",
+  "wiki_title": "High-altitude nuclear explosion",
+  "stats": {
+   "hn_points": 66,
+   "hn_comments": 31,
+   "wiki_article": "High-altitude nuclear explosion",
+   "wiki_avg_30d": 69,
+   "wiki_views_24h": 79,
+   "wiki_change_pct": 15
+  },
+  "origin": {
+   "time": "2026-11-17T19:46:57+00:00",
+   "hours_ago": 3.8
+  },
+  "sources": [
+   {
+    "src": "hacker_news",
+    "title": "Effects of a Nuclear Detonation in Low Earth Orbit",
+    "url": "https://arxiv.org/abs/2611.09827"
+   }
+  ],
+  "demand": 51,
+  "competition": null,
+  "quality": 90,
+  "opportunity": 66
+ },
+ {
+  "id": "1ccd486d2bc2",
+  "key": "how-do-top-secret-military-computer-networks-work-without-the-internet-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "hot",
+  "question": "How do top secret military computer networks work without the internet?",
+  "hook": "Even America's most secret military network crashes.",
+  "about": "Classified defense networks like SIPRNet rely on air-gapped cables and dedicated encryption hardware to remain disconnected from the public web. When unexpected outages strike these isolated systems, military commands must suddenly fall back on physical couriers and manual protocols.",
+  "surprise": "Classified military communication networks require physical air gaps and dedicated fiber lines completely separated from public infrastructure.",
+  "series": "How It Works (cutaway)",
+  "audience": "tech & AI",
+  "format": "long",
+  "scores": {
+   "curiosity": [
+    4,
+    "Secret military infrastructure fascinates tech viewers."
+   ],
+   "explainability": [
+    4,
+    "Diagramming air gaps is visually clear."
+   ],
+   "shelf_life": [
+    4,
+    "National security networks rarely change architecture."
+   ],
+   "money": [
+    4,
+    "Cybersecurity software vendors buy premium ads."
+   ]
+  },
+  "risk": "",
+  "search_query": "how SIPRNet military network works",
+  "wiki_title": "SIPRNet",
+  "stats": {
+   "hn_points": 406,
+   "hn_comments": 508,
+   "wiki_article": "SIPRNet",
+   "wiki_avg_30d": 88,
+   "wiki_views_24h": 83,
+   "wiki_change_pct": -6,
+   "yt_results": 45,
+   "yt_top_views": 3310828,
+   "yt_median_top10_views": 160,
+   "yt_recent_in_top10": 1,
+   "yt_top_title": "How Cyberwarfare Actually Works",
+   "yt_top_channel": "Wendover Productions",
+   "yt_top_url": "https://youtu.be/U_7CGl6VWaQ",
+   "yt_query": "how SIPRNet military network works"
+  },
+  "origin": {
+   "time": "2026-11-17T15:38:28+00:00",
+   "hours_ago": 7.9
+  },
+  "sources": [
+   {
+    "src": "hacker_news",
+    "title": "Highly classified US national security communications network goes down",
+    "url": "https://www.cnn.com/2026/11/17/politics/highly-classified-national-security-communications-network-goes-down"
+   }
+  ],
+  "demand": 78,
+  "competition": 25,
+  "quality": 80,
+  "opportunity": 78
+ },
+ {
+  "id": "893a6ccab29d",
+  "key": "how-do-hackers-trick-blockchain-bridges-into-printing-fake-crypto-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "hot",
+  "question": "How do hackers trick blockchain bridges into printing fake crypto?",
+  "hook": "Hackers forged digital signatures to steal hundreds of thousands.",
+  "about": "Cross-chain bridges allow users to transfer assets across separate blockchains using smart contracts and off-chain validators. Attackers exploit flaws in message verification logic to spoof cross-chain deposits and withdraw funds that were never deposited.",
+  "surprise": "The Ankr Bridge lost three hundred thousand dollars after forged messages tricked smart contracts into confirming fake deposits.",
+  "series": "How It Works (cutaway)",
+  "audience": "finance & crypto",
+  "format": "long",
+  "scores": {
+   "curiosity": [
+    4,
+    "Crypto bridge exploits feel like heists."
+   ],
+   "explainability": [
+    4,
+    "Visualizing token locks across chains works."
+   ],
+   "shelf_life": [
+    3,
+    "DeFi exploits evolve every single month."
+   ],
+   "money": [
+    5,
+    "Crypto exchanges pay top advertising rates."
+   ]
+  },
+  "risk": "",
+  "search_query": "cross chain bridge hack explained",
+  "wiki_title": "Cross-chain",
+  "stats": {
+   "hack_usd": 666935
+  },
+  "origin": {
+   "time": "2026-10-31T00:00:00+00:00",
+   "hours_ago": 431.5
+  },
+  "sources": [
+   {
+    "src": "defillama_hacks",
+    "title": "Troves hack: $0.7M via Improper Access Control",
+    "url": "https://defillama.com/hacks"
+   },
+   {
+    "src": "defillama_hacks",
+    "title": "Ankr Bridge hack: $0.3M via Cross-Chain Message Spoofing",
+    "url": "https://defillama.com/hacks"
+   }
+  ],
+  "demand": null,
+  "competition": null,
+  "quality": 80,
+  "opportunity": 60
+ },
+ {
+  "id": "a2108aa2303c",
+  "key": "why-is-nvidia-s-hardware-monopoly-almost-impossible-to-break-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "hot",
+  "question": "Why is Nvidia's hardware monopoly almost impossible to break?",
+  "hook": "One software decision gave Nvidia a trillion-dollar moat.",
+  "about": "Nvidia dominates modern artificial intelligence hardware primarily because of CUDA, a proprietary programming layer released back in 2006. Prediction markets and tech firms constantly debate whether competing chipmakers or future executive turnover can loosen their stranglehold.",
+  "surprise": "Nvidia heavily subsidized its CUDA programming ecosystem nearly two decades before the current generative AI boom started.",
+  "series": "Money Moves (charts)",
+  "audience": "tech & AI",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    4,
+    "Everyone wonders why Nvidia dominates tech."
+   ],
+   "explainability": [
+    4,
+    "Chart graphics make software lock-in simple."
+   ],
+   "shelf_life": [
+    4,
+    "Nvidia's market power shapes tech futures."
+   ],
+   "money": [
+    5,
+    "B2B enterprise tech commands highest bids."
+   ]
+  },
+  "risk": "",
+  "search_query": "why Nvidia dominates AI chips",
+  "wiki_title": "CUDA",
+  "stats": {
+   "wiki_views_24h": 194070,
+   "wiki_change_pct": -69,
+   "wiki_7d": [
+    733363,
+    542553,
+    341625,
+    1072168,
+    727529,
+    304348,
+    194070
+   ],
+   "bet_volume_24h_usd": 1028113,
+   "wiki_article": "CUDA",
+   "wiki_avg_30d": 1817,
+   "yt_results": 919461,
+   "yt_top_views": 2225142,
+   "yt_median_top10_views": 2995,
+   "yt_recent_in_top10": 4,
+   "yt_top_title": "How Nvidia GPUs Compare To Google\u2019s And Amazon\u2019s AI Chips",
+   "yt_top_channel": "CNBC",
+   "yt_top_url": "https://youtu.be/RBmOgQi4Fr0",
+   "yt_query": "why Nvidia dominates AI chips"
+  },
+  "origin": null,
+  "sources": [
+   {
+    "src": "wikipedia",
+    "title": "Nvidia",
+    "url": "https://en.wikipedia.org/wiki/Nvidia"
+   },
+   {
+    "src": "wikipedia",
+    "title": "Jensen Huang",
+    "url": "https://en.wikipedia.org/wiki/Jensen_Huang"
+   },
+   {
+    "src": "polymarket",
+    "title": "Will there be no new be CEO of NVIDIA by December 31, 2028?",
+    "url": "https://polymarket.com/event/will-candidate-a-be-the-next-ceo-of-nvidia"
+   }
+  ],
+  "demand": 85,
+  "competition": 47,
+  "quality": 85,
+  "opportunity": 80
+ },
+ {
+  "id": "a50fc4ee9e49",
+  "key": "why-did-goya-paint-horrifying-monsters-directly-onto-his-dining-walls-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "hot",
+  "question": "Why did Goya paint horrifying monsters directly onto his dining walls?",
+  "hook": "Francisco Goya hid horrifying murals inside his farmhouse.",
+  "about": "Suffering from severe deafness and political disillusionment, Spanish master Francisco Goya painted fourteen haunting murals directly onto his plaster walls. He never intended for the public to view them, leaving them untitled and unexplained until long after his death.",
+  "surprise": "Goya never titled the famous painting; art historians named it Saturn Devouring His Son decades after he died.",
+  "series": "True Weird Stories (comic)",
+  "audience": "general curious",
+  "format": "short",
+  "scores": {
+   "curiosity": [
+    5,
+    "Creepy art history hooks casual viewers."
+   ],
+   "explainability": [
+    5,
+    "Comic panels showcase farmhouse wall art."
+   ],
+   "shelf_life": [
+    5,
+    "Classic art history stays relevant forever."
+   ],
+   "money": [
+    2,
+    "Fine art topics rarely attract sponsors."
+   ]
+  },
+  "risk": "",
+  "search_query": "Goya Saturn Devouring His Son",
+  "wiki_title": "Saturn Devouring His Son",
+  "stats": {
+   "wiki_views_24h": 176155,
+   "wiki_change_pct": 8620,
+   "wiki_7d": [
+    2155,
+    1925,
+    2022,
+    1984,
+    2017,
+    1972,
+    2066,
+    176155
+   ],
+   "wiki_article": "Saturn Devouring His Son",
+   "wiki_avg_30d": 7841,
+   "yt_results": 47787,
+   "yt_top_views": 1721669,
+   "yt_median_top10_views": 48920,
+   "yt_recent_in_top10": 0,
+   "yt_top_title": "The Most  Disturbing Painting - A Different Take on Saturn Devouring His Son @Nerdwriter1",
+   "yt_top_channel": "Shawn Grenier | The Canvas",
+   "yt_top_url": "https://youtu.be/-qCngjk3nQw",
+   "yt_query": "Goya Saturn Devouring His Son"
+  },
+  "origin": null,
+  "sources": [
+   {
+    "src": "wikipedia",
+    "title": "Saturn Devouring His Son",
+    "url": "https://en.wikipedia.org/wiki/Saturn_Devouring_His_Son"
+   }
+  ],
+  "demand": 95,
+  "competition": 47,
+  "quality": 85,
+  "opportunity": 85
+ },
+ {
+  "id": "4d960fdbd00f",
+  "key": "why-does-ancient-jquery-still-power-most-of-the-internet-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "hot",
+  "question": "Why does ancient jQuery still power most of the internet?",
+  "hook": "The web's most mocked library just got updated.",
+  "about": "Created in 2006 to fix chaotic browser differences, jQuery revolutionized front-end development and made web interaction straightforward. Despite modern frameworks like React and Vue, millions of active websites still secretly run on jQuery as version 4.1 arrives.",
+  "surprise": "More than seventy percent of the top ten million websites still actively load jQuery today.",
+  "series": "What Actually Happened (mini-doc)",
+  "audience": "tech & AI",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    4,
+    "Developers love debates over legacy code."
+   ],
+   "explainability": [
+    4,
+    "Browser DOM cutaways explain library utilities."
+   ],
+   "shelf_life": [
+    4,
+    "Web history changes very slowly over-time."
+   ],
+   "money": [
+    4,
+    "Coding bootcamps pay well for developers."
+   ]
+  },
+  "risk": "",
+  "search_query": "why jQuery is still used",
+  "wiki_title": "JQuery",
+  "stats": {
+   "hn_points": 215,
+   "hn_comments": 114,
+   "wiki_article": "JQuery",
+   "wiki_avg_30d": 87,
+   "wiki_views_24h": 100,
+   "wiki_change_pct": 15
+  },
+  "origin": {
+   "time": "2026-11-17T19:50:40+00:00",
+   "hours_ago": 3.7
+  },
+  "sources": [
+   {
+    "src": "hacker_news",
+    "title": "jQuery 4.1.0",
+    "url": "https://github.com/jquery/jquery/releases/tag/4.1.0"
+   }
+  ],
+  "demand": 63,
+  "competition": null,
+  "quality": 80,
+  "opportunity": 68
+ },
+ {
+  "id": "be90577c6808",
+  "key": "can-copyright-courts-break-how-the-internet-address-system-works-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "hot",
+  "question": "Can copyright courts break how the internet address system works?",
+  "hook": "A global DNS provider just fled European courts.",
+  "about": "Quad9 operates a privacy-focused recursive DNS service that translates web domain names into numerical IP addresses for millions of users worldwide. Recent European copyright rulings ordered DNS providers to block access to pirate sites, threatening foundational internet architecture.",
+  "surprise": "Courts ruled that independent address book resolvers can be held liable for pirated songs on unhosted websites.",
+  "series": "What Actually Happened (mini-doc)",
+  "audience": "tech & AI",
+  "format": "long",
+  "scores": {
+   "curiosity": [
+    4,
+    "Internet censorship battles create strong intrigue."
+   ],
+   "explainability": [
+    4,
+    "Address book metaphors explain DNS cleanly."
+   ],
+   "shelf_life": [
+    4,
+    "Internet governance precedents impact future laws."
+   ],
+   "money": [
+    4,
+    "VPN providers sponsor internet privacy videos."
+   ]
+  },
+  "risk": "",
+  "search_query": "Quad9 DNS court blocking controversy",
+  "wiki_title": "Quad9",
+  "stats": {
+   "hn_points": 128,
+   "hn_comments": 11,
+   "wiki_article": "Quad9",
+   "wiki_avg_30d": 279,
+   "wiki_views_24h": 207,
+   "wiki_change_pct": -26
+  },
+  "origin": {
+   "time": "2026-11-17T22:13:34+00:00",
+   "hours_ago": 1.3
+  },
+  "sources": [
+   {
+    "src": "hacker_news",
+    "title": "Quad9's withdrawal from France: A canary in the coal mine",
+    "url": "https://blog.cloudflare.com/quad9-withdrawal-from-france/"
+   }
+  ],
+  "demand": 59,
+  "competition": null,
+  "quality": 80,
+  "opportunity": 66
+ },
+ {
+  "id": "f54d0bfc4528",
+  "key": "how-does-a-volunteer-run-fanfiction-archive-beat-silicon-valley-giants-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "hot",
+  "question": "How does a volunteer-run fanfiction archive beat Silicon Valley giants?",
+  "hook": "A volunteer fanfiction site won a Hugo Award.",
+  "about": "Archive of Our Own hosts millions of user-submitted stories without displaying ads, collecting personal data, or taking venture capital. Run entirely by the non-profit Organization for Transformative Works, its open-source infrastructure outperforms heavily funded commercial publishing platforms.",
+  "surprise": "Archive of Our Own won an official Hugo Award while operating completely ad-free and run solely by volunteers.",
+  "series": "Money Moves (charts)",
+  "audience": "movie & pop culture",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    4,
+    "Non-profit tech triumphs surprise general audiences."
+   ],
+   "explainability": [
+    5,
+    "Non-profit versus venture capital graphics work."
+   ],
+   "shelf_life": [
+    5,
+    "Platform economics remain evergreen and educational."
+   ],
+   "money": [
+    3,
+    "Non-profit publishing earns moderate ad CPMs."
+   ]
+  },
+  "risk": "",
+  "search_query": "how AO3 works fanfiction archive",
+  "wiki_title": "Archive of Our Own",
+  "stats": {
+   "wiki_views_24h": 860729,
+   "wiki_change_pct": 1279,
+   "wiki_7d": [
+    52047,
+    36360,
+    55989,
+    99746,
+    87286,
+    43198,
+    860729
+   ],
+   "wiki_article": "Archive of Our Own",
+   "wiki_avg_30d": 74970,
+   "yt_results": 103677,
+   "yt_top_views": 2530911,
+   "yt_median_top10_views": 209867,
+   "yt_recent_in_top10": 2,
+   "yt_top_title": "the infamous fanfic that changed AO3 forever",
+   "yt_top_channel": "ColeyDoesThings",
+   "yt_top_url": "https://youtu.be/WWO-gUGYaEk",
+   "yt_query": "how AO3 works fanfiction archive"
+  },
+  "origin": null,
+  "sources": [
+   {
+    "src": "wikipedia",
+    "title": "Archive of Our Own",
+    "url": "https://en.wikipedia.org/wiki/Archive_of_Our_Own"
+   }
+  ],
+  "demand": 100,
+  "competition": 59,
+  "quality": 85,
+  "opportunity": 85
+ },
+ {
+  "id": "ef2751c8507e",
+  "key": "how-do-ai-agents-use-visual-screens-to-help-hospital-doctors-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "hot",
+  "question": "How do AI agents use visual screens to help hospital doctors?",
+  "hook": "Doctors spend hours clicking software instead of patients.",
+  "about": "Physicians lose massive amounts of daily clinic time wrestling with outdated electronic health record software and regulatory paperwork. New computer-use artificial intelligence agents look directly at desktop screens, navigate legacy user interfaces, and click buttons like human staff.",
+  "surprise": "Computer-use AI models operate hospital tools by taking screenshots and moving virtual cursors rather than using direct APIs.",
+  "series": "How It Works (cutaway)",
+  "audience": "tech & AI",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    4,
+    "Automating terrible medical paperwork fascinates people."
+   ],
+   "explainability": [
+    4,
+    "Showing virtual mouse clicks is visual."
+   ],
+   "shelf_life": [
+    4,
+    "Healthcare workflow automation will expand rapidly."
+   ],
+   "money": [
+    5,
+    "Healthcare and AI tools pay premiums."
+   ]
+  },
+  "risk": "",
+  "search_query": "computer use AI agents healthcare",
+  "wiki_title": "Electronic health record",
+  "stats": {
+   "hn_points": 34,
+   "hn_comments": 23,
+   "wiki_article": "Electronic health record",
+   "wiki_avg_30d": 126,
+   "wiki_views_24h": 113,
+   "wiki_change_pct": -10
+  },
+  "origin": {
+   "time": "2026-11-17T18:26:05+00:00",
+   "hours_ago": 5.1
+  },
+  "sources": [
+   {
+    "src": "hacker_news",
+    "title": "Advancing computer-use agents for healthcare teams",
+    "url": "https://openai.com/index/advancing-computer-use-for-healthcare-teams/"
+   }
+  ],
+  "demand": 45,
+  "competition": null,
+  "quality": 85,
+  "opportunity": 62
+ },
+ {
+  "id": "94585311502e",
+  "key": "how-does-hollywood-recast-james-bond-without-destroying-the-franchise-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "hot",
+  "question": "How does Hollywood recast James Bond without destroying the franchise?",
+  "hook": "Recasting James Bond is Hollywood's riskiest gamble.",
+  "about": "The James Bond film series has survived across six decades by repeatedly changing its leading man while preserving core narrative trademarks. The franchise's enduring survival depends on complex actor contracts and tight family stewardship that insulates 007 from studio trends.",
+  "surprise": "A single family production company, Eon Productions, has maintained control over the James Bond franchise for over sixty years.",
+  "series": "Versus (scoreboard)",
+  "audience": "movie & pop culture",
+  "format": "long",
+  "scores": {
+   "curiosity": [
+    4,
+    "Audiences continually speculate on future Bonds."
+   ],
+   "explainability": [
+    4,
+    "Actor eras map well on scoreboards."
+   ],
+   "shelf_life": [
+    4,
+    "Bond recasting cycles repeat every decade."
+   ],
+   "money": [
+    3,
+    "Film entertainment draws broad consumer brands."
+   ]
+  },
+  "risk": "needs copyrighted footage",
+  "search_query": "how James Bond actors cast",
+  "wiki_title": "Portrayal of James Bond in film",
+  "stats": {
+   "wiki_views_24h": 50269,
+   "wiki_change_pct": 11240,
+   "wiki_7d": [
+    593,
+    455,
+    377,
+    310,
+    480,
+    429,
+    459,
+    50269
+   ],
+   "wiki_article": "Portrayal of James Bond in film",
+   "wiki_avg_30d": 4227,
+   "yt_results": 1000000,
+   "yt_top_views": 2203102,
+   "yt_median_top10_views": 104992,
+   "yt_recent_in_top10": 6,
+   "yt_top_title": "Who Was The Ultimate James Bond?",
+   "yt_top_channel": "The Critical Drinker",
+   "yt_top_url": "https://youtu.be/CLi6YIWXkQI",
+   "yt_query": "how James Bond actors cast"
+  },
+  "origin": null,
+  "sources": [
+   {
+    "src": "wikipedia",
+    "title": "Sean Connery",
+    "url": "https://en.wikipedia.org/wiki/Sean_Connery"
+   },
+   {
+    "src": "wikipedia",
+    "title": "Portrayal of James Bond in film",
+    "url": "https://en.wikipedia.org/wiki/Portrayal_of_James_Bond_in_film"
+   },
+   {
+    "src": "wikipedia",
+    "title": "Daniel Craig",
+    "url": "https://en.wikipedia.org/wiki/Daniel_Craig"
+   },
+   {
+    "src": "wikipedia",
+    "title": "Production of the James Bond films",
+    "url": "https://en.wikipedia.org/wiki/Production_of_the_James_Bond_films"
+   }
+  ],
+  "demand": 92,
+  "competition": 68,
+  "quality": 75,
+  "opportunity": 76
+ },
+ {
+  "id": "d83d7fa9be53",
+  "key": "why-did-nvidia-stop-reporting-its-massive-sales-in-singapore-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "hot",
+  "question": "Why did Nvidia stop reporting its massive sales in Singapore?",
+  "hook": "Singapore quietly bought billions in American artificial intelligence chips.",
+  "about": "Nvidia ceased reporting revenue specific to Singapore just as company revenues reached 104 billion dollars. Analysts track geographic disclosures closely to identify how advanced microchips flow through global trading hubs.",
+  "surprise": "Nvidia stopped disclosing Singapore sales as revenues hit $104B.",
+  "series": "Money Moves (charts)",
+  "audience": "finance & crypto",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    4,
+    "Mysterious corporate tax and trading flows."
+   ],
+   "explainability": [
+    4,
+    "Maps and supply chains animate cleanly."
+   ],
+   "shelf_life": [
+    4,
+    "Global chip supply chains stay relevant."
+   ],
+   "money": [
+    5,
+    "Semiconductor stocks attract high ad rates."
+   ]
+  },
+  "risk": "",
+  "search_query": "Nvidia Singapore revenue mystery",
+  "wiki_title": "Nvidia",
+  "stats": {
+   "hn_points": 317,
+   "hn_comments": 166,
+   "wiki_article": "Nvidia",
+   "wiki_avg_30d": 43135,
+   "wiki_views_24h": 57058,
+   "wiki_change_pct": 32,
+   "yt_results": 12513,
+   "yt_top_views": 31169,
+   "yt_median_top10_views": 299,
+   "yt_recent_in_top10": 9,
+   "yt_top_title": "NVIDIA\u2019s $24B Singapore Mystery \u2014 What It Means for Micron & HBM",
+   "yt_top_channel": "Market Signal",
+   "yt_top_url": "https://youtu.be/I8Yhx5U_hiQ",
+   "yt_query": "Nvidia Singapore revenue mystery"
+  },
+  "origin": {
+   "time": "2026-11-17T17:12:06+00:00",
+   "hours_ago": 6.3
+  },
+  "sources": [
+   {
+    "src": "hacker_news",
+    "title": "Nvidia stopped disclosing Singapore sales as revenues hit $104B",
+    "url": "https://www.ft.com/content/dbde7a30-548c-4f9d-a4be-7898a0c24dcf"
+   }
+  ],
+  "demand": 81,
+  "competition": 52,
+  "quality": 85,
+  "opportunity": 78
+ },
+ {
+  "id": "974848c4798d",
+  "key": "why-do-ai-coding-agents-actually-slow-software-teams-down-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "hot",
+  "question": "Why do AI coding agents actually slow software teams down?",
+  "hook": "Generating code got fast, but checking it stalled.",
+  "about": "Harvard researchers discovered that automated coding agents have pushed development bottlenecks directly into code review. While creating raw code is now instantaneous, verifying correctness still requires human cognitive effort.",
+  "surprise": "Harvard researchers find AI coding agents shifted the bottleneck to code review.",
+  "series": "How It Works (cutaway)",
+  "audience": "tech & AI",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    4,
+    "Counterintuitive paradox of automated developer productivity."
+   ],
+   "explainability": [
+    5,
+    "Assembly line bottleneck animations explain clearly."
+   ],
+   "shelf_life": [
+    4,
+    "Software workflows remain heavily debated topic."
+   ],
+   "money": [
+    4,
+    "Software tools command high developer CPMs."
+   ]
+  },
+  "risk": "",
+  "search_query": "AI coding agents bottleneck Harvard",
+  "wiki_title": "Code review",
+  "stats": {
+   "hn_points": 19,
+   "hn_comments": 23,
+   "wiki_article": "Code review",
+   "wiki_avg_30d": 72,
+   "wiki_views_24h": 64,
+   "wiki_change_pct": -11
+  },
+  "origin": {
+   "time": "2026-11-17T21:16:12+00:00",
+   "hours_ago": 2.3
+  },
+  "sources": [
+   {
+    "src": "hacker_news",
+    "title": "Harvard researchers find AI coding agents shifted the bottleneck to code review",
+    "url": "https://complexdiscovery.com/harvard-researchers-find-ai-coding-agents-shifted-the-bottleneck-to-code-review/"
+   }
+  ],
+  "demand": 38,
+  "competition": null,
+  "quality": 85,
+  "opportunity": 59
+ },
+ {
+  "id": "9fe07cffa7a8",
+  "key": "do-classroom-smartphone-bans-actually-improve-student-test-scores-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "hot",
+  "question": "Do classroom smartphone bans actually improve student test scores?",
+  "hook": "Locking up student phones is finally showing results.",
+  "about": "New evidence demonstrates that enforcing mobile phone bans in schools gradually raises standardized test scores over time. Districts worldwide are debating whether hardware restriction is the best remedy for student distraction.",
+  "surprise": "New evidence shows school phone bans are gradually improving test scores.",
+  "series": "What Actually Happened (mini-doc)",
+  "audience": "students",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    4,
+    "Universal classroom debate affecting every student."
+   ],
+   "explainability": [
+    4,
+    "Visualizing attention spans and test trends."
+   ],
+   "shelf_life": [
+    4,
+    "Education policy debates will continue indefinitely."
+   ],
+   "money": [
+    3,
+    "Broad educational audiences have moderate CPMs."
+   ]
+  },
+  "risk": "",
+  "search_query": "school phone bans test scores",
+  "wiki_title": "Mobile phones in school",
+  "stats": {
+   "hn_points": 1123,
+   "hn_comments": 554,
+   "yt_results": 1000000,
+   "yt_top_views": 8413,
+   "yt_median_top10_views": 106,
+   "yt_recent_in_top10": 3,
+   "yt_top_title": "Cell phone bans not affecting test scores or student engagement, study finds",
+   "yt_top_channel": "ABC News",
+   "yt_top_url": "https://youtu.be/x9QSbRWEx8c",
+   "yt_query": "school phone bans test scores"
+  },
+  "origin": {
+   "time": "2026-11-17T11:45:51+00:00",
+   "hours_ago": 11.8
+  },
+  "sources": [
+   {
+    "src": "hacker_news",
+    "title": "New Evidence Shows School Phone Bans Are Gradually Improving Test Scores",
+    "url": "https://www.nytimes.com/2026/11/17/upshot/school-phone-bans-study-scores.html"
+   }
+  ],
+  "demand": 86,
+  "competition": 29,
+  "quality": 75,
+  "opportunity": 79
+ },
+ {
+  "id": "6c681eae0d2e",
+  "key": "how-did-a-secret-honeytrap-capture-a-nuclear-whistleblower-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "hot",
+  "question": "How did a secret honeytrap capture a nuclear whistleblower?",
+  "hook": "A fake holiday romance ended in prison.",
+  "about": "Mordechai Vanunu was an Israeli nuclear technician who leaked details of Israel's nuclear program to British media in 1986. Before his revelations were published, a foreign intelligence operative lured him from London to Rome where he was abducted.",
+  "surprise": "How did foreign intelligence operatives kidnap Mordechai Vanunu after his leak?",
+  "series": "True Weird Stories (comic)",
+  "audience": "general curious",
+  "format": "long",
+  "scores": {
+   "curiosity": [
+    5,
+    "Classic espionage story with dramatic twists."
+   ],
+   "explainability": [
+    4,
+    "Comic book style frames tell stories."
+   ],
+   "shelf_life": [
+    5,
+    "Historical Cold War intelligence stays evergreen."
+   ],
+   "money": [
+    2,
+    "History and spy stories yield average."
+   ]
+  },
+  "risk": "legal",
+  "search_query": "Mordechai Vanunu nuclear whistleblower",
+  "wiki_title": "Mordechai Vanunu",
+  "stats": {
+   "wiki_views_24h": 132656,
+   "wiki_change_pct": 17802,
+   "wiki_7d": [
+    827,
+    724,
+    569,
+    534,
+    1385,
+    658,
+    490,
+    132656
+   ],
+   "wiki_article": "Mordechai Vanunu",
+   "wiki_avg_30d": 4809,
+   "yt_results": 2946,
+   "yt_top_views": 1053106,
+   "yt_median_top10_views": 1291,
+   "yt_recent_in_top10": 0,
+   "yt_top_title": "Mordechai Vanunu: Israel\u2019s most wanted nuclear whistle-blower",
+   "yt_top_channel": "TRT World",
+   "yt_top_url": "https://youtu.be/15YW-RVZlUc",
+   "yt_query": "Mordechai Vanunu nuclear whistleblower"
+  },
+  "origin": null,
+  "sources": [
+   {
+    "src": "wikipedia",
+    "title": "Mordechai Vanunu",
+    "url": "https://en.wikipedia.org/wiki/Mordechai_Vanunu"
+   }
+  ],
+  "demand": 93,
+  "competition": 31,
+  "quality": 80,
+  "opportunity": 84
+ },
+ {
+  "id": "0d2ab0869208",
+  "key": "what-actually-happens-to-neurotransmitters-when-drugs-enter-the-brain-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "hot",
+  "question": "What actually happens to neurotransmitters when drugs enter the brain?",
+  "hook": "Different chemicals hijack your synapses in bizarre ways.",
+  "about": "The classic interactive simulation Mouse Party demonstrates how psychoactive substances hijack chemical neurotransmission across synapses. It offers an intuitive visual model of dopamine, serotonin, and cellular reuptake mechanisms.",
+  "surprise": "Does Mouse Party illustrate exact molecular synaptic interactions of chemicals?",
+  "series": "How It Works (cutaway)",
+  "audience": "students",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    5,
+    "Fascinating biological mechanisms of altered states."
+   ],
+   "explainability": [
+    5,
+    "Synapse cutaways are perfect for animation."
+   ],
+   "shelf_life": [
+    5,
+    "Brain biology basics never expire naturally."
+   ],
+   "money": [
+    3,
+    "General educational science gets modest sponsorship."
+   ]
+  },
+  "risk": "",
+  "search_query": "mouse party neuroscience mechanism",
+  "wiki_title": "Neurotransmitter",
+  "stats": {
+   "hn_points": 47,
+   "hn_comments": 7,
+   "wiki_article": "Neurotransmitter",
+   "wiki_avg_30d": 254,
+   "wiki_views_24h": 215,
+   "wiki_change_pct": -15
+  },
+  "origin": {
+   "time": "2026-11-14T15:38:50+00:00",
+   "hours_ago": 79.9
+  },
+  "sources": [
+   {
+    "src": "hacker_news",
+    "title": "Mouse Party",
+    "url": "https://aboard.com/lets-have-a-mouse-party/"
+   }
+  ],
+  "demand": 49,
+  "competition": null,
+  "quality": 90,
+  "opportunity": 66
+ },
+ {
+  "id": "ecf78b628e92",
+  "key": "how-does-the-java4shell-vulnerability-let-hackers-hijack-servers-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "hot",
+  "question": "How does the Java4Shell vulnerability let hackers hijack servers?",
+  "hook": "Hackers can control enterprise servers without passwords.",
+  "about": "A pre-authentication remote code execution flaw designated CVE-2026-114938 threatens servers running Java 17 environments. Systems vulnerable to pre-auth exploits allow attackers to execute arbitrary commands without any valid login credentials.",
+  "surprise": "Java4Shell is a pre-auth RCE flaw in Java 17 under CVE-2026-114938.",
+  "series": "How It Works (cutaway)",
+  "audience": "tech & AI",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    4,
+    "Critical infrastructure exploits carry immense intrigue."
+   ],
+   "explainability": [
+    4,
+    "Packet diagrams show command injection visually."
+   ],
+   "shelf_life": [
+    3,
+    "Specific software vulnerabilities patch relatively quickly."
+   ],
+   "money": [
+    4,
+    "Cybersecurity vendors pay high advertiser rates."
+   ]
+  },
+  "risk": "",
+  "search_query": "Java4Shell CVE-2026-114938 exploit explained",
+  "wiki_title": "Arbitrary code execution",
+  "stats": {
+   "hn_points": 123,
+   "hn_comments": 17,
+   "wiki_article": "Arbitrary code execution",
+   "wiki_avg_30d": 327,
+   "wiki_views_24h": 71,
+   "wiki_change_pct": -78
+  },
+  "origin": {
+   "time": "2026-11-17T14:48:03+00:00",
+   "hours_ago": 8.7
+  },
+  "sources": [
+   {
+    "src": "hacker_news",
+    "title": "Java4Shell: pre-auth RCE flaw in Java 17 puts servers at risk (CVE-2026-114938)",
+    "url": "https://www.aikido.dev/blog/java-17-rce-vulnerability-cve-2026-114938"
+   }
+  ],
+  "demand": 58,
+  "competition": null,
+  "quality": 75,
+  "opportunity": 64
+ },
+ {
+  "id": "79cf32464261",
+  "key": "how-do-crypto-hackers-steal-millions-through-smart-contract-logic-flaws-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "hot",
+  "question": "How do crypto hackers steal millions through smart contract logic flaws?",
+  "hook": "Ten million dollars vanished via one leaked key.",
+  "about": "Recent decentralized perpetual exchange exploits, including Lighter Perps and Arcus Perps, drained over twelve million dollars combined. Attack vectors range from compromised API keys to subtle withdrawal logic flaws embedded in automated smart contracts.",
+  "surprise": "Lighter Perps lost $10.4M via API Key Compromised while Arcus Perps lost $2.2M via Withdrawal Logic Flaw.",
+  "series": "Money Moves (charts)",
+  "audience": "finance & crypto",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    4,
+    "Massive digital heists executed in seconds."
+   ],
+   "explainability": [
+    4,
+    "Flowcharts cleanly illustrate smart contract exploits."
+   ],
+   "shelf_life": [
+    3,
+    "DeFi exploits evolve but principles persist."
+   ],
+   "money": [
+    5,
+    "Crypto trading niches provide top CPMs."
+   ]
+  },
+  "risk": "",
+  "search_query": "DeFi perp hack withdrawal logic",
+  "wiki_title": "Decentralized finance",
+  "stats": {
+   "hack_usd": 10393057,
+   "wiki_article": "Decentralized finance",
+   "wiki_avg_30d": 167,
+   "wiki_views_24h": 136,
+   "wiki_change_pct": -19
+  },
+  "origin": {
+   "time": "2026-11-10T00:00:00+00:00",
+   "hours_ago": 191.5
+  },
+  "sources": [
+   {
+    "src": "defillama_hacks",
+    "title": "Lighter Perps hack: $10.4M via API Key Compromised",
+    "url": "https://defillama.com/hacks"
+   },
+   {
+    "src": "defillama_hacks",
+    "title": "Arcus Perps hack: $2.2M via Withdrawal Logic Flaw",
+    "url": "https://defillama.com/hacks"
+   }
+  ],
+  "demand": 40,
+  "competition": null,
+  "quality": 80,
+  "opportunity": 58
+ },
+ {
+  "id": "8fa938de851f",
+  "key": "are-javascript-promises-really-built-like-microscopic-train-tracks-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "hot",
+  "question": "Are JavaScript promises really built like microscopic train tracks?",
+  "hook": "Behind every async promise sits a miniature track.",
+  "about": "A deep dive into fixing WebKit bugs examined whether JavaScript promise resolution behaves like switching train tracks. Understanding browser microtask queues reveals how modern engines orchestrate complex asynchronous code without freezing.",
+  "surprise": "Can fixing a WebKit bug prove promises are made of train tracks?",
+  "series": "How It Works (cutaway)",
+  "audience": "tech & AI",
+  "format": "short",
+  "scores": {
+   "curiosity": [
+    4,
+    "Intriguing physical metaphor for abstract code."
+   ],
+   "explainability": [
+    5,
+    "Train tracks visualize async execution cleanly."
+   ],
+   "shelf_life": [
+    5,
+    "JavaScript event loop fundamentals remain constant."
+   ],
+   "money": [
+    3,
+    "Developer tools offer steady advertising interest."
+   ]
+  },
+  "risk": "",
+  "search_query": "WebKit javascript promises event loop",
+  "wiki_title": "Event loop",
+  "stats": {
+   "hn_points": 27,
+   "hn_comments": 1,
+   "wiki_article": "Event loop",
+   "wiki_avg_30d": 69,
+   "wiki_views_24h": 86,
+   "wiki_change_pct": 25
+  },
+  "origin": {
+   "time": "2026-11-14T18:35:46+00:00",
+   "hours_ago": 76.9
+  },
+  "sources": [
+   {
+    "src": "hacker_news",
+    "title": "Fixing a WebKit bug to see if promises are made of train tracks",
+    "url": "https://alistair.sh/thenables"
+   }
+  ],
+  "demand": 42,
+  "competition": null,
+  "quality": 85,
+  "opportunity": 60
+ },
+ {
+  "id": "93b1e7cdb59e",
+  "key": "how-do-prediction-markets-forecast-interest-rates-years-in-advance-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "hot",
+  "question": "How do prediction markets forecast interest rates years in advance?",
+  "hook": "Traders are betting fortunes on 2026 interest rates.",
+  "about": "Prediction markets have opened betting pools on whether Federal Reserve interest rates will rise or fall by late 2026. These market-implied probabilities reveal how investor consensus shifts far earlier than traditional central bank guidance.",
+  "surprise": "Can Polymarket contracts reliably forecast Federal Reserve decisions years ahead?",
+  "series": "Money Moves (charts)",
+  "audience": "finance & crypto",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    3,
+    "Fascinating crowd forecasting for global economies."
+   ],
+   "explainability": [
+    4,
+    "Probability curves make clear animated graphs."
+   ],
+   "shelf_life": [
+    3,
+    "Predictions age as target dates arrive."
+   ],
+   "money": [
+    5,
+    "Financial markets command premium advertiser rates."
+   ]
+  },
+  "risk": "",
+  "search_query": "prediction markets Fed interest rates",
+  "wiki_title": "Federal funds rate",
+  "stats": {
+   "bet_volume_24h_usd": 496956,
+   "wiki_article": "Federal funds rate",
+   "wiki_avg_30d": 125,
+   "wiki_views_24h": 131,
+   "wiki_change_pct": 5
+  },
+  "origin": null,
+  "sources": [
+   {
+    "src": "polymarket",
+    "title": "Will there be no change in Fed interest rates after the December 2026 meeting?",
+    "url": "https://polymarket.com/event/will-there-be-no-change-in-fed-interest-rates-after-the-december-2026-meeting-20260729232808635"
+   },
+   {
+    "src": "polymarket",
+    "title": "Will the Fed increase interest rates by 50+ bps after the December 2026 meeting?",
+    "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-50-bps-after-the-december-2026-meeting-20260729232808637"
+   },
+   {
+    "src": "polymarket",
+    "title": "Will the Fed increase interest rates by 25 bps after the December 2026 meeting?",
+    "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808636"
+   },
+   {
+    "src": "polymarket",
+    "title": "Will the Fed decrease interest rates by 50+ bps after the December 2026 meeting?",
+    "url": "https://polymarket.com/event/will-the-fed-decrease-interest-rates-by-50-bps-after-the-december-2026-meeting-20260729232808633"
+   }
+  ],
+  "demand": 68,
+  "competition": null,
+  "quality": 75,
+  "opportunity": 68
+ },
+ {
+  "id": "04755af588d4",
+  "key": "how-did-an-astronomer-time-light-using-jupiter-s-eclipse-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "hot",
+  "question": "How did an astronomer time light using Jupiter's eclipse?",
+  "hook": "Before 1676, humanity assumed light travelled infinitely fast.",
+  "about": "In 1676, Danish astronomer Ole R\u00f8mer noticed eclipses of Jupiter's moon Io were delayed when Earth moved further away. By tracking these timing anomalies, he proved light has a measurable, finite velocity.",
+  "surprise": "Did Ole R\u00f8mer use planetary eclipses to calculate light speed 350 years ago?",
+  "series": "How It Works (cutaway)",
+  "audience": "general curious",
+  "format": "long",
+  "scores": {
+   "curiosity": [
+    5,
+    "Timeless question about fundamental cosmic physics"
+   ],
+   "explainability": [
+    5,
+    "Planets orbiting sun make perfect animation"
+   ],
+   "shelf_life": [
+    5,
+    "Historical physics discoveries never go stale"
+   ],
+   "money": [
+    3,
+    "Broad educational topic attracts mainstream sponsors"
+   ]
+  },
+  "risk": "",
+  "search_query": "ole romer speed of light",
+  "wiki_title": "R\u00f8mer's determination of the speed of light",
+  "stats": {
+   "hn_points": 212,
+   "hn_comments": 65,
+   "wiki_article": "R\u00f8mer's determination of the speed of light",
+   "wiki_avg_30d": 55,
+   "wiki_views_24h": 63,
+   "wiki_change_pct": 14,
+   "yt_results": 376144,
+   "yt_top_views": 2318973,
+   "yt_median_top10_views": 16244,
+   "yt_recent_in_top10": 0,
+   "yt_top_title": "Measuring the speed of light using Jupiter's moons",
+   "yt_top_channel": "3Blue1Brown",
+   "yt_top_url": "https://youtu.be/M6LUPYsjods",
+   "yt_query": "ole romer speed of light"
+  },
+  "origin": {
+   "time": "2026-11-17T19:25:27+00:00",
+   "hours_ago": 4.1
+  },
+  "sources": [
+   {
+    "src": "hacker_news",
+    "title": "350 years ago, Ole R\u00f8mer discovered that light has a finite speed",
+    "url": "https://www.sciencenorway.no/culture-history-history-of-science/350-years-ago-this-man-discovered-that-light-has-a-finite-speed/2737969"
+   }
+  ],
+  "demand": 76,
+  "competition": 42,
+  "quality": 90,
+  "opportunity": 79
+ },
+ {
+  "id": "9327fd912811",
+  "key": "who-builds-the-machines-that-build-all-other-machines-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "hot",
+  "question": "Who builds the machines that build all other machines?",
+  "hook": "Every factory on Earth shares an invisible ancestor.",
+  "about": "High-precision manufacturing relies on machine tools capable of crafting components more accurate than themselves. Understanding this mechanical lineage reveals why only a handful of nations control global industrial production.",
+  "surprise": "Can a machine actually craft parts more precise than its own parts?",
+  "series": "How It Works (cutaway)",
+  "audience": "tech & AI",
+  "format": "long",
+  "scores": {
+   "curiosity": [
+    5,
+    "Fascinating recursive paradox of industrial manufacturing"
+   ],
+   "explainability": [
+    4,
+    "Lathes and gears illustrate clear progression"
+   ],
+   "shelf_life": [
+    5,
+    "Industrial foundations remain crucial for decades"
+   ],
+   "money": [
+    4,
+    "Industrial tech and B2B engineering ads"
+   ]
+  },
+  "risk": "",
+  "search_query": "machine tools industrial manufacturing history",
+  "wiki_title": "Machine tool",
+  "stats": {
+   "hn_points": 79,
+   "hn_comments": 24,
+   "wiki_article": "Machine tool",
+   "wiki_avg_30d": 121,
+   "wiki_views_24h": 115,
+   "wiki_change_pct": -5
+  },
+  "origin": {
+   "time": "2026-11-17T17:45:39+00:00",
+   "hours_ago": 5.8
+  },
+  "sources": [
+   {
+    "src": "hacker_news",
+    "title": "Who Builds the Machines That Build the Machines?",
+    "url": "https://read.corematter.com/p/section-232-us-machine-tools"
+   }
+  ],
+  "demand": 53,
+  "competition": null,
+  "quality": 90,
+  "opportunity": 67
+ },
+ {
+  "id": "5facef119cec",
+  "key": "how-can-decoding-base64-text-let-hackers-hijack-servers-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "hot",
+  "question": "How can decoding base64 text let hackers hijack servers?",
+  "hook": "A harmless decoding function broke the internet.",
+  "about": "A remote code execution vulnerability was uncovered in OpenJDK when processing standard Base64 encoding. Developers and enterprise systems scrambled to patch the fundamental library powering millions of backends.",
+  "surprise": "OpenJDK suffered remote code execution when processing standard Base64.",
+  "series": "How It Works (cutaway)",
+  "audience": "tech & AI",
+  "format": "short",
+  "scores": {
+   "curiosity": [
+    4,
+    "Shocking flaw in basic utility library"
+   ],
+   "explainability": [
+    4,
+    "Memory diagrams show remote code execution"
+   ],
+   "shelf_life": [
+    3,
+    "Vulnerabilities fade as software updates roll"
+   ],
+   "money": [
+    4,
+    "Cybersecurity software vendors buy premium inventory"
+   ]
+  },
+  "risk": "",
+  "search_query": "java4shell openjdk base64 vulnerability",
+  "wiki_title": "OpenJDK",
+  "stats": {
+   "hn_points": 337,
+   "hn_comments": 83,
+   "wiki_article": "OpenJDK",
+   "wiki_avg_30d": 145,
+   "wiki_views_24h": 148,
+   "wiki_change_pct": 2
+  },
+  "origin": {
+   "time": "2026-11-17T21:11:28+00:00",
+   "hours_ago": 2.4
+  },
+  "sources": [
+   {
+    "src": "hacker_news",
+    "title": "Java4Shell: RCE in OpenJDK when processing Base64",
+    "url": "https://calif.io/java4shell/"
+   }
+  ],
+  "demand": 69,
+  "competition": null,
+  "quality": 75,
+  "opportunity": 69
+ },
+ {
+  "id": "1378c49b9ec4",
+  "key": "how-did-a-rounding-error-drain-3-7-million-dollars-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "hot",
+  "question": "How did a rounding error drain 3.7 million dollars?",
+  "hook": "One misplaced decimal wiped out millions instantly.",
+  "about": "DeFi lending platform Kava Lend lost nearly four million dollars due to a simple arithmetic error in its smart contracts. The incident highlights how tiny mathematical glitches in immutable code turn into massive financial windfalls for hackers.",
+  "surprise": "Kava Lend lost 3.7 million dollars through an arithmetic error.",
+  "series": "Money Moves (charts)",
+  "audience": "finance & crypto",
+  "format": "short",
+  "scores": {
+   "curiosity": [
+    4,
+    "Wild financial disaster caused by math"
+   ],
+   "explainability": [
+    5,
+    "Simple arithmetic bugs are easily visualised"
+   ],
+   "shelf_life": [
+    3,
+    "Specific exploit fades after postmortem discussions"
+   ],
+   "money": [
+    5,
+    "Crypto exchanges pay high advertiser rates"
+   ]
+  },
+  "risk": "",
+  "search_query": "kava lend hack arithmetic error",
+  "wiki_title": "Decentralized finance",
+  "stats": {
+   "hack_usd": 3700000,
+   "wiki_article": "Decentralized finance",
+   "wiki_avg_30d": 167,
+   "wiki_views_24h": 136,
+   "wiki_change_pct": -19
+  },
+  "origin": {
+   "time": "2026-11-14T00:00:00+00:00",
+   "hours_ago": 95.5
+  },
+  "sources": [
+   {
+    "src": "defillama_hacks",
+    "title": "Kava Lend hack: $3.7M via Arithmetic Error",
+    "url": "https://defillama.com/hacks"
+   }
+  ],
+  "demand": 40,
+  "competition": null,
+  "quality": 85,
+  "opportunity": 60
+ },
+ {
+  "id": "56c812d311c6",
+  "key": "why-did-creating-the-dot-xxx-domain-trigger-a-global-battle-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "hot",
+  "question": "Why did creating the dot-xxx domain trigger a global battle?",
+  "hook": "The internet fought for ten years over three letters.",
+  "about": "The introduction of the dot-xxx top-level domain sparked intense battles between free-speech advocates, governments, and the adult entertainment industry. ICANN repeatedly rejected and revived the proposal before it finally went live in 2011.",
+  "surprise": "Did governments and the adult industry both lobby against dot-xxx?",
+  "series": "What Actually Happened (mini-doc)",
+  "audience": "general curious",
+  "format": "long",
+  "scores": {
+   "curiosity": [
+    5,
+    "Bizarre bureaucratic clash over taboo industry"
+   ],
+   "explainability": [
+    4,
+    "DNS maps and corporate logos animate"
+   ],
+   "shelf_life": [
+    4,
+    "Internet governance history holds enduring interest"
+   ],
+   "money": [
+    2,
+    "Taboo associations may limit advertiser categories"
+   ]
+  },
+  "risk": "discusses adult industry domain registry regulations",
+  "search_query": "history of xxx domain icann",
+  "wiki_title": ".xxx",
+  "stats": {
+   "wiki_views_24h": 105406,
+   "wiki_change_pct": -62,
+   "wiki_7d": [
+    254653,
+    213618,
+    226847,
+    257723,
+    486885,
+    222107,
+    105406
+   ],
+   "wiki_article": ".xxx",
+   "wiki_avg_30d": 202349,
+   "yt_results": 0
+  },
+  "origin": null,
+  "sources": [
+   {
+    "src": "wikipedia",
+    "title": ".xxx",
+    "url": "https://en.wikipedia.org/wiki/.xxx"
+   }
+  ],
+  "demand": 95,
+  "competition": 0,
+  "quality": 75,
+  "opportunity": 88
+ },
+ {
+  "id": "127e0b9dea05",
+  "key": "how-did-hackers-steal-2-7-million-from-polymarket-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "hot",
+  "question": "How did hackers steal 2.7 million from Polymarket?",
+  "hook": "A prediction giant fell to poisoned software.",
+  "about": "Polymarket International suffered a 2.7 million dollar loss stemming from an upstream supply chain attack. The breach illustrates how relying on third-party dependencies can leave even prominent betting platforms completely exposed.",
+  "surprise": "Polymarket International lost 2.7 million dollars through a supply chain attack.",
+  "series": "Money Moves (charts)",
+  "audience": "finance & crypto",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    4,
+    "Prediction market giant suffers major exploit"
+   ],
+   "explainability": [
+    4,
+    "Flowcharts show compromised software dependency pipeline"
+   ],
+   "shelf_life": [
+    3,
+    "Specific hack recedes as security evolves"
+   ],
+   "money": [
+    5,
+    "Fintech brands target online betting audiences"
+   ]
+  },
+  "risk": "",
+  "search_query": "polymarket hack supply chain attack",
+  "wiki_title": "Polymarket",
+  "stats": {
+   "hack_usd": 2700000,
+   "wiki_article": "Polymarket",
+   "wiki_avg_30d": 1695,
+   "wiki_views_24h": 955,
+   "wiki_change_pct": -44
+  },
+  "origin": {
+   "time": "2026-10-29T00:00:00+00:00",
+   "hours_ago": 479.5
+  },
+  "sources": [
+   {
+    "src": "defillama_hacks",
+    "title": "Polymarket International hack: $2.7M via Supply Chain Attack",
+    "url": "https://defillama.com/hacks"
+   }
+  ],
+  "demand": 57,
+  "competition": null,
+  "quality": 80,
+  "opportunity": 65
+ },
+ {
+  "id": "1c9f3db889d6",
+  "key": "how-did-a-text-file-magazine-shape-modern-cybersecurity-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "hot",
+  "question": "How did a text file magazine shape modern cybersecurity?",
+  "hook": "An underground digital magazine changed computer history.",
+  "about": "Founded in 1985, Phrack is one of the oldest and most influential underground hacker publications in computing history. The release of its 73rd issue marks nearly four decades of publishing foundational computer security research and digital folklore.",
+  "surprise": "Phrack has published underground hacker research since 1985.",
+  "series": "What Actually Happened (mini-doc)",
+  "audience": "tech & AI",
+  "format": "long",
+  "scores": {
+   "curiosity": [
+    4,
+    "Nostalgic peek inside secret hacker counterculture"
+   ],
+   "explainability": [
+    4,
+    "Text consoles and comic panels work"
+   ],
+   "shelf_life": [
+    5,
+    "Hacker history remains relevant for decades"
+   ],
+   "money": [
+    3,
+    "Niche computing topic attracts tech advertisers"
+   ]
+  },
+  "risk": "",
+  "search_query": "phrack hacker magazine history",
+  "wiki_title": "Phrack",
+  "stats": {
+   "hn_points": 229,
+   "hn_comments": 23,
+   "wiki_article": "Phrack",
+   "wiki_avg_30d": 38,
+   "wiki_views_24h": 33,
+   "wiki_change_pct": -12
+  },
+  "origin": {
+   "time": "2026-11-17T18:31:25+00:00",
+   "hours_ago": 5.0
+  },
+  "sources": [
+   {
+    "src": "hacker_news",
+    "title": "Phrack 73 Released",
+    "url": "https://phrack.org/issues/73/introduction_md"
+   }
+  ],
+  "demand": 63,
+  "competition": null,
+  "quality": 80,
+  "opportunity": 68
+ },
+ {
+  "id": "683dd9825b91",
+  "key": "how-does-a-browser-turn-raw-code-into-pixels-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "hot",
+  "question": "How does a browser turn raw code into pixels?",
+  "hook": "Your browser does millions of calculations every click.",
+  "about": "Every time you open a webpage, browser rendering engines parse HTML, build the DOM, calculate layout geometry, and paint pixels at 60 frames per second. It is one of the most complex engineering feats running quietly on every computer.",
+  "surprise": "Does layout recalculation happen dozens of times per second?",
+  "series": "How It Works (cutaway)",
+  "audience": "students",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    4,
+    "Universal everyday tool hides immense complexity"
+   ],
+   "explainability": [
+    5,
+    "Layered rendering stages make intuitive cutaways"
+   ],
+   "shelf_life": [
+    5,
+    "Core browser architectures remain fundamentally unchanged"
+   ],
+   "money": [
+    4,
+    "Developer bootcamps and productivity tools sponsor"
+   ]
+  },
+  "risk": "",
+  "search_query": "how web browser rendering works",
+  "wiki_title": "Browser engine",
+  "stats": {
+   "hn_points": 107,
+   "hn_comments": 17,
+   "wiki_article": "Browser engine",
+   "wiki_avg_30d": 139,
+   "wiki_views_24h": 153,
+   "wiki_change_pct": 10
+  },
+  "origin": {
+   "time": "2026-11-17T20:01:35+00:00",
+   "hours_ago": 3.5
+  },
+  "sources": [
+   {
+    "src": "hacker_news",
+    "title": "Web Browser Engineering (2021)",
+    "url": "https://browser.engineering/"
+   }
+  ],
+  "demand": 57,
+  "competition": null,
+  "quality": 90,
+  "opportunity": 69
+ },
+ {
+  "id": "b400bcbecd48",
+  "key": "why-does-grand-theft-auto-vi-cost-so-much-to-make-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "hot",
+  "question": "Why does Grand Theft Auto VI cost so much to make?",
+  "hook": "This is the most expensive entertainment project ever.",
+  "about": "Grand Theft Auto VI is slated to become one of the costliest media productions in human history, combining thousands of developers and cutting-edge simulation tech. The game pushes gaming economics into uncharted territory where budgets eclipse major Hollywood blockbusters.",
+  "surprise": "Can a video game budget really surpass major Hollywood blockbusters?",
+  "series": "Money Moves (charts)",
+  "audience": "movie & pop culture",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    5,
+    "Enormous mainstream interest in massive game"
+   ],
+   "explainability": [
+    4,
+    "Cost breakdown charts are visually clear"
+   ],
+   "shelf_life": [
+    4,
+    "Anticipation builds steadily until eventual release"
+   ],
+   "money": [
+    5,
+    "Gaming hardware brands pay top dollar"
+   ]
+  },
+  "risk": "",
+  "search_query": "gta 6 budget development cost",
+  "wiki_title": "Grand Theft Auto VI",
+  "stats": {
+   "wiki_views_24h": 82149,
+   "wiki_change_pct": 26,
+   "wiki_7d": [
+    43270,
+    64375,
+    62961,
+    73739,
+    74974,
+    72813,
+    82149
+   ],
+   "wiki_article": "Grand Theft Auto VI",
+   "wiki_avg_30d": 34500,
+   "yt_results": 1000000,
+   "yt_top_views": 57946493,
+   "yt_median_top10_views": 525188,
+   "yt_recent_in_top10": 3,
+   "yt_top_title": "GTA VI budget\ud83e\udd2f.",
+   "yt_top_channel": "Nugget",
+   "yt_top_url": "https://youtu.be/MbQh5wqlxkA",
+   "yt_query": "gta 6 budget development cost"
+  },
+  "origin": null,
+  "sources": [
+   {
+    "src": "wikipedia",
+    "title": "Grand Theft Auto VI",
+    "url": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI"
+   }
+  ],
+  "demand": 96,
+  "competition": 66,
+  "quality": 90,
+  "opportunity": 84
+ },
+ {
+  "id": "103067764d24",
+  "key": "how-do-ai-coding-agents-know-their-code-actually-works-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "hot",
+  "question": "How do AI coding agents know their code actually works?",
+  "hook": "Your AI coder just wrote ten thousand lines blind.",
+  "about": "AI coding assistants like Claude Code are moving from simple auto-complete to executing complex software engineering tasks autonomously. To avoid hallucinating broken code, developers build automated verification feedback loops that test and validate changes in real time.",
+  "surprise": "Does the agent test its own code using real terminal execution loops?",
+  "series": "How It Works (cutaway)",
+  "audience": "tech & AI",
+  "format": "long",
+  "scores": {
+   "curiosity": [
+    4,
+    "Everyone wonders how reliable AI code is"
+   ],
+   "explainability": [
+    5,
+    "Clean flowcharts show agent feedback loops"
+   ],
+   "shelf_life": [
+    4,
+    "AI agent architectures remain relevant long-term"
+   ],
+   "money": [
+    5,
+    "Developer tools and AI cloud spend"
+   ]
+  },
+  "risk": "",
+  "search_query": "how AI coding agents verify code",
+  "wiki_title": "Automated code review",
+  "stats": {
+   "hn_points": 249,
+   "hn_comments": 194,
+   "wiki_article": "Automated code review",
+   "wiki_avg_30d": 3,
+   "wiki_views_24h": 2,
+   "wiki_change_pct": -28,
+   "yt_results": 1000000,
+   "yt_top_views": 1042526,
+   "yt_median_top10_views": 18890,
+   "yt_recent_in_top10": 4,
+   "yt_top_title": "How to Build an AI Agent with Claude Code (Claude AI Agent Tutorial)",
+   "yt_top_channel": "AI Master",
+   "yt_top_url": "https://youtu.be/bcM9dP_uXJU",
+   "yt_query": "how AI coding agents verify code"
+  },
+  "origin": {
+   "time": "2026-11-17T10:20:40+00:00",
+   "hours_ago": 13.2
+  },
+  "sources": [
+   {
+    "src": "hacker_news",
+    "title": "How the Claude Code team thinks about verification",
+    "url": "https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/"
+   }
+  ],
+  "demand": 69,
+  "competition": 55,
+  "quality": 90,
+  "opportunity": 74
+ },
+ {
+  "id": "50fd6aeb6668",
+  "key": "why-do-revolutionary-military-superweapons-quickly-become-ordinary-standard-equi",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "hot",
+  "question": "Why do revolutionary military superweapons quickly become ordinary standard equipment?",
+  "hook": "Every unstoppable superweapon eventually becomes standard issue.",
+  "about": "Military innovation follows a cycle where devastating breakthrough weapons get analyzed, standardized, and eventually countered by basic defensive gear. The concept explores how radical technological advantages decay rapidly once an adversary survives initial deployment.",
+  "surprise": "Breakthrough offensive weapons often become basic defensive training within generations.",
+  "series": "Versus (scoreboard)",
+  "audience": "tech & AI",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    5,
+    "Great tactical metaphor for tech disruption"
+   ],
+   "explainability": [
+    4,
+    "Visual tech tree diagrams illustrate progression"
+   ],
+   "shelf_life": [
+    5,
+    "Military doctrine history never goes stale"
+   ],
+   "money": [
+    3,
+    "Broad interest but niche defense advertisers"
+   ]
+  },
+  "risk": "",
+  "search_query": "dynamics of military innovation weapons",
+  "wiki_title": "Military technology",
+  "stats": {
+   "hn_points": 40,
+   "hn_comments": 7,
+   "wiki_article": "Military technology",
+   "wiki_avg_30d": 79,
+   "wiki_views_24h": 93,
+   "wiki_change_pct": 17
+  },
+  "origin": {
+   "time": "2026-11-15T22:42:42+00:00",
+   "hours_ago": 48.8
+  },
+  "sources": [
+   {
+    "src": "hacker_news",
+    "title": "Zoltraak and the Dynamics of Military Innovation",
+    "url": "https://jgeekstudies.org/2026/11/15/zoltraak-military-innovation-in-frieren/"
+   }
+  ],
+  "demand": 46,
+  "competition": null,
+  "quality": 85,
+  "opportunity": 62
+ },
+ {
+  "id": "14c16c6e49ac",
+  "key": "how-do-hackers-spoof-fake-messages-across-blockchain-bridges-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "hot",
+  "question": "How do hackers spoof fake messages across blockchain bridges?",
+  "hook": "A fake message stole eight hundred thousand dollars.",
+  "about": "Cross-chain bridges allow different blockchain networks to communicate and transfer assets without a central intermediary. Attackers exploit synchronization flaws to forge counterfeit deposit confirmations and drain real tokens from the destination vault.",
+  "surprise": "The attacker never hacked the chain, just the messenger.",
+  "series": "How It Works (cutaway)",
+  "audience": "finance & crypto",
+  "format": "long",
+  "scores": {
+   "curiosity": [
+    4,
+    "Cross-chain exploits sound like digital magic"
+   ],
+   "explainability": [
+    5,
+    "Postal packet diagrams make bridges clear"
+   ],
+   "shelf_life": [
+    3,
+    "Crypto bridge architecture evolves very rapidly"
+   ],
+   "money": [
+    4,
+    "High value web3 security audience appeal"
+   ]
+  },
+  "risk": "",
+  "search_query": "cross chain message spoofing explained",
+  "wiki_title": "Cross-chain",
+  "stats": {
+   "hack_usd": 783100
+  },
+  "origin": {
+   "time": "2026-10-28T00:00:00+00:00",
+   "hours_ago": 503.5
+  },
+  "sources": [
+   {
+    "src": "defillama_hacks",
+    "title": "zkLink Nova hack: $0.8M via Cross-Chain Message Spoofing",
+    "url": "https://defillama.com/hacks"
+   }
+  ],
+  "demand": null,
+  "competition": null,
+  "quality": 80,
+  "opportunity": 60
+ },
+ {
+  "id": "2cccbe45131b",
+  "key": "how-can-a-hacker-steal-a-crypto-protocol-using-governance-votes-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "hot",
+  "question": "How can a hacker steal a crypto protocol using governance votes?",
+  "hook": "The robbery was passed by unanimous vote.",
+  "about": "Decentralized autonomous organizations rely on smart contracts that automatically implement changes when token holders vote yes. Malicious actors use flash loans or stealth proposals to quietly vote through balance-draining code without triggering alerts.",
+  "surprise": "The exploit code executes completely legally on chain.",
+  "series": "Money Moves (charts)",
+  "audience": "finance & crypto",
+  "format": "short",
+  "scores": {
+   "curiosity": [
+    4,
+    "A legal heist via voting fascinates"
+   ],
+   "explainability": [
+    4,
+    "Voting tally charts make mechanics obvious"
+   ],
+   "shelf_life": [
+    4,
+    "DAO governance flaws remain systemic issues"
+   ],
+   "money": [
+    4,
+    "DeFi and fintech sponsorships pay well"
+   ]
+  },
+  "risk": "",
+  "search_query": "DAO malicious proposal governance attack",
+  "wiki_title": "Decentralized autonomous organization",
+  "stats": {
+   "hack_usd": null,
+   "wiki_article": "Decentralized autonomous organization",
+   "wiki_avg_30d": 201,
+   "wiki_views_24h": 189,
+   "wiki_change_pct": -6
+  },
+  "origin": {
+   "time": "2026-10-28T00:00:00+00:00",
+   "hours_ago": 503.5
+  },
+  "sources": [
+   {
+    "src": "defillama_hacks",
+    "title": "Hifi Finance hack: $0.0M via Malicious Proposal",
+    "url": "https://defillama.com/hacks"
+   }
+  ],
+  "demand": 41,
+  "competition": null,
+  "quality": 80,
+  "opportunity": 58
+ },
+ {
+  "id": "997c1818c387",
+  "key": "could-dna-targeted-nanobots-actually-exist-in-real-life-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "hot",
+  "question": "Could DNA-targeted nanobots actually exist in real life?",
+  "hook": "A microscopic poison that only kills your relatives.",
+  "about": "The James Bond film No Time to Die features Project Heracles, a bioweapon composed of programmable nanobots that target victims based on genetic markers. Modern biotechnology is developing targeted mRNA therapeutics, raising questions about where cinematic fiction meets molecular reality.",
+  "surprise": "Could programmable micro-particles distinguish specific human DNA sequences?",
+  "series": "What If? (stickman)",
+  "audience": "movie & pop culture",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    5,
+    "DNA targeted weapons sound terrifyingly futuristic"
+   ],
+   "explainability": [
+    4,
+    "Stickman biology animations simplify complex genetics"
+   ],
+   "shelf_life": [
+    4,
+    "Pop science bioweapon analysis stays relevant"
+   ],
+   "money": [
+    3,
+    "Mainstream viewership with broad retail ads"
+   ]
+  },
+  "risk": "",
+  "search_query": "DNA targeted bioweapons science fiction",
+  "wiki_title": "No Time to Die",
+  "stats": {
+   "wiki_views_24h": 51436,
+   "wiki_change_pct": 769,
+   "wiki_7d": [
+    7336,
+    5786,
+    4907,
+    4667,
+    5685,
+    6451,
+    6617,
+    51436
+   ],
+   "wiki_article": "No Time to Die",
+   "wiki_avg_30d": 6513,
+   "yt_results": 637,
+   "yt_top_views": 3198165,
+   "yt_median_top10_views": 52082,
+   "yt_recent_in_top10": 0,
+   "yt_top_title": "First CRISPR Gene-Editing Medicine Approved!",
+   "yt_top_channel": "Cleo Abram",
+   "yt_top_url": "https://youtu.be/kslY8zZS4Xc",
+   "yt_query": "DNA targeted bioweapons science fiction"
+  },
+  "origin": null,
+  "sources": [
+   {
+    "src": "wikipedia",
+    "title": "No Time to Die",
+    "url": "https://en.wikipedia.org/wiki/No_Time_to_Die"
+   }
+  ],
+  "demand": 94,
+  "competition": 47,
+  "quality": 80,
+  "opportunity": 82
+ },
+ {
+  "id": "d4eab52eb52c",
+  "key": "how-did-one-man-build-mexico-s-first-corporate-cartel-federation-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "hot",
+  "question": "How did one man build Mexico's first corporate cartel federation?",
+  "hook": "He organized chaotic smugglers into a boardroom.",
+  "about": "Miguel \u00c1ngel F\u00e9lix Gallardo pioneered the modern Mexican drug trade by consolidating disjointed regional smugglers into a single unified syndicate known as the Guadalajara Cartel. Instead of fighting turf wars, he assigned regional plazas like business franchises to coordinate cross-border logistics.",
+  "surprise": "He carved an entire country into non-overlapping business territories.",
+  "series": "What Actually Happened (mini-doc)",
+  "audience": "general curious",
+  "format": "long",
+  "scores": {
+   "curiosity": [
+    5,
+    "True crime logistical history grips audiences"
+   ],
+   "explainability": [
+    4,
+    "Maps and corporate organizational charts work"
+   ],
+   "shelf_life": [
+    5,
+    "Historic organized crime history never expires"
+   ],
+   "money": [
+    3,
+    "True crime limits premium tier advertising"
+   ]
+  },
+  "risk": "legal",
+  "search_query": "Guadalajara Cartel plaza system history",
+  "wiki_title": "Miguel \u00c1ngel F\u00e9lix Gallardo",
+  "stats": {
+   "wiki_views_24h": 70590,
+   "wiki_change_pct": 2026,
+   "wiki_7d": [
+    2089,
+    2009,
+    2188,
+    1956,
+    1783,
+    3029,
+    10184,
+    70590
+   ],
+   "wiki_article": "Miguel \u00c1ngel F\u00e9lix Gallardo",
+   "wiki_avg_30d": 4552,
+   "yt_results": 876,
+   "yt_top_views": 398554,
+   "yt_median_top10_views": 64282,
+   "yt_recent_in_top10": 0,
+   "yt_top_title": "HOW MEXICAN NARCO'S BECAME MULTIMILLIONAIRES - the story of Guadalajara Cartel",
+   "yt_top_channel": "On the other side of the law",
+   "yt_top_url": "https://youtu.be/KkhK_TVv87I",
+   "yt_query": "Guadalajara Cartel plaza system history"
+  },
+  "origin": null,
+  "sources": [
+   {
+    "src": "wikipedia",
+    "title": "Miguel \u00c1ngel F\u00e9lix Gallardo",
+    "url": "https://en.wikipedia.org/wiki/Miguel_%C3%81ngel_F%C3%A9lix_Gallardo"
+   }
+  ],
+  "demand": 89,
+  "competition": 48,
+  "quality": 85,
+  "opportunity": 82
+ },
+ {
+  "id": "74e372fb2c02",
+  "key": "why-are-modern-web-frameworks-ditching-the-virtual-dom-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "hot",
+  "question": "Why are modern web frameworks ditching the Virtual DOM?",
+  "hook": "React's biggest feature is quietly being abandoned.",
+  "about": "For years, web development relied on a Virtual DOM to compare interface snapshots before updating the actual browser page. New frontend frameworks like Solid 2.0 bypass this entirely by using fine-grained reactivity to surgically update only the exact elements that change.",
+  "surprise": "Surgical dom updates completely skip virtual re-rendering overhead.",
+  "series": "How It Works (cutaway)",
+  "audience": "tech & AI",
+  "format": "long",
+  "scores": {
+   "curiosity": [
+    4,
+    "Huge topic for software engineering communities"
+   ],
+   "explainability": [
+    4,
+    "Side-by-side DOM tree animations clarify concepts"
+   ],
+   "shelf_life": [
+    4,
+    "Web architecture shifts stay relevant years"
+   ],
+   "money": [
+    4,
+    "High developer software tool ad value"
+   ]
+  },
+  "risk": "",
+  "search_query": "virtual dom vs fine grained reactivity",
+  "wiki_title": "Reactive programming",
+  "stats": {
+   "hn_points": 189,
+   "hn_comments": 51,
+   "wiki_article": "Reactive programming",
+   "wiki_avg_30d": 55,
+   "wiki_views_24h": 40,
+   "wiki_change_pct": -28
+  },
+  "origin": {
+   "time": "2026-11-17T18:56:17+00:00",
+   "hours_ago": 4.6
+  },
+  "sources": [
+   {
+    "src": "hacker_news",
+    "title": "Solid 2.0",
+    "url": "https://www.solidjs.com/blog/solid-2-0-the-long-hold/"
+   }
+  ],
+  "demand": 61,
+  "competition": null,
+  "quality": 80,
+  "opportunity": 67
+ },
+ {
+  "id": "7907a459be7d",
+  "key": "how-did-wooden-accounting-sticks-burn-down-the-british-parliament-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "evergreen",
+  "question": "How did wooden accounting sticks burn down the British Parliament?",
+  "hook": "The British Empire kept records on split hazel sticks.",
+  "about": "For centuries, England tracked taxes and debts using notched pieces of wood called tally sticks. In 1834, an effort to incinerate the obsolete sticks overheated the furnaces and burned down the Palace of Westminster.",
+  "surprise": "Tally sticks functioned as official legal currency in England until 1826.",
+  "series": "Money Moves (charts)",
+  "audience": "finance & crypto",
+  "format": "long",
+  "scores": {
+   "curiosity": [
+    5,
+    "Bizarre bureaucratic accident destroys ancient parliament"
+   ],
+   "explainability": [
+    5,
+    "Notched sticks and burning stoves animate"
+   ],
+   "shelf_life": [
+    5,
+    "Historical economic trivia never gets old"
+   ],
+   "money": [
+    3,
+    "Broad financial history attracts curious viewers"
+   ]
+  },
+  "risk": "",
+  "search_query": "tally sticks burn parliament",
+  "wiki_title": "Burning of Parliament",
+  "stats": {
+   "wiki_article": "Burning of Parliament",
+   "wiki_avg_30d": 161,
+   "wiki_views_24h": 165,
+   "wiki_change_pct": 3
+  },
+  "origin": null,
+  "sources": [],
+  "demand": 40,
+  "competition": null,
+  "quality": 90,
+  "opportunity": 62
+ },
+ {
+  "id": "04c93a175926",
+  "key": "what-would-happen-if-earth-suddenly-stopped-spinning-for-five-seconds-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "evergreen",
+  "question": "What would happen if Earth suddenly stopped spinning for five seconds?",
+  "hook": "Everything not bolted to bedrock flies east at supersonic speeds.",
+  "about": "Earth rotates at roughly one thousand miles per hour at the equator. A sudden stoppage would fling atmospheres, oceans, and loose structures eastward in catastrophic kinetic chaos.",
+  "surprise": "The sudden halt creates global supersonic winds and colossal tsunamis instantly.",
+  "series": "What If? (stickman)",
+  "audience": "general curious",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    5,
+    "Extreme hypothetical physics captures immediate attention"
+   ],
+   "explainability": [
+    5,
+    "Stickmen flying eastward illustrates sudden momentum"
+   ],
+   "shelf_life": [
+    5,
+    "Planetary physics concepts remain timelessly fascinating"
+   ],
+   "money": [
+    3,
+    "Broad curiosity yields standard video monetization"
+   ]
+  },
+  "risk": "",
+  "search_query": "what if earth stops spinning",
+  "wiki_title": "Earth's rotation",
+  "stats": {
+   "wiki_article": "Earth's rotation",
+   "wiki_avg_30d": 565,
+   "wiki_views_24h": 602,
+   "wiki_change_pct": 7
+  },
+  "origin": null,
+  "sources": [],
+  "demand": 49,
+  "competition": null,
+  "quality": 90,
+  "opportunity": 66
+ },
+ {
+  "id": "a70b271bc530",
+  "key": "how-does-your-phone-gps-use-einstein-s-relativity-to-navigate-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "evergreen",
+  "question": "How does your phone GPS use Einstein's relativity to navigate?",
+  "hook": "Without Einstein's math, your phone GPS drifts miles daily.",
+  "about": "GPS satellites carry atomic clocks that experience both velocity time dilation and gravitational time dilation. Because orbital clocks tick faster than ground clocks, software must continuously offset relativistic drift.",
+  "surprise": "Satellite clocks gain roughly 38 microseconds each day without relativistic corrections.",
+  "series": "How It Works (cutaway)",
+  "audience": "tech & AI",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    4,
+    "Relativity secretly powers everyday smartphone maps"
+   ],
+   "explainability": [
+    5,
+    "Cutaways of orbital clocks simplify physics"
+   ],
+   "shelf_life": [
+    5,
+    "GPS mechanics and relativity never expire"
+   ],
+   "money": [
+    4,
+    "Tech hardware attracts premium ad rates"
+   ]
+  },
+  "risk": "",
+  "search_query": "how gps uses relativity",
+  "wiki_title": "Error analysis for the Global Positioning System",
+  "stats": {
+   "wiki_article": "Error analysis for the Global Positioning System",
+   "wiki_avg_30d": 55,
+   "wiki_views_24h": 68,
+   "wiki_change_pct": 25
+  },
+  "origin": null,
+  "sources": [],
+  "demand": 32,
+  "competition": null,
+  "quality": 90,
+  "opportunity": 58
+ },
+ {
+  "id": "a709caa113dc",
+  "key": "katana-vs-european-longsword-which-blade-was-actually-deadlier-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "evergreen",
+  "question": "Katana vs European Longsword: Which blade was actually deadlier?",
+  "hook": "Pop culture loves katanas, but metallurgy tells another story.",
+  "about": "Pop culture portrays the Japanese katana as an unbreakable razor while treating the European longsword as an awkward bar of iron. In reality, both evolved radically different geometry, balance, and steel chemistries to defeat contemporary armor.",
+  "surprise": "European spring steel was chemically purer than traditional Japanese tamahagane steel.",
+  "series": "Versus (scoreboard)",
+  "audience": "movie & pop culture",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    5,
+    "Anime fans clash over historical weapons"
+   ],
+   "explainability": [
+    4,
+    "Cross-section blade physics simplifies cutting mechanics"
+   ],
+   "shelf_life": [
+    5,
+    "Medieval weapon debates remain evergreen forever"
+   ],
+   "money": [
+    3,
+    "Gaming and hobbyist audiences attract sponsors"
+   ]
+  },
+  "risk": "",
+  "search_query": "katana vs longsword",
+  "wiki_title": "Japanese swordsmithing",
+  "stats": {
+   "wiki_article": "Japanese swordsmithing",
+   "wiki_avg_30d": 53,
+   "wiki_views_24h": 51,
+   "wiki_change_pct": -4
+  },
+  "origin": null,
+  "sources": [],
+  "demand": 31,
+  "competition": null,
+  "quality": 85,
+  "opportunity": 55
+ },
+ {
+  "id": "2cf0d889eff1",
+  "key": "why-did-1816-have-no-summer-across-the-entire-world-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "evergreen",
+  "question": "Why did 1816 have no summer across the entire world?",
+  "hook": "Snow fell in June and crops froze in mid-July.",
+  "about": "In 1815, Mount Tambora in modern Indonesia suffered the most powerful volcanic eruption in recorded human history. The stratospheric sulfate veil blanketed the planet, chilling global temperatures and triggering worldwide crop failures.",
+  "surprise": "The miserable freezing summer directly inspired Mary Shelley to write Frankenstein.",
+  "series": "What Actually Happened (mini-doc)",
+  "audience": "students",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    5,
+    "A summer that froze crops worldwide"
+   ],
+   "explainability": [
+    5,
+    "Volcano clouds blocking sun animates vividly"
+   ],
+   "shelf_life": [
+    5,
+    "Extreme historical climate events stay evergreen"
+   ],
+   "money": [
+    3,
+    "Educational science topics draw broad sponsors"
+   ]
+  },
+  "risk": "",
+  "search_query": "year without a summer 1816",
+  "wiki_title": "Year Without a Summer",
+  "stats": {
+   "wiki_article": "Year Without a Summer",
+   "wiki_avg_30d": 912,
+   "wiki_views_24h": 2766,
+   "wiki_change_pct": 203,
+   "yt_results": 670222,
+   "yt_top_views": 2535551,
+   "yt_median_top10_views": 76528,
+   "yt_recent_in_top10": 0,
+   "yt_top_title": "The Year Without a Summer (1816 to 1824)",
+   "yt_top_channel": "Historia Civilis",
+   "yt_top_url": "https://youtu.be/R0wwuj0sTyY",
+   "yt_query": "year without a summer 1816"
+  },
+  "origin": null,
+  "sources": [],
+  "demand": 89,
+  "competition": 49,
+  "quality": 90,
+  "opportunity": 84
+ },
+ {
+  "id": "90ea262e3519",
+  "key": "how-does-a-mechanical-combination-lock-open-without-any-electricity-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "evergreen",
+  "question": "How does a mechanical combination lock open without any electricity?",
+  "hook": "Three spinning wheels inside a padlock keep your secrets.",
+  "about": "Combination padlocks and bank vault dials rely on purely mechanical stacks of notched wheels known as wheel packs. Alternating rotations line up each internal gate precisely until a spring-loaded fence drops into place.",
+  "surprise": "The drive cam only engages adjacent wheels through tiny protruding drive pins.",
+  "series": "How It Works (cutaway)",
+  "audience": "general curious",
+  "format": "short",
+  "scores": {
+   "curiosity": [
+    4,
+    "Everyone uses padlocks without understanding internals"
+   ],
+   "explainability": [
+    5,
+    "Mechanical tumblers moving cleanly explains mechanisms"
+   ],
+   "shelf_life": [
+    5,
+    "Mechanical lock engineering will never change"
+   ],
+   "money": [
+    3,
+    "Security hardware products offer ad potential"
+   ]
+  },
+  "risk": "",
+  "search_query": "how combination lock works",
+  "wiki_title": "Combination lock",
+  "stats": {
+   "wiki_article": "Combination lock",
+   "wiki_avg_30d": 57,
+   "wiki_views_24h": 64,
+   "wiki_change_pct": 13
+  },
+  "origin": null,
+  "sources": [],
+  "demand": 32,
+  "competition": null,
+  "quality": 85,
+  "opportunity": 56
+ },
+ {
+  "id": "47bc2a4ea209",
+  "key": "how-did-one-passenger-s-angry-letter-bring-toilets-to-indian-trains-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "evergreen",
+  "question": "How did one passenger's angry letter bring toilets to Indian trains?",
+  "hook": "Missing a train in 1909 transformed Indian transit.",
+  "about": "For over fifty years, Indian Railways operated passenger trains completely without onboard restrooms. That changed when an embarrassing passenger ordeal sparked an official bureaucratic overhaul.",
+  "surprise": "A passenger missed his train while defecating, causing nationwide policy changes.",
+  "series": "True Weird Stories (comic)",
+  "audience": "India-first",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    5,
+    "Hilarious historical premise shocks everyday commuters."
+   ],
+   "explainability": [
+    4,
+    "Comic panels animate funny train misadventures."
+   ],
+   "shelf_life": [
+    5,
+    "Iconic transport history remains fascinating forever."
+   ],
+   "money": [
+    3,
+    "Historical humor earns modest programmatic rates."
+   ]
+  },
+  "risk": "",
+  "search_query": "okhil chandra sen railway letter",
+  "wiki_title": "Indian Railways",
+  "stats": {
+   "wiki_article": "Indian Railways",
+   "wiki_avg_30d": 942,
+   "wiki_views_24h": 994,
+   "wiki_change_pct": 6
+  },
+  "origin": null,
+  "sources": [],
+  "demand": 53,
+  "competition": null,
+  "quality": 85,
+  "opportunity": 65
+ },
+ {
+  "id": "a4cdfb54215b",
+  "key": "why-do-airline-ticket-prices-change-every-few-minutes-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "evergreen",
+  "question": "Why do airline ticket prices change every few minutes?",
+  "hook": "That airline ticket price changed while you blinked.",
+  "about": "Airlines run complex yield management algorithms that recalculate seat fares continuously. Understanding how supply, search velocity, and consumer psychology interact reveals how carriers maximize revenue.",
+  "surprise": "Airlines divide identical coach cabins into dozens of artificial fare buckets.",
+  "series": "Money Moves (charts)",
+  "audience": "finance & crypto",
+  "format": "long",
+  "scores": {
+   "curiosity": [
+    5,
+    "Everyone hates unpredictable surging flight prices."
+   ],
+   "explainability": [
+    4,
+    "Step charts clearly reveal dynamic pricing."
+   ],
+   "shelf_life": [
+    5,
+    "Dynamic algorithmic revenue models endure indefinitely."
+   ],
+   "money": [
+    5,
+    "Travel and finance advertisers pay top."
+   ]
+  },
+  "risk": "",
+  "search_query": "dynamic pricing airline tickets",
+  "wiki_title": "Yield management",
+  "stats": {
+   "wiki_article": "Yield management",
+   "wiki_avg_30d": 26,
+   "wiki_views_24h": 35,
+   "wiki_change_pct": 35
+  },
+  "origin": null,
+  "sources": [],
+  "demand": 26,
+  "competition": null,
+  "quality": 95,
+  "opportunity": 57
+ },
+ {
+  "id": "1a76ffb8bf8c",
+  "key": "katana-vs-longsword-which-medieval-sword-was-actually-superior-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "evergreen",
+  "question": "Katana vs Longsword: Which medieval sword was actually superior?",
+  "hook": "Pop culture treats samurai swords like indestructible lasers.",
+  "about": "Martial arts enthusiasts and movie buffs constantly debate whether European longswords or Japanese katanas reigned supreme. Comparing metallurgy, geometry, and real battlefield armor reveals distinct engineering trade-offs.",
+  "surprise": "European longswords were often lighter and more versatile than katanas.",
+  "series": "Versus (scoreboard)",
+  "audience": "movie & pop culture",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    5,
+    "Fierce nerd debates guarantee passionate engagement."
+   ],
+   "explainability": [
+    5,
+    "Scoreboard tallies weapon attributes through icons."
+   ],
+   "shelf_life": [
+    5,
+    "Historic weapon showdowns stay permanently relevant."
+   ],
+   "money": [
+    3,
+    "Gaming and hobbyist advertisers love showdowns."
+   ]
+  },
+  "risk": "",
+  "search_query": "katana versus longsword",
+  "wiki_title": "Katana",
+  "stats": {
+   "wiki_article": "Katana",
+   "wiki_avg_30d": 708,
+   "wiki_views_24h": 730,
+   "wiki_change_pct": 3
+  },
+  "origin": null,
+  "sources": [],
+  "demand": 51,
+  "competition": null,
+  "quality": 90,
+  "opportunity": 66
+ },
+ {
+  "id": "fe6558f54e71",
+  "key": "how-did-an-undergraduate-student-find-a-fatal-skyscraper-flaw-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "evergreen",
+  "question": "How did an undergraduate student find a fatal skyscraper flaw?",
+  "hook": "A college thesis revealed a skyscraper ready to collapse.",
+  "about": "In 1978, Manhattan's towering Citigroup Center was celebrated for its innovative engineering and cantilevered base. A student's questioning phone call forced the chief engineer to realize quartering winds could topple it.",
+  "surprise": "Secret emergency welding crews reinforced the tower overnight while avoiding panic.",
+  "series": "What Actually Happened (mini-doc)",
+  "audience": "tech & AI",
+  "format": "long",
+  "scores": {
+   "curiosity": [
+    5,
+    "Secret catastrophe averted by one student."
+   ],
+   "explainability": [
+    4,
+    "Engineering diagrams illustrate dangerous wind forces."
+   ],
+   "shelf_life": [
+    5,
+    "Classic structural engineering case study endures."
+   ],
+   "money": [
+    4,
+    "Engineering and tech brands value studies."
+   ]
+  },
+  "risk": "",
+  "search_query": "citigroup center engineering crisis",
+  "wiki_title": "Citigroup Center",
+  "stats": {
+   "wiki_article": "Citigroup Center",
+   "wiki_avg_30d": 190,
+   "wiki_views_24h": 194,
+   "wiki_change_pct": 2
+  },
+  "origin": null,
+  "sources": [],
+  "demand": 41,
+  "competition": null,
+  "quality": 90,
+  "opportunity": 62
+ },
+ {
+  "id": "8626926ac031",
+  "key": "what-if-you-dug-a-hole-through-earth-and-jumped-in-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "evergreen",
+  "question": "What if you dug a hole through Earth and jumped in?",
+  "hook": "Jump into a planet-sized hole and physics goes crazy.",
+  "about": "Falling directly through the center of the planet is a classic theoretical physics thought experiment. Gravitational changes, terminal velocity, and Coriolis forces make the actual journey counterintuitive.",
+  "surprise": "The entire one-way freefall would take roughly thirty-eight minutes.",
+  "series": "What If? (stickman)",
+  "audience": "students",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    5,
+    "Classic science fantasy excites curious students."
+   ],
+   "explainability": [
+    5,
+    "Simple cross-sections make gravity changes intuitive."
+   ],
+   "shelf_life": [
+    5,
+    "Newtonian mechanics problems remain timeless education."
+   ],
+   "money": [
+    3,
+    "Educational content attracts modest school sponsorships."
+   ]
+  },
+  "risk": "",
+  "search_query": "falling through the earth tunnel",
+  "wiki_title": "Gravity train",
+  "stats": {
+   "wiki_article": "Gravity train",
+   "wiki_avg_30d": 31,
+   "wiki_views_24h": 39,
+   "wiki_change_pct": 28
+  },
+  "origin": null,
+  "sources": [],
+  "demand": 27,
+  "competition": null,
+  "quality": 90,
+  "opportunity": 56
+ },
+ {
+  "id": "dd7d8d19ee1b",
+  "key": "how-does-the-internet-physically-cross-oceans-through-underwater-cables-",
+  "created_at": "2026-11-17T23:32:31.892419+00:00",
+  "kind": "evergreen",
+  "question": "How does the internet physically cross oceans through underwater cables?",
+  "hook": "The cloud actually lives on the ocean floor.",
+  "about": "Over ninety-five percent of global internet traffic travels not through satellites, but via hair-thin glass strands on the seabed. Specialized ships lay thousands of miles of armored fiber optic cables across treacherous marine trenches.",
+  "surprise": "Underwater internet cables are barely as thick as garden hoses.",
+  "series": "How It Works (cutaway)",
+  "audience": "tech & AI",
+  "format": "both",
+  "scores": {
+   "curiosity": [
+    5,
+    "Viewers wrongly assume satellites power internet."
+   ],
+   "explainability": [
+    5,
+    "Undersea cable cutaway diagrams clarify engineering."
+   ],
+   "shelf_life": [
+    5,
+    "Physical internet backbone remains relevant decades."
+   ],
+   "money": [
+    4,
+    "Telecom and cloud providers pay generously."
+   ]
+  },
+  "risk": "",
+  "search_query": "submarine communications cables",
+  "wiki_title": "Submarine communications cable",
+  "stats": {
+   "wiki_article": "Submarine communications cable",
+   "wiki_avg_30d": 481,
+   "wiki_views_24h": 394,
+   "wiki_change_pct": -18
+  },
+  "origin": null,
+  "sources": [],
+  "demand": 48,
+  "competition": null,
+  "quality": 95,
+  "opportunity": 67
+ },
+ {
   "id": "0040c1a72158",
   "key": "why-are-solar-power-plants-hiring-armies-of-sheep-",
   "created_at": "2026-11-17T13:31:34.235259+00:00",
@@ -20092,2645 +22822,5 @@
   "competition": null,
   "quality": 80,
   "opportunity": 65
- },
- {
-  "id": "38278e9a6add",
-  "key": "how-did-a-simple-math-error-cost-crypto-users-3-7m-",
-  "created_at": "2026-11-14T23:25:37.755129+00:00",
-  "kind": "hot",
-  "question": "How did a simple math error cost crypto users $3.7M?",
-  "hook": "A third-grade math glitch drained millions instantly.",
-  "about": "A critical calculation bug inside Kava Lend allowed an attacker to siphon $3.7 million directly from lending pools. When smart contracts handle automated interest rates and collateralization ratios, a tiny arithmetic oversight can break an entire financial protocol.",
-  "surprise": "A simple arithmetic error let an attacker drain $3.7 million in seconds.",
-  "series": "How It Works (cutaway)",
-  "audience": "finance & crypto",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    4,
-    "How software math breaks real money."
-   ],
-   "explainability": [
-    5,
-    "Cutaway safe showing flawed math counter."
-   ],
-   "shelf_life": [
-    3,
-    "DeFi exploits follow similar structural mechanics."
-   ],
-   "money": [
-    4,
-    "High crypto and cybersecurity sponsor payout."
-   ]
-  },
-  "risk": "",
-  "search_query": "crypto smart contract arithmetic hack",
-  "wiki_title": "Smart contract",
-  "stats": {
-   "hack_usd": 3700000,
-   "wiki_article": "Smart contract",
-   "wiki_avg_30d": 115,
-   "wiki_views_24h": 146,
-   "wiki_change_pct": 27
-  },
-  "origin": {
-   "time": "2026-11-14T00:00:00+00:00",
-   "hours_ago": 23.4
-  },
-  "sources": [
-   {
-    "src": "defillama_hacks",
-    "title": "Kava Lend hack: $3.7M via Arithmetic Error",
-    "url": "https://defillama.com/hacks"
-   }
-  ],
-  "demand": 37,
-  "competition": null,
-  "quality": 80,
-  "opportunity": 56
- },
- {
-  "id": "04d35cbc8ccb",
-  "key": "how-do-hackers-fake-cross-chain-messages-to-steal-millions-",
-  "created_at": "2026-11-14T23:25:37.755129+00:00",
-  "kind": "hot",
-  "question": "How do hackers fake cross-chain messages to steal millions?",
-  "hook": "Fake telegrams can rob crypto bridges blind.",
-  "about": "The zkLink Nova platform was breached for roughly $800,000 through cross-chain message spoofing. When different blockchains communicate via relay nodes, forging a proof message can fool receiving contracts into minting tokens out of thin air.",
-  "surprise": "Attackers tricked two blockchains by forging cross-chain verification messages.",
-  "series": "How It Works (cutaway)",
-  "audience": "tech & AI",
-  "format": "short",
-  "scores": {
-   "curiosity": [
-    4,
-    "Forging identity between two separate networks."
-   ],
-   "explainability": [
-    4,
-    "Two stickman islands trading forged mail."
-   ],
-   "shelf_life": [
-    3,
-    "Blockchain interoperability is an ongoing problem."
-   ],
-   "money": [
-    4,
-    "Strong crypto and developer ad rates."
-   ]
-  },
-  "risk": "",
-  "search_query": "cross chain message spoofing explained",
-  "wiki_title": "Cryptographic protocol",
-  "stats": {
-   "hack_usd": 783100,
-   "wiki_article": "Cryptographic protocol",
-   "wiki_avg_30d": 33,
-   "wiki_views_24h": 28,
-   "wiki_change_pct": -15
-  },
-  "origin": {
-   "time": "2026-10-28T00:00:00+00:00",
-   "hours_ago": 431.4
-  },
-  "sources": [
-   {
-    "src": "defillama_hacks",
-    "title": "zkLink Nova hack: $0.8M via Cross-Chain Message Spoofing",
-    "url": "https://defillama.com/hacks"
-   }
-  ],
-  "demand": 27,
-  "competition": null,
-  "quality": 75,
-  "opportunity": 50
- },
- {
-  "id": "fdc5db7af5a0",
-  "key": "why-is-the-premier-league-investigating-its-best-football-club-",
-  "created_at": "2026-11-14T23:25:37.755129+00:00",
-  "kind": "hot",
-  "question": "Why is the Premier League investigating its best football club?",
-  "hook": "The greatest football team faces 115 charges.",
-  "about": "Manchester City is locked in an unprecedented legal fight over 115 alleged breaches of the Premier League's financial rules. The investigation examines whether inflated sponsorship deals and disguised player payments secretly funded their domestic and European dominance.",
-  "surprise": "A club won consecutive titles while defending against 115 financial cheating charges.",
-  "series": "Money Moves (charts)",
-  "audience": "general curious",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    5,
-    "Massive mainstream intrigue around elite cheating."
-   ],
-   "explainability": [
-    4,
-    "Ledgers, hidden shell accounts, and trophies."
-   ],
-   "shelf_life": [
-    4,
-    "The trial verdict will take months."
-   ],
-   "money": [
-    3,
-    "High traffic sports and business demographic."
-   ]
-  },
-  "risk": "Ongoing legal dispute; stick to public factual charges.",
-  "search_query": "Manchester City 115 financial charges",
-  "wiki_title": "Financial Fair Play Regulations",
-  "stats": {},
-  "origin": {
-   "time": "2026-11-14T19:59:03+00:00",
-   "hours_ago": 3.4
-  },
-  "sources": [
-   {
-    "src": "reddit_r/OutOfTheLoop",
-    "title": "What's up with Manchester City being investigated for cheating while the season is still in progress?",
-    "url": "https://www.reddit.com/r/OutOfTheLoop/comments/1xwbqtj/whats_up_with_manchester_city_being_investigated/"
-   }
-  ],
-  "demand": null,
-  "competition": null,
-  "quality": 80,
-  "opportunity": 60
- },
- {
-  "id": "d50163bfc5b0",
-  "key": "how-does-a-poisoned-dependency-ruin-an-entire-crypto-platform-",
-  "created_at": "2026-11-14T23:25:37.755129+00:00",
-  "kind": "hot",
-  "question": "How does a poisoned dependency ruin an entire crypto platform?",
-  "hook": "One infected library robbed millions from users.",
-  "about": "Recent supply chain hacks on Polymarket International and Bloom Trading Bot drained millions of dollars without hacking their core smart contracts. Attackers injected malicious code into third-party software dependencies, silently hijacking transactions behind the scenes.",
-  "surprise": "Hackers stole millions without cracking the blockchain by poisoning outside software libraries.",
-  "series": "How It Works (cutaway)",
-  "audience": "tech & AI",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    4,
-    "Hacking code nobody thought to check."
-   ],
-   "explainability": [
-    4,
-    "Factory conveyor belt carrying an infected part."
-   ],
-   "shelf_life": [
-    4,
-    "Software supply chain vulnerabilities are growing."
-   ],
-   "money": [
-    4,
-    "Enterprise security and developer tool advertisers."
-   ]
-  },
-  "risk": "",
-  "search_query": "crypto supply chain attack software",
-  "wiki_title": "Supply chain attack",
-  "stats": {
-   "hack_usd": 2700000,
-   "wiki_article": "Supply chain attack",
-   "wiki_avg_30d": 114,
-   "wiki_views_24h": 56,
-   "wiki_change_pct": -51
-  },
-  "origin": {
-   "time": "2026-10-26T00:00:00+00:00",
-   "hours_ago": 479.4
-  },
-  "sources": [
-   {
-    "src": "defillama_hacks",
-    "title": "Bloom Trading Bot hack: $1.0M via Supply Chain Attack",
-    "url": "https://defillama.com/hacks"
-   },
-   {
-    "src": "defillama_hacks",
-    "title": "Polymarket International hack: $2.7M via Supply Chain Attack",
-    "url": "https://defillama.com/hacks"
-   }
-  ],
-  "demand": 36,
-  "competition": null,
-  "quality": 80,
-  "opportunity": 56
- },
- {
-  "id": "88146ca665ae",
-  "key": "how-did-volunteer-fanfiction-writers-win-a-hugo-award-",
-  "created_at": "2026-11-14T23:25:37.755129+00:00",
-  "kind": "hot",
-  "question": "How did volunteer fanfiction writers win a Hugo Award?",
-  "hook": "A volunteer fanfiction database beat big publishers.",
-  "about": "Archive of Our Own, run entirely by volunteers and non-profit donations, created one of the most sophisticated tagging and archiving systems on the internet. In 2019, the user-driven platform won a prestigious Hugo Award, proving community curation outperforms corporate algorithms.",
-  "surprise": "A volunteer-built fanfiction site won a world-class sci-fi literary award.",
-  "series": "True Weird Stories (comic)",
-  "audience": "movie & pop culture",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    4,
-    "Internet subculture triumphs over corporate platforms."
-   ],
-   "explainability": [
-    4,
-    "Visualizing complex metadata tags as bookshelves."
-   ],
-   "shelf_life": [
-    5,
-    "Enduring case study in internet history."
-   ],
-   "money": [
-    2,
-    "Lower commercial sponsor rates for fandom."
-   ]
-  },
-  "risk": "",
-  "search_query": "Archive of Our Own Hugo Award",
-  "wiki_title": "Archive of Our Own",
-  "stats": {
-   "wiki_views_24h": 87286,
-   "wiki_change_pct": 64,
-   "wiki_7d": [
-    46593,
-    37233,
-    43788,
-    52047,
-    36360,
-    55989,
-    99746,
-    87286
-   ],
-   "wiki_article": "Archive of Our Own",
-   "wiki_avg_30d": 31012,
-   "yt_results": 691,
-   "yt_top_views": 9939,
-   "yt_median_top10_views": 79,
-   "yt_recent_in_top10": 1,
-   "yt_top_title": "2019 Hugo Award & 1944 Retrospective Hugo Award Finalists Announcement",
-   "yt_top_channel": "Dublin2019",
-   "yt_top_url": "https://youtu.be/Hi9Dg6iyr2U",
-   "yt_query": "Archive of Our Own Hugo Award"
-  },
-  "origin": null,
-  "sources": [
-   {
-    "src": "wikipedia",
-    "title": "Archive of Our Own",
-    "url": "https://en.wikipedia.org/wiki/Archive_of_Our_Own"
-   }
-  ],
-  "demand": 79,
-  "competition": 22,
-  "quality": 75,
-  "opportunity": 77
- },
- {
-  "id": "a16349fb6b55",
-  "key": "why-does-generative-ai-use-more-energy-for-non-english-text-",
-  "created_at": "2026-11-14T23:25:37.755129+00:00",
-  "kind": "hot",
-  "question": "Why does generative AI use more energy for non-English text?",
-  "hook": "Typing in Hindi secretly melts more servers.",
-  "about": "Generative AI systems rely on tokenizers that split non-English text into far more fragments, requiring significantly more compute. This disparity creates hidden financial and energy taxes on non-Western languages as AI adoption scales worldwide.",
-  "surprise": "Why does tokenizing non-English scripts require significantly more energy per prompt?",
-  "series": "How It Works (cutaway)",
-  "audience": "tech & AI",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    4,
-    "Audiences wonder why language costs energy"
-   ],
-   "explainability": [
-    5,
-    "Visualizing chopped tokens makes concepts clear"
-   ],
-   "shelf_life": [
-    4,
-    "Multilingual computing costs remain relevant long-term"
-   ],
-   "money": [
-    4,
-    "Attracts high paying artificial intelligence advertisers"
-   ]
-  },
-  "risk": "",
-  "search_query": "AI tokenization non english energy",
-  "wiki_title": "Large language model",
-  "stats": {
-   "hn_points": 166,
-   "hn_comments": 92,
-   "wiki_article": "Large language model",
-   "wiki_avg_30d": 3254,
-   "wiki_views_24h": 3355,
-   "wiki_change_pct": 3,
-   "yt_results": 268561,
-   "yt_top_views": 584498,
-   "yt_median_top10_views": 101690,
-   "yt_recent_in_top10": 0,
-   "yt_top_title": "AI Agents vs LLMs vs RAGs vs Agentic AI | Rakesh Gohel",
-   "yt_top_channel": "Rakesh Gohel",
-   "yt_top_url": "https://youtu.be/YUNf24-QMzk",
-   "yt_query": "AI tokenization non english energy"
-  },
-  "origin": {
-   "time": "2026-11-10T15:07:28+00:00",
-   "hours_ago": 104.3
-  },
-  "sources": [
-   {
-    "src": "hacker_news",
-    "title": "Generative AI uses more energy on non-English text",
-    "url": "https://news.umich.edu/generative-ai-uses-more-energy-on-non-english-text/"
-   }
-  ],
-  "demand": 74,
-  "competition": 50,
-  "quality": 85,
-  "opportunity": 75
- },
- {
-  "id": "05e1fbf04f73",
-  "key": "how-do-forensic-tools-actually-crack-locked-smartphones-",
-  "created_at": "2026-11-14T23:25:37.755129+00:00",
-  "kind": "hot",
-  "question": "How do forensic tools actually crack locked smartphones?",
-  "hook": "Your four-digit passcode is fighting a relentless machine.",
-  "about": "Law enforcement agencies use dedicated hardware boxes to bypass smartphone passcodes and extract encrypted user data. Understanding the hardware vulnerabilities and brute-force mitigations reveals how mobile device security actually works.",
-  "surprise": "How do physical forensic boxes bypass smartphone passcode attempt limits without wiping data?",
-  "series": "How It Works (cutaway)",
-  "audience": "tech & AI",
-  "format": "long",
-  "scores": {
-   "curiosity": [
-    5,
-    "Everyone worries about personal phone security"
-   ],
-   "explainability": [
-    4,
-    "Cutaways of chip connections draw easily"
-   ],
-   "shelf_life": [
-    4,
-    "Hardware security battles continue for years"
-   ],
-   "money": [
-    4,
-    "Cybersecurity software vendors buy premium ads"
-   ]
-  },
-  "risk": "",
-  "search_query": "how police crack locked phones",
-  "wiki_title": "Mobile device forensics",
-  "stats": {
-   "hn_points": 63,
-   "hn_comments": 2,
-   "wiki_article": "Mobile device forensics",
-   "wiki_avg_30d": 13,
-   "wiki_views_24h": 18,
-   "wiki_change_pct": 39
-  },
-  "origin": {
-   "time": "2026-11-14T14:44:28+00:00",
-   "hours_ago": 8.7
-  },
-  "sources": [
-   {
-    "src": "hacker_news",
-    "title": "Demystifying phone unlocking tools: A technical overview",
-    "url": "https://osservatorionessuno.org/blog/2026/05/demystifying-phone-unlocking-tools-a-technical-overview/"
-   }
-  ],
-  "demand": 48,
-  "competition": null,
-  "quality": 85,
-  "opportunity": 63
- },
- {
-  "id": "6b699e550c15",
-  "key": "how-does-circular-financing-artificially-inflate-hardware-prices-",
-  "created_at": "2026-11-14T23:25:37.755129+00:00",
-  "kind": "hot",
-  "question": "How does circular financing artificially inflate hardware prices?",
-  "hook": "A chip giant funds startups buying its chips.",
-  "about": "Reports suggest circular financing deals can prop up hardware demand when vendors invest in clients who purchase their products. As AI infrastructure spending reaches record heights, analysts are scrutinizing whether these sales represent genuine organic market demand.",
-  "surprise": "Can circular vendor investments artificially create synthetic customer demand for hardware?",
-  "series": "Money Moves (charts)",
-  "audience": "finance & crypto",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    4,
-    "Viewers love uncovering secret market manipulation"
-   ],
-   "explainability": [
-    4,
-    "Money flow charts show circular loops"
-   ],
-   "shelf_life": [
-    3,
-    "AI bubble debates will continue indefinitely"
-   ],
-   "money": [
-    5,
-    "Financial trading platforms pay top dollar"
-   ]
-  },
-  "risk": "legal",
-  "search_query": "nvidia circular financing GPU prices",
-  "wiki_title": "Round-tripping (finance)",
-  "stats": {
-   "hn_points": 21,
-   "hn_comments": 11,
-   "wiki_article": "Round-tripping (finance)",
-   "wiki_avg_30d": 33,
-   "wiki_views_24h": 42,
-   "wiki_change_pct": 29
-  },
-  "origin": {
-   "time": "2026-11-14T22:26:30+00:00",
-   "hours_ago": 1.0
-  },
-  "sources": [
-   {
-    "src": "hacker_news",
-    "title": "Nvidia deliberately kept GPU prices high through circular financing deals",
-    "url": "https://www.techspot.com/news/114558-nvidia-deliberately-kept-gpu-prices-high-through-circular.html"
-   }
-  ],
-  "demand": 38,
-  "competition": null,
-  "quality": 80,
-  "opportunity": 57
- },
- {
-  "id": "daf43019b3d0",
-  "key": "could-we-solve-ai-power-shortages-with-space-data-centers-",
-  "created_at": "2026-11-14T23:25:37.755129+00:00",
-  "kind": "hot",
-  "question": "Could we solve AI power shortages with space data centers?",
-  "hook": "Space has solar power, but zero cooling air.",
-  "about": "Tech companies face immense electrical grid bottlenecks while training massive artificial intelligence models on Earth. Launching orbital server farms promises limitless solar power, but vacuum heat dissipation presents an enormous engineering challenge.",
-  "surprise": "How can orbiting computer chips cool down when space contains no air for conduction?",
-  "series": "What If? (stickman)",
-  "audience": "tech & AI",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    5,
-    "Orbiting computers sound like science fiction"
-   ],
-   "explainability": [
-    4,
-    "Stickman drawings explain heat radiation challenges"
-   ],
-   "shelf_life": [
-    5,
-    "Space tech concepts stay interesting indefinitely"
-   ],
-   "money": [
-    4,
-    "Cloud providers and aerospace brands advertise"
-   ]
-  },
-  "risk": "",
-  "search_query": "data centers in space cooling",
-  "wiki_title": "Data center",
-  "stats": {
-   "hn_points": 52,
-   "hn_comments": 151,
-   "wiki_article": "Data center",
-   "wiki_avg_30d": 2328,
-   "wiki_views_24h": 2226,
-   "wiki_change_pct": -4,
-   "yt_results": 1000000,
-   "yt_top_views": 3616480,
-   "yt_median_top10_views": 351435,
-   "yt_recent_in_top10": 3,
-   "yt_top_title": "It\u2019s Not As Simple As Putting Data Centers in Space",
-   "yt_top_channel": "StarTalk",
-   "yt_top_url": "https://youtu.be/Xom0I1iQXHM",
-   "yt_query": "data centers in space cooling"
-  },
-  "origin": {
-   "time": "2026-11-14T17:35:33+00:00",
-   "hours_ago": 5.8
-  },
-  "sources": [
-   {
-    "src": "hacker_news",
-    "title": "Will we put data centers in space?",
-    "url": "https://www.forethought.org/research/will-we-really-put-data-centers-in-space"
-   }
-  ],
-  "demand": 80,
-  "competition": 64,
-  "quality": 90,
-  "opportunity": 77
- },
- {
-  "id": "ba86020954ce",
-  "key": "why-did-italy-fine-meta-887-million-dollars-",
-  "created_at": "2026-11-14T23:25:37.755129+00:00",
-  "kind": "hot",
-  "question": "Why did Italy fine Meta 887 million dollars?",
-  "hook": "Italy just penalized Meta nearly nine hundred million.",
-  "about": "Italian antitrust regulators imposed an 887 million dollar penalty on Meta over how it accesses Android user data. The decision highlights Europe's accelerating push to penalize platform dominance and unauthorized ecosystem tracking.",
-  "surprise": "Italy fined Meta $887M over Android users' data access.",
-  "series": "Money Moves (charts)",
-  "audience": "tech & AI",
-  "format": "short",
-  "scores": {
-   "curiosity": [
-    3,
-    "Big tech fines always attract eyeballs"
-   ],
-   "explainability": [
-    4,
-    "Diagramming user data flows is straightforward"
-   ],
-   "shelf_life": [
-    3,
-    "Regulatory enforcement trends remain relevant monthly"
-   ],
-   "money": [
-    4,
-    "Legal and tech firms advertise heavily"
-   ]
-  },
-  "risk": "legal",
-  "search_query": "Italy Meta fine Android data",
-  "wiki_title": "Meta Platforms",
-  "stats": {
-   "hn_points": 300,
-   "hn_comments": 208,
-   "wiki_article": "Meta Platforms",
-   "wiki_avg_30d": 5026,
-   "wiki_views_24h": 3765,
-   "wiki_change_pct": -25
-  },
-  "origin": {
-   "time": "2026-11-14T13:48:06+00:00",
-   "hours_ago": 9.6
-  },
-  "sources": [
-   {
-    "src": "hacker_news",
-    "title": "Italy fines Meta $887M over Android users' data access",
-    "url": "https://www.reuters.com/world/italy-fines-meta-887-million-over-android-users-data-access-2026-11-14/"
-   }
-  ],
-  "demand": 73,
-  "competition": null,
-  "quality": 70,
-  "opportunity": 68
- },
- {
-  "id": "881dcdfb5942",
-  "key": "how-do-giant-mechanical-arms-catch-a-falling-rocket-",
-  "created_at": "2026-11-14T23:25:37.755129+00:00",
-  "kind": "hot",
-  "question": "How do giant mechanical arms catch a falling rocket?",
-  "hook": "Catching a falling skyscraper in midair sounds impossible.",
-  "about": "SpaceX successfully catches massive booster rockets mid-descent using mechanical chopstick arms built into the launch tower. This rapid reusability milestone radically cuts turnaround time compared to traditional ocean barge landings.",
-  "surprise": "SpaceX caught the Starship booster to end Flight 15.",
-  "series": "How It Works (cutaway)",
-  "audience": "general curious",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    5,
-    "Catching a giant rocket looks impossible"
-   ],
-   "explainability": [
-    5,
-    "Mechanical tower arms illustrate very cleanly"
-   ],
-   "shelf_life": [
-    4,
-    "Reusable spaceflight history stays relevant forever"
-   ],
-   "money": [
-    3,
-    "Engineering education platforms love this sponsorship"
-   ]
-  },
-  "risk": "",
-  "search_query": "SpaceX Starship mechazilla catch mechanism",
-  "wiki_title": "SpaceX Starship",
-  "stats": {
-   "hn_points": 444,
-   "hn_comments": 272,
-   "wiki_article": "SpaceX Starship",
-   "wiki_avg_30d": 1638,
-   "wiki_views_24h": 4255,
-   "wiki_change_pct": 160,
-   "yt_results": 6383,
-   "yt_top_views": 20997902,
-   "yt_median_top10_views": 585418,
-   "yt_recent_in_top10": 0,
-   "yt_top_title": "WOW! Watch SpaceX Catch A Starship Booster In Air",
-   "yt_top_channel": "The Launch Pad",
-   "yt_top_url": "https://youtu.be/PpsfE1V_rcw",
-   "yt_query": "SpaceX Starship mechazilla catch mechanism"
-  },
-  "origin": {
-   "time": "2026-11-14T21:22:24+00:00",
-   "hours_ago": 2.1
-  },
-  "sources": [
-   {
-    "src": "hacker_news",
-    "title": "SpaceX Catches the Starship to end Flight 15",
-    "url": "https://x.com/i/broadcasts/2brajgZlOKRMka"
-   }
-  ],
-  "demand": 100,
-  "competition": 58,
-  "quality": 85,
-  "opportunity": 85
- },
- {
-  "id": "0db6e2f3ffde",
-  "key": "why-does-google-give-software-companies-ninety-days-to-fix-bugs-",
-  "created_at": "2026-11-14T23:25:37.755129+00:00",
-  "kind": "hot",
-  "question": "Why does Google give software companies ninety days to fix bugs?",
-  "hook": "Fix this critical security bug in ninety days.",
-  "about": "Google's elite Project Zero cybersecurity team enforces a strict 90-day deadline for vendors to patch discovered vulnerabilities before making them public. The policy aims to balance user safety against corporate foot-dragging by threatening immediate public disclosure.",
-  "surprise": "Project Zero will disclose vulnerabilities 90 days after reporting.",
-  "series": "What Actually Happened (mini-doc)",
-  "audience": "tech & AI",
-  "format": "long",
-  "scores": {
-   "curiosity": [
-    4,
-    "Ticking deadlines create intense hacker suspense"
-   ],
-   "explainability": [
-    4,
-    "Calendar timelines and bugs draw simply"
-   ],
-   "shelf_life": [
-    4,
-    "Vulnerability disclosure rules change very slowly"
-   ],
-   "money": [
-    4,
-    "DevSecOps and cloud security tools advertise"
-   ]
-  },
-  "risk": "",
-  "search_query": "Google Project Zero 90 day rule",
-  "wiki_title": "Project Zero (Google)",
-  "stats": {
-   "hn_points": 123,
-   "hn_comments": 26,
-   "wiki_article": "Project Zero (Google)",
-   "wiki_avg_30d": 8,
-   "wiki_views_24h": 3,
-   "wiki_change_pct": -65
-  },
-  "origin": {
-   "time": "2026-11-14T11:13:17+00:00",
-   "hours_ago": 12.2
-  },
-  "sources": [
-   {
-    "src": "hacker_news",
-    "title": "Project Zero will disclose vulnerabilities 90 days after reporting",
-    "url": "https://projectzero.google/2026/11/disclosure-policy.html"
-   }
-  ],
-  "demand": 53,
-  "competition": null,
-  "quality": 80,
-  "opportunity": 63
- },
- {
-  "id": "bbac8edd4168",
-  "key": "how-did-the-world-s-fastest-ocean-liner-end-up-abandoned-",
-  "created_at": "2026-11-14T23:25:37.755129+00:00",
-  "kind": "hot",
-  "question": "How did the world's fastest ocean liner end up abandoned?",
-  "hook": "The world's fastest ocean liner is currently rusting.",
-  "about": "The SS United States remains the fastest ocean liner ever built, designed with top-secret Cold War naval propulsion systems. Decades after retirement, the historic vessel faces an uncertain fate as docking disputes force a final relocation.",
-  "surprise": "Why was the propulsion system of the fastest passenger ship kept a military secret?",
-  "series": "What Actually Happened (mini-doc)",
-  "audience": "general curious",
-  "format": "long",
-  "scores": {
-   "curiosity": [
-    4,
-    "Abandoned speed record ships captivate viewers"
-   ],
-   "explainability": [
-    4,
-    "Ship blueprints and steam engines animate"
-   ],
-   "shelf_life": [
-    5,
-    "Historic maritime engineering remains evergreen content"
-   ],
-   "money": [
-    2,
-    "General audiences attract mainstream video sponsors"
-   ]
-  },
-  "risk": "",
-  "search_query": "SS United States fastest ocean liner history",
-  "wiki_title": "SS United States",
-  "stats": {
-   "wiki_views_24h": 93568,
-   "wiki_change_pct": 56,
-   "wiki_7d": [
-    4348,
-    3325,
-    14961,
-    15517,
-    21728,
-    117540,
-    241627,
-    93568
-   ],
-   "wiki_article": "SS United States",
-   "wiki_avg_30d": 18860,
-   "yt_results": 734582,
-   "yt_top_views": 1563390,
-   "yt_median_top10_views": 142316,
-   "yt_recent_in_top10": 7,
-   "yt_top_title": "WATCH LIVE: SS United States, once world\u2019s fastest ocean liner, sinks to become reef off Florida",
-   "yt_top_channel": "PBS NewsHour",
-   "yt_top_url": "https://youtu.be/HqTd-iEu5KM",
-   "yt_query": "SS United States fastest ocean liner history"
-  },
-  "origin": null,
-  "sources": [
-   {
-    "src": "wikipedia",
-    "title": "SS United States",
-    "url": "https://en.wikipedia.org/wiki/SS_United_States"
-   }
-  ],
-  "demand": 82,
-  "competition": 73,
-  "quality": 75,
-  "opportunity": 71
- },
- {
-  "id": "94e1d38236c4",
-  "key": "why-do-tomb-of-the-unknown-soldier-guards-march-twenty-one-steps-",
-  "created_at": "2026-11-14T23:25:37.755129+00:00",
-  "kind": "hot",
-  "question": "Why do Tomb of the Unknown Soldier guards march twenty-one steps?",
-  "hook": "Every single step follows a fanatical ritual.",
-  "about": "Sentinels guarding the Tomb of the Unknown Soldier follow strict 21-step marching rituals regardless of extreme weather conditions. The historic post honors unidentified fallen service members through unbroken physical discipline and precise symbolic movements.",
-  "surprise": "Why must honor guards never turn their back on the tomb during the ritual?",
-  "series": "True Weird Stories (comic)",
-  "audience": "general curious",
-  "format": "short",
-  "scores": {
-   "curiosity": [
-    4,
-    "Extreme military precision rituals fascinate people"
-   ],
-   "explainability": [
-    5,
-    "Step counts and routes animate clearly"
-   ],
-   "shelf_life": [
-    5,
-    "Centuries of military tradition never expire"
-   ],
-   "money": [
-    2,
-    "General history draws broad brand campaigns"
-   ]
-  },
-  "risk": "",
-  "search_query": "tomb unknown soldier 21 steps meaning",
-  "wiki_title": "Tomb of the Unknown Soldier (Arlington National Cemetery)",
-  "stats": {
-   "wiki_views_24h": 47126,
-   "wiki_change_pct": 85,
-   "wiki_7d": [
-    590,
-    680,
-    886,
-    978,
-    1092,
-    35918,
-    137779,
-    47126
-   ],
-   "wiki_article": "Tomb of the Unknown Soldier (Arlington National Cemetery)",
-   "wiki_avg_30d": 7554,
-   "yt_results": 163317,
-   "yt_top_views": 53132,
-   "yt_median_top10_views": 5639,
-   "yt_recent_in_top10": 2,
-   "yt_top_title": "The Story of the Tomb of the Unknown Soldier",
-   "yt_top_channel": "STPPS",
-   "yt_top_url": "https://youtu.be/InnrL3j2VcA",
-   "yt_query": "tomb unknown soldier 21 steps meaning"
-  },
-  "origin": null,
-  "sources": [
-   {
-    "src": "wikipedia",
-    "title": "Tomb of the Unknown Soldier (Arlington National Cemetery)",
-    "url": "https://en.wikipedia.org/wiki/Tomb_of_the_Unknown_Soldier_%28Arlington_National_Cemetery%29"
-   }
-  ],
-  "demand": 76,
-  "competition": 44,
-  "quality": 80,
-  "opportunity": 75
- },
- {
-  "id": "ef8af92dfc62",
-  "key": "why-are-tech-companies-trying-to-bring-back-hybrid-hard-drives-",
-  "created_at": "2026-11-14T23:25:37.755129+00:00",
-  "kind": "hot",
-  "question": "Why are tech companies trying to bring back hybrid hard drives?",
-  "hook": "Solid state drives won, so why build this?",
-  "about": "Seagate is revisiting hybrid drives combining spinning magnetic platters with high-speed flash memory cache. It reignites the debate over whether mechanical bulk storage still needs solid-state crutches.",
-  "surprise": "Can hybrid drives beat pure SSD value or does history repeat?",
-  "series": "How It Works (cutaway)",
-  "audience": "tech & AI",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    4,
-    "Storage geeks love retro tech revivals."
-   ],
-   "explainability": [
-    5,
-    "Spinning platters and flash cache illustrate."
-   ],
-   "shelf_life": [
-    4,
-    "Storage architecture principles remain relevant always."
-   ],
-   "money": [
-    4,
-    "PC hardware and storage pay well."
-   ]
-  },
-  "risk": "",
-  "search_query": "seagate hybrid drive explained",
-  "wiki_title": "Hybrid drive",
-  "stats": {
-   "hn_points": 59,
-   "hn_comments": 33,
-   "wiki_article": "Hybrid drive",
-   "wiki_avg_30d": 49,
-   "wiki_views_24h": 40,
-   "wiki_change_pct": -18
-  },
-  "origin": {
-   "time": "2026-11-11T14:32:09+00:00",
-   "hours_ago": 80.9
-  },
-  "sources": [
-   {
-    "src": "hacker_news",
-    "title": "Seagate's new hybrid drive raises some old questions",
-    "url": "https://arstechnica.com/gadgets/2026/11/seagate-resurrects-the-ssd-hdd-hybrid-drive/"
-   }
-  ],
-  "demand": 49,
-  "competition": null,
-  "quality": 85,
-  "opportunity": 64
- },
- {
-  "id": "3deeeb6274d8",
-  "key": "how-did-a-popular-ai-app-builder-leak-passports-and-private-messages-",
-  "created_at": "2026-11-14T23:25:37.755129+00:00",
-  "kind": "hot",
-  "question": "How did a popular AI app builder leak passports and private messages?",
-  "hook": "One misconfigured database exposed two hundred thousand chats.",
-  "about": "Apps created on the AI coding platform Lovable inadvertently exposed sensitive user records including passports and private conversations. It highlights how rapid automated software development frequently overlooks fundamental database access controls.",
-  "surprise": "Over 200,000 private messages were left exposed online.",
-  "series": "What Actually Happened (mini-doc)",
-  "audience": "tech & AI",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    5,
-    "Everyone fears personal data leaks online."
-   ],
-   "explainability": [
-    4,
-    "Database permission bugs are easily visualized."
-   ],
-   "shelf_life": [
-    3,
-    "Specific breach fades but lesson stays."
-   ],
-   "money": [
-    4,
-    "Cybersecurity sponsors pay top advertising rates."
-   ]
-  },
-  "risk": "legal",
-  "search_query": "lovable app security data leak",
-  "wiki_title": "",
-  "stats": {
-   "hn_points": 562,
-   "hn_comments": 229,
-   "yt_results": 216968,
-   "yt_top_views": 6396,
-   "yt_median_top10_views": 67,
-   "yt_recent_in_top10": 6,
-   "yt_top_title": "How secure are AI App Builders Like Lovable, v0 & Cursor?",
-   "yt_top_channel": "John Krueger",
-   "yt_top_url": "https://youtu.be/BiObBK2xLio",
-   "yt_query": "lovable app security data leak"
-  },
-  "origin": {
-   "time": "2026-11-14T17:43:10+00:00",
-   "hours_ago": 5.7
-  },
-  "sources": [
-   {
-    "src": "hacker_news",
-    "title": "Lovable apps expose passport details and more than 200K private messages",
-    "url": "https://www.crissyfield.de/research/lovable-en/"
-   }
-  ],
-  "demand": 78,
-  "competition": 36,
-  "quality": 80,
-  "opportunity": 77
- },
- {
-  "id": "d290b6e0f60c",
-  "key": "why-are-almost-all-modern-citrus-fruits-weird-botanical-hybrids-",
-  "created_at": "2026-11-14T23:25:37.755129+00:00",
-  "kind": "hot",
-  "question": "Why are almost all modern citrus fruits weird botanical hybrids?",
-  "hook": "Lemons and oranges did not naturally exist.",
-  "about": "Citrus genomics reveals that nearly every popular fruit today descends from just a few ancestral species like citrons, pomelos, and mandarins. Centuries of Sicilian and Mediterranean farming accidentally engineered complex culinary hybrids through grafting and cross-pollination.",
-  "surprise": "Almost all common citrus fruits descend from just three ancestors.",
-  "series": "True Weird Stories (comic)",
-  "audience": "general curious",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    5,
-    "Most people think oranges are natural."
-   ],
-   "explainability": [
-    5,
-    "Family tree branches make simple animation."
-   ],
-   "shelf_life": [
-    5,
-    "Botanical history never loses its relevance."
-   ],
-   "money": [
-    2,
-    "Agriculture topics draw modest ad bids."
-   ]
-  },
-  "risk": "",
-  "search_query": "citrus fruit family tree explained",
-  "wiki_title": "Citrus taxonomy",
-  "stats": {
-   "hn_points": 14,
-   "hn_comments": 2,
-   "wiki_article": "Citrus taxonomy",
-   "wiki_avg_30d": 165,
-   "wiki_views_24h": 207,
-   "wiki_change_pct": 26
-  },
-  "origin": {
-   "time": "2026-11-11T01:52:00+00:00",
-   "hours_ago": 93.6
-  },
-  "sources": [
-   {
-    "src": "hacker_news",
-    "title": "The Sicilian Citrus Family Tree",
-    "url": "https://www.notesfromtheroad.com/europa/citrus-family-tree.html"
-   }
-  ],
-  "demand": 40,
-  "competition": null,
-  "quality": 85,
-  "opportunity": 60
- },
- {
-  "id": "bce8c3ecaff9",
-  "key": "why-did-the-us-government-open-source-its-own-tax-software-",
-  "created_at": "2026-11-14T23:25:37.755129+00:00",
-  "kind": "hot",
-  "question": "Why did the US government open-source its own tax software?",
-  "hook": "The tax agency just published its code.",
-  "about": "The US Internal Revenue Service released the open-source code behind its Direct File free filing system for 2025. It marks a historic shift toward public digital infrastructure that threatens the lucrative private tax-prep lobby.",
-  "surprise": "The tax agency is actively maintaining an open-source public repository.",
-  "series": "Money Moves (charts)",
-  "audience": "finance & crypto",
-  "format": "long",
-  "scores": {
-   "curiosity": [
-    4,
-    "Filing taxes for free interests millions."
-   ],
-   "explainability": [
-    4,
-    "Flowcharts cleanly show tax software code."
-   ],
-   "shelf_life": [
-    4,
-    "Tax filing battles continue every spring."
-   ],
-   "money": [
-    5,
-    "Personal finance attracts massive advertiser budgets."
-   ]
-  },
-  "risk": "",
-  "search_query": "irs direct file open source",
-  "wiki_title": "Internal Revenue Service",
-  "stats": {
-   "hn_points": 136,
-   "hn_comments": 82,
-   "wiki_article": "Internal Revenue Service",
-   "wiki_avg_30d": 527,
-   "wiki_views_24h": 546,
-   "wiki_change_pct": 4
-  },
-  "origin": {
-   "time": "2026-11-14T17:48:20+00:00",
-   "hours_ago": 5.6
-  },
-  "sources": [
-   {
-    "src": "hacker_news",
-    "title": "US IRS free online tax filing open source repo (2025)",
-    "url": "https://github.com/IRS-Public/direct-file"
-   }
-  ],
-  "demand": 61,
-  "competition": null,
-  "quality": 85,
-  "opportunity": 69
- },
- {
-  "id": "4c360be9a96e",
-  "key": "how-did-hackers-steal-three-hundred-thousand-dollars-by-faking-bridge-messages-",
-  "created_at": "2026-11-14T23:25:37.755129+00:00",
-  "kind": "hot",
-  "question": "How did hackers steal three hundred thousand dollars by faking bridge messages?",
-  "hook": "A fake verification message drained a bridge.",
-  "about": "Attackers compromised the Ankr Bridge protocol by forging cross-chain communications to mint unbacked assets. Cross-chain bridges remain the crypto ecosystem's weakest link because syncing state across two isolated blockchains requires fragile validator relays.",
-  "surprise": "Attackers stole $0.3M purely through cross-chain message spoofing.",
-  "series": "How It Works (cutaway)",
-  "audience": "finance & crypto",
-  "format": "short",
-  "scores": {
-   "curiosity": [
-    4,
-    "Digital heist mechanisms always captivate viewers."
-   ],
-   "explainability": [
-    4,
-    "Relay bridges draw well on screen."
-   ],
-   "shelf_life": [
-    3,
-    "Crypto hack details age fairly quickly."
-   ],
-   "money": [
-    4,
-    "Fintech and web3 audiences command premiums."
-   ]
-  },
-  "risk": "",
-  "search_query": "cross chain bridge hack explained",
-  "wiki_title": "",
-  "stats": {
-   "hack_usd": 304500
-  },
-  "origin": {
-   "time": "2026-11-09T00:00:00+00:00",
-   "hours_ago": 143.4
-  },
-  "sources": [
-   {
-    "src": "defillama_hacks",
-    "title": "Ankr Bridge hack: $0.3M via Cross-Chain Message Spoofing",
-    "url": "https://defillama.com/hacks"
-   }
-  ],
-  "demand": null,
-  "competition": null,
-  "quality": 75,
-  "opportunity": 58
- },
- {
-  "id": "725f49365006",
-  "key": "why-do-gold-and-silver-rates-change-every-single-day-",
-  "created_at": "2026-11-14T23:25:37.755129+00:00",
-  "kind": "hot",
-  "question": "Why do gold and silver rates change every single day?",
-  "hook": "Who actually decides today's gold price?",
-  "about": "Daily gold and silver rates drive massive retail purchases and jewelry markets across India and worldwide. The price swings reflect a complex dance between London bullion fixing, currency exchange rates, import duties, and local demand surges.",
-  "surprise": "Spot rates depend on daily London auctions and local customs duties.",
-  "series": "Money Moves (charts)",
-  "audience": "India-first",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    4,
-    "Everyone monitors gold rates before weddings."
-   ],
-   "explainability": [
-    5,
-    "Supply and demand charts explain easily."
-   ],
-   "shelf_life": [
-    5,
-    "Gold market dynamics never expire evergreen."
-   ],
-   "money": [
-    5,
-    "Jewelry and investment sponsors pay fortunes."
-   ]
-  },
-  "risk": "",
-  "search_query": "how gold rate is determined",
-  "wiki_title": "Gold as an investment",
-  "stats": {
-   "google_searches": "500+",
-   "google_geo": "IN",
-   "wiki_article": "Gold as an investment",
-   "wiki_avg_30d": 120,
-   "wiki_views_24h": 124,
-   "wiki_change_pct": 4
-  },
-  "origin": {
-   "time": "2026-11-14T14:30:00-08:00",
-   "hours_ago": 0.9
-  },
-  "sources": [
-   {
-    "src": "google_trends_IN",
-    "title": "gold silver rate",
-    "url": "https://www.aajtak.in/business/utility/photo/gold-silver-prices-on-14th-november-2026-in-indian-cities-us-federal-reserve-rates-crude-oil-dpmx-2696098-2026-11-14"
-   }
-  ],
-  "demand": 42,
-  "competition": null,
-  "quality": 95,
-  "opportunity": 64
- },
- {
-  "id": "889cb9c5ae6f",
-  "key": "how-did-nvidia-start-at-a-roadside-diner-booth-",
-  "created_at": "2026-11-14T23:25:37.755129+00:00",
-  "kind": "hot",
-  "question": "How did Nvidia start at a roadside diner booth?",
-  "hook": "Three engineers designed chips over diner coffee.",
-  "about": "Co-founder Chris Malachowsky and his partners famously sketched out Nvidia's foundation over hours at a Denny's diner booth. Decades later, that bet on dedicated 3D graphics hardware evolved into the trillions-powering backbone of global artificial intelligence.",
-  "surprise": "Nvidia began with three engineers sketching ideas at a Denny's.",
-  "series": "What Actually Happened (mini-doc)",
-  "audience": "tech & AI",
-  "format": "long",
-  "scores": {
-   "curiosity": [
-    5,
-    "Nvidia's humble beginning shocks modern audiences."
-   ],
-   "explainability": [
-    4,
-    "Diner sketches translate into comic panels."
-   ],
-   "shelf_life": [
-    5,
-    "Founder origin stories stay classic forever."
-   ],
-   "money": [
-    4,
-    "Semiconductor and AI firms buy ads."
-   ]
-  },
-  "risk": "",
-  "search_query": "how nvidia was founded story",
-  "wiki_title": "Chris Malachowsky",
-  "stats": {
-   "wiki_views_24h": 279241,
-   "wiki_change_pct": 310,
-   "wiki_7d": [
-    98,
-    140,
-    509,
-    4196,
-    3726,
-    4402,
-    463931,
-    279241
-   ],
-   "wiki_article": "Chris Malachowsky",
-   "wiki_avg_30d": 8273,
-   "yt_results": 1000000,
-   "yt_top_views": 2291024,
-   "yt_median_top10_views": 593216,
-   "yt_recent_in_top10": 5,
-   "yt_top_title": "Nvidia CEO Jensen Huang and the $2 trillion company powering today's AI | 60 Minutes",
-   "yt_top_channel": "60 Minutes",
-   "yt_top_url": "https://youtu.be/DpQQi2scsHo",
-   "yt_query": "how nvidia was founded story"
-  },
-  "origin": null,
-  "sources": [
-   {
-    "src": "wikipedia",
-    "title": "Chris Malachowsky",
-    "url": "https://en.wikipedia.org/wiki/Chris_Malachowsky"
-   },
-   {
-    "src": "wikipedia",
-    "title": "Colette Kress",
-    "url": "https://en.wikipedia.org/wiki/Colette_Kress"
-   }
-  ],
-  "demand": 98,
-  "competition": 73,
-  "quality": 90,
-  "opportunity": 84
- },
- {
-  "id": "30c530aeba87",
-  "key": "why-does-india-celebrate-children-s-day-on-november-fourteenth-",
-  "created_at": "2026-11-14T23:25:37.755129+00:00",
-  "kind": "hot",
-  "question": "Why does India celebrate Children's Day on November fourteenth?",
-  "hook": "Most countries picked June, India did not.",
-  "about": "While the United Nations celebrates World Children's Day on November 20th, India marks its national celebration on November 14th. The date was officially chosen to honor the birthday of India's first Prime Minister, Jawaharlal Nehru, who strongly championed universal public schooling.",
-  "surprise": "India previously celebrated Children's Day on November 20th before changing it.",
-  "series": "What Actually Happened (mini-doc)",
-  "audience": "India-first",
-  "format": "short",
-  "scores": {
-   "curiosity": [
-    4,
-    "Millions celebrate without knowing the origin."
-   ],
-   "explainability": [
-    5,
-    "Historical timeline suits clean animated drawings."
-   ],
-   "shelf_life": [
-    5,
-    "Annual national holidays guarantee recurring views."
-   ],
-   "money": [
-    2,
-    "Educational history channels attract lower bids."
-   ]
-  },
-  "risk": "",
-  "search_query": "why children day november 14",
-  "wiki_title": "Children's Day",
-  "stats": {
-   "google_searches": "500+",
-   "google_geo": "IN",
-   "wiki_article": "Children's Day",
-   "wiki_avg_30d": 581,
-   "wiki_views_24h": 4825,
-   "wiki_change_pct": 731,
-   "yt_results": 1000000,
-   "yt_top_views": 157697,
-   "yt_median_top10_views": 43797,
-   "yt_recent_in_top10": 9,
-   "yt_top_title": "10 Lines Speech on Children's Day in English | Children's Day Speech | 14 November",
-   "yt_top_channel": "Reena The Indian Education",
-   "yt_top_url": "https://youtu.be/N5OMS-_Zb4o",
-   "yt_query": "why children day november 14"
-  },
-  "origin": {
-   "time": "2026-11-14T14:40:00-08:00",
-   "hours_ago": 0.8
-  },
-  "sources": [
-   {
-    "src": "google_trends_IN",
-    "title": "14 \u0928\u0935\u0902\u092c\u0930 \u092c\u093e\u0932 \u0926\u093f\u0935\u0938 \u091c\u0935\u093e\u0939\u0930\u0932\u093e\u0932 \u0928\u0947\u0939\u0930\u0942",
-    "url": "https://www.jagran.com/news/national-pm-modi-congress-leaders-pay-tributes-to-jawaharlal-nehru-40436885.html"
-   }
-  ],
-  "demand": 75,
-  "competition": 73,
-  "quality": 80,
-  "opportunity": 70
- },
- {
-  "id": "241dee923338",
-  "key": "why-is-grand-theft-auto-vi-rumored-to-cost-two-billion-dollars-",
-  "created_at": "2026-11-14T23:25:37.755129+00:00",
-  "kind": "hot",
-  "question": "Why is Grand Theft Auto VI rumored to cost two billion dollars?",
-  "hook": "The most expensive entertainment project ever made.",
-  "about": "Grand Theft Auto VI stands as one of the most anticipated and capital-intensive cultural products in human history. The ballooning development cycle reveals how modern AAA gaming economics require studio-wide investments rivaling major Hollywood franchises and infrastructure projects.",
-  "surprise": "Industry estimates suggest its budget dwarfs any Hollywood blockbuster.",
-  "series": "Money Moves (charts)",
-  "audience": "movie & pop culture",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    5,
-    "Gamers obsess over production scale rumors."
-   ],
-   "explainability": [
-    4,
-    "Budget breakdowns make punchy comparison charts."
-   ],
-   "shelf_life": [
-    4,
-    "Anticipation builds steadily until global launch."
-   ],
-   "money": [
-    4,
-    "Gaming audiences deliver high advertiser engagement."
-   ]
-  },
-  "risk": "",
-  "search_query": "gta 6 budget development cost",
-  "wiki_title": "Grand Theft Auto VI",
-  "stats": {
-   "wiki_views_24h": 74974,
-   "wiki_change_pct": 58,
-   "wiki_7d": [
-    29530,
-    28079,
-    31048,
-    43270,
-    64375,
-    62961,
-    73739,
-    74974
-   ],
-   "wiki_article": "Grand Theft Auto VI",
-   "wiki_avg_30d": 28171,
-   "yt_results": 1000000,
-   "yt_top_views": 57946232,
-   "yt_median_top10_views": 524828,
-   "yt_recent_in_top10": 3,
-   "yt_top_title": "GTA VI budget\ud83e\udd2f.",
-   "yt_top_channel": "Nugget",
-   "yt_top_url": "https://youtu.be/MbQh5wqlxkA",
-   "yt_query": "gta 6 budget development cost"
-  },
-  "origin": null,
-  "sources": [
-   {
-    "src": "wikipedia",
-    "title": "Grand Theft Auto VI",
-    "url": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI"
-   }
-  ],
-  "demand": 96,
-  "competition": 66,
-  "quality": 85,
-  "opportunity": 82
- },
- {
-  "id": "d1cd6cd76518",
-  "key": "how-can-one-math-error-in-smart-contracts-erase-a-million-dollars-",
-  "created_at": "2026-11-14T23:25:37.755129+00:00",
-  "kind": "hot",
-  "question": "How can one math error in smart contracts erase a million dollars?",
-  "hook": "One division mistake drained one million dollars.",
-  "about": "Decentralized lender Fence Finance lost roughly one million dollars due to an incorrect share accounting vulnerability in its smart contracts. In algorithmic finance, even minor rounding or minting miscalculations allow attackers to deposit tiny amounts and withdraw entire lending pools.",
-  "surprise": "A single share accounting error permitted a $1.0M drain.",
-  "series": "How It Works (cutaway)",
-  "audience": "finance & crypto",
-  "format": "short",
-  "scores": {
-   "curiosity": [
-    4,
-    "Viewers love seeing simple code heists."
-   ],
-   "explainability": [
-    4,
-    "Token vault balances are easily visualized."
-   ],
-   "shelf_life": [
-    3,
-    "Specific protocol hacks lose relevance quickly."
-   ],
-   "money": [
-    4,
-    "DeFi topics draw high financial bids."
-   ]
-  },
-  "risk": "",
-  "search_query": "smart contract share accounting exploit",
-  "wiki_title": "",
-  "stats": {
-   "hack_usd": 1010000
-  },
-  "origin": {
-   "time": "2026-10-27T00:00:00+00:00",
-   "hours_ago": 455.4
-  },
-  "sources": [
-   {
-    "src": "defillama_hacks",
-    "title": "Fence Finance hack: $1.0M via Incorrect Share Accounting",
-    "url": "https://defillama.com/hacks"
-   }
-  ],
-  "demand": null,
-  "competition": null,
-  "quality": 75,
-  "opportunity": 58
- },
- {
-  "id": "e0f23a20212a",
-  "key": "what-would-happen-if-atmospheric-oxygen-suddenly-doubled-for-five-minutes-",
-  "created_at": "2026-11-14T23:25:37.755129+00:00",
-  "kind": "evergreen",
-  "question": "What would happen if atmospheric oxygen suddenly doubled for five minutes?",
-  "hook": "Breathe deep, because your car engine just exploded.",
-  "about": "Doubling atmospheric oxygen sounds refreshing for human lungs, but it dramatically alters fundamental chemistry across the globe. Giant insects, spontaneous continent-wide wildfires, and exploding combustion engines would instantly rewrite life on Earth.",
-  "surprise": "Every running internal combustion engine would detonate almost immediately due to hyper-accelerated fuel combustion.",
-  "series": "What If? (stickman)",
-  "audience": "general curious",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    5,
-    "Instant catastrophic scenarios fascinate casual audiences"
-   ],
-   "explainability": [
-    5,
-    "Stick figure animations illustrate physics simply"
-   ],
-   "shelf_life": [
-    5,
-    "Physics thought experiments never get old"
-   ],
-   "money": [
-    2,
-    "Broad appeal but low advertiser demand"
-   ]
-  },
-  "risk": "",
-  "search_query": "what if oxygen doubled",
-  "wiki_title": "Atmosphere of Earth",
-  "stats": {
-   "wiki_article": "Atmosphere of Earth",
-   "wiki_avg_30d": 894,
-   "wiki_views_24h": 923,
-   "wiki_change_pct": 3
-  },
-  "origin": null,
-  "sources": [],
-  "demand": 53,
-  "competition": null,
-  "quality": 85,
-  "opportunity": 65
- },
- {
-  "id": "a76a426bba09",
-  "key": "how-does-an-elevator-stop-itself-if-every-cable-suddenly-snaps-",
-  "created_at": "2026-11-14T23:25:37.755129+00:00",
-  "kind": "evergreen",
-  "question": "How does an elevator stop itself if every cable suddenly snaps?",
-  "hook": "Sever every cable and you barely drop two inches.",
-  "about": "Modern elevators rely on mechanical safety clamps engineered in the nineteenth century that require zero electrical power to deploy. When the car moves too fast, spring-loaded wedges jam into the vertical steel rails to halt the cab instantly.",
-  "surprise": "The emergency braking mechanism works entirely on gravity and mechanical friction without needing any computer intervention.",
-  "series": "How It Works (cutaway)",
-  "audience": "general curious",
-  "format": "short",
-  "scores": {
-   "curiosity": [
-    4,
-    "Everyone secretly fears sudden elevator plunges"
-   ],
-   "explainability": [
-    5,
-    "Cutaway diagrams reveal simple mechanical wedges"
-   ],
-   "shelf_life": [
-    5,
-    "Elevator brake mechanics will not change"
-   ],
-   "money": [
-    3,
-    "Solid hardware and engineering sponsor fit"
-   ]
-  },
-  "risk": "",
-  "search_query": "how elevator brakes work",
-  "wiki_title": "Elevator",
-  "stats": {
-   "wiki_article": "Elevator",
-   "wiki_avg_30d": 375,
-   "wiki_views_24h": 352,
-   "wiki_change_pct": -6
-  },
-  "origin": null,
-  "sources": [],
-  "demand": 46,
-  "competition": null,
-  "quality": 85,
-  "opportunity": 62
- },
- {
-  "id": "d2f20b0076e6",
-  "key": "why-did-hundreds-of-people-dance-until-they-collapsed-in-1518-",
-  "created_at": "2026-11-14T23:25:37.755129+00:00",
-  "kind": "evergreen",
-  "question": "Why did hundreds of people dance until they collapsed in 1518?",
-  "hook": "One woman stepped outside and danced until she died.",
-  "about": "In the summer of 1518, an epidemic of choreomania struck Strasbourg, forcing hundreds of citizens to dance frantically for days. Modern historians and physicians still debate whether the cause was mass psychogenic hysteria or moldy rye poisoning.",
-  "surprise": "Local authorities hired musicians and built a wooden stage believing dancing more would cure them.",
-  "series": "True Weird Stories (comic)",
-  "audience": "general curious",
-  "format": "long",
-  "scores": {
-   "curiosity": [
-    5,
-    "Bizarre historical mysteries attract high viewership"
-   ],
-   "explainability": [
-    4,
-    "Comic format illustrates bizarre medieval mania"
-   ],
-   "shelf_life": [
-    5,
-    "Historical events never lose their fascination"
-   ],
-   "money": [
-    2,
-    "Educational history channels earn modest rates"
-   ]
-  },
-  "risk": "",
-  "search_query": "dancing plague of 1518",
-  "wiki_title": "Dancing plague of 1518",
-  "stats": {
-   "wiki_article": "Dancing plague of 1518",
-   "wiki_avg_30d": 1214,
-   "wiki_views_24h": 1141,
-   "wiki_change_pct": -6
-  },
-  "origin": null,
-  "sources": [],
-  "demand": 55,
-  "competition": null,
-  "quality": 80,
-  "opportunity": 64
- },
- {
-  "id": "1122a2894933",
-  "key": "how-do-casinos-mathematically-guarantee-they-never-lose-over-time-",
-  "created_at": "2026-11-14T23:25:37.755129+00:00",
-  "kind": "evergreen",
-  "question": "How do casinos mathematically guarantee they never lose over time?",
-  "hook": "The casino never needs luck when math does this.",
-  "about": "Casinos never need to rig individual games or hope for lucky dealer streaks to turn billions in predictable profit. By embedding fractional statistical edges into rules, the mathematical law of large numbers turns pure randomness into guaranteed corporate revenue.",
-  "surprise": "A microscopic house edge of just over one percent mathematically guarantees massive profits over millions of bets.",
-  "series": "Money Moves (charts)",
-  "audience": "finance & crypto",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    4,
-    "Gamblers always seek hidden mathematical edges"
-   ],
-   "explainability": [
-    5,
-    "Animated graphs clarify probability curves effortlessly"
-   ],
-   "shelf_life": [
-    5,
-    "Probability theory remains evergreen and relevant"
-   ],
-   "money": [
-    5,
-    "Finance and fintech advertisers pay premiums"
-   ]
-  },
-  "risk": "",
-  "search_query": "how casinos always win",
-  "wiki_title": "House edge",
-  "stats": {
-   "wiki_article": "House edge",
-   "wiki_avg_30d": 23,
-   "wiki_views_24h": 21,
-   "wiki_change_pct": -10
-  },
-  "origin": null,
-  "sources": [],
-  "demand": 25,
-  "competition": null,
-  "quality": 95,
-  "opportunity": 57
- },
- {
-  "id": "65b1f31a8b3f",
-  "key": "medieval-knight-armor-vs-samurai-armor-which-protected-soldiers-better-",
-  "created_at": "2026-11-14T23:25:37.755129+00:00",
-  "kind": "evergreen",
-  "question": "Medieval Knight Armor vs Samurai Armor: Which protected soldiers better?",
-  "hook": "Plate steel meets folded iron in a brutal showdown.",
-  "about": "European plate harness and Japanese samurai armor evolved under completely different combat doctrines, metallurgical resources, and battlefield threats. Comparing their mobility, blunt force deflection, and projectile resistance reveals surprising real-world engineering trade-offs.",
-  "surprise": "Full European plate armor was often lighter and offered far better articulated joint mobility than layered samurai armor.",
-  "series": "Versus (scoreboard)",
-  "audience": "students",
-  "format": "long",
-  "scores": {
-   "curiosity": [
-    4,
-    "Legendary warrior gear sparks passionate debates"
-   ],
-   "explainability": [
-    4,
-    "Scoreboard tallies metallurgical strengths and weaknesses"
-   ],
-   "shelf_life": [
-    5,
-    "Historical armor comparisons remain timeless forever"
-   ],
-   "money": [
-    2,
-    "General history yields standard advertising rates"
-   ]
-  },
-  "risk": "",
-  "search_query": "knight armor vs samurai armor",
-  "wiki_title": "Plate armour",
-  "stats": {
-   "wiki_article": "Plate armour",
-   "wiki_avg_30d": 380,
-   "wiki_views_24h": 502,
-   "wiki_change_pct": 32
-  },
-  "origin": null,
-  "sources": [],
-  "demand": 47,
-  "competition": null,
-  "quality": 75,
-  "opportunity": 59
- },
- {
-  "id": "ac1cd73476d8",
-  "key": "how-did-india-evacuate-over-one-hundred-thousand-civilians-from-kuwait-",
-  "created_at": "2026-11-14T23:25:37.755129+00:00",
-  "kind": "evergreen",
-  "question": "How did India evacuate over one hundred thousand civilians from Kuwait?",
-  "hook": "Over one hundred thousand civilians rescued with zero military weapons.",
-  "about": "In 1990, the invasion of Kuwait stranded over one hundred thousand Indian expatriates inside an active desert war zone. Operating with commercial airliners and civilian diplomats, Air India ran hundreds of flights to pull off the largest civilian evacuation in history.",
-  "surprise": "Commercial airline pilots flew round-the-clock passenger Boeing 747s into hostile territory without any armed military escort.",
-  "series": "What Actually Happened (mini-doc)",
-  "audience": "India-first",
-  "format": "long",
-  "scores": {
-   "curiosity": [
-    4,
-    "Massive civilian rescue mission remains unbelievable"
-   ],
-   "explainability": [
-    4,
-    "Maps trace flight paths across deserts"
-   ],
-   "shelf_life": [
-    5,
-    "Historic diplomatic achievements stay permanently relevant"
-   ],
-   "money": [
-    3,
-    "Travel and aviation brands pay moderately"
-   ]
-  },
-  "risk": "",
-  "search_query": "1990 kuwait airlift india",
-  "wiki_title": "1990 airlift of Indians from Kuwait",
-  "stats": {
-   "wiki_article": "1990 airlift of Indians from Kuwait",
-   "wiki_avg_30d": 23,
-   "wiki_views_24h": 31,
-   "wiki_change_pct": 32
-  },
-  "origin": null,
-  "sources": [],
-  "demand": 25,
-  "competition": null,
-  "quality": 80,
-  "opportunity": 51
- },
- {
-  "id": "8aac1b3a52a2",
-  "key": "how-do-receipt-printers-print-text-without-a-drop-of-ink-",
-  "created_at": "2026-11-14T23:25:37.755129+00:00",
-  "kind": "evergreen",
-  "question": "How do receipt printers print text without a drop of ink?",
-  "hook": "Open a receipt printer and you will find zero ink.",
-  "about": "Cash registers print countless miles of paper receipts every day without ever replacing an ink cartridge or ribbon. Instead, microscopic thermal pins pulse heat onto specialty paper embedded with colorless leuco dye that turns black when heated.",
-  "surprise": "The ink is already manufactured inside the paper itself and sleeps until tiny heated pins touch it.",
-  "series": "How It Works (cutaway)",
-  "audience": "tech & AI",
-  "format": "short",
-  "scores": {
-   "curiosity": [
-    4,
-    "Everyday mystery hiding inside everyday objects"
-   ],
-   "explainability": [
-    5,
-    "Microscopic cutaways show heat chemical reactions"
-   ],
-   "shelf_life": [
-    5,
-    "Thermal paper technology changes very slowly"
-   ],
-   "money": [
-    3,
-    "Tech gadgets provide steady sponsor interest"
-   ]
-  },
-  "risk": "",
-  "search_query": "how receipt printers work",
-  "wiki_title": "Thermal printing",
-  "stats": {
-   "wiki_article": "Thermal printing",
-   "wiki_avg_30d": 48,
-   "wiki_views_24h": 45,
-   "wiki_change_pct": -7
-  },
-  "origin": null,
-  "sources": [],
-  "demand": 30,
-  "competition": null,
-  "quality": 85,
-  "opportunity": 55
- },
- {
-  "id": "f4d2fde4629d",
-  "key": "why-do-movie-defibrillators-restart-flatlines-when-real-ones-cannot-",
-  "created_at": "2026-11-14T23:25:37.755129+00:00",
-  "kind": "evergreen",
-  "question": "Why do movie defibrillators restart flatlines when real ones cannot?",
-  "hook": "Hollywood medical paddles actually do the exact opposite.",
-  "about": "Hollywood thrillers almost universally show doctors shocking flatlined patients back to life with high-voltage chest paddles. In real medical practice, defibrillators only stop chaotic irregular heart rhythms and doing so on a flatline can permanently kill heart activity.",
-  "surprise": "Shocking an already flatlined heart can destroy remaining electrical conductivity and eliminate any chance of survival.",
-  "series": "What Actually Happened (mini-doc)",
-  "audience": "movie & pop culture",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    5,
-    "Shatters widespread cinematic medical common knowledge"
-   ],
-   "explainability": [
-    4,
-    "Cardiac diagrams easily clarify electrical rhythms"
-   ],
-   "shelf_life": [
-    5,
-    "Medical facts never expire or date"
-   ],
-   "money": [
-    3,
-    "Healthcare education attracts steady advertiser CPMs"
-   ]
-  },
-  "risk": "medical",
-  "search_query": "can defibrillator restart flatline",
-  "wiki_title": "Defibrillation",
-  "stats": {
-   "wiki_article": "Defibrillation",
-   "wiki_avg_30d": 258,
-   "wiki_views_24h": 202,
-   "wiki_change_pct": -22
-  },
-  "origin": null,
-  "sources": [],
-  "demand": 43,
-  "competition": null,
-  "quality": 85,
-  "opportunity": 61
- },
- {
-  "id": "1dd5698532c9",
-  "key": "what-would-happen-if-earth-s-oxygen-suddenly-doubled-overnight-",
-  "created_at": "2026-11-14T23:25:37.755129+00:00",
-  "kind": "evergreen",
-  "question": "What would happen if Earth's oxygen suddenly doubled overnight?",
-  "hook": "Huge bugs and runaway campfires would rule the world.",
-  "about": "Doubling atmospheric oxygen sounds beneficial for athletic endurance, but it completely disrupts planetary chemistry. Giant insects would return and standard campfires would turn into unstoppable explosions.",
-  "surprise": "Insects breathe through passive tracheal tubes, meaning higher oxygen levels allow dragonflies to grow as big as hawks.",
-  "series": "What If? (stickman)",
-  "audience": "students",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    5,
-    "Everyone wonders what extra oxygen does"
-   ],
-   "explainability": [
-    5,
-    "Stickmen and giant bugs animate easily"
-   ],
-   "shelf_life": [
-    5,
-    "Basic atmospheric science never expires online"
-   ],
-   "money": [
-    2,
-    "Educational science attracts modest advertising rates"
-   ]
-  },
-  "risk": "",
-  "search_query": "what if oxygen doubled earth",
-  "wiki_title": "Geological history of oxygen",
-  "stats": {
-   "wiki_article": "Geological history of oxygen",
-   "wiki_avg_30d": 70,
-   "wiki_views_24h": 70,
-   "wiki_change_pct": 0
-  },
-  "origin": null,
-  "sources": [],
-  "demand": 33,
-  "competition": null,
-  "quality": 85,
-  "opportunity": 56
- },
- {
-  "id": "21989a143f46",
-  "key": "how-do-barcode-scanners-read-numbers-using-laser-light-",
-  "created_at": "2026-11-14T23:25:37.755129+00:00",
-  "kind": "evergreen",
-  "question": "How do barcode scanners read numbers using laser light?",
-  "hook": "Barcode scanners do not actually read the black bars.",
-  "about": "Supermarket scanners decode product codes thousands of times every second without human error. Understanding the sensor physics reveals that scanners detect reflected light from the white spaces instead.",
-  "surprise": "The scanner registers signal voltage only from light reflected off the white spaces between the black stripes.",
-  "series": "How It Works (cutaway)",
-  "audience": "tech & AI",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    4,
-    "Counterintuitive flip surprises almost every viewer"
-   ],
-   "explainability": [
-    5,
-    "Laser bouncing diagrams work visually well"
-   ],
-   "shelf_life": [
-    5,
-    "Barcodes remain everywhere in daily life"
-   ],
-   "money": [
-    3,
-    "Retail technology topics pull decent sponsors"
-   ]
-  },
-  "risk": "",
-  "search_query": "how barcode scanners read white spaces",
-  "wiki_title": "Barcode",
-  "stats": {
-   "wiki_article": "Barcode",
-   "wiki_avg_30d": 751,
-   "wiki_views_24h": 531,
-   "wiki_change_pct": -29
-  },
-  "origin": null,
-  "sources": [],
-  "demand": 51,
-  "competition": null,
-  "quality": 85,
-  "opportunity": 64
- },
- {
-  "id": "858b4a84926f",
-  "key": "why-did-an-entire-school-village-laugh-uncontrollably-for-months-",
-  "created_at": "2026-11-14T23:25:37.755129+00:00",
-  "kind": "evergreen",
-  "question": "Why did an entire school village laugh uncontrollably for months?",
-  "hook": "In 1962, a mysterious laughter outbreak shut down schools.",
-  "about": "A boarding school in Tanganyika experienced an outbreak of uncontrollable giggling that spread to roughly a thousand people across months. Mass psychogenic illness turned psychological stress into physical, contagious symptoms that baffled local authorities.",
-  "surprise": "The laughter was not humorous or joyful, but caused severe pain, exhaustion, and widespread crying fits.",
-  "series": "True Weird Stories (comic)",
-  "audience": "general curious",
-  "format": "long",
-  "scores": {
-   "curiosity": [
-    5,
-    "Contagious laughing outbreaks sound totally absurd"
-   ],
-   "explainability": [
-    4,
-    "Comic panels capture mass hysteria nicely"
-   ],
-   "shelf_life": [
-    5,
-    "Bizarre historical events stay consistently popular"
-   ],
-   "money": [
-    2,
-    "Quirky history appeals to general audiences"
-   ]
-  },
-  "risk": "",
-  "search_query": "tanganyika laughter epidemic 1962",
-  "wiki_title": "Tanganyika laughter epidemic",
-  "stats": {
-   "wiki_article": "Tanganyika laughter epidemic",
-   "wiki_avg_30d": 165,
-   "wiki_views_24h": 123,
-   "wiki_change_pct": -26
-  },
-  "origin": null,
-  "sources": [],
-  "demand": 40,
-  "competition": null,
-  "quality": 80,
-  "opportunity": 58
- },
- {
-  "id": "63c966f21982",
-  "key": "how-did-an-ancient-island-invent-blockchain-using-giant-stones-",
-  "created_at": "2026-11-14T23:25:37.755129+00:00",
-  "kind": "evergreen",
-  "question": "How did an ancient island invent blockchain using giant stones?",
-  "hook": "On Yap island, wealth stayed put while ownership shifted.",
-  "about": "Centuries before computers, the Micronesian island of Yap used giant carved limestone discs called Rai stones as legal currency. Because the stones weighed tons, villagers maintained an oral public ledger recording who owned which stone without ever moving them.",
-  "surprise": "One family remained rich from a stone lost at the bottom of the ocean because the village agreed it still counted.",
-  "series": "Money Moves (charts)",
-  "audience": "finance & crypto",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    4,
-    "Prehistoric crypto currency sounds completely unbelievable"
-   ],
-   "explainability": [
-    4,
-    "Ledger charts show stone ownership transfers"
-   ],
-   "shelf_life": [
-    5,
-    "Foundational monetary history retains eternal value"
-   ],
-   "money": [
-    5,
-    "Crypto and fintech advertisers pay premiums"
-   ]
-  },
-  "risk": "",
-  "search_query": "yap island rai stones currency ledger",
-  "wiki_title": "Rai stones",
-  "stats": {
-   "wiki_article": "Rai stones",
-   "wiki_avg_30d": 174,
-   "wiki_views_24h": 133,
-   "wiki_change_pct": -23
-  },
-  "origin": null,
-  "sources": [],
-  "demand": 40,
-  "competition": null,
-  "quality": 90,
-  "opportunity": 62
- },
- {
-  "id": "4863e4670e86",
-  "key": "t-rex-vs-spinosaurus-who-actually-wins-a-real-dinosaur-fight-",
-  "created_at": "2026-11-14T23:25:37.755129+00:00",
-  "kind": "evergreen",
-  "question": "T-Rex vs Spinosaurus: Who actually wins a real dinosaur fight?",
-  "hook": "Jurassic Park lied about Spinosaurus easily snapping T-Rex necks.",
-  "about": "The third Jurassic Park film shocked audiences by showing a Spinosaurus easily killing a Tyrannosaurus rex. Paleontological discoveries reveal that Spinosaurus was an aquatic fish-hunter with hollow jaws, making that movie duel completely unrealistic.",
-  "surprise": "Spinosaurus had dense bones and conical teeth built for slippery fish, while T-Rex packed the strongest bite force of any land animal.",
-  "series": "Versus (scoreboard)",
-  "audience": "movie & pop culture",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    5,
-    "Iconic dinosaur debates captivate every generation"
-   ],
-   "explainability": [
-    5,
-    "Scoreboard comparisons animate predator anatomy cleanly"
-   ],
-   "shelf_life": [
-    5,
-    "Dinosaur matchups remain perpetually popular forever"
-   ],
-   "money": [
-    3,
-    "Entertainment and gaming sponsors fit well"
-   ]
-  },
-  "risk": "",
-  "search_query": "t rex vs spinosaurus real winner",
-  "wiki_title": "Spinosaurus",
-  "stats": {
-   "wiki_article": "Spinosaurus",
-   "wiki_avg_30d": 1086,
-   "wiki_views_24h": 1223,
-   "wiki_change_pct": 13
-  },
-  "origin": null,
-  "sources": [],
-  "demand": 55,
-  "competition": null,
-  "quality": 90,
-  "opportunity": 68
- },
- {
-  "id": "f52dcab8115e",
-  "key": "how-did-an-indian-doctor-invent-the-world-s-cheapest-prosthetic-",
-  "created_at": "2026-11-14T23:25:37.755129+00:00",
-  "kind": "evergreen",
-  "question": "How did an Indian doctor invent the world's cheapest prosthetic?",
-  "hook": "A master artisan used tire rubber to revolutionize prosthetics.",
-  "about": "In the late 1960s, imported medical prostheses were far too rigid and expensive for rural Indian farmers working in mud. An orthopedic surgeon teamed up with a traditional craftsman to design an inexpensive, flexible rubber foot that changed international medicine.",
-  "surprise": "The prototype was crafted using vulcanized rubber scrap sourced directly from local tire retreading shops.",
-  "series": "What Actually Happened (mini-doc)",
-  "audience": "India-first",
-  "format": "long",
-  "scores": {
-   "curiosity": [
-    4,
-    "Ingenious local inventions inspire worldwide audiences"
-   ],
-   "explainability": [
-    4,
-    "Cutaways reveal flexible rubber limb components"
-   ],
-   "shelf_life": [
-    5,
-    "Inspiring medical breakthroughs stay evergreen permanently"
-   ],
-   "money": [
-    3,
-    "Healthcare and innovation brands value impact"
-   ]
-  },
-  "risk": "",
-  "search_query": "jaipur foot invention true story",
-  "wiki_title": "Jaipur foot",
-  "stats": {
-   "wiki_article": "Jaipur foot",
-   "wiki_avg_30d": 27,
-   "wiki_views_24h": 39,
-   "wiki_change_pct": 46
-  },
-  "origin": null,
-  "sources": [],
-  "demand": 27,
-  "competition": null,
-  "quality": 80,
-  "opportunity": 52
- },
- {
-  "id": "90241f1da63f",
-  "key": "how-do-nuclear-submarines-make-breathable-air-from-ocean-water-",
-  "created_at": "2026-11-14T23:25:37.755129+00:00",
-  "kind": "evergreen",
-  "question": "How do nuclear submarines make breathable air from ocean water?",
-  "hook": "Submarines create unlimited breathable oxygen directly from ocean water.",
-  "about": "Modern military submarines can stay submerged for months at a time without ever surfacing for air. Through the process of electrolysis, onboard generators split purified seawater into breathable oxygen while dumping hazardous hydrogen gas overboard.",
-  "surprise": "The biggest air hazard inside a submarine is not running out of oxygen, but the toxic buildup of human carbon dioxide.",
-  "series": "How It Works (cutaway)",
-  "audience": "general curious",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    4,
-    "Underwater survival physics sparks constant curiosity"
-   ],
-   "explainability": [
-    4,
-    "Cutaway submarine diagrams explain gas chemistry"
-   ],
-   "shelf_life": [
-    5,
-    "Military life support tech stays relevant"
-   ],
-   "money": [
-    3,
-    "Engineering channels attract solid brand deals"
-   ]
-  },
-  "risk": "",
-  "search_query": "how submarines make oxygen seawater",
-  "wiki_title": "Submarine",
-  "stats": {
-   "wiki_article": "Submarine",
-   "wiki_avg_30d": 993,
-   "wiki_views_24h": 1047,
-   "wiki_change_pct": 5
-  },
-  "origin": null,
-  "sources": [],
-  "demand": 54,
-  "competition": null,
-  "quality": 80,
-  "opportunity": 64
- },
- {
-  "id": "ba14d5686944",
-  "key": "why-would-surviving-a-nuclear-blast-inside-a-fridge-kill-you-",
-  "created_at": "2026-11-14T23:25:37.755129+00:00",
-  "kind": "evergreen",
-  "question": "Why would surviving a nuclear blast inside a fridge kill you?",
-  "hook": "Surviving a nuclear explosion inside a refrigerator is impossible.",
-  "about": "In Indiana Jones and the Kingdom of the Crystal Skull, the hero survives a nuclear detonation by hiding inside a lead-lined refrigerator. Physicists analyzed the scene and demonstrated that the shockwave acceleration alone would liquefy human internal organs.",
-  "surprise": "Even if the lead stopped gamma radiation, landing miles away inside a tumbling metal box subjects the body to fatal blunt-force trauma.",
-  "series": "What If? (stickman)",
-  "audience": "movie & pop culture",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    4,
-    "Debunking famous Hollywood movie tropes entertains"
-   ],
-   "explainability": [
-    5,
-    "Stickman physics illustrates kinetic blast trauma"
-   ],
-   "shelf_life": [
-    4,
-    "Classic cinematic tropes remain culturally recognizable"
-   ],
-   "money": [
-    3,
-    "Pop culture topics draw broad viewership"
-   ]
-  },
-  "risk": "",
-  "search_query": "indiana jones fridge nuke physics real",
-  "wiki_title": "Indiana Jones and the Kingdom of the Crystal Skull",
-  "stats": {
-   "wiki_article": "Indiana Jones and the Kingdom of the Crystal Skull",
-   "wiki_avg_30d": 1133,
-   "wiki_views_24h": 1040,
-   "wiki_change_pct": -8
-  },
-  "origin": null,
-  "sources": [],
-  "demand": 55,
-  "competition": null,
-  "quality": 80,
-  "opportunity": 64
- },
- {
-  "id": "35f9ee0668cd",
-  "key": "did-nvidia-secretly-finance-ai-startups-just-to-buy-its-own-chips-",
-  "created_at": "2026-11-14T06:32:58.213047+00:00",
-  "kind": "hot",
-  "question": "Did Nvidia secretly finance AI startups just to buy its own chips?",
-  "hook": "What if a company funded its own biggest customers?",
-  "about": "Reports allege Nvidia invested heavily into AI startups under agreements that essentially funnelled that venture cash back into buying Nvidia GPUs. This circular funding loop supercharges both revenue figures and the perception of unstoppable chip scarcity.",
-  "surprise": "Startups reportedly received Nvidia investment money that was immediately recycled into buying Nvidia GPUs.",
-  "series": "Money Moves (charts)",
-  "audience": "tech & AI",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    5,
-    "Massive intrigue around tech giant practices."
-   ],
-   "explainability": [
-    4,
-    "Flowcharts cleanly illustrate circular capital flow."
-   ],
-   "shelf_life": [
-    4,
-    "Antitrust scrutiny will keep this relevant."
-   ],
-   "money": [
-    5,
-    "Enterprise tech and finance ad CPMs."
-   ]
-  },
-  "risk": "allegations under reporting, avoid definitive defamation",
-  "search_query": "nvidia circular revenue ai startups",
-  "wiki_title": "Nvidia",
-  "stats": {
-   "bet_volume_24h_usd": 291538,
-   "wiki_views_24h": 727529,
-   "wiki_change_pct": 79,
-   "wiki_7d": [
-    6023,
-    33238,
-    122360,
-    733363,
-    542553,
-    341625,
-    1072168,
-    727529
-   ],
-   "hn_points": 309,
-   "hn_comments": 156,
-   "wiki_article": "Nvidia",
-   "wiki_avg_30d": 36216,
-   "yt_results": 893710,
-   "yt_top_views": 943251,
-   "yt_median_top10_views": 12937,
-   "yt_recent_in_top10": 2,
-   "yt_top_title": "Nvidia, OpenAI, and Oracle pulling off the classic investment circle jerk",
-   "yt_top_channel": "Morning Brew",
-   "yt_top_url": "https://youtu.be/JLA3TFZGMZg",
-   "yt_query": "nvidia circular revenue ai startups"
-  },
-  "origin": {
-   "time": "2026-11-14T02:52:59+00:00",
-   "hours_ago": 3.7
-  },
-  "sources": [
-   {
-    "src": "polymarket",
-    "title": "Will there be no new be CEO of NVIDIA by December 31, 2028?",
-    "url": "https://polymarket.com/event/will-candidate-a-be-the-next-ceo-of-nvidia"
-   },
-   {
-    "src": "wikipedia",
-    "title": "Nvidia",
-    "url": "https://en.wikipedia.org/wiki/Nvidia"
-   },
-   {
-    "src": "wikipedia",
-    "title": "Jensen Huang",
-    "url": "https://en.wikipedia.org/wiki/Jensen_Huang"
-   },
-   {
-    "src": "hacker_news",
-    "title": "Nvidia Allegedly Engineered Scarcity by Funding AI Startups to Buy Its GPUs",
-    "url": "https://www.techpowerup.com/354814/nvidia-allegedly-engineered-scarcity-by-funding-ai-startups-to-buy-its-gpus"
-   }
-  ],
-  "demand": 93,
-  "competition": 47,
-  "quality": 90,
-  "opportunity": 86
- },
- {
-  "id": "10aab26a7a95",
-  "key": "what-actually-happens-when-the-faa-grounds-every-plane-in-america-",
-  "created_at": "2026-11-14T06:32:58.213047+00:00",
-  "kind": "hot",
-  "question": "What actually happens when the FAA grounds every plane in America?",
-  "hook": "Push one button, and every airplane freezes mid-air.",
-  "about": "A nationwide FAA ground stop halts all domestic departures within minutes to prevent catastrophic airspace congestion during system failures. Air traffic control networks scramble to manage airborne jets while ground operations freeze across thousands of airport gates.",
-  "surprise": "Air traffic controllers can freeze departures nationwide while keeping airborne jets landing normally.",
-  "series": "How It Works (cutaway)",
-  "audience": "general curious",
-  "format": "short",
-  "scores": {
-   "curiosity": [
-    5,
-    "Everyone wonders what halts entire airports."
-   ],
-   "explainability": [
-    5,
-    "Simple map animations show cascading delays."
-   ],
-   "shelf_life": [
-    4,
-    "Systemic air traffic protocols rarely change."
-   ],
-   "money": [
-    3,
-    "General travel and consumer tech advertisers."
-   ]
-  },
-  "risk": "",
-  "search_query": "faa nationwide ground stop explained",
-  "wiki_title": "Ground stop",
-  "stats": {
-   "hn_points": 1471,
-   "hn_comments": 1134,
-   "wiki_article": "Ground stop",
-   "wiki_avg_30d": 552,
-   "wiki_views_24h": 16368,
-   "wiki_change_pct": 2866,
-   "yt_results": 22031,
-   "yt_top_views": 2381584,
-   "yt_median_top10_views": 30288,
-   "yt_recent_in_top10": 10,
-   "yt_top_title": "BREAKING: FAA issues national ground stop due to \u2018extraordinary circumstances\u2019",
-   "yt_top_channel": "Fox News",
-   "yt_top_url": "https://youtu.be/wqkHX1XHNLI",
-   "yt_query": "faa nationwide ground stop explained"
-  },
-  "origin": {
-   "time": "2026-11-13T21:05:53+00:00",
-   "hours_ago": 9.5
-  },
-  "sources": [
-   {
-    "src": "hacker_news",
-    "title": "FAA issues national ground stop \u2013\u00a0lifted 4.5 hours later",
-    "url": "https://www.nbcnews.com/news/us-news/faa-orders-nationwide-ground-stop-departing-flights-reasons-safety-rcna609247"
-   }
-  ],
-  "demand": 100,
-  "competition": 75,
-  "quality": 85,
-  "opportunity": 83
- },
- {
-  "id": "3651efc938d9",
-  "key": "how-can-rogue-smartphone-apps-secretly-spy-on-your-copied-passwords-",
-  "created_at": "2026-11-14T06:32:58.213047+00:00",
-  "kind": "hot",
-  "question": "How can rogue smartphone apps secretly spy on your copied passwords?",
-  "hook": "That password you just copied isn't secret.",
-  "about": "Security researchers demonstrated how malicious Android applications can bypass operating system protections to silently read copied text. By exploiting background timing vulnerabilities, rogue code captures sensitive clipboard buffers without triggering system alerts.",
-  "surprise": "Background apps exploited timing vulnerabilities to read clipboard buffers silently.",
-  "series": "How It Works (cutaway)",
-  "audience": "tech & AI",
-  "format": "short",
-  "scores": {
-   "curiosity": [
-    4,
-    "Everyone copies passwords and sensitive text."
-   ],
-   "explainability": [
-    5,
-    "Visualizing memory buffers and app permissions."
-   ],
-   "shelf_life": [
-    3,
-    "Security patches eventually close specific exploits."
-   ],
-   "money": [
-    4,
-    "Cybersecurity software and VPN brand sponsorship."
-   ]
-  },
-  "risk": "",
-  "search_query": "android clipboard vulnerability exploit",
-  "wiki_title": "Clipboard (computing)",
-  "stats": {
-   "hn_points": 78,
-   "hn_comments": 35,
-   "wiki_article": "Clipboard (computing)",
-   "wiki_avg_30d": 80,
-   "wiki_views_24h": 44,
-   "wiki_change_pct": -45
-  },
-  "origin": {
-   "time": "2026-11-13T18:23:49+00:00",
-   "hours_ago": 12.2
-  },
-  "sources": [
-   {
-    "src": "hacker_news",
-    "title": "Ctrl+C, Ctrl+v, Ctrl+cve: Bypassing Android's Clipboard Read Security Measures",
-    "url": "https://toninoble.com/post/ctrlc-ctrlv-ctrlcve"
-   }
-  ],
-  "demand": 52,
-  "competition": null,
-  "quality": 80,
-  "opportunity": 63
- },
- {
-  "id": "43602dda9d46",
-  "key": "why-do-people-in-medieval-paintings-look-completely-bored-while-dying-",
-  "created_at": "2026-11-14T06:32:58.213047+00:00",
-  "kind": "hot",
-  "question": "Why do people in medieval paintings look completely bored while dying?",
-  "hook": "Getting stabbed shouldn't look this totally unbothered.",
-  "about": "Medieval manuscripts regularly depict horrifying decapitations and combat where victims display stone-faced, utterly calm expressions. This artistic convention was deliberate theological messaging intended to showcase spiritual composure and triumph over bodily torment.",
-  "surprise": "Showing agony was considered spiritual weakness, so artists deliberately painted calm faces.",
-  "series": "True Weird Stories (comic)",
-  "audience": "general curious",
-  "format": "short",
-  "scores": {
-   "curiosity": [
-    5,
-    "Hilarious viral visual trend people notice."
-   ],
-   "explainability": [
-    5,
-    "Comic stick figures recreate manuscript art."
-   ],
-   "shelf_life": [
-    5,
-    "Historical art conventions never expire naturally."
-   ],
-   "money": [
-    2,
-    "Educational history channels have modest CPMs."
-   ]
-  },
-  "risk": "",
-  "search_query": "medieval art bored facial expressions",
-  "wiki_title": "Medieval art",
-  "stats": {
-   "wiki_article": "Medieval art",
-   "wiki_avg_30d": 199,
-   "wiki_views_24h": 173,
-   "wiki_change_pct": -13
-  },
-  "origin": {
-   "time": "2026-11-13T19:12:00+00:00",
-   "hours_ago": 11.3
-  },
-  "sources": [
-   {
-    "src": "reddit_r/AskHistorians",
-    "title": "Do we Know why Medieval Art is full of Bored Violence?",
-    "url": "https://www.reddit.com/r/AskHistorians/comments/1xvgsqp/do_we_know_why_medieval_art_is_full_of_bored/"
-   }
-  ],
-  "demand": 41,
-  "competition": null,
-  "quality": 85,
-  "opportunity": 60
- },
- {
-  "id": "7d0531e78451",
-  "key": "how-did-the-multi-billion-dollar-inventor-of-ethernet-completely-vanish-",
-  "created_at": "2026-11-14T06:32:58.213047+00:00",
-  "kind": "hot",
-  "question": "How did the multi-billion dollar inventor of Ethernet completely vanish?",
-  "hook": "They connected the world, then vanished completely.",
-  "about": "3Com pioneered modern local networking hardware and owned dominant consumer tech icons like the PalmPilot. A string of chaotic mergers, misjudged corporate restructuring, and fierce competition from Cisco eventually caused the networking titan to be liquidated.",
-  "surprise": "The company that commercialized Ethernet and ruled PDAs was quietly dismantled.",
-  "series": "What Actually Happened (mini-doc)",
-  "audience": "tech & AI",
-  "format": "long",
-  "scores": {
-   "curiosity": [
-    4,
-    "Tech veterans and enthusiasts love postmortems."
-   ],
-   "explainability": [
-    4,
-    "Hardware diagrams and business timelines work."
-   ],
-   "shelf_life": [
-    5,
-    "Classic tech history remains completely evergreen."
-   ],
-   "money": [
-    4,
-    "Enterprise tech and cloud software sponsors."
-   ]
-  },
-  "risk": "",
-  "search_query": "what happened to 3com",
-  "wiki_title": "3Com",
-  "stats": {
-   "hn_points": 109,
-   "hn_comments": 59,
-   "wiki_article": "3Com",
-   "wiki_avg_30d": 121,
-   "wiki_views_24h": 150,
-   "wiki_change_pct": 24
-  },
-  "origin": {
-   "time": "2026-11-13T23:48:59+00:00",
-   "hours_ago": 6.7
-  },
-  "sources": [
-   {
-    "src": "hacker_news",
-    "title": "What Happened to 3Com?",
-    "url": "https://dfarq.homeip.net/what-happened-to-3com/"
-   }
-  ],
-  "demand": 57,
-  "competition": null,
-  "quality": 85,
-  "opportunity": 67
- },
- {
-  "id": "2fa01b494895",
-  "key": "why-is-ulysses-s-grant-s-presidential-library-in-mississippi-",
-  "created_at": "2026-11-14T06:32:58.213047+00:00",
-  "kind": "hot",
-  "question": "Why is Ulysses S. Grant's presidential library in Mississippi?",
-  "hook": "A Union conqueror's library sits in Mississippi.",
-  "about": "General Ulysses S. Grant led the Union army to destroy the Confederacy, yet his official presidential collection resides at Mississippi State University. After prominent Northern universities turned down the massive archive due to space constraints, a Southern school aggressively campaigned to host it.",
-  "surprise": "Northern universities rejected Grant's papers, so a Mississippi school welcomed them.",
-  "series": "True Weird Stories (comic)",
-  "audience": "students",
-  "format": "both",
-  "scores": {
-   "curiosity": [
-    5,
-    "A bizarre geographical and historical paradox."
-   ],
-   "explainability": [
-    4,
-    "Maps and character illustrations explain rivalry."
-   ],
-   "shelf_life": [
-    5,
-    "Historic placement won't change anytime soon."
-   ],
-   "money": [
-    2,
-    "Education and history audience ad spend."
-   ]
-  },
-  "risk": "",
-  "search_query": "ulysses grant library mississippi state",
-  "wiki_title": "Ulysses S. Grant Presidential Library",
-  "stats": {
-   "wiki_article": "Ulysses S. Grant Presidential Library",
-   "wiki_avg_30d": 11,
-   "wiki_views_24h": 46,
-   "wiki_change_pct": 305
-  },
-  "origin": {
-   "time": "2026-11-13T14:18:34+00:00",
-   "hours_ago": 16.2
-  },
-  "sources": [
-   {
-    "src": "reddit_r/AskHistorians",
-    "title": "How did the Ulysses S. Grant Presidential Library end up in Mississippi, of all places?",
-    "url": "https://www.reddit.com/r/AskHistorians/comments/1xv92tx/how_did_the_ulysses_s_grant_presidential_library/"
-   }
-  ],
-  "demand": 37,
-  "competition": null,
-  "quality": 80,
-  "opportunity": 56
- },
- {
-  "id": "84ac6e3b89bb",
-  "key": "did-scientists-find-a-protein-that-ages-cells-without-causing-inflammation-",
-  "created_at": "2026-11-14T06:32:58.213047+00:00",
-  "kind": "hot",
-  "question": "Did scientists find a protein that ages cells without causing inflammation?",
-  "hook": "A single protein might program human aging.",
-  "about": "Biologists have uncovered a specific cellular protein that accelerates biological aging mechanisms while bypassing the standard inflammatory pathways. Isolating this unique trigger allows medicine to target cellular senescence directly without damaging essential immune functions.",
-  "surprise": "Cellular aging was successfully decoupled from systemic inflammatory damage.",
-  "series": "How It Works (cutaway)",
-  "audience": "tech & AI",
-  "format": "long",
-  "scores": {
-   "curiosity": [
-    5,
-    "Halting human aging is universally fascinating."
-   ],
-   "explainability": [
-    4,
-    "Cell cutaways illustrate protein molecular pathways."
-   ],
-   "shelf_life": [
-    4,
-    "Biomedical research sets foundation for therapies."
-   ],
-   "money": [
-    5,
-    "Biotech and health longevity advertisers pay."
-   ]
-  },
-  "risk": "medical claims need careful qualifying language",
-  "search_query": "protein drives aging without inflammation",
-  "wiki_title": "Senescence",
-  "stats": {
-   "hn_points": 172,
-   "hn_comments": 26,
-   "wiki_article": "Senescence",
-   "wiki_avg_30d": 375,
-   "wiki_views_24h": 380,
-   "wiki_change_pct": 1,
-   "yt_results": 1000000,
-   "yt_top_views": 653363,
-   "yt_median_top10_views": 5846,
-   "yt_recent_in_top10": 2,
-   "yt_top_title": "Supplements That Slow Aging \ud83d\ude37",
-   "yt_top_channel": "Doctor Mike",
-   "yt_top_url": "https://youtu.be/xOplf5n2o-w",
-   "yt_query": "protein drives aging without inflammation"
-  },
-  "origin": {
-   "time": "2026-11-13T19:25:21+00:00",
-   "hours_ago": 11.1
-  },
-  "sources": [
-   {
-    "src": "hacker_news",
-    "title": "Found: A protein that drives ageing without unleashing inflammation",
-    "url": "https://www.nature.com/articles/d41586-026-03638-3"
-   }
-  ],
-  "demand": 72,
-  "competition": 44,
-  "quality": 90,
-  "opportunity": 77
  }
 ]
