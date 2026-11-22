@@ -91,7 +91,7 @@
  "brew_at": "2026-11-07T14:03:33+00:00",
  "stage": "live",
  "pct": 100,
- "step": "Live on YouTube · 1,233 views · 26 likes · 0 comments",
+ "step": "Live on YouTube · 1,234 views · 26 likes · 0 comments",
  "steps": [
   {
    "stage": "queued",
@@ -248,10 +248,14 @@
   {
    "stage": "live",
    "at": "2026-11-20T22:16:52+00:00"
+  },
+  {
+   "stage": "live",
+   "at": "2026-11-22T19:58:54+00:00"
   }
  ],
  "created": "2026-11-07T14:03:33+00:00",
- "updated": "2026-11-22T08:53:50+00:00",
+ "updated": "2026-11-22T19:58:55+00:00",
  "error": null,
  "fails": 0,
  "preview": {
@@ -378,10 +382,20 @@
     "publish_at": null,
     "published": "2026-11-08T11:33:22Z",
     "upload_status": "processed",
-    "views": 1233,
+    "views": 1234,
     "likes": 26,
     "comments": 0,
-    "checked": "2026-11-22T08:53:50+00:00"
+    "checked": "2026-11-22T19:58:54+00:00",
+    "analytics": {
+     "views": 1230,
+     "estimatedMinutesWatched": 242,
+     "averageViewDuration": 19,
+     "averageViewPercentage": 33.02,
+     "likes": 26,
+     "comments": 0,
+     "shares": 1,
+     "subscribersGained": 5
+    }
    }
   ],
   "audited": false,
