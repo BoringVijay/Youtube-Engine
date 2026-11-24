@@ -1,26 +1,21 @@
 {
- "at": "2026-11-23T08:15:23+00:00",
+ "at": "2026-11-24T00:23:00+00:00",
  "range": [
-  "2026-10-26",
-  "2026-11-23"
+  "2026-10-27",
+  "2026-11-24"
  ],
  "note": "YouTube Analytics lags 1-2 days; live view counts come from the Data API.",
  "totals": {
-  "views": 6102,
+  "views": 6104,
   "estimatedMinutesWatched": 2348,
   "averageViewDuration": 40,
-  "averageViewPercentage": 61.29,
+  "averageViewPercentage": 61.27,
   "likes": 235,
   "comments": 5,
   "shares": 3,
   "subscribersGained": 11
  },
  "daily": [
-  [
-   "2026-10-26",
-   0,
-   0
-  ],
   [
    "2026-10-27",
    0,
@@ -138,12 +133,17 @@
   ],
   [
    "2026-11-19",
-   129,
+   128,
    0
   ],
   [
    "2026-11-20",
    11,
+   0
+  ],
+  [
+   "2026-11-21",
+   3,
    0
   ]
  ],
